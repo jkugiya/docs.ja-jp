@@ -1,7 +1,7 @@
 items:
   - name: .NET のドキュメント
     href: index.yml
-  - name: 開始
+  - name: はじめに
     items:
       - name: Hello World
         href: ../core/get-started.md
@@ -200,7 +200,7 @@ items:
           - name: 概要
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 関連項目
+          - name: リファレンス
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -332,7 +332,7 @@ items:
             items:
               - name: 概要
                 href: ../core/project-sdk/overview.md
-              - name: 関連項目
+              - name: リファレンス
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -342,8 +342,6 @@ items:
                     href: /aspnet/core/razor-pages/sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
           - name: ターゲット フレームワーク
             href: ../standard/frameworks.md
-          - name: csproj 形式に追加されたもの
-            href: ../core/tools/csproj.md
           - name: 依存関係管理
             href: ../core/tools/dependencies.md
       - name: グローバル ツールとローカル ツール
@@ -397,8 +395,6 @@ items:
               - name: 概要
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
-              - name: スタック オーバーフローのデバッグ
-                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux ダンプ
                 href: ../core/diagnostics/debug-linux-dumps.md
               - name: SOS デバッガー拡張機能
@@ -467,6 +463,8 @@ items:
                 href: ../core/diagnostics/debug-highcpu.md
               - name: デッドロックをデバッグする
                 href: ../core/diagnostics/debug-deadlock.md
+              - name: スタック オーバーフローのデバッグ
+                href: ../core/diagnostics/debug-stackoverflow.md
       - name: コード分析
         items:
           - name: 概要
@@ -2056,7 +2054,7 @@ items:
         href: ../core/testing/unit-testing-published-output.md
       - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
         href: /visualstudio/test/live-unit-testing-start
-  - name: Security
+  - name: セキュリティ
     href: ../standard/security/
   - name: 高度なトピック
     items:
@@ -2281,6 +2279,8 @@ items:
             href: ../core/migration/index.md
           - name: project.json と csproj 間のマッピング
             href: ../core/tools/project-json-to-csproj.md
+          - name: AssemblyInfo 属性をプロパティにマップする
+            href: ../core/migration/assembly-info.md
           - name: CLI の変更概要
             href: ../core/tools/cli-msbuild-architecture.md
           - name: DNX からの移行

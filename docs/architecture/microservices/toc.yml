@@ -10,12 +10,12 @@
           href: container-docker-introduction/docker-terminology.md
         - name: Docker コンテナー、イメージ、レジストリ
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Docker コンテナー用 .NET Core と .NET Framework の選択
+    - name: Docker コンテナー用 .NET 5 と .NET Framework の選択
       href: net-core-net-framework-containers/index.md
       items:
         - name: 一般的なガイダンス
           href: net-core-net-framework-containers/general-guidance.md
-        - name: Docker コンテナー用 .Net Core を選択するタイミング
+        - name: Docker コンテナー用 .Net を選択するタイミング
           href: net-core-net-framework-containers/net-core-container-scenarios.md
         - name: Docker コンテナー用 .NET Framework を選択するタイミング
           href: net-core-net-framework-containers/net-framework-container-scenarios.md
@@ -101,7 +101,7 @@
           href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
         - name: マイクロサービス ドメイン モデルの設計
           href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
-        - name: .NET Core でマイクロサービス ドメイン モデルを実装する
+        - name: .NET でマイクロサービス ドメイン モデルを実装する
           href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
         - name: Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
           href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md

@@ -24,6 +24,8 @@
               href: 6.0.md
             - name: Windows フォーム
               items:
+                - name: NotifyIcon。テキストの最大文字数の増加
+                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings properties throw InvalidEnumArgumentException
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: .NET 5.0
@@ -508,7 +510,6 @@
                   href: msbuild/5.0/publishdepsfilepath-behavior-change.md
                 - name: TargetFramework が netcoreapp から net に変更される
                   href: msbuild/5.0/targetframework-name-change.md
-            - name: (このファイルは最終的に消失します)
             - name: .NET 3.0
               href: msbuild.md
         - name: ネットワーク
@@ -561,6 +562,8 @@
           items:
             - name: .NET 6.0
               items:
+                - name: NotifyIcon。テキストの最大文字数の増加
+                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings properties throw InvalidEnumArgumentException
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: .NET 5.0

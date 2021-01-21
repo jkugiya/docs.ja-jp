@@ -18,6 +18,14 @@
     - name: バージョン別の破壊的変更
       expanded: true
       items:
+        - name: .NET 6.0
+          items:
+            - name: 概要
+              href: 6.0.md
+            - name: Windows フォーム
+              items:
+                - name: TableLayoutSettings properties throw InvalidEnumArgumentException
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: .NET 5.0
           items:
             - name: 概要
@@ -551,6 +559,10 @@
               href: visualbasic.md
         - name: Windows フォーム
           items:
+            - name: .NET 6.0
+              items:
+                - name: TableLayoutSettings properties throw InvalidEnumArgumentException
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: .NET 5.0
               items:
                 - name: OutputType が WinExe に設定される

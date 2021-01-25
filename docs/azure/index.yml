@@ -8,12 +8,12 @@ metadata:
   ms.topic: hub-page
   ms.prod: azure-dotnet
   ms.date: 08/12/2020
-  ms.openlocfilehash: 0708f2429f9943e14a5d0b843d6c6f0e6b2232bc
-  ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+  ms.openlocfilehash: 6e86c1001cb5d62ae727da549e7d70e51552a17e
+  ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/08/2020
-  ms.locfileid: "91844553"
+  ms.lasthandoff: 01/21/2021
+  ms.locfileid: "98629244"
 highlightedContent:
   items:
   - itemType: overview
@@ -234,8 +234,8 @@ conceptualContent:
       text: SDK のサンプル アプリ
       url: /samples/dotnet/samples/azure-identity-resource-management-storage/
     - itemType: download
-      text: ツール
-      url: tools.md
+      text: ツールのチェックリスト
+      url: dotnet-dev-env-checklist.md
     - itemType: reference
       text: API リファレンス
       url: /dotnet/api/overview/azure/?view=azure-dotnet

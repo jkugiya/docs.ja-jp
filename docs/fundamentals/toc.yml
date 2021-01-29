@@ -179,6 +179,8 @@ items:
             href: ../core/sdk.md
           - name: エラー メッセージ
             items:
+              - name: NETSDK1004
+                href: ../core/tools/sdk-errors/netsdk1004.md
               - name: NETSDK1005 および NETSDK1047
                 href: ../core/tools/sdk-errors/netsdk1005.md
               - name: NETSDK1013
@@ -2054,7 +2056,7 @@ items:
         href: ../core/testing/unit-testing-published-output.md
       - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
         href: /visualstudio/test/live-unit-testing-start
-  - name: セキュリティ
+  - name: Security
     href: ../standard/security/
   - name: 高度なトピック
     items:

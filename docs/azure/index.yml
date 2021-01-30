@@ -8,12 +8,12 @@ metadata:
   ms.topic: hub-page
   ms.prod: azure-dotnet
   ms.date: 08/12/2020
-  ms.openlocfilehash: 6e86c1001cb5d62ae727da549e7d70e51552a17e
-  ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
+  ms.openlocfilehash: 2d745137aa3de029490465d89724bc8583806119
+  ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/21/2021
-  ms.locfileid: "98629244"
+  ms.lasthandoff: 01/29/2021
+  ms.locfileid: "99065112"
 highlightedContent:
   items:
   - itemType: overview
@@ -37,9 +37,9 @@ highlightedContent:
   - itemType: learn
     title: Microsoft Identity を使用してカスタム API をセキュリティで保護する
     url: /learn/modules/identity-secure-custom-api/
-  - itemType: learn
-    title: Azure 基礎
-    url: /learn/paths/azure-fundamentals/
+  - itemType: get-started
+    title: Azure SDK for .NET
+    url: sdk/azure-sdk-for-dotnet
 conceptualContent:
   title: おすすめコンテンツ
   summary: 各種の Azure サービスを活用して .NET アプリを開発する方法について説明します。

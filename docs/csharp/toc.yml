@@ -1,21 +1,16 @@
 items:
   - name: C# 関連のドキュメント
     href: index.yml
-  - name: 作業開始
+  - name: C# のツアー
     items:
-      - name: C# 言語と .NET の概要
-        displayName: get started
-        href: getting-started/index.md
-      - name: C# のツアー
-        items:
-          - name: はじめに
-            href: tour-of-csharp/index.md
-          - name: 型
-            href: tour-of-csharp/types.md
-          - name: プログラムの構成要素
-            href: tour-of-csharp/program-building-blocks.md
-          - name: 主な言語の領域
-            href: tour-of-csharp/features.md
+      - name: はじめに
+        href: tour-of-csharp/index.md
+      - name: 型
+        href: tour-of-csharp/types.md
+      - name: プログラムの構成要素
+        href: tour-of-csharp/program-building-blocks.md
+      - name: 主な言語の領域
+        href: tour-of-csharp/features.md
   - name: チュートリアル
     items:
       - name: 概要

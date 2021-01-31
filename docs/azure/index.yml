@@ -8,12 +8,12 @@ metadata:
   ms.topic: hub-page
   ms.prod: azure-dotnet
   ms.date: 08/12/2020
-  ms.openlocfilehash: 2d745137aa3de029490465d89724bc8583806119
-  ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+  ms.openlocfilehash: 4a2c57286173eb7bdd5577a66400d2ed56e4cbe3
+  ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2021
-  ms.locfileid: "99065112"
+  ms.lasthandoff: 01/30/2021
+  ms.locfileid: "99216118"
 highlightedContent:
   items:
   - itemType: overview
@@ -39,7 +39,7 @@ highlightedContent:
     url: /learn/modules/identity-secure-custom-api/
   - itemType: get-started
     title: Azure SDK for .NET
-    url: sdk/azure-sdk-for-dotnet
+    url: sdk/azure-sdk-for-dotnet.md
 conceptualContent:
   title: おすすめコンテンツ
   summary: 各種の Azure サービスを活用して .NET アプリを開発する方法について説明します。

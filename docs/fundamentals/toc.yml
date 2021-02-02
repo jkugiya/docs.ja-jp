@@ -1,7 +1,7 @@
 items:
   - name: .NET のドキュメント
     href: index.yml
-  - name: はじめに
+  - name: 開始
     items:
       - name: Hello World
         href: ../core/get-started.md
@@ -197,7 +197,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1079.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
-      - name: .NET Core CLI
+      - name: .NET CLI
         items:
           - name: 概要
             displayName: '.net cli,command-line interface,cli,tool'
@@ -439,7 +439,7 @@ items:
                 href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: コンテナーでの診断の収集
             href: ../core/diagnostics/diagnostics-in-containers.md
-          - name: .NET Core CLI グローバル ツール
+          - name: .NET CLI グローバル ツール
             items:
               - name: dotnet-カウンター
                 href: ../core/diagnostics/dotnet-counters.md
@@ -453,7 +453,7 @@ items:
                 href: ../core/diagnostics/dotnet-symbol.md
               - name: dotnet-sos
                 href: ../core/diagnostics/dotnet-sos.md
-          - name: .NET Core 診断チュートリアル
+          - name: .NET 診断チュートリアル
             items:
               - name: PerfCollect を使用して Linux でパフォーマンス トレースを収集する
                 href: ../core/diagnostics/trace-perfcollect-lttng.md
@@ -478,6 +478,8 @@ items:
                 href: code-analysis/configuration-options.md
               - name: 構成ファイル
                 href: code-analysis/configuration-files.md
+              - name: 警告が表示されないようにする方法
+                href: code-analysis/suppress-warnings.md
               - name: コード品質規則
                 items:
                   - name: ルール オプション
@@ -1296,15 +1298,15 @@ items:
                 href: ../core/dependency-loading/loading-unmanaged.md
           - name: チュートリアル
             items:
-              - name: プラグインがある .NET Core アプリケーションを作成する
+              - name: プラグインを使用して .NET アプリケーションを作成する
                 href: ../core/tutorials/creating-app-with-plugin-support.md
-              - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
+              - name: .NET でアセンブリのアンローダビリティを使用およびデバッグする方法
                 href: ../core/../standard/assembly/unloadability.md
       - name: バージョン管理
         items:
           - name: 概要
             href: ../core/versions/index.md
-          - name: .NET Core のバージョンの選択
+          - name: .NET のバージョンの選択
             href: ../core/versions/selection.md
       - name: ランタイム構成
         items:
@@ -1354,7 +1356,7 @@ items:
         items:
           - name: .NET および Docker の概要
             href: ../core/docker/introduction.md
-          - name: NET Core アプリのコンテナー化
+          - name: .NET アプリをコンテナー化する
             href: ../core/docker/build-container.md
           - name: Visual Studio のコンテナー ツール
             href: /visualstudio/containers/overview
@@ -1836,6 +1838,8 @@ items:
             displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
           - name: オプションのパターン
             href: ../core/extensions/options.md
+          - name: ライブラリ作成者のためのオプション パターン ガイダンス
+            href: ../core/extensions/options-library-authors.md
       - name: ログの記録
         items:
           - name: 概要
@@ -2054,9 +2058,9 @@ items:
         href: ../core/testing/unit-testing-code-coverage.md
       - name: 発行された出力の単体テスト
         href: ../core/testing/unit-testing-published-output.md
-      - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
+      - name: Visual Studio で .NET プロジェクトのライブ単体テストを行う
         href: /visualstudio/test/live-unit-testing-start
-  - name: Security
+  - name: セキュリティ
     href: ../standard/security/
   - name: 高度なトピック
     items:
@@ -2133,9 +2137,9 @@ items:
             href: ../standard/native-interop/best-practices.md
           - name: 文字セットとマーシャリング
             href: ../standard/native-interop/charset.md
-          - name: COM への .NET Core コンポーネントの公開
+          - name: COM に .NET コンポーネントを公開する
             href: ../core/native-interop/expose-components-to-com.md
-          - name: ネイティブ コードからの .NET Core のホスト
+          - name: ネイティブ コードから .NET をホストする
             href: ../core/tutorials/netcore-hosting.md
           - name: COM 相互運用
             items:
@@ -2157,7 +2161,7 @@ items:
             href: ../standard/native-interop/apply-interop-attributes.md
           - name: 例外
             href: ../standard/native-interop/exceptions-interoperability.md
-      - name: .NET Core の配布パッケージ
+      - name: .NET の配布パッケージ
         href: ../core/distribution-packaging.md
       - name: グローバリゼーションとローカリゼーション
         href: ../standard/globalization-localization/
@@ -2295,7 +2299,7 @@ items:
             href: ../core/porting/third-party-deps.md
           - name: ライブラリを移植する
             href: ../core/porting/libraries.md
-          - name: .NET Core のプロジェクトを整理する
+          - name: .NET のプロジェクトを整理する
             href: ../core/porting/project-structure.md
           - name: 利用できないテクノロジ
             href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json

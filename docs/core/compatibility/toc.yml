@@ -28,6 +28,8 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings properties throw InvalidEnumArgumentException
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: ノードが別のものに割り当てられている場合、TreeNodeCollection.Item により例外がスローされる
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
         - name: .NET 5.0
           items:
             - name: 概要
@@ -260,6 +262,8 @@
                   href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
             - name: Windows フォーム
               items:
+                - name: ネイティブ コードが Windows フォーム オブジェクトにアクセスできない
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType が WinExe に設定される
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView がカスタム フォントをリセットしない
@@ -566,8 +570,12 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings properties throw InvalidEnumArgumentException
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: ノードが別のものに割り当てられている場合、TreeNodeCollection.Item により例外がスローされる
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
             - name: .NET 5.0
               items:
+                - name: ネイティブ コードが Windows フォーム オブジェクトにアクセスできない
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType が WinExe に設定される
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView がカスタム フォントをリセットしない

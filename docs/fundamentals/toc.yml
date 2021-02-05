@@ -1,7 +1,7 @@
 items:
   - name: .NET のドキュメント
     href: index.yml
-  - name: 開始
+  - name: はじめに
     items:
       - name: Hello World
         href: ../core/get-started.md
@@ -1296,6 +1296,8 @@ items:
                 href: ../core/dependency-loading/loading-resources.md
               - name: アンマネージド ライブラリを読み込む
                 href: ../core/dependency-loading/loading-unmanaged.md
+              - name: アセンブリの読み込みに関する詳細情報の収集
+                href: ../core/dependency-loading/collect-details.md
           - name: チュートリアル
             items:
               - name: プラグインを使用して .NET アプリケーションを作成する
@@ -2133,6 +2135,8 @@ items:
             href: ../standard/native-interop/customize-struct-marshaling.md
           - name: パラメーターのマーシャリングのカスタマイズ
             href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: クロスプラットフォーム P/Invoke
+            href: ../standard/native-interop/cross-platform.md
           - name: 相互運用のガイダンス
             href: ../standard/native-interop/best-practices.md
           - name: 文字セットとマーシャリング

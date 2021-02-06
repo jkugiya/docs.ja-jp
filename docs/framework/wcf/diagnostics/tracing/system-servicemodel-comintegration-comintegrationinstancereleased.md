@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「ComIntegrationInstanceReleased」を参照してください。
 title: System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
 ms.date: 03/30/2017
 ms.assetid: 21922b4d-9a83-45cb-a6fc-5b1c2f9a2c17
-ms.openlocfilehash: 7435294869db4304147b040b80a4798d4ce2ef2e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ddf58b680c23a610e209b996e763b92e06951f91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634051"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a><span data-ttu-id="471da-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="471da-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>
+# <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a><span data-ttu-id="244d3-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="244d3-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>
 
-<span data-ttu-id="471da-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="471da-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>  
+<span data-ttu-id="244d3-104">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="244d3-104">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>  
   
-## <a name="description"></a><span data-ttu-id="471da-104">Description</span><span class="sxs-lookup"><span data-stu-id="471da-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="244d3-105">説明</span><span class="sxs-lookup"><span data-stu-id="244d3-105">Description</span></span>  
 
- <span data-ttu-id="471da-105">ComPlus : インスタンスを解放しました。</span><span class="sxs-lookup"><span data-stu-id="471da-105">ComPlus: Released instance.</span></span>  
+ <span data-ttu-id="244d3-106">ComPlus : インスタンスを解放しました。</span><span class="sxs-lookup"><span data-stu-id="244d3-106">ComPlus: Released instance.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="471da-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="471da-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="244d3-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="244d3-107">See also</span></span>
 
-- [<span data-ttu-id="471da-107">トレース</span><span class="sxs-lookup"><span data-stu-id="471da-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="471da-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="471da-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="471da-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="471da-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="244d3-108">トレース</span><span class="sxs-lookup"><span data-stu-id="244d3-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="244d3-109">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="244d3-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="244d3-110">管理と診断</span><span class="sxs-lookup"><span data-stu-id="244d3-110">Administration and Diagnostics</span></span>](../index.md)

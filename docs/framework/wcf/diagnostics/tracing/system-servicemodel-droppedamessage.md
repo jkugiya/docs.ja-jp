@@ -1,26 +1,27 @@
 ---
+description: 詳細については、「DroppedAMessage」を参照してください。
 title: System.ServiceModel.DroppedAMessage
 ms.date: 03/30/2017
 ms.assetid: a299401f-2983-45ea-b4f3-963bece3602e
-ms.openlocfilehash: ac5c3e754dc709aac970c4295d17dfc660bdfdca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3f74764cdde28c9ef5e96049c649015efbcb5da3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633791"
 ---
-# <a name="systemservicemodeldroppedamessage"></a><span data-ttu-id="d7da1-102">System.ServiceModel.DroppedAMessage</span><span class="sxs-lookup"><span data-stu-id="d7da1-102">System.ServiceModel.DroppedAMessage</span></span>
+# <a name="systemservicemodeldroppedamessage"></a><span data-ttu-id="9ca14-103">System.ServiceModel.DroppedAMessage</span><span class="sxs-lookup"><span data-stu-id="9ca14-103">System.ServiceModel.DroppedAMessage</span></span>
 
-<span data-ttu-id="d7da1-103">System.ServiceModel.DroppedAMessage</span><span class="sxs-lookup"><span data-stu-id="d7da1-103">System.ServiceModel.DroppedAMessage</span></span>  
+<span data-ttu-id="9ca14-104">System.ServiceModel.DroppedAMessage</span><span class="sxs-lookup"><span data-stu-id="9ca14-104">System.ServiceModel.DroppedAMessage</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d7da1-104">Description</span><span class="sxs-lookup"><span data-stu-id="d7da1-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="9ca14-105">説明</span><span class="sxs-lookup"><span data-stu-id="9ca14-105">Description</span></span>  
 
- <span data-ttu-id="d7da1-105">応答メッセージを受信しましたが、このメッセージを待っている未処理の要求がありません。</span><span class="sxs-lookup"><span data-stu-id="d7da1-105">A response message was received, but there are no outstanding requests waiting for this message.</span></span> <span data-ttu-id="d7da1-106">メッセージは Windows Communication Foundation (WCF) ランタイムによって削除されています。</span><span class="sxs-lookup"><span data-stu-id="d7da1-106">The message is being dropped by Windows Communication Foundation (WCF) runtime.</span></span>  
+ <span data-ttu-id="9ca14-106">応答メッセージを受信しましたが、このメッセージを待っている未処理の要求がありません。</span><span class="sxs-lookup"><span data-stu-id="9ca14-106">A response message was received, but there are no outstanding requests waiting for this message.</span></span> <span data-ttu-id="9ca14-107">メッセージは Windows Communication Foundation (WCF) ランタイムによって削除されています。</span><span class="sxs-lookup"><span data-stu-id="9ca14-107">The message is being dropped by Windows Communication Foundation (WCF) runtime.</span></span>  
   
- <span data-ttu-id="d7da1-107">このトレースは、失われたメッセージのデバッグに使用できます。</span><span class="sxs-lookup"><span data-stu-id="d7da1-107">This trace can be used for debugging lost messages.</span></span>  
+ <span data-ttu-id="9ca14-108">このトレースは、失われたメッセージのデバッグに使用できます。</span><span class="sxs-lookup"><span data-stu-id="9ca14-108">This trace can be used for debugging lost messages.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7da1-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="d7da1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ca14-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ca14-109">See also</span></span>
 
-- [<span data-ttu-id="d7da1-109">トレース</span><span class="sxs-lookup"><span data-stu-id="d7da1-109">Tracing</span></span>](index.md)
-- [<span data-ttu-id="d7da1-110">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="d7da1-110">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="d7da1-111">管理と診断</span><span class="sxs-lookup"><span data-stu-id="d7da1-111">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="9ca14-110">トレース</span><span class="sxs-lookup"><span data-stu-id="9ca14-110">Tracing</span></span>](index.md)
+- [<span data-ttu-id="9ca14-111">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="9ca14-111">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="9ca14-112">管理と診断</span><span class="sxs-lookup"><span data-stu-id="9ca14-112">Administration and Diagnostics</span></span>](../index.md)

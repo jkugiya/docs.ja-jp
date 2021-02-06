@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「ComIntegrationServiceHostStoppingService」を参照してください。
 title: System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService
 ms.date: 03/30/2017
 ms.assetid: 78e4e780-c784-4511-8cf5-dd5293579cec
-ms.openlocfilehash: b93a88eff62d9acf1c9940a31a8eb281ac39b6e6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d33df7e4bc806dcaea5a2a5312437bc410ad0cad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290765"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654292"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehoststoppingservice"></a><span data-ttu-id="38253-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span><span class="sxs-lookup"><span data-stu-id="38253-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span></span>
+# <a name="systemservicemodelcomintegrationcomintegrationservicehoststoppingservice"></a><span data-ttu-id="ff6a9-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span><span class="sxs-lookup"><span data-stu-id="ff6a9-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span></span>
 
-<span data-ttu-id="38253-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span><span class="sxs-lookup"><span data-stu-id="38253-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span></span>  
+<span data-ttu-id="ff6a9-104">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span><span class="sxs-lookup"><span data-stu-id="ff6a9-104">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppingService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="38253-104">Description</span><span class="sxs-lookup"><span data-stu-id="38253-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="ff6a9-105">説明</span><span class="sxs-lookup"><span data-stu-id="ff6a9-105">Description</span></span>  
 
- <span data-ttu-id="38253-105">ComPlus : サービスを停止しています。</span><span class="sxs-lookup"><span data-stu-id="38253-105">ComPlus: Stopping service.</span></span>  
+ <span data-ttu-id="ff6a9-106">ComPlus : サービスを停止しています。</span><span class="sxs-lookup"><span data-stu-id="ff6a9-106">ComPlus: Stopping service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38253-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="38253-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff6a9-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff6a9-107">See also</span></span>
 
-- [<span data-ttu-id="38253-107">トレース</span><span class="sxs-lookup"><span data-stu-id="38253-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="38253-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="38253-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="38253-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="38253-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="ff6a9-108">トレース</span><span class="sxs-lookup"><span data-stu-id="ff6a9-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="ff6a9-109">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="ff6a9-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="ff6a9-110">管理と診断</span><span class="sxs-lookup"><span data-stu-id="ff6a9-110">Administration and Diagnostics</span></span>](../index.md)

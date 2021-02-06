@@ -1,31 +1,32 @@
 ---
+description: '詳細情報: 5604-SessionCookieReadingStarted'
 title: 5604 - SessionCookieReadingStarted
 ms.date: 03/30/2017
 ms.assetid: 7348caaa-add0-473d-8af3-b2dadb68abdb
-ms.openlocfilehash: f082f67f6ff774d11c6080a3f138d93d2f6ef3ba
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 27d4c70398a3bd8db74175296d5f138b6d788a78
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635988"
 ---
-# <a name="5604---sessioncookiereadingstarted"></a><span data-ttu-id="1e1d4-102">5604 - SessionCookieReadingStarted</span><span class="sxs-lookup"><span data-stu-id="1e1d4-102">5604 - SessionCookieReadingStarted</span></span>
+# <a name="5604---sessioncookiereadingstarted"></a><span data-ttu-id="2a094-103">5604 - SessionCookieReadingStarted</span><span class="sxs-lookup"><span data-stu-id="2a094-103">5604 - SessionCookieReadingStarted</span></span>
 
-## <a name="properties"></a><span data-ttu-id="1e1d4-103">プロパティ</span><span class="sxs-lookup"><span data-stu-id="1e1d4-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="2a094-104">プロパティ</span><span class="sxs-lookup"><span data-stu-id="2a094-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="1e1d4-104">ID</span><span class="sxs-lookup"><span data-stu-id="1e1d4-104">ID</span></span>|<span data-ttu-id="1e1d4-105">5604</span><span class="sxs-lookup"><span data-stu-id="1e1d4-105">5604</span></span>|  
-|<span data-ttu-id="1e1d4-106">Keywords</span><span class="sxs-lookup"><span data-stu-id="1e1d4-106">Keywords</span></span>|<span data-ttu-id="1e1d4-107">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="1e1d4-107">Security</span></span>|  
-|<span data-ttu-id="1e1d4-108">Level</span><span class="sxs-lookup"><span data-stu-id="1e1d4-108">Level</span></span>|<span data-ttu-id="1e1d4-109">"詳細"</span><span class="sxs-lookup"><span data-stu-id="1e1d4-109">Verbose</span></span>|  
-|<span data-ttu-id="1e1d4-110">チャネル</span><span class="sxs-lookup"><span data-stu-id="1e1d4-110">Channel</span></span>|<span data-ttu-id="1e1d4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="1e1d4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="2a094-105">id</span><span class="sxs-lookup"><span data-stu-id="2a094-105">ID</span></span>|<span data-ttu-id="2a094-106">5604</span><span class="sxs-lookup"><span data-stu-id="2a094-106">5604</span></span>|  
+|<span data-ttu-id="2a094-107">Keywords</span><span class="sxs-lookup"><span data-stu-id="2a094-107">Keywords</span></span>|<span data-ttu-id="2a094-108">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="2a094-108">Security</span></span>|  
+|<span data-ttu-id="2a094-109">Level</span><span class="sxs-lookup"><span data-stu-id="2a094-109">Level</span></span>|<span data-ttu-id="2a094-110">"詳細"</span><span class="sxs-lookup"><span data-stu-id="2a094-110">Verbose</span></span>|  
+|<span data-ttu-id="2a094-111">チャネル</span><span class="sxs-lookup"><span data-stu-id="2a094-111">Channel</span></span>|<span data-ttu-id="2a094-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="2a094-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="1e1d4-112">Description</span><span class="sxs-lookup"><span data-stu-id="1e1d4-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="2a094-113">説明</span><span class="sxs-lookup"><span data-stu-id="2a094-113">Description</span></span>  
 
- <span data-ttu-id="1e1d4-113">このイベントは、セッション クッキーからのセッション トークンの読み取りが開始されたときに生成されます。</span><span class="sxs-lookup"><span data-stu-id="1e1d4-113">This event is emitted when the reading session token from session cookie started.</span></span>  
+ <span data-ttu-id="2a094-114">このイベントは、セッション クッキーからのセッション トークンの読み取りが開始されたときに生成されます。</span><span class="sxs-lookup"><span data-stu-id="2a094-114">This event is emitted when the reading session token from session cookie started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="1e1d4-114">Message</span><span class="sxs-lookup"><span data-stu-id="1e1d4-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="2a094-115">Message</span><span class="sxs-lookup"><span data-stu-id="2a094-115">Message</span></span>  
 
- <span data-ttu-id="1e1d4-115">セッション クッキーからのセッション トークンの読み取りを開始しました。</span><span class="sxs-lookup"><span data-stu-id="1e1d4-115">Reading session token from session cookie started.</span></span>  
+ <span data-ttu-id="2a094-116">セッション クッキーからのセッション トークンの読み取りを開始しました。</span><span class="sxs-lookup"><span data-stu-id="2a094-116">Reading session token from session cookie started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="1e1d4-116">詳細</span><span class="sxs-lookup"><span data-stu-id="1e1d4-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="2a094-117">詳細</span><span class="sxs-lookup"><span data-stu-id="2a094-117">Details</span></span>

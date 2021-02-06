@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FreeWin32ResBlob メソッド'
 title: FreeWin32ResBlob メソッド
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d941102b-2679-4c49-b15e-c0fc9c53e11f
 topic_type:
 - apiref
-ms.openlocfilehash: 44c5228f7ee467abd02a9ec09590d0352fc82036
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 56c83632b623eec76e8e2d24030c79a8262f506f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637944"
 ---
-# <a name="freewin32resblob-method"></a><span data-ttu-id="0efb4-102">FreeWin32ResBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="0efb4-102">FreeWin32ResBlob Method</span></span>
+# <a name="freewin32resblob-method"></a><span data-ttu-id="d44ca-103">FreeWin32ResBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="d44ca-103">FreeWin32ResBlob Method</span></span>
 
-<span data-ttu-id="0efb4-103">Win32 リソース blob と関連付けられているリソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="0efb4-103">Releases the Win32 resource blob and associated resources.</span></span>  
+<span data-ttu-id="d44ca-104">Win32 リソース blob と関連付けられているリソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="d44ca-104">Releases the Win32 resource blob and associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0efb4-104">構文</span><span class="sxs-lookup"><span data-stu-id="0efb4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d44ca-105">構文</span><span class="sxs-lookup"><span data-stu-id="d44ca-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT FreeWin32ResBlob(  
@@ -33,21 +34,21 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0efb4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0efb4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d44ca-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d44ca-106">Parameters</span></span>  
 
  `ppResBlob`  
- <span data-ttu-id="0efb4-106">解放されるリソース blob。</span><span class="sxs-lookup"><span data-stu-id="0efb4-106">The resource blob to be released.</span></span> <span data-ttu-id="0efb4-107">このメソッドは、blob ポインターを NULL に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="0efb4-107">This method assigns the blob pointer to NULL.</span></span>  
+ <span data-ttu-id="d44ca-107">解放されるリソース blob。</span><span class="sxs-lookup"><span data-stu-id="d44ca-107">The resource blob to be released.</span></span> <span data-ttu-id="d44ca-108">このメソッドは、blob ポインターを NULL に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="d44ca-108">This method assigns the blob pointer to NULL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0efb4-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="0efb4-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d44ca-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="d44ca-109">Return Value</span></span>  
 
- <span data-ttu-id="0efb4-109">メソッドが成功した場合は S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="0efb4-109">Returns S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="d44ca-110">メソッドが成功した場合は S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="d44ca-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0efb4-110">要件</span><span class="sxs-lookup"><span data-stu-id="0efb4-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d44ca-111">要件</span><span class="sxs-lookup"><span data-stu-id="d44ca-111">Requirements</span></span>  
 
- <span data-ttu-id="0efb4-111">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="0efb4-111">Requires alink.h</span></span>  
+ <span data-ttu-id="d44ca-112">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="d44ca-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0efb4-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="0efb4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d44ca-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="d44ca-113">See also</span></span>
 
-- [<span data-ttu-id="0efb4-113">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0efb4-113">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="0efb4-114">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0efb4-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="0efb4-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="0efb4-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="d44ca-114">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d44ca-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="d44ca-115">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d44ca-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="d44ca-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="d44ca-116">ALink API</span></span>](index.md)

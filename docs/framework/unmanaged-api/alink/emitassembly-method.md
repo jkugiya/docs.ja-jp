@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: EmitAssembly メソッド'
 title: EmitAssembly メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-ms.openlocfilehash: b85b2576660f77eb901c504d398e8bc7909882f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aada17d8df6435c5edfe6beb5db5ee13f887f253
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638341"
 ---
-# <a name="emitassembly-method"></a><span data-ttu-id="b8f70-102">EmitAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="b8f70-102">EmitAssembly Method</span></span>
+# <a name="emitassembly-method"></a><span data-ttu-id="55da3-103">EmitAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="55da3-103">EmitAssembly Method</span></span>
 
-<span data-ttu-id="b8f70-103">アセンブリを作成します。</span><span class="sxs-lookup"><span data-stu-id="b8f70-103">Creates the assembly.</span></span> <span data-ttu-id="b8f70-104">アセンブリファイルを除く他のすべてのファイルが閉じられた後に、このメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="b8f70-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="b8f70-105">バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="b8f70-105">Do not call this method when producing unbound modules.</span></span>  
+<span data-ttu-id="55da3-104">アセンブリを作成します。</span><span class="sxs-lookup"><span data-stu-id="55da3-104">Creates the assembly.</span></span> <span data-ttu-id="55da3-105">アセンブリファイルを除く他のすべてのファイルが閉じられた後に、このメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="55da3-105">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="55da3-106">バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="55da3-106">Do not call this method when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8f70-106">構文</span><span class="sxs-lookup"><span data-stu-id="b8f70-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55da3-107">構文</span><span class="sxs-lookup"><span data-stu-id="55da3-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitAssembly(  
@@ -34,21 +35,21 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b8f70-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b8f70-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="55da3-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="55da3-108">Parameters</span></span>  
 
  `AssemblyID`  
- <span data-ttu-id="b8f70-108">アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="b8f70-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="55da3-109">アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="55da3-109">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b8f70-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="b8f70-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="55da3-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="55da3-110">Return Value</span></span>  
 
- <span data-ttu-id="b8f70-110">メソッドが成功した場合は S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="b8f70-110">Returns S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="55da3-111">メソッドが成功した場合は S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="55da3-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8f70-111">要件</span><span class="sxs-lookup"><span data-stu-id="b8f70-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55da3-112">要件</span><span class="sxs-lookup"><span data-stu-id="55da3-112">Requirements</span></span>  
 
- <span data-ttu-id="b8f70-112">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="b8f70-112">Requires alink.h</span></span>  
+ <span data-ttu-id="55da3-113">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="55da3-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8f70-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b8f70-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55da3-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="55da3-114">See also</span></span>
 
-- [<span data-ttu-id="b8f70-114">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b8f70-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="b8f70-115">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b8f70-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="b8f70-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="b8f70-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="55da3-115">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="55da3-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="55da3-116">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="55da3-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="55da3-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="55da3-117">ALink API</span></span>](index.md)

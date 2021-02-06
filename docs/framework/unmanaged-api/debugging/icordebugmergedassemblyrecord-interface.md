@@ -1,45 +1,46 @@
 ---
+description: 詳細については、「ICorDebugMergedAssemblyRecord インターフェイス」を参照してください。
 title: ICorDebugMergedAssemblyRecord インターフェイス
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: a26702c6b21e4bfe352d861387a80b976a8dc556
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e64c0ee30a8e8956dd336a30e6c81962c75f04e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650288"
 ---
-# <a name="icordebugmergedassemblyrecord-interface"></a><span data-ttu-id="2e82c-102">ICorDebugMergedAssemblyRecord インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2e82c-102">ICorDebugMergedAssemblyRecord Interface</span></span>
+# <a name="icordebugmergedassemblyrecord-interface"></a><span data-ttu-id="2535e-103">ICorDebugMergedAssemblyRecord インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2535e-103">ICorDebugMergedAssemblyRecord Interface</span></span>
 
-<span data-ttu-id="2e82c-103">マージされたアセンブリに関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-103">Provides information about a merged assembly.</span></span>  
+<span data-ttu-id="2535e-104">マージされたアセンブリに関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="2535e-104">Provides information about a merged assembly.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2e82c-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2535e-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-105">Methods</span></span>  
   
-|<span data-ttu-id="2e82c-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-105">Method</span></span>|<span data-ttu-id="2e82c-106">説明</span><span class="sxs-lookup"><span data-stu-id="2e82c-106">Description</span></span>|  
+|<span data-ttu-id="2535e-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-106">Method</span></span>|<span data-ttu-id="2535e-107">説明</span><span class="sxs-lookup"><span data-stu-id="2535e-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2e82c-107">GetCulture メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-107">GetCulture Method</span></span>](icordebugmergedassemblyrecord-getculture-method.md)|<span data-ttu-id="2e82c-108">アセンブリのカルチャ名文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-108">Gets the culture name string of the assembly.</span></span>|  
-|[<span data-ttu-id="2e82c-109">GetIndex メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-109">GetIndex Method</span></span>](icordebugmergedassemblyrecord-getindex-method.md)|<span data-ttu-id="2e82c-110">アセンブリのプレフィックス インデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-110">Gets the assembly's prefix index.</span></span>|  
-|[<span data-ttu-id="2e82c-111">GetPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-111">GetPublicKey Method</span></span>](icordebugmergedassemblyrecord-getpublickey-method.md)|<span data-ttu-id="2e82c-112">アセンブリの公開キーを取得します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-112">Gets the assembly's public key.</span></span>|  
-|[<span data-ttu-id="2e82c-113">GetPublicKeyToken メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-113">GetPublicKeyToken Method</span></span>](icordebugmergedassemblyrecord-getpublickeytoken-method.md)|<span data-ttu-id="2e82c-114">アセンブリの公開キー トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-114">Gets the assembly's public key token.</span></span>|  
-|[<span data-ttu-id="2e82c-115">GetSimpleName メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-115">GetSimpleName Method</span></span>](icordebugmergedassemblyrecord-getsimplename-method.md)|<span data-ttu-id="2e82c-116">アセンブリの簡易名を取得します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-116">Gets the simple name of the assembly.</span></span>|  
-|[<span data-ttu-id="2e82c-117">GetVersion メソッド</span><span class="sxs-lookup"><span data-stu-id="2e82c-117">GetVersion Method</span></span>](icordebugmergedassemblyrecord-getversion-method.md)|<span data-ttu-id="2e82c-118">アセンブリのバージョン情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-118">Gets the assembly's version information.</span></span>|  
+|[<span data-ttu-id="2535e-108">GetCulture メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-108">GetCulture Method</span></span>](icordebugmergedassemblyrecord-getculture-method.md)|<span data-ttu-id="2535e-109">アセンブリのカルチャ名文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="2535e-109">Gets the culture name string of the assembly.</span></span>|  
+|[<span data-ttu-id="2535e-110">GetIndex メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-110">GetIndex Method</span></span>](icordebugmergedassemblyrecord-getindex-method.md)|<span data-ttu-id="2535e-111">アセンブリのプレフィックス インデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="2535e-111">Gets the assembly's prefix index.</span></span>|  
+|[<span data-ttu-id="2535e-112">GetPublicKey メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-112">GetPublicKey Method</span></span>](icordebugmergedassemblyrecord-getpublickey-method.md)|<span data-ttu-id="2535e-113">アセンブリの公開キーを取得します。</span><span class="sxs-lookup"><span data-stu-id="2535e-113">Gets the assembly's public key.</span></span>|  
+|[<span data-ttu-id="2535e-114">GetPublicKeyToken メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-114">GetPublicKeyToken Method</span></span>](icordebugmergedassemblyrecord-getpublickeytoken-method.md)|<span data-ttu-id="2535e-115">アセンブリの公開キー トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="2535e-115">Gets the assembly's public key token.</span></span>|  
+|[<span data-ttu-id="2535e-116">GetSimpleName メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-116">GetSimpleName Method</span></span>](icordebugmergedassemblyrecord-getsimplename-method.md)|<span data-ttu-id="2535e-117">アセンブリの簡易名を取得します。</span><span class="sxs-lookup"><span data-stu-id="2535e-117">Gets the simple name of the assembly.</span></span>|  
+|[<span data-ttu-id="2535e-118">GetVersion メソッド</span><span class="sxs-lookup"><span data-stu-id="2535e-118">GetVersion Method</span></span>](icordebugmergedassemblyrecord-getversion-method.md)|<span data-ttu-id="2535e-119">アセンブリのバージョン情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="2535e-119">Gets the assembly's version information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2e82c-119">注釈</span><span class="sxs-lookup"><span data-stu-id="2e82c-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2535e-120">解説</span><span class="sxs-lookup"><span data-stu-id="2535e-120">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="2e82c-120">このインターフェイスは .NET ネイティブでのみ使用可能です。</span><span class="sxs-lookup"><span data-stu-id="2e82c-120">This interface is available with .NET Native only.</span></span> <span data-ttu-id="2e82c-121">.NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。</span><span class="sxs-lookup"><span data-stu-id="2e82c-121">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
+> <span data-ttu-id="2535e-121">このインターフェイスは .NET ネイティブでのみ使用可能です。</span><span class="sxs-lookup"><span data-stu-id="2535e-121">This interface is available with .NET Native only.</span></span> <span data-ttu-id="2535e-122">.NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。</span><span class="sxs-lookup"><span data-stu-id="2535e-122">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e82c-122">要件</span><span class="sxs-lookup"><span data-stu-id="2e82c-122">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2535e-123">要件</span><span class="sxs-lookup"><span data-stu-id="2535e-123">Requirements</span></span>  
 
- <span data-ttu-id="2e82c-123">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2e82c-123">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="2535e-124">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2535e-124">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e82c-124">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2e82c-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2535e-125">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2535e-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2e82c-125">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e82c-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2535e-126">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2535e-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2e82c-126">**.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e82c-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="2535e-127">**.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2535e-127">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e82c-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e82c-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2535e-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="2535e-128">See also</span></span>
 
-- [<span data-ttu-id="2e82c-128">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="2e82c-128">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="2e82c-129">デバッグ</span><span class="sxs-lookup"><span data-stu-id="2e82c-129">Debugging</span></span>](index.md)
+- [<span data-ttu-id="2535e-129">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="2535e-129">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="2535e-130">デバッグ</span><span class="sxs-lookup"><span data-stu-id="2535e-130">Debugging</span></span>](index.md)

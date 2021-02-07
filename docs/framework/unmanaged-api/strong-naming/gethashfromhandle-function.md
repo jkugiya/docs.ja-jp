@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: GetHashFromHandle 関数'
 title: GetHashFromHandle 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5951a5befd9e66b13a3b3033398614fca1f1a9d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736548"
 ---
-# <a name="gethashfromhandle-function"></a><span data-ttu-id="c60bc-102">GetHashFromHandle 関数</span><span class="sxs-lookup"><span data-stu-id="c60bc-102">GetHashFromHandle Function</span></span>
+# <a name="gethashfromhandle-function"></a><span data-ttu-id="9dbea-103">GetHashFromHandle 関数</span><span class="sxs-lookup"><span data-stu-id="9dbea-103">GetHashFromHandle Function</span></span>
 
-<span data-ttu-id="c60bc-103">指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c60bc-103">Generates a hash over the contents of the file with the specified file handle, using the specified hash algorithm.</span></span>  
+<span data-ttu-id="9dbea-104">指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。</span><span class="sxs-lookup"><span data-stu-id="9dbea-104">Generates a hash over the contents of the file with the specified file handle, using the specified hash algorithm.</span></span>  
   
- <span data-ttu-id="c60bc-104">この関数は非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="c60bc-104">This function has been deprecated.</span></span> <span data-ttu-id="c60bc-105">代わりに [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="c60bc-105">Use the [ICLRStrongName::GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) method instead.</span></span>  
+ <span data-ttu-id="9dbea-105">この関数は非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="9dbea-105">This function has been deprecated.</span></span> <span data-ttu-id="9dbea-106">代わりに [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="9dbea-106">Use the [ICLRStrongName::GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c60bc-106">構文</span><span class="sxs-lookup"><span data-stu-id="c60bc-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9dbea-107">構文</span><span class="sxs-lookup"><span data-stu-id="9dbea-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHashFromHandle (  
@@ -39,34 +40,34 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c60bc-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c60bc-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9dbea-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9dbea-108">Parameters</span></span>  
 
  `hFile`  
- <span data-ttu-id="c60bc-108">からハッシュされるファイルのハンドル。</span><span class="sxs-lookup"><span data-stu-id="c60bc-108">[in] The handle of the file to be hashed.</span></span>  
+ <span data-ttu-id="9dbea-109">からハッシュされるファイルのハンドル。</span><span class="sxs-lookup"><span data-stu-id="9dbea-109">[in] The handle of the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="c60bc-109">[入力、出力]ハッシュアルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="c60bc-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="c60bc-110">既定のアルゴリズムには0を使用します。</span><span class="sxs-lookup"><span data-stu-id="c60bc-110">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="9dbea-110">[入力、出力]ハッシュアルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="9dbea-110">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="9dbea-111">既定のアルゴリズムには0を使用します。</span><span class="sxs-lookup"><span data-stu-id="9dbea-111">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="c60bc-111">入出力返されたハッシュバッファー。</span><span class="sxs-lookup"><span data-stu-id="c60bc-111">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="9dbea-112">入出力返されたハッシュバッファー。</span><span class="sxs-lookup"><span data-stu-id="9dbea-112">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="c60bc-112">から要求された最大サイズ `pbHash` 。</span><span class="sxs-lookup"><span data-stu-id="c60bc-112">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="9dbea-113">から要求された最大サイズ `pbHash` 。</span><span class="sxs-lookup"><span data-stu-id="9dbea-113">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="c60bc-113">入出力返されたのサイズ (バイト単位) `pbHash` 。</span><span class="sxs-lookup"><span data-stu-id="c60bc-113">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="9dbea-114">入出力返されたのサイズ (バイト単位) `pbHash` 。</span><span class="sxs-lookup"><span data-stu-id="9dbea-114">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c60bc-114">要件</span><span class="sxs-lookup"><span data-stu-id="c60bc-114">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9dbea-115">要件</span><span class="sxs-lookup"><span data-stu-id="9dbea-115">Requirements</span></span>  
 
- <span data-ttu-id="c60bc-115">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c60bc-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="9dbea-116">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9dbea-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c60bc-116">**ヘッダー:** StrongName</span><span class="sxs-lookup"><span data-stu-id="c60bc-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="9dbea-117">**ヘッダー:** StrongName</span><span class="sxs-lookup"><span data-stu-id="9dbea-117">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="c60bc-117">**ライブラリ:** MsCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="c60bc-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9dbea-118">**ライブラリ:** MsCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="9dbea-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c60bc-118">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c60bc-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9dbea-119">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9dbea-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c60bc-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="c60bc-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9dbea-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="9dbea-120">See also</span></span>
 
-- [<span data-ttu-id="c60bc-120">GetHashFromHandle メソッド</span><span class="sxs-lookup"><span data-stu-id="c60bc-120">GetHashFromHandle Method</span></span>](../hosting/iclrstrongname-gethashfromhandle-method.md)
-- [<span data-ttu-id="c60bc-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c60bc-121">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="9dbea-121">GetHashFromHandle メソッド</span><span class="sxs-lookup"><span data-stu-id="9dbea-121">GetHashFromHandle Method</span></span>](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [<span data-ttu-id="9dbea-122">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9dbea-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)

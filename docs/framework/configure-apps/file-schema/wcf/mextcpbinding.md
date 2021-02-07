@@ -1,24 +1,25 @@
 ---
+description: '詳細情報: <mexTcpBinding>'
 title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: 0d12f886eaee6283ee686209dfc129e397a8e1fe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d13d9f5eb4bae13a39d4f0cdb57129eb9216ab5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684296"
 ---
 # \<mexTcpBinding>
 
-<span data-ttu-id="2588d-101">TCP 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="2588d-101">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over TCP.</span></span>  
+<span data-ttu-id="92749-102">TCP 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="92749-102">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over TCP.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<mexTcpBinding>**  
   
-## <a name="syntax"></a><span data-ttu-id="2588d-102">構文</span><span class="sxs-lookup"><span data-stu-id="2588d-102">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92749-103">構文</span><span class="sxs-lookup"><span data-stu-id="92749-103">Syntax</span></span>  
   
 ```xml  
 <mexTcpBinding>
@@ -31,38 +32,38 @@ ms.locfileid: "91204698"
 </mexTcpBinding>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2588d-103">属性および要素</span><span class="sxs-lookup"><span data-stu-id="2588d-103">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="92749-104">属性および要素</span><span class="sxs-lookup"><span data-stu-id="92749-104">Attributes and Elements</span></span>  
 
- <span data-ttu-id="2588d-104">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="2588d-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="92749-105">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="92749-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2588d-105">属性</span><span class="sxs-lookup"><span data-stu-id="2588d-105">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="92749-106">属性</span><span class="sxs-lookup"><span data-stu-id="92749-106">Attributes</span></span>  
   
-|<span data-ttu-id="2588d-106">属性</span><span class="sxs-lookup"><span data-stu-id="2588d-106">Attribute</span></span>|<span data-ttu-id="2588d-107">[説明]</span><span class="sxs-lookup"><span data-stu-id="2588d-107">Description</span></span>|  
+|<span data-ttu-id="92749-107">属性</span><span class="sxs-lookup"><span data-stu-id="92749-107">Attribute</span></span>|<span data-ttu-id="92749-108">説明</span><span class="sxs-lookup"><span data-stu-id="92749-108">Description</span></span>|  
 |---------------|-----------------|  
-|`closeTimeout`|<span data-ttu-id="2588d-108">クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値。</span><span class="sxs-lookup"><span data-stu-id="2588d-108">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="2588d-109">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="2588d-109">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="2588d-110">既定値は 00:01:00 です。</span><span class="sxs-lookup"><span data-stu-id="2588d-110">The default is 00:01:00.</span></span>|  
-|`name`|<span data-ttu-id="2588d-111">バインディングの構成名を格納する文字列です。</span><span class="sxs-lookup"><span data-stu-id="2588d-111">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="2588d-112">この値は、バインディングの ID として使用されるため、一意にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="2588d-112">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="2588d-113">.NET Framework 4 以降では、バインドと動作に名前を付ける必要はありません。</span><span class="sxs-lookup"><span data-stu-id="2588d-113">Starting with .NET Framework 4, bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="2588d-114">既定の構成と無名のバインドおよび動作の詳細については、「 [WCF サービスの](../../../wcf/samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](../../../wcf/simplified-configuration.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2588d-114">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
-|`openTimeout`|<span data-ttu-id="2588d-115">実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。</span><span class="sxs-lookup"><span data-stu-id="2588d-115">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="2588d-116">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="2588d-116">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="2588d-117">既定値は 00:01:00 です。</span><span class="sxs-lookup"><span data-stu-id="2588d-117">The default is 00:01:00.</span></span>|  
-|`receiveTimeout`|<span data-ttu-id="2588d-118">受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。</span><span class="sxs-lookup"><span data-stu-id="2588d-118">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="2588d-119">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="2588d-119">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="2588d-120">既定値は 00:10:00 です。</span><span class="sxs-lookup"><span data-stu-id="2588d-120">The default is 00:10:00.</span></span>|  
-|`sendTimeout`|<span data-ttu-id="2588d-121">送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。</span><span class="sxs-lookup"><span data-stu-id="2588d-121">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="2588d-122">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="2588d-122">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="2588d-123">既定値は 00:01:00 です。</span><span class="sxs-lookup"><span data-stu-id="2588d-123">The default is 00:01:00.</span></span>|  
+|`closeTimeout`|<span data-ttu-id="92749-109">クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値。</span><span class="sxs-lookup"><span data-stu-id="92749-109">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="92749-110">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="92749-110">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="92749-111">既定値は 00:01:00 です。</span><span class="sxs-lookup"><span data-stu-id="92749-111">The default is 00:01:00.</span></span>|  
+|`name`|<span data-ttu-id="92749-112">バインディングの構成名を格納する文字列です。</span><span class="sxs-lookup"><span data-stu-id="92749-112">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="92749-113">この値は、バインディングの ID として使用されるため、一意にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92749-113">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="92749-114">.NET Framework 4 以降では、バインドと動作に名前を付ける必要はありません。</span><span class="sxs-lookup"><span data-stu-id="92749-114">Starting with .NET Framework 4, bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="92749-115">既定の構成と無名のバインドおよび動作の詳細については、「 [WCF サービスの](../../../wcf/samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](../../../wcf/simplified-configuration.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="92749-115">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|`openTimeout`|<span data-ttu-id="92749-116">実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。</span><span class="sxs-lookup"><span data-stu-id="92749-116">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="92749-117">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="92749-117">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="92749-118">既定値は 00:01:00 です。</span><span class="sxs-lookup"><span data-stu-id="92749-118">The default is 00:01:00.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="92749-119">受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。</span><span class="sxs-lookup"><span data-stu-id="92749-119">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="92749-120">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="92749-120">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="92749-121">既定値は 00:10:00 です。</span><span class="sxs-lookup"><span data-stu-id="92749-121">The default is 00:10:00.</span></span>|  
+|`sendTimeout`|<span data-ttu-id="92749-122">送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。</span><span class="sxs-lookup"><span data-stu-id="92749-122">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="92749-123">この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="92749-123">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="92749-124">既定値は 00:01:00 です。</span><span class="sxs-lookup"><span data-stu-id="92749-124">The default is 00:01:00.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2588d-124">子要素</span><span class="sxs-lookup"><span data-stu-id="2588d-124">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="92749-125">子要素</span><span class="sxs-lookup"><span data-stu-id="92749-125">Child Elements</span></span>  
 
- <span data-ttu-id="2588d-125">なし。</span><span class="sxs-lookup"><span data-stu-id="2588d-125">None.</span></span>  
+ <span data-ttu-id="92749-126">なし。</span><span class="sxs-lookup"><span data-stu-id="92749-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2588d-126">親要素</span><span class="sxs-lookup"><span data-stu-id="2588d-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="92749-127">親要素</span><span class="sxs-lookup"><span data-stu-id="92749-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="2588d-127">要素</span><span class="sxs-lookup"><span data-stu-id="2588d-127">Element</span></span>|<span data-ttu-id="2588d-128">説明</span><span class="sxs-lookup"><span data-stu-id="2588d-128">Description</span></span>|  
+|<span data-ttu-id="92749-128">要素</span><span class="sxs-lookup"><span data-stu-id="92749-128">Element</span></span>|<span data-ttu-id="92749-129">説明</span><span class="sxs-lookup"><span data-stu-id="92749-129">Description</span></span>|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|<span data-ttu-id="2588d-129">この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。</span><span class="sxs-lookup"><span data-stu-id="2588d-129">This element holds a collection of standard and custom bindings.</span></span>|  
+|[\<bindings>](bindings.md)|<span data-ttu-id="92749-130">この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。</span><span class="sxs-lookup"><span data-stu-id="92749-130">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2588d-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="2588d-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92749-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="92749-131">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.MexTcpBindingElement>
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>
-- [<span data-ttu-id="2588d-131">方法: 構成ファイルを使用してサービスのメタデータを公開する</span><span class="sxs-lookup"><span data-stu-id="2588d-131">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [<span data-ttu-id="2588d-132">カスタム バインディングを介したメタデータの公開と取得</span><span class="sxs-lookup"><span data-stu-id="2588d-132">Publishing and Retrieving Metadata Over a Custom Binding</span></span>](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [<span data-ttu-id="2588d-133">Metadata</span><span class="sxs-lookup"><span data-stu-id="2588d-133">Metadata</span></span>](../../../wcf/feature-details/metadata.md)
-- [<span data-ttu-id="2588d-134">バインド</span><span class="sxs-lookup"><span data-stu-id="2588d-134">Bindings</span></span>](../../../wcf/bindings.md)
-- [<span data-ttu-id="2588d-135">システムが提供するバインディングの構成</span><span class="sxs-lookup"><span data-stu-id="2588d-135">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="2588d-136">サービスとクライアントを構成するためのバインディングの使用</span><span class="sxs-lookup"><span data-stu-id="2588d-136">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="92749-132">方法: 構成ファイルを使用してサービスのメタデータを公開する</span><span class="sxs-lookup"><span data-stu-id="92749-132">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [<span data-ttu-id="92749-133">カスタム バインディングを介したメタデータの公開と取得</span><span class="sxs-lookup"><span data-stu-id="92749-133">Publishing and Retrieving Metadata Over a Custom Binding</span></span>](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
+- [<span data-ttu-id="92749-134">Metadata</span><span class="sxs-lookup"><span data-stu-id="92749-134">Metadata</span></span>](../../../wcf/feature-details/metadata.md)
+- [<span data-ttu-id="92749-135">バインド</span><span class="sxs-lookup"><span data-stu-id="92749-135">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="92749-136">システムが提供するバインディングの構成</span><span class="sxs-lookup"><span data-stu-id="92749-136">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="92749-137">サービスとクライアントを構成するためのバインディングの使用</span><span class="sxs-lookup"><span data-stu-id="92749-137">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

@@ -1,29 +1,30 @@
 ---
+description: '詳細情報: 型指定されていない要求/応答'
 title: 型指定されていない Request-Reply
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: bcd35bcac928397cad57384fdecb55d7e5ad13c3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bac1c9982cf5717bec72b128c238c449324446a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294990"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685453"
 ---
-# <a name="untyped-requestreply"></a><span data-ttu-id="8e578-102">型指定のない要求/応答</span><span class="sxs-lookup"><span data-stu-id="8e578-102">Untyped Request/Reply</span></span>
+# <a name="untyped-requestreply"></a><span data-ttu-id="8dbad-103">型指定のない要求/応答</span><span class="sxs-lookup"><span data-stu-id="8dbad-103">Untyped Request/Reply</span></span>
 
-<span data-ttu-id="8e578-103">このサンプルは、Message クラスを使用する操作コントラクトを定義する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8e578-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
+<span data-ttu-id="8dbad-104">このサンプルは、Message クラスを使用する操作コントラクトを定義する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-104">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="8e578-104">このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8e578-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="8dbad-105">このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dbad-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="8e578-105">このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="8e578-105">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="8e578-106">サービス コントラクトは、メッセージの種類を引数として取得してメッセージを返すという 1 つの操作を定義します。</span><span class="sxs-lookup"><span data-stu-id="8e578-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="8e578-107">この操作は、合計の計算に必要なすべてのデータをメッセージ本文から収集し、その合計を返信メッセージの本文に格納して返送します。</span><span class="sxs-lookup"><span data-stu-id="8e578-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
+ <span data-ttu-id="8dbad-106">このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="8dbad-106">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="8dbad-107">サービス コントラクトは、メッセージの種類を引数として取得してメッセージを返すという 1 つの操作を定義します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-107">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="8dbad-108">この操作は、合計の計算に必要なすべてのデータをメッセージ本文から収集し、その合計を返信メッセージの本文に格納して返送します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-108">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- <span data-ttu-id="8e578-108">サービスでは、操作によって入力メッセージ内で渡された整数の配列が取得され、その合計が計算されます。</span><span class="sxs-lookup"><span data-stu-id="8e578-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="8e578-109">応答メッセージの送信では、サンプルは適切なメッセージ バージョンと Action を含む新しいメッセージを作成し、計算された合計をメッセージ本文に追加します。</span><span class="sxs-lookup"><span data-stu-id="8e578-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="8e578-110">これを実行するサンプル コードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8e578-110">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="8dbad-109">サービスでは、操作によって入力メッセージ内で渡された整数の配列が取得され、その合計が計算されます。</span><span class="sxs-lookup"><span data-stu-id="8dbad-109">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="8dbad-110">応答メッセージの送信では、サンプルは適切なメッセージ バージョンと Action を含む新しいメッセージを作成し、計算された合計をメッセージ本文に追加します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-110">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="8dbad-111">これを実行するサンプル コードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-111">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 public Message ComputeSum(Message request)  
@@ -44,7 +45,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- <span data-ttu-id="8e578-111">クライアントは、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) によって生成されたコードを使用して、リモートサービスへのプロキシを作成します。</span><span class="sxs-lookup"><span data-stu-id="8e578-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="8e578-112">要求メッセージを送信するには、クライアントにメッセージ バージョンが存在する必要があります。これは基になるチャネルによって異なります。</span><span class="sxs-lookup"><span data-stu-id="8e578-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="8e578-113">したがって、クライアントは、作成済みのプロキシ チャネルに適用される新しい <xref:System.ServiceModel.OperationContextScope> を作成し、これが、<xref:System.ServiceModel.OperationContext> プロパティで設定されている正しいメッセージ バージョンにより、`OutgoingMessageHeaders.MessageVersion` を作成します。</span><span class="sxs-lookup"><span data-stu-id="8e578-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="8e578-114">クライアントは入力配列を本文として要求メッセージに渡し、プロキシの `ComputeSum` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="8e578-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="8e578-115">次にクライアントは、応答メッセージの `GetBody<T>` メソッドにアクセスし、渡した入力の合計を取得します。</span><span class="sxs-lookup"><span data-stu-id="8e578-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="8e578-116">これを実行するサンプル コードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8e578-116">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="8dbad-112">クライアントは、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) によって生成されたコードを使用して、リモートサービスへのプロキシを作成します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-112">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="8dbad-113">要求メッセージを送信するには、クライアントにメッセージ バージョンが存在する必要があります。これは基になるチャネルによって異なります。</span><span class="sxs-lookup"><span data-stu-id="8dbad-113">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="8dbad-114">したがって、クライアントは、作成済みのプロキシ チャネルに適用される新しい <xref:System.ServiceModel.OperationContextScope> を作成し、これが、<xref:System.ServiceModel.OperationContext> プロパティで設定されている正しいメッセージ バージョンにより、`OutgoingMessageHeaders.MessageVersion` を作成します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-114">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="8dbad-115">クライアントは入力配列を本文として要求メッセージに渡し、プロキシの `ComputeSum` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-115">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="8dbad-116">次にクライアントは、応答メッセージの `GetBody<T>` メソッドにアクセスし、渡した入力の合計を取得します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-116">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="8dbad-117">これを実行するサンプル コードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-117">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -62,7 +63,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="8e578-117">このサンプルは Web ホストのサンプルです。したがって、クライアント実行可能ファイルのみを実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8e578-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="8e578-118">クライアントでの出力のサンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8e578-118">The following is the sample output on the client.</span></span>  
+ <span data-ttu-id="8dbad-118">このサンプルは Web ホストのサンプルです。したがって、クライアント実行可能ファイルのみを実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8dbad-118">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="8dbad-119">クライアントでの出力のサンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-119">The following is the sample output on the client.</span></span>  
   
 ```console  
 Prompt>Client.exe  
@@ -71,21 +72,21 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="8e578-119">このサンプルは Web ホストのサンプルです。したがって、手順 3. で示したリンクを確認し、サンプルのビルド方法と実行方法を確認してください。</span><span class="sxs-lookup"><span data-stu-id="8e578-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
+ <span data-ttu-id="8dbad-120">このサンプルは Web ホストのサンプルです。したがって、手順 3. で示したリンクを確認し、サンプルのビルド方法と実行方法を確認してください。</span><span class="sxs-lookup"><span data-stu-id="8dbad-120">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="8e578-120">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="8e578-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="8dbad-121">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="8dbad-121">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="8e578-121">[Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。</span><span class="sxs-lookup"><span data-stu-id="8e578-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="8dbad-122">[Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。</span><span class="sxs-lookup"><span data-stu-id="8dbad-122">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="8e578-122">ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="8e578-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
+2. <span data-ttu-id="8dbad-123">ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="8dbad-123">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="8e578-123">サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="8e578-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
+3. <span data-ttu-id="8dbad-124">サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="8dbad-124">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="8e578-124">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="8e578-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8e578-125">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="8e578-125">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="8dbad-125">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="8dbad-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8dbad-126">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="8dbad-126">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="8e578-126">このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。</span><span class="sxs-lookup"><span data-stu-id="8e578-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8e578-127">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="8e578-127">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="8dbad-127">このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。</span><span class="sxs-lookup"><span data-stu-id="8dbad-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8dbad-128">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="8dbad-128">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  

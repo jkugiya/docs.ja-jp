@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: <policyImporter>'
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 72778ce0070d853f8b081a4889ead9524bafd0e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2103c424aef081b72fa822ed207537195b8fdea9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683516"
 ---
 # \<policyImporter>
 
-<span data-ttu-id="0ca69-101">バインディングに関するカスタム ポリシー アサーションのインポートを制御するポリシー インポーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="0ca69-101">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  
+<span data-ttu-id="1f9c8-102">バインディングに関するカスタム ポリシー アサーションのインポートを制御するポリシー インポーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="1f9c8-102">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "91181350"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<policyImporters>**](policyimporters.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<policyImporter>**  
   
-## <a name="syntax"></a><span data-ttu-id="0ca69-102">構文</span><span class="sxs-lookup"><span data-stu-id="0ca69-102">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f9c8-103">構文</span><span class="sxs-lookup"><span data-stu-id="1f9c8-103">Syntax</span></span>  
   
 ```xml  
 <metadata>
@@ -30,35 +31,35 @@ ms.locfileid: "91181350"
 </metadata>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0ca69-103">属性および要素</span><span class="sxs-lookup"><span data-stu-id="0ca69-103">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1f9c8-104">属性および要素</span><span class="sxs-lookup"><span data-stu-id="1f9c8-104">Attributes and Elements</span></span>  
 
- <span data-ttu-id="0ca69-104">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="0ca69-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="1f9c8-105">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="1f9c8-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0ca69-105">属性</span><span class="sxs-lookup"><span data-stu-id="0ca69-105">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1f9c8-106">属性</span><span class="sxs-lookup"><span data-stu-id="1f9c8-106">Attributes</span></span>  
   
-|<span data-ttu-id="0ca69-106">属性</span><span class="sxs-lookup"><span data-stu-id="0ca69-106">Attribute</span></span>|<span data-ttu-id="0ca69-107">[説明]</span><span class="sxs-lookup"><span data-stu-id="0ca69-107">Description</span></span>|  
+|<span data-ttu-id="1f9c8-107">属性</span><span class="sxs-lookup"><span data-stu-id="1f9c8-107">Attribute</span></span>|<span data-ttu-id="1f9c8-108">説明</span><span class="sxs-lookup"><span data-stu-id="1f9c8-108">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="0ca69-108">この要素の型です。</span><span class="sxs-lookup"><span data-stu-id="0ca69-108">The type of this element.</span></span>|  
+|`type`|<span data-ttu-id="1f9c8-109">この要素の型です。</span><span class="sxs-lookup"><span data-stu-id="1f9c8-109">The type of this element.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0ca69-109">子要素</span><span class="sxs-lookup"><span data-stu-id="0ca69-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1f9c8-110">子要素</span><span class="sxs-lookup"><span data-stu-id="1f9c8-110">Child Elements</span></span>  
 
- <span data-ttu-id="0ca69-110">None</span><span class="sxs-lookup"><span data-stu-id="0ca69-110">None</span></span>  
+ <span data-ttu-id="1f9c8-111">なし</span><span class="sxs-lookup"><span data-stu-id="1f9c8-111">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0ca69-111">親要素</span><span class="sxs-lookup"><span data-stu-id="0ca69-111">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1f9c8-112">親要素</span><span class="sxs-lookup"><span data-stu-id="1f9c8-112">Parent Elements</span></span>  
   
-|<span data-ttu-id="0ca69-112">要素</span><span class="sxs-lookup"><span data-stu-id="0ca69-112">Element</span></span>|<span data-ttu-id="0ca69-113">説明</span><span class="sxs-lookup"><span data-stu-id="0ca69-113">Description</span></span>|  
+|<span data-ttu-id="1f9c8-113">要素</span><span class="sxs-lookup"><span data-stu-id="1f9c8-113">Element</span></span>|<span data-ttu-id="1f9c8-114">説明</span><span class="sxs-lookup"><span data-stu-id="1f9c8-114">Description</span></span>|  
 |-------------|-----------------|  
-|[\<policyImporters>](policyimporters.md)|<span data-ttu-id="0ca69-114">バインディングに関するカスタム ポリシー アサーションのインポートを制御するすべてのポリシー インポーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="0ca69-114">Specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span>|  
+|[\<policyImporters>](policyimporters.md)|<span data-ttu-id="1f9c8-115">バインディングに関するカスタム ポリシー アサーションのインポートを制御するすべてのポリシー インポーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="1f9c8-115">Specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0ca69-115">解説</span><span class="sxs-lookup"><span data-stu-id="0ca69-115">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1f9c8-116">解説</span><span class="sxs-lookup"><span data-stu-id="1f9c8-116">Remarks</span></span>  
 
- <span data-ttu-id="0ca69-116">ポリシー インポーターは、バインディング機能についてのカスタム ポリシー アサーションの検索、およびアサーションで必要となる機能を実装するカスタム バインド要素の結び付けに使用されます。</span><span class="sxs-lookup"><span data-stu-id="0ca69-116">A policy importer is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  
+ <span data-ttu-id="1f9c8-117">ポリシー インポーターは、バインディング機能についてのカスタム ポリシー アサーションの検索、およびアサーションで必要となる機能を実装するカスタム バインド要素の結び付けに使用されます。</span><span class="sxs-lookup"><span data-stu-id="1f9c8-117">A policy importer is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ca69-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="0ca69-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f9c8-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f9c8-118">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [<span data-ttu-id="0ca69-118">WCF クライアントの構成</span><span class="sxs-lookup"><span data-stu-id="0ca69-118">WCF Client Configuration</span></span>](../../../wcf/feature-details/client-configuration.md)
-- [<span data-ttu-id="0ca69-119">クライアント</span><span class="sxs-lookup"><span data-stu-id="0ca69-119">Clients</span></span>](../../../wcf/feature-details/clients.md)
+- [<span data-ttu-id="1f9c8-119">WCF クライアントの構成</span><span class="sxs-lookup"><span data-stu-id="1f9c8-119">WCF Client Configuration</span></span>](../../../wcf/feature-details/client-configuration.md)
+- [<span data-ttu-id="1f9c8-120">クライアント</span><span class="sxs-lookup"><span data-stu-id="1f9c8-120">Clients</span></span>](../../../wcf/feature-details/clients.md)

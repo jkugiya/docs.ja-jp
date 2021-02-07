@@ -1,17 +1,18 @@
 ---
+description: 詳細については <secureConversationAuthentication> 、 <serviceCredential>
 title: <secureConversationAuthentication> の <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: be2a9298a78de1503271f41076b9f5bb63c73f74
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8f95b4009111996d2a5c1133c9ef762375b4e3e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683321"
 ---
-# <a name="secureconversationauthentication-of-servicecredential"></a><span data-ttu-id="f887b-102">\<secureConversationAuthentication> の \<serviceCredential></span><span class="sxs-lookup"><span data-stu-id="f887b-102">\<secureConversationAuthentication> of \<serviceCredential></span></span>
+# <a name="secureconversationauthentication-of-servicecredential"></a><span data-ttu-id="527e4-103">\<secureConversationAuthentication> の \<serviceCredential></span><span class="sxs-lookup"><span data-stu-id="527e4-103">\<secureConversationAuthentication> of \<serviceCredential></span></span>
 
-<span data-ttu-id="f887b-103">安全な会話サービスの設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="f887b-103">Specifies the settings for a secure conversation service.</span></span>  
+<span data-ttu-id="527e4-104">安全な会話サービスの設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="527e4-104">Specifies the settings for a secure conversation service.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -21,37 +22,37 @@ ms.locfileid: "91162241"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCredentials>**](servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<secureConversationAuthentication>**  
   
-## <a name="syntax"></a><span data-ttu-id="f887b-104">構文</span><span class="sxs-lookup"><span data-stu-id="f887b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="527e4-105">構文</span><span class="sxs-lookup"><span data-stu-id="527e4-105">Syntax</span></span>  
   
 ```xml  
 <secureConversationAuthentication securityStateEncoderType="String" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f887b-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="f887b-105">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="527e4-106">属性および要素</span><span class="sxs-lookup"><span data-stu-id="527e4-106">Attributes and Elements</span></span>  
 
- <span data-ttu-id="f887b-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="f887b-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="527e4-107">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="527e4-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f887b-107">属性</span><span class="sxs-lookup"><span data-stu-id="f887b-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="527e4-108">属性</span><span class="sxs-lookup"><span data-stu-id="527e4-108">Attributes</span></span>  
   
-|<span data-ttu-id="f887b-108">属性</span><span class="sxs-lookup"><span data-stu-id="f887b-108">Attribute</span></span>|<span data-ttu-id="f887b-109">[説明]</span><span class="sxs-lookup"><span data-stu-id="f887b-109">Description</span></span>|  
+|<span data-ttu-id="527e4-109">属性</span><span class="sxs-lookup"><span data-stu-id="527e4-109">Attribute</span></span>|<span data-ttu-id="527e4-110">説明</span><span class="sxs-lookup"><span data-stu-id="527e4-110">Description</span></span>|  
 |---------------|-----------------|  
-|`securityStateEncoderType`|<span data-ttu-id="f887b-110">使用される <xref:System.ServiceModel.Security.SecurityStateEncoder> の型を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="f887b-110">A string that specifies the type of <xref:System.ServiceModel.Security.SecurityStateEncoder> to be used.</span></span>|  
+|`securityStateEncoderType`|<span data-ttu-id="527e4-111">使用される <xref:System.ServiceModel.Security.SecurityStateEncoder> の型を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="527e4-111">A string that specifies the type of <xref:System.ServiceModel.Security.SecurityStateEncoder> to be used.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f887b-111">子要素</span><span class="sxs-lookup"><span data-stu-id="f887b-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="527e4-112">子要素</span><span class="sxs-lookup"><span data-stu-id="527e4-112">Child Elements</span></span>  
 
- <span data-ttu-id="f887b-112">なし。</span><span class="sxs-lookup"><span data-stu-id="f887b-112">None.</span></span>  
+ <span data-ttu-id="527e4-113">なし。</span><span class="sxs-lookup"><span data-stu-id="527e4-113">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f887b-113">親要素</span><span class="sxs-lookup"><span data-stu-id="f887b-113">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="527e4-114">親要素</span><span class="sxs-lookup"><span data-stu-id="527e4-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="f887b-114">要素</span><span class="sxs-lookup"><span data-stu-id="f887b-114">Element</span></span>|<span data-ttu-id="f887b-115">説明</span><span class="sxs-lookup"><span data-stu-id="f887b-115">Description</span></span>|  
+|<span data-ttu-id="527e4-115">要素</span><span class="sxs-lookup"><span data-stu-id="527e4-115">Element</span></span>|<span data-ttu-id="527e4-116">説明</span><span class="sxs-lookup"><span data-stu-id="527e4-116">Description</span></span>|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](servicecredentials.md)|<span data-ttu-id="f887b-116">サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="f887b-116">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
+|[\<serviceCredentials>](servicecredentials.md)|<span data-ttu-id="527e4-117">サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="527e4-117">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f887b-117">解説</span><span class="sxs-lookup"><span data-stu-id="f887b-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="527e4-118">解説</span><span class="sxs-lookup"><span data-stu-id="527e4-118">Remarks</span></span>  
 
- <span data-ttu-id="f887b-118">この構成要素を使用して、セキュリティ コンテキスト トークン (SCT) クッキーのシリアル化のための既知のクレームの種類のリストと、クッキーの情報をエンコードしてセキュリティで保護するためのエンコーダーを指定します。</span><span class="sxs-lookup"><span data-stu-id="f887b-118">Use this configuration element to specify a list of known claim types for the Security Context Token (SCT) cookies serialization, as well as an encoder to encode and secure cookies information.</span></span> <span data-ttu-id="f887b-119">SCT の詳細については、「<xref:System.ServiceModel.Security.SecureConversationServiceCredential>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f887b-119">For more information on SCT, see <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span></span>  
+ <span data-ttu-id="527e4-119">この構成要素を使用して、セキュリティ コンテキスト トークン (SCT) クッキーのシリアル化のための既知のクレームの種類のリストと、クッキーの情報をエンコードしてセキュリティで保護するためのエンコーダーを指定します。</span><span class="sxs-lookup"><span data-stu-id="527e4-119">Use this configuration element to specify a list of known claim types for the Security Context Token (SCT) cookies serialization, as well as an encoder to encode and secure cookies information.</span></span> <span data-ttu-id="527e4-120">SCT の詳細については、「<xref:System.ServiceModel.Security.SecureConversationServiceCredential>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="527e4-120">For more information on SCT, see <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f887b-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="f887b-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="527e4-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="527e4-121">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>

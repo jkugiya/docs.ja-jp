@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorDebugEnum:: Clone メソッド'
 title: ICorDebugEnum::Clone メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-ms.openlocfilehash: 28e0cded33b49e3aadc0564bae3a60bee76c4396
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18219757980870dcf9663477d195068a76814de1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694564"
 ---
-# <a name="icordebugenumclone-method"></a><span data-ttu-id="5cbed-102">ICorDebugEnum::Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="5cbed-102">ICorDebugEnum::Clone Method</span></span>
+# <a name="icordebugenumclone-method"></a><span data-ttu-id="82720-103">ICorDebugEnum::Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="82720-103">ICorDebugEnum::Clone Method</span></span>
 
-<span data-ttu-id="5cbed-103">この ICorDebugEnum オブジェクトのコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="5cbed-103">Creates a copy of this ICorDebugEnum object.</span></span>  
+<span data-ttu-id="82720-104">この ICorDebugEnum オブジェクトのコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="82720-104">Creates a copy of this ICorDebugEnum object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cbed-104">構文</span><span class="sxs-lookup"><span data-stu-id="5cbed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82720-105">構文</span><span class="sxs-lookup"><span data-stu-id="82720-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (  
@@ -34,17 +35,17 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5cbed-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5cbed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="82720-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="82720-106">Parameters</span></span>  
 
  `ppEnum`  
- <span data-ttu-id="5cbed-106">入出力 `ICorDebugEnum` このオブジェクトのコピーであるオブジェクトのアドレスへのポインター `ICorDebugEnum` 。</span><span class="sxs-lookup"><span data-stu-id="5cbed-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
+ <span data-ttu-id="82720-107">入出力 `ICorDebugEnum` このオブジェクトのコピーであるオブジェクトのアドレスへのポインター `ICorDebugEnum` 。</span><span class="sxs-lookup"><span data-stu-id="82720-107">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5cbed-107">要件</span><span class="sxs-lookup"><span data-stu-id="5cbed-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82720-108">要件</span><span class="sxs-lookup"><span data-stu-id="82720-108">Requirements</span></span>  
 
- <span data-ttu-id="5cbed-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5cbed-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="82720-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="82720-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5cbed-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5cbed-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="82720-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="82720-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5cbed-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cbed-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="82720-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82720-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5cbed-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cbed-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="82720-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82720-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

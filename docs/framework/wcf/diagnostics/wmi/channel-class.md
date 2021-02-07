@@ -1,19 +1,20 @@
 ---
+description: '詳細: Channel クラス'
 title: チャネル クラス
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: a920636e7df9609b12834366b1488c80122f9fca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dcc92f78f09e9a73a24134c6c0685949f46f38dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757723"
 ---
-# <a name="channel-class"></a><span data-ttu-id="be3e3-102">チャネル クラス</span><span class="sxs-lookup"><span data-stu-id="be3e3-102">Channel class</span></span>
+# <a name="channel-class"></a><span data-ttu-id="de6c1-103">チャネル クラス</span><span class="sxs-lookup"><span data-stu-id="de6c1-103">Channel class</span></span>
 
-<span data-ttu-id="be3e3-103">チャネル</span><span class="sxs-lookup"><span data-stu-id="be3e3-103">Channel</span></span>  
+<span data-ttu-id="de6c1-104">チャネル</span><span class="sxs-lookup"><span data-stu-id="de6c1-104">Channel</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be3e3-104">構文</span><span class="sxs-lookup"><span data-stu-id="be3e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de6c1-105">構文</span><span class="sxs-lookup"><span data-stu-id="de6c1-105">Syntax</span></span>  
   
 ```csharp
 class Channel  
@@ -26,60 +27,60 @@ class Channel
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="be3e3-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="be3e3-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="de6c1-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="de6c1-106">Methods</span></span>  
 
- <span data-ttu-id="be3e3-106">チャネル クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="be3e3-106">The Channel class does not define any methods.</span></span>  
+ <span data-ttu-id="de6c1-107">チャネル クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="de6c1-107">The Channel class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="be3e3-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="be3e3-107">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="de6c1-108">プロパティ</span><span class="sxs-lookup"><span data-stu-id="de6c1-108">Properties</span></span>  
 
- <span data-ttu-id="be3e3-108">チャネル クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="be3e3-108">The Channel class has the following properties.</span></span>  
+ <span data-ttu-id="de6c1-109">チャネル クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="de6c1-109">The Channel class has the following properties.</span></span>  
   
-### <a name="localaddress"></a><span data-ttu-id="be3e3-109">LocalAddress</span><span class="sxs-lookup"><span data-stu-id="be3e3-109">LocalAddress</span></span>  
+### <a name="localaddress"></a><span data-ttu-id="de6c1-110">LocalAddress</span><span class="sxs-lookup"><span data-stu-id="de6c1-110">LocalAddress</span></span>  
 
- <span data-ttu-id="be3e3-110">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="be3e3-110">Data type: string</span></span>  
+ <span data-ttu-id="de6c1-111">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="de6c1-111">Data type: string</span></span>  
   
- <span data-ttu-id="be3e3-111">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be3e3-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="de6c1-112">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="de6c1-112">Access type: Read-only</span></span>  
   
- <span data-ttu-id="be3e3-112">チャネルのローカル エンドポイント。</span><span class="sxs-lookup"><span data-stu-id="be3e3-112">The local endpoint for the channel.</span></span>  
+ <span data-ttu-id="de6c1-113">チャネルのローカル エンドポイント。</span><span class="sxs-lookup"><span data-stu-id="de6c1-113">The local endpoint for the channel.</span></span>  
   
-### <a name="ref"></a><span data-ttu-id="be3e3-113">ref</span><span class="sxs-lookup"><span data-stu-id="be3e3-113">ref</span></span>  
+### <a name="ref"></a><span data-ttu-id="de6c1-114">ref</span><span class="sxs-lookup"><span data-stu-id="de6c1-114">ref</span></span>  
 
- <span data-ttu-id="be3e3-114">データ型 : Endpoint</span><span class="sxs-lookup"><span data-stu-id="be3e3-114">Data type: Endpoint</span></span>  
+ <span data-ttu-id="de6c1-115">データ型 : Endpoint</span><span class="sxs-lookup"><span data-stu-id="de6c1-115">Data type: Endpoint</span></span>  
   
- <span data-ttu-id="be3e3-115">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be3e3-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="de6c1-116">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="de6c1-116">Access type: Read-only</span></span>  
   
- <span data-ttu-id="be3e3-116">チャネルが接続するエンドポイントへの参照。</span><span class="sxs-lookup"><span data-stu-id="be3e3-116">A reference to the endpoint the channel connects to.</span></span>  
+ <span data-ttu-id="de6c1-117">チャネルが接続するエンドポイントへの参照。</span><span class="sxs-lookup"><span data-stu-id="de6c1-117">A reference to the endpoint the channel connects to.</span></span>  
   
-### <a name="remoteaddress"></a><span data-ttu-id="be3e3-117">RemoteAddress</span><span class="sxs-lookup"><span data-stu-id="be3e3-117">RemoteAddress</span></span>  
+### <a name="remoteaddress"></a><span data-ttu-id="de6c1-118">RemoteAddress</span><span class="sxs-lookup"><span data-stu-id="de6c1-118">RemoteAddress</span></span>  
 
- <span data-ttu-id="be3e3-118">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="be3e3-118">Data type: string</span></span>  
+ <span data-ttu-id="de6c1-119">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="de6c1-119">Data type: string</span></span>  
   
- <span data-ttu-id="be3e3-119">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be3e3-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="de6c1-120">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="de6c1-120">Access type: Read-only</span></span>  
   
- <span data-ttu-id="be3e3-120">チャネルに関連するリモート アドレス。</span><span class="sxs-lookup"><span data-stu-id="be3e3-120">The remote address associated with the channel.</span></span>  
+ <span data-ttu-id="de6c1-121">チャネルに関連するリモート アドレス。</span><span class="sxs-lookup"><span data-stu-id="de6c1-121">The remote address associated with the channel.</span></span>  
   
-### <a name="sessionid"></a><span data-ttu-id="be3e3-121">SessionId</span><span class="sxs-lookup"><span data-stu-id="be3e3-121">SessionId</span></span>  
+### <a name="sessionid"></a><span data-ttu-id="de6c1-122">SessionId</span><span class="sxs-lookup"><span data-stu-id="de6c1-122">SessionId</span></span>  
 
- <span data-ttu-id="be3e3-122">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="be3e3-122">Data type: string</span></span>  
+ <span data-ttu-id="de6c1-123">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="de6c1-123">Data type: string</span></span>  
   
- <span data-ttu-id="be3e3-123">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be3e3-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="de6c1-124">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="de6c1-124">Access type: Read-only</span></span>  
   
- <span data-ttu-id="be3e3-124">現在のセッション ID (存在する場合)。</span><span class="sxs-lookup"><span data-stu-id="be3e3-124">The current session Id, if any.</span></span>  
+ <span data-ttu-id="de6c1-125">現在のセッション ID (存在する場合)。</span><span class="sxs-lookup"><span data-stu-id="de6c1-125">The current session Id, if any.</span></span>  
   
-### <a name="type"></a><span data-ttu-id="be3e3-125">Type</span><span class="sxs-lookup"><span data-stu-id="be3e3-125">Type</span></span>  
+### <a name="type"></a><span data-ttu-id="de6c1-126">Type</span><span class="sxs-lookup"><span data-stu-id="de6c1-126">Type</span></span>  
 
- <span data-ttu-id="be3e3-126">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="be3e3-126">Data type: string</span></span>  
+ <span data-ttu-id="de6c1-127">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="de6c1-127">Data type: string</span></span>  
   
- <span data-ttu-id="be3e3-127">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="be3e3-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="de6c1-128">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="de6c1-128">Access type: Read-only</span></span>  
   
- <span data-ttu-id="be3e3-128">チャネルの型。</span><span class="sxs-lookup"><span data-stu-id="be3e3-128">The type of the channel.</span></span>  
+ <span data-ttu-id="de6c1-129">チャネルの型。</span><span class="sxs-lookup"><span data-stu-id="de6c1-129">The type of the channel.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be3e3-129">要件</span><span class="sxs-lookup"><span data-stu-id="be3e3-129">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de6c1-130">要件</span><span class="sxs-lookup"><span data-stu-id="de6c1-130">Requirements</span></span>  
   
-|<span data-ttu-id="be3e3-130">MOF</span><span class="sxs-lookup"><span data-stu-id="be3e3-130">MOF</span></span>|<span data-ttu-id="be3e3-131">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="be3e3-131">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="de6c1-131">MOF</span><span class="sxs-lookup"><span data-stu-id="de6c1-131">MOF</span></span>|<span data-ttu-id="de6c1-132">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="de6c1-132">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="be3e3-132">名前空間</span><span class="sxs-lookup"><span data-stu-id="be3e3-132">Namespace</span></span>|<span data-ttu-id="be3e3-133">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="be3e3-133">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="de6c1-133">名前空間</span><span class="sxs-lookup"><span data-stu-id="de6c1-133">Namespace</span></span>|<span data-ttu-id="de6c1-134">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="de6c1-134">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="be3e3-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="be3e3-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de6c1-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="de6c1-135">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.ChannelBase>

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_FIELD_OFFSET 構造'
 title: COR_FIELD_OFFSET 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 1a8ab5aa5909af60089d5e4cc8092e15bc75e8cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7976e79a5484fa467d7ac887a4e1a7fa324abf69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724183"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678628"
 ---
-# <a name="cor_field_offset-structure"></a><span data-ttu-id="d43b5-102">COR_FIELD_OFFSET 構造体</span><span class="sxs-lookup"><span data-stu-id="d43b5-102">COR_FIELD_OFFSET Structure</span></span>
+# <a name="cor_field_offset-structure"></a><span data-ttu-id="82fd8-103">COR_FIELD_OFFSET 構造体</span><span class="sxs-lookup"><span data-stu-id="82fd8-103">COR_FIELD_OFFSET Structure</span></span>
 
-<span data-ttu-id="d43b5-103">指定したフィールドのクラス内の相対位置を格納します。</span><span class="sxs-lookup"><span data-stu-id="d43b5-103">Stores the offset, within a class, of the specified field.</span></span>  
+<span data-ttu-id="82fd8-104">指定したフィールドのクラス内の相対位置を格納します。</span><span class="sxs-lookup"><span data-stu-id="82fd8-104">Stores the offset, within a class, of the specified field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d43b5-104">構文</span><span class="sxs-lookup"><span data-stu-id="d43b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82fd8-105">構文</span><span class="sxs-lookup"><span data-stu-id="82fd8-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_FIELD_OFFSET {  
@@ -34,27 +35,27 @@ typedef struct COR_FIELD_OFFSET {
 } COR_FIELD_OFFSET;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d43b5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="d43b5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="82fd8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="82fd8-106">Members</span></span>  
   
-|<span data-ttu-id="d43b5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="d43b5-106">Member</span></span>|<span data-ttu-id="d43b5-107">説明</span><span class="sxs-lookup"><span data-stu-id="d43b5-107">Description</span></span>|  
+|<span data-ttu-id="82fd8-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="82fd8-107">Member</span></span>|<span data-ttu-id="82fd8-108">説明</span><span class="sxs-lookup"><span data-stu-id="82fd8-108">Description</span></span>|  
 |------------|-----------------|  
-|`ridOfField`|<span data-ttu-id="d43b5-108">`mdFieldDef`フィールドを表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="d43b5-108">An `mdFieldDef` metadata token that represents the field.</span></span>|  
-|`ulOffset`|<span data-ttu-id="d43b5-109">クラス内のフィールドのオフセット。</span><span class="sxs-lookup"><span data-stu-id="d43b5-109">The field's offset within its class.</span></span>|  
+|`ridOfField`|<span data-ttu-id="82fd8-109">`mdFieldDef`フィールドを表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="82fd8-109">An `mdFieldDef` metadata token that represents the field.</span></span>|  
+|`ulOffset`|<span data-ttu-id="82fd8-110">クラス内のフィールドのオフセット。</span><span class="sxs-lookup"><span data-stu-id="82fd8-110">The field's offset within its class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d43b5-110">注釈</span><span class="sxs-lookup"><span data-stu-id="d43b5-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="82fd8-111">解説</span><span class="sxs-lookup"><span data-stu-id="82fd8-111">Remarks</span></span>  
 
- <span data-ttu-id="d43b5-111">[IMetaDataImport:: GetClassLayout](imetadataimport-getclasslayout-method.md) メソッドと [IMetaDataEmit:: SetClassLayout](imetadataemit-setclasslayout-method.md) メソッドは、型のパラメーターを受け取り `COR_FIELD_OFFSET` ます。</span><span class="sxs-lookup"><span data-stu-id="d43b5-111">[IMetaDataImport::GetClassLayout](imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.</span></span>  
+ <span data-ttu-id="82fd8-112">[IMetaDataImport:: GetClassLayout](imetadataimport-getclasslayout-method.md) メソッドと [IMetaDataEmit:: SetClassLayout](imetadataemit-setclasslayout-method.md) メソッドは、型のパラメーターを受け取り `COR_FIELD_OFFSET` ます。</span><span class="sxs-lookup"><span data-stu-id="82fd8-112">[IMetaDataImport::GetClassLayout](imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d43b5-112">要件</span><span class="sxs-lookup"><span data-stu-id="d43b5-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82fd8-113">要件</span><span class="sxs-lookup"><span data-stu-id="82fd8-113">Requirements</span></span>  
 
- <span data-ttu-id="d43b5-113">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d43b5-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="82fd8-114">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="82fd8-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d43b5-114">**ヘッダー:** CorHdr .h、Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="d43b5-114">**Header:** CorHdr.h, CorProf.idl</span></span>  
+ <span data-ttu-id="82fd8-115">**ヘッダー:** CorHdr .h、Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="82fd8-115">**Header:** CorHdr.h, CorProf.idl</span></span>  
   
- <span data-ttu-id="d43b5-115">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d43b5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="82fd8-116">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82fd8-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d43b5-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="d43b5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="82fd8-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="82fd8-117">See also</span></span>
 
-- [<span data-ttu-id="d43b5-117">メタデータ構造体</span><span class="sxs-lookup"><span data-stu-id="d43b5-117">Metadata Structures</span></span>](metadata-structures.md)
-- [<span data-ttu-id="d43b5-118">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d43b5-118">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="d43b5-119">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d43b5-119">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
+- [<span data-ttu-id="82fd8-118">メタデータ構造体</span><span class="sxs-lookup"><span data-stu-id="82fd8-118">Metadata Structures</span></span>](metadata-structures.md)
+- [<span data-ttu-id="82fd8-119">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="82fd8-119">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="82fd8-120">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="82fd8-120">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)

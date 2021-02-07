@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorArgType 列挙型」を参照してください。
 title: CorArgType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: 6388d804df43964866073d7c3b32dca84fb2d06f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de7067e6c7b825aae797d88dbd5f2ecd2f5280fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720426"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678524"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="8453c-102">CorArgType 列挙型</span><span class="sxs-lookup"><span data-stu-id="8453c-102">CorArgType Enumeration</span></span>
+# <a name="corargtype-enumeration"></a><span data-ttu-id="5ebc3-103">CorArgType 列挙型</span><span class="sxs-lookup"><span data-stu-id="5ebc3-103">CorArgType Enumeration</span></span>
 
-<span data-ttu-id="8453c-103">ランタイム ハンドルのネイティブな型を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="8453c-103">Contains values that describe the native type of a runtime handle.</span></span>  
+<span data-ttu-id="5ebc3-104">ランタイム ハンドルのネイティブな型を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="5ebc3-104">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8453c-104">構文</span><span class="sxs-lookup"><span data-stu-id="8453c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ebc3-105">構文</span><span class="sxs-lookup"><span data-stu-id="5ebc3-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -45,14 +46,14 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8453c-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="8453c-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ebc3-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="5ebc3-106">Requirements</span></span>  
 
- <span data-ttu-id="8453c-106">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8453c-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="5ebc3-107">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5ebc3-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8453c-107">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="8453c-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5ebc3-108">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="5ebc3-108">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="8453c-108">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8453c-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5ebc3-109">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ebc3-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8453c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="8453c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ebc3-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ebc3-110">See also</span></span>
 
-- [<span data-ttu-id="8453c-110">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="8453c-110">Metadata Enumerations</span></span>](metadata-enumerations.md)
+- [<span data-ttu-id="5ebc3-111">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="5ebc3-111">Metadata Enumerations</span></span>](metadata-enumerations.md)

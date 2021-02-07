@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <mscorlib> 暗号化設定の要素'
 title: 暗号設定の <mscorlib> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,50 +9,50 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 1788205997d0dc49df172c9dfe48faceb8fc3290
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7606cdd1349c7594b5303832eed59ac51c1ddfe6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201786"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698896"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a><span data-ttu-id="73e6c-102">暗号設定の \<mscorlib> 要素</span><span class="sxs-lookup"><span data-stu-id="73e6c-102">\<mscorlib> Element for Cryptography Settings</span></span>
+# <a name="mscorlib-element-for-cryptography-settings"></a><span data-ttu-id="68fbf-103">暗号設定の \<mscorlib> 要素</span><span class="sxs-lookup"><span data-stu-id="68fbf-103">\<mscorlib> Element for Cryptography Settings</span></span>
 
-<span data-ttu-id="73e6c-103">[ \<cryptographySettings> 要素](cryptographysettings-element.md)が含まれています。</span><span class="sxs-lookup"><span data-stu-id="73e6c-103">Contains the [\<cryptographySettings> element](cryptographysettings-element.md).</span></span>  
+<span data-ttu-id="68fbf-104">[ \<cryptographySettings> 要素](cryptographysettings-element.md)が含まれています。</span><span class="sxs-lookup"><span data-stu-id="68fbf-104">Contains the [\<cryptographySettings> element](cryptographysettings-element.md).</span></span>  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<mscorlib>**  
   
-## <a name="syntax"></a><span data-ttu-id="73e6c-104">構文</span><span class="sxs-lookup"><span data-stu-id="73e6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68fbf-105">構文</span><span class="sxs-lookup"><span data-stu-id="68fbf-105">Syntax</span></span>  
   
 ```xml  
       <mscorlib>
 </mscorlib>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="73e6c-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="73e6c-105">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="68fbf-106">属性および要素</span><span class="sxs-lookup"><span data-stu-id="68fbf-106">Attributes and Elements</span></span>  
 
- <span data-ttu-id="73e6c-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="73e6c-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="68fbf-107">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="68fbf-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="73e6c-107">属性</span><span class="sxs-lookup"><span data-stu-id="73e6c-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="68fbf-108">属性</span><span class="sxs-lookup"><span data-stu-id="68fbf-108">Attributes</span></span>  
 
- <span data-ttu-id="73e6c-108">なし。</span><span class="sxs-lookup"><span data-stu-id="73e6c-108">None.</span></span>  
+ <span data-ttu-id="68fbf-109">なし。</span><span class="sxs-lookup"><span data-stu-id="68fbf-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="73e6c-109">子要素</span><span class="sxs-lookup"><span data-stu-id="73e6c-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="68fbf-110">子要素</span><span class="sxs-lookup"><span data-stu-id="68fbf-110">Child Elements</span></span>  
   
-|<span data-ttu-id="73e6c-110">要素</span><span class="sxs-lookup"><span data-stu-id="73e6c-110">Element</span></span>|<span data-ttu-id="73e6c-111">説明</span><span class="sxs-lookup"><span data-stu-id="73e6c-111">Description</span></span>|  
+|<span data-ttu-id="68fbf-111">要素</span><span class="sxs-lookup"><span data-stu-id="68fbf-111">Element</span></span>|<span data-ttu-id="68fbf-112">説明</span><span class="sxs-lookup"><span data-stu-id="68fbf-112">Description</span></span>|  
 |-------------|-----------------|  
-|`cryptographySettings`|<span data-ttu-id="73e6c-112">暗号設定を含みます。</span><span class="sxs-lookup"><span data-stu-id="73e6c-112">Contains cryptography settings.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="68fbf-113">暗号設定を含みます。</span><span class="sxs-lookup"><span data-stu-id="68fbf-113">Contains cryptography settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="73e6c-113">親要素</span><span class="sxs-lookup"><span data-stu-id="73e6c-113">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="68fbf-114">親要素</span><span class="sxs-lookup"><span data-stu-id="68fbf-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="73e6c-114">要素</span><span class="sxs-lookup"><span data-stu-id="73e6c-114">Element</span></span>|<span data-ttu-id="73e6c-115">説明</span><span class="sxs-lookup"><span data-stu-id="73e6c-115">Description</span></span>|  
+|<span data-ttu-id="68fbf-115">要素</span><span class="sxs-lookup"><span data-stu-id="68fbf-115">Element</span></span>|<span data-ttu-id="68fbf-116">説明</span><span class="sxs-lookup"><span data-stu-id="68fbf-116">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="73e6c-116">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="73e6c-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`configuration`|<span data-ttu-id="68fbf-117">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="68fbf-117">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="73e6c-117">例</span><span class="sxs-lookup"><span data-stu-id="73e6c-117">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="68fbf-118">例</span><span class="sxs-lookup"><span data-stu-id="68fbf-118">Example</span></span>  
 
- <span data-ttu-id="73e6c-118">次の例は、要素を使用して **\<mscorlib>** 暗号化クラスを参照し、ランタイムを構成する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="73e6c-118">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="73e6c-119">その後、文字列 "RSA" をメソッドに渡し <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 、メソッドを使用して <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> オブジェクトを返すことができ `MyCryptoRSAClass` ます。</span><span class="sxs-lookup"><span data-stu-id="73e6c-119">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+ <span data-ttu-id="68fbf-119">次の例は、要素を使用して **\<mscorlib>** 暗号化クラスを参照し、ランタイムを構成する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="68fbf-119">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="68fbf-120">その後、文字列 "RSA" をメソッドに渡し <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 、メソッドを使用して <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> オブジェクトを返すことができ `MyCryptoRSAClass` ます。</span><span class="sxs-lookup"><span data-stu-id="68fbf-120">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,11 +73,11 @@ ms.locfileid: "91201786"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="73e6c-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="73e6c-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68fbf-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="68fbf-121">See also</span></span>
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [<span data-ttu-id="73e6c-121">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="73e6c-121">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="73e6c-122">暗号化設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="73e6c-122">Cryptography Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="73e6c-123">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="73e6c-123">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)
-- [<span data-ttu-id="73e6c-124">暗号化クラスの設定</span><span class="sxs-lookup"><span data-stu-id="73e6c-124">Configuring Cryptography Classes</span></span>](../../configure-cryptography-classes.md)
+- [<span data-ttu-id="68fbf-122">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="68fbf-122">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="68fbf-123">暗号化設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="68fbf-123">Cryptography Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="68fbf-124">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="68fbf-124">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)
+- [<span data-ttu-id="68fbf-125">暗号化クラスの設定</span><span class="sxs-lookup"><span data-stu-id="68fbf-125">Configuring Cryptography Classes</span></span>](../../configure-cryptography-classes.md)

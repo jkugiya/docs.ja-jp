@@ -22,6 +22,10 @@
           items:
             - name: 概要
               href: 6.0.md
+            - name: ASP.NET Core
+              items:
+                - name: 'Kestrel: 変更されたログ メッセージ属性'
+                  href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
             - name: Windows フォーム
               items:
                 - name: NotifyIcon。テキストの最大文字数の増加
@@ -298,6 +302,10 @@
       items:
         - name: ASP.NET Core
           items:
+            - name: .NET 6.0
+              items:
+                - name: 'Kestrel: 変更されたログ メッセージ属性'
+                  href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
             - name: .NET 5.0
               items:
                 - name: ASP.NET Core アプリによって引用符で囲まれた数値が逆シリアル化される

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedENCUpdate:: InitializeForEnc メソッド'
 title: ISymUnmanagedENCUpdate::InitializeForEnc メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: 796b2154-b53c-4d07-9e67-80fd6064725a
 topic_type:
 - apiref
-ms.openlocfilehash: 96ac27bfd155eaf95b1880c2f4dee0e24330e446
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b70554cc565f025dcf35e2a84523a5f9a6130f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729045"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710102"
 ---
-# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="05730-102">ISymUnmanagedENCUpdate::InitializeForEnc メソッド</span><span class="sxs-lookup"><span data-stu-id="05730-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
+# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="6b12b-103">ISymUnmanagedENCUpdate::InitializeForEnc メソッド</span><span class="sxs-lookup"><span data-stu-id="6b12b-103">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
 
-<span data-ttu-id="05730-103">[ISymUnmanagedENCUpdate:: UpdateSymbolStore2](isymunmanagedencupdate-updatesymbolstore2-method.md)メソッドの最初の呼び出しの前にメソッドの境界を計算できるようにします。</span><span class="sxs-lookup"><span data-stu-id="05730-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
+<span data-ttu-id="6b12b-104">[ISymUnmanagedENCUpdate:: UpdateSymbolStore2](isymunmanagedencupdate-updatesymbolstore2-method.md)メソッドの最初の呼び出しの前にメソッドの境界を計算できるようにします。</span><span class="sxs-lookup"><span data-stu-id="6b12b-104">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05730-104">構文</span><span class="sxs-lookup"><span data-stu-id="05730-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b12b-105">構文</span><span class="sxs-lookup"><span data-stu-id="6b12b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeForEnc();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="05730-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="05730-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b12b-106">戻り値</span><span class="sxs-lookup"><span data-stu-id="6b12b-106">Return Value</span></span>  
 
- <span data-ttu-id="05730-106">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="05730-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="6b12b-107">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="6b12b-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05730-107">要件</span><span class="sxs-lookup"><span data-stu-id="05730-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b12b-108">要件</span><span class="sxs-lookup"><span data-stu-id="6b12b-108">Requirements</span></span>  
 
- <span data-ttu-id="05730-108">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="05730-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="6b12b-109">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="6b12b-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05730-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="05730-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b12b-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b12b-110">See also</span></span>
 
-- [<span data-ttu-id="05730-110">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="05730-110">ISymUnmanagedENCUpdate Interface</span></span>](isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="6b12b-111">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6b12b-111">ISymUnmanagedENCUpdate Interface</span></span>](isymunmanagedencupdate-interface.md)

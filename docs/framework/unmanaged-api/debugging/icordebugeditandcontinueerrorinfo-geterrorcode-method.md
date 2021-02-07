@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugEditAndContinueErrorInfo:: GetErrorCode メソッド'
 title: ICorDebugEditAndContinueErrorInfo::GetErrorCode メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2f82fb2c-a42e-48bf-af41-a15e40f636c6
 topic_type:
 - apiref
-ms.openlocfilehash: d81d9e964a4909dee57c3fe3835ed81472b04ad8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c7964245fbe0b99dcc27ad782172eba9ea9570b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710388"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="acf70-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode メソッド</span><span class="sxs-lookup"><span data-stu-id="acf70-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="af825-103">ICorDebugEditAndContinueErrorInfo::GetErrorCode メソッド</span><span class="sxs-lookup"><span data-stu-id="af825-103">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
 
-<span data-ttu-id="acf70-103">`GetErrorCode` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="acf70-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="acf70-104">このメソッドは呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="acf70-104">Do not call this method.</span></span>  
+<span data-ttu-id="af825-104">`GetErrorCode` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="af825-104">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="af825-105">このメソッドは呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="af825-105">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acf70-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="acf70-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af825-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="af825-106">See also</span></span>
 
-- [<span data-ttu-id="acf70-106">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="acf70-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="af825-107">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="af825-107">Debugging Interfaces</span></span>](debugging-interfaces.md)

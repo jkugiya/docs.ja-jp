@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次のメソッドを参照してください。
 title: ICorDebugObjectEnum::Next メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: 8e188f304908a8029a57bb059046205c35346f3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dd7d4240827e14962edf7573b59b273f65231bcf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724690"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729043"
 ---
-# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="45305-102">ICorDebugObjectEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="45305-102">ICorDebugObjectEnum::Next Method</span></span>
+# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="1c2c8-103">ICorDebugObjectEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="1c2c8-103">ICorDebugObjectEnum::Next Method</span></span>
 
-<span data-ttu-id="45305-103">列挙から、指定した数のオブジェクトの相対仮想アドレス (RVAs) を取得します。この値は、現在の位置から開始されます。</span><span class="sxs-lookup"><span data-stu-id="45305-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
+<span data-ttu-id="1c2c8-104">列挙から、指定した数のオブジェクトの相対仮想アドレス (RVAs) を取得します。この値は、現在の位置から開始されます。</span><span class="sxs-lookup"><span data-stu-id="1c2c8-104">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45305-104">構文</span><span class="sxs-lookup"><span data-stu-id="45305-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c2c8-105">構文</span><span class="sxs-lookup"><span data-stu-id="1c2c8-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -37,25 +38,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="45305-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="45305-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c2c8-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1c2c8-106">Parameters</span></span>  
 
  `celt`  
- <span data-ttu-id="45305-106">[in] 取得するオブジェクトの数。</span><span class="sxs-lookup"><span data-stu-id="45305-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="1c2c8-107">[in] 取得するオブジェクトの数。</span><span class="sxs-lookup"><span data-stu-id="1c2c8-107">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="45305-107">入出力ポインターの配列。それぞれが CORDB_ADDRESS オブジェクトを指します。</span><span class="sxs-lookup"><span data-stu-id="45305-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
+ <span data-ttu-id="1c2c8-108">入出力ポインターの配列。それぞれが CORDB_ADDRESS オブジェクトを指します。</span><span class="sxs-lookup"><span data-stu-id="1c2c8-108">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="45305-108">入出力実際に返されたオブジェクトの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="45305-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="45305-109">が1の場合、この値は null `celt` になります。</span><span class="sxs-lookup"><span data-stu-id="45305-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="1c2c8-109">入出力実際に返されたオブジェクトの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="1c2c8-109">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="1c2c8-110">が1の場合、この値は null `celt` になります。</span><span class="sxs-lookup"><span data-stu-id="1c2c8-110">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="45305-110">要件</span><span class="sxs-lookup"><span data-stu-id="45305-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c2c8-111">要件</span><span class="sxs-lookup"><span data-stu-id="1c2c8-111">Requirements</span></span>  
 
- <span data-ttu-id="45305-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="45305-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="1c2c8-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1c2c8-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45305-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="45305-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1c2c8-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1c2c8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="45305-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="45305-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1c2c8-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c2c8-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="45305-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45305-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1c2c8-115">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c2c8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45305-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="45305-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c2c8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c2c8-116">See also</span></span>

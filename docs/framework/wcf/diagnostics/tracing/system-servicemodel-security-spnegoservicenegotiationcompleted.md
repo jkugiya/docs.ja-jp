@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「SpnegoServiceNegotiationCompleted」を参照してください。
 title: System.ServiceModel.Security.SpnegoServiceNegotiationCompleted
 ms.date: 03/30/2017
 ms.assetid: 840c7537-81df-4bb6-affb-c6c9036453d0
-ms.openlocfilehash: 79c71084ce61f4c4edb67a61fe82c3ea018767c2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fb511e32bed4c9623d571faf73098268ba3c76a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262381"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715783"
 ---
-# <a name="systemservicemodelsecurityspnegoservicenegotiationcompleted"></a><span data-ttu-id="f951c-102">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="f951c-102">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span></span>
+# <a name="systemservicemodelsecurityspnegoservicenegotiationcompleted"></a><span data-ttu-id="0d61a-103">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="0d61a-103">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span></span>
 
-<span data-ttu-id="f951c-103">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="f951c-103">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span></span>  
+<span data-ttu-id="0d61a-104">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="0d61a-104">System.ServiceModel.Security.SpnegoServiceNegotiationCompleted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f951c-104">Description</span><span class="sxs-lookup"><span data-stu-id="f951c-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="0d61a-105">説明</span><span class="sxs-lookup"><span data-stu-id="0d61a-105">Description</span></span>  
 
- <span data-ttu-id="f951c-105">SpnegoTokenAuthenticator が SSPI のネゴシエーションを完了しました。</span><span class="sxs-lookup"><span data-stu-id="f951c-105">The SpnegoTokenAuthenticator completed SSPI negotiation.</span></span>  
+ <span data-ttu-id="0d61a-106">SpnegoTokenAuthenticator が SSPI のネゴシエーションを完了しました。</span><span class="sxs-lookup"><span data-stu-id="0d61a-106">The SpnegoTokenAuthenticator completed SSPI negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f951c-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="f951c-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d61a-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="0d61a-107">See also</span></span>
 
-- [<span data-ttu-id="f951c-107">トレース</span><span class="sxs-lookup"><span data-stu-id="f951c-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="f951c-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="f951c-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="f951c-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="f951c-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="0d61a-108">トレース</span><span class="sxs-lookup"><span data-stu-id="0d61a-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="0d61a-109">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="0d61a-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="0d61a-110">管理と診断</span><span class="sxs-lookup"><span data-stu-id="0d61a-110">Administration and Diagnostics</span></span>](../index.md)

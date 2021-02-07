@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ExceptionCatcherLeave メソッド'
 title: ICorProfilerCallback::ExceptionCatcherLeave メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,40 +16,40 @@ helpviewer_keywords:
 ms.assetid: 1f3dbdf5-db0c-4b07-bbb7-375de2a63673
 topic_type:
 - apiref
-ms.openlocfilehash: c0a24a8f9b7c40d87f9b9b6fe77eba7d6c0ea89f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 402a622dc949ef6f93c0ca5916a0690c6e734bd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706358"
 ---
-# <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="71333-102">ICorProfilerCallback::ExceptionCatcherLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="71333-102">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
+# <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="536de-103">ICorProfilerCallback::ExceptionCatcherLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="536de-103">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
 
-<span data-ttu-id="71333-103">適切なブロックから制御が渡されていることをプロファイラーに通知し `catch` ます。</span><span class="sxs-lookup"><span data-stu-id="71333-103">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  
+<span data-ttu-id="536de-104">適切なブロックから制御が渡されていることをプロファイラーに通知し `catch` ます。</span><span class="sxs-lookup"><span data-stu-id="536de-104">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71333-104">構文</span><span class="sxs-lookup"><span data-stu-id="71333-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="536de-105">構文</span><span class="sxs-lookup"><span data-stu-id="536de-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionCatcherLeave();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="71333-105">解説</span><span class="sxs-lookup"><span data-stu-id="71333-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="536de-106">解説</span><span class="sxs-lookup"><span data-stu-id="536de-106">Remarks</span></span>  
 
- <span data-ttu-id="71333-106">プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="71333-106">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="71333-107">プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。</span><span class="sxs-lookup"><span data-stu-id="71333-107">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+ <span data-ttu-id="536de-107">プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="536de-107">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="536de-108">プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。</span><span class="sxs-lookup"><span data-stu-id="536de-108">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="71333-108">プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。</span><span class="sxs-lookup"><span data-stu-id="71333-108">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="536de-109">プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。</span><span class="sxs-lookup"><span data-stu-id="536de-109">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71333-109">要件</span><span class="sxs-lookup"><span data-stu-id="71333-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="536de-110">要件</span><span class="sxs-lookup"><span data-stu-id="536de-110">Requirements</span></span>  
 
- <span data-ttu-id="71333-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="71333-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="536de-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="536de-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="71333-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="71333-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="536de-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="536de-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="71333-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71333-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="536de-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="536de-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="71333-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71333-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="536de-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="536de-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71333-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="71333-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="536de-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="536de-115">See also</span></span>
 
-- [<span data-ttu-id="71333-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="71333-115">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="71333-116">ExceptionCatcherEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="71333-116">ExceptionCatcherEnter Method</span></span>](icorprofilercallback-exceptioncatcherenter-method.md)
+- [<span data-ttu-id="536de-116">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="536de-116">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="536de-117">ExceptionCatcherEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="536de-117">ExceptionCatcherEnter Method</span></span>](icorprofilercallback-exceptioncatcherenter-method.md)

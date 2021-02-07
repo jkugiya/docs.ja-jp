@@ -1,36 +1,37 @@
 ---
+description: '詳細情報: 1124-InvokeMethodIsStatic'
 title: 1124 - InvokeMethodIsStatic
 ms.date: 03/30/2017
 ms.assetid: b9643641-fb52-4fa8-b354-4dd6617d68f6
-ms.openlocfilehash: d7ad99131f9813c2102f52784fc33605bed37557
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 86febd9c94c2e4c533eb5ab4349855f6d048a5ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667383"
 ---
-# <a name="1124---invokemethodisstatic"></a><span data-ttu-id="aa24f-102">1124 - InvokeMethodIsStatic</span><span class="sxs-lookup"><span data-stu-id="aa24f-102">1124 - InvokeMethodIsStatic</span></span>
+# <a name="1124---invokemethodisstatic"></a><span data-ttu-id="cacf2-103">1124 - InvokeMethodIsStatic</span><span class="sxs-lookup"><span data-stu-id="cacf2-103">1124 - InvokeMethodIsStatic</span></span>
 
-## <a name="properties"></a><span data-ttu-id="aa24f-103">プロパティ</span><span class="sxs-lookup"><span data-stu-id="aa24f-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="cacf2-104">プロパティ</span><span class="sxs-lookup"><span data-stu-id="cacf2-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="aa24f-104">ID</span><span class="sxs-lookup"><span data-stu-id="aa24f-104">ID</span></span>|<span data-ttu-id="aa24f-105">1124</span><span class="sxs-lookup"><span data-stu-id="aa24f-105">1124</span></span>|  
-|<span data-ttu-id="aa24f-106">Keywords</span><span class="sxs-lookup"><span data-stu-id="aa24f-106">Keywords</span></span>|<span data-ttu-id="aa24f-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="aa24f-107">WFRuntime</span></span>|  
-|<span data-ttu-id="aa24f-108">Level</span><span class="sxs-lookup"><span data-stu-id="aa24f-108">Level</span></span>|<span data-ttu-id="aa24f-109">情報</span><span class="sxs-lookup"><span data-stu-id="aa24f-109">Information</span></span>|  
-|<span data-ttu-id="aa24f-110">チャネル</span><span class="sxs-lookup"><span data-stu-id="aa24f-110">Channel</span></span>|<span data-ttu-id="aa24f-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="aa24f-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="cacf2-105">id</span><span class="sxs-lookup"><span data-stu-id="cacf2-105">ID</span></span>|<span data-ttu-id="cacf2-106">1124</span><span class="sxs-lookup"><span data-stu-id="cacf2-106">1124</span></span>|  
+|<span data-ttu-id="cacf2-107">Keywords</span><span class="sxs-lookup"><span data-stu-id="cacf2-107">Keywords</span></span>|<span data-ttu-id="cacf2-108">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="cacf2-108">WFRuntime</span></span>|  
+|<span data-ttu-id="cacf2-109">Level</span><span class="sxs-lookup"><span data-stu-id="cacf2-109">Level</span></span>|<span data-ttu-id="cacf2-110">Information</span><span class="sxs-lookup"><span data-stu-id="cacf2-110">Information</span></span>|  
+|<span data-ttu-id="cacf2-111">チャネル</span><span class="sxs-lookup"><span data-stu-id="cacf2-111">Channel</span></span>|<span data-ttu-id="cacf2-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="cacf2-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="aa24f-112">Description</span><span class="sxs-lookup"><span data-stu-id="aa24f-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="cacf2-113">説明</span><span class="sxs-lookup"><span data-stu-id="cacf2-113">Description</span></span>  
 
- <span data-ttu-id="aa24f-113">CacheMetadata の手順では、InvokeMethod アクティビティは、呼び出すメソッドが静的であることを示します。</span><span class="sxs-lookup"><span data-stu-id="aa24f-113">During CacheMetadata step, InvokeMethod activity indicates the method to be invoked is static.</span></span>  
+ <span data-ttu-id="cacf2-114">CacheMetadata の手順では、InvokeMethod アクティビティは、呼び出すメソッドが静的であることを示します。</span><span class="sxs-lookup"><span data-stu-id="cacf2-114">During CacheMetadata step, InvokeMethod activity indicates the method to be invoked is static.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="aa24f-114">Message</span><span class="sxs-lookup"><span data-stu-id="aa24f-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="cacf2-115">Message</span><span class="sxs-lookup"><span data-stu-id="cacf2-115">Message</span></span>  
 
- <span data-ttu-id="aa24f-115">InvokeMethod '%1' - メソッドは Static です。</span><span class="sxs-lookup"><span data-stu-id="aa24f-115">InvokeMethod '%1' - method is Static.</span></span>  
+ <span data-ttu-id="cacf2-116">InvokeMethod '%1' - メソッドは Static です。</span><span class="sxs-lookup"><span data-stu-id="cacf2-116">InvokeMethod '%1' - method is Static.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="aa24f-116">詳細</span><span class="sxs-lookup"><span data-stu-id="aa24f-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="cacf2-117">詳細</span><span class="sxs-lookup"><span data-stu-id="cacf2-117">Details</span></span>  
   
-|<span data-ttu-id="aa24f-117">データ項目名</span><span class="sxs-lookup"><span data-stu-id="aa24f-117">Data Item Name</span></span>|<span data-ttu-id="aa24f-118">データ項目の型</span><span class="sxs-lookup"><span data-stu-id="aa24f-118">Data Item Type</span></span>|<span data-ttu-id="aa24f-119">Description</span><span class="sxs-lookup"><span data-stu-id="aa24f-119">Description</span></span>|  
+|<span data-ttu-id="cacf2-118">データ項目名</span><span class="sxs-lookup"><span data-stu-id="cacf2-118">Data Item Name</span></span>|<span data-ttu-id="cacf2-119">データ項目の型</span><span class="sxs-lookup"><span data-stu-id="cacf2-119">Data Item Type</span></span>|<span data-ttu-id="cacf2-120">説明</span><span class="sxs-lookup"><span data-stu-id="cacf2-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="aa24f-120">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="aa24f-120">InvokeMethod</span></span>|<span data-ttu-id="aa24f-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="aa24f-121">xs:string</span></span>|<span data-ttu-id="aa24f-122">InvokeMethod アクティビティの表示名。</span><span class="sxs-lookup"><span data-stu-id="aa24f-122">The display name of the InvokeMethod activity.</span></span>|  
-|<span data-ttu-id="aa24f-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="aa24f-123">AppDomain</span></span>|<span data-ttu-id="aa24f-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="aa24f-124">xs:string</span></span>|<span data-ttu-id="aa24f-125">AppDomain.CurrentDomain.FriendlyName で返される文字列。</span><span class="sxs-lookup"><span data-stu-id="aa24f-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="cacf2-121">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="cacf2-121">InvokeMethod</span></span>|<span data-ttu-id="cacf2-122">xs:string</span><span class="sxs-lookup"><span data-stu-id="cacf2-122">xs:string</span></span>|<span data-ttu-id="cacf2-123">InvokeMethod アクティビティの表示名。</span><span class="sxs-lookup"><span data-stu-id="cacf2-123">The display name of the InvokeMethod activity.</span></span>|  
+|<span data-ttu-id="cacf2-124">AppDomain</span><span class="sxs-lookup"><span data-stu-id="cacf2-124">AppDomain</span></span>|<span data-ttu-id="cacf2-125">xs:string</span><span class="sxs-lookup"><span data-stu-id="cacf2-125">xs:string</span></span>|<span data-ttu-id="cacf2-126">AppDomain.CurrentDomain.FriendlyName で返される文字列。</span><span class="sxs-lookup"><span data-stu-id="cacf2-126">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

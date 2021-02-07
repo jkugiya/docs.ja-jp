@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISymUnmanagedWriter3:: Commit メソッド'
 title: ISymUnmanagedWriter3::Commit メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-ms.openlocfilehash: 394832d6144509717d2f79a78afaff50ad81c01d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 308f5d3a16cf60a0e77a581a318d6fd6c398b3f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683304"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761760"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="22b4c-102">ISymUnmanagedWriter3::Commit メソッド</span><span class="sxs-lookup"><span data-stu-id="22b4c-102">ISymUnmanagedWriter3::Commit Method</span></span>
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="e8d31-103">ISymUnmanagedWriter3::Commit メソッド</span><span class="sxs-lookup"><span data-stu-id="e8d31-103">ISymUnmanagedWriter3::Commit Method</span></span>
 
-<span data-ttu-id="22b4c-103">これまでに書き込まれた変更をストリームにコミットします。</span><span class="sxs-lookup"><span data-stu-id="22b4c-103">Commits the changes written so far to the stream.</span></span>  
+<span data-ttu-id="e8d31-104">これまでに書き込まれた変更をストリームにコミットします。</span><span class="sxs-lookup"><span data-stu-id="e8d31-104">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22b4c-104">構文</span><span class="sxs-lookup"><span data-stu-id="22b4c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8d31-105">構文</span><span class="sxs-lookup"><span data-stu-id="e8d31-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="22b4c-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="22b4c-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e8d31-106">戻り値</span><span class="sxs-lookup"><span data-stu-id="e8d31-106">Return Value</span></span>  
 
- <span data-ttu-id="22b4c-106">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="22b4c-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="e8d31-107">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="e8d31-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22b4c-107">要件</span><span class="sxs-lookup"><span data-stu-id="22b4c-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8d31-108">要件</span><span class="sxs-lookup"><span data-stu-id="e8d31-108">Requirements</span></span>  
 
- <span data-ttu-id="22b4c-108">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="22b4c-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="e8d31-109">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="e8d31-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22b4c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="22b4c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8d31-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8d31-110">See also</span></span>
 
-- [<span data-ttu-id="22b4c-110">ISymUnmanagedWriter3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="22b4c-110">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="e8d31-111">ISymUnmanagedWriter3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e8d31-111">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)

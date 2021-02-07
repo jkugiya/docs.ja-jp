@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CreateApplicationContext 関数'
 title: CreateApplicationContext 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-ms.openlocfilehash: 9418be85f5b72bac8eed7f5ea4af4fc42439b01f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f192e1ccc371cb6d50e4a41a286c412825ee4181
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761183"
 ---
-# <a name="createapplicationcontext-function"></a><span data-ttu-id="11faa-102">CreateApplicationContext 関数</span><span class="sxs-lookup"><span data-stu-id="11faa-102">CreateApplicationContext Function</span></span>
+# <a name="createapplicationcontext-function"></a><span data-ttu-id="be7f0-103">CreateApplicationContext 関数</span><span class="sxs-lookup"><span data-stu-id="be7f0-103">CreateApplicationContext Function</span></span>
 
-<span data-ttu-id="11faa-103">この関数は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="11faa-103">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+<span data-ttu-id="be7f0-104">この関数は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="be7f0-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11faa-104">構文</span><span class="sxs-lookup"><span data-stu-id="11faa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be7f0-105">構文</span><span class="sxs-lookup"><span data-stu-id="be7f0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateApplicationContext (  
@@ -34,26 +35,26 @@ HRESULT CreateApplicationContext (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="11faa-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="11faa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be7f0-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="be7f0-106">Parameters</span></span>  
 
  `pName`  
- <span data-ttu-id="11faa-106">からフレンドリ名へのポインター。</span><span class="sxs-lookup"><span data-stu-id="11faa-106">[in] A pointer to a friendly name.</span></span>  
+ <span data-ttu-id="be7f0-107">からフレンドリ名へのポインター。</span><span class="sxs-lookup"><span data-stu-id="be7f0-107">[in] A pointer to a friendly name.</span></span>  
   
  `ppCtx`  
- <span data-ttu-id="11faa-107">入出力アプリケーションコンテキストへのポインター。</span><span class="sxs-lookup"><span data-stu-id="11faa-107">[out] A pointer to an application context.</span></span>  
+ <span data-ttu-id="be7f0-108">入出力アプリケーションコンテキストへのポインター。</span><span class="sxs-lookup"><span data-stu-id="be7f0-108">[out] A pointer to an application context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="11faa-108">要件</span><span class="sxs-lookup"><span data-stu-id="11faa-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be7f0-109">要件</span><span class="sxs-lookup"><span data-stu-id="be7f0-109">Requirements</span></span>  
 
- <span data-ttu-id="11faa-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11faa-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="be7f0-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="be7f0-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="11faa-110">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="11faa-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="be7f0-111">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="be7f0-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="11faa-111">**ライブラリ:** Fusion.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="11faa-111">**Library:** Included as a resource in Fusion.dll</span></span>  
+ <span data-ttu-id="be7f0-112">**ライブラリ:** Fusion.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="be7f0-112">**Library:** Included as a resource in Fusion.dll</span></span>  
   
- <span data-ttu-id="11faa-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11faa-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="be7f0-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be7f0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11faa-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="11faa-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be7f0-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="be7f0-114">See also</span></span>
 
-- [<span data-ttu-id="11faa-114">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="11faa-114">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
-- [<span data-ttu-id="11faa-115">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="11faa-115">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
-- [<span data-ttu-id="11faa-116">グローバル アセンブリ キャッシュ</span><span class="sxs-lookup"><span data-stu-id="11faa-116">Global Assembly Cache</span></span>](../../app-domains/gac.md)
+- [<span data-ttu-id="be7f0-115">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be7f0-115">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
+- [<span data-ttu-id="be7f0-116">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="be7f0-116">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="be7f0-117">グローバル アセンブリ キャッシュ</span><span class="sxs-lookup"><span data-stu-id="be7f0-117">Global Assembly Cache</span></span>](../../app-domains/gac.md)

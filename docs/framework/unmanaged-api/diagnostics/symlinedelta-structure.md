@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SYMLINEDELTA 構造'
 title: SYMLINEDELTA 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: dd45703540f8dc41b746ca03b4f09d74186aa9aa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae00d2be9809b48180d2cd99d05e410624033419
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761448"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="0da5d-102">SYMLINEDELTA 構造体</span><span class="sxs-lookup"><span data-stu-id="0da5d-102">SYMLINEDELTA Structure</span></span>
+# <a name="symlinedelta-structure"></a><span data-ttu-id="0a3d8-103">SYMLINEDELTA 構造体</span><span class="sxs-lookup"><span data-stu-id="0a3d8-103">SYMLINEDELTA Structure</span></span>
 
-<span data-ttu-id="0da5d-103">編集の結果として移動されたメソッドについて、シンボルハンドラーに情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="0da5d-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+<span data-ttu-id="0a3d8-104">編集の結果として移動されたメソッドについて、シンボルハンドラーに情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="0a3d8-104">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0da5d-104">構文</span><span class="sxs-lookup"><span data-stu-id="0da5d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a3d8-105">構文</span><span class="sxs-lookup"><span data-stu-id="0a3d8-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -35,17 +36,17 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0da5d-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="0da5d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0a3d8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="0a3d8-106">Members</span></span>  
   
-|<span data-ttu-id="0da5d-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="0da5d-106">Member</span></span>|<span data-ttu-id="0da5d-107">説明</span><span class="sxs-lookup"><span data-stu-id="0da5d-107">Description</span></span>|  
+|<span data-ttu-id="0a3d8-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="0a3d8-107">Member</span></span>|<span data-ttu-id="0a3d8-108">説明</span><span class="sxs-lookup"><span data-stu-id="0a3d8-108">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="0da5d-108">メソッドのメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="0da5d-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="0da5d-109">メソッドが移動された行の数。</span><span class="sxs-lookup"><span data-stu-id="0da5d-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="0a3d8-109">メソッドのメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="0a3d8-109">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="0a3d8-110">メソッドが移動された行の数。</span><span class="sxs-lookup"><span data-stu-id="0a3d8-110">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0da5d-110">要件</span><span class="sxs-lookup"><span data-stu-id="0da5d-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a3d8-111">要件</span><span class="sxs-lookup"><span data-stu-id="0a3d8-111">Requirements</span></span>  
 
- <span data-ttu-id="0da5d-111">**ヘッダー:** CorSym .idl</span><span class="sxs-lookup"><span data-stu-id="0da5d-111">**Header:** CorSym.idl</span></span>  
+ <span data-ttu-id="0a3d8-112">**ヘッダー:** CorSym .idl</span><span class="sxs-lookup"><span data-stu-id="0a3d8-112">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0da5d-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="0da5d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a3d8-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a3d8-113">See also</span></span>
 
-- [<span data-ttu-id="0da5d-113">シンボル ストア診断構造体</span><span class="sxs-lookup"><span data-stu-id="0da5d-113">Diagnostics Symbol Store Structures</span></span>](diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="0a3d8-114">シンボル ストア診断構造体</span><span class="sxs-lookup"><span data-stu-id="0a3d8-114">Diagnostics Symbol Store Structures</span></span>](diagnostics-symbol-store-structures.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CreateInstallReferenceEnum 関数'
 title: CreateInstallReferenceEnum 関数
 ms.date: 03/30/2017
 api_name:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-ms.openlocfilehash: 0f62b05ebbd8b27dba160c8281c1d40748c90fc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc7551707cb46bcf0c475a0095684dbc790836e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761147"
 ---
-# <a name="createinstallreferenceenum-function"></a><span data-ttu-id="eafaa-102">CreateInstallReferenceEnum 関数</span><span class="sxs-lookup"><span data-stu-id="eafaa-102">CreateInstallReferenceEnum Function</span></span>
+# <a name="createinstallreferenceenum-function"></a><span data-ttu-id="7d499-103">CreateInstallReferenceEnum 関数</span><span class="sxs-lookup"><span data-stu-id="7d499-103">CreateInstallReferenceEnum Function</span></span>
 
-<span data-ttu-id="eafaa-103">指定したアセンブリへのアプリケーションの参照のリストを表す [Iinstallreferenceenum](iinstallreferenceenum-interface.md) インスタンスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="eafaa-103">Gets a pointer to an [IInstallReferenceEnum](iinstallreferenceenum-interface.md) instance that represents a list of an application's references to the specified assembly.</span></span>  
+<span data-ttu-id="7d499-104">指定したアセンブリへのアプリケーションの参照のリストを表す [Iinstallreferenceenum](iinstallreferenceenum-interface.md) インスタンスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="7d499-104">Gets a pointer to an [IInstallReferenceEnum](iinstallreferenceenum-interface.md) instance that represents a list of an application's references to the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eafaa-104">構文</span><span class="sxs-lookup"><span data-stu-id="eafaa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d499-105">構文</span><span class="sxs-lookup"><span data-stu-id="7d499-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateInstallReferenceEnum (  
@@ -38,32 +39,32 @@ HRESULT CreateInstallReferenceEnum (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eafaa-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="eafaa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d499-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7d499-106">Parameters</span></span>  
 
  `ppRefEnum`  
- <span data-ttu-id="eafaa-106">入出力返された `IInstallReferenceEnum` ポインター。</span><span class="sxs-lookup"><span data-stu-id="eafaa-106">[out] The returned `IInstallReferenceEnum` pointer.</span></span>  
+ <span data-ttu-id="7d499-107">入出力返された `IInstallReferenceEnum` ポインター。</span><span class="sxs-lookup"><span data-stu-id="7d499-107">[out] The returned `IInstallReferenceEnum` pointer.</span></span>  
   
  `pName`  
- <span data-ttu-id="eafaa-107">から参照を列挙する対象のアセンブリを識別する [IAssemblyName](iassemblyname-interface.md) 。</span><span class="sxs-lookup"><span data-stu-id="eafaa-107">[in] The [IAssemblyName](iassemblyname-interface.md) that identifies the assembly for which to enumerate references.</span></span>  
+ <span data-ttu-id="7d499-108">から参照を列挙する対象のアセンブリを識別する [IAssemblyName](iassemblyname-interface.md) 。</span><span class="sxs-lookup"><span data-stu-id="7d499-108">[in] The [IAssemblyName](iassemblyname-interface.md) that identifies the assembly for which to enumerate references.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="eafaa-108">から列挙子の動作に影響を与えるフラグ。</span><span class="sxs-lookup"><span data-stu-id="eafaa-108">[in] Flags that influence the enumerator's behavior.</span></span>  
+ <span data-ttu-id="7d499-109">から列挙子の動作に影響を与えるフラグ。</span><span class="sxs-lookup"><span data-stu-id="7d499-109">[in] Flags that influence the enumerator's behavior.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="eafaa-109">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="eafaa-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="eafaa-110">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="eafaa-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="7d499-110">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="7d499-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="7d499-111">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="7d499-111">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eafaa-111">要件</span><span class="sxs-lookup"><span data-stu-id="eafaa-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d499-112">要件</span><span class="sxs-lookup"><span data-stu-id="7d499-112">Requirements</span></span>  
 
- <span data-ttu-id="eafaa-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="eafaa-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="7d499-113">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7d499-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eafaa-113">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="eafaa-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7d499-114">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="7d499-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="eafaa-114">**Library:** Fusion.dll し、Mscorwks.dll します。</span><span class="sxs-lookup"><span data-stu-id="eafaa-114">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="eafaa-115">Mscorwks.dll ではなく Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にするようにします。</span><span class="sxs-lookup"><span data-stu-id="eafaa-115">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="7d499-115">**Library:** Fusion.dll し、Mscorwks.dll します。</span><span class="sxs-lookup"><span data-stu-id="7d499-115">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="7d499-116">Mscorwks.dll ではなく Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にするようにします。</span><span class="sxs-lookup"><span data-stu-id="7d499-116">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="eafaa-116">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eafaa-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7d499-117">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d499-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eafaa-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="eafaa-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d499-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d499-118">See also</span></span>
 
-- [<span data-ttu-id="eafaa-118">IInstallReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="eafaa-118">IInstallReferenceEnum Interface</span></span>](iinstallreferenceenum-interface.md)
-- [<span data-ttu-id="eafaa-119">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="eafaa-119">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="eafaa-120">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="eafaa-120">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="7d499-119">IInstallReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7d499-119">IInstallReferenceEnum Interface</span></span>](iinstallreferenceenum-interface.md)
+- [<span data-ttu-id="7d499-120">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7d499-120">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="7d499-121">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="7d499-121">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)

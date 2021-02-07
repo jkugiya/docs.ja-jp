@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: GetOffset メソッド'
 title: ICorDebugFunctionBreakpoint::GetOffset メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e619eae4-3ac3-4c37-bba4-55e59989b9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9e483e24068656ddda0a3ecfee5934a2df962d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94238b761e0a42a72037f7d44d5e9609f86ac03b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661169"
 ---
-# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="78fd0-102">ICorDebugFunctionBreakpoint::GetOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="78fd0-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
+# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="c5e4a-103">ICorDebugFunctionBreakpoint::GetOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="c5e4a-103">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
 
-<span data-ttu-id="78fd0-103">関数内のブレークポイントのオフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="78fd0-103">Gets the offset of the breakpoint within the function.</span></span>  
+<span data-ttu-id="c5e4a-104">関数内のブレークポイントのオフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="c5e4a-104">Gets the offset of the breakpoint within the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78fd0-104">構文</span><span class="sxs-lookup"><span data-stu-id="78fd0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5e4a-105">構文</span><span class="sxs-lookup"><span data-stu-id="c5e4a-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetOffset (  
@@ -34,17 +35,17 @@ HRESULT GetOffset (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="78fd0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="78fd0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5e4a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c5e4a-106">Parameters</span></span>  
 
  `pnOffset`  
- <span data-ttu-id="78fd0-106">入出力ブレークポイントのオフセットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="78fd0-106">[out] A pointer to the offset of the breakpoint.</span></span>  
+ <span data-ttu-id="c5e4a-107">入出力ブレークポイントのオフセットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="c5e4a-107">[out] A pointer to the offset of the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78fd0-107">要件</span><span class="sxs-lookup"><span data-stu-id="78fd0-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5e4a-108">要件</span><span class="sxs-lookup"><span data-stu-id="c5e4a-108">Requirements</span></span>  
 
- <span data-ttu-id="78fd0-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="78fd0-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c5e4a-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c5e4a-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78fd0-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78fd0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c5e4a-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5e4a-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="78fd0-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78fd0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c5e4a-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5e4a-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="78fd0-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78fd0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c5e4a-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5e4a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

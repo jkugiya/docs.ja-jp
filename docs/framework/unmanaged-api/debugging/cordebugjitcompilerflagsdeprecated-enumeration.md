@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorDebugJITCompilerFlagsDeprecated 列挙型'
 title: CorDebugJITCompilerFlagsDeprecated 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-ms.openlocfilehash: 8797f77388bf4992dfb69191ce8a844a9b7fdb8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ac607766c484a63a757d726826c81d16edd48aae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661910"
 ---
-# <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="4dddb-102">CorDebugJITCompilerFlagsDeprecated 列挙型</span><span class="sxs-lookup"><span data-stu-id="4dddb-102">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
+# <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="c002b-103">CorDebugJITCompilerFlagsDeprecated 列挙型</span><span class="sxs-lookup"><span data-stu-id="c002b-103">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
 
-<span data-ttu-id="4dddb-103">この列挙型は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="4dddb-103">This enumeration is obsolete.</span></span> <span data-ttu-id="4dddb-104">代わりに、 `CORDEBUG_JIT_DEFAULT` [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 列挙体のメンバーを使用してください。</span><span class="sxs-lookup"><span data-stu-id="4dddb-104">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
+<span data-ttu-id="c002b-104">この列挙型は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="c002b-104">This enumeration is obsolete.</span></span> <span data-ttu-id="c002b-105">代わりに、 `CORDEBUG_JIT_DEFAULT` [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 列挙体のメンバーを使用してください。</span><span class="sxs-lookup"><span data-stu-id="c002b-105">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4dddb-105">構文</span><span class="sxs-lookup"><span data-stu-id="4dddb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c002b-106">構文</span><span class="sxs-lookup"><span data-stu-id="c002b-106">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugJITCompilerFlagsDeprecated {  
@@ -33,22 +34,22 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 } CorDebugJITCompilerFlagsDeprecated;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4dddb-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="4dddb-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c002b-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="c002b-107">Members</span></span>  
   
-|<span data-ttu-id="4dddb-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="4dddb-107">Member</span></span>|<span data-ttu-id="4dddb-108">説明</span><span class="sxs-lookup"><span data-stu-id="4dddb-108">Description</span></span>|  
+|<span data-ttu-id="c002b-108">メンバー</span><span class="sxs-lookup"><span data-stu-id="c002b-108">Member</span></span>|<span data-ttu-id="c002b-109">説明</span><span class="sxs-lookup"><span data-stu-id="c002b-109">Description</span></span>|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|<span data-ttu-id="4dddb-109">代わりに、`CORDEBUG_JIT_DEFAULT` を使用してください。</span><span class="sxs-lookup"><span data-stu-id="4dddb-109">Use `CORDEBUG_JIT_DEFAULT` instead.</span></span>|  
+|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|<span data-ttu-id="c002b-110">代わりに `CORDEBUG_JIT_DEFAULT` を使用してください</span><span class="sxs-lookup"><span data-stu-id="c002b-110">Use `CORDEBUG_JIT_DEFAULT` instead.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4dddb-110">要件</span><span class="sxs-lookup"><span data-stu-id="4dddb-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c002b-111">要件</span><span class="sxs-lookup"><span data-stu-id="c002b-111">Requirements</span></span>  
 
- <span data-ttu-id="4dddb-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4dddb-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c002b-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c002b-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4dddb-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4dddb-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c002b-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c002b-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4dddb-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4dddb-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c002b-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c002b-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4dddb-114">**.NET Framework のバージョン:** 1.0、1.1</span><span class="sxs-lookup"><span data-stu-id="4dddb-114">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="c002b-115">**.NET Framework のバージョン:** 1.0、1.1</span><span class="sxs-lookup"><span data-stu-id="c002b-115">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4dddb-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="4dddb-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c002b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="c002b-116">See also</span></span>
 
-- [<span data-ttu-id="4dddb-116">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="4dddb-116">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="c002b-117">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="c002b-117">Debugging Enumerations</span></span>](debugging-enumerations.md)

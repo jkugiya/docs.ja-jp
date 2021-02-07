@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね。:、GetModuleFromMetaDataInterface メソッド'
 title: ICorDebugAppDomain::GetModuleFromMetaDataInterface メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-ms.openlocfilehash: 5dede67412711736d269386a20446cf45fab1619
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b0c74bd04024f9f4bf26b5ee8abe18a3a7059e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672202"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754239"
 ---
-# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="46fcb-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface メソッド</span><span class="sxs-lookup"><span data-stu-id="46fcb-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
+# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="fdabf-103">ICorDebugAppDomain::GetModuleFromMetaDataInterface メソッド</span><span class="sxs-lookup"><span data-stu-id="fdabf-103">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
 
-<span data-ttu-id="46fcb-103">指定されたメタデータインターフェイスに対応するモジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="46fcb-103">Gets the module that corresponds to the given metadata interface.</span></span>  
+<span data-ttu-id="fdabf-104">指定されたメタデータインターフェイスに対応するモジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="fdabf-104">Gets the module that corresponds to the given metadata interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46fcb-104">構文</span><span class="sxs-lookup"><span data-stu-id="46fcb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdabf-105">構文</span><span class="sxs-lookup"><span data-stu-id="fdabf-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetModuleFromMetaDataInterface (  
@@ -35,20 +36,20 @@ HRESULT GetModuleFromMetaDataInterface (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="46fcb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="46fcb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fdabf-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fdabf-106">Parameters</span></span>  
 
  `pIMetaData`  
- <span data-ttu-id="46fcb-106">から [メタデータインターフェイス](../metadata/metadata-interfaces.md)の1つであるオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="46fcb-106">[in] A pointer to an object that is one of the [Metadata interfaces](../metadata/metadata-interfaces.md).</span></span>  
+ <span data-ttu-id="fdabf-107">から [メタデータインターフェイス](../metadata/metadata-interfaces.md)の1つであるオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fdabf-107">[in] A pointer to an object that is one of the [Metadata interfaces](../metadata/metadata-interfaces.md).</span></span>  
   
  `ppModule`  
- <span data-ttu-id="46fcb-107">入出力指定されたメタデータインターフェイスに対応するモジュールを表す、モジュールオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="46fcb-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
+ <span data-ttu-id="fdabf-108">入出力指定されたメタデータインターフェイスに対応するモジュールを表す、モジュールオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fdabf-108">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46fcb-108">要件</span><span class="sxs-lookup"><span data-stu-id="46fcb-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdabf-109">要件</span><span class="sxs-lookup"><span data-stu-id="fdabf-109">Requirements</span></span>  
 
- <span data-ttu-id="46fcb-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="46fcb-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="fdabf-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fdabf-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46fcb-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="46fcb-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fdabf-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fdabf-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="46fcb-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46fcb-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fdabf-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fdabf-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46fcb-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46fcb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fdabf-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fdabf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

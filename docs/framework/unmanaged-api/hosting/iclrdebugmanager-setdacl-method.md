@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRDebugManager:: SetDacl メソッド'
 title: ICLRDebugManager::SetDacl メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 52f4af3f-e02b-4c20-9fd9-e8e4f4d6fc31
 topic_type:
 - apiref
-ms.openlocfilehash: 92134396d9f9d869866a73cdd31278f4ac1e6355
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b507d94f9e23e509d279a0fd4e32c8c996a4668b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689574"
 ---
-# <a name="iclrdebugmanagersetdacl-method"></a><span data-ttu-id="d58ca-102">ICLRDebugManager::SetDacl メソッド</span><span class="sxs-lookup"><span data-stu-id="d58ca-102">ICLRDebugManager::SetDacl Method</span></span>
+# <a name="iclrdebugmanagersetdacl-method"></a><span data-ttu-id="09237-103">ICLRDebugManager::SetDacl メソッド</span><span class="sxs-lookup"><span data-stu-id="09237-103">ICLRDebugManager::SetDacl Method</span></span>
 
-<span data-ttu-id="d58ca-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="d58ca-103">This method is not implemented.</span></span>  
+<span data-ttu-id="09237-104">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="09237-104">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d58ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="d58ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09237-105">構文</span><span class="sxs-lookup"><span data-stu-id="09237-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetDacl (  
@@ -34,30 +35,30 @@ HRESULT SetDacl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d58ca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d58ca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09237-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="09237-106">Parameters</span></span>  
 
  `pacl`  
- <span data-ttu-id="d58ca-106">からAccess Control リスト (ACL) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d58ca-106">[in] A pointer to the Access Control List (ACL).</span></span>  
+ <span data-ttu-id="09237-107">からAccess Control リスト (ACL) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="09237-107">[in] A pointer to the Access Control List (ACL).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d58ca-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="d58ca-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="09237-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="09237-108">Return Value</span></span>  
   
-|<span data-ttu-id="d58ca-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d58ca-108">HRESULT</span></span>|<span data-ttu-id="d58ca-109">説明</span><span class="sxs-lookup"><span data-stu-id="d58ca-109">Description</span></span>|  
+|<span data-ttu-id="09237-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="09237-109">HRESULT</span></span>|<span data-ttu-id="09237-110">説明</span><span class="sxs-lookup"><span data-stu-id="09237-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d58ca-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="d58ca-110">E_NOTIMPL</span></span>|<span data-ttu-id="d58ca-111">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="d58ca-111">The method is not implemented.</span></span>|  
+|<span data-ttu-id="09237-111">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="09237-111">E_NOTIMPL</span></span>|<span data-ttu-id="09237-112">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="09237-112">The method is not implemented.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d58ca-112">要件</span><span class="sxs-lookup"><span data-stu-id="d58ca-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09237-113">要件</span><span class="sxs-lookup"><span data-stu-id="09237-113">Requirements</span></span>  
 
- <span data-ttu-id="d58ca-113">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d58ca-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="09237-114">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="09237-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d58ca-114">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="d58ca-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="09237-115">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="09237-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d58ca-115">**ライブラリ:** MSCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="d58ca-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="09237-116">**ライブラリ:** MSCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="09237-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d58ca-116">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d58ca-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="09237-117">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09237-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d58ca-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="d58ca-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09237-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="09237-118">See also</span></span>
 
-- [<span data-ttu-id="d58ca-118">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d58ca-118">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
-- [<span data-ttu-id="d58ca-119">ICLRDebugManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d58ca-119">ICLRDebugManager Interface</span></span>](iclrdebugmanager-interface.md)
-- [<span data-ttu-id="d58ca-120">GetDacl メソッド</span><span class="sxs-lookup"><span data-stu-id="d58ca-120">GetDacl Method</span></span>](iclrdebugmanager-getdacl-method.md)
-- [<span data-ttu-id="d58ca-121">IHostControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d58ca-121">IHostControl Interface</span></span>](ihostcontrol-interface.md)
+- [<span data-ttu-id="09237-119">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="09237-119">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
+- [<span data-ttu-id="09237-120">ICLRDebugManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="09237-120">ICLRDebugManager Interface</span></span>](iclrdebugmanager-interface.md)
+- [<span data-ttu-id="09237-121">GetDacl メソッド</span><span class="sxs-lookup"><span data-stu-id="09237-121">GetDacl Method</span></span>](iclrdebugmanager-getdacl-method.md)
+- [<span data-ttu-id="09237-122">IHostControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="09237-122">IHostControl Interface</span></span>](ihostcontrol-interface.md)

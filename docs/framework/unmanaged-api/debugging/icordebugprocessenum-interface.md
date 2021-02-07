@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいね。'
 title: ICorDebugProcessEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: b63a507a-ca97-4be0-8e4f-401cce2125f6
 topic_type:
 - apiref
-ms.openlocfilehash: 31f26a40294857701b151cd2fce35b061da28238
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3bb70d2a826be84ecb680014efe5ed918d98e861
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691212"
 ---
-# <a name="icordebugprocessenum-interface"></a><span data-ttu-id="c3a57-102">ICorDebugProcessEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c3a57-102">ICorDebugProcessEnum Interface</span></span>
+# <a name="icordebugprocessenum-interface"></a><span data-ttu-id="5d825-103">ICorDebugProcessEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d825-103">ICorDebugProcessEnum Interface</span></span>
 
-<span data-ttu-id="c3a57-103">ICorDebugEnum メソッドを実装し、を処理する配列を列挙します。</span><span class="sxs-lookup"><span data-stu-id="c3a57-103">Implements ICorDebugEnum methods and enumerates ICorDebugProcess arrays.</span></span>  
+<span data-ttu-id="5d825-104">ICorDebugEnum メソッドを実装し、を処理する配列を列挙します。</span><span class="sxs-lookup"><span data-stu-id="5d825-104">Implements ICorDebugEnum methods and enumerates ICorDebugProcess arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c3a57-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="c3a57-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5d825-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="5d825-105">Methods</span></span>  
   
-|<span data-ttu-id="c3a57-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="c3a57-105">Method</span></span>|<span data-ttu-id="c3a57-106">説明</span><span class="sxs-lookup"><span data-stu-id="c3a57-106">Description</span></span>|  
+|<span data-ttu-id="5d825-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="5d825-106">Method</span></span>|<span data-ttu-id="5d825-107">説明</span><span class="sxs-lookup"><span data-stu-id="5d825-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c3a57-107">Next メソッド</span><span class="sxs-lookup"><span data-stu-id="c3a57-107">Next Method</span></span>](icordebugprocessenum-next-method.md)|<span data-ttu-id="c3a57-108">現在の位置から開始して、指定した数の `ICorDebugProcess` インスタンスを列挙から取得します。</span><span class="sxs-lookup"><span data-stu-id="c3a57-108">Gets the specified number of `ICorDebugProcess` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="5d825-108">次のメソッド</span><span class="sxs-lookup"><span data-stu-id="5d825-108">Next Method</span></span>](icordebugprocessenum-next-method.md)|<span data-ttu-id="5d825-109">現在の位置から開始して、指定した数の `ICorDebugProcess` インスタンスを列挙から取得します。</span><span class="sxs-lookup"><span data-stu-id="5d825-109">Gets the specified number of `ICorDebugProcess` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c3a57-109">注釈</span><span class="sxs-lookup"><span data-stu-id="c3a57-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d825-110">解説</span><span class="sxs-lookup"><span data-stu-id="5d825-110">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c3a57-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="c3a57-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="5d825-111">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="5d825-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3a57-111">要件</span><span class="sxs-lookup"><span data-stu-id="c3a57-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d825-112">要件</span><span class="sxs-lookup"><span data-stu-id="5d825-112">Requirements</span></span>  
 
- <span data-ttu-id="c3a57-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c3a57-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="5d825-113">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d825-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3a57-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c3a57-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5d825-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5d825-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c3a57-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3a57-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5d825-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d825-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3a57-115">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3a57-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5d825-116">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d825-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3a57-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="c3a57-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d825-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d825-117">See also</span></span>
 
-- [<span data-ttu-id="c3a57-117">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="c3a57-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="5d825-118">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d825-118">Debugging Interfaces</span></span>](debugging-interfaces.md)

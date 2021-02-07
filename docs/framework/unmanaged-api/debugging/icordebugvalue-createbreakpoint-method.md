@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorDebugValue:: CreateBreakpoint ポイントメソッド'
 title: ICorDebugValue::CreateBreakpoint メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 87af9661-b59d-4077-aabf-d59fb8673602
 topic_type:
 - apiref
-ms.openlocfilehash: 5944d7f39d327c2787c517aeebdb302834551b59
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98009fdb69a37780e6d6f85f58451f185bded46c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690497"
 ---
-# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="e2da3-102">ICorDebugValue::CreateBreakpoint メソッド</span><span class="sxs-lookup"><span data-stu-id="e2da3-102">ICorDebugValue::CreateBreakpoint Method</span></span>
+# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="c906f-103">ICorDebugValue::CreateBreakpoint メソッド</span><span class="sxs-lookup"><span data-stu-id="c906f-103">ICorDebugValue::CreateBreakpoint Method</span></span>
 
-<span data-ttu-id="e2da3-103">`CreateBreakpoint`メソッドは現在実装されていません。</span><span class="sxs-lookup"><span data-stu-id="e2da3-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
+<span data-ttu-id="c906f-104">`CreateBreakpoint`メソッドは現在実装されていません。</span><span class="sxs-lookup"><span data-stu-id="c906f-104">The `CreateBreakpoint` method is currently not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e2da3-104">構文</span><span class="sxs-lookup"><span data-stu-id="e2da3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c906f-105">構文</span><span class="sxs-lookup"><span data-stu-id="c906f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateBreakpoint (  
@@ -34,14 +35,14 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e2da3-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="e2da3-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c906f-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="c906f-106">Requirements</span></span>  
 
- <span data-ttu-id="e2da3-106">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e2da3-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c906f-107">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c906f-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e2da3-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e2da3-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c906f-108">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c906f-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e2da3-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e2da3-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c906f-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c906f-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e2da3-109">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2da3-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c906f-110">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c906f-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2da3-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2da3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c906f-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c906f-111">See also</span></span>

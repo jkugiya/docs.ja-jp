@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「関数ポインターの LPTHREAD_START_ROUTINE」を参照してください。
 title: LPTHREAD_START_ROUTINE 関数ポインター
 ms.date: 03/30/2017
 api_name:
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-ms.openlocfilehash: c86b65e136869603f93253678108b2ffa9d388e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f79cffb0b5290031915b453353dd47cb3959970
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679809"
 ---
-# <a name="lpthread_start_routine-function-pointer"></a><span data-ttu-id="01c51-102">LPTHREAD_START_ROUTINE 関数ポインター</span><span class="sxs-lookup"><span data-stu-id="01c51-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
+# <a name="lpthread_start_routine-function-pointer"></a><span data-ttu-id="e6756-103">LPTHREAD_START_ROUTINE 関数ポインター</span><span class="sxs-lookup"><span data-stu-id="e6756-103">LPTHREAD_START_ROUTINE Function Pointer</span></span>
 
-<span data-ttu-id="01c51-103">スレッドの実行を開始したことをホストに通知する関数を指します。</span><span class="sxs-lookup"><span data-stu-id="01c51-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
+<span data-ttu-id="e6756-104">スレッドの実行を開始したことをホストに通知する関数を指します。</span><span class="sxs-lookup"><span data-stu-id="e6756-104">Points to a function that notifies the host that a thread has started to execute.</span></span>  
   
- <span data-ttu-id="01c51-104">この関数ポインターは .NET Framework 4 で非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="01c51-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="e6756-105">この関数ポインターは .NET Framework 4 で非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="e6756-105">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01c51-105">構文</span><span class="sxs-lookup"><span data-stu-id="01c51-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6756-106">構文</span><span class="sxs-lookup"><span data-stu-id="e6756-106">Syntax</span></span>  
   
 ```cpp  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
@@ -35,25 +36,25 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01c51-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="01c51-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e6756-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e6756-107">Parameters</span></span>  
 
  `lpThreadParameter`  
- <span data-ttu-id="01c51-107">から実行を開始したコードへのポインター。</span><span class="sxs-lookup"><span data-stu-id="01c51-107">[in] A pointer to the code that has started executing.</span></span>  
+ <span data-ttu-id="e6756-108">から実行を開始したコードへのポインター。</span><span class="sxs-lookup"><span data-stu-id="e6756-108">[in] A pointer to the code that has started executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01c51-108">注釈</span><span class="sxs-lookup"><span data-stu-id="01c51-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6756-109">解説</span><span class="sxs-lookup"><span data-stu-id="e6756-109">Remarks</span></span>  
 
- <span data-ttu-id="01c51-109">`LPTHREAD_START_ROUTINE`ポイントがコールバック関数であり、ホストアプリケーションのライターによって実装されている必要がある関数。</span><span class="sxs-lookup"><span data-stu-id="01c51-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+ <span data-ttu-id="e6756-110">`LPTHREAD_START_ROUTINE`ポイントがコールバック関数であり、ホストアプリケーションのライターによって実装されている必要がある関数。</span><span class="sxs-lookup"><span data-stu-id="e6756-110">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01c51-110">要件</span><span class="sxs-lookup"><span data-stu-id="01c51-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6756-111">要件</span><span class="sxs-lookup"><span data-stu-id="e6756-111">Requirements</span></span>  
 
- <span data-ttu-id="01c51-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="01c51-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="e6756-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6756-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01c51-112">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="01c51-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e6756-113">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="e6756-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="01c51-113">**ライブラリ:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="01c51-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="e6756-114">**ライブラリ:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="e6756-114">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="01c51-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01c51-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e6756-115">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6756-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01c51-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="01c51-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6756-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6756-116">See also</span></span>
 
-- [<span data-ttu-id="01c51-116">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="01c51-116">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="e6756-117">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="e6756-117">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)

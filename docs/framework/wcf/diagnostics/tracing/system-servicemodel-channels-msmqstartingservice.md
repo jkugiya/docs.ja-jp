@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「MsmqStartingService」を参照してください。
 title: System.ServiceModel.Channels.MsmqStartingService
 ms.date: 03/30/2017
 ms.assetid: 7248afaf-5ad9-4d7a-ba07-781a60a0ef9b
-ms.openlocfilehash: b4985972853365777d3027ba0a66207a7659f488
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5552e8d8e9fab064633d689b259e0cabf062b1ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96270824"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759147"
 ---
-# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="b9e72-102">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="b9e72-102">System.ServiceModel.Channels.MsmqStartingService</span></span>
+# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="b544b-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="b544b-103">System.ServiceModel.Channels.MsmqStartingService</span></span>
 
-<span data-ttu-id="b9e72-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="b9e72-103">System.ServiceModel.Channels.MsmqStartingService</span></span>  
+<span data-ttu-id="b544b-104">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="b544b-104">System.ServiceModel.Channels.MsmqStartingService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b9e72-104">Description</span><span class="sxs-lookup"><span data-stu-id="b9e72-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="b544b-105">説明</span><span class="sxs-lookup"><span data-stu-id="b544b-105">Description</span></span>  
 
- <span data-ttu-id="b9e72-105">ホスト環境はサービスを開始しました。</span><span class="sxs-lookup"><span data-stu-id="b9e72-105">The hosting environment started the service.</span></span>  
+ <span data-ttu-id="b544b-106">ホスト環境はサービスを開始しました。</span><span class="sxs-lookup"><span data-stu-id="b544b-106">The hosting environment started the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9e72-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="b9e72-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b544b-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="b544b-107">See also</span></span>
 
-- [<span data-ttu-id="b9e72-107">トレース</span><span class="sxs-lookup"><span data-stu-id="b9e72-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="b9e72-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="b9e72-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="b9e72-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="b9e72-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="b544b-108">トレース</span><span class="sxs-lookup"><span data-stu-id="b544b-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="b544b-109">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="b544b-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="b544b-110">管理と診断</span><span class="sxs-lookup"><span data-stu-id="b544b-110">Administration and Diagnostics</span></span>](../index.md)

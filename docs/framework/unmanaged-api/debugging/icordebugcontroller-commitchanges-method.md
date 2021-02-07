@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね:: CommitChanges メソッド'
 title: ICorDebugController::CommitChanges メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f8e38bf6-0312-4517-bed5-42031ed86331
 topic_type:
 - apiref
-ms.openlocfilehash: 57481c858c876fd9c60425bced7a13297086f0d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3e7f24958c56dc5be0f18f66efbb86641586843f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125447"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764594"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="31f28-102">ICorDebugController::CommitChanges メソッド</span><span class="sxs-lookup"><span data-stu-id="31f28-102">ICorDebugController::CommitChanges Method</span></span>
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="a5f3a-103">ICorDebugController::CommitChanges メソッド</span><span class="sxs-lookup"><span data-stu-id="a5f3a-103">ICorDebugController::CommitChanges Method</span></span>
 
-<span data-ttu-id="31f28-103">`CommitChanges` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="31f28-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="31f28-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="31f28-104">Do not call this method.</span></span>
+<span data-ttu-id="a5f3a-104">`CommitChanges` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="a5f3a-104">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="a5f3a-105">このメソッドは呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="a5f3a-105">Do not call this method.</span></span>

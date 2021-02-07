@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 説明'
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 61eae75de04f75b6ad6e78d16569595732b3d28f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bc9a519978a9cccccd80a58abb8d109fa9bc9337
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743812"
 ---
-# <a name="securitybindingelement"></a><span data-ttu-id="e696c-102">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="e696c-102">SecurityBindingElement</span></span>
+# <a name="securitybindingelement"></a><span data-ttu-id="cba6f-103">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cba6f-103">SecurityBindingElement</span></span>
 
-<span data-ttu-id="e696c-103">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="e696c-103">SecurityBindingElement</span></span>  
+<span data-ttu-id="cba6f-104">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cba6f-104">SecurityBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e696c-104">構文</span><span class="sxs-lookup"><span data-stu-id="e696c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cba6f-105">構文</span><span class="sxs-lookup"><span data-stu-id="cba6f-105">Syntax</span></span>  
   
 ```csharp
 class SecurityBindingElement : BindingElement  
@@ -27,68 +28,68 @@ class SecurityBindingElement : BindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="e696c-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="e696c-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="cba6f-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="cba6f-106">Methods</span></span>  
 
- <span data-ttu-id="e696c-106">SecurityBindingElement クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="e696c-106">The SecurityBindingElement class does not define any methods.</span></span>  
+ <span data-ttu-id="cba6f-107">SecurityBindingElement クラスは、メソッドを一切定義しません。</span><span class="sxs-lookup"><span data-stu-id="cba6f-107">The SecurityBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="e696c-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="e696c-107">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="cba6f-108">プロパティ</span><span class="sxs-lookup"><span data-stu-id="cba6f-108">Properties</span></span>  
 
- <span data-ttu-id="e696c-108">SecurityBindingElement クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="e696c-108">The SecurityBindingElement class has the following properties:</span></span>  
+ <span data-ttu-id="cba6f-109">SecurityBindingElement クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="cba6f-109">The SecurityBindingElement class has the following properties:</span></span>  
   
-### <a name="defaultalgorithmsuite"></a><span data-ttu-id="e696c-109">DefaultAlgorithmSuite</span><span class="sxs-lookup"><span data-stu-id="e696c-109">DefaultAlgorithmSuite</span></span>  
+### <a name="defaultalgorithmsuite"></a><span data-ttu-id="cba6f-110">DefaultAlgorithmSuite</span><span class="sxs-lookup"><span data-stu-id="cba6f-110">DefaultAlgorithmSuite</span></span>  
 
- <span data-ttu-id="e696c-110">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="e696c-110">Data type: string</span></span>  
+ <span data-ttu-id="cba6f-111">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="cba6f-111">Data type: string</span></span>  
   
- <span data-ttu-id="e696c-111">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="e696c-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="cba6f-112">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="cba6f-112">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e696c-112">バインディングで使用するアルゴリズムを指定します。</span><span class="sxs-lookup"><span data-stu-id="e696c-112">Specifies the algorithms to use with the binding.</span></span>  
+ <span data-ttu-id="cba6f-113">バインディングで使用するアルゴリズムを指定します。</span><span class="sxs-lookup"><span data-stu-id="cba6f-113">Specifies the algorithms to use with the binding.</span></span>  
   
-### <a name="includetimestamp"></a><span data-ttu-id="e696c-113">IncludeTimestamp</span><span class="sxs-lookup"><span data-stu-id="e696c-113">IncludeTimestamp</span></span>  
+### <a name="includetimestamp"></a><span data-ttu-id="cba6f-114">IncludeTimestamp</span><span class="sxs-lookup"><span data-stu-id="cba6f-114">IncludeTimestamp</span></span>  
 
- <span data-ttu-id="e696c-114">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="e696c-114">Data type: boolean</span></span>  
+ <span data-ttu-id="cba6f-115">データ型 : boolean</span><span class="sxs-lookup"><span data-stu-id="cba6f-115">Data type: boolean</span></span>  
   
- <span data-ttu-id="e696c-115">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="e696c-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="cba6f-116">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="cba6f-116">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e696c-116">各メッセージにタイムスタンプが含まれるかどうかを指定するブール値です。</span><span class="sxs-lookup"><span data-stu-id="e696c-116">A Boolean value that specifies whether each message contains a timestamp.</span></span>  
+ <span data-ttu-id="cba6f-117">各メッセージにタイムスタンプが含まれるかどうかを指定するブール値です。</span><span class="sxs-lookup"><span data-stu-id="cba6f-117">A Boolean value that specifies whether each message contains a timestamp.</span></span>  
   
-### <a name="keyentropymode"></a><span data-ttu-id="e696c-117">KeyEntropyMode</span><span class="sxs-lookup"><span data-stu-id="e696c-117">KeyEntropyMode</span></span>  
+### <a name="keyentropymode"></a><span data-ttu-id="cba6f-118">KeyEntropyMode</span><span class="sxs-lookup"><span data-stu-id="cba6f-118">KeyEntropyMode</span></span>  
 
- <span data-ttu-id="e696c-118">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="e696c-118">Data type: string</span></span>  
+ <span data-ttu-id="cba6f-119">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="cba6f-119">Data type: string</span></span>  
   
- <span data-ttu-id="e696c-119">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="e696c-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="cba6f-120">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="cba6f-120">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e696c-120">キーの作成に使用されるエントロピのソースです。</span><span class="sxs-lookup"><span data-stu-id="e696c-120">The source of entropy used to create keys.</span></span>  
+ <span data-ttu-id="cba6f-121">キーの作成に使用されるエントロピのソースです。</span><span class="sxs-lookup"><span data-stu-id="cba6f-121">The source of entropy used to create keys.</span></span>  
   
-### <a name="localservicesecuritysettings"></a><span data-ttu-id="e696c-121">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="e696c-121">LocalServiceSecuritySettings</span></span>  
+### <a name="localservicesecuritysettings"></a><span data-ttu-id="cba6f-122">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="cba6f-122">LocalServiceSecuritySettings</span></span>  
 
- <span data-ttu-id="e696c-122">データ型 : LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="e696c-122">Data type: LocalServiceSecuritySettings</span></span>  
+ <span data-ttu-id="cba6f-123">データ型 : LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="cba6f-123">Data type: LocalServiceSecuritySettings</span></span>  
   
- <span data-ttu-id="e696c-123">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="e696c-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="cba6f-124">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="cba6f-124">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e696c-124">ローカル サービスに対するバインディング固有のセキュリティ プロパティです。</span><span class="sxs-lookup"><span data-stu-id="e696c-124">The binding specific security properties for the local service.</span></span>  
+ <span data-ttu-id="cba6f-125">ローカル サービスに対するバインディング固有のセキュリティ プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cba6f-125">The binding specific security properties for the local service.</span></span>  
   
-### <a name="messagesecurityversion"></a><span data-ttu-id="e696c-125">MessageSecurityVersion</span><span class="sxs-lookup"><span data-stu-id="e696c-125">MessageSecurityVersion</span></span>  
+### <a name="messagesecurityversion"></a><span data-ttu-id="cba6f-126">MessageSecurityVersion</span><span class="sxs-lookup"><span data-stu-id="cba6f-126">MessageSecurityVersion</span></span>  
 
- <span data-ttu-id="e696c-126">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="e696c-126">Data type: string</span></span>  
+ <span data-ttu-id="cba6f-127">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="cba6f-127">Data type: string</span></span>  
   
- <span data-ttu-id="e696c-127">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="e696c-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="cba6f-128">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="cba6f-128">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e696c-128">メッセージ セキュリティで使用されるバージョンです。</span><span class="sxs-lookup"><span data-stu-id="e696c-128">The version used for message security.</span></span>  
+ <span data-ttu-id="cba6f-129">メッセージ セキュリティで使用されるバージョンです。</span><span class="sxs-lookup"><span data-stu-id="cba6f-129">The version used for message security.</span></span>  
   
-### <a name="securityheaderlayout"></a><span data-ttu-id="e696c-129">SecurityHeaderLayout</span><span class="sxs-lookup"><span data-stu-id="e696c-129">SecurityHeaderLayout</span></span>  
+### <a name="securityheaderlayout"></a><span data-ttu-id="cba6f-130">SecurityHeaderLayout</span><span class="sxs-lookup"><span data-stu-id="cba6f-130">SecurityHeaderLayout</span></span>  
 
- <span data-ttu-id="e696c-130">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="e696c-130">Data type: string</span></span>  
+ <span data-ttu-id="cba6f-131">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="cba6f-131">Data type: string</span></span>  
   
- <span data-ttu-id="e696c-131">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="e696c-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="cba6f-132">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="cba6f-132">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e696c-132">このバインディングのセキュリティ ヘッダー内の要素の順序です。</span><span class="sxs-lookup"><span data-stu-id="e696c-132">The order of elements in the security header for this binding.</span></span>  
+ <span data-ttu-id="cba6f-133">このバインディングのセキュリティ ヘッダー内の要素の順序です。</span><span class="sxs-lookup"><span data-stu-id="cba6f-133">The order of elements in the security header for this binding.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e696c-133">要件</span><span class="sxs-lookup"><span data-stu-id="e696c-133">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cba6f-134">要件</span><span class="sxs-lookup"><span data-stu-id="cba6f-134">Requirements</span></span>  
   
-|<span data-ttu-id="e696c-134">MOF</span><span class="sxs-lookup"><span data-stu-id="e696c-134">MOF</span></span>|<span data-ttu-id="e696c-135">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="e696c-135">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="cba6f-135">MOF</span><span class="sxs-lookup"><span data-stu-id="cba6f-135">MOF</span></span>|<span data-ttu-id="cba6f-136">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="cba6f-136">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="e696c-136">名前空間</span><span class="sxs-lookup"><span data-stu-id="e696c-136">Namespace</span></span>|<span data-ttu-id="e696c-137">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="e696c-137">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="cba6f-137">名前空間</span><span class="sxs-lookup"><span data-stu-id="cba6f-137">Namespace</span></span>|<span data-ttu-id="cba6f-138">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="cba6f-138">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e696c-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="e696c-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cba6f-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="cba6f-139">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>

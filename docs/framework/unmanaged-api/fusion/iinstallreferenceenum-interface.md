@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IInstallReferenceEnum インターフェイス'
 title: IInstallReferenceEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-ms.openlocfilehash: f56a9049cd4b503124abe9dd4866dc91779e268e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 496bd508b95b51cb23949f32f8390c7cb733b37e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800101"
 ---
-# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="91007-102">IInstallReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91007-102">IInstallReferenceEnum Interface</span></span>
+# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="78a4b-103">IInstallReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a4b-103">IInstallReferenceEnum Interface</span></span>
 
-<span data-ttu-id="91007-103">グローバルアセンブリキャッシュにインストールされている参照アセンブリの列挙子を表します。</span><span class="sxs-lookup"><span data-stu-id="91007-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
+<span data-ttu-id="78a4b-104">グローバルアセンブリキャッシュにインストールされている参照アセンブリの列挙子を表します。</span><span class="sxs-lookup"><span data-stu-id="78a4b-104">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91007-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="91007-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78a4b-105">構文</span><span class="sxs-lookup"><span data-stu-id="78a4b-105">Syntax</span></span>  
   
 ```cpp  
 interface IInstallReferenceEnum : IUnknown {  
@@ -37,21 +38,21 @@ interface IInstallReferenceEnum : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="91007-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="91007-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="78a4b-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="78a4b-106">Methods</span></span>  
   
-|<span data-ttu-id="91007-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="91007-106">Method</span></span>|<span data-ttu-id="91007-107">説明</span><span class="sxs-lookup"><span data-stu-id="91007-107">Description</span></span>|  
+|<span data-ttu-id="78a4b-107">メソッド</span><span class="sxs-lookup"><span data-stu-id="78a4b-107">Method</span></span>|<span data-ttu-id="78a4b-108">説明</span><span class="sxs-lookup"><span data-stu-id="78a4b-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="91007-108">GetNextInstallReferenceItem メソッド</span><span class="sxs-lookup"><span data-stu-id="91007-108">GetNextInstallReferenceItem Method</span></span>](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="91007-109">このに格納されている次のへのポインターを取得し `IInstallReferenceItem` `IInstallReferenceEnum` ます。</span><span class="sxs-lookup"><span data-stu-id="91007-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
+|[<span data-ttu-id="78a4b-109">GetNextInstallReferenceItem メソッド</span><span class="sxs-lookup"><span data-stu-id="78a4b-109">GetNextInstallReferenceItem Method</span></span>](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="78a4b-110">このに格納されている次のへのポインターを取得し `IInstallReferenceItem` `IInstallReferenceEnum` ます。</span><span class="sxs-lookup"><span data-stu-id="78a4b-110">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="91007-110">要件</span><span class="sxs-lookup"><span data-stu-id="91007-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78a4b-111">要件</span><span class="sxs-lookup"><span data-stu-id="78a4b-111">Requirements</span></span>  
 
- <span data-ttu-id="91007-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="91007-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="78a4b-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="78a4b-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="91007-112">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="91007-112">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="78a4b-113">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="78a4b-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="91007-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91007-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="78a4b-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78a4b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91007-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="91007-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78a4b-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="78a4b-115">See also</span></span>
 
-- [<span data-ttu-id="91007-115">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91007-115">Fusion Interfaces</span></span>](fusion-interfaces.md)
-- [<span data-ttu-id="91007-116">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91007-116">IInstallReferenceItem Interface</span></span>](iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="78a4b-116">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a4b-116">Fusion Interfaces</span></span>](fusion-interfaces.md)
+- [<span data-ttu-id="78a4b-117">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a4b-117">IInstallReferenceItem Interface</span></span>](iinstallreferenceitem-interface.md)

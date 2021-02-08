@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRStrongName:: StrongNameHashSize メソッド'
 title: ICLRStrongName::StrongNameHashSize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-ms.openlocfilehash: 6ee87fdbf75d4a07a7337a1c9fdc58a06191b992
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74781f0eaec720a84a242e6a9637036408652601
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674816"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799591"
 ---
-# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="fbca2-102">ICLRStrongName::StrongNameHashSize メソッド</span><span class="sxs-lookup"><span data-stu-id="fbca2-102">ICLRStrongName::StrongNameHashSize Method</span></span>
+# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="ac592-103">ICLRStrongName::StrongNameHashSize メソッド</span><span class="sxs-lookup"><span data-stu-id="ac592-103">ICLRStrongName::StrongNameHashSize Method</span></span>
 
-<span data-ttu-id="fbca2-103">指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。</span><span class="sxs-lookup"><span data-stu-id="fbca2-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
+<span data-ttu-id="ac592-104">指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。</span><span class="sxs-lookup"><span data-stu-id="ac592-104">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbca2-104">構文</span><span class="sxs-lookup"><span data-stu-id="fbca2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac592-105">構文</span><span class="sxs-lookup"><span data-stu-id="ac592-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameHashSize (  
@@ -35,28 +36,28 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fbca2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fbca2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac592-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ac592-106">Parameters</span></span>  
 
  `ulHashAlg`  
- <span data-ttu-id="fbca2-106">からバッファーサイズを計算するために使用されるハッシュアルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="fbca2-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
+ <span data-ttu-id="ac592-107">からバッファーサイズを計算するために使用されるハッシュアルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="ac592-107">[in] The hash algorithm used to compute the buffer size.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="fbca2-107">入出力返されたバッファーサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="fbca2-107">[out] The returned buffer size, in bytes.</span></span>  
+ <span data-ttu-id="ac592-108">入出力返されたバッファーサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="ac592-108">[out] The returned buffer size, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fbca2-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="fbca2-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ac592-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="ac592-109">Return Value</span></span>  
 
- <span data-ttu-id="fbca2-109">`S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。</span><span class="sxs-lookup"><span data-stu-id="fbca2-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](/windows/win32/seccrypto/common-hresult-values) for a list).</span></span>  
+ <span data-ttu-id="ac592-110">`S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。</span><span class="sxs-lookup"><span data-stu-id="ac592-110">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](/windows/win32/seccrypto/common-hresult-values) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fbca2-110">要件</span><span class="sxs-lookup"><span data-stu-id="fbca2-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac592-111">要件</span><span class="sxs-lookup"><span data-stu-id="ac592-111">Requirements</span></span>  
 
- <span data-ttu-id="fbca2-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fbca2-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="ac592-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ac592-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fbca2-112">**ヘッダー:** メタホスト .h</span><span class="sxs-lookup"><span data-stu-id="fbca2-112">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="ac592-113">**ヘッダー:** メタホスト .h</span><span class="sxs-lookup"><span data-stu-id="ac592-113">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="fbca2-113">**ライブラリ:** MSCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="fbca2-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ac592-114">**ライブラリ:** MSCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="ac592-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fbca2-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fbca2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ac592-115">**.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac592-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fbca2-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="fbca2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac592-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac592-116">See also</span></span>
 
-- [<span data-ttu-id="fbca2-116">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fbca2-116">ICLRStrongName Interface</span></span>](iclrstrongname-interface.md)
+- [<span data-ttu-id="ac592-117">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ac592-117">ICLRStrongName Interface</span></span>](iclrstrongname-interface.md)

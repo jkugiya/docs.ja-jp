@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorSymVarFlag 列挙型」を参照してください。
 title: CorSymVarFlag 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: ed08d9f818f6fc180dbd655243488bf8a527ae11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28f4b4775e20703e5dcaa7daf69affd3548aa3f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725288"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800462"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="284e2-102">CorSymVarFlag 列挙体</span><span class="sxs-lookup"><span data-stu-id="284e2-102">CorSymVarFlag Enumeration</span></span>
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="fbbd2-103">CorSymVarFlag 列挙体</span><span class="sxs-lookup"><span data-stu-id="fbbd2-103">CorSymVarFlag Enumeration</span></span>
 
-<span data-ttu-id="284e2-103">変数がコンパイラによって生成されたかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="284e2-103">Indicates whether a variable is compiler-generated.</span></span>  
+<span data-ttu-id="fbbd2-104">変数がコンパイラによって生成されたかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="fbbd2-104">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="284e2-104">構文</span><span class="sxs-lookup"><span data-stu-id="284e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fbbd2-105">構文</span><span class="sxs-lookup"><span data-stu-id="fbbd2-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymVarFlag
@@ -34,16 +35,16 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="284e2-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="284e2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fbbd2-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="fbbd2-106">Members</span></span>  
   
-|<span data-ttu-id="284e2-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="284e2-106">Member</span></span>|<span data-ttu-id="284e2-107">説明</span><span class="sxs-lookup"><span data-stu-id="284e2-107">Description</span></span>|  
+|<span data-ttu-id="fbbd2-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="fbbd2-107">Member</span></span>|<span data-ttu-id="fbbd2-108">説明</span><span class="sxs-lookup"><span data-stu-id="fbbd2-108">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="284e2-108">指定された変数がコンパイラによって生成されることを示します。</span><span class="sxs-lookup"><span data-stu-id="284e2-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="fbbd2-109">指定された変数がコンパイラによって生成されることを示します。</span><span class="sxs-lookup"><span data-stu-id="fbbd2-109">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="284e2-109">要件</span><span class="sxs-lookup"><span data-stu-id="284e2-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fbbd2-110">要件</span><span class="sxs-lookup"><span data-stu-id="fbbd2-110">Requirements</span></span>  
 
- <span data-ttu-id="284e2-110">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="284e2-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="fbbd2-111">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="fbbd2-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="284e2-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="284e2-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fbbd2-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="fbbd2-112">See also</span></span>
 
-- [<span data-ttu-id="284e2-112">シンボル ストア診断列挙型</span><span class="sxs-lookup"><span data-stu-id="284e2-112">Diagnostics Symbol Store Enumerations</span></span>](diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="fbbd2-113">シンボル ストア診断列挙型</span><span class="sxs-lookup"><span data-stu-id="fbbd2-113">Diagnostics Symbol Store Enumerations</span></span>](diagnostics-symbol-store-enumerations.md)

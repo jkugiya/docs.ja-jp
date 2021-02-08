@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugType2 インターフェイス」を参照してください。
 title: ICorDebugType2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 0d5fffe4350cc1f58acf588f288db3bdb7e213d0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8691cf294e835bef0f5a0ac694110f73577fb5d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800870"
 ---
-# <a name="icordebugtype2-interface"></a><span data-ttu-id="c66f1-102">ICorDebugType2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c66f1-102">ICorDebugType2 Interface</span></span>
+# <a name="icordebugtype2-interface"></a><span data-ttu-id="e7b2e-103">ICorDebugType2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7b2e-103">ICorDebugType2 Interface</span></span>
 
-<span data-ttu-id="c66f1-103">によって、テキスト型または複合型 (ユーザー定義型) の型識別子を取得するために、を拡張します。</span><span class="sxs-lookup"><span data-stu-id="c66f1-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
+<span data-ttu-id="e7b2e-104">によって、テキスト型または複合型 (ユーザー定義型) の型識別子を取得するために、を拡張します。</span><span class="sxs-lookup"><span data-stu-id="e7b2e-104">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c66f1-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="c66f1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e7b2e-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="e7b2e-105">Methods</span></span>  
   
-|<span data-ttu-id="c66f1-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="c66f1-105">Method</span></span>||  
+|<span data-ttu-id="e7b2e-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="e7b2e-106">Method</span></span>||  
 |------------|-|  
-|[<span data-ttu-id="c66f1-106">GetTypeID メソッド</span><span class="sxs-lookup"><span data-stu-id="c66f1-106">GetTypeID Method</span></span>](icordebugtype2-gettypeid-method.md)|<span data-ttu-id="c66f1-107">この型の [COR_TYPEID](cor-typeid-structure.md) を取得します。</span><span class="sxs-lookup"><span data-stu-id="c66f1-107">Gets a [COR_TYPEID](cor-typeid-structure.md) for this type.</span></span>|  
+|[<span data-ttu-id="e7b2e-107">GetTypeID メソッド</span><span class="sxs-lookup"><span data-stu-id="e7b2e-107">GetTypeID Method</span></span>](icordebugtype2-gettypeid-method.md)|<span data-ttu-id="e7b2e-108">この型の [COR_TYPEID](cor-typeid-structure.md) を取得します。</span><span class="sxs-lookup"><span data-stu-id="e7b2e-108">Gets a [COR_TYPEID](cor-typeid-structure.md) for this type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c66f1-108">注釈</span><span class="sxs-lookup"><span data-stu-id="c66f1-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e7b2e-109">解説</span><span class="sxs-lookup"><span data-stu-id="e7b2e-109">Remarks</span></span>  
 
- <span data-ttu-id="c66f1-109">このインターフェイスは、テキストの型インターフェイスの論理上の拡張機能です。</span><span class="sxs-lookup"><span data-stu-id="c66f1-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
+ <span data-ttu-id="e7b2e-110">このインターフェイスは、テキストの型インターフェイスの論理上の拡張機能です。</span><span class="sxs-lookup"><span data-stu-id="e7b2e-110">This interface is a logical extension of the ICorDebugType interface.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c66f1-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="c66f1-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="e7b2e-111">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="e7b2e-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c66f1-111">例</span><span class="sxs-lookup"><span data-stu-id="c66f1-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e7b2e-112">例</span><span class="sxs-lookup"><span data-stu-id="e7b2e-112">Example</span></span>  
 
- <span data-ttu-id="c66f1-112">次のコードフラグメントは、 [ICorDebugType2:: GetTypeID](icordebugtype2-gettypeid-method.md) メソッドの使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="c66f1-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](icordebugtype2-gettypeid-method.md) method.</span></span>  
+ <span data-ttu-id="e7b2e-113">次のコードフラグメントは、 [ICorDebugType2:: GetTypeID](icordebugtype2-gettypeid-method.md) メソッドの使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e7b2e-113">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](icordebugtype2-gettypeid-method.md) method.</span></span>  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -55,16 +56,16 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c66f1-113">要件</span><span class="sxs-lookup"><span data-stu-id="c66f1-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7b2e-114">要件</span><span class="sxs-lookup"><span data-stu-id="e7b2e-114">Requirements</span></span>  
 
- <span data-ttu-id="c66f1-114">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c66f1-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="e7b2e-115">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7b2e-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c66f1-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c66f1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e7b2e-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7b2e-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c66f1-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c66f1-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e7b2e-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7b2e-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c66f1-117">**.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c66f1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="e7b2e-118">**.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7b2e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c66f1-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="c66f1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7b2e-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7b2e-119">See also</span></span>
 
-- [<span data-ttu-id="c66f1-119">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="c66f1-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="e7b2e-120">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7b2e-120">Debugging Interfaces</span></span>](debugging-interfaces.md)

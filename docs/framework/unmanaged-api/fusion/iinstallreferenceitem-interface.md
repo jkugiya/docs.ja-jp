@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IInstallReferenceItem インターフェイス'
 title: IInstallReferenceItem インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: 66df494d-1a2f-4441-8ee6-cfed0217b4e6
 topic_type:
 - apiref
-ms.openlocfilehash: 27839dda657a6bedf3cc65bb843caaaaa63006d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28b08975e91ab3221efa120052e63ff31b526d1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800085"
 ---
-# <a name="iinstallreferenceitem-interface"></a><span data-ttu-id="f8e53-102">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8e53-102">IInstallReferenceItem Interface</span></span>
+# <a name="iinstallreferenceitem-interface"></a><span data-ttu-id="7a13e-103">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7a13e-103">IInstallReferenceItem Interface</span></span>
 
-<span data-ttu-id="f8e53-103">グローバルアセンブリキャッシュにインストールされている項目を表します。</span><span class="sxs-lookup"><span data-stu-id="f8e53-103">Represents an item installed in the global assembly cache.</span></span>  
+<span data-ttu-id="7a13e-104">グローバルアセンブリキャッシュにインストールされている項目を表します。</span><span class="sxs-lookup"><span data-stu-id="7a13e-104">Represents an item installed in the global assembly cache.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f8e53-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="f8e53-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7a13e-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="7a13e-105">Methods</span></span>  
   
-|<span data-ttu-id="f8e53-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="f8e53-105">Method</span></span>|<span data-ttu-id="f8e53-106">説明</span><span class="sxs-lookup"><span data-stu-id="f8e53-106">Description</span></span>|  
+|<span data-ttu-id="7a13e-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="7a13e-106">Method</span></span>|<span data-ttu-id="7a13e-107">説明</span><span class="sxs-lookup"><span data-stu-id="7a13e-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f8e53-107">GetReference メソッド</span><span class="sxs-lookup"><span data-stu-id="f8e53-107">GetReference Method</span></span>](iinstallreferenceitem-getreference-method.md)|<span data-ttu-id="f8e53-108">`FUSION_INSTALL_REFERENCE`このによって表される構造体へのポインターを取得し `IInstallReferenceItem` ます。</span><span class="sxs-lookup"><span data-stu-id="f8e53-108">Gets a pointer to the `FUSION_INSTALL_REFERENCE` structure represented by this `IInstallReferenceItem`.</span></span>|  
+|[<span data-ttu-id="7a13e-108">GetReference メソッド</span><span class="sxs-lookup"><span data-stu-id="7a13e-108">GetReference Method</span></span>](iinstallreferenceitem-getreference-method.md)|<span data-ttu-id="7a13e-109">`FUSION_INSTALL_REFERENCE`このによって表される構造体へのポインターを取得し `IInstallReferenceItem` ます。</span><span class="sxs-lookup"><span data-stu-id="7a13e-109">Gets a pointer to the `FUSION_INSTALL_REFERENCE` structure represented by this `IInstallReferenceItem`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f8e53-109">要件</span><span class="sxs-lookup"><span data-stu-id="f8e53-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a13e-110">要件</span><span class="sxs-lookup"><span data-stu-id="7a13e-110">Requirements</span></span>  
 
- <span data-ttu-id="f8e53-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f8e53-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="7a13e-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7a13e-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8e53-111">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="f8e53-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7a13e-112">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="7a13e-112">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f8e53-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8e53-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7a13e-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a13e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8e53-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8e53-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a13e-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="7a13e-114">See also</span></span>
 
-- [<span data-ttu-id="f8e53-114">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8e53-114">Fusion Interfaces</span></span>](fusion-interfaces.md)
-- [<span data-ttu-id="f8e53-115">FUSION_INSTALL_REFERENCE 構造体</span><span class="sxs-lookup"><span data-stu-id="f8e53-115">FUSION_INSTALL_REFERENCE Structure</span></span>](fusion-install-reference-structure.md)
+- [<span data-ttu-id="7a13e-115">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7a13e-115">Fusion Interfaces</span></span>](fusion-interfaces.md)
+- [<span data-ttu-id="7a13e-116">FUSION_INSTALL_REFERENCE 構造体</span><span class="sxs-lookup"><span data-stu-id="7a13e-116">FUSION_INSTALL_REFERENCE Structure</span></span>](fusion-install-reference-structure.md)

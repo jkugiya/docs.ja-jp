@@ -1,31 +1,32 @@
 ---
+description: '詳細情報: 3331-SecurityNegotiationStop'
 title: 3331 - SecurityNegotiationStop
 ms.date: 03/30/2017
 ms.assetid: 66ae93c8-00d3-4d6e-88ae-6da694285220
-ms.openlocfilehash: 05cfae44484b5b40eed2ddce32b2dbd3e420e865
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 322b04de7378ddb72f0ceb2be173133ab11c4448
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783743"
 ---
-# <a name="3331---securitynegotiationstop"></a><span data-ttu-id="c22e0-102">3331 - SecurityNegotiationStop</span><span class="sxs-lookup"><span data-stu-id="c22e0-102">3331 - SecurityNegotiationStop</span></span>
+# <a name="3331---securitynegotiationstop"></a><span data-ttu-id="9658a-103">3331 - SecurityNegotiationStop</span><span class="sxs-lookup"><span data-stu-id="9658a-103">3331 - SecurityNegotiationStop</span></span>
 
-## <a name="properties"></a><span data-ttu-id="c22e0-103">プロパティ</span><span class="sxs-lookup"><span data-stu-id="c22e0-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="9658a-104">プロパティ</span><span class="sxs-lookup"><span data-stu-id="9658a-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="c22e0-104">ID</span><span class="sxs-lookup"><span data-stu-id="c22e0-104">ID</span></span>|<span data-ttu-id="c22e0-105">3331</span><span class="sxs-lookup"><span data-stu-id="c22e0-105">3331</span></span>|  
-|<span data-ttu-id="c22e0-106">Keywords</span><span class="sxs-lookup"><span data-stu-id="c22e0-106">Keywords</span></span>|<span data-ttu-id="c22e0-107">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="c22e0-107">Security</span></span>|  
-|<span data-ttu-id="c22e0-108">Level</span><span class="sxs-lookup"><span data-stu-id="c22e0-108">Level</span></span>|<span data-ttu-id="c22e0-109">"詳細"</span><span class="sxs-lookup"><span data-stu-id="c22e0-109">Verbose</span></span>|  
-|<span data-ttu-id="c22e0-110">チャネル</span><span class="sxs-lookup"><span data-stu-id="c22e0-110">Channel</span></span>|<span data-ttu-id="c22e0-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="c22e0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="9658a-105">id</span><span class="sxs-lookup"><span data-stu-id="9658a-105">ID</span></span>|<span data-ttu-id="9658a-106">3331</span><span class="sxs-lookup"><span data-stu-id="9658a-106">3331</span></span>|  
+|<span data-ttu-id="9658a-107">Keywords</span><span class="sxs-lookup"><span data-stu-id="9658a-107">Keywords</span></span>|<span data-ttu-id="9658a-108">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="9658a-108">Security</span></span>|  
+|<span data-ttu-id="9658a-109">Level</span><span class="sxs-lookup"><span data-stu-id="9658a-109">Level</span></span>|<span data-ttu-id="9658a-110">"詳細"</span><span class="sxs-lookup"><span data-stu-id="9658a-110">Verbose</span></span>|  
+|<span data-ttu-id="9658a-111">チャネル</span><span class="sxs-lookup"><span data-stu-id="9658a-111">Channel</span></span>|<span data-ttu-id="9658a-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9658a-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="c22e0-112">Description</span><span class="sxs-lookup"><span data-stu-id="c22e0-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="9658a-113">説明</span><span class="sxs-lookup"><span data-stu-id="9658a-113">Description</span></span>  
 
- <span data-ttu-id="c22e0-113">このイベントは、セキュリティ ネゴシエーションが完了したときに生成されます。</span><span class="sxs-lookup"><span data-stu-id="c22e0-113">This event is emitted when the security negotiation completed.</span></span>  
+ <span data-ttu-id="9658a-114">このイベントは、セキュリティ ネゴシエーションが完了したときに生成されます。</span><span class="sxs-lookup"><span data-stu-id="9658a-114">This event is emitted when the security negotiation completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="c22e0-114">Message</span><span class="sxs-lookup"><span data-stu-id="c22e0-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="9658a-115">Message</span><span class="sxs-lookup"><span data-stu-id="9658a-115">Message</span></span>  
 
- <span data-ttu-id="c22e0-115">セキュリティ ネゴシエーションが完了しました。</span><span class="sxs-lookup"><span data-stu-id="c22e0-115">Security negotiation completed.</span></span>  
+ <span data-ttu-id="9658a-116">セキュリティ ネゴシエーションが完了しました。</span><span class="sxs-lookup"><span data-stu-id="9658a-116">Security negotiation completed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="c22e0-116">詳細</span><span class="sxs-lookup"><span data-stu-id="c22e0-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="9658a-117">詳細</span><span class="sxs-lookup"><span data-stu-id="9658a-117">Details</span></span>

@@ -1,31 +1,32 @@
 ---
+description: '詳細情報: 5602-FederationMessageCreationStarted'
 title: 5602 - FederationMessageCreationStarted
 ms.date: 03/30/2017
 ms.assetid: a93a5057-86d8-4be9-a5a4-09ba935fef01
-ms.openlocfilehash: e2514e0cd0ff1f5e866ea64c124a51a37fce23fb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de53a02d7012e27bfce5769d6a0557185471b8ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788346"
 ---
-# <a name="5602---federationmessagecreationstarted"></a><span data-ttu-id="78988-102">5602 - FederationMessageCreationStarted</span><span class="sxs-lookup"><span data-stu-id="78988-102">5602 - FederationMessageCreationStarted</span></span>
+# <a name="5602---federationmessagecreationstarted"></a><span data-ttu-id="a7a44-103">5602 - FederationMessageCreationStarted</span><span class="sxs-lookup"><span data-stu-id="a7a44-103">5602 - FederationMessageCreationStarted</span></span>
 
-## <a name="properties"></a><span data-ttu-id="78988-103">プロパティ</span><span class="sxs-lookup"><span data-stu-id="78988-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="a7a44-104">プロパティ</span><span class="sxs-lookup"><span data-stu-id="a7a44-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="78988-104">ID</span><span class="sxs-lookup"><span data-stu-id="78988-104">ID</span></span>|<span data-ttu-id="78988-105">5602</span><span class="sxs-lookup"><span data-stu-id="78988-105">5602</span></span>|  
-|<span data-ttu-id="78988-106">Keywords</span><span class="sxs-lookup"><span data-stu-id="78988-106">Keywords</span></span>|<span data-ttu-id="78988-107">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="78988-107">Security</span></span>|  
-|<span data-ttu-id="78988-108">Level</span><span class="sxs-lookup"><span data-stu-id="78988-108">Level</span></span>|<span data-ttu-id="78988-109">"詳細"</span><span class="sxs-lookup"><span data-stu-id="78988-109">Verbose</span></span>|  
-|<span data-ttu-id="78988-110">チャネル</span><span class="sxs-lookup"><span data-stu-id="78988-110">Channel</span></span>|<span data-ttu-id="78988-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="78988-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="a7a44-105">id</span><span class="sxs-lookup"><span data-stu-id="a7a44-105">ID</span></span>|<span data-ttu-id="a7a44-106">5602</span><span class="sxs-lookup"><span data-stu-id="a7a44-106">5602</span></span>|  
+|<span data-ttu-id="a7a44-107">Keywords</span><span class="sxs-lookup"><span data-stu-id="a7a44-107">Keywords</span></span>|<span data-ttu-id="a7a44-108">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="a7a44-108">Security</span></span>|  
+|<span data-ttu-id="a7a44-109">Level</span><span class="sxs-lookup"><span data-stu-id="a7a44-109">Level</span></span>|<span data-ttu-id="a7a44-110">"詳細"</span><span class="sxs-lookup"><span data-stu-id="a7a44-110">Verbose</span></span>|  
+|<span data-ttu-id="a7a44-111">チャネル</span><span class="sxs-lookup"><span data-stu-id="a7a44-111">Channel</span></span>|<span data-ttu-id="a7a44-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a7a44-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="78988-112">Description</span><span class="sxs-lookup"><span data-stu-id="78988-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="a7a44-113">説明</span><span class="sxs-lookup"><span data-stu-id="a7a44-113">Description</span></span>  
 
- <span data-ttu-id="78988-113">このイベントは、フォーム ポストからのフェデレーション メッセージの作成を開始したときに生成されます。</span><span class="sxs-lookup"><span data-stu-id="78988-113">This event is emitted when the creating federation message from form post started.</span></span>  
+ <span data-ttu-id="a7a44-114">このイベントは、フォーム ポストからのフェデレーション メッセージの作成を開始したときに生成されます。</span><span class="sxs-lookup"><span data-stu-id="a7a44-114">This event is emitted when the creating federation message from form post started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="78988-114">Message</span><span class="sxs-lookup"><span data-stu-id="78988-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="a7a44-115">Message</span><span class="sxs-lookup"><span data-stu-id="a7a44-115">Message</span></span>  
 
- <span data-ttu-id="78988-115">フォーム ポストからのフェデレーション メッセージの作成を開始しました。</span><span class="sxs-lookup"><span data-stu-id="78988-115">Creating federation message from form post started.</span></span>  
+ <span data-ttu-id="a7a44-116">フォーム ポストからのフェデレーション メッセージの作成を開始しました。</span><span class="sxs-lookup"><span data-stu-id="a7a44-116">Creating federation message from form post started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="78988-116">詳細</span><span class="sxs-lookup"><span data-stu-id="78988-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a7a44-117">詳細</span><span class="sxs-lookup"><span data-stu-id="a7a44-117">Details</span></span>

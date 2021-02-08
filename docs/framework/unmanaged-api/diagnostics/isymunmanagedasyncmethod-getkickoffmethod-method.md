@@ -1,38 +1,39 @@
 ---
+description: '詳細について: ISymUnmanagedAsyncMethod:: GetKickoffMethod メソッド'
 title: ISymUnmanagedAsyncMethod::GetKickoffMethod メソッド
 ms.date: 03/30/2017
 ms.assetid: ba084444-9e68-4cde-9388-54b950670987
-ms.openlocfilehash: 2d4515087812b2b7c9303228ac5e5bbf34e8aa91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c763109ac8556fd7941675f98879c6a1792e8bc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707192"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790296"
 ---
-# <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a><span data-ttu-id="20fda-102">ISymUnmanagedAsyncMethod::GetKickoffMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="20fda-102">ISymUnmanagedAsyncMethod::GetKickoffMethod Method</span></span>
+# <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a><span data-ttu-id="ef973-103">ISymUnmanagedAsyncMethod::GetKickoffMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="ef973-103">ISymUnmanagedAsyncMethod::GetKickoffMethod Method</span></span>
 
-<span data-ttu-id="20fda-103">「 [DefineKickoffMethod メソッド](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="20fda-103">See [DefineKickoffMethod Method](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md).</span></span>  
+<span data-ttu-id="ef973-104">「 [DefineKickoffMethod メソッド](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ef973-104">See [DefineKickoffMethod Method](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20fda-104">構文</span><span class="sxs-lookup"><span data-stu-id="20fda-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef973-105">構文</span><span class="sxs-lookup"><span data-stu-id="ef973-105">Syntax</span></span>  
   
 ```idl  
 HRESULT GetKickoffMethod(    [out, retval] mdToken* kickoffMethod);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20fda-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="20fda-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef973-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ef973-106">Parameters</span></span>  
   
-|<span data-ttu-id="20fda-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="20fda-106">Parameter</span></span>|<span data-ttu-id="20fda-107">説明</span><span class="sxs-lookup"><span data-stu-id="20fda-107">Description</span></span>|  
+|<span data-ttu-id="ef973-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ef973-107">Parameter</span></span>|<span data-ttu-id="ef973-108">説明</span><span class="sxs-lookup"><span data-stu-id="ef973-108">Description</span></span>|  
 |---------------|-----------------|  
 |`kickoffMethod`||  
   
-## <a name="return-value"></a><span data-ttu-id="20fda-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="20fda-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ef973-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="ef973-109">Return Value</span></span>  
 
- <span data-ttu-id="20fda-109">`HRESULT` を返します。</span><span class="sxs-lookup"><span data-stu-id="20fda-109">Returns `HRESULT`.</span></span>  
+ <span data-ttu-id="ef973-110">`HRESULT` が返されます。</span><span class="sxs-lookup"><span data-stu-id="ef973-110">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20fda-110">要件</span><span class="sxs-lookup"><span data-stu-id="20fda-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef973-111">要件</span><span class="sxs-lookup"><span data-stu-id="ef973-111">Requirements</span></span>  
 
- <span data-ttu-id="20fda-111">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="20fda-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="ef973-112">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="ef973-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20fda-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="20fda-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef973-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef973-113">See also</span></span>
 
-- [<span data-ttu-id="20fda-113">ISymUnmanagedAsyncMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="20fda-113">ISymUnmanagedAsyncMethod Interface</span></span>](isymunmanagedasyncmethod-interface.md)
+- [<span data-ttu-id="ef973-114">ISymUnmanagedAsyncMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ef973-114">ISymUnmanagedAsyncMethod Interface</span></span>](isymunmanagedasyncmethod-interface.md)

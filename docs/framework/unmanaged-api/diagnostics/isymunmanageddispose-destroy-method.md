@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedDispose::D estroy メソッド'
 title: ISymUnmanagedDispose::Destroy メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: a854ab9f-d2ba-470e-867f-808c1e7bd07a
 topic_type:
 - apiref
-ms.openlocfilehash: 6a31026f5b1669c0c29762048dc2c5c1c7bbb6a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c13f90e08f2ba0dd7c70acc3321913b14195f1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732828"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790205"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="0dc36-102">ISymUnmanagedDispose::Destroy メソッド</span><span class="sxs-lookup"><span data-stu-id="0dc36-102">ISymUnmanagedDispose::Destroy Method</span></span>
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="f844f-103">ISymUnmanagedDispose::Destroy メソッド</span><span class="sxs-lookup"><span data-stu-id="f844f-103">ISymUnmanagedDispose::Destroy Method</span></span>
 
-<span data-ttu-id="0dc36-103">基になるオブジェクトがすべての内部参照を解放し、後続のメソッド呼び出しの失敗を返します。</span><span class="sxs-lookup"><span data-stu-id="0dc36-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+<span data-ttu-id="f844f-104">基になるオブジェクトがすべての内部参照を解放し、後続のメソッド呼び出しの失敗を返します。</span><span class="sxs-lookup"><span data-stu-id="f844f-104">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0dc36-104">構文</span><span class="sxs-lookup"><span data-stu-id="0dc36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f844f-105">構文</span><span class="sxs-lookup"><span data-stu-id="f844f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="0dc36-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="0dc36-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f844f-106">戻り値</span><span class="sxs-lookup"><span data-stu-id="f844f-106">Return Value</span></span>  
 
- <span data-ttu-id="0dc36-106">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="0dc36-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="f844f-107">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="f844f-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0dc36-107">要件</span><span class="sxs-lookup"><span data-stu-id="0dc36-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f844f-108">要件</span><span class="sxs-lookup"><span data-stu-id="f844f-108">Requirements</span></span>  
 
- <span data-ttu-id="0dc36-108">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="0dc36-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="f844f-109">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="f844f-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0dc36-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="0dc36-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f844f-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="f844f-110">See also</span></span>
 
-- [<span data-ttu-id="0dc36-110">ISymUnmanagedDispose インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0dc36-110">ISymUnmanagedDispose Interface</span></span>](isymunmanageddispose-interface.md)
+- [<span data-ttu-id="f844f-111">ISymUnmanagedDispose インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f844f-111">ISymUnmanagedDispose Interface</span></span>](isymunmanageddispose-interface.md)

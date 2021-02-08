@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「ServiceContinue」を参照してください。
 title: System.ServiceModel.Activation.ServiceContinue
 ms.date: 03/30/2017
 ms.assetid: 37a43c8e-493d-4e35-a24f-ab0d4c6d5ce7
-ms.openlocfilehash: c69c8673bd10d79673b281a9303b7c8b58515cfb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 974bbdb757265e0a7b5bb083f6e0bc4ca7083ab7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253701"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770238"
 ---
-# <a name="systemservicemodelactivationservicecontinue"></a><span data-ttu-id="3223d-102">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="3223d-102">System.ServiceModel.Activation.ServiceContinue</span></span>
+# <a name="systemservicemodelactivationservicecontinue"></a><span data-ttu-id="c051e-103">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="c051e-103">System.ServiceModel.Activation.ServiceContinue</span></span>
 
-<span data-ttu-id="3223d-103">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="3223d-103">System.ServiceModel.Activation.ServiceContinue</span></span>  
+<span data-ttu-id="c051e-104">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="c051e-104">System.ServiceModel.Activation.ServiceContinue</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3223d-104">Description</span><span class="sxs-lookup"><span data-stu-id="3223d-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="c051e-105">説明</span><span class="sxs-lookup"><span data-stu-id="c051e-105">Description</span></span>  
 
- <span data-ttu-id="3223d-105">サービスを継続する要求を受信しました。</span><span class="sxs-lookup"><span data-stu-id="3223d-105">A request to continue the service was received.</span></span>  
+ <span data-ttu-id="c051e-106">サービスを継続する要求を受信しました。</span><span class="sxs-lookup"><span data-stu-id="c051e-106">A request to continue the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3223d-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="3223d-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c051e-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="c051e-107">See also</span></span>
 
-- [<span data-ttu-id="3223d-107">トレース</span><span class="sxs-lookup"><span data-stu-id="3223d-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="3223d-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="3223d-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="3223d-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="3223d-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="c051e-108">トレース</span><span class="sxs-lookup"><span data-stu-id="c051e-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="c051e-109">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="c051e-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c051e-110">管理と診断</span><span class="sxs-lookup"><span data-stu-id="c051e-110">Administration and Diagnostics</span></span>](../index.md)

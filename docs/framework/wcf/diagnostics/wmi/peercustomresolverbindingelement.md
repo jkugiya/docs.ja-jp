@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「PeerCustomResolverBindingElement」を参照してください。
 title: PeerCustomResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 9ccc2770-a20e-4dff-9970-f56ad8aec2b5
-ms.openlocfilehash: c7f8fd23133cd83ad87a00134b9755b94f531d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4277c04818eec69c1041eee30282d3111421eaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803049"
 ---
-# <a name="peercustomresolverbindingelement"></a><span data-ttu-id="bac51-102">PeerCustomResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="bac51-102">PeerCustomResolverBindingElement</span></span>
+# <a name="peercustomresolverbindingelement"></a><span data-ttu-id="723c4-103">PeerCustomResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="723c4-103">PeerCustomResolverBindingElement</span></span>
 
-<span data-ttu-id="bac51-103">PeerCustomResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="bac51-103">PeerCustomResolverBindingElement</span></span>
+<span data-ttu-id="723c4-104">PeerCustomResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="723c4-104">PeerCustomResolverBindingElement</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="bac51-104">構文</span><span class="sxs-lookup"><span data-stu-id="bac51-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="723c4-105">構文</span><span class="sxs-lookup"><span data-stu-id="723c4-105">Syntax</span></span>
 
 ```csharp
 class PeerCustomResolverBindingElement : PeerResolverBindingElement
@@ -23,36 +24,36 @@ class PeerCustomResolverBindingElement : PeerResolverBindingElement
 };
 ```
 
-## <a name="methods"></a><span data-ttu-id="bac51-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="bac51-105">Methods</span></span>
+## <a name="methods"></a><span data-ttu-id="723c4-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="723c4-106">Methods</span></span>
 
-<span data-ttu-id="bac51-106">PeerCustomResolverBindingElement クラスで定義されているメソッドはありません。</span><span class="sxs-lookup"><span data-stu-id="bac51-106">The PeerCustomResolverBindingElement class does not define any methods.</span></span>
+<span data-ttu-id="723c4-107">PeerCustomResolverBindingElement クラスで定義されているメソッドはありません。</span><span class="sxs-lookup"><span data-stu-id="723c4-107">The PeerCustomResolverBindingElement class does not define any methods.</span></span>
 
-## <a name="properties"></a><span data-ttu-id="bac51-107">プロパティ</span><span class="sxs-lookup"><span data-stu-id="bac51-107">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="723c4-108">プロパティ</span><span class="sxs-lookup"><span data-stu-id="723c4-108">Properties</span></span>
 
- <span data-ttu-id="bac51-108">PeerCustomResolverBindingElement クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="bac51-108">The PeerCustomResolverBindingElement class has the following properties:</span></span>
+ <span data-ttu-id="723c4-109">PeerCustomResolverBindingElement クラスには、次のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="723c4-109">The PeerCustomResolverBindingElement class has the following properties:</span></span>
 
-### <a name="address"></a><span data-ttu-id="bac51-109">アドレス</span><span class="sxs-lookup"><span data-stu-id="bac51-109">Address</span></span>
+### <a name="address"></a><span data-ttu-id="723c4-110">Address</span><span class="sxs-lookup"><span data-stu-id="723c4-110">Address</span></span>
 
-<span data-ttu-id="bac51-110">データ型: string</span><span class="sxs-lookup"><span data-stu-id="bac51-110">Data type: string</span></span>
+<span data-ttu-id="723c4-111">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="723c4-111">Data type: string</span></span>
 
-<span data-ttu-id="bac51-111">アクセスの種類:読み取り専用</span><span class="sxs-lookup"><span data-stu-id="bac51-111">Access type: Read-only</span></span>
+<span data-ttu-id="723c4-112">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="723c4-112">Access type: Read-only</span></span>
 
-<span data-ttu-id="bac51-112">ピア カスタム リゾルバーのアドレスです。</span><span class="sxs-lookup"><span data-stu-id="bac51-112">The address of the peer custom resolver.</span></span>
+<span data-ttu-id="723c4-113">ピア カスタム リゾルバーのアドレスです。</span><span class="sxs-lookup"><span data-stu-id="723c4-113">The address of the peer custom resolver.</span></span>
 
-### <a name="binding"></a><span data-ttu-id="bac51-113">バインディング</span><span class="sxs-lookup"><span data-stu-id="bac51-113">Binding</span></span>
+### <a name="binding"></a><span data-ttu-id="723c4-114">バインド</span><span class="sxs-lookup"><span data-stu-id="723c4-114">Binding</span></span>
 
-<span data-ttu-id="bac51-114">データ型: string</span><span class="sxs-lookup"><span data-stu-id="bac51-114">Data type: string</span></span>
+<span data-ttu-id="723c4-115">データ型: 文字列</span><span class="sxs-lookup"><span data-stu-id="723c4-115">Data type: string</span></span>
 
-<span data-ttu-id="bac51-115">アクセスの種類:読み取り専用</span><span class="sxs-lookup"><span data-stu-id="bac51-115">Access type: Read-only</span></span>
+<span data-ttu-id="723c4-116">アクセスの種類: 読み取り専用</span><span class="sxs-lookup"><span data-stu-id="723c4-116">Access type: Read-only</span></span>
 
-<span data-ttu-id="bac51-116">バインドの構成名。</span><span class="sxs-lookup"><span data-stu-id="bac51-116">The configuration name of the binding.</span></span>
+<span data-ttu-id="723c4-117">バインドの構成名。</span><span class="sxs-lookup"><span data-stu-id="723c4-117">The configuration name of the binding.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="bac51-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="bac51-117">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="723c4-118">要件</span><span class="sxs-lookup"><span data-stu-id="723c4-118">Requirements</span></span>
 
-|<span data-ttu-id="bac51-118">MOF</span><span class="sxs-lookup"><span data-stu-id="bac51-118">MOF</span></span>|<span data-ttu-id="bac51-119">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="bac51-119">Declared in Servicemodel.mof.</span></span>|
+|<span data-ttu-id="723c4-119">MOF</span><span class="sxs-lookup"><span data-stu-id="723c4-119">MOF</span></span>|<span data-ttu-id="723c4-120">Servicemodel.mof にて宣言済み。</span><span class="sxs-lookup"><span data-stu-id="723c4-120">Declared in Servicemodel.mof.</span></span>|
 |---------|-----------------------------------|
-|<span data-ttu-id="bac51-120">名前空間</span><span class="sxs-lookup"><span data-stu-id="bac51-120">Namespace</span></span>|<span data-ttu-id="bac51-121">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="bac51-121">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="723c4-121">名前空間</span><span class="sxs-lookup"><span data-stu-id="723c4-121">Namespace</span></span>|<span data-ttu-id="723c4-122">root\ServiceModel で定義</span><span class="sxs-lookup"><span data-stu-id="723c4-122">Defined in root\ServiceModel</span></span>|
 
-## <a name="see-also"></a><span data-ttu-id="bac51-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="bac51-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="723c4-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="723c4-123">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.PeerCustomResolverBindingElement>

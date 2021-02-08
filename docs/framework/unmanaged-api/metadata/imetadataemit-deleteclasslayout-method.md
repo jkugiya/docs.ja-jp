@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit::D eleteClassLayout メソッド'
 title: IMetaDataEmit::DeleteClassLayout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 65a4ad49-fa49-4b36-8ed1-76dd6a185ab4
 topic_type:
 - apiref
-ms.openlocfilehash: d355e0e3b2461932384ca11d83d46fd1dc63b80e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44be89f415087a1457a83bb1167e1017d26ed5ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783990"
 ---
-# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="b0b1f-102">IMetaDataEmit::DeleteClassLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="b0b1f-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
+# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="e9979-103">IMetaDataEmit::DeleteClassLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="e9979-103">IMetaDataEmit::DeleteClassLayout Method</span></span>
 
-<span data-ttu-id="b0b1f-103">指定したトークンによって表される型のクラスレイアウトメタデータシグネチャを破棄します。</span><span class="sxs-lookup"><span data-stu-id="b0b1f-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
+<span data-ttu-id="e9979-104">指定したトークンによって表される型のクラスレイアウトメタデータシグネチャを破棄します。</span><span class="sxs-lookup"><span data-stu-id="e9979-104">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0b1f-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0b1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9979-105">構文</span><span class="sxs-lookup"><span data-stu-id="e9979-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteClassLayout (  
@@ -34,22 +35,22 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0b1f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b0b1f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e9979-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e9979-106">Parameters</span></span>  
 
  `td`  
- <span data-ttu-id="b0b1f-106">から `mdTypeDef` クラスレイアウトが削除される型を表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="b0b1f-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
+ <span data-ttu-id="e9979-107">から `mdTypeDef` クラスレイアウトが削除される型を表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="e9979-107">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0b1f-107">要件</span><span class="sxs-lookup"><span data-stu-id="b0b1f-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9979-108">要件</span><span class="sxs-lookup"><span data-stu-id="e9979-108">Requirements</span></span>  
 
- <span data-ttu-id="b0b1f-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0b1f-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="e9979-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e9979-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0b1f-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="b0b1f-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e9979-110">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="e9979-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b0b1f-110">**ライブラリ:** MSCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="b0b1f-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e9979-111">**ライブラリ:** MSCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="e9979-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b0b1f-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0b1f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e9979-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9979-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0b1f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0b1f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9979-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e9979-113">See also</span></span>
 
-- [<span data-ttu-id="b0b1f-113">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0b1f-113">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="b0b1f-114">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0b1f-114">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="e9979-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e9979-114">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="e9979-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e9979-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)

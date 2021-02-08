@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit::D eleteToken メソッド'
 title: IMetaDataEmit::DeleteToken メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: eaa465855c9e933286bcdd189e62048510088ec7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c28b56b06f994057409ef8fa17179cb0b0e205b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722077"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783951"
 ---
-# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="9f8a1-102">IMetaDataEmit::DeleteToken メソッド</span><span class="sxs-lookup"><span data-stu-id="9f8a1-102">IMetaDataEmit::DeleteToken Method</span></span>
+# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="96e18-103">IMetaDataEmit::DeleteToken メソッド</span><span class="sxs-lookup"><span data-stu-id="96e18-103">IMetaDataEmit::DeleteToken Method</span></span>
 
-<span data-ttu-id="9f8a1-103">現在のメタデータスコープから指定されたトークンを削除します。</span><span class="sxs-lookup"><span data-stu-id="9f8a1-103">Deletes the specified token from the current metadata scope.</span></span>  
+<span data-ttu-id="96e18-104">現在のメタデータスコープから指定されたトークンを削除します。</span><span class="sxs-lookup"><span data-stu-id="96e18-104">Deletes the specified token from the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f8a1-104">構文</span><span class="sxs-lookup"><span data-stu-id="9f8a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96e18-105">構文</span><span class="sxs-lookup"><span data-stu-id="96e18-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteToken (
@@ -34,22 +35,22 @@ HRESULT DeleteToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9f8a1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9f8a1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96e18-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="96e18-106">Parameters</span></span>  
 
  `tkObj`  
- <span data-ttu-id="9f8a1-106">から削除するトークン。</span><span class="sxs-lookup"><span data-stu-id="9f8a1-106">[in] The token to be deleted.</span></span>  
+ <span data-ttu-id="96e18-107">から削除するトークン。</span><span class="sxs-lookup"><span data-stu-id="96e18-107">[in] The token to be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f8a1-107">要件</span><span class="sxs-lookup"><span data-stu-id="9f8a1-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96e18-108">要件</span><span class="sxs-lookup"><span data-stu-id="96e18-108">Requirements</span></span>  
 
- <span data-ttu-id="9f8a1-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f8a1-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="96e18-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="96e18-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f8a1-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="9f8a1-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="96e18-110">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="96e18-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9f8a1-110">**ライブラリ:** MSCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="9f8a1-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="96e18-111">**ライブラリ:** MSCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="96e18-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9f8a1-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f8a1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="96e18-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96e18-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f8a1-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f8a1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96e18-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="96e18-113">See also</span></span>
 
-- [<span data-ttu-id="9f8a1-113">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9f8a1-113">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="9f8a1-114">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9f8a1-114">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="96e18-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="96e18-114">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="96e18-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="96e18-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)

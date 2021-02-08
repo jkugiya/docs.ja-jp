@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Eclrassemblyidentity Flags 列挙型'
 title: ECLRAssemblyIdentityFlags 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-ms.openlocfilehash: c3fed9166d95c0ca71ac44f5447b95eee97af310
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d0211c6116b566964aeca29a52aede7e232f5556
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726835"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785580"
 ---
-# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="160d5-102">ECLRAssemblyIdentityFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="160d5-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
+# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="5682c-103">ECLRAssemblyIdentityFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="5682c-103">ECLRAssemblyIdentityFlags Enumeration</span></span>
 
-<span data-ttu-id="160d5-103">アセンブリの id の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="160d5-103">Indicates the type of an assembly's identity.</span></span>  
+<span data-ttu-id="5682c-104">アセンブリの id の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="5682c-104">Indicates the type of an assembly's identity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="160d5-104">構文</span><span class="sxs-lookup"><span data-stu-id="160d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5682c-105">構文</span><span class="sxs-lookup"><span data-stu-id="5682c-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum _CLRAssemblyIdentityFlags {  
@@ -33,20 +34,20 @@ typedef enum _CLRAssemblyIdentityFlags {
 } ECLRAssemblyIdentityFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="160d5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="160d5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5682c-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="5682c-106">Members</span></span>  
   
-|<span data-ttu-id="160d5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="160d5-106">Member</span></span>|<span data-ttu-id="160d5-107">説明</span><span class="sxs-lookup"><span data-stu-id="160d5-107">Description</span></span>|  
+|<span data-ttu-id="5682c-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="5682c-107">Member</span></span>|<span data-ttu-id="5682c-108">説明</span><span class="sxs-lookup"><span data-stu-id="5682c-108">Description</span></span>|  
 |------------|-----------------|  
-|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="160d5-108">Id は正規化されます。</span><span class="sxs-lookup"><span data-stu-id="160d5-108">The identity is canonicalized.</span></span>|  
+|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="5682c-109">Id は正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5682c-109">The identity is canonicalized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="160d5-109">要件</span><span class="sxs-lookup"><span data-stu-id="160d5-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5682c-110">要件</span><span class="sxs-lookup"><span data-stu-id="5682c-110">Requirements</span></span>  
 
- <span data-ttu-id="160d5-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="160d5-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="5682c-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5682c-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="160d5-111">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="160d5-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5682c-112">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="5682c-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="160d5-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="160d5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5682c-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5682c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="160d5-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="160d5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5682c-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="5682c-114">See also</span></span>
 
-- [<span data-ttu-id="160d5-114">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="160d5-114">Hosting Enumerations</span></span>](hosting-enumerations.md)
+- [<span data-ttu-id="5682c-115">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="5682c-115">Hosting Enumerations</span></span>](hosting-enumerations.md)

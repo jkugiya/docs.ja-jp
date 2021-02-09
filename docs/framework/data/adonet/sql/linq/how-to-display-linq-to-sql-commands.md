@@ -1,29 +1,30 @@
 ---
+description: '詳細情報: 方法:LINQ to SQL コマンドを表示する'
 title: '方法: LINQ to SQL コマンドを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: e703ea9be3ead50afae9b8f42aaa4f54a292c23c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 480e7c1cbcceb09f0d727d03569d6277e0dd754b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785992"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="f1efe-102">方法: LINQ to SQL コマンドを表示する</span><span class="sxs-lookup"><span data-stu-id="f1efe-102">How to: Display LINQ to SQL Commands</span></span>
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="3fa2e-103">方法: LINQ to SQL コマンドを表示する</span><span class="sxs-lookup"><span data-stu-id="3fa2e-103">How to: Display LINQ to SQL Commands</span></span>
 
-<span data-ttu-id="f1efe-103">SQL コマンドとその他の情報を表示するには、<xref:System.Data.Linq.DataContext.GetCommand%2A> を使用します。</span><span class="sxs-lookup"><span data-stu-id="f1efe-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
+<span data-ttu-id="3fa2e-104">SQL コマンドとその他の情報を表示するには、<xref:System.Data.Linq.DataContext.GetCommand%2A> を使用します。</span><span class="sxs-lookup"><span data-stu-id="3fa2e-104">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1efe-104">例</span><span class="sxs-lookup"><span data-stu-id="f1efe-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3fa2e-105">例</span><span class="sxs-lookup"><span data-stu-id="3fa2e-105">Example</span></span>  
 
- <span data-ttu-id="f1efe-105">クエリからの出力、生成された SQL コマンド、コマンドの種類、および接続の種類をコンソール ウィンドウに表示する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="f1efe-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
+ <span data-ttu-id="3fa2e-106">クエリからの出力、生成された SQL コマンド、コマンドの種類、および接続の種類をコンソール ウィンドウに表示する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3fa2e-106">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- <span data-ttu-id="f1efe-106">次のような出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="f1efe-106">Output appears as follows:</span></span>  
+ <span data-ttu-id="3fa2e-107">次のような出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="3fa2e-107">Output appears as follows:</span></span>  
   
 ```console  
 Customers from London:  
@@ -50,6 +51,6 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f1efe-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1efe-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3fa2e-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="3fa2e-108">See also</span></span>
 
-- [<span data-ttu-id="f1efe-108">デバッグのサポート</span><span class="sxs-lookup"><span data-stu-id="f1efe-108">Debugging Support</span></span>](debugging-support.md)
+- [<span data-ttu-id="3fa2e-109">デバッグのサポート</span><span class="sxs-lookup"><span data-stu-id="3fa2e-109">Debugging Support</span></span>](debugging-support.md)

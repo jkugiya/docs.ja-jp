@@ -1,28 +1,29 @@
 ---
+description: '詳細情報: DataView からの DataTable の作成'
 title: DataView からの DataTable の作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 42843ec40f4f7271526e341dc53bdbc2ef11db38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2cd1b4520cfcbeb626eea06ae2d87208339dae9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198731"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725054"
 ---
-# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="cafa3-102">DataView からの DataTable の作成</span><span class="sxs-lookup"><span data-stu-id="cafa3-102">Creating a DataTable from a DataView</span></span>
+# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="453fb-103">DataView からの DataTable の作成</span><span class="sxs-lookup"><span data-stu-id="453fb-103">Creating a DataTable from a DataView</span></span>
 
-<span data-ttu-id="cafa3-103">データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="cafa3-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="cafa3-104">これを行うには、<xref:System.Data.DataView> クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="cafa3-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="cafa3-105">さらに、<xref:System.Data.DataView> から新しい <xref:System.Data.DataTable> を作成する必要がある場合は、<xref:System.Data.DataView.ToTable%2A> メソッドを使用して、すべての行および列、またはデータのサブセットを新しい <xref:System.Data.DataTable> にコピーできます。</span><span class="sxs-lookup"><span data-stu-id="cafa3-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="cafa3-106"><xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。</span><span class="sxs-lookup"><span data-stu-id="cafa3-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
+<span data-ttu-id="453fb-104">データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="453fb-104">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="453fb-105">これを行うには、<xref:System.Data.DataView> クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="453fb-105">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="453fb-106">さらに、<xref:System.Data.DataView> から新しい <xref:System.Data.DataTable> を作成する必要がある場合は、<xref:System.Data.DataView.ToTable%2A> メソッドを使用して、すべての行および列、またはデータのサブセットを新しい <xref:System.Data.DataTable> にコピーできます。</span><span class="sxs-lookup"><span data-stu-id="453fb-106">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="453fb-107"><xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。</span><span class="sxs-lookup"><span data-stu-id="453fb-107">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
   
-- <span data-ttu-id="cafa3-107"><xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成</span><span class="sxs-lookup"><span data-stu-id="cafa3-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
+- <span data-ttu-id="453fb-108"><xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成</span><span class="sxs-lookup"><span data-stu-id="453fb-108">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
   
-- <span data-ttu-id="cafa3-108">Transact-SQL の DISTINCT キーワードと同様に、<xref:System.Data.DataView> とは異なる行のみを含む <xref:System.Data.DataTable> の作成。</span><span class="sxs-lookup"><span data-stu-id="cafa3-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
+- <span data-ttu-id="453fb-109">Transact-SQL の DISTINCT キーワードと同様に、<xref:System.Data.DataView> とは異なる行のみを含む <xref:System.Data.DataTable> の作成。</span><span class="sxs-lookup"><span data-stu-id="453fb-109">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cafa3-109">例</span><span class="sxs-lookup"><span data-stu-id="cafa3-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="453fb-110">例</span><span class="sxs-lookup"><span data-stu-id="453fb-110">Example</span></span>  
 
- <span data-ttu-id="cafa3-110">次のコンソール アプリケーションの例では、**AdventureWorks** サンプル データベース内の **Person.Contact** テーブルからのデータが含まれる <xref:System.Data.DataTable> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="cafa3-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="cafa3-111">次に、<xref:System.Data.DataTable> に基づいて、並べ替えおよびフィルター処理を行った <xref:System.Data.DataView> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="cafa3-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="cafa3-112"><xref:System.Data.DataTable> および <xref:System.Data.DataView> の内容が表示された後、<xref:System.Data.DataView.ToTable%2A> メソッドが呼び出され、<xref:System.Data.DataView> から新しい <xref:System.Data.DataTable> が作成されて、使用可能な列のサブセットのみが選択されます。</span><span class="sxs-lookup"><span data-stu-id="cafa3-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="cafa3-113">最後に、新しい <xref:System.Data.DataTable> の内容が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cafa3-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
+ <span data-ttu-id="453fb-111">次のコンソール アプリケーションの例では、**AdventureWorks** サンプル データベース内の **Person.Contact** テーブルからのデータが含まれる <xref:System.Data.DataTable> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="453fb-111">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="453fb-112">次に、<xref:System.Data.DataTable> に基づいて、並べ替えおよびフィルター処理を行った <xref:System.Data.DataView> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="453fb-112">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="453fb-113"><xref:System.Data.DataTable> および <xref:System.Data.DataView> の内容が表示された後、<xref:System.Data.DataView.ToTable%2A> メソッドが呼び出され、<xref:System.Data.DataView> から新しい <xref:System.Data.DataTable> が作成されて、使用可能な列のサブセットのみが選択されます。</span><span class="sxs-lookup"><span data-stu-id="453fb-113">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="453fb-114">最後に、新しい <xref:System.Data.DataTable> の内容が表示されます。</span><span class="sxs-lookup"><span data-stu-id="453fb-114">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -205,10 +206,10 @@ Console.WriteLine();
 }  
 ```  
   
- <span data-ttu-id="cafa3-114">}</span><span class="sxs-lookup"><span data-stu-id="cafa3-114">}</span></span>  
+ <span data-ttu-id="453fb-115">}</span><span class="sxs-lookup"><span data-stu-id="453fb-115">}</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cafa3-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="cafa3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="453fb-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="453fb-116">See also</span></span>
 
 - <xref:System.Data.DataView.ToTable%2A>
-- [<span data-ttu-id="cafa3-116">DataViews</span><span class="sxs-lookup"><span data-stu-id="cafa3-116">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="cafa3-117">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="cafa3-117">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="453fb-117">DataViews</span><span class="sxs-lookup"><span data-stu-id="453fb-117">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="453fb-118">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="453fb-118">ADO.NET Overview</span></span>](../ado-net-overview.md)

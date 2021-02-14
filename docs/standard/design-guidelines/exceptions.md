@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 例外のデザインのガイドライン'
 title: 例外のデザインのガイドライン
 ms.date: 10/22/2008
 helpviewer_keywords:
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-ms.openlocfilehash: 28a3e40443c9f1be14243816b347da773705ff02
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.openlocfilehash: 0845f06dca0ee83d7315c3b0b4b6ae090b24a875
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642111"
 ---
-# <a name="design-guidelines-for-exceptions"></a><span data-ttu-id="6f028-102">例外のデザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="6f028-102">Design Guidelines for Exceptions</span></span>
+# <a name="design-guidelines-for-exceptions"></a><span data-ttu-id="34ab5-103">例外のデザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="34ab5-103">Design Guidelines for Exceptions</span></span>
 
-<span data-ttu-id="6f028-103">例外処理には、戻り値に基づくエラー報告よりも多くの利点があります。</span><span class="sxs-lookup"><span data-stu-id="6f028-103">Exception handling has many advantages over return-value-based error reporting.</span></span> <span data-ttu-id="6f028-104">優れたフレームワーク設計は、アプリケーション開発者が例外の利点を理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="6f028-104">Good framework design helps the application developer realize the benefits of exceptions.</span></span> <span data-ttu-id="6f028-105">このセクションでは、例外の利点について説明し、それらを効果的に使用するためのガイドラインを示します。</span><span class="sxs-lookup"><span data-stu-id="6f028-105">This section discusses the benefits of exceptions and presents guidelines for using them effectively.</span></span>  
+<span data-ttu-id="34ab5-104">例外処理には、戻り値に基づくエラー報告よりも多くの利点があります。</span><span class="sxs-lookup"><span data-stu-id="34ab5-104">Exception handling has many advantages over return-value-based error reporting.</span></span> <span data-ttu-id="34ab5-105">優れたフレームワーク設計により、アプリケーション開発者は例外の利点を実感できます。</span><span class="sxs-lookup"><span data-stu-id="34ab5-105">Good framework design helps the application developer realize the benefits of exceptions.</span></span> <span data-ttu-id="34ab5-106">このセクションでは、例外の利点について説明し、それらを効果的に使用するためのガイドラインを示します。</span><span class="sxs-lookup"><span data-stu-id="34ab5-106">This section discusses the benefits of exceptions and presents guidelines for using them effectively.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6f028-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6f028-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="34ab5-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="34ab5-107">In This Section</span></span>  
 
- [<span data-ttu-id="6f028-107">例外のスロー</span><span class="sxs-lookup"><span data-stu-id="6f028-107">Exception Throwing</span></span>](exception-throwing.md)  
- [<span data-ttu-id="6f028-108">標準例外型の使用</span><span class="sxs-lookup"><span data-stu-id="6f028-108">Using Standard Exception Types</span></span>](using-standard-exception-types.md)  
- [<span data-ttu-id="6f028-109">例外とパフォーマンス</span><span class="sxs-lookup"><span data-stu-id="6f028-109">Exceptions and Performance</span></span>](exceptions-and-performance.md)  
- <span data-ttu-id="6f028-110">*©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*</span><span class="sxs-lookup"><span data-stu-id="6f028-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ [<span data-ttu-id="34ab5-108">例外のスロー</span><span class="sxs-lookup"><span data-stu-id="34ab5-108">Exception Throwing</span></span>](exception-throwing.md)  
+ [<span data-ttu-id="34ab5-109">標準例外型の使用</span><span class="sxs-lookup"><span data-stu-id="34ab5-109">Using Standard Exception Types</span></span>](using-standard-exception-types.md)  
+ [<span data-ttu-id="34ab5-110">例外とパフォーマンス</span><span class="sxs-lookup"><span data-stu-id="34ab5-110">Exceptions and Performance</span></span>](exceptions-and-performance.md)  
+ <span data-ttu-id="34ab5-111">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="34ab5-111">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="6f028-111">*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*</span><span class="sxs-lookup"><span data-stu-id="6f028-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="34ab5-112">*2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*</span><span class="sxs-lookup"><span data-stu-id="34ab5-112">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f028-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="6f028-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34ab5-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="34ab5-113">See also</span></span>
 
-- [<span data-ttu-id="6f028-113">フレームワークデザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="6f028-113">Framework Design Guidelines</span></span>](index.md)
+- [<span data-ttu-id="34ab5-114">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="34ab5-114">Framework Design Guidelines</span></span>](index.md)

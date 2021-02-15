@@ -1,28 +1,29 @@
 ---
+description: '詳細情報: の値は <argumentname> 正の数値である必要があります'
 title: <argumentname> の値は正数でなければなりません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_NegativeNumber
 ms.assetid: 597c412c-499e-49d2-b656-af2d90c292a5
-ms.openlocfilehash: 1fd83af09718db2a822a868ce7c06cef779ab426
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7ce72f5e3353c7dd406edd686b599b2d731375c7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095747"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427909"
 ---
-# <a name="the-value-of-argumentname-must-be-a-positive-number"></a><span data-ttu-id="8c68e-102">\<argumentname> の値は正数でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="8c68e-102">The value of \<argumentname> must be a positive number</span></span>
+# <a name="the-value-of-argumentname-must-be-a-positive-number"></a><span data-ttu-id="75695-103">\<argumentname> の値は正数でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="75695-103">The value of \<argumentname> must be a positive number</span></span>
 
-<span data-ttu-id="8c68e-103"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> プロパティの値は 0 より大きい必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c68e-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property must be greater than zero.</span></span>  
+<span data-ttu-id="75695-104"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> プロパティの値は 0 より大きい必要があります。</span><span class="sxs-lookup"><span data-stu-id="75695-104">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property must be greater than zero.</span></span>  
   
- <span data-ttu-id="8c68e-104">メッセージをログ ファイルに書き込むには、まず、 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> プロパティで空きディスク領域の容量をバイト単位で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c68e-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property specifies the amount of free disk space, in bytes, necessary before messages can be written to the log file</span></span>  
+ <span data-ttu-id="75695-105">メッセージをログ ファイルに書き込むには、まず、 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> プロパティで空きディスク領域の容量をバイト単位で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="75695-105">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property specifies the amount of free disk space, in bytes, necessary before messages can be written to the log file</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8c68e-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="8c68e-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="75695-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="75695-106">To correct this error</span></span>  
   
-- <span data-ttu-id="8c68e-106"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> プロパティを正の数値に設定します。</span><span class="sxs-lookup"><span data-stu-id="8c68e-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property to a positive number.</span></span>  
+- <span data-ttu-id="75695-107"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> プロパティを正の数値に設定します。</span><span class="sxs-lookup"><span data-stu-id="75695-107">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property to a positive number.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c68e-107">こちらもご覧ください</span><span class="sxs-lookup"><span data-stu-id="8c68e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75695-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="75695-108">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>
-- [<span data-ttu-id="8c68e-108">.Log</span><span class="sxs-lookup"><span data-stu-id="8c68e-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- <span data-ttu-id="8c68e-109">[[DirectoryPath]](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)</span><span class="sxs-lookup"><span data-stu-id="8c68e-109">[My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)</span></span>
+- [<span data-ttu-id="75695-109">.Log</span><span class="sxs-lookup"><span data-stu-id="75695-109">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- <span data-ttu-id="75695-110">[[DirectoryPath]](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)</span><span class="sxs-lookup"><span data-stu-id="75695-110">[My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)</span></span>

@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「プロパティ値が無効です」を参照してください。
 title: プロパティの値が無効です
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID380
 ms.assetid: 38540ad2-e02c-49aa-a2b7-b4c82d719cf1
-ms.openlocfilehash: edf91cc62867b922a4c9fae69f19be5e38fc21c8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68a01afe4e62b88055f9b11409a922d031a0076b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090548"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454704"
 ---
-# <a name="property-value-is-not-valid"></a><span data-ttu-id="08c99-102">プロパティの値が無効です</span><span class="sxs-lookup"><span data-stu-id="08c99-102">Property value is not valid</span></span>
+# <a name="property-value-is-not-valid"></a><span data-ttu-id="ddb24-103">プロパティの値が無効です</span><span class="sxs-lookup"><span data-stu-id="ddb24-103">Property value is not valid</span></span>
 
-<span data-ttu-id="08c99-103">オブジェクトまたはコントロールのプロパティの 1 つが範囲外の値に設定されました。</span><span class="sxs-lookup"><span data-stu-id="08c99-103">One of the properties of an object or control was set to a value outside its range.</span></span>  
+<span data-ttu-id="ddb24-104">オブジェクトまたはコントロールのプロパティの 1 つが範囲外の値に設定されました。</span><span class="sxs-lookup"><span data-stu-id="ddb24-104">One of the properties of an object or control was set to a value outside its range.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="08c99-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="08c99-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ddb24-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="ddb24-105">To correct this error</span></span>  
   
-- <span data-ttu-id="08c99-105">プロパティの値を有効な設定に変更します。</span><span class="sxs-lookup"><span data-stu-id="08c99-105">Change the property value to a valid setting.</span></span>  
+- <span data-ttu-id="ddb24-106">プロパティの値を有効な設定に変更します。</span><span class="sxs-lookup"><span data-stu-id="ddb24-106">Change the property value to a valid setting.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08c99-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="08c99-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddb24-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="ddb24-107">See also</span></span>
 
-- [<span data-ttu-id="08c99-107">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="08c99-107">Error Types</span></span>](../programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="ddb24-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="ddb24-108">Error Types</span></span>](../programming-guide/language-features/error-types.md)

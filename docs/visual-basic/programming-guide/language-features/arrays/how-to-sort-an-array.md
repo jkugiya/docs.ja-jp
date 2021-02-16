@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic で配列を並べ替える'
 title: '方法: 配列を並べ替える'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3fb9af8de0fc86075fdccd64506c855c1c720660
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ea030b63dbbb5f5ea1d6160757afe2e9b58f7c21
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351852"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462764"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="2a27a-102">Visual Basic で配列を並べ替える</span><span class="sxs-lookup"><span data-stu-id="2a27a-102">How to: sort an array in Visual Basic</span></span>
+# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="dada8-103">Visual Basic で配列を並べ替える</span><span class="sxs-lookup"><span data-stu-id="dada8-103">How to: sort an array in Visual Basic</span></span>
 
-<span data-ttu-id="2a27a-103">この記事では、Visual Basic で文字列の配列を並べ替える方法の例を示します。</span><span class="sxs-lookup"><span data-stu-id="2a27a-103">This article shows an example of how to sort an array of strings in Visual Basic.</span></span>
+<span data-ttu-id="dada8-104">この記事では、Visual Basic で文字列の配列を並べ替える方法の例を示します。</span><span class="sxs-lookup"><span data-stu-id="dada8-104">This article shows an example of how to sort an array of strings in Visual Basic.</span></span>
 
-## <a name="example"></a><span data-ttu-id="2a27a-104">例</span><span class="sxs-lookup"><span data-stu-id="2a27a-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="dada8-105">例</span><span class="sxs-lookup"><span data-stu-id="dada8-105">Example</span></span>
 
-<span data-ttu-id="2a27a-105">この例では、`zooAnimals` という名前の `String` オブジェクトの配列を宣言し、値を設定して、アルファベット順に並べ替えます。</span><span class="sxs-lookup"><span data-stu-id="2a27a-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span></span>
+<span data-ttu-id="dada8-106">この例では、`zooAnimals` という名前の `String` オブジェクトの配列を宣言し、値を設定して、アルファベット順に並べ替えます。</span><span class="sxs-lookup"><span data-stu-id="dada8-106">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span></span>
   
 ```vb
 Private Sub SortAnimals()
@@ -32,18 +33,18 @@ Private Sub SortAnimals()
 End Sub
 ```
 
-## <a name="robust-programming"></a><span data-ttu-id="2a27a-106">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="2a27a-106">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="dada8-107">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="dada8-107">Robust programming</span></span>
 
-<span data-ttu-id="2a27a-107">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2a27a-107">The following conditions may cause an exception:</span></span>
+<span data-ttu-id="dada8-108">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dada8-108">The following conditions may cause an exception:</span></span>
 
-- <span data-ttu-id="2a27a-108">配列が空である (<xref:System.ArgumentNullException> クラス)。</span><span class="sxs-lookup"><span data-stu-id="2a27a-108">Array is empty (<xref:System.ArgumentNullException> class).</span></span>
-- <span data-ttu-id="2a27a-109">多次元配列である (<xref:System.RankException> クラス)。</span><span class="sxs-lookup"><span data-stu-id="2a27a-109">Array is multidimensional (<xref:System.RankException> class).</span></span>
-- <span data-ttu-id="2a27a-110">配列の 1 つ以上の要素で <xref:System.IComparable> インターフェイス (<xref:System.InvalidOperationException> クラス) が実装されていない。</span><span class="sxs-lookup"><span data-stu-id="2a27a-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span></span>
+- <span data-ttu-id="dada8-109">配列が空である (<xref:System.ArgumentNullException> クラス)。</span><span class="sxs-lookup"><span data-stu-id="dada8-109">Array is empty (<xref:System.ArgumentNullException> class).</span></span>
+- <span data-ttu-id="dada8-110">多次元配列である (<xref:System.RankException> クラス)。</span><span class="sxs-lookup"><span data-stu-id="dada8-110">Array is multidimensional (<xref:System.RankException> class).</span></span>
+- <span data-ttu-id="dada8-111">配列の 1 つ以上の要素で <xref:System.IComparable> インターフェイス (<xref:System.InvalidOperationException> クラス) が実装されていない。</span><span class="sxs-lookup"><span data-stu-id="dada8-111">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2a27a-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="2a27a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dada8-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="dada8-112">See also</span></span>
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="2a27a-112">配列</span><span class="sxs-lookup"><span data-stu-id="2a27a-112">Arrays</span></span>](index.md)
-- [<span data-ttu-id="2a27a-113">配列のトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="2a27a-113">Troubleshooting Arrays</span></span>](troubleshooting-arrays.md)
-- [<span data-ttu-id="2a27a-114">コレクション</span><span class="sxs-lookup"><span data-stu-id="2a27a-114">Collections</span></span>](../../concepts/collections.md)
-- [<span data-ttu-id="2a27a-115">For Each...Next ステートメント</span><span class="sxs-lookup"><span data-stu-id="2a27a-115">For Each...Next Statement</span></span>](../../../language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="dada8-113">配列</span><span class="sxs-lookup"><span data-stu-id="dada8-113">Arrays</span></span>](index.md)
+- [<span data-ttu-id="dada8-114">配列のトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="dada8-114">Troubleshooting Arrays</span></span>](troubleshooting-arrays.md)
+- [<span data-ttu-id="dada8-115">コレクション</span><span class="sxs-lookup"><span data-stu-id="dada8-115">Collections</span></span>](../../concepts/collections.md)
+- [<span data-ttu-id="dada8-116">For Each...Next ステートメント</span><span class="sxs-lookup"><span data-stu-id="dada8-116">For Each...Next Statement</span></span>](../../../language-reference/statements/for-each-next-statement.md)

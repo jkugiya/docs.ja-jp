@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 方法:指定された属性または名前のファイルを照会する (Visual Basic)'
 title: '方法: 指定された属性または名前のファイルをクエリする'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3eb58bf683b97c5806145395cb489f0e85c2071b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059315"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425725"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="c674b-102">方法: 指定された属性または名前のファイルを照会する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c674b-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="22770-103">方法: 指定された属性または名前のファイルを照会する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22770-103">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
 
-<span data-ttu-id="c674b-103">この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c674b-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="c674b-104">また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。</span><span class="sxs-lookup"><span data-stu-id="c674b-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+<span data-ttu-id="22770-104">この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="22770-104">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="22770-105">また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。</span><span class="sxs-lookup"><span data-stu-id="22770-105">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c674b-105">例</span><span class="sxs-lookup"><span data-stu-id="c674b-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="22770-106">例</span><span class="sxs-lookup"><span data-stu-id="22770-106">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -61,11 +62,11 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compile-the-code"></a><span data-ttu-id="c674b-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c674b-106">Compile the code</span></span>  
+## <a name="compile-the-code"></a><span data-ttu-id="22770-107">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="22770-107">Compile the code</span></span>  
 
-<span data-ttu-id="c674b-107">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c674b-107">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="22770-108">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="22770-108">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="c674b-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="c674b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22770-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="22770-109">See also</span></span>
 
-- [<span data-ttu-id="c674b-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c674b-109">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="c674b-110">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c674b-110">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="22770-110">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22770-110">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="22770-111">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22770-111">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

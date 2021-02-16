@@ -1,21 +1,22 @@
 ---
+description: '詳細情報: 方法:文字列内の文字を照会する (LINQ) (Visual Basic)'
 title: '方法: 文字列内の文字をクエリする (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bd8fabc06e88c83ae4e89079378ad67efb13c446
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345522"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425751"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="29c08-102">方法: 文字列内の文字を照会する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29c08-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="0b269-103">方法: 文字列内の文字を照会する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b269-103">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="29c08-103"><xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。</span><span class="sxs-lookup"><span data-stu-id="29c08-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="29c08-104">ただし、これは LINQ の一般的な使用方法ではありません。</span><span class="sxs-lookup"><span data-stu-id="29c08-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="29c08-105">複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。</span><span class="sxs-lookup"><span data-stu-id="29c08-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>
+<span data-ttu-id="0b269-104"><xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。</span><span class="sxs-lookup"><span data-stu-id="0b269-104">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="0b269-105">ただし、これは LINQ の一般的な使用方法ではありません。</span><span class="sxs-lookup"><span data-stu-id="0b269-105">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="0b269-106">複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。</span><span class="sxs-lookup"><span data-stu-id="0b269-106">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>
 
-## <a name="example"></a><span data-ttu-id="29c08-106">例</span><span class="sxs-lookup"><span data-stu-id="29c08-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0b269-107">例</span><span class="sxs-lookup"><span data-stu-id="0b269-107">Example</span></span>
 
-<span data-ttu-id="29c08-107">次の例では、文字列を対象にクエリを実行して、その文字列に含まれる数字の数を特定します。</span><span class="sxs-lookup"><span data-stu-id="29c08-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="29c08-108">クエリは、最初に使用された後も "再利用" されます。</span><span class="sxs-lookup"><span data-stu-id="29c08-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="29c08-109">これができるのは、クエリ自体には実際の結果が格納されないためです。</span><span class="sxs-lookup"><span data-stu-id="29c08-109">This is possible because the query itself does not store any actual results.</span></span>
+<span data-ttu-id="0b269-108">次の例では、文字列を対象にクエリを実行して、その文字列に含まれる数字の数を特定します。</span><span class="sxs-lookup"><span data-stu-id="0b269-108">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="0b269-109">クエリは、最初に使用された後も "再利用" されます。</span><span class="sxs-lookup"><span data-stu-id="0b269-109">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="0b269-110">これができるのは、クエリ自体には実際の結果が格納されないためです。</span><span class="sxs-lookup"><span data-stu-id="0b269-110">This is possible because the query itself does not store any actual results.</span></span>
 
 ```vb
 Class QueryAString
@@ -56,11 +57,11 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="29c08-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="29c08-110">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="0b269-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="0b269-111">Compile the code</span></span>
 
-<span data-ttu-id="29c08-111">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="29c08-111">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="0b269-112">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="0b269-112">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="29c08-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="29c08-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b269-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b269-113">See also</span></span>
 
-- [<span data-ttu-id="29c08-113">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29c08-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
-- [<span data-ttu-id="29c08-114">LINQ クエリと正規表現を組み合わせる方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29c08-114">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>](how-to-combine-linq-queries-with-regular-expressions.md)
+- [<span data-ttu-id="0b269-114">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b269-114">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="0b269-115">LINQ クエリと正規表現を組み合わせる方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b269-115">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>](how-to-combine-linq-queries-with-regular-expressions.md)

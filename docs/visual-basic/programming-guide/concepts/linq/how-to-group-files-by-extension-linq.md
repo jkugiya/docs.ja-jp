@@ -1,21 +1,22 @@
 ---
+description: '詳細情報: 方法:拡張機能でファイルをグループ化する (LINQ) (Visual Basic)'
 title: '方法: 拡張子別にファイルをグループ化する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 3b1b02283dc65148b8a44952ce39659cc92b483a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6736b4ff99d88f8e5b2b40aeb670d88589db02b1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077307"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472996"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a><span data-ttu-id="af883-102">方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af883-102">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a><span data-ttu-id="8e5f6-103">方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e5f6-103">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="af883-103">この例では、LINQ を使用して、ファイルまたはフォルダーの一覧に対して、高度なグループ化および並べ替えを実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="af883-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="af883-104">また、<xref:System.Linq.Enumerable.Skip%2A> メソッドと <xref:System.Linq.Enumerable.Take%2A> メソッドを使用して、出力をページごとにコンソール ウィンドウに表示する方法も示します。</span><span class="sxs-lookup"><span data-stu-id="af883-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
+<span data-ttu-id="8e5f6-104">この例では、LINQ を使用して、ファイルまたはフォルダーの一覧に対して、高度なグループ化および並べ替えを実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-104">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="8e5f6-105">また、<xref:System.Linq.Enumerable.Skip%2A> メソッドと <xref:System.Linq.Enumerable.Take%2A> メソッドを使用して、出力をページごとにコンソール ウィンドウに表示する方法も示します。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-105">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af883-105">例</span><span class="sxs-lookup"><span data-stu-id="af883-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8e5f6-106">例</span><span class="sxs-lookup"><span data-stu-id="8e5f6-106">Example</span></span>  
 
- <span data-ttu-id="af883-106">次のクエリは、指定されたディレクトリ ツリーの内容を、ファイル名の拡張子別にグループ化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="af883-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
+ <span data-ttu-id="8e5f6-107">次のクエリは、指定されたディレクトリ ツリーの内容を、ファイル名の拡張子別にグループ化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-107">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```vb  
 Module GroupByExtension  
@@ -93,13 +94,13 @@ Module GroupByExtension
 End Module  
 ```  
   
- <span data-ttu-id="af883-107">このプログラムの出力は、ローカル ファイル システムの詳細と `startFolder` の設定内容に応じて長くなる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="af883-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="af883-108">すべての結果を確認できるように、次の例では、結果をページごとに出力する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="af883-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="af883-109">同じ手法を Windows アプリケーションや Web アプリケーションに適用できます。</span><span class="sxs-lookup"><span data-stu-id="af883-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="af883-110">このコードでは、グループ内の項目をページごとに処理するため、`For Each` ループを入れ子にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="af883-110">Notice that because the code pages the items in a group, a nested `For Each` loop is required.</span></span> <span data-ttu-id="af883-111">また、一覧内での現在位置を計算し、ユーザーがページングを停止してプログラムを終了できるようにするロジックも追加されています。</span><span class="sxs-lookup"><span data-stu-id="af883-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="af883-112">この場合、ページング クエリは、元のクエリからキャッシュされた結果に対して実行されます。</span><span class="sxs-lookup"><span data-stu-id="af883-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="af883-113">LINQ to SQL などの他のコンテキストでは、このようなキャッシュは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="af883-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
+ <span data-ttu-id="8e5f6-108">このプログラムの出力は、ローカル ファイル システムの詳細と `startFolder` の設定内容に応じて長くなる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-108">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="8e5f6-109">すべての結果を確認できるように、次の例では、結果をページごとに出力する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-109">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="8e5f6-110">同じ手法を Windows アプリケーションや Web アプリケーションに適用できます。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-110">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="8e5f6-111">このコードでは、グループ内の項目をページごとに処理するため、`For Each` ループを入れ子にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-111">Notice that because the code pages the items in a group, a nested `For Each` loop is required.</span></span> <span data-ttu-id="8e5f6-112">また、一覧内での現在位置を計算し、ユーザーがページングを停止してプログラムを終了できるようにするロジックも追加されています。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-112">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="8e5f6-113">この場合、ページング クエリは、元のクエリからキャッシュされた結果に対して実行されます。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-113">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="8e5f6-114">LINQ to SQL などの他のコンテキストでは、このようなキャッシュは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-114">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compile-the-code"></a><span data-ttu-id="af883-114">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="af883-114">Compile the code</span></span>  
+## <a name="compile-the-code"></a><span data-ttu-id="8e5f6-115">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="8e5f6-115">Compile the code</span></span>  
 
-<span data-ttu-id="af883-115">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="af883-115">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="8e5f6-116">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="8e5f6-116">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="af883-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="af883-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e5f6-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="8e5f6-117">See also</span></span>
 
-- [<span data-ttu-id="af883-117">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af883-117">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="af883-118">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af883-118">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="8e5f6-118">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e5f6-118">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="8e5f6-119">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e5f6-119">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

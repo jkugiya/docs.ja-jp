@@ -3,37 +3,37 @@ title: 単体テストにコードカバレッジを使用する
 description: .NET の単体テストでコードカバレッジ機能を使用する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 07/01/2020
-ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/10/2021
+ms.openlocfilehash: 492e036593dcdc81f8256b05183c8f0a9e13b414
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189656"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432661"
 ---
-# <a name="use-code-coverage-for-unit-testing"></a><span data-ttu-id="ea83a-103">単体テストにコードカバレッジを使用する</span><span class="sxs-lookup"><span data-stu-id="ea83a-103">Use code coverage for unit testing</span></span>
+# <a name="use-code-coverage-for-unit-testing"></a><span data-ttu-id="c748e-103">単体テストにコードカバレッジを使用する</span><span class="sxs-lookup"><span data-stu-id="c748e-103">Use code coverage for unit testing</span></span>
 
-<span data-ttu-id="ea83a-104">単体テストは、機能を保証し、リファクタリングの際の検証手段となります。</span><span class="sxs-lookup"><span data-stu-id="ea83a-104">Unit tests help to ensure functionality, and provide a means of verification for refactoring efforts.</span></span> <span data-ttu-id="ea83a-105">コードカバレッジとは、単体テストで実行する、行、分岐、またはメソッドのいずれかのコード量の尺度です。</span><span class="sxs-lookup"><span data-stu-id="ea83a-105">Code coverage is a measurement of the amount of code that is run by unit tests - either lines, branches, or methods.</span></span> <span data-ttu-id="ea83a-106">たとえば、条件分岐が (_分岐 a_ と _分岐 b_ の) 2 つしかない単純なアプリケーションのコードで、条件付き _分岐 a_ を単体テストで検証する場合、分岐のコードカバレッジは 50% と報告されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-106">As an example, if you have a simple application with only two conditional branches of code (_branch a_, and _branch b_), a unit test that verifies conditional _branch a_ will report branch code coverage of 50%.</span></span>
+<span data-ttu-id="c748e-104">単体テストは、機能を保証し、リファクタリングの際の検証手段となります。</span><span class="sxs-lookup"><span data-stu-id="c748e-104">Unit tests help to ensure functionality, and provide a means of verification for refactoring efforts.</span></span> <span data-ttu-id="c748e-105">コードカバレッジとは、単体テストで実行する、行、分岐、またはメソッドのいずれかのコード量の尺度です。</span><span class="sxs-lookup"><span data-stu-id="c748e-105">Code coverage is a measurement of the amount of code that is run by unit tests - either lines, branches, or methods.</span></span> <span data-ttu-id="c748e-106">たとえば、条件分岐が (_分岐 a_ と _分岐 b_ の) 2 つしかない単純なアプリケーションのコードで、条件付き _分岐 a_ を単体テストで検証する場合、分岐のコードカバレッジは 50% と報告されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-106">As an example, if you have a simple application with only two conditional branches of code (_branch a_, and _branch b_), a unit test that verifies conditional _branch a_ will report branch code coverage of 50%.</span></span>
 
-<span data-ttu-id="ea83a-107">この記事では、Coverlet での単体テストでのコードカバレッジの用途と、ReportGenerator でのレポートの生成について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-107">This article discusses the usage of code coverage for unit testing with Coverlet and report generation using ReportGenerator.</span></span> <span data-ttu-id="ea83a-108">この記事では、テスト フレームワークとして C# と xUnit を使用していますが、MSTest と NUnit のいずれも使用することが可能です。</span><span class="sxs-lookup"><span data-stu-id="ea83a-108">While this article focuses on C# and xUnit as the test framework, both MSTest and NUnit would also work.</span></span> <span data-ttu-id="ea83a-109">Coverlet とは、C# 用のクロスプラットフォームのコードカバレッジのフレームワークである、[GitHub 上のオープン ソース プロジェクト](https://github.com/coverlet-coverage/coverlet)です。</span><span class="sxs-lookup"><span data-stu-id="ea83a-109">Coverlet is an [open source project on GitHub](https://github.com/coverlet-coverage/coverlet) that provides a cross platform code coverage framework for C#.</span></span> <span data-ttu-id="ea83a-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet) は .NET Foundation に含まれています。</span><span class="sxs-lookup"><span data-stu-id="ea83a-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet) is part of the .NET foundation.</span></span> <span data-ttu-id="ea83a-111">Coverlet は、レポートの生成に使用する Cobertura のカバレッジのテストの実行データを収集します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-111">Coverlet collects Cobertura coverage test run data, which is used for report generation.</span></span>
+<span data-ttu-id="c748e-107">この記事では、Coverlet での単体テストでのコードカバレッジの用途と、ReportGenerator でのレポートの生成について説明します。</span><span class="sxs-lookup"><span data-stu-id="c748e-107">This article discusses the usage of code coverage for unit testing with Coverlet and report generation using ReportGenerator.</span></span> <span data-ttu-id="c748e-108">この記事では、テスト フレームワークとして C# と xUnit を使用していますが、MSTest と NUnit のいずれも使用することが可能です。</span><span class="sxs-lookup"><span data-stu-id="c748e-108">While this article focuses on C# and xUnit as the test framework, both MSTest and NUnit would also work.</span></span> <span data-ttu-id="c748e-109">Coverlet とは、C# 用のクロスプラットフォームのコードカバレッジのフレームワークである、[GitHub 上のオープン ソース プロジェクト](https://github.com/coverlet-coverage/coverlet)です。</span><span class="sxs-lookup"><span data-stu-id="c748e-109">Coverlet is an [open source project on GitHub](https://github.com/coverlet-coverage/coverlet) that provides a cross platform code coverage framework for C#.</span></span> <span data-ttu-id="c748e-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet) は .NET Foundation に含まれています。</span><span class="sxs-lookup"><span data-stu-id="c748e-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet) is part of the .NET foundation.</span></span> <span data-ttu-id="c748e-111">Coverlet は、レポートの生成に使用する Cobertura のカバレッジのテストの実行データを収集します。</span><span class="sxs-lookup"><span data-stu-id="c748e-111">Coverlet collects Cobertura coverage test run data, which is used for report generation.</span></span>
 
-<span data-ttu-id="ea83a-112">この記事では、Coverlet のテストの実行から収集したコードカバレッジ情報を使用して、レポートを生成する方法についても詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-112">Additionally, this article details how to use the code coverage information collected from a Coverlet test run to generate a report.</span></span> <span data-ttu-id="ea83a-113">レポートは、別の [GitHub 上のオープンソース プロジェクトである ReportGenerator](https://github.com/danielpalme/ReportGenerator) を使用して生成できます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-113">The report generation is possible using another [open source project on GitHub - ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="ea83a-114">ReportGenerator では、Cobertura などから生成されたカバレッジレポートを、人間が判読できるさまざまな形式のレポートに変換します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-114">ReportGenerator converts coverage reports generated by Cobertura among many others, into human readable reports in various formats.</span></span>
+<span data-ttu-id="c748e-112">この記事では、Coverlet のテストの実行から収集したコードカバレッジ情報を使用して、レポートを生成する方法についても詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="c748e-112">Additionally, this article details how to use the code coverage information collected from a Coverlet test run to generate a report.</span></span> <span data-ttu-id="c748e-113">レポートは、別の [GitHub 上のオープンソース プロジェクトである ReportGenerator](https://github.com/danielpalme/ReportGenerator) を使用して生成できます。</span><span class="sxs-lookup"><span data-stu-id="c748e-113">The report generation is possible using another [open source project on GitHub - ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="c748e-114">ReportGenerator では、Cobertura などから生成されたカバレッジレポートを、人間が判読できるさまざまな形式のレポートに変換します。</span><span class="sxs-lookup"><span data-stu-id="c748e-114">ReportGenerator converts coverage reports generated by Cobertura among many others, into human readable reports in various formats.</span></span>
 
-<span data-ttu-id="ea83a-115">この記事は、サンプル ブラウザーで使用できる、[サンプル ソース コード プロジェクト](/samples/dotnet/samples/unit-testing-code-coverage-cs)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="ea83a-115">This article is based on the [sample source code project](/samples/dotnet/samples/unit-testing-code-coverage-cs), available on samples browser.</span></span>
+<span data-ttu-id="c748e-115">この記事は、サンプル ブラウザーで使用できる、[サンプル ソース コード プロジェクト](/samples/dotnet/samples/unit-testing-code-coverage-cs)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="c748e-115">This article is based on the [sample source code project](/samples/dotnet/samples/unit-testing-code-coverage-cs), available on samples browser.</span></span>
 
-## <a name="system-under-test"></a><span data-ttu-id="ea83a-116">テスト対象のシステム</span><span class="sxs-lookup"><span data-stu-id="ea83a-116">System under test</span></span>
+## <a name="system-under-test"></a><span data-ttu-id="c748e-116">テスト対象のシステム</span><span class="sxs-lookup"><span data-stu-id="c748e-116">System under test</span></span>
 
-<span data-ttu-id="ea83a-117">"テスト対象のシステム" とは、単体テストを記述している対象のコードを指します。これは、オブジェクト、サービス、またはその他のテスト可能な機能を公開しているものです。</span><span class="sxs-lookup"><span data-stu-id="ea83a-117">The "system under test" refers to the code that you're writing unit tests against, this could be an object, service, or anything else that exposes testable functionality.</span></span> <span data-ttu-id="ea83a-118">この記事では、テスト対象のシステムとなるクラス ライブラリと、それに対応する 2 つの単体テスト プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-118">For the purpose of this article, you'll create a class library that will be the system under test, and two corresponding unit test projects.</span></span>
+<span data-ttu-id="c748e-117">"テスト対象のシステム" とは、単体テストを記述している対象のコードを指します。これは、オブジェクト、サービス、またはその他のテスト可能な機能を公開しているものです。</span><span class="sxs-lookup"><span data-stu-id="c748e-117">The "system under test" refers to the code that you're writing unit tests against, this could be an object, service, or anything else that exposes testable functionality.</span></span> <span data-ttu-id="c748e-118">この記事では、テスト対象のシステムとなるクラス ライブラリと、それに対応する 2 つの単体テスト プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c748e-118">For the purpose of this article, you'll create a class library that will be the system under test, and two corresponding unit test projects.</span></span>
 
-### <a name="create-a-class-library"></a><span data-ttu-id="ea83a-119">クラス ライブラリを作成する</span><span class="sxs-lookup"><span data-stu-id="ea83a-119">Create a class library</span></span>
+### <a name="create-a-class-library"></a><span data-ttu-id="c748e-119">クラス ライブラリを作成する</span><span class="sxs-lookup"><span data-stu-id="c748e-119">Create a class library</span></span>
 
-<span data-ttu-id="ea83a-120">コマンド プロンプトで、次のように [`dotnet new classlib`](../tools/dotnet-new.md#classlib) コマンドを使用して、`UnitTestingCodeCoverage` という名前の新しいディレクトリに、新しい .NET Standard クラス ライブラリを作成します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-120">From a command prompt in a new directory named `UnitTestingCodeCoverage`, create a new .NET standard class library using the [`dotnet new classlib`](../tools/dotnet-new.md#classlib) command:</span></span>
+<span data-ttu-id="c748e-120">コマンド プロンプトで、次のように [`dotnet new classlib`](../tools/dotnet-new.md#classlib) コマンドを使用して、`UnitTestingCodeCoverage` という名前の新しいディレクトリに、新しい .NET Standard クラス ライブラリを作成します。</span><span class="sxs-lookup"><span data-stu-id="c748e-120">From a command prompt in a new directory named `UnitTestingCodeCoverage`, create a new .NET standard class library using the [`dotnet new classlib`](../tools/dotnet-new.md#classlib) command:</span></span>
 
 ```dotnetcli
 dotnet new classlib -n Numbers
 ```
 
-<span data-ttu-id="ea83a-121">以下のスニペットでは、数値が素数であるかどうかを確認する単純な `PrimeService` クラスを定義しています。</span><span class="sxs-lookup"><span data-stu-id="ea83a-121">The snippet below defines a simple `PrimeService` class that provides functionality to check if a number is prime.</span></span> <span data-ttu-id="ea83a-122">以下のスニペットをコピーし、*Numbers* ディレクトリに自動作成された *Class1.cs* の内容と置き換えます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-122">Copy the snippet below and replace the contents of the *Class1.cs* file that was automatically created in the *Numbers* directory.</span></span> <span data-ttu-id="ea83a-123">*Class1.cs* ファイルを *PrimeService.cs* に名前変更します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-123">Rename the *Class1.cs* file to *PrimeService.cs*.</span></span>
+<span data-ttu-id="c748e-121">以下のスニペットでは、数値が素数であるかどうかを確認する単純な `PrimeService` クラスを定義しています。</span><span class="sxs-lookup"><span data-stu-id="c748e-121">The snippet below defines a simple `PrimeService` class that provides functionality to check if a number is prime.</span></span> <span data-ttu-id="c748e-122">以下のスニペットをコピーし、*Numbers* ディレクトリに自動作成された *Class1.cs* の内容と置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c748e-122">Copy the snippet below and replace the contents of the *Class1.cs* file that was automatically created in the *Numbers* directory.</span></span> <span data-ttu-id="c748e-123">*Class1.cs* ファイルを *PrimeService.cs* に名前変更します。</span><span class="sxs-lookup"><span data-stu-id="c748e-123">Rename the *Class1.cs* file to *PrimeService.cs*.</span></span>
 
 ```csharp
 namespace System.Numbers
@@ -61,11 +61,11 @@ namespace System.Numbers
 ```
 
 > [!TIP]
-> <span data-ttu-id="ea83a-124">`Numbers` クラス ライブラリが意図的に `System` 名前空間に追加されていることに着目してください。</span><span class="sxs-lookup"><span data-stu-id="ea83a-124">It is worth mentioning the that `Numbers` class library was intentionally added to the `System` namespace.</span></span> <span data-ttu-id="ea83a-125">これにより、`using System;` 名前空間を宣言せずに <xref:System.Math?displayProperty=fullName> にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-125">This allows for <xref:System.Math?displayProperty=fullName> to be accessible without a `using System;` namespace declaration.</span></span> <span data-ttu-id="ea83a-126">詳細については、「[namespace (C# リファレンス)](../../csharp/language-reference/keywords/namespace.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ea83a-126">For more information, see [namespace (C# Reference)](../../csharp/language-reference/keywords/namespace.md).</span></span>
+> <span data-ttu-id="c748e-124">`Numbers` クラス ライブラリが意図的に `System` 名前空間に追加されていることに着目してください。</span><span class="sxs-lookup"><span data-stu-id="c748e-124">It is worth mentioning the that `Numbers` class library was intentionally added to the `System` namespace.</span></span> <span data-ttu-id="c748e-125">これにより、`using System;` 名前空間を宣言せずに <xref:System.Math?displayProperty=fullName> にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="c748e-125">This allows for <xref:System.Math?displayProperty=fullName> to be accessible without a `using System;` namespace declaration.</span></span> <span data-ttu-id="c748e-126">詳細については、「[namespace (C# リファレンス)](../../csharp/language-reference/keywords/namespace.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c748e-126">For more information, see [namespace (C# Reference)](../../csharp/language-reference/keywords/namespace.md).</span></span>
 
-### <a name="create-test-projects"></a><span data-ttu-id="ea83a-127">テスト プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="ea83a-127">Create test projects</span></span>
+### <a name="create-test-projects"></a><span data-ttu-id="c748e-127">テスト プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="c748e-127">Create test projects</span></span>
 
-<span data-ttu-id="ea83a-128">次のように、[`dotnet new xunit`](../tools/dotnet-new.md#test) コマンドを使用して、同じコマンド プロンプトから 2 つの新しい **xUnit テスト プロジェクト (.NET Core)** テンプレートを作成します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-128">Create two new **xUnit Test Project (.NET Core)** templates from the same command prompt using the [`dotnet new xunit`](../tools/dotnet-new.md#test) command:</span></span>
+<span data-ttu-id="c748e-128">次のように、[`dotnet new xunit`](../tools/dotnet-new.md#test) コマンドを使用して、同じコマンド プロンプトから 2 つの新しい **xUnit テスト プロジェクト (.NET Core)** テンプレートを作成します。</span><span class="sxs-lookup"><span data-stu-id="c748e-128">Create two new **xUnit Test Project (.NET Core)** templates from the same command prompt using the [`dotnet new xunit`](../tools/dotnet-new.md#test) command:</span></span>
 
 ```dotnetcli
 dotnet new xunit -n XUnit.Coverlet.Collector
@@ -75,7 +75,7 @@ dotnet new xunit -n XUnit.Coverlet.Collector
 dotnet new xunit -n XUnit.Coverlet.MSBuild
 ```
 
-<span data-ttu-id="ea83a-129">新しく作成した 2 つの xUnit テスト プロジェクトには、*Numbers* クラス ライブラリのプロジェクト参照が追加される必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea83a-129">Both of the newly created xUnit test projects need to add a project reference of the *Numbers* class library.</span></span> <span data-ttu-id="ea83a-130">これにより、テストのためにテスト プロジェクトが *PrimeService* にアクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="ea83a-130">This is so that the test projects have access to the *PrimeService* for testing.</span></span> <span data-ttu-id="ea83a-131">コマンド プロンプトで、次のように [`dotnet add`](../tools/dotnet-add-reference.md) コマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-131">From the command prompt, use the [`dotnet add`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="c748e-129">新しく作成した 2 つの xUnit テスト プロジェクトには、*Numbers* クラス ライブラリのプロジェクト参照が追加される必要があります。</span><span class="sxs-lookup"><span data-stu-id="c748e-129">Both of the newly created xUnit test projects need to add a project reference of the *Numbers* class library.</span></span> <span data-ttu-id="c748e-130">これにより、テストのためにテスト プロジェクトが *PrimeService* にアクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="c748e-130">This is so that the test projects have access to the *PrimeService* for testing.</span></span> <span data-ttu-id="c748e-131">コマンド プロンプトで、次のように [`dotnet add`](../tools/dotnet-add-reference.md) コマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="c748e-131">From the command prompt, use the [`dotnet add`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```dotnetcli
 dotnet add XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj reference Numbers\Numbers.csproj
@@ -85,15 +85,15 @@ dotnet add XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj reference Nu
 dotnet add XUnit.Coverlet.MSBuild\XUnit.Coverlet.MSBuild.csproj reference Numbers\Numbers.csproj
 ```
 
-<span data-ttu-id="ea83a-132">[coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet パッケージに依存して、*MSBuild* プロジェクトに適切な名前が付けられます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-132">The *MSBuild* project is named appropriately, as it will depend on the [coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet package.</span></span> <span data-ttu-id="ea83a-133">次のように [`dotnet add package`](../tools/dotnet-add-package.md) コマンドを実行し、このパッケージの依存関係を追加します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-133">Add this package dependency by running the [`dotnet add package`](../tools/dotnet-add-package.md) command:</span></span>
+<span data-ttu-id="c748e-132">[coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet パッケージに依存して、*MSBuild* プロジェクトに適切な名前が付けられます。</span><span class="sxs-lookup"><span data-stu-id="c748e-132">The *MSBuild* project is named appropriately, as it will depend on the [coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet package.</span></span> <span data-ttu-id="c748e-133">次のように [`dotnet add package`](../tools/dotnet-add-package.md) コマンドを実行し、このパッケージの依存関係を追加します。</span><span class="sxs-lookup"><span data-stu-id="c748e-133">Add this package dependency by running the [`dotnet add package`](../tools/dotnet-add-package.md) command:</span></span>
 
 ```dotnetcli
 cd XUnit.Coverlet.MSBuild && dotnet add package coverlet.msbuild && cd ..
 ```
 
-<span data-ttu-id="ea83a-134">前のコマンドでは、ディレクトリを効果的に *MSBuild* テスト プロジェクトに変更し、NuGet パッケージを追加しました。</span><span class="sxs-lookup"><span data-stu-id="ea83a-134">The previous command changed directories effectively scoping to the *MSBuild* test project, then added the NuGet package.</span></span> <span data-ttu-id="ea83a-135">これが完了すると、1 レベル上がり、ディレクトリが変更されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-135">When that was done, it then changed directories, stepping up one level.</span></span>
+<span data-ttu-id="c748e-134">前のコマンドでは、ディレクトリを効果的に *MSBuild* テスト プロジェクトに変更し、NuGet パッケージを追加しました。</span><span class="sxs-lookup"><span data-stu-id="c748e-134">The previous command changed directories effectively scoping to the *MSBuild* test project, then added the NuGet package.</span></span> <span data-ttu-id="c748e-135">これが完了すると、1 レベル上がり、ディレクトリが変更されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-135">When that was done, it then changed directories, stepping up one level.</span></span>
 
-<span data-ttu-id="ea83a-136">両方の *UnitTest1.cs* ファイルを開き、その内容を次のスニペットと置き換えます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-136">Open both of the *UnitTest1.cs* files, and replace their contents with the following snippet.</span></span> <span data-ttu-id="ea83a-137">*UnitTest1.cs* ファイルを *PrimeServiceTests.cs* に名前変更します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-137">Rename the *UnitTest1.cs* files to *PrimeServiceTests.cs*.</span></span>
+<span data-ttu-id="c748e-136">両方の *UnitTest1.cs* ファイルを開き、その内容を次のスニペットと置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c748e-136">Open both of the *UnitTest1.cs* files, and replace their contents with the following snippet.</span></span> <span data-ttu-id="c748e-137">*UnitTest1.cs* ファイルを *PrimeServiceTests.cs* に名前変更します。</span><span class="sxs-lookup"><span data-stu-id="c748e-137">Rename the *UnitTest1.cs* files to *PrimeServiceTests.cs*.</span></span>
 
 ```csharp
 using System.Numbers;
@@ -131,23 +131,23 @@ namespace XUnit.Coverlet
 }
 ```
 
-### <a name="create-a-solution"></a><span data-ttu-id="ea83a-138">ソリューションを作成する</span><span class="sxs-lookup"><span data-stu-id="ea83a-138">Create a solution</span></span>
+### <a name="create-a-solution"></a><span data-ttu-id="c748e-138">ソリューションを作成する</span><span class="sxs-lookup"><span data-stu-id="c748e-138">Create a solution</span></span>
 
-<span data-ttu-id="ea83a-139">コマンド プロンプトから、クラス ライブラリと 2 つのテスト プロジェクトをカプセル化する新しいソリューションを作成します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-139">From the command prompt, create a new solution to encapsulate the class library and the two test projects.</span></span> <span data-ttu-id="ea83a-140">[`dotnet sln`](../tools/dotnet-sln.md) コマンドの使用する場合、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="ea83a-140">Using the [`dotnet sln`](../tools/dotnet-sln.md) command:</span></span>
+<span data-ttu-id="c748e-139">コマンド プロンプトから、クラス ライブラリと 2 つのテスト プロジェクトをカプセル化する新しいソリューションを作成します。</span><span class="sxs-lookup"><span data-stu-id="c748e-139">From the command prompt, create a new solution to encapsulate the class library and the two test projects.</span></span> <span data-ttu-id="c748e-140">[`dotnet sln`](../tools/dotnet-sln.md) コマンドの使用する場合、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="c748e-140">Using the [`dotnet sln`](../tools/dotnet-sln.md) command:</span></span>
 
 ```dotnetcli
 dotnet new sln -n XUnit.Coverage
 ```
 
-<span data-ttu-id="ea83a-141">これにより、*UnitTestingCodeCoverage* ディレクトリに `XUnit.Coverage` という新しいソリューション ファイル名が作成されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-141">This will create a new solution file name `XUnit.Coverage` in the *UnitTestingCodeCoverage* directory.</span></span> <span data-ttu-id="ea83a-142">ソリューションのルートにプロジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-142">Add the projects to the root of the solution.</span></span>
+<span data-ttu-id="c748e-141">これにより、*UnitTestingCodeCoverage* ディレクトリに `XUnit.Coverage` という新しいソリューション ファイル名が作成されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-141">This will create a new solution file name `XUnit.Coverage` in the *UnitTestingCodeCoverage* directory.</span></span> <span data-ttu-id="c748e-142">ソリューションのルートにプロジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="c748e-142">Add the projects to the root of the solution.</span></span>
 
-## <a name="linux"></a>[<span data-ttu-id="ea83a-143">Linux</span><span class="sxs-lookup"><span data-stu-id="ea83a-143">Linux</span></span>](#tab/linux)
+## <a name="linux"></a>[<span data-ttu-id="c748e-143">Linux</span><span class="sxs-lookup"><span data-stu-id="c748e-143">Linux</span></span>](#tab/linux)
 
 ```dotnetcli
 dotnet sln XUnit.Coverage.sln add **/*.csproj --in-root
 ```
 
-## <a name="windows"></a>[<span data-ttu-id="ea83a-144">Windows</span><span class="sxs-lookup"><span data-stu-id="ea83a-144">Windows</span></span>](#tab/windows)
+## <a name="windows"></a>[<span data-ttu-id="c748e-144">Windows</span><span class="sxs-lookup"><span data-stu-id="c748e-144">Windows</span></span>](#tab/windows)
 
 ```dotnetcli
 dotnet sln XUnit.Coverage.sln add (ls **/*.csproj) --in-root
@@ -155,38 +155,38 @@ dotnet sln XUnit.Coverage.sln add (ls **/*.csproj) --in-root
 
 ---
 
-<span data-ttu-id="ea83a-145">次のように [`dotnet build`](../tools/dotnet-build.md) コマンドを使用してソリューションを作成します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-145">Build the solution using the [`dotnet build`](../tools/dotnet-build.md) command:</span></span>
+<span data-ttu-id="c748e-145">次のように [`dotnet build`](../tools/dotnet-build.md) コマンドを使用してソリューションを作成します。</span><span class="sxs-lookup"><span data-stu-id="c748e-145">Build the solution using the [`dotnet build`](../tools/dotnet-build.md) command:</span></span>
 
 ```dotnetcli
 dotnet build
 ```
 
-<span data-ttu-id="ea83a-146">ビルドが成功した場合は、3 つのプロジェクトが作成され、プロジェクトとパッケージが正しく参照され、ソース コードが正しく更新されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-146">If the build is successful, you've created the three projects, appropriately referenced projects and packages, and updated the source code correctly.</span></span> <span data-ttu-id="ea83a-147">お疲れさまでした。</span><span class="sxs-lookup"><span data-stu-id="ea83a-147">Well done!</span></span>
+<span data-ttu-id="c748e-146">ビルドが成功した場合は、3 つのプロジェクトが作成され、プロジェクトとパッケージが正しく参照され、ソース コードが正しく更新されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-146">If the build is successful, you've created the three projects, appropriately referenced projects and packages, and updated the source code correctly.</span></span> <span data-ttu-id="c748e-147">お疲れさまでした。</span><span class="sxs-lookup"><span data-stu-id="c748e-147">Well done!</span></span>
 
-## <a name="tooling"></a><span data-ttu-id="ea83a-148">ツール</span><span class="sxs-lookup"><span data-stu-id="ea83a-148">Tooling</span></span>
+## <a name="tooling"></a><span data-ttu-id="c748e-148">ツール</span><span class="sxs-lookup"><span data-stu-id="c748e-148">Tooling</span></span>
 
-<span data-ttu-id="ea83a-149">コード カバレッジには、次の 2 種類のツールがあります。</span><span class="sxs-lookup"><span data-stu-id="ea83a-149">There are two types of code coverage tools:</span></span>
+<span data-ttu-id="c748e-149">コード カバレッジには、次の 2 種類のツールがあります。</span><span class="sxs-lookup"><span data-stu-id="c748e-149">There are two types of code coverage tools:</span></span>
 
-- <span data-ttu-id="ea83a-150">**DataCollectors:** DataCollector は、テストの実行を監視し、テストの実行に関する情報を収集します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-150">**DataCollectors:** DataCollectors monitor test execution and collect information about test runs.</span></span> <span data-ttu-id="ea83a-151">これらでは、XML や JSON などのさまざまな出力形式で、収集された情報を報告します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-151">They report the collected information in various output formats, such as XML and JSON.</span></span> <span data-ttu-id="ea83a-152">詳細については、[初めての DataCollector の使用](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ea83a-152">For more information, see [your first DataCollector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md).</span></span>
-- <span data-ttu-id="ea83a-153">**レポート ジェネレーター:** テストの実行から収集したデータを使用して、多くの場合にスタイル付きの HTML でレポートを生成します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-153">**Report generators:** Use data collected from test runs to generate reports, often as styled HTML.</span></span>
+- <span data-ttu-id="c748e-150">**DataCollectors:** DataCollector は、テストの実行を監視し、テストの実行に関する情報を収集します。</span><span class="sxs-lookup"><span data-stu-id="c748e-150">**DataCollectors:** DataCollectors monitor test execution and collect information about test runs.</span></span> <span data-ttu-id="c748e-151">これらでは、XML や JSON などのさまざまな出力形式で、収集された情報を報告します。</span><span class="sxs-lookup"><span data-stu-id="c748e-151">They report the collected information in various output formats, such as XML and JSON.</span></span> <span data-ttu-id="c748e-152">詳細については、[初めての DataCollector の使用](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c748e-152">For more information, see [your first DataCollector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md).</span></span>
+- <span data-ttu-id="c748e-153">**レポート ジェネレーター:** テストの実行から収集したデータを使用して、多くの場合にスタイル付きの HTML でレポートを生成します。</span><span class="sxs-lookup"><span data-stu-id="c748e-153">**Report generators:** Use data collected from test runs to generate reports, often as styled HTML.</span></span>
 
-<span data-ttu-id="ea83a-154">このセクションでは、データ コレクター ツールに重点を置いて説明します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-154">In this section, the focus is on data collector tools.</span></span> <span data-ttu-id="ea83a-155">コードカバレッジに Coverlet を使用する場合、既存の単体テスト プロジェクトにパッケージに対する正しい依存関係が存在している必要があります。または [.NET グローバル ツール](../tools/global-tools.md)と、それに対応する [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet パッケージに依存している必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea83a-155">To use Coverlet for code coverage, an existing unit test project must have the appropriate package dependencies, or alternatively rely on [.NET global tooling](../tools/global-tools.md) and the corresponding [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet package.</span></span>
+<span data-ttu-id="c748e-154">このセクションでは、データ コレクター ツールに重点を置いて説明します。</span><span class="sxs-lookup"><span data-stu-id="c748e-154">In this section, the focus is on data collector tools.</span></span> <span data-ttu-id="c748e-155">コードカバレッジに Coverlet を使用する場合、既存の単体テスト プロジェクトにパッケージに対する正しい依存関係が存在している必要があります。または [.NET グローバル ツール](../tools/global-tools.md)と、それに対応する [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet パッケージに依存している必要があります。</span><span class="sxs-lookup"><span data-stu-id="c748e-155">To use Coverlet for code coverage, an existing unit test project must have the appropriate package dependencies, or alternatively rely on [.NET global tooling](../tools/global-tools.md) and the corresponding [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet package.</span></span>
 
-## <a name="integrate-with-net-test"></a><span data-ttu-id="ea83a-156">.NET のテストと統合する</span><span class="sxs-lookup"><span data-stu-id="ea83a-156">Integrate with .NET test</span></span>
+## <a name="integrate-with-net-test"></a><span data-ttu-id="c748e-156">.NET のテストと統合する</span><span class="sxs-lookup"><span data-stu-id="c748e-156">Integrate with .NET test</span></span>
 
-<span data-ttu-id="ea83a-157">XUnit テスト プロジェクト テンプレートは、既定で [coverlet.collector](https://www.nuget.org/packages/coverlet.collector) と統合されています。</span><span class="sxs-lookup"><span data-stu-id="ea83a-157">The xUnit test project template already integrates with [coverlet.collector](https://www.nuget.org/packages/coverlet.collector) by default.</span></span>
-<span data-ttu-id="ea83a-158">コマンド プロンプトから、ディレクトリを *XUnit.Coverlet.Collector* プロジェクトに変更し、次のように [`dotnet test`](../tools/dotnet-test.md) コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-158">From the command prompt, change directories to the *XUnit.Coverlet.Collector* project, and run the [`dotnet test`](../tools/dotnet-test.md) command:</span></span>
+<span data-ttu-id="c748e-157">XUnit テスト プロジェクト テンプレートは、既定で [coverlet.collector](https://www.nuget.org/packages/coverlet.collector) と統合されています。</span><span class="sxs-lookup"><span data-stu-id="c748e-157">The xUnit test project template already integrates with [coverlet.collector](https://www.nuget.org/packages/coverlet.collector) by default.</span></span>
+<span data-ttu-id="c748e-158">コマンド プロンプトから、ディレクトリを *XUnit.Coverlet.Collector* プロジェクトに変更し、次のように [`dotnet test`](../tools/dotnet-test.md) コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="c748e-158">From the command prompt, change directories to the *XUnit.Coverlet.Collector* project, and run the [`dotnet test`](../tools/dotnet-test.md) command:</span></span>
 
 ```dotnetcli
 cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 ```
 
 > [!NOTE]
-> <span data-ttu-id="ea83a-159">`"XPlat Code Coverage"` 引数は、Coverlet のデータ コレクターに対応するフレンドリ名です。</span><span class="sxs-lookup"><span data-stu-id="ea83a-159">The `"XPlat Code Coverage"` argument is a friendly name that corresponds to the data collectors from Coverlet.</span></span> <span data-ttu-id="ea83a-160">この名前は必須です。大文字と小文字は区別されません。</span><span class="sxs-lookup"><span data-stu-id="ea83a-160">This name is required but is case insensitive.</span></span>
+> <span data-ttu-id="c748e-159">`"XPlat Code Coverage"` 引数は、Coverlet のデータ コレクターに対応するフレンドリ名です。</span><span class="sxs-lookup"><span data-stu-id="c748e-159">The `"XPlat Code Coverage"` argument is a friendly name that corresponds to the data collectors from Coverlet.</span></span> <span data-ttu-id="c748e-160">この名前は必須です。大文字と小文字は区別されません。</span><span class="sxs-lookup"><span data-stu-id="c748e-160">This name is required but is case insensitive.</span></span>
 
-<span data-ttu-id="ea83a-161">`dotnet test` の実行の一環で、*coverage.cobertura.xml* ファイルが結果として *TestResults* ディレクトリに出力されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-161">As part of the `dotnet test` run, a resulting *coverage.cobertura.xml* file is output to the *TestResults* directory.</span></span> <span data-ttu-id="ea83a-162">この XML ファイルにその結果が格納されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-162">The XML file contains the results.</span></span> <span data-ttu-id="ea83a-163">これは、.NET Core CLI に依存するクロスプラットフォーム オプションであり、MSBuild を使用できないビルド システムに適しています。</span><span class="sxs-lookup"><span data-stu-id="ea83a-163">This is a cross platform option that relies on the .NET Core CLI, and it is great for build systems where MSBuild is not available.</span></span>
+<span data-ttu-id="c748e-161">`dotnet test` の実行の一環で、*coverage.cobertura.xml* ファイルが結果として *TestResults* ディレクトリに出力されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-161">As part of the `dotnet test` run, a resulting *coverage.cobertura.xml* file is output to the *TestResults* directory.</span></span> <span data-ttu-id="c748e-162">この XML ファイルにその結果が格納されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-162">The XML file contains the results.</span></span> <span data-ttu-id="c748e-163">これは、.NET Core CLI に依存するクロスプラットフォーム オプションであり、MSBuild を使用できないビルド システムに適しています。</span><span class="sxs-lookup"><span data-stu-id="c748e-163">This is a cross platform option that relies on the .NET Core CLI, and it is great for build systems where MSBuild is not available.</span></span>
 
-<span data-ttu-id="ea83a-164">*coverage.cobertura.xml* ファイルの例は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="ea83a-164">Below is the example *coverage.cobertura.xml* file.</span></span>
+<span data-ttu-id="c748e-164">*coverage.cobertura.xml* ファイルの例は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="c748e-164">Below is the example *coverage.cobertura.xml* file.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -265,24 +265,24 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 ```
 
 > [!TIP]
-> <span data-ttu-id="ea83a-165">ビルド システムで既に MSBuild を使用している場合は、代わりに MSBuild パッケージを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-165">As an alternative, you could use the MSBuild package if your build system already makes use of MSBuild.</span></span> <span data-ttu-id="ea83a-166">コマンド プロンプトで、ディレクトリを *XUnit.Coverlet.MSBuild* プロジェクトに変更し、次のように `dotnet test` コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-166">From the command prompt, change directories to the *XUnit.Coverlet.MSBuild* project, and run the `dotnet test` command:</span></span>
+> <span data-ttu-id="c748e-165">ビルド システムで既に MSBuild を使用している場合は、代わりに MSBuild パッケージを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="c748e-165">As an alternative, you could use the MSBuild package if your build system already makes use of MSBuild.</span></span> <span data-ttu-id="c748e-166">コマンド プロンプトで、ディレクトリを *XUnit.Coverlet.MSBuild* プロジェクトに変更し、次のように `dotnet test` コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="c748e-166">From the command prompt, change directories to the *XUnit.Coverlet.MSBuild* project, and run the `dotnet test` command:</span></span>
 >
 > ```dotnetcli
 > dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> <span data-ttu-id="ea83a-167">*coverage.cobertura.xml* ファイルが結果として出力されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-167">The resulting *coverage.cobertura.xml* file is output.</span></span>  
-> <span data-ttu-id="ea83a-168">[こちらの](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) msbuild 統合ガイドに従ってください</span><span class="sxs-lookup"><span data-stu-id="ea83a-168">You can follow msbuild integration guide [here](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)</span></span>
+> <span data-ttu-id="c748e-167">*coverage.cobertura.xml* ファイルが結果として出力されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-167">The resulting *coverage.cobertura.xml* file is output.</span></span>
+> <span data-ttu-id="c748e-168">[こちらの](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) msbuild 統合ガイドに従ってください</span><span class="sxs-lookup"><span data-stu-id="c748e-168">You can follow msbuild integration guide [here](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)</span></span>
 
-## <a name="generate-reports"></a><span data-ttu-id="ea83a-169">レポートの生成</span><span class="sxs-lookup"><span data-stu-id="ea83a-169">Generate reports</span></span>
+## <a name="generate-reports"></a><span data-ttu-id="c748e-169">レポートの生成</span><span class="sxs-lookup"><span data-stu-id="c748e-169">Generate reports</span></span>
 
-<span data-ttu-id="ea83a-170">これで、単体テストの実行からデータを収集できるようになったので、[ReportGenerator](https://github.com/danielpalme/ReportGenerator) を使用してレポートを生成できます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-170">Now that you're able to collect data from unit test runs, you can generate reports using [ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="ea83a-171">次のように [`dotnet tool install`](../tools/dotnet-tool-install.md) コマンドを使用し、[.NET グローバル ツール](../tools/global-tools.md)として [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="ea83a-171">To install the [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet package as a [.NET global tool](../tools/global-tools.md), use the [`dotnet tool install`](../tools/dotnet-tool-install.md) command:</span></span>
+<span data-ttu-id="c748e-170">これで、単体テストの実行からデータを収集できるようになったので、[ReportGenerator](https://github.com/danielpalme/ReportGenerator) を使用してレポートを生成できます。</span><span class="sxs-lookup"><span data-stu-id="c748e-170">Now that you're able to collect data from unit test runs, you can generate reports using [ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="c748e-171">次のように [`dotnet tool install`](../tools/dotnet-tool-install.md) コマンドを使用し、[.NET グローバル ツール](../tools/global-tools.md)として [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="c748e-171">To install the [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet package as a [.NET global tool](../tools/global-tools.md), use the [`dotnet tool install`](../tools/dotnet-tool-install.md) command:</span></span>
 
 ```dotnetcli
 dotnet tool install -g dotnet-reportgenerator-globaltool
 ```
 
-<span data-ttu-id="ea83a-172">ツールを実行し、前のテストの実行の出力である *coverage.cobertura.xml* ファイルを指定して必要なオプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="ea83a-172">Run the tool and provide the desired options, given the output *coverage.cobertura.xml* file from the previous test run.</span></span>
+<span data-ttu-id="c748e-172">ツールを実行し、前のテストの実行の出力である *coverage.cobertura.xml* ファイルを指定して必要なオプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="c748e-172">Run the tool and provide the desired options, given the output *coverage.cobertura.xml* file from the previous test run.</span></span>
 
 ```console
 reportgenerator
@@ -291,20 +291,20 @@ reportgenerator
 -reporttypes:Html
 ```
 
-<span data-ttu-id="ea83a-173">このコマンドを実行すると、HTML ファイルにレポートが生成されます。</span><span class="sxs-lookup"><span data-stu-id="ea83a-173">After running this command, an HTML file represents the generated report.</span></span>
+<span data-ttu-id="c748e-173">このコマンドを実行すると、HTML ファイルにレポートが生成されます。</span><span class="sxs-lookup"><span data-stu-id="c748e-173">After running this command, an HTML file represents the generated report.</span></span>
 
 :::image type="content" source="media/test-report.png" lightbox="media/test-report.png" alt-text="単体テストで生成されたレポート":::
 
-## <a name="see-also"></a><span data-ttu-id="ea83a-175">関連項目</span><span class="sxs-lookup"><span data-stu-id="ea83a-175">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c748e-175">関連項目</span><span class="sxs-lookup"><span data-stu-id="c748e-175">See also</span></span>
 
-- [<span data-ttu-id="ea83a-176">Visual Studio 単体テストのコード カバレッジ</span><span class="sxs-lookup"><span data-stu-id="ea83a-176">Visual Studio unit test code coverage</span></span>](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
-- [<span data-ttu-id="ea83a-177">GitHub - Coverlet リポジトリ</span><span class="sxs-lookup"><span data-stu-id="ea83a-177">GitHub - Coverlet repository</span></span>](https://github.com/coverlet-coverage/coverlet)
-- [<span data-ttu-id="ea83a-178">GitHub - ReportGenerator リポジトリ</span><span class="sxs-lookup"><span data-stu-id="ea83a-178">GitHub - ReportGenerator repository</span></span>](https://github.com/danielpalme/ReportGenerator)
-- [<span data-ttu-id="ea83a-179">ReportGenerator プロジェクト サイト</span><span class="sxs-lookup"><span data-stu-id="ea83a-179">ReportGenerator project site</span></span>](https://danielpalme.github.io/ReportGenerator)
-- [<span data-ttu-id="ea83a-180">.NET Core CLI テスト コマンド</span><span class="sxs-lookup"><span data-stu-id="ea83a-180">.NET Core CLI test command</span></span>](../tools/dotnet-test.md)
-- [<span data-ttu-id="ea83a-181">サンプル ソース コード</span><span class="sxs-lookup"><span data-stu-id="ea83a-181">Sample source code</span></span>](/samples/dotnet/samples/unit-testing-code-coverage-cs)
+- [<span data-ttu-id="c748e-176">Visual Studio 単体テストのコード カバレッジ</span><span class="sxs-lookup"><span data-stu-id="c748e-176">Visual Studio unit test code coverage</span></span>](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- [<span data-ttu-id="c748e-177">GitHub - Coverlet リポジトリ</span><span class="sxs-lookup"><span data-stu-id="c748e-177">GitHub - Coverlet repository</span></span>](https://github.com/coverlet-coverage/coverlet)
+- [<span data-ttu-id="c748e-178">GitHub - ReportGenerator リポジトリ</span><span class="sxs-lookup"><span data-stu-id="c748e-178">GitHub - ReportGenerator repository</span></span>](https://github.com/danielpalme/ReportGenerator)
+- [<span data-ttu-id="c748e-179">ReportGenerator プロジェクト サイト</span><span class="sxs-lookup"><span data-stu-id="c748e-179">ReportGenerator project site</span></span>](https://danielpalme.github.io/ReportGenerator)
+- [<span data-ttu-id="c748e-180">.NET Core CLI テスト コマンド</span><span class="sxs-lookup"><span data-stu-id="c748e-180">.NET Core CLI test command</span></span>](../tools/dotnet-test.md)
+- [<span data-ttu-id="c748e-181">サンプル ソース コード</span><span class="sxs-lookup"><span data-stu-id="c748e-181">Sample source code</span></span>](/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
-## <a name="next-steps"></a><span data-ttu-id="ea83a-182">次の手順</span><span class="sxs-lookup"><span data-stu-id="ea83a-182">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="c748e-182">次の手順</span><span class="sxs-lookup"><span data-stu-id="c748e-182">Next Steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ea83a-183">ベスト プラクティスの単体テスト</span><span class="sxs-lookup"><span data-stu-id="ea83a-183">Unit testing best practices</span></span>](unit-testing-best-practices.md)
+> [<span data-ttu-id="c748e-183">ベスト プラクティスの単体テスト</span><span class="sxs-lookup"><span data-stu-id="c748e-183">Unit testing best practices</span></span>](unit-testing-best-practices.md)

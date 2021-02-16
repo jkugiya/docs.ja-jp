@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 方法:文字列での単語の出現回数をカウントする (LINQ) (Visual Basic)'
 title: '方法: 文字列での単語の出現回数をカウントする (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: c6894359e5785419ccf8f283f976c0a897288a5d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd00d1840f8f4eacdf949b0c1200b26f3692e00d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405327"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464808"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="658cf-102">方法: 文字列での単語の出現回数をカウントする (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="658cf-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="d1991-103">方法: 文字列での単語の出現回数をカウントする (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1991-103">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="658cf-103">この例では、LINQ クエリを使用して、指定された単語が文字列内に出現する回数をカウントする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="658cf-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="658cf-104">カウントを実行するには、まず <xref:System.String.Split%2A> メソッドを呼び出して単語の配列を作成します。</span><span class="sxs-lookup"><span data-stu-id="658cf-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="658cf-105"><xref:System.String.Split%2A> メソッドを呼び出すと、パフォーマンスが低下します。</span><span class="sxs-lookup"><span data-stu-id="658cf-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="658cf-106">文字列に対する操作が単語のカウントのみである場合は、<xref:System.Text.RegularExpressions.Regex.Matches%2A> または <xref:System.String.IndexOf%2A> メソッドの使用を検討してください。</span><span class="sxs-lookup"><span data-stu-id="658cf-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="658cf-107">ただし、パフォーマンスが重要でない場合や、他の種類のクエリを実行する目的で事前に文章を分割している場合は、LINQ を使用して単語や語句をカウントすることにも意味があります。</span><span class="sxs-lookup"><span data-stu-id="658cf-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>
+<span data-ttu-id="d1991-104">この例では、LINQ クエリを使用して、指定された単語が文字列内に出現する回数をカウントする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d1991-104">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="d1991-105">カウントを実行するには、まず <xref:System.String.Split%2A> メソッドを呼び出して単語の配列を作成します。</span><span class="sxs-lookup"><span data-stu-id="d1991-105">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="d1991-106"><xref:System.String.Split%2A> メソッドを呼び出すと、パフォーマンスが低下します。</span><span class="sxs-lookup"><span data-stu-id="d1991-106">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="d1991-107">文字列に対する操作が単語のカウントのみである場合は、<xref:System.Text.RegularExpressions.Regex.Matches%2A> または <xref:System.String.IndexOf%2A> メソッドの使用を検討してください。</span><span class="sxs-lookup"><span data-stu-id="d1991-107">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="d1991-108">ただし、パフォーマンスが重要でない場合や、他の種類のクエリを実行する目的で事前に文章を分割している場合は、LINQ を使用して単語や語句をカウントすることにも意味があります。</span><span class="sxs-lookup"><span data-stu-id="d1991-108">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>
 
-## <a name="example"></a><span data-ttu-id="658cf-108">例</span><span class="sxs-lookup"><span data-stu-id="658cf-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d1991-109">例</span><span class="sxs-lookup"><span data-stu-id="d1991-109">Example</span></span>
 
 ```vb
 Class CountWords
@@ -58,10 +59,10 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="658cf-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="658cf-109">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="d1991-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d1991-110">Compile the code</span></span>
 
-<span data-ttu-id="658cf-110">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="658cf-110">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="d1991-111">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="d1991-111">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="658cf-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="658cf-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1991-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d1991-112">See also</span></span>
 
-- [<span data-ttu-id="658cf-112">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="658cf-112">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="d1991-113">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1991-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)

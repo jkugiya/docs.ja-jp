@@ -1,0 +1,68 @@
+- name: 既存の ASP.NET アプリを .NET Core に移植する
+  href: index.md
+  items:
+    - name: .NET Core へのアプリの移植の概要
+      href: introduction.md
+      items:
+        - name: 移行に関する注意事項
+          href: migration-considerations.md
+        - name: ASP.NET Core 2.1 に移行する
+          href: migrate-aspnet-core-2-1.md
+        - name: 適切な .NET Core バージョンを選択する
+          href: choose-net-core-version.md
+        - name: 段階的に移行するための戦略
+          href: incremental-migration-strategies.md
+        - name: ASP.NET Web Forms アプリを移行するための戦略
+          href: migrate-web-forms.md
+        - name: デプロイ戦略
+          href: deployment-strategies.md
+        - name: 移行に関するその他の情報
+          href: additional-migration-resources.md
+    - name: ASP.NET MVC と ASP.NET Core のアーキテクチャの相違点
+      href: architectural-differences.md
+      items:
+        - name: アプリの起動の相違点
+          href: app-startup-differences.md
+        - name: ホスティングの相違点
+          href: hosting-differences.md
+        - name: 静的ファイルの提供
+          href: serving-static-files.md
+        - name: 依存関係の挿入の相違点
+          href: dependency-injection-differences.md
+        - name: ミドルウェア、モジュール、およびハンドラー
+          href: middleware-modules-handlers.md
+        - name: 構成の相違点
+          href: configuration-differences.md
+        - name: ルーティングの相違点
+          href: routing-differences.md
+        - name: Razor Pages と ASP.NET MVC の比較
+          href: comparing-razor-pages-aspnet-mvc.md
+        - name: Web API の相違点
+          href: webapi-differences.md
+        - name: 認証の相違点
+          href: authentication-differences.md
+        - name: ID の相違点
+          href: identity-differences.md
+        - name: コントローラーの相違点
+          href: controller-differences.md
+        - name: Razor の相違点
+          href: razor-differences.md
+        - name: SignalR の相違点
+          href: signalr-differences.md
+        - name: テストの相違点
+          href: testing-differences.md
+    - name: 大規模なソリューションの移行
+      href: migrate-large-solutions.md
+      items:
+        - name: 移行するプロジェクトの順序を確認する
+          href: identify-migration-sequence.md
+        - name: 依存関係の把握と更新
+          href: understand-update-dependencies.md
+        - name: 運用環境での実行中に移行するための戦略
+          href: strategies-migrating-in-production.md
+    - name: eShop プロジェクトの移行例
+      href: example-migration-eshop.md
+    - name: デプロイメント シナリオ
+      href: deployment-scenarios.md
+    - name: まとめ
+      href: summary.md

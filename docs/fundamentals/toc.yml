@@ -187,8 +187,12 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1013.md
               - name: NETSDK1022
                 href: ../core/tools/sdk-errors/netsdk1022.md
+              - name: NETSDK1045
+                href: ../core/tools/sdk-errors/netsdk1045.md
               - name: NETSDK1059
                 href: ../core/tools/sdk-errors/netsdk1059.md
+              - name: NETSDK1064
+                href: ../core/tools/sdk-errors/netsdk1064.md
               - name: NETSDK1071
                 href: ../core/tools/sdk-errors/netsdk1071.md
               - name: NETSDK1073
@@ -202,7 +206,7 @@ items:
           - name: 概要
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 関連項目
+          - name: リファレンス
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -334,7 +338,7 @@ items:
             items:
               - name: 概要
                 href: ../core/project-sdk/overview.md
-              - name: 関連項目
+              - name: リファレンス
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -342,6 +346,8 @@ items:
                     href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
                   - name: Microsoft.NET.Sdk.Razor
                     href: /aspnet/core/razor-pages/sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+                  - name: Microsoft.NET.Sdk.Desktop
+                    href: ../core/project-sdk/msbuild-props-desktop.md
           - name: ターゲット フレームワーク
             href: ../standard/frameworks.md
           - name: 依存関係管理
@@ -417,6 +423,8 @@ items:
                 href: ../core/diagnostics/logging-tracing.md
               - name: 既知のイベント プロバイダー
                 href: ../core/diagnostics/well-known-event-providers.md
+              - name: 分散トレース
+                href: ../core/diagnostics/distributed-tracing.md
           - name: ランタイム イベント
             items:
               - name: 概要
@@ -1252,6 +1260,8 @@ items:
                         href: code-analysis/style-rules/ide0110.md
                   - name: その他の規則
                     items:
+                      - name: 概要
+                        href: code-analysis/style-rules/miscellaneous-rules.md
                       - name: IDE0076
                         href: code-analysis/style-rules/ide0076.md
                       - name: IDE0077
@@ -1603,7 +1613,7 @@ items:
                 href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
               - name: スレッド セーフ
                 href: ../standard/base-types/thread-safety-in-regular-expressions.md
-          - name: 例
+          - name: 使用例
             items:
               - name: HREF のスキャン
                 href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
@@ -1691,7 +1701,7 @@ items:
                 href: ../standard/serialization/xml-and-soap-serialization.md
               - name: XML シリアル化の詳細
                 href: ../standard/serialization/introducing-xml-serialization.md
-              - name: 例
+              - name: 使用例
                 href: ../standard/serialization/examples-of-xml-serialization.md
               - name: XML スキーマ定義ツール
                 href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md

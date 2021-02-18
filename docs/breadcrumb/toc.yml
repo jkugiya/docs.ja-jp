@@ -311,22 +311,16 @@ items:
             tocHref: /dotnet/csharp/
             topicHref: /dotnet/csharp/index
             items:
-              - name: C# の概要
-                tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
-                topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
-              - name: 作業開始
-                tocHref: /dotnet/csharp/getting-started/
-                topicHref: /dotnet/csharp/getting-started/index
+              - name: はじめに
+                tocHref: /dotnet/csharp/tour-of-csharp/
+                topicHref: /dotnet/csharp/tour-of-csharp/index
                 items:
-                  - name: C# のツアー
-                    tocHref: /dotnet/csharp/tour-of-csharp/
-                    topicHref: /dotnet/csharp/tour-of-csharp/index
+                  - name: チュートリアル
+                    tocHref: /dotnet/csharp/tour-of-csharp/tutorials/
+                    topicHref: /dotnet/csharp/tour-of-csharp/tutorials/index
               - name: チュートリアル
                 tocHref: /dotnet/csharp/tutorials/
                 topicHref: /dotnet/csharp/tutorials/index
-              - name: ツアー
-                tocHref: /dotnet/csharp/tour-of-csharp/
-                topicHref: /dotnet/csharp/tour-of-csharp/index
               - name: 新機能
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index

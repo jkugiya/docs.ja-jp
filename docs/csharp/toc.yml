@@ -1,7 +1,7 @@
 items:
   - name: C# 関連のドキュメント
     href: index.yml
-  - name: C# のツアー
+  - name: 作業開始
     items:
       - name: はじめに
         href: tour-of-csharp/index.md
@@ -11,37 +11,39 @@ items:
         href: tour-of-csharp/program-building-blocks.md
       - name: 主な言語の領域
         href: tour-of-csharp/features.md
+      - name: チュートリアル
+        items:
+          - name: 最初のレッスンを選択する
+            href: tour-of-csharp/tutorials/index.md
+          - name: ブラウザー ベースのチュートリアル
+            items:
+              - name: Hello world
+                href: tour-of-csharp/tutorials/hello-world.yml
+              - name: C# の数値
+                href: tour-of-csharp/tutorials/numbers-in-csharp.yml
+              - name: 分岐とループ
+                href: tour-of-csharp/tutorials/branches-and-loops.yml
+              - name: リスト コレクション
+                href: tour-of-csharp/tutorials/list-collection.yml
+          - name: ローカル環境で作業する
+            items:
+              - name: 環境を設定する
+                href: tour-of-csharp/tutorials/local-environment.md
+              - name: C# の数値
+                href: tour-of-csharp/tutorials/numbers-in-csharp-local.md
+              - name: 分岐とループ
+                href: tour-of-csharp/tutorials/branches-and-loops-local.md
+              - name: リスト コレクション
+                href: tour-of-csharp/tutorials/arrays-and-collections.md
   - name: チュートリアル
     items:
       - name: 概要
         displayName: tutorials
         href: tutorials/index.md
-      - name: C# によるプログラミングの入門
-        items:
-          - name: 最初のレッスンを選択する
-            href: tutorials/intro-to-csharp/index.md
-          - name: Hello world
-            href: tutorials/intro-to-csharp/hello-world.yml
-          - name: C# の数値
-            href: tutorials/intro-to-csharp/numbers-in-csharp.yml
-          - name: 分岐とループ
-            href: tutorials/intro-to-csharp/branches-and-loops.yml
-          - name: リスト コレクション
-            href: tutorials/intro-to-csharp/list-collection.yml
-          - name: ローカル環境で作業する
-            items:
-              - name: 環境を設定する
-                href: tutorials/intro-to-csharp/local-environment.md
-              - name: C# の数値
-                href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
-              - name: 分岐とループ
-                href: tutorials/intro-to-csharp/branches-and-loops-local.md
-              - name: リスト コレクション
-                href: tutorials/intro-to-csharp/arrays-and-collections.md
-              - name: クラスの概要
-                href: tutorials/intro-to-csharp/introduction-to-classes.md
-              - name: オブジェクト指向プログラミング
-                href: tutorials/intro-to-csharp/object-oriented-programming.md
+      - name: クラスの概要
+        href: tutorials/intro-to-csharp/introduction-to-classes.md
+      - name: オブジェクト指向プログラミング
+        href: tutorials/intro-to-csharp/object-oriented-programming.md
       - name: レコード型を調べる
         href: tutorials/exploration/records.md
       - name: 最上位レベルのステートメントを調べる
@@ -267,8 +269,6 @@ items:
         items:
           - name: C# プログラム内の内容
             href: programming-guide/inside-a-program/index.md
-          - name: Hello World -- 最初のプログラム
-            href: programming-guide/inside-a-program/hello-world-your-first-program.md
           - name: C# プログラムの一般構造
             href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
           - name: 識別子名

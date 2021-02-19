@@ -6,12 +6,12 @@ metadata:
   description: .NET アプリの設計、構築、移行について推奨される方法について説明します。
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 2ddd4c6d0c42f9e0ae4651aedb8fbdd59cd179f2
-  ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+  ms.openlocfilehash: aab236c52bf4217567fe76e8c4f9ffcb51ad17f5
+  ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/09/2020
-  ms.locfileid: "91877523"
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "100583106"
 landingContent:
 - title: ASP.NET Core MVC アプリの開発
   linkLists:
@@ -33,6 +33,8 @@ landingContent:
       url: serverless/index.md
     - text: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ'
       url: microservices/index.md
+    - text: .NET 開発者向け Dapr
+      url: dapr-for-net-developers/index.md
   - linkListType: learn
     links:
     - text: Hello World マイクロサービスのチュートリアル

@@ -62,6 +62,9 @@
           href: strategies-migrating-in-production.md
     - name: eShop プロジェクトの移行例
       href: example-migration-eshop.md
+      items:
+        - name: その他の移行シナリオ
+          href: more-migration-scenarios.md
     - name: デプロイメント シナリオ
       href: deployment-scenarios.md
     - name: まとめ

@@ -2,12 +2,12 @@
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 10/12/2020
-ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 70cff297688270d30b9850d123ffc8bb27ef7fbe
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548396"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582964"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -64,9 +64,6 @@ ms.locfileid: "99548396"
   - .NET Core に含まれており、.NET Framework の [NuGet パッケージ](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)として提供されています。
   - シリアル化できないオブジェクトのインプロセス トレースを可能にします。
   - ログ対象オブジェクトの選択したフィールドを <xref:System.Diagnostics.Tracing.EventSource> に書き込むことができるようにするブリッジが含まれています。
-
-- <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
-  - 特定のアクティビティまたはトランザクションによって生成されたログ メッセージを明確に識別する方法を提供します。 このオブジェクトを使用すると、さまざまなサービス間でログを相互に関連付けることができます。
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
   - Windows のみ。

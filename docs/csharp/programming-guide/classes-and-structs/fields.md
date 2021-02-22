@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 58e60e1dc0b574ae922e6a27a22978b91aca4ec4
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 3210500719529f8bb7f2627abf634cc7b9dcb772
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899049"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096830"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 
@@ -26,11 +26,11 @@ ms.locfileid: "98899049"
 
 [!code-csharp[fields#1](snippets/fields/Program.cs#1)]
 
-オブジェクト内のフィールドにアクセスするには、`objectname.fieldname` のように、オブジェクト名の後にピリオドを追加し、その後にフィールド名を続けます。 次に例を示します。
+オブジェクト内のフィールドにアクセスするには、`objectname._fieldName` のように、オブジェクト名の後にピリオドを追加し、その後にフィールド名を続けます。 次に例を示します。
 
 [!code-csharp[fields#2](snippets/fields/Program.cs#2)]
 
-フィールドには、フィールドの宣言時に代入演算子を使用して初期値を指定できます。 たとえば、`day` フィールドに `"Monday"` を自動的に代入するには、次の例のように `day` を宣言します。
+フィールドには、フィールドの宣言時に代入演算子を使用して初期値を指定できます。 たとえば、`Day` フィールドに `"Monday"` を自動的に代入するには、次の例のように `Day` を宣言します。
 
 [!code-csharp[fields#3](snippets/fields/Program.cs#3)]
 

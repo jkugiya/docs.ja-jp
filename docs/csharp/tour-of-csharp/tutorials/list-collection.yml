@@ -1,0 +1,215 @@
+### YamlMime:Tutorial
+title: リスト型を使用したデータ コレクションの管理について説明します
+metadata:
+  title: データ コレクション - C# の概要に関する対話型チュートリアル
+  description: このチュートリアルでは、ブラウザーを使用して C# を対話形式で学習できます。 C# コードを記述し、ブラウザーで直接コードをコンパイルして、実行した結果を確認します。
+  audience: Developer
+  ms.custom: mvc
+  ms.topic: interactive-tutorial
+  ms.date: 10/23/2018
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 26fded8a82771672825825ce5d617ef200f18542
+  ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "100626634"
+items:
+- durationInMinutes: 1
+  content: >
+    このチュートリアルでは C# を対話形式で学習できます。ブラウザーを使用して C# コードを記述し、コードをコンパイルして実行した結果を確認します。 このチュートリアルには、コレクションと配列を作成、変更、確認する一連のレッスンが含まれています。
+- title: リストを作成する
+  durationInMinutes: 2
+  content: >
+    対話型ウィンドウで次のコードを実行します。 **[Enter focus mode]\(フォーカス モードを入力する\)** ボタンを選択します。 次に、対話型ウィンドウで次のコード ブロックを入力し (`<name>` を自分の名前に置き換えて)、**[実行]** を選択します。
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    環境でこれを実行している場合は、代わりに[ローカル バージョン](arrays-and-collections.md)に関する指示に従ってください。
+
+
+    文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
+
+
+    名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。 `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、<xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドを呼び出したため、文字列は `{name.ToUpper()}` をそれぞれの名前に置き換え、文字を大文字に変換しています。
+
+
+    続けて確認していきましょう。
+- title: リスト コンテンツを変更する
+  durationInMinutes: 3
+  content: >
+    作成したコレクションは <xref:System.Collections.Generic.List%601> 型を使用します。 この型は、要素のシーケンスを格納します。 要素の型を山かっこの内側で指定します。
+
+
+    この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。 その内容を表示した後で内容を変更することにより、結果を確認できます。 既に記述したコードの下に、次のコードを追加します (内容を出力するループの下)。
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    さらに 2 つの名前をリストの末尾に追加しました。 また、1 つを削除しました。 このコード ブロックからの出力では、初期の内容が示された後、空白行と新しい内容が出力されます。
+
+
+    <xref:System.Collections.Generic.List%601> を使用すると、**インデックス** でも個々の項目を参照できます。 `[` と `]` のトークンを使用して項目にアクセスします。 既に記述したコードの下に、次のコードを追加して試してみます。
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    リストの末尾を越えてアクセスすることはできません。 <xref:System.Collections.Generic.List%601.Count%2A> プロパティを使用すれば、リストの長さを確認できます。 次のコードを追加して試してみます。
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    もう一度 **[実行]** を選択して結果を確認します。 C# ではインデックスは 0 から始まるため、有効なインデックスの最大値はリスト内の項目の数より 1 小さくなります。
+- title: リストを検索して並び替える
+  durationInMinutes: 5
+  content: >
+    サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 項目がリストにない場合、`IndexOf` は `-1` を返します。 それを試して動作を確認してください。  これまでに記述したコードの下に、次のコードを追加します。
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+
+    Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+
+    ```
+
+
+    リストに項目があるかどうかわからないこともあるため、常に <xref:System.Collections.Generic.List%601.IndexOf%2A> によって返されるインデックスをチェックする必要があります。 `-1` の場合、項目は見つかりませんでした。
+
+
+    同じように、リスト内の項目を並び替えできます。 <xref:System.Collections.Generic.List%601.Sort%2A> メソッドは、リスト内のすべての項目を正規順序 (文字列の場合はアルファベット順) で並び替えます。 次のコードを追加し、もう一度実行します。
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+- title: その他の型のリスト
+  durationInMinutes: 5
+  content: >
+    ここまでは、リスト内で `string` 型を使用してきました。 別の型を使用して <xref:System.Collections.Generic.List%601> を作成してみましょう。 数値のセットを作成します。 これまでに記述したコードを削除し、次のコードに置き換えます。
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    これにより整数のリストが作成され、最初の 2 つの整数が値 1 に設定されます。 "*フィボナッチ数列*" (一連の数値) は、2 つの 1 から始まります。 次のフィボナッチ数はそれぞれ、その直前の 2 つの数値の合計を取得することによって得られます。 このコードを追加します。
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    **[実行]** をクリックして結果を確認します。
+- title: 課題
+  durationInMinutes: 10
+  content: >
+    このレッスンと以前のレッスンの中から、いくつかの概念を理解できているかどうかを確認してみましょう。 ここまでフィボナッチ数を使用して作成してきたコードを使ってください。 シーケンスの最初の 20 個の数を生成するコードを記述してみましょう。 (ヒント: フィボナッチ数の 20 番目の数は 6765 です。)
+- title: 課題完了
+  durationInMinutes: 3
+  content: >
+    コードは次のようになりましたか?
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+
+    while (fibonacciNumbers.Count < 20)
+
+    {
+        var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+        var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+        fibonacciNumbers.Add(previous + previous2);
+    }
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
+- content: >-
+    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
+
+
+    [.NET コレクション](../../../standard/collections/index.md)の詳細については、次の記事で学習できます。
+
+    - [コレクション型の選択](../../../standard/collections/selecting-a-collection-class.md)
+
+    - [一般的に使用されるコレクション型](../../../standard/collections/commonly-used-collection-types.md)
+
+    - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)

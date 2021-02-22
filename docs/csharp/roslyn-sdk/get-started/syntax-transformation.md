@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 706e4643ecc81d252a9192dc5e8850024770628f
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202121"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639404"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 
@@ -20,15 +20,15 @@ ms.locfileid: "84202121"
 
 ## <a name="immutability-and-the-net-compiler-platform"></a>不変性と .NET コンパイラ プラットフォーム
 
-**不変性**は、.NET コンパイラ プラットフォームの基本原則です。 不変データ構造は、作成後には変更できません。 不変データ構造は、複数のコンシューマーから安全かつ同時に共有、分析できます。 コンシューマーが、予期できない方法で別のコンシューマーに影響を及ぼす危険はありません。 アナライザーには、ロックやその他のコンカレンシー手段は不要です。 この規則は、構文ツリー、コンパイル、記号、セマンティック モデルなど、出現するすべてのデータ構造に当てはまります。 既存の構造体を変更するのではなく、API は古いオブジェクトに対して指定された相違点に基づいて、新しいオブジェクトを作成します。 この概念を構文ツリーに適用して、変換を使用して新しいツリーを作成します。
+**不変性** は、.NET コンパイラ プラットフォームの基本原則です。 不変データ構造は、作成後には変更できません。 不変データ構造は、複数のコンシューマーから安全かつ同時に共有、分析できます。 コンシューマーが、予期できない方法で別のコンシューマーに影響を及ぼす危険はありません。 アナライザーには、ロックやその他のコンカレンシー手段は不要です。 この規則は、構文ツリー、コンパイル、記号、セマンティック モデルなど、出現するすべてのデータ構造に当てはまります。 既存の構造体を変更するのではなく、API は古いオブジェクトに対して指定された相違点に基づいて、新しいオブジェクトを作成します。 この概念を構文ツリーに適用して、変換を使用して新しいツリーを作成します。
 
 ## <a name="create-and-transform-trees"></a>ツリーの作成と変換
 
-構文の変換では、2 つの方法のうち 1 つを選択します。 **ファクトリ メソッド**は、置き換える特定のノードや、新しいコードを挿入する特定の場所を検索するときに最もよく使用されます。 **リライター**は、プロジェクト全体をスキャンして、置き換えるコード パターンを探す場合に最適です。
+構文の変換では、2 つの方法のうち 1 つを選択します。 **ファクトリ メソッド** は、置き換える特定のノードや、新しいコードを挿入する特定の場所を検索するときに最もよく使用されます。 **リライター** は、プロジェクト全体をスキャンして、置き換えるコード パターンを探す場合に最適です。
 
 ### <a name="create-nodes-with-factory-methods"></a>ファクトリ メソッドを使用してノードを作成する
 
-最初の構文変換では、ファクトリ メソッドを使用します。 `using System.Collections;` ステートメントを `using System.Collections.Generic;` ステートメントで置き換えます。 この例は、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ファクトリ メソッドを使用して <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> オブジェクトを作成する方法を示しています。 **ノード**、**トークン**、**トリビア**の各種類に対して、その種類のインスタンスを作成するファクトリ メソッドが用意されています。 ボトムアップ方式でノードを階層的に構成して、構文ツリーを作成します。 次に、既存のプログラムを変換して、既存のノードを作成した新しいツリーで置き換えます。
+最初の構文変換では、ファクトリ メソッドを使用します。 `using System.Collections;` ステートメントを `using System.Collections.Generic;` ステートメントで置き換えます。 この例は、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ファクトリ メソッドを使用して <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> オブジェクトを作成する方法を示しています。 **ノード**、**トークン**、**トリビア** の各種類に対して、その種類のインスタンスを作成するファクトリ メソッドが用意されています。 ボトムアップ方式でノードを階層的に構成して、構文ツリーを作成します。 次に、既存のプログラムを変換して、既存のノードを作成した新しいツリーで置き換えます。
 
 Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、 **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。 **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。 このクイック スタートには 2 つのサンプル プロジェクトがあるため、ソリューションに「**SyntaxTransformationQuickStart**」、プロジェクトに「**ConstructionCS**」という名前を付けます。 **[OK]** をクリックします。
 
@@ -38,7 +38,7 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
-`using System.Collections.Generic;` ステートメントを表すツリーをビルドするための**名前構文ノード**を作成します。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> は、C# に現れる 4 つの型の基底クラスです。 これらの 4 つの型の名前を組み合わせて、C# 言語中に出現するすべての名前を作成できます。
+`using System.Collections.Generic;` ステートメントを表すツリーをビルドするための **名前構文ノード** を作成します。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> は、C# に現れる 4 つの型の基底クラスです。 これらの 4 つの型の名前を組み合わせて、C# 言語中に出現するすべての名前を作成できます。
 
 * <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>: `System` や `Microsoft` のような、単一のシンプルな名前を表します。
 * <xref:Microsoft.CodeAnalysis.CSharp.Syntax.GenericNameSyntax?displayProperty=nameWithType>: `List<int>` のような、ジェネリック型またはジェネリック メソッドの名前を表します。
@@ -82,7 +82,7 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 [!code-csharp[create a new subtree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
 
-プログラムを実行し、出力を注意深く見てください。 ルート ツリーに `newusing` が配置されていません。 元のツリーは変更されていません。
+プログラムを実行し、出力を注意深く見てください。 ルート ツリーに `newUsing` が配置されていません。 元のツリーは変更されていません。
 
 新しいツリーを作成するために、<xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 拡張メソッドを使用した次のコードを追加します。 新しいツリーが、既存のインポートを更新された `newUsing` ノードで置き換えた結果として作成されます。 この新しいツリーを既存の `root` に割り当てます。
 
@@ -94,7 +94,7 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 `With*` メソッドと <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> メソッドは、構文ツリーの個々のブランチを変換するのに便利な手段です。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> クラスは、構文ツリー上で複数の変換を実行します。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> クラスは <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType> のサブクラスです。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> は、特定の型の <xref:Microsoft.CodeAnalysis.SyntaxNode> に変換を適用します。 構文ツリー内にその型が存在すれば、複数の型の <xref:Microsoft.CodeAnalysis.SyntaxNode> オブジェクトに変換を適用できます。 このクイック スタートの 2 番目のプロジェクトでは、型の推定が使用される可能性があるすべての場所のローカル変数宣言に含まれる明示的な型を削除する、コマンド ライン リファクタリングを作成します。
 
-新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、`SyntaxTransformationQuickStart` ソリューション ノードを右クリックします。 **[追加]**  >  **[新しいプロジェクト]** を選択して、 **[新しいプロジェクト] ダイアログ**を表示します。 **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。 プロジェクトに「`TransformationCS`」という名前を付けて、[OK] をクリックします。
+新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、`SyntaxTransformationQuickStart` ソリューション ノードを右クリックします。 **[追加]**  >  **[新しいプロジェクト]** を選択して、 **[新しいプロジェクト] ダイアログ** を表示します。 **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。 プロジェクトに「`TransformationCS`」という名前を付けて、[OK] をクリックします。
 
 最初のステップは、変換を実行するための <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> から派生したクラスを作成することです。 新しいクラスのファイルをプロジェクトに追加します。 Visual Studio で、 **[プロジェクト]**  >  **[クラスの追加...]** を選択します。 **[新しい項目の追加]** ダイアログで、ファイル名として「`TypeInferenceRewriter.cs`」を入力します。
 

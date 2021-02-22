@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: acaaf025555c46f720452b8c9d4f875b8656125a
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634456"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096810"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ dotnet new -h|--help
 
   次の表は、.NET SDK にプレインストールされているテンプレートを示しています。 テンプレートの既定の言語は、角かっこで示されます。 短い名前のリンクをクリックすると、特定のテンプレート オプションが表示されます。
 
-| テンプレート                                    | 短い名前                      | 言語     | Tags                                  | 導入時期 |
-|----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| コンソール アプリケーション                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1.0        |
-| クラス ライブラリ                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1.0        |
-| WPF アプリケーション                              | [wpf](#wpf)                     | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
-| WPF クラス ライブラリ                            | [wpflib](#wpf)                  | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
-| WPF カスタム コントロール ライブラリ                   | [wpfcustomcontrollib](#wpf)     | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
-| WPF ユーザー コントロール ライブラリ                     | [wpfusercontrollib](#wpf)       | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
-| Windows フォーム (WinForms) アプリケーション         | [winforms](#winforms)           | [C#]、VB     | Common/WinForms                       | 3.0 (VB の場合は 5.0)|
-| Windows フォーム (WinForms) クラス ライブラリ       | [winformslib](#winforms)        | [C#]、VB     | Common/WinForms                       | 3.0 (VB の場合は 5.0)|
-| Worker Service                               | [worker](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
-| 単体テスト プロジェクト                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
-| NUnit 3 テスト プロジェクト                         | [nunit](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
-| NUnit 3 テスト項目                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
-| xUnit テスト プロジェクト                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
-| Razor コンポーネント                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Razor ページ                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
-| Blazor サーバー アプリ                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly アプリ                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
-| ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
-| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
-| ASP.NET Core Web アプリ                         | [webapp、razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
-| Angular 付きの ASP.NET Core                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
-| React.js 付きの ASP.NET Core                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
-| React.js および Redux 付きの ASP.NET Core         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
-| Razor クラス ライブラリ                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
-| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
-| ASP.NET Core gRPC サービス                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| dotnet gitignore ファイル                        | `gitignore`                     |              | 構成                                | 3.0        |
-| global.json file                             | [globaljson](#globaljson)       |              | 構成                                | 2.0        |
-| NuGet 構成                                 | `nugetconfig`                   |              | 構成                                | 1.0        |
-| dotnet ローカル ツール マニフェスト ファイル              | `tool-manifest`                 |              | 構成                                | 3.0        |
-| Web 構成                                   | `webconfig`                     |              | 構成                                | 1.0        |
-| ソリューション ファイル                                | `sln`                           |              | ソリューション                              | 1.0        |
-| プロトコル バッファー ファイル                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
+| テンプレート                                    | 短い名前                        | 言語     | Tags                                  | 導入時期 |
+|----------------------------------------------|-----------------------------------|--------------|---------------------------------------|------------|
+| コンソール アプリケーション                          | [`console`](#console)             | [C#], F#, VB | Common/Console                        | 1.0        |
+| クラス ライブラリ                                | [`classlib`](#classlib)           | [C#], F#, VB | Common/Library                        | 1.0        |
+| WPF アプリケーション                              | [`wpf`](#wpf)                     | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| WPF クラス ライブラリ                            | [`wpflib`](#wpf)                  | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| WPF カスタム コントロール ライブラリ                   | [`wpfcustomcontrollib`](#wpf)     | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| WPF ユーザー コントロール ライブラリ                     | [`wpfusercontrollib`](#wpf)       | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| Windows フォーム (WinForms) アプリケーション         | [`winforms`](#winforms)           | [C#]、VB     | Common/WinForms                       | 3.0 (VB の場合は 5.0)|
+| Windows フォーム (WinForms) クラス ライブラリ       | [`winformslib`](#winforms)        | [C#]、VB     | Common/WinForms                       | 3.0 (VB の場合は 5.0)|
+| Worker Service                               | [`worker`](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
+| 単体テスト プロジェクト                            | [`mstest`](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
+| NUnit 3 テスト プロジェクト                         | [`nunit`](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3 テスト項目                            | `nunit-test`                      | [C#], F#, VB | Test/NUnit                            | 2.2        |
+| xUnit テスト プロジェクト                           | [`xunit`](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
+| Razor コンポーネント                              | `razorcomponent`                  | [C#]         | Web/ASP.NET                           | 3.0        |
+| Razor ページ                                   | [`page`](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewImports                              | [`viewimports`](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                       | [C#]         | Web/ASP.NET                           | 2.0        |
+| Blazor サーバー アプリ                            | [`blazorserver`](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| Blazor WebAssembly アプリ                       | [`blazorwasm`](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| ASP.NET Core 空                           | [`web`](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
+| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [`mvc`](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
+| ASP.NET Core Web アプリ                         | [`webapp, razor`](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
+| Angular 付きの ASP.NET Core                    | [`angular`](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| React.js 付きの ASP.NET Core                   | [`react`](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| React.js および Redux 付きの ASP.NET Core         | [`reactredux`](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
+| Razor クラス ライブラリ                          | [`razorclasslib`](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
+| ASP.NET Core Web API                         | [`webapi`](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core gRPC サービス                    | [`grpc`](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
+| dotnet gitignore ファイル                        | `gitignore`                       |              | 構成                                | 3.0        |
+| global.json file                             | [`globaljson`](#globaljson)       |              | 構成                                | 2.0        |
+| NuGet 構成                                 | `nugetconfig`                     |              | 構成                                | 1.0        |
+| dotnet ローカル ツール マニフェスト ファイル              | `tool-manifest`                   |              | 構成                                | 3.0        |
+| Web 構成                                   | `webconfig`                       |              | 構成                                | 1.0        |
+| ソリューション ファイル                                | `sln`                             |              | ソリューション                              | 1.0        |
+| プロトコル バッファー ファイル                         | [`proto`](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>オプション
 
@@ -167,7 +167,7 @@ dotnet new -h|--help
 
 プロジェクト テンプレートはそれぞれ、追加のオプションが与えられている場合があります。 コア テンプレートの場合、次のオプションが追加されています。
 
-### <a name="console"></a>console
+### `console`
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -191,11 +191,11 @@ dotnet new -h|--help
 
   指定した場合、プロジェクトの作成中には暗黙的な復元が実行されません。 .NET Core 2.2 SDK 以降で利用できます。
 
-**_
+***
 
-### <a name="classlib"></a>classlib
+### `classlib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 値: .NET クラス ライブラリを作成するには `net5.0` または `netcoreapp<version>`、.NET Standard クラス ライブラリを作成するには `netstandard<version>`。 .NET 5.0 SDK の既定値は `net5.0` です。
 
@@ -209,11 +209,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> `wpf`, `wpflib`, `wpfcustomcontrollib`, `wpfusercontrollib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `net5.0` です。 .NET Core 3.1 SDK 以降で利用できます。
 
@@ -227,11 +227,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms、winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> `winforms`, `winformslib`
 
-- _ *`--langVersion <VERSION_NUMBER>`**
+- **`--langVersion <VERSION_NUMBER>`**
 
   作成されたプロジェクト ファイルの `LangVersion` プロパティが設定されます。 たとえば、C# 7.3 を使うには `--langVersion 7.3` を使います。
 
@@ -241,11 +241,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="worker-grpc"></a><a name="web-others"></a> worker、grpc
+### <a name="worker-grpc"></a><a name="web-others"></a> `worker`, `grpc`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。
 
@@ -257,11 +257,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="mstest-xunit"></a><a name="test"></a> mstest、xunit
+### <a name="mstest-xunit"></a><a name="test"></a> `mstest`, `xunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 .NET Core 3.0 SDK 以降で利用できるオプションです。
 
@@ -281,11 +281,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="nunit"></a>nunit
+### `nunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。
 
@@ -307,11 +307,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="page"></a>ページ (page)
+### `page`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   生成されるコードの名前空間です。 既定値は `MyApp.Namespace` です。
 
@@ -319,19 +319,19 @@ dotnet new -h|--help
 
   PageModel なしでページが作成されます。
 
-**_
+***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports、proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> `viewimports`, `proto`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   生成されるコードの名前空間です。 既定値は `MyApp.Namespace` です。
 
-**_
+***
 
-### <a name="blazorserver"></a>blazorserver
+### `blazorserver`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 次の値を指定できます。
 
@@ -398,11 +398,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="blazorwasm"></a>blazorwasm
+### `blazorwasm`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。
 
@@ -502,11 +502,11 @@ dotnet new -h|--help
 
   Web アプリから API を呼び出すように要求するスコープ。 ASP.NET Core ホストが指定されていない `SingleOrg` または `IndividualB2C` 認証にのみ適用されます。 既定値は、`user.read` です。
 
-**_
+***
 
-### <a name="web"></a>web
+### `web`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   生成されたテンプレートから *launchSettings.json* が除外されます。
 
@@ -531,11 +531,11 @@ dotnet new -h|--help
 
   HTTPS を無効にします。
 
-**_
+***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a> mvc、webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a> `mvc`, `webapp`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 次の値を指定できます。
 
@@ -622,11 +622,11 @@ dotnet new -h|--help
 
   デバッグ ビルドで [Razor ランタイム コンパイル](/aspnet/core/mvc/views/view-compilation#runtime-compilation)を使用するようにプロジェクトが構成されているかどうかを判断します。 .NET Core 3.1.201 SDK 以降で利用できるオプションです。
 
-**_
+***
 
-### <a name="angular-react"></a><a name="spa"></a> angular、react
+### <a name="angular-react"></a><a name="spa"></a> `angular`, `react`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 .NET Core 3.0 SDK 以降で使用できます。
   
@@ -664,11 +664,11 @@ dotnet new -h|--help
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-**_
+***
 
-### <a name="reactredux"></a>reactredux
+### `reactredux`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   生成されたテンプレートから *launchSettings.json* が除外されます。
 
@@ -693,11 +693,11 @@ dotnet new -h|--help
 
   HTTPS を無効にします。
 
-**_
+***
 
-### <a name="razorclasslib"></a>razorclasslib
+### `razorclasslib`
 
-- _ *`--no-restore`**
+- **`--no-restore`**
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
@@ -705,11 +705,11 @@ dotnet new -h|--help
 
   このライブラリへのコンポーネントに加え、従来の Razor ページとビューの追加がサポートされます。 .NET Core 3.0 SDK 以降で使用できます。
 
-**_
+***
   
-### <a name="webapi"></a>webapi
+### `webapi`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 次の値を指定できます。
 
@@ -775,11 +775,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-**_
+***
 
-### <a name="globaljson"></a>globaljson
+### `globaljson`
 
-- _ *`--sdk-version <VERSION_NUMBER>`**
+- **`--sdk-version <VERSION_NUMBER>`**
 
   *global.json* ファイル内で使用する .NET SDK のバージョンを指定します。
 

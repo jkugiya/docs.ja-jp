@@ -1,6 +1,6 @@
 ---
 title: Ilasm.exe (IL アセンブラー)
-description: Ilasm.exe (IL アセンブラー) を使用して作業を開始します。 このツールによって、中間言語 (IL) からポータブル実行可能 (PE) ファイルが生成されます。
+description: Ilasm.exe (IL アセンブラー) を使用して作業を開始します。 このツールによって、中間言語 (IL) アセンブリからポータブル実行可能 (PE) ファイルが生成されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MSIL generators
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: 1a85b3bf9509ffba6c2331d14196a6bef2bfa080
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 50dbb0688a75d8588cb6d8679410a4a07abc6b50
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166973"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584267"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
-IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージド実行プロセス](../../standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
+IL アセンブラーにより、中間言語 (IL) アセンブリからポータブル実行可能 (PE) ファイルが生成されます。 (IL の詳細については、「[マネージド実行プロセス](../../standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
 
 このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
@@ -44,18 +44,18 @@ ilasm [options] filename [[options]filename...]
 |**/32bitpreferred**|32 ビット優先イメージ (PE32) を作成します。|
 |**/alignment:** `integer`|NT オプション ヘッダーの FileAlignment を `integer` で指定された値に設定します。 このオプションは、ファイル指定されている .alignment IL ディレクティブをオーバーライドします。|
 |**/appcontainer**|出力として、Windows アプリ コンテナー内で実行する *.dll* ファイルまたは *.exe* ファイルを作成します。|
-|**/arm**|ターゲット プロセッサとして Advanced RISC Machine (ARM) を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/32bitpreferred**です。|
+|**/arm**|ターゲット プロセッサとして Advanced RISC Machine (ARM) を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/32bitpreferred** です。|
 |**/base:** `integer`|NT オプション ヘッダーの ImageBase を `integer` で指定された値に設定します。 このオプションは、ファイルに指定されている .imagebase IL ディレクティブをオーバーライドします。|
 |**/clock**|指定した .il ソース ファイルのコンパイル時間を計測して報告します。<br /><br /> **Total Run**: 後に続く特定の操作の実行に要した合計時間。<br /><br /> **Startup**: ファイルを読み込み、開く。<br /><br /> **Emitting MD**:メタデータの出力。<br /><br /> **Ref to Def Resolution**: ファイルの定義への参照の解決。<br /><br /> **CEE File Generation**: メモリ内のファイル イメージの生成。<br /><br /> **PE File Writing**: PE へのイメージの書き込み。|
 |**/debug**[:**IMPL**&#124;**OPT**]|デバッグ情報 (ローカル変数と引数名、および行番号) を組み込みます。 PDB ファイルを作成します。<br /><br /> **/debug** に値を追加しなければ、JIT の最適化が無効になり、PDB ファイルのシーケンス ポイントが使用されます。<br /><br /> **IMPL** を指定すると、JIT 最適化が無効になり、暗黙のシーケンス ポイントが使用されます。<br /><br /> **OPT** を指定すると、JIT 最適化が有効になり、暗黙のシーケンス ポイントが使用されます。|
 |**/dll**|出力として *.dll* ファイルを生成します。|
 |**/enc:** `file`|指定されたソース ファイルからエディット コンティニュ デルタを作成します。<br /><br /> この引数は教育機関専用のため、商業目的の使用はサポートされていません。|
 |**/exe**|出力として実行可能ファイルを生成します。 既定値です。|
-|**/flags:** `integer`|共通言語ランタイム ヘッダーの ImageFlags を `integer` で指定された値に設定します。 このオプションは、ファイルに指定されている .corflags IL ディレクティブをオーバーライドします。 有効な *integer*の値の一覧については、CorHdr.h で COMIMAGE_FLAGS を参照してください。|
+|**/flags:** `integer`|共通言語ランタイム ヘッダーの ImageFlags を `integer` で指定された値に設定します。 このオプションは、ファイルに指定されている .corflags IL ディレクティブをオーバーライドします。 有効な *integer* の値の一覧については、CorHdr.h で COMIMAGE_FLAGS を参照してください。|
 |**/fold**|複数の同じメソッド本体を 1 つに折りたたみます。|
 |/**highentropyva**|高エントロピ ASLR (Address Space Layout Randomization) をサポートする出力実行可能プログラムを作成します。 (既定では **/appcontainer**)。|
 |**/include:** `includePath`|`#include`によってインクルードされるファイルの検索パスを設定します。|
-|**/itanium**|ターゲット プロセッサとして Intel Itanium を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/pe64**です。|
+|**/itanium**|ターゲット プロセッサとして Intel Itanium を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/pe64** です。|
 |**/key:** `keyFile`|`filename` に含まれる秘密キーを使って、厳密な署名を持つ `keyFile` をコンパイルします。|
 |**/key:**  @`keySource`|`filename` で生成された秘密キーを使って、厳密な署名を持つ `keySource` をコンパイルします。|
 |**/listing**|標準出力にリスティング ファイルを生成します。 このオプションを省略すると、リスティング ファイルは生成されません。<br /><br /> このパラメーターは、.NET Framework 2.0 以降ではサポートされません。|
@@ -64,7 +64,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|基底クラスが指定されていない場合、 <xref:System.Object> からの既定の継承を無効にします。|
 |**/nocorstub**|CORExeMain スタブの生成を抑止します。|
 |**/nologo**|Microsoft 著作権情報を表示しません。|
-|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:** **/output** :myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
+|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:** **/output** :myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll** を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
 |**/optimize**|長いインストラクションを短く最適化します。 たとえば `br` を `br.s`にします。|
 |**/pe64**|64 ビットのイメージ (PE32+) を作成します。<br /><br /> ターゲット プロセッサを指定しない場合、既定は `/itanium`です。|
 |**/pdb**|デバッグ情報の追跡を有効にせずに PDB ファイルを作成します。|
@@ -74,7 +74,7 @@ ilasm [options] filename [[options]filename...]
 |**/stack:** `stackSize`|NT Optional ヘッダーの SizeOfStackReserve 値を `stackSize`に設定します。|
 |**/stripreloc**|ベースの再配置が不要であることを指定します。|
 |**/subsystem:** `integer`|NT オプション ヘッダーのサブシステムを `integer` で指定された値に設定します。 このコマンドは、ファイルに指定されている .subsystem IL ディレクティブをオーバーライドします。 有効な `integer` の値の一覧については、winnt.h で IMAGE_SUBSYSTEM を参照してください。|
-|**/x64**|ターゲット プロセッサとして 64 ビットの AMD プロセッサを指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/pe64**です。|
+|**/x64**|ターゲット プロセッサとして 64 ビットの AMD プロセッサを指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/pe64** です。|
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
 > [!NOTE]

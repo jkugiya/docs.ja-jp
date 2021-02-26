@@ -2,12 +2,12 @@
 title: dotnet-trace 診断ツール - .NET CLI
 description: dotnet-trace CLI ツールをインストールして使用し、.NET EventPipe を使って、ネイティブ プロファイラーなしで実行中のプロセスの .NET トレースを収集する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189703"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583010"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -180,6 +180,8 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   - `Provider` は、`KnownProviderName[:Flags[:Level][:KeyValueArgs]]` という形式です。
   - `KeyValueArgs` は、`[key1=value1][;key2=value2]` という形式です。
 
+  .NET でのいくつかの既知のプロバイダーの詳細については、[既知のイベント プロバイダー](./well-known-event-providers.md)に関するページを参照してください。
+
 - **`-- <command>` (.NET 5.0 のみを実行しているターゲット アプリケーションの場合)**
 
   ユーザーは、コレクション構成パラメーターの後にまず `--`、次にコマンドを追加すれば、5.0 以降のランタイムで .NET アプリケーションを起動することができます。 これは、起動時のパフォーマンスの問題やアセンブリ ローダーおよびバインダーのエラーなど、プロセスの早い段階で発生する問題を診断するのに役立つ場合があります。
@@ -195,6 +197,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > `dotnet-trace` を使用してトレースを収集するには、ターゲット プロセスを実行しているユーザーと同じユーザーとして、またはルートとしてそれを実行する必要があります。 それ以外の場合、このツールでターゲット プロセスとの接続を確立することはできません。
+
+> [!NOTE]
+> `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.` のようなエラー メッセージが表示される場合は、ターゲット プロセスとビットが一致しない `dotnet-trace` を使用しようとしています。 「[インストール](#install)」のリンクで、正しいビットのツールをダウンロードしてください。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 

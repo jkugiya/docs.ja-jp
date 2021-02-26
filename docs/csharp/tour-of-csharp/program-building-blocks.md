@@ -2,24 +2,24 @@
 title: C# プログラムの構成要素
 description: C# メンバー、式、およびステートメントについて説明します。 型には、作成するメンバーが含まれます。 これらのメンバーは、ステートメントおよび式から構築されます。
 ms.date: 08/06/2020
-ms.openlocfilehash: 0ac45eee180b60062a328fca9ab5c63a1537debe
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 79ba391a6c4c6dc453f6c6e07107e4dd831e111d
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216617"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582957"
 ---
 # <a name="program-building-blocks"></a>プログラムの構成要素
 
-前の記事で説明した型は、次の構成要素を使用して構築されています: "[***メンバー** _](../programming-guide/classes-and-structs/members.md)"、"[_*_式_*_"、"_*_ステートメント_*_](../programming-guide/statements-expressions-operators/index.md)"。
+前の記事で説明した型は、次の構成要素を使用して構築されています: ["***メンバー** _"](../programming-guide/classes-and-structs/members.md)、["_*_式_*_"、"_ *_ステートメント_**"](../programming-guide/statements-expressions-operators/index.md)。
 
 ## <a name="members"></a>メンバー
 
-`class` のメンバーは、"_*_静的メンバー_*_" または "_*_インスタンス メンバー_*_" です。 静的メンバーはクラスに属しており、インスタンス メンバーはオブジェクト (クラスのインスタンス) に属しています。
+`class` のメンバーは、"***静的メンバー** _" または "_*_インスタンス メンバー_**" です。 静的メンバーはクラスに属しており、インスタンス メンバーはオブジェクト (クラスのインスタンス) に属しています。
 
 クラスに格納できるメンバーの種類の概要を次の一覧に示します。
 
-- _*定数**: クラスに関連付けられている定数値
+- **定数**: クラスに関連付けられている定数値
 - **フィールド**: クラスに関連付けられている変数
 - **メソッド**: クラスによって実行可能なアクション
 - **[プロパティ]** :クラスの名前付きプロパティの読み取りと書き込みに関連付けられているアクション

@@ -2,12 +2,12 @@
 title: dotnet-counters 診断ツール - .NET CLI
 description: dotnet-counter CLI ツールをインストールし、アドホックな正常性監視と最初のレベルのパフォーマンス調査に使用する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 1842b1fb9cde0e0b7a570456766cbfdeb64c5896
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 1c802e33602c2d8f18600b9771a1f68e722d8fdf
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188583"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583308"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>パフォーマンス カウンターを調べる (dotnet-counters)
 
@@ -236,6 +236,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
 
 > [!NOTE]
 > `dotnet-counters` を使用してメトリックを監視するには、ターゲット プロセスを実行しているユーザーと同じユーザーとして、またはルートとしてそれを実行する必要があります。
+
+> [!NOTE]
+> `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.` のようなエラー メッセージが表示される場合は、ターゲット プロセスとビットが一致しない `dotnet-counters` を使用しようとしています。 「[インストール](#install)」のリンクで、正しいビットのツールをダウンロードしてください。
 
 ### <a name="examples"></a>例
 

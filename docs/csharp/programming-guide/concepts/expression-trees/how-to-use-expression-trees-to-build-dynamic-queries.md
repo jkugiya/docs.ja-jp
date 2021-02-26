@@ -3,12 +3,12 @@ title: 実行時の状態に基づくクエリの実行 (C#)
 description: LINQ メソッドの呼び出し、またはこれらのメソッドに渡される式ツリーを変更することにより、コードで実行時の状態に応じて動的にクエリを実行するために使用できるさまざまな手法について説明します。
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 0dcf1696ca323ac4823c80c7993fef7873fd8ed5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100433784"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581937"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>実行時の状態に基づくクエリの実行 (C#)
 
@@ -53,7 +53,7 @@ LINQ プロバイダーでサポートされていると仮定した場合にク
 * メソッド呼び出しを表す <xref:System.Linq.Expressions.MethodCallExpression> で現在の式ツリーをラップする。
 * ラップされた式ツリーをプロバイダーに戻し、プロバイダーの <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> メソッドを使用して値を返すか、<xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> メソッドを使用して変換されたクエリ オブジェクトを返す。
 
-元のクエリを、[IQueryable\<T>](xref:System.Linq.IQueryable%601) を返すメソッドの結果に置き換えて、新しいクエリを取得できます。 これは、次の例に示すように、実行時の状態に基づいて行うことができます。
+元のクエリを、[IQueryable\<T>](xref:System.Linq.IQueryable%601) を返すメソッドの結果に置き換えて、新しいクエリを取得できます。 次の例のように、実行時の状態に基づいて条件付きでこれを行うことができます。
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Added_method_calls":::
 
@@ -69,7 +69,7 @@ LINQ プロバイダーでサポートされていると仮定した場合にク
 
 ## <a name="construct-expression-trees-and-queries-using-factory-methods"></a>ファクトリ メソッドを使用して式ツリーとクエリを構築する
 
-この時点までのすべての例では、コンパイル時に要素型 &mdash;`string`&mdash; (したがって、クエリの型 &mdash;`IQueryable<string>`) がわかっています。 場合によっては、要素型のクエリにコンポーネントを追加する必要があります。 要素型に応じて、異なるコンポーネントの追加が必要になる場合があります。 <xref:System.Linq.Expressions.Expression?displayProperty=fullName> でファクトリ メソッドを使用して、最初から式ツリーを作成できるため、その式を特定の要素型に合わせて調整できます。
+この時点までのすべての例では、コンパイル時に要素型 &mdash;`string`&mdash; (したがって、クエリの型 &mdash;`IQueryable<string>`) がわかっています。 要素型に関係なくクエリにコンポーネントを追加したり、要素型に応じて異なるコンポーネントを追加したりすることが、必要になる場合があります。 <xref:System.Linq.Expressions.Expression?displayProperty=fullName> でファクトリ メソッドを使用して、最初から式ツリーを作成し、実行時に特定の要素型に合わせて式を調整することができます。
 
 ### <a name="constructing-an-expressiontdelegate"></a>[Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) の構築
 
@@ -77,9 +77,7 @@ LINQ メソッドのいずれかに渡す式を構築する場合、実際には
 
 [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) は <xref:System.Linq.Expressions.LambdaExpression> から継承されます。これは、次のような完全なラムダ式を表します。
 
-```csharp
-Expression<Func<string, bool>> expr = x => x.StartsWith("a");
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Compiler_generated_expression_tree":::
 
 <xref:System.Linq.Expressions.LambdaExpression> には次の 2 つのコンポーネントがあります。
 
@@ -90,25 +88,15 @@ Expression<Func<string, bool>> expr = x => x.StartsWith("a");
 
 * <xref:System.Linq.Expressions.Expression.Parameter%2A> ファクトリ メソッドを使用して、ラムダ式内の各パラメーター (存在する場合) に <xref:System.Linq.Expressions.ParameterExpression> オブジェクトを定義する。
 
-    ```csharp
-    ParameterExpression x = Parameter(typeof(string), "x");
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_parameter":::
 
-* 定義した <xref:System.Linq.Expressions.ParameterExpression> を使用して、<xref:System.Linq.Expressions.LambdaExpression> の本文を構築する。 たとえば、`x.StartsWith("a")` を表す式はこのように構築できます。
+* 定義した <xref:System.Linq.Expressions.ParameterExpression> と、<xref:System.Linq.Expressions.Expression> のファクトリ メソッドを使用して、<xref:System.Linq.Expressions.LambdaExpression> の本体を作成します。 たとえば、`x.StartsWith("a")` を表す式はこのように構築できます。
 
-    ```csharp
-    Expression body = Call(
-        x,
-        typeof(string).GetMethod("StartsWith", new [] {typeof(string)}),
-        Constant("a")
-    );
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_body":::
 
 * 適切な <xref:System.Linq.Expressions.Expression.Lambda%2A> ファクトリ メソッドのオーバーロードを使用して、コンパイル時に型指定された [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) にパラメーターと本文をラップする。
 
-    ```csharp
-    Expression<Func<string, bool>> expr = Lambda<Func<string, bool>>(body, prm);
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_lambda":::
 
 次のセクションでは、LINQ メソッドに渡す [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) を構築することが望ましいシナリオについて説明し、ファクトリ メソッドを使用してそれを行う方法の完全な例を示します。
 
@@ -116,10 +104,7 @@ Expression<Func<string, bool>> expr = x => x.StartsWith("a");
 
 たとえば、複数のエンティティ型があるとします。
 
-```csharp
-record Person(string LastName, string FirstName, DateTime DateOfBirth);
-record Car(string Model, int Year);
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Entities":::
 
 これらのいずれかのエンティティ型については、`string` フィールドの 1 つに特定のテキストが含まれているエンティティのみをフィルター処理して返す必要があります。 `Person` については、`FirstName` と `LastName` のプロパティを検索する必要があります。
 
@@ -149,7 +134,7 @@ var carsQry = new List<Car>()
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_methods_expression_of_tdelegate_usage":::
 
-## <a name="adding-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a><xref:System.Linq.IQueryable> の式ツリーにメソッド呼び出しノードを追加する
+## <a name="add-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a><xref:System.Linq.IQueryable> の式ツリーにメソッド呼び出しノードを追加する
 
 [IQueryable\<T>](xref:System.Linq.IQueryable%601) の代わりに <xref:System.Linq.IQueryable> がある場合、汎用 LINQ メソッドを直接呼び出すことはできません。 代替手段の 1 つは、上記のように内部式ツリーをビルドし、リフレクションを使用して、式ツリーに渡すときに適切な LINQ メソッドを呼び出すことです。
 

@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: da3434926b36408adfdee2171d56f23ba764f0eb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753264"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106515"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners メソッド
 
@@ -54,7 +54,7 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md) では、インラインメソッドの追跡は行われません。 プロファイラーは、インライン化された `RequestReJIT` メソッドのすべてのインスタンスが ReJITted であることを確認するために、インライン展開をブロックするか、インライン展開を追跡し、すべての inliners に対してを呼び出す必要がありました これにより、再インライン化を監視するためのプロファイラーが存在しないため、ReJIT on attach に問題が生じます。 このメソッドを呼び出すことにより、inliners の完全なセットも ReJITted になることを保証できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
 
@@ -62,7 +62,7 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 **ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net のバージョン:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

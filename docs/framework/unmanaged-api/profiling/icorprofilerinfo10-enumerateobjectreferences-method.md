@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3e31192426ea38e177b636bcc6a4b6e54057801f
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c18532450e420f38413028a18630dbf3e308fa61
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737325"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106723"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences メソッド
 
@@ -49,7 +49,7 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 `EnumerateObjectReferences`メソッドは[ObjectReferences](icorprofilercallback-objectreferences-method.md)に似ていますが、参照を格納するために配列を事前に割り当てるのではなく、プロファイラーの要求時に参照をステップインする点が異なります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
 
@@ -57,7 +57,7 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net のバージョン:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

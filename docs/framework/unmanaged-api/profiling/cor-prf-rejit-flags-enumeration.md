@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a27b6d90b51254560f25fbadb18ac95fe838ab2b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aad66285e9b31558a68b8ccdfc71f103d1772946
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99789022"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106918"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 列挙型
 
@@ -44,7 +44,7 @@ typedef enum
 |`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted メソッドは、他のメソッドでインライン化されないようにブロックされます。 |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| メソッドをインラインで ReJITted するように `GetFunctionParameters` 要求されたメソッドに対してコールバックを受信します。 |  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。  
   
@@ -52,7 +52,7 @@ typedef enum
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
   
 ## <a name="see-also"></a>関連項目
 

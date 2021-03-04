@@ -1,7 +1,7 @@
 ---
 title: .NET 暗号化モデル
 description: .NET での通常の暗号化アルゴリズムの実装を確認します。 オブジェクトの継承、ストリームのデザイン、& 構成の拡張可能な暗号化モデルについて説明します。
-ms.date: 07/14/2020
+ms.date: 02/26/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2208e36ac4521f43cfd2960d92588c8349a119ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831118"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106931"
 ---
 # <a name="net-cryptography-model"></a>.NET 暗号化モデル
 
@@ -48,14 +48,14 @@ Windows の .NET Framework:
 
 ほとんどの場合、などのアルゴリズム実装クラスを直接参照する必要はありません `AesCryptoServiceProvider` 。 通常必要なメソッドとプロパティは、のような基本アルゴリズムクラスにあり `Aes` ます。 基本アルゴリズムクラスのファクトリメソッドを使用して、既定の実装クラスのインスタンスを作成し、基本アルゴリズムクラスを参照します。 たとえば、次の例で強調表示されているコード行を確認します。
 
-:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="16":::
-:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="12":::
+:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="20":::
+:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="17":::
 
 ## <a name="cryptographic-configuration"></a>暗号化の構成
 
 暗号化の構成を使用すると、アルゴリズムの特定の実装をアルゴリズム名に解決して、.NET 暗号化クラスの機能拡張を可能にすることができます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。
 
-## <a name="choosing-an-algorithm"></a>アルゴリズムの選択
+## <a name="choose-an-algorithm"></a>アルゴリズムの選択
 
 データの整合性、データのプライバシー保護、またはキー生成など、さまざまな理由のためにアルゴリズムを選択することができます。 対称アルゴリズムおよびハッシュ アルゴリズムは、整合性の理由 (変更の防止) またはプライバシー上の理由 (表示の防止) のいずれかのためにデータを保護することを意図しています。 ハッシュ アルゴリズムは、主にデータの整合性用に使用されます。
 

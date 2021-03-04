@@ -11,12 +11,12 @@ helpviewer_keywords:
 - usage rules
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8b14d2f92502d5a82e41a322e599745bdcf8b85
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: b05edde3c6faef39aa724dd49d159abe23d049f5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "96593527"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102102972"
 ---
 # <a name="usage-rules"></a>使い方の規則
 
@@ -55,6 +55,6 @@ ms.locfileid: "96593527"
 |[CA2244: インデックス付き要素の初期化を重複させません](ca2244.md)|オブジェクト初期化子に、同じ定数インデックスを持つ複数のインデックス付き要素初期化子があります。 最後の初期化子以外はすべて冗長です。|
 |[CA2245: プロパティをそれ自体に割り当てません](ca2245.md)|プロパティが誤ってそれ自体に割り当てられました。|
 |[CA2246: 同じステートメントにシンボルとそのメンバーを割り当てません](ca2246.md)|同じステートメントで、シンボルとそのメンバー (フィールドまたはプロパティ) を割り当てることは推奨されていません。 メンバーアクセスが、割り当ての前にシンボルの古い値を使用するのか、またはこのステートメントの代入の新しい値を使用するのかは明確ではありません。|
-|[CA2247:TaskCompletionSource コンストラクターに渡された引数は、TaskContinuationOptions 列挙型ではなく、TaskCreationOptions 列挙型にする必要があります](ca2246.md)|Taskて Source には、タスクに格納されているオブジェクトの状態を取得する、基になるタスクとコンストラクターを制御する Task/Options を受け取るコンストラクターがあります。  Task/options ではなく Task続行 Ationoptions を渡した場合、オプションが状態として扱われます。|
+|[CA2247:TaskCompletionSource コンストラクターに渡された引数は、TaskContinuationOptions 列挙型ではなく、TaskCreationOptions 列挙型にする必要があります](ca2247.md)|Taskて Source には、タスクに格納されているオブジェクトの状態を取得する、基になるタスクとコンストラクターを制御する Task/Options を受け取るコンストラクターがあります。  Task/options ではなく Task続行 Ationoptions を渡した場合、オプションが状態として扱われます。|
 |[CA2248: 正しい ' enum ' 引数を ' Enum. HasFlag ' に指定してください](ca2248.md)|メソッド呼び出しの引数として渡された列挙型 `HasFlag` が、呼び出し元の列挙型と異なります。|
 |[CA2249:String.IndexOf の代わりに String.Contains を使用することを検討します](ca2249.md)|結果を `string.IndexOf` 使用して部分文字列が存在するかどうかを確認するための呼び出しは、で置き換えることができ `string.Contains` ます。|

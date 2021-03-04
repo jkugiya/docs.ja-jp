@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: b07e456f7fa9c328217b8779733d45dfe2793fe2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3b47204630056e2797b5cf126bd7c291830cea05
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753277"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103453"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject メソッド
 
@@ -40,7 +40,7 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
   \[out] `BOOL` オブジェクトが読み取り専用セグメント内にあるかどうかを示すです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
 
@@ -48,7 +48,7 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 **ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net のバージョン:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

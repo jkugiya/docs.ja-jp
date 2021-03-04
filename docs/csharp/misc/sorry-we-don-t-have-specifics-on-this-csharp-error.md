@@ -737,12 +737,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: c16698fbbf42e0967978a3502243793835f541c5
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 21d74d5a4f8eb406c3a0e48f56e4df479f222183
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216903"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103336"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>申し訳ありませんが、この C# エラーに関する詳細情報はありません。
 
@@ -758,5 +758,5 @@ Visual C# に関する質問や問題のための QA web サイトを提供し�
 
 - [C# プログラミング ガイド](../programming-guide/index.md)
 - [C# リファレンス](../language-reference/index.md)
-- [ご意見](/visualstudio/ide/feedback-options)
+- [Visual Studio フィードバック オプション](/visualstudio/ide/feedback-options)
 - [C# プログラマのための追加リソース](../tour-of-csharp/index.md)

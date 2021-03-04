@@ -2,12 +2,12 @@
 title: デスクトップ用 .NET の新機能
 description: .NET、.NET と .NET Framework の違い、および追加された新機能について説明します。
 ms.date: 12/29/2020
-ms.openlocfilehash: 9cae715f64e9de959b5b1ee6fb58ef381bab1040
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: 03dea849ad8a797b917dca953d93be6878d7ec72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98618038"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106182"
 ---
 # <a name="whats-new-with-net-for-desktop"></a>デスクトップ用 .NET の新機能
 
@@ -63,7 +63,7 @@ PCL では、開発のエクスペリエンスは、API 図形に基づいて複
 - .Net Core、.NET Framework、Xamarin、Mono を最大限に活用して .NET の機能を拡張します。
 - 開発者 (Microsoft とコミュニティ) が連携して取り組んで拡張し、すべてのシナリオを向上させることができる単一のコードベースから製品を構築します。
 
-この新しいリリースと方向は、.NET 用のゲームチェンジャーです。 .NET 5 では、作成しているアプリの種類に関係なく、コードとプロジェクトファイルは同じように見えます。 各アプリで同じランタイム、Api、言語の機能にアクセスできます。 これには、実質的に毎日実行される、新しい [パフォーマンスの改善](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) が含まれます。 詳細については、「 [.net 5 の新機能」](https://docs.microsoft.com/dotnet/core/dotnet-five)を参照してください。
+この新しいリリースと方向は、.NET 用のゲームチェンジャーです。 .NET 5 では、作成しているアプリの種類に関係なく、コードとプロジェクトファイルは同じように見えます。 各アプリで同じランタイム、Api、言語の機能にアクセスできます。 これには、実質的に毎日実行される、新しい [パフォーマンスの改善](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) が含まれます。 詳細については、「 [.net 5 の新機能」](../../core/dotnet-five.md)を参照してください。
 
 ![.NET 5 のすべてのドメイン](./media/whats-new-dotnet-core/all-domains-of-dotnet5.png)
 

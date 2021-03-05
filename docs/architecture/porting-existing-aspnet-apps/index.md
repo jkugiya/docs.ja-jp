@@ -3,12 +3,12 @@ title: .NET Core への既存の ASP.NET アプリの移植
 description: ASP.NET MVC および Web API アプリを ASP.NET Core に変換するための無料ガイドです。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 36c0cdbe03fb97ae82336d53e15be2108e9c6367
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 848f0e9533a65b59055853f1d502307abb69118c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100462986"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105946"
 ---
 # <a name="porting-existing-aspnet-apps-to-net-core"></a>.NET Core への既存の ASP.NET アプリの移植
 
@@ -62,7 +62,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 
-このガイドの対象読者は、ASP.NET MVC および Web API (.NET Framework 4.x) 用に作成された既存のアプリを .NET Core に移行することに関心をお持ちの開発者、開発リーダー、およびアーキテクトです。 ASP.NET Web Forms の開発者はこのガイドを活用できますが、電子書籍『[ASP.NET Web Forms 開発者向け Blazor](https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/)』も併せてご覧いただく必要があります。
+このガイドの対象読者は、ASP.NET MVC および Web API (.NET Framework 4.x) 用に作成された既存のアプリを .NET Core に移行することに関心をお持ちの開発者、開発リーダー、およびアーキテクトです。 ASP.NET Web Forms の開発者はこのガイドを活用できますが、電子書籍『[ASP.NET Web Forms 開発者向け Blazor](../blazor-for-web-forms-developers/index.md)』も併せてご覧いただく必要があります。
 
 第 2 の対象読者は、アプリを .NET Core に移行するタイミングを計画している技術的な意思決定者です。
 

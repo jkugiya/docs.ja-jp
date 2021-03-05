@@ -241,9 +241,8 @@
             - name: ワークフローの一時停止と再開
               href: pausing-and-resuming-a-workflow.md
         - name: 移行のガイドライン
-          href: wf-migration-guidance.md
           items:
-            - name: 移行のガイドライン
+            - name: 概要
               href: migration-guidance.md
             - name: Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
               href: net-framework-3-0-wf-in-net-framework-4-interop.md

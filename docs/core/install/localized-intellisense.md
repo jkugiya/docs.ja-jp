@@ -2,12 +2,12 @@
 title: ローカライズされた IntelliSense ファイルをインストールする
 description: Visual Studio で .NET 5+ プロジェクト (.NET Core を含む) のローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
 ms.date: 11/06/2020
-ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: febd748429dd3a2e13460354eb7402d25515f934
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506767"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105207"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET のローカライズされた IntelliSense ファイルをインストールする方法
 
@@ -18,7 +18,7 @@ ms.locfileid: "94506767"
 
 ## <a name="prerequisites"></a>前提条件
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン ([.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) など)。
+- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet) 以降のバージョン ([.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) など)。
 - [Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降のバージョン。
 
 ## <a name="download-and-install-the-localized-intellisense-files"></a>ローカライズされた IntelliSense ファイルをダウンロードしてインストールする
@@ -43,9 +43,9 @@ ms.locfileid: "94506767"
       | Windows デスクトップ       | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard         | *NETStandard.Library.Ref*          |
 
-   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、 *5.0.0* です。
+   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、*5.0.0* です。
    1. *ref* フォルダーを開きます。
-   1. モニカー フォルダーを開きます。 たとえば、 *net5.0* です。
+   1. モニカー フォルダーを開きます。 たとえば、*net5.0* です。
 
    したがって、移動先の完全なパスは *C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0* のようになります。
 
@@ -79,7 +79,7 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
 1. コンピューター上で Visual Studio インストーラーを見つけます。
 
-   たとえば、Windows 10 を実行しているコンピューター上で、 **[スタート]** を選択し、 **Visual Studio インストーラー** としてリスト表示される **V** の文字までスクロールします。
+   たとえば、Windows 10 を実行しているコンピューター上で、 **[スタート]** を選択し、**Visual Studio インストーラー** としてリスト表示される **V** の文字までスクロールします。
 
    ![Windows から Visual Studio インストーラーを開く](./media/localized-intellisense/vs-installer-windows-start.png)
 

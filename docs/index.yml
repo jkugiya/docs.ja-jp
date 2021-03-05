@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 10/9/2020
-  ms.openlocfilehash: e13d608c8840ef6081c6d3d4ecfd975c30b6a3a6
-  ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+  ms.openlocfilehash: 0fea12666b59df2be802b9b3785533d1034e619e
+  ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/14/2021
-  ms.locfileid: "98190794"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102103055"
 highlightedContent:
   items:
   - title: .NET をダウンロードする
@@ -24,7 +24,7 @@ highlightedContent:
     url: https://dotnet.microsoft.com/download
   - title: C# の概要。 クイック インタラクティブ スタート。
     itemType: get-started
-    url: csharp/tutorials/intro-to-csharp/hello-world.yml
+    url: ./csharp/tour-of-csharp/tutorials/hello-world.yml
   - title: コンソール アプリを初めて作成します。
     itemType: tutorial
     url: core/get-started.md

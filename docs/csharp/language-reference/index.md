@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
-ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
+ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98235236"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104064"
 ---
 # <a name="c-reference"></a>C# リファレンス
 
@@ -44,7 +44,7 @@ ms.locfileid: "98235236"
  C# コンパイラのエラーや警告の原因と修正法を示すコード スニペットを示します。  
   
  [C# 言語仕様](../../../_csharplang/spec/introduction.md)  
- C# 6.0 の言語仕様です。 これは、C# 6.0 言語に関するドラフト提案です。 このドキュメントは、ECMA C# 標準委員会との共同作業により改良されています。 バージョン 5.0 は、[Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) ドキュメントとして 2017 年 12 月にリリースされています。
+ C# 6.0 の言語仕様です。 これは、C# 6.0 言語に関するドラフト提案です。 このドキュメントは、ECMA C# 標準委員会との共同作業により改良されています。 バージョン 5.0 は、[Standard ECMA-334 5th Edition](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf) ドキュメントとして 2017 年 12 月にリリースされています。
 
 C# 6.0 より後のバージョンで実装された機能は、言語仕様の提案に示されています。 これらのドキュメントでは、言語仕様に加えた新機能の内容が説明されています。 これらはドラフト提案の形式です。 これらの仕様は、改良ののち、正式なレビューを行うために ECMA 標準委員会に提出され、C# 標準の今後のバージョンに組み込まれる予定です。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 47a299437b5f3ceab1cb24b8a09666366c546a64
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 01a696d5faf4f33efd0f54aee7ba62a8d9f29467
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99731033"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103856"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic の言語リファレンス
 
@@ -42,7 +42,7 @@ ms.locfileid: "99731033"
  [データの種類](data-types/index.md)  
  Visual Basic で使用可能なデータ型について説明します。  
   
- [ディレクティブ](directives/index.md)  
+ [ディレクティブ](./directives/disable-enable.md)  
  Visual Basic で使用可能なコンパイラ ディレクティブについて説明します。  
   
  [関数](functions/index.md)  

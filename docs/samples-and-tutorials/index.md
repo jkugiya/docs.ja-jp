@@ -4,16 +4,16 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: c7bbb99eeb4e00771cd1e4a3ab33b7690620b194
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 35cc5e74e764148b072438eea994905df778c835
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585729"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103570"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
-.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 この記事では、.NET、ASP.NET Core、C# のサンプルとチュートリアルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn/)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#view-and-download-samples)」セクションをご覧ください。
+.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 この記事では、.NET、ASP.NET Core、C# のサンプルとチュートリアルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn/)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tour-of-csharp/tutorials/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#view-and-download-samples)」セクションをご覧ください。
 
 ## <a name="net"></a>.NET
 

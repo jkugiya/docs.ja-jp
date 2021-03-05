@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 59928ce89dacc47534a1e7cb5ed0603d259b5a4e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063600"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104803"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 
 このセクションでは、C# 言語の重要な機能と、.NET 経由でアクセスできる C# の機能の詳細について説明します。  
   
- このセクションの大部分では、お客様が C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提としています。 プログラミングや C# についてまったくの初心者の方は、プログラミングの予備知識が必要ない [C# の概要に関するチュートリアル](../tutorials/intro-to-csharp/index.md)や「[ブラウザーでの .NET のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)」を参照することをお勧めします。  
+ このセクションの大部分では、お客様が C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提としています。 プログラミングや C# についてまったくの初心者の方は、プログラミングの予備知識が必要ない [C# の概要に関するチュートリアル](../tour-of-csharp/tutorials/index.md)や「[ブラウザーでの .NET のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)」を参照することをお勧めします。  
   
  特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。 C# 言語の仕様については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関する記事をご覧ください。  
   

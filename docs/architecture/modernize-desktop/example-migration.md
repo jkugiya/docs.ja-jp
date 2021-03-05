@@ -2,12 +2,12 @@
 title: .NET 5 への移行の例
 description: .NET Framework を対象とするサンプルアプリケーションを .NET 5 に移行する方法を示します。
 ms.date: 01/19/2021
-ms.openlocfilehash: 39ecdfa639f4d68a4a8821da839f014c8de42ab0
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 5b3743c68ee0426efffda6f999dffea788f493e9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216266"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206543"
 ---
 # <a name="example-of-migrating-to-net"></a>.NET への移行の例
 
@@ -72,6 +72,9 @@ try-convert -p "<path to your project file>"
 ```dotnetcli
 try-convert -w "<path to your solution>"
 ```
+
+> [!NOTE]
+> [変換の試行] ツールは、 [.Net Upgrade Assistant ツール](https://aka.ms/dotnet-upgrade-assistant)の一部として自動的に実行されます。 完全アップグレードアシスタントを実行することを検討してください。変換を試すだけではありません。
 
 ツールの変換が試行されたら、Visual Studio でファイルを再読み込みして実行し、テストします。 お客様のプロジェクトの内容によっては、変換を実行できない可能性があります。 その場合は、以下の手順を参照できます。
 
@@ -224,7 +227,7 @@ Windows フォームアプリケーションの移行プロセスを完了する
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-を
+to
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;

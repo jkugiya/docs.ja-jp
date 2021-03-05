@@ -6,23 +6,23 @@ metadata:
   description: C# プログラミングを学ぶ - ビギナー開発者、C# を初めて使用する開発者、および C# / .NET の上級開発者向け
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 584db55455af54bcf7e91771e3598a7349091bee
-  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+  ms.openlocfilehash: c09ccc4e9b1fb946818a26e68e3b5968eb2f681e
+  ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/15/2020
-  ms.locfileid: "97512152"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102104940"
 landingContent:
 - title: C# によるプログラミングの学習
   linkLists:
   - linkListType: get-started
     links:
     - text: オンライン、対話的な Hello World
-      url: tutorials/intro-to-csharp/hello-world.yml
+      url: ./tour-of-csharp/tutorials/hello-world.yml
     - text: C# での算術と数値
-      url: tutorials/intro-to-csharp/numbers-in-csharp.yml
+      url: ./tour-of-csharp/tutorials/numbers-in-csharp.yml
     - text: 入門用のチュートリアル
-      url: tutorials/intro-to-csharp/index.md
+      url: ./tour-of-csharp/tutorials/index.md
     - text: Visual Studio を使用して C# アプリを作成する
       url: /visualstudio/get-started/csharp/tutorial-console
     - text: C# の Q&A

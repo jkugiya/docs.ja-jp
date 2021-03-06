@@ -3,12 +3,12 @@ title: .NET 開発者向け Dapr
 description: Microsoft のオープン ソースの分散型アプリケーション ランタイムを理解し、最大限に活用するための .NET 開発者向けガイドです。
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: 53d5356c8e010f0c4e168a2186d48dd9af369ff6
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: fc38dd1a98570cc4d2b367d272a107e3ad67ead9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096740"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206569"
 ---
 # <a name="dapr-for-net-developers"></a>.NET 開発者向け Dapr
 
@@ -65,7 +65,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 編集者:
 
 > **David Pine**、Microsoft、.NET チーム、シニア コンテンツ開発者
-
+>
 > **Maira Wenzel**、Microsoft、.NET チーム、シニア プログラム マネージャー
 
 ## <a name="version"></a>バージョン

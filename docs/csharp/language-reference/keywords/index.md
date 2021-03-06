@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '@ keyword'
 ms.custom: updateeachrelease
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 3991fc62d75982b395162e085f0adfcc6d3cfb9a
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: dcc009567f5bf957ec7bb4465a6d32c0a229d596
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439639"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258378"
 ---
 # <a name="c-keywords"></a>C# のキーワード
 
@@ -38,14 +38,14 @@ ms.locfileid: "94439639"
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
 |[new](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
-|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
-|[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
-|[struct](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](../builtin-types/bool.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
-|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
-|[using](using.md)|[virtual](virtual.md)|[void](../builtin-types/void.md)|[volatile](volatile.md)|
-|[while](while.md)|
+|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[record](../../programming-guide/classes-and-structs/records.md)|
+|[ref](ref.md)|[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|
+|[short](../builtin-types/integral-numeric-types.md)|[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|
+|[string](../builtin-types/reference-types.md)|[struct](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|
+|[throw](throw.md)|[true](../builtin-types/bool.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|
+|[uint](../builtin-types/integral-numeric-types.md)|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|
+|[ushort](../builtin-types/integral-numeric-types.md)|[using](using.md)|[virtual](virtual.md)|[void](../builtin-types/void.md)|
+|[volatile](volatile.md)|[while](while.md)|
 
 ## <a name="contextual-keywords"></a>コンテキスト キーワード
 

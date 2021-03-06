@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: d4c3e373207e23877903491871f4d09e11000c1a
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 005b40a7d9f46b84fcd90541248f5f4fd243e612
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594133"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255536"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="display-text-on-an-lcd"></a>LCD にテキストを表示する
@@ -25,14 +25,14 @@ LCD 文字ディスプレイは、外部モニターを必要とせずに情報�
 ## <a name="prerequisites"></a>前提条件
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [20x4 I2C インターフェイスを使用した LCD 文字表示](https://www.bing.com/images/search?q=20x4+lcd+display+with+i2c)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [20x4 I2C インターフェイスを使用した LCD 文字表示](https://www.bing.com/images/search?q=20x4+lcd+display+with+i2c)
 - ジャンパー ワイヤ
 - ブレッドボード (省略可能/推奨)
 - Raspberry Pi GPIO ブレイクボードボード (省略可能/推奨)
 - [!INCLUDE [tutorial-prereq-dotnet](../includes/tutorial-prereq-dotnet.md)]
 
 > [!NOTE]
-> 多くの製造元が LCD 文字を表示しています。 ほとんどの設計は同一であり、製造元は機能に違いを持たせることはできません。 参考までに、このチュートリアルは [SUNFOUNDER LCD2004](https://www.sunfounder.com/lcd2004-module.html)を使用して開発されました <span class="docon docon-navigate-external x-hidden-focus"></span> 。
+> 多くの製造元が LCD 文字を表示しています。 ほとんどの設計は同一であり、製造元は機能に違いを持たせることはできません。 参考までに、このチュートリアルは [SUNFOUNDER LCD2004](https://www.sunfounder.com/lcd2004-module.html)を使用して開発されました。
 
 [!INCLUDE [prepare-pi-i2c](../includes/prepare-pi-i2c.md)]
 
@@ -49,12 +49,12 @@ LCD 文字ディスプレイは、外部モニターを必要とせずに情報�
 
 | I2C インターフェイス (ディスプレイの背面) | Raspberry Pi GPIO |
 |---------------------------------|-------------------|
-| :::image type="content" source="../media/character-display-i2c-thumb.png" alt-text="I2C GPIO エキスパンダーを示す文字表示の背面の画像。" lightbox="../media/character-display-i2c.png"::: | :::image type="content" source="../media/gpio-pinout-diagram-thumb.png" alt-text="Raspberry Pi GPIO ヘッダーのピンアウトを示す図。イメージの Raspberry Pi Foundation。" lightbox="../media/gpio-pinout-diagram.png":::<br />[イメージの Raspberry Pi Foundation](https://www.raspberrypi.org/documentation/usage/gpio/) <span class="docon docon-navigate-external x-hidden-focus"></span> 。
+| :::image type="content" source="../media/character-display-i2c-thumb.png" alt-text="I2C GPIO エキスパンダーを示す文字表示の背面の画像。" lightbox="../media/character-display-i2c.png"::: | :::image type="content" source="../media/gpio-pinout-diagram-thumb.png" alt-text="Raspberry Pi GPIO ヘッダーのピンアウトを示す図。イメージの Raspberry Pi Foundation。" lightbox="../media/gpio-pinout-diagram.png":::<br />[イメージの Raspberry Pi Foundation](https://www.raspberrypi.org/documentation/usage/gpio/)。
  |
 
 [!INCLUDE [gpio-breakout](../includes/gpio-breakout.md)]
 
-## <a name="create-the-app"></a>アプリケーションの作成
+## <a name="create-the-app"></a>アプリを作成する
 
 お好みの開発環境で、次の手順を実行します。
 
@@ -69,7 +69,7 @@ LCD 文字ディスプレイは、外部モニターを必要とせずに情報�
 
     :::code language="csharp" source="~/iot-samples/tutorials/LcdTutorial/Program.cs" :::
 
-    上記のコードにより、次のことが行われます。
+    上のコードでは以下の操作が行われます。
 
     - [Using 宣言](../../csharp/whats-new/csharp-8.md#using-declarations)は、を `I2cDevice` 呼び出し `I2cDevice.Create` 、 `I2cConnectionSettings` パラメーターとパラメーターを使用して新しいを渡すことによって、のインスタンスを作成し `busId` `deviceAddress` ます。 これ `I2cDevice` は、I2C バスを表します。 この `using` 宣言により、オブジェクトが破棄され、ハードウェアリソースが正常に解放されます。
 
@@ -100,13 +100,13 @@ LCD 文字ディスプレイは、外部モニターを必要とせずに情報�
 
 1. <kbd>Ctrl + C</kbd>キーを押してプログラムを終了します。
 
-お疲れさまでした。 I2C と GPIO の展開を使用して、LCD にテキストを表示しました。
+おめでとうございます。 I2C と GPIO の展開を使用して、LCD にテキストを表示しました。
 
 ## <a name="get-the-source-code"></a>ソース コードを入手する
 
-このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/LcdTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> ます。
+このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/LcdTutorial)ます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [General Purpose 入力/出力を使用して LED を点滅させる方法について説明します](../tutorials/blink-led.md)

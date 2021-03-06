@@ -2,12 +2,12 @@
 title: コードとしてのインフラストラクチャ
 description: クラウドネイティブアプリケーションでのインフラストラクチャとしてのインフラストラクチャの導入 (IaC)
 ms.date: 05/13/2020
-ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a7cd3a0b4906b1a4aec9e1015d6128867ae9963
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163740"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255445"
 ---
 # <a name="infrastructure-as-code"></a>コードとしてのインフラストラクチャ
 
@@ -60,7 +60,7 @@ Azure Resource Manager テンプレートは、Azure でさまざまなリソー
 
 ARM テンプレートは、動的な環境と構成情報を使用してパラメーター化できます。 これにより、開発、QA、実稼働などのさまざまな環境を定義するために再利用できます。 通常、このテンプレートでは、1つの Azure リソースグループ内のすべてのリソースが作成されます。 必要に応じて、1つの Resource Manager テンプレートに複数のリソースグループを定義できます。 リソースグループ自体を削除することで、環境内のすべてのリソースを削除できます。 コスト分析は、リソースグループレベルで実行することもできます。これにより、各環境のコストをすばやく計算できます。
 
-GitHub の [Azure クイックスタートテンプレート](https://github.com/Azure/azure-quickstart-templates) プロジェクトには、多くの例または ARM テンプレートが用意されています。 新しいテンプレートを作成したり、既存のテンプレートを変更したりするのに役立ちます。
+GitHub の [Azure クイックスタートテンプレート](https://github.com/Azure/azure-quickstart-templates) プロジェクトで使用できる ARM テンプレートには、多くの例が用意されています。 新しいテンプレートを作成したり、既存のテンプレートを変更したりするのに役立ちます。
 
 Resource Manager テンプレートは、さまざまな方法で実行できます。 おそらく、簡単な方法は、単に Azure portal に貼り付けることです。 試験的なデプロイでは、この方法を簡単に行うことができます。 また、Azure DevOps のビルドプロセスまたはリリースプロセスの一部として実行することもできます。 Azure への接続を活用してテンプレートを実行するタスクがあります。 Resource Manager テンプレートへの変更は段階的に適用されます。つまり、新しいリソースを追加するには、テンプレートに追加するだけで済みます。 ツールは、現在のリソースと、テンプレートで定義されているリソースとの違いを調整します。 リソースは、テンプレートで定義されている内容と一致するように作成または変更されます。  
 

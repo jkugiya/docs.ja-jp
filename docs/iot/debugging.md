@@ -7,12 +7,12 @@ ms.date: 11/13/2020
 ms.topic: how-to
 ms.prod: dotnet
 zone_pivot_groups: ide-set-one
-ms.openlocfilehash: 7b9872304ee53071452772e3da02081a7def4d80
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 58858384c49a296e0b33d663f3ef930caf9cace6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594018"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258066"
 ---
 # <a name="debug-net-apps-on-raspberry-pi"></a>Raspberry Pi で .NET アプリをデバッグする
 
@@ -26,7 +26,7 @@ Visual Studio Code から Raspberry Pi で .NET をデバッグするには、Ra
 
 ### <a name="enable-ssh-on-the-raspberry-pi"></a>Raspberry Pi で SSH を有効にする
 
-リモートデバッグには SSH が必要です。 SSH を有効にするには、 [Raspberry Pi のドキュメントで *Ssh を有効* にする方法を参照してください](https://www.raspberrypi.org/documentation/remote-access/ssh/) <span class="docon docon-navigate-external x-hidden-focus"></span> 。
+リモートデバッグには SSH が必要です。 SSH を有効にするには、 [Raspberry Pi のドキュメントで *Ssh を有効* にする方法を参照してください](https://www.raspberrypi.org/documentation/remote-access/ssh/)。
 
 ### <a name="install-the-visual-studio-remote-debugger-on-the-raspberry-pi"></a>Raspberry Pi に Visual Studio リモートデバッガーをインストールする
 
@@ -46,7 +46,7 @@ Raspberry Pi の Bash コンソール内 (ローカルまたは SSH 経由) で�
 
 1. Visual Studio Code は、SSH プロトコルを使用してリモートでデバッグします。 セキュリティ上の理由 `root` から、では、既定で SSH 経由でのログオンは許可されていません。 で SSH を使用してログオンできるようにするには `root` 、次の手順を実行します。
 
-    1. [Nano](https://www.nano-editor.org/docs.php)で */etc/ssh/sshd_config* を開くには、次のコマンドを実行し <span class="docon docon-navigate-external x-hidden-focus"></span> ます。
+    1. [Nano](https://www.nano-editor.org/docs.php)で */etc/ssh/sshd_config* を開くには、次のコマンドを実行します。
 
         ```bash
         sudo nano /etc/ssh/sshd_config
@@ -110,9 +110,9 @@ Raspberry Pi の Bash コンソール内 (ローカルまたは SSH 経由) で�
 - `pipeArgs` SSH クライアントに渡されるパラメーターです。 パスワードパラメーターと、の形式のユーザーを指定してください `root` `<user>@<hostname>` 。
 
 > [!IMPORTANT]
-> 上の例では、 [PuTTY](https://www.ssh.com/ssh/putty/) SSH クライアントのコンポーネントである *plink* を使用して <span class="docon docon-navigate-external x-hidden-focus"></span> います。 [OpenSSH](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> 最近のバージョンの Windows および Linux に含まれる OpenSSH は、代わりに使用することができます。 ただし、OpenSSH は、コマンドラインパラメーターとしてのパスワードの送信をサポートしていません。 OpenSSH を使用するには、 [パスワードなし SSH アクセス用に Raspberry Pi を構成](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md) <span class="docon docon-navigate-external x-hidden-focus"></span> します。
+> 上の例では、 [PuTTY](https://www.ssh.com/ssh/putty/) SSH クライアントのコンポーネントである *plink* を使用して <span class="docon docon-navigate-external x-hidden-focus"></span> います。 [](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> 最近のバージョンの Windows および Linux に含まれる OpenSSH は、代わりに使用することができます。 ただし、OpenSSH は、コマンドラインパラメーターとしてのパスワードの送信をサポートしていません。 OpenSSH を使用するには、 [パスワードなし SSH アクセス用に Raspberry Pi を構成](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)します。
 
-### <a name="deploy-the-app"></a>アプリケーションのデプロイ
+### <a name="deploy-the-app"></a>アプリを配置する
 
 「 [Raspberry Pi への .net アプリのデプロイ](deployment.md)」の説明に従って、アプリをデプロイします。 配置パスが、 `cwd` 構成 *のlaunch.js* のパラメーターに指定されているパスと同じであることを確認してください。
 
@@ -120,9 +120,9 @@ Raspberry Pi の Bash コンソール内 (ローカルまたは SSH 経由) で�
 
 [ **実行** ] タブで、[ **.net Core Launch (リモートコンソール)** の構成] を選択し、[ **デバッグの開始**] を選択します。 アプリは Raspberry Pi で起動します。 デバッガーを使用して、ブレークポイントの設定、ローカルの検査などを行うことができます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>関連項目
 
-[ARM で .Net Core を使用して Raspberry Pi に対して Windows で VS Code を使用したリモートデバッグ](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)<span class="docon docon-navigate-external x-hidden-focus"></span>
+[ARM で .NET Core を使用して Raspberry Pi に対して Windows で VS Code を使用したリモートデバッグ](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)
 
 ::: zone-end
 

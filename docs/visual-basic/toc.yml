@@ -1419,6 +1419,6 @@
     - name: 言語仕様
       href: reference/language-specification/
 - name: サンプル アプリケーション
-  href: 'https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic'
+  href: 'https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic'
 - name: チュートリアル
   href: walkthroughs.md

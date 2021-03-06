@@ -7,21 +7,21 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: 18258c54cffdc538ddd11ec1393639216f86f85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509781"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255458"
 ---
-# <a name="no-locblazor-app-hosting-models"></a>Blazor アプリホスティングモデル
+# <a name="blazor-app-hosting-models"></a>Blazor アプリホスティングモデル
 
-Blazor アプリは、ASP.NET Web フォームアプリと同じように、IIS でホストできます。 Blazor アプリは、次のいずれかの方法でホストすることもできます。
+Blazor アプリは、次のいずれかの方法でホストできます。
 
 - クライアント側のブラウザー () WebAssembly 。
 - ASP.NET Core アプリのサーバー側。
 
-## <a name="no-locblazor-no-locwebassembly-apps"></a>BlazorWebAssemblyアプリ
+## <a name="blazor-webassembly-apps"></a>BlazorWebAssemblyアプリ
 
 BlazorWebAssemblyアプリは、ベースの .net ランタイムでブラウザーで直接実行さ WebAssembly れます。 BlazorWebAssemblyアプリは、角度や反応などのフロントエンド JavaScript フレームワークと同様の方法で機能します。 ただし、JavaScript を記述するのではなく、C# を記述します。 .NET ランタイムは、アプリアセンブリおよび必要な依存関係と共に、アプリと共にダウンロードされます。 ブラウザープラグインまたは拡張機能は必要ありません。
 
@@ -35,7 +35,7 @@ BlazorWebAssemblyアプリは純粋にクライアント側で実行します。
 
 とフルスタック .NET web 開発のすべての利点を得るには Blazor 、 Blazor WebAssembly ASP.NET Core でアプリをホストします。 クライアントとサーバーの両方で .NET を使用することにより、コードを簡単に共有し、1つの一貫した言語、フレームワーク、ツールのセットを使用してアプリをビルドできます。 Blazor には、 Blazor アプリと ASP.NET Core ホストプロジェクトの両方を含むソリューションを設定するための便利なテンプレートが用意されて WebAssembly います。 ソリューションをビルドすると、アプリから構築された静的ファイルは、 Blazor フォールバックルーティングが既に設定されている ASP.NET Core アプリによってホストされます。
 
-## <a name="no-locblazor-server-apps"></a>Blazor サーバーアプリ
+## <a name="blazor-server-apps"></a>Blazor サーバーアプリ
 
 [ Blazor アーキテクチャ](architecture-comparison.md#blazor)に関する議論から Blazor 、コンポーネントは出力をと呼ばれる中間の抽象化にレンダリング `RenderTree` します。 フレームワークは、 Blazor レンダリングされた内容を以前にレンダリングしたものと比較します。 違いは DOM に適用されます。 Blazor コンポーネントは、レンダリングされた出力の適用方法から切り離されます。 そのため、コンポーネント自体は、UI を更新するプロセスと同じプロセスで実行する必要はありません。 実際、同じコンピューターで実行する必要もありません。
 
@@ -45,7 +45,7 @@ BlazorWebAssemblyアプリは純粋にクライアント側で実行します。
 
 BlazorASP.NET AJAX とコントロールを使用している場合は、サーバーホスティングモデルがよく知られている可能性があり <xref:System.Web.UI.UpdatePanel> ます。 コントロールは、 `UpdatePanel` ページ上のトリガーイベントに応じて部分ページ更新の適用を処理します。 がトリガーされると、は `UpdatePanel` 部分的な更新を要求し、ページを更新しなくても更新を適用します。 UI の状態は、を使用して管理され `ViewState` ます。 Blazor サーバーアプリは、アプリがクライアントとのアクティブな接続を必要とすると若干異なります。 また、すべての UI の状態はサーバー上で保持されます。 これらの違いを除けば、2つのモデルは概念的に似ています。
 
-## <a name="how-to-choose-the-right-no-locblazor-hosting-model"></a>適切ホスティングモデルを選択する方法 Blazor
+## <a name="how-to-choose-the-right-blazor-hosting-model"></a>適切ホスティングモデルを選択する方法 Blazor
 
 [ Blazor ホスティングモデル](/aspnet/core/blazor/hosting-models)に関するドキュメントで説明されているように、さまざまな Blazor ホスティングモデルで異なるトレードオフがあります。
 

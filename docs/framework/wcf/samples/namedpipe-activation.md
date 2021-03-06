@@ -3,16 +3,16 @@ description: '詳細情報: NamedPipe のアクティブ化'
 title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 4955511f24d831f4aa9e3aa67fdb3f6a218d7af0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 32878b08450b6d4d2d88b3d36c019b3e2138625f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99752209"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259539"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
 
-このサンプルでは、名前付きパイプを介して通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS: Windows Process Activation Service) を使用してサービスをホストする方法を示します。 このサンプルは [はじめに](getting-started-sample.md) に基づいており、Windows Vista を実行する必要があります。
+このサンプルでは、Windows プロセスアクティブ化サービス (WAS) を使用して、名前付きパイプを介して通信するサービスをアクティブ化するサービスをホストする方法を示します。 このサンプルは [はじめに](getting-started-sample.md) に基づいており、Windows Vista を実行する必要があります。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。

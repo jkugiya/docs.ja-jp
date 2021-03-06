@@ -3,12 +3,12 @@ title: インターネット インフォメーション サービスでホス�
 description: IIS でホストされている WCF サービスを開発および展開するために必要なタスクについて説明します。その際、コンポーネントのインストールを確認します。
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ae01533efbeddba75efd159d187a896e2d97ec1a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "90557568"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259890"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -34,9 +34,9 @@ IIS でホストされる WCF サービスが正常に機能するためには�
 
 他のオペレーティングシステムに IIS をインストールする手順については、「windows [Vista および windows 7 に](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) Iis をインストールする」および「 [Windows Server 2012 R2 に Iis 8.5 をインストール](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)する」を参照してください。
 
-IIS が既にコンピューターに存在する場合、.NET Framework のインストールプロセスによって WCF が自動的に IIS に登録されます。 .NET Framework の後に IIS がインストールされている場合は、WCF を IIS と ASP.NET に登録するために追加の手順が必要になります。 使用しているオペレーティング システムに応じて、次のように実行します。
+IIS が既にコンピューターに存在する場合、.NET Framework のインストールプロセスによって WCF が自動的に IIS に登録されます。 .NET Framework 後に IIS をインストールする場合は、WCF を IIS と ASP.NET に登録するために追加の手順が必要になります。 使用しているオペレーティング システムに応じて、次のように実行します。
 
-- Windows 7 および Windows Server 2003: [ServiceModel 登録ツール (ServiceModelReg.exe)](../servicemodelreg-exe.md) ツールを使用して、WCF を IIS に登録します。 このツールを使用するには、 [Visual Studio の開発者コマンドプロンプト](../../tools/developer-command-prompt-for-vs.md)で「 **ServiceModelReg.exe/i/x** 」と入力します。
+- Windows 7 および Windows Server 2003: [ServiceModel 登録ツール (ServiceModelReg.exe)](../servicemodelreg-exe.md) ツールを使用して、WCF を IIS に登録します。 このツールを使用するには、 `ServiceModelReg.exe /i /x` [開発者コマンドラインシェル](/visualstudio/ide/reference/command-prompt-powershell)で「」と入力します。
 
 - Windows 7: 最後に、.NET Framework バージョン4以降を使用するように ASP.NET が構成されていることを確認する必要があります。 これを行うには、オプションを指定して ASPNET_Regiis ツールを実行し `–i` ます。 詳細については、「 [ASP.NET IIS Registration Tool](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))」を参照してください。
 

@@ -2,12 +2,12 @@
 title: F# コードのフォーマットに関するガイドライン
 description: 'F # コードを書式設定するためのガイドラインについて説明します。'
 ms.date: 08/31/2020
-ms.openlocfilehash: 6f1cf8decbaf02aa7d5e202010d4c240c24bdcf9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103674"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259903"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -928,6 +928,20 @@ let printListWithOffsetPiped a list1 =
 
 ラムダ式の本体が複数行の長さである場合は、ローカルスコープの関数にリファクタリングすることを検討してください。
 
+関数が単一の複数行の組引数を受け取る場合、 [コンストラクター、静的メンバー、およびメンバー呼び出しの書式設定](#formatting-constructors-static-members-and-member-invocations) についても同じ規則が適用されます。
+
+```fsharp
+let myFunction (a: int, b: string, c: int, d: bool) =
+    ()
+
+myFunction(
+    478815516,
+    "A very long string making all of this multi-line",
+    1515,
+    false
+)
+```
+
 ### <a name="formatting-infix-operators"></a>挿入演算子の書式設定
 
 演算子はスペースで区切ります。 このルールの明確な例外は `!` 、 `.` 演算子と演算子です。
@@ -1084,6 +1098,26 @@ let untypedRes =
         sourceText,
         parsingOptionsWithDefines
     )
+```
+
+複数行の引数が1つしかない場合でも、同じ規則が適用されます。
+
+```fsharp
+let poemBuilder = StringBuilder()
+poemBuilder.AppendLine(
+    """
+The last train is nearly due
+The Underground is closing soon
+And in the dark, deserted station
+Restless in anticipation
+A man waits in the shadows
+    """
+)
+
+Option.traverse(
+    create
+    >> Result.setError [ invalidHeader "Content-Checksum" ]
+)
 ```
 
 ## <a name="formatting-attributes"></a>属性の書式設定

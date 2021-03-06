@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/14/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 1270e7629e9afc12b1d76d260d4b8b51428f1040
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: bc5c2b9f0876603c152da859547c58b83826969c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594151"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259838"
 ---
 # <a name="read-environmental-conditions-from-a-sensor"></a>センサーから環境条件を読み取る
 
@@ -22,7 +22,7 @@ IoT デバイスの最も一般的なシナリオの1つは、環境の状態の
 ## <a name="prerequisites"></a>前提条件
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) <span class="docon docon-navigate-external x-hidden-focus"></span> 湿度/気圧/温度センサーのブレイクアウト
+- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) 湿度/気圧/温度センサーのブレイクアウト
 - ジャンパー ワイヤ
 - ブレッドボード (省略可能)
 - Raspberry Pi GPIO ブレイクボードボード (オプション)
@@ -50,7 +50,7 @@ Raspberry Pi から BME280 ブレイクアウトへの接続を次に示しま�
 
 [!INCLUDE [gpio-breakout](../includes/gpio-breakout.md)]
 
-## <a name="create-the-app"></a>アプリケーションの作成
+## <a name="create-the-app"></a>アプリを作成する
 
 お好みの開発環境で、次の手順を実行します。
 
@@ -65,7 +65,7 @@ Raspberry Pi から BME280 ブレイクアウトへの接続を次に示しま�
 
     :::code language="csharp" source="~/iot-samples/tutorials/SensorTutorial/Program.cs" :::
 
-    上記のコードにより、次のことが行われます。
+    上のコードでは以下の操作が行われます。
 
     - `i2cSettings` は、の新しいインスタンスに設定され `I2cConnectionSettings` ます。 コンストラクターは、パラメーターを1に設定し、 `busId` `deviceAddress` パラメーターをに設定し `Bme280.DefaultI2cAddress` ます。
 
@@ -98,13 +98,13 @@ Raspberry Pi から BME280 ブレイクアウトへの接続を次に示しま�
 
 1. <kbd>Ctrl + C</kbd>キーを押してプログラムを終了します。
 
-お疲れさまでした。 I2C を使用して、気温/湿度/気圧センサーから値を読み取りました。
+おめでとうございます。 I2C を使用して、気温/湿度/気圧センサーから値を読み取りました。
 
 ## <a name="get-the-source-code"></a>ソース コードを入手する
 
-このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> ます。
+このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial)ます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [LCD にテキストを表示する方法について説明します](../tutorials/lcd-display.md)

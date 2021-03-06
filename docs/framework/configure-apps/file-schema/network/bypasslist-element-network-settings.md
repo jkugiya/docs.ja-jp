@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 58cdcf046b2a5a292493c5704739b22aa4ec4f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a03b391c839b7255fdd423a305d474d0e48ad39
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178412"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259357"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist> 要素 (ネットワーク設定)
 
@@ -58,7 +58,7 @@ ms.locfileid: "91178412"
 
  バイパスリストには、 <xref:System.Net.WebRequest> インスタンスがプロキシサーバー経由ではなく直接アクセスする uri を記述する正規表現が含まれています。  
   
- この要素に正規表現を指定する場合は、注意が必要です。 正規表現 "[a-z] + \\ . contoso \\ .com" は、contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 Contoso.com ドメイン内のホストのみを一致させるには、アンカー ("$"): "[a-z] + \\ . contoso \\ .com $" を使用します。  
+ この要素に正規表現を指定する場合は、注意が必要です。 正規表現は、 `[a-z]+\\.contoso\\.com` contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 Contoso.com ドメイン内のホストのみを一致させるには、アンカー () を使用します `$` `[a-z]+\\.contoso\\.com$` 。
   
  正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。  
   

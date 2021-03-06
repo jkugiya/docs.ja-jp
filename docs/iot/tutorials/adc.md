@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 7cf25f181997ed66639842727be57e7824ef5466
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 509616e3423fbb83b74bfbb8ecec1a7df49f0a20
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739988"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259742"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="read-values-from-an-analog-to-digital-converter"></a>アナログ デジタル コンバーターから値を読み取る
@@ -23,7 +23,7 @@ ms.locfileid: "96739988"
 ## <a name="prerequisites"></a>前提条件
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [MCP3008](https://www.microchip.com/wwwproducts/MCP3008) <span class="docon docon-navigate-external x-hidden-focus"></span> アナログからデジタルへのコンバーター
+- [MCP3008](https://www.microchip.com/wwwproducts/MCP3008) のアナログ/デジタルコンバーター
 - 3ピン potentiometer
 - ブレッドボード
 - ジャンパー ワイヤ
@@ -61,7 +61,7 @@ Potentiometer の外側のピンに 3.3 V とグランドを提供します。 �
 
 [!INCLUDE [gpio-breakout](../includes/gpio-breakout.md)]
 
-## <a name="create-the-app"></a>アプリケーションの作成
+## <a name="create-the-app"></a>アプリを作成する
 
 お好みの開発環境で、次の手順を実行します。
 
@@ -104,7 +104,7 @@ Potentiometer の外側のピンに 3.3 V とグランドを提供します。 �
 
 ## <a name="get-the-source-code"></a>ソース コードを入手する
 
-このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> ます。
+このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial)ます。
 
 ## <a name="next-steps"></a>次のステップ
 

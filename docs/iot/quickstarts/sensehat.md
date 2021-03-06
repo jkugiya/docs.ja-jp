@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 28d6650187bbf7b9ce91516f4da4d09b114c904a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739531"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259701"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>クイックスタート-.NET を使用して Raspberry Pi Sense HAT を駆動する
 
-Raspberry pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** ttached on **T** op) は、Raspberry pi のアドオンボードです **A**。 Sense HAT には、8×8の RGB LED 行列 (5 ボタンのジョイスティック) が搭載されており、次のセンサーが含まれています。
+Raspberry Pi [SENSE HAT](https://www.raspberrypi.org/products/sense-hat/) (**H** ttached on **T** op)**は、Raspberry** pi のアドオンボードです。 Sense HAT には、8×8の RGB LED 行列 (5 ボタンのジョイスティック) が搭載されており、次のセンサーが含まれています。
 
 - ジャイロスコープ
 - 加速度計
@@ -41,7 +41,7 @@ Sense HAT を Raspberry Pi に接続します。 Raspberry Pi (ローカルま�
 . <(wget -q -O - https://aka.ms/dotnet-iot-sensehat-quickstart)
 ```
 
-コマンドは、スクリプトをダウンロードして実行します。 スクリプト:
+コマンドは、スクリプトをダウンロードして実行します。 スクリプトは次のようになります。
 
 - .NET SDK をインストールします。
 - Sense HAT クイックスタートプロジェクトを含む GitHub リポジトリを複製します。
@@ -52,7 +52,7 @@ Sense HAT を Raspberry Pi に接続します。 Raspberry Pi (ローカルま�
 
 ## <a name="get-the-source-code"></a>ソース コードを入手する
 
-このクイックスタートのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> ます。
+このクイックスタートのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart)ます。
 
 ## <a name="next-steps"></a>次のステップ
 

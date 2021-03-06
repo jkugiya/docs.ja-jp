@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2996eb5b53041d8b5955741c743e3ebeb0de7d1d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: da4d67c7c887cac54e3383f57aafd7c6a39638f5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "96593881"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255534"
 ---
-<span data-ttu-id="bd1bb-101">[.NET SDK](https://dotnet.microsoft.com/download) <span class="docon docon-navigate-external x-hidden-focus"></span> バージョン 5.0.100 RC2 以降</span><span class="sxs-lookup"><span data-stu-id="bd1bb-101">[.NET SDK](https://dotnet.microsoft.com/download) <span class="docon docon-navigate-external x-hidden-focus"></span> version 5.0.100 RC2 or later</span></span>
+<span data-ttu-id="11ac4-101">[.NET SDK](https://dotnet.microsoft.com/download) バージョン 5.0.100 RC2 以降</span><span class="sxs-lookup"><span data-stu-id="11ac4-101">[.NET SDK](https://dotnet.microsoft.com/download) version 5.0.100 RC2 or later</span></span>

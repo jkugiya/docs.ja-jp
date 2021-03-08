@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 9c709e2110aef4281c348f697408044a191314c6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 43c18bad3e24e14c28d2ca3d5d88170d584e55a8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99774981"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106645"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort データ型 (Visual Basic)
 
@@ -67,7 +67,7 @@ Dim number = &H_5826us
   
 - **負の数値。** `UShort` は符号なしの型であるため、負の数を表すことはできません。 `UShort` 型に評価される式で、単項マイナス (`-`) 演算子を使用すると、Visual Basic で式が最初に `Integer` に変換されます。  
   
-- **CLS 準拠。** `UShort` データ型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
+- **CLS 準拠。** `UShort` データ型は[共通言語仕様](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
   
 - **拡大変換。** `UShort` データ型は、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、および `Double` に拡大変換されます。 これは、<xref:System.OverflowException?displayProperty=nameWithType> エラーを発生させることなく、これらの型のいずれかに `UShort` を変換できることを意味します。  
   

@@ -4,12 +4,12 @@ description: .NET ツールを実行するときの一般的な問題と、考�
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: c5bac4c273cdddae609657c65448e3cc4bd3579d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 9cf0320ec5b5d6f317a4ef7f9052c0068b3ad8e5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633909"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104090"
 ---
 # <a name="troubleshoot-net-tool-usage-issues"></a>.NET ツールの使用に関する問題のトラブルシューティング
 
@@ -94,7 +94,7 @@ dotnet --list-runtimes
 dotnet --info
 ```
 
-現在インストールされているランタイム バージョンがツールでサポートされている必要があると思われる場合は、ツールの作成者に連絡して、バージョン番号またはマルチターゲットを更新できるかどうかを確認してください。 更新されたバージョン番号でツール パッケージが再コンパイルされて NuGet に再発行された後、コピーを更新することができます。 それまでの間の最も簡単な解決策は、実行しようとしているツールで動作するランタイムのバージョンをインストールすることです。 特定の .NET ランタイム バージョンをダウンロードするには、[.NET ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-core)にアクセスしてください。
+現在インストールされているランタイム バージョンがツールでサポートされている必要があると思われる場合は、ツールの作成者に連絡して、バージョン番号またはマルチターゲットを更新できるかどうかを確認してください。 更新されたバージョン番号でツール パッケージが再コンパイルされて NuGet に再発行された後、コピーを更新することができます。 それまでの間の最も簡単な解決策は、実行しようとしているツールで動作するランタイムのバージョンをインストールすることです。 特定の .NET ランタイム バージョンをダウンロードするには、[.NET ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet)にアクセスしてください。
 
 .NET SDK を既定以外の場所にインストールする場合は、環境変数 `DOTNET_ROOT` を `dotnet` 実行可能ファイルが格納されているディレクトリに設定する必要があります。
 

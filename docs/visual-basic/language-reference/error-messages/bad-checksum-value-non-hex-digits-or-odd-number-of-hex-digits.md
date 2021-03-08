@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 8af1ca5e3f733278054300c2a79134817c56cf5c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 051ee0e8ec8b87be4d5feeac8298c0e7a71baea7
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99797108"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103882"
 ---
 # <a name="bc42033-bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>BC42033:不適切なチェックサム値です。16 進数ではないか、または奇数の 16 進数です。
 
@@ -36,4 +36,4 @@ ms.locfileid: "99797108"
 ## <a name="see-also"></a>関連項目
 
 - [ASP.NET の概要](/aspnet/overview)
-- [ご意見](/visualstudio/ide/feedback-options)
+- [Visual Studio フィードバック オプション](/visualstudio/ide/feedback-options)

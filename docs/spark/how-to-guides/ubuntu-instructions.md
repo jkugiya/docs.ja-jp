@@ -4,12 +4,12 @@ description: Ubuntu で .NET for Apache Spark アプリケーションをビル�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 77daad7298c41d21054db9174f30a8d1ed12648d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ae5e0e24ef53b74bd34a2c0100c30a375d8bd71f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687793"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103921"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法を学習する
 
@@ -19,7 +19,7 @@ ms.locfileid: "94687793"
 
 以下の必須コンポーネントがすべて揃っている場合は、「[ビルド](#build)」の手順に進んでください。
 
-1. **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。  .NET Core 2.1、2.2、および 3.1 がサポートされています。
+1. **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。  .NET Core 2.1、2.2、および 3.1 がサポートされています。
 
 2. **[OpenJDK 8](https://openjdk.java.net/install/)** をインストールする。
 

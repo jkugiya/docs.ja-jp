@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: c7521f6aef79825a8cc20d5455588a2d684b9ccb
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609604"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104038"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -99,6 +99,6 @@ private static async Task<int> AsyncConsoleWork()
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
-- [C# リファレンス](../index.md)
+- [C# リファレンス](../../language-reference/index.md)
 - [Main() とコマンドライン引数](index.md)
 - [コマンド ライン引数を表示する方法](./how-to-display-command-line-arguments.md)

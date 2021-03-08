@@ -2,12 +2,12 @@
 title: dotnet-symbol 診断ツール - .NET CLI
 description: dotnet-symbol CLI ツールをインストールして使用し、.NET ダンプとミニダンプのデバッグに必要なファイルをダウンロードする方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 5cc304a3917921a964ceb61bc2c58e942b0baa85
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764995"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105324"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>シンボル ダウンローダー (dotnet-symbol)
 
@@ -97,7 +97,7 @@ dotnet-symbol --host-only --debugging <dump file path>
 
 - シンボルのダウンロード中の 404 Not Found。
 
-   シンボルのダウンロードは、[公式 Web サイト](https://dotnet.microsoft.com/download/dotnet-core)などの公式チャネルを通じて取得された公式の .NET Core ランタイム バージョンと、[dotnet インストール スクリプト内の既定のソース](../tools/dotnet-install-script.md)でのみサポートされています。 デバッグ ファイルのダウンロード中に 404 エラーが発生した場合は、ダンプが別のソースの .NET Core ランタイムを使って作成されたことが示されている可能性があります。たとえば、ソースからローカルに構築されたものや、特定の Linux ディストリビューション用のもの、または archlinux のようなコミュニティ サイトから作成されたものです。 このような場合は、デバッグに必要なファイル (dotnet、libcoreclr.so、libmscordaccore.so) を、それらのソースから、またはダンプ ファイルが作成された環境からコピーする必要があります。
+   シンボルのダウンロードは、[公式 Web サイト](https://dotnet.microsoft.com/download/dotnet)などの公式チャネルを通じて取得された公式の .NET Core ランタイム バージョンと、[dotnet インストール スクリプト内の既定のソース](../tools/dotnet-install-script.md)でのみサポートされています。 デバッグ ファイルのダウンロード中に 404 エラーが発生した場合は、ダンプが別のソースの .NET Core ランタイムを使って作成されたことが示されている可能性があります。たとえば、ソースからローカルに構築されたものや、特定の Linux ディストリビューション用のもの、または archlinux のようなコミュニティ サイトから作成されたものです。 このような場合は、デバッグに必要なファイル (dotnet、libcoreclr.so、libmscordaccore.so) を、それらのソースから、またはダンプ ファイルが作成された環境からコピーする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

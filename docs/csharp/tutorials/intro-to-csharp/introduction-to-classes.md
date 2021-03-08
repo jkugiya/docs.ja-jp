@@ -3,12 +3,12 @@ title: クラスおよびオブジェクト - C# チュートリアルの概要
 description: 初めての C# プログラムを作成し、オブジェクト指向の概念を確認します
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: a48e5790d2872ca3074bd7ce06c23412086b00f3
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 3da445e6c656628fffdb9ef9384fb1a1c556a2cd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585365"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255419"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>クラスおよびオブジェクトを使用したオブジェクト指向プログラミングについて確認します
 
@@ -16,7 +16,7 @@ ms.locfileid: "99585365"
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルでは、ローカル開発用にセットアップされたコンピューターがあることを想定しています。 Windows、Linux、または macOS で、.NET CLI を使用してアプリケーションを作成、ビルド、実行できます。 Windows では、Visual Studio 2019 を使用できます。 セットアップの手順については、「[ローカル環境をセットアップする](local-environment.md)」を参照してください。
+このチュートリアルでは、ローカル開発用にセットアップされたコンピューターがあることを想定しています。 Windows、Linux、または macOS で、.NET CLI を使用してアプリケーションを作成、ビルド、実行できます。 Windows では、Visual Studio 2019 を使用できます。 セットアップの手順については、「[ローカル環境をセットアップする](../../tour-of-csharp/tutorials/local-environment.md)」を参照してください。
 
 ## <a name="create-your-application"></a>アプリケーションを作成する
 
@@ -214,7 +214,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>次の手順
 
-うまくいかない場合は、このチュートリアルのソースを [GitHub リポジトリ](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)で確認できます。
+うまくいかない場合は、このチュートリアルのソースを [GitHub リポジトリ](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)で確認できます。
 
 [オブジェクト指向プログラミング](object-oriented-programming.md)のチュートリアルに進むことができます。
 

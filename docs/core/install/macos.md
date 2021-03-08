@@ -4,12 +4,12 @@ description: .NET をインストールできる macOS のバージョンにつ�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 871263b820aaf4cc04e573dd4aa3022caa401857
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: fe42a1593d4e8249252d2bd964dbfd52cdcd81a9
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506306"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105194"
 ---
 # <a name="install-net-on-macos"></a>macOS に .NET をインストールする
 
@@ -24,7 +24,7 @@ ms.locfileid: "99506306"
 .NET の最新バージョンは 5.0 です。
 
 > [!div class="button"]
-> [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>サポートされているリリース
 
@@ -62,7 +62,7 @@ macOS には、2 つの異なるランタイムをインストールできます
   このランタイムは最も単純なランタイムであり、他のランタイムは含まれていません。 .NET アプリとの互換性を最善にするには、"*ASP.NET Core ランタイム*" をインストールすることを強くお勧めします。
 
 > [!div class="button"]
-> [.NET ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>SDK に関する情報
 
@@ -106,20 +106,20 @@ brew install mono-libgdiplus
 
 macOS には、.NET 5.0 SDK のインストールに使用できるスタンドアロン インストーラーが用意されています。
 
-- [x64 (64 ビット) CPU](https://dotnet.microsoft.com/download/dotnet-core/5.0)
+- [x64 (64 ビット) CPU](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
 
 <!-- Note, this content is taken from includes/linux-install-manual.md but changed for macOS. Any fixes should be applied there too, though content may be different -->
 
-.NET 用 macOS インストーラーの代わりに、SDK とランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として実行されます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
+.NET 用 macOS インストーラーの代わりに、SDK とランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として実行されます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet)を使用することをお勧めします。
 
 .NET SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムの **バイナリ** リリースをダウンロードします。
 
 - ✔️ [.NET 5.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet)
 
 次に、ダウンロードしたファイルを抽出し、`export` コマンドを使用して .NET で使用される変数を設定してから、.NET が PATH に含まれていることを確認します。
 
@@ -170,7 +170,7 @@ Visual Studio Code は、デスクトップ上で動作する強力で軽量な�
 Visual Studio Code には、Visual Studio のような自動化された .NET インストーラーは付属していませんが、.NET のサポートを簡単に追加できます。
 
 01. [Visual Studio Code をダウンロードしてインストールします](https://code.visualstudio.com/Download)。
-01. [.NET SDK をダウンロードしてインストールします](https://dotnet.microsoft.com/download/dotnet-core)。
+01. [.NET SDK をダウンロードしてインストールします](https://dotnet.microsoft.com/download/dotnet)。
 01. [Visual Studio Code マーケットプレースから C# 拡張機能をインストールします](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)。
 
 ## <a name="install-with-bash-automation"></a>bash オートメーションを使用してインストールする

@@ -3,12 +3,12 @@ title: アンインストール ツール
 description: .NET アンインストール ツールの概要です。これは、.NET SDK とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
 ms.date: 01/28/2021
-ms.openlocfilehash: a3819b11af94d4fec3ecb072ec3d5ddf6de706c9
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 9afcac150659a8f58a04f4c254b0a0219af42e74
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216318"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105435"
 ---
 # <a name="net-uninstall-tool"></a>.NET アンインストール ツール
 
@@ -302,8 +302,8 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 > [!CAUTION]
 > 次の注意事項に留意してください。
 >
->- このツールでは、コンピューター上の `global.json` ファイルに必要な .NET SDK のバージョンをアンインストールできます。 .NET SDK は、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページから再インストールできます。
->- このツールでは、コンピューター上のフレームワークに依存するアプリケーションに必要な .NET ランタイムのバージョンをアンインストールできます。 .NET ランタイムは、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページから再インストールできます。
+>- このツールでは、コンピューター上の `global.json` ファイルに必要な .NET SDK のバージョンをアンインストールできます。 .NET SDK は、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet) ページから再インストールできます。
+>- このツールでは、コンピューター上のフレームワークに依存するアプリケーションに必要な .NET ランタイムのバージョンをアンインストールできます。 .NET ランタイムは、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet) ページから再インストールできます。
 >- このツールでは、Visual Studio が依存する .NET SDK とランタイムのバージョンをアンインストールできます。 Visual Studio のインストールを中断した場合は、Visual Studio インストーラーで [修復] を実行すると稼働状態に戻ります。
 
 既定で、すべてのコマンドでは、Visual Studio またはその他の SDK に必要な可能性がある .NET SDK とランタイムを保持します。 これらの SDK とランタイムは、引数として明示的に指定するか、`--force` オプションを使用することによってアンインストールできます。

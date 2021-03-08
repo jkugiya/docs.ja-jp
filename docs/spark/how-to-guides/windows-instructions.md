@@ -4,12 +4,12 @@ description: Windows で .NET for Apache Spark アプリケーションをビル
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 8f197c0050d149ed03e328e72868ad4ba2f728c1
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: d9e1721fbb13d963c3a690ded3e26885f268bc72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688112"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106853"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows で .NET for Apache Spark アプリケーションをビルドする方法を学習する
 
@@ -19,7 +19,7 @@ ms.locfileid: "94688112"
 
 以下の必須コンポーネントがすべて揃っている場合は、「[ビルド](#build)」の手順に進んでください。
 
-  1. **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。 .NET Core 2.1、2.2、および 3.1 がサポートされています。
+  1. **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。 .NET Core 2.1、2.2、および 3.1 がサポートされています。
   2. **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (バージョン 16.3 以降) をインストールする。 コミュニティ バージョンは完全に無料です。 インストールを構成するときは、最小でも次のコンポーネントを含めてください。
      * .NET デスクトップ開発
        * すべての必須コンポーネント

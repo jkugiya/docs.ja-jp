@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: WPF アプリと WinForms アプリで OutputType が WinExe に設定されている'
 description: .NET SDK 5.0.100 での破壊的変更について学習します。Windows フォーム アプリで OutputType が自動的に WinExe に設定されます。
-ms.date: 09/18/2020
-ms.openlocfilehash: 38d9b910374f9e44f7e35296808930c6a6d45f0d
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.date: 02/08/2021
+ms.openlocfilehash: 565007e9ce6be289456afc9facbd4c555a1110bd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431465"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256180"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>WPF アプリと WinForms アプリで OutputType が WinExe に設定されている
 

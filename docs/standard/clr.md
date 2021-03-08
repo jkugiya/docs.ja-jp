@@ -17,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89aa77f7704a1d8caba12369cb82fff131a8aab0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823876"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103648"
 ---
 # <a name="common-language-runtime-clr-overview"></a>共通言語ランタイム (CLR) の概要
 
@@ -63,7 +63,7 @@ ms.locfileid: "94823876"
 
 ## <a name="clr-versions"></a>CLR のバージョン
 
-.NET Core および .NET 5 以上のリリースの製品バージョンは 1 つです。つまり、個別の CLR バージョンはありません。 .NET Core バージョンの一覧については、「[Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core)」(.NET Core のダウンロード) を参照してください。
+.NET Core および .NET 5 以上のリリースの製品バージョンは 1 つです。つまり、個別の CLR バージョンはありません。 .NET Core バージョンの一覧については、「[Download .NET Core](https://dotnet.microsoft.com/download/dotnet)」(.NET Core のダウンロード) を参照してください。
 
 ただし、.NET Framework のバージョン番号はそれに含まれている CLR のバージョン番号には必ずしも対応しません。 .NET Framework のバージョンとそれに対応する CLR バージョンの一覧については、「[.NET Framework のバージョンおよび依存関係](../framework/migration-guide/versions-and-dependencies.md)」を参照してください。
 

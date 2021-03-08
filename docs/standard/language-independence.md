@@ -6,12 +6,12 @@ dev_langs:
 - vb
 ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cd8179de929ea55212d600844e658d6946861ab
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819085"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103076"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -20,13 +20,13 @@ ms.locfileid: "94819085"
 > [!NOTE]
 > この記事の最初の部分では、言語に依存しないコンポーネント、つまり、どの言語で記述されたアプリからでも使用できるコンポーネントの作成について説明します。 また、複数の言語で記述されたソース コードから 1 つのコンポーネントまたはアプリを作成することもできます。この記事の 2 番目のパートにある「[言語間の相互運用性](#cross-language-interoperability)」を参照してください。
 
-任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。
+任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。
 
 コンポーネントが共通言語仕様に準拠している場合は、CLS に準拠することが保証され、CLS をサポートするすべてのプログラミング言語で記述されたアセンブリのコードからアクセスできます。 コンパイル時にコンポーネントが共通言語仕様に準拠しているかどうかを確認するには、[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 属性をソース コードに適用します。 詳細については、「[CLSCompliantAttribute 属性](#the-clscompliantattribute-attribute)」を参照してください。
 
 ## <a name="cls-compliance-rules"></a>CLS 準拠の規則
 
-ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則規則の完全な一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。
+ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則規則の完全な一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。
 
 > [!NOTE]
 > 共通言語仕様では、コンシューマー (プログラムによって CLS 準拠のコンポーネントにアクセスする開発者)、フレームワーク (言語コンパイラを使用して CLS 準拠のライブラリを作成する開発者)、およびエクステンダー (CLS 準拠のコンポーネントを作成する言語コンパイラ、コード パーサーなどのツールを作成する開発者) に適用する、CLS 準拠の各規則について説明します。 ここでは、フレームワークに適用するときの規則に焦点を当てます。 エクステンダーに適用する一部の規則は、[Reflection.Emit](xref:System.Reflection.Emit) を使用して作成されたアセンブリに適用されることもあります。
@@ -111,7 +111,7 @@ End Class
 
 * パブリック クラスのパブリック メソッドのパラメーターおよび戻り値の型、派生クラスからアクセスできるメソッドのパラメーターおよび戻り値の型。
 
-CLS 準拠の規則を次の表に示します。 これらの規則のテキストは、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。
+CLS 準拠の規則を次の表に示します。 これらの規則のテキストは、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。
 
 カテゴリ | 解決方法については、 | ルール | 規則番号
 -------- | --- | ---- | -----------

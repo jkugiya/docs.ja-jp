@@ -8,14 +8,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.topic: how-to
-ms.custom: contperf-fy21q2
+ms.custom: contperf-fy21q3
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 011c66d5341d9e2e8032a692385f5f250b6ab9a2
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: 0fffd080f502646b6541ad7b2236359e9d85b884
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639371"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103219"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>文字列を数値に変換する方法 (C# プログラミング ガイド)
 

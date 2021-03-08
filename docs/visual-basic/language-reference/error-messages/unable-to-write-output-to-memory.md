@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 54fe93a0fdcd05a585e0ca52dae54fafdfa01e58
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: cdaca9a386ae8ce797fdf2ed2e05b00ae6b99505
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640915"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106827"
 ---
 # <a name="bc31020-unable-to-write-output-to-memory"></a>BC31020:出力をメモリに書き込めません。
 
@@ -33,4 +33,4 @@ ms.locfileid: "99640915"
 
 ## <a name="see-also"></a>関連項目
 
-- [ご意見](/visualstudio/ide/feedback-options)
+- [Visual Studio フィードバック オプション](/visualstudio/ide/feedback-options)

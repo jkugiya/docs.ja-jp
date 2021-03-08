@@ -3,12 +3,12 @@ title: 'チュートリアル: .NET ローカル ツールをインストール�
 description: .NET ツールをローカル ツールとしてインストールして使用する方法について説明します。
 ms.topic: tutorial
 ms.date: 12/11/2020
-ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 29c561d27aad99c0383fc8e0bb5a4543ae65705a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512464"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104129"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する
 
@@ -21,7 +21,7 @@ ms.locfileid: "97512464"
 * [このシリーズの最初のチュートリアル](global-tools-how-to-create.md)を完了します。
 * .NET Core 2.1 ランタイムをインストールします。
 
-  このチュートリアルでは、.NET Core 2.1 を対象とするツールをインストールして使用するため、お使いのコンピューター上に該当のランタイムがインストールされている必要があります。 2\.1 ランタイムをインストールするには、[.NET Core 2.1 のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-core/2.1)にアクセスして、 **[Run apps - Runtime]\(アプリの実行 - ランタイム\)** 列でランタイム インストールのリンクを見つけます。
+  このチュートリアルでは、.NET Core 2.1 を対象とするツールをインストールして使用するため、お使いのコンピューター上に該当のランタイムがインストールされている必要があります。 2\.1 ランタイムをインストールするには、[.NET Core 2.1 のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet/2.1)にアクセスして、 **[Run apps - Runtime]\(アプリの実行 - ランタイム\)** 列でランタイム インストールのリンクを見つけます。
 
 ## <a name="create-a-manifest-file"></a>マニフェスト ファイルの作成
 

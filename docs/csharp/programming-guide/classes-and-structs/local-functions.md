@@ -4,12 +4,12 @@ description: C# のローカル関数は、別のメンバーの入れ子にな�
 ms.date: 10/16/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 75accda2e40443073274ece4d8964c13a0945dad
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 1c0cd1b8122f9069e5d6385d698f0ff8278912dd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332901"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103245"
 ---
 # <a name="local-functions-c-programming-guide"></a>ローカル関数 (C# プログラミング ガイド)
 
@@ -72,16 +72,6 @@ C# 9.0 以降、次の例に示すように、ローカル関数およびその�
 
 :::code language="csharp" source="snippets/local-functions/IteratorWithLocal.cs" :::
 
-ローカル関数は、非同期操作と同様の方法で使用できます。 非同期メソッドでスローされる例外は、対応するタスクが待機しているときに検出されます。 ローカル関数を使用すると、コードを迅速に失敗させ (Fail Fast)、例外のスローと検出の両方を同時に行うことができます。
-
-次の例は、`GetMultipleAsync` という非同期メソッドを使用して、指定した秒数だけ一時停止した後、その秒数のランダムな倍数である値を返します。 遅延の最大値は 5 秒です。値が 5 より大きい場合は <xref:System.ArgumentOutOfRangeException> が発生します。 次の例に示すように、`GetMultipleAsync` メソッドに渡された値が 6 の場合にスローされる例外は、タスクが待機中の場合のみ検出されます。
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithoutLocal.cs" :::
-
-メソッド反復子と同様に、前の例をリファクターして、非同期操作のコードをローカル関数に配置できます。 次の例の出力に示されているように、<xref:System.ArgumentOutOfRangeException> は `GetMultiple` メソッドが呼び出されるとすぐにスローされます。
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithLocal.cs" :::
-
 ## <a name="local-functions-vs-lambda-expressions"></a>ローカル関数とラムダ式の比較
 
 一見したところ、ローカル関数と[ラムダ式](../../language-reference/operators/lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
@@ -106,13 +96,13 @@ C# 9.0 以降、次の例に示すように、ローカル関数およびその�
 
 ラムダ式は、実行時に宣言されて割り当てられるオブジェクトです。 ラムダ式を使用するには、その式を確実に代入する必要があります。代入先の `Action`/`Func` 変数と、代入するラムダ式を宣言する必要があります。 `LambdaFactorial` では、ラムダ式 `nthFactorial` を定義する前に、宣言と初期化を行う必要があることにご注意ください。 その手順を踏まないと、`nthFactorial` の割り当て前に参照することによるコンパイル時エラーが発生します。
 
-ローカル関数は、コンパイル時に定義されます。 これらは変数に割り当てられないため、 **スコープ内の** どのコードの場所からでも参照できます。最初の `LocalFunctionFactorial` の例では、`return` ステートメントの上または下でローカル関数を宣言して、コンパイラ エラーが発生しないようにすることができます。
+ローカル関数は、コンパイル時に定義されます。 これらは変数に割り当てられないため、**スコープ内の** どのコードの場所からでも参照できます。最初の `LocalFunctionFactorial` の例では、`return` ステートメントの上または下でローカル関数を宣言して、コンパイラ エラーが発生しないようにすることができます。
 
 これらの違いは、再帰的なアルゴリズムの作成はローカル関数を使用する方が簡単であることを意味します。 自身を呼び出すローカル関数を宣言して定義することができます。 ラムダ式は宣言して、既定値を割り当てないと、同じラムダ式を参照する本体に再割り当てできません。
 
 ### <a name="implementation-as-a-delegate"></a>デリゲートとしての実装
 
-ラムダ式は、宣言時にデリゲートに変換されます。 ローカル関数は、従来のメソッド " *または* " デリゲートと同様に記述できるので、より柔軟性があります。 ローカル関数は、デリゲートとして " ***使用される*** " 場合にのみ、デリゲートに変換されます。
+ラムダ式は、宣言時にデリゲートに変換されます。 ローカル関数は、従来のメソッド "*または*" デリゲートと同様に記述できるので、より柔軟性があります。 ローカル関数は、デリゲートとして "***使用される***" 場合にのみ、デリゲートに変換されます。
 
 ローカル関数を宣言し、メソッドのように呼び出して参照のみを行う場合は、デリゲートに変換されません。
 

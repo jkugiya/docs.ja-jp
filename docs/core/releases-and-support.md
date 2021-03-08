@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "97866389"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104185"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core および .NET 5 のリリースとサポート
 
@@ -93,7 +93,7 @@ LTS および現在のリリースは交互に行われるため、以前のリ�
 
 アプリを確実に安全でサポートされた状態にするには、サービス更新プログラムを定期的にインストールする必要があります。 たとえば、.NET Core 3.1 の最新のサービス更新プログラムが 3.1.8 で、3.1.9 が出荷された場合、3.1.8 は最新ではなくなります。 3\.1 でサポートされるサービス レベルは、3.1.9 です。
 
-各メジャーおよびマイナー バージョンの最新のサービス更新プログラムについては、[.NET のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-core)を参照してください。
+各メジャーおよびマイナー バージョンの最新のサービス更新プログラムについては、[.NET のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet)を参照してください。
 
 ## <a name="end-of-support"></a>サポート終了
 

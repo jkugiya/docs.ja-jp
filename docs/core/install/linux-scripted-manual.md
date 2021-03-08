@@ -4,12 +4,12 @@ description: Linux でパッケージ マネージャーを使用せずに .NET 
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 414246e472c3d58a6768311bd7a4635100f3b618
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505577"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105181"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>手動で .NET SDK または .NET ランタイムをインストールする
 
@@ -111,9 +111,9 @@ SDK の代わりに .NET ランタイムをインストールするには、`--r
 .NET SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムの **バイナリ** リリースをダウンロードします。
 
 - ✔️ [.NET 5.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet)
 
 次に、ダウンロードしたファイルを抽出し、`export` コマンドを使用して .NET で使用される変数を設定してから、.NET が PATH に含まれていることを確認します。
 

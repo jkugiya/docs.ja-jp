@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: ec6724ab378dd614c55a024ede18d997d27be3a3
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 73bf0ba78e2986da3e0aa66d492f1765df563b27
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032687"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102109300"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>ターゲット フレームワーク: .NET Framework のサポートが廃止されました
 
 ASP.NET Core 3.0 以降、.NET Framework はサポート対象外のターゲット フレームワークになりました。
 
-#### <a name="change-description"></a>変更の説明
+#### <a name="change-description"></a>変更内容
 
 .NET Framework 4.8 は、.NET Framework の最後のメジャー バージョンです。 新しい ASP.NET Core アプリは .NET Core で構築する必要があります。 .NET Core 3.0 リリース以降、ASP.NET Core 3.0 は .NET Core の一部になっていると考えることができます。
 
-.NET Framework で ASP.NET Core を使用しているお客様は、[2.1 LTS リリース](https://dotnet.microsoft.com/download/dotnet-core/2.1)を使用して完全にサポートされた状態で続行できます。 2\.1 のサポートとサービスは、2021 年 8 月 21 日まで継続されます。 [.NET サポート ポリシー](https://dotnet.microsoft.com/platform/support-policy)に従い、この日付は LTS リリースの宣言から 3 年後です。 **.NET Framework での**  ASP.NET Core 2.1 パッケージのサポートは、[他のパッケージ ベースの ASP.NET フレームワークのサービス ポリシー](https://dotnet.microsoft.com/platform/support/policy/aspnet)と同様に、無制限に延長されます。
+.NET Framework で ASP.NET Core を使用しているお客様は、[2.1 LTS リリース](https://dotnet.microsoft.com/download/dotnet/2.1)を使用して完全にサポートされた状態で続行できます。 2.1 のサポートとサービスは、2021 年 8 月 21 日まで継続されます。 [.NET サポート ポリシー](https://dotnet.microsoft.com/platform/support-policy)に従い、この日付は LTS リリースの宣言から 3 年後です。 **.NET Framework での** ASP.NET Core 2.1 パッケージのサポートは、[他のパッケージ ベースの ASP.NET フレームワークのサービス ポリシー](https://dotnet.microsoft.com/platform/support/policy/aspnet)と同様に、無制限に延長されます。
 
 .NET Framework から .NET Core への移植の詳細については、[.NET Core への移植](~/docs/core/porting/index.md)に関するページを参照してください。
 

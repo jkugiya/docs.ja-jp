@@ -3,12 +3,12 @@ title: 高い CPU 使用率をデバッグする - .NET Core
 description: .NET Core での高い CPU 使用率のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 3ba07f0bb40f8128c091fa427b957d824c07bcd5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437824"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105363"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core で高い CPU 使用率をデバッグする
 
@@ -30,7 +30,7 @@ ms.locfileid: "96437824"
 
 このチュートリアルでは次のものを使用します。
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 以降のバージョン。
 - シナリオをトリガーする[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios)
 - [dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示し、プロファイルを生成する
 - [dotnet-counters](dotnet-counters.md) を使って CPU 使用率を監視する

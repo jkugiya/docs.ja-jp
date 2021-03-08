@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 43ac84e053def32cd5fa0dfc798bd47a022c0471
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 76f7bd43c05ea3bd46b352a791debac984ca8fcd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99797173"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103609"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>単一インスタンスのスタートアップに必要なオペレーティング システムのリソースが取得できないため、予期しないエラーが発生しました。
 
@@ -36,4 +36,4 @@ ms.locfileid: "99797173"
 
 - [[アプリケーション] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [デバッガーの基本事項](/visualstudio/debugger/debugger-basics)
-- [ご意見](/visualstudio/ide/feedback-options)
+- [Visual Studio フィードバック オプション](/visualstudio/ide/feedback-options)

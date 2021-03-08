@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 9836ea11e7f17d6ed6e04bcba8bc0ed851bb368f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188479"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105285"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -38,7 +38,7 @@ ms.locfileid: "98188479"
 
 ## <a name="symbols"></a>シンボル
 
-シンボルは、デバッグやその他の診断ツールの基本的な要件です。 シンボル ファイルの内容は、言語、コンパイラ、およびプラットフォームによって異なります。 非常に高いレベルのシンボルは、ソース コードとコンパイラによって生成されるバイナリとの間のマッピングです。 これらのマッピングは、[Visual Studio](/visualstudio/debugger/what-is-debugging) や [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) などの診断ツールで、行番号の情報やローカル変数の名前などを提供するために使用されます。  次のリンクには、Windows の[シンボル](/windows/win32/dxtecharts/debugging-with-symbols)の詳細な説明が含まれていますが、他のプラットフォームにも多くの概念が当てはまります。 [.NET ポータブル シンボル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)には、Windows PDB と同様の "PDB" ファイル拡張子が付いていますが、Windows PDB 形式と互換性がありません。
+[シンボル](./symbols.md)は、ソース コードとコンパイラによって生成されるバイナリとの間のマッピングです。 これらは一般的に、ソースの行番号、ローカル変数名、その他の種類の診断情報などを解決するために .NET デバッガーによって使用されます。
 
 ## <a name="collect-diagnostics-in-containers"></a>コンテナーでの診断の収集
 

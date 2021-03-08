@@ -1,7 +1,7 @@
 items:
   - name: .NET のドキュメント
     href: index.yml
-  - name: はじめに
+  - name: 開始
     items:
       - name: Hello World
         href: ../core/get-started.md
@@ -425,6 +425,8 @@ items:
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: 分散トレース
                 href: ../core/diagnostics/distributed-tracing.md
+          - name: Symbols
+            href: ../core/diagnostics/symbols.md
           - name: ランタイム イベント
             items:
               - name: 概要
@@ -1575,7 +1577,7 @@ items:
           - name: 概要
             href: ../standard/base-types/regular-expressions.md
             displayName: regular expressions
-          - name: 言語リファレンス
+          - name: 言語のリファレンス
             items:
               - name: 概要
                 href: ../standard/base-types/regular-expression-language-quick-reference.md
@@ -1613,7 +1615,7 @@ items:
                 href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
               - name: スレッド セーフ
                 href: ../standard/base-types/thread-safety-in-regular-expressions.md
-          - name: 使用例
+          - name: 例
             items:
               - name: HREF のスキャン
                 href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
@@ -1701,7 +1703,7 @@ items:
                 href: ../standard/serialization/xml-and-soap-serialization.md
               - name: XML シリアル化の詳細
                 href: ../standard/serialization/introducing-xml-serialization.md
-              - name: 使用例
+              - name: 例
                 href: ../standard/serialization/examples-of-xml-serialization.md
               - name: XML スキーマ定義ツール
                 href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
@@ -2291,20 +2293,22 @@ items:
         items:
           - name: .NET Core 2.0 から 2.1 へ
             href: ../core/migration/20-21.md
-          - name: project.json からの移行
-            href: ../core/migration/index.md
-          - name: project.json と csproj 間のマッピング
-            href: ../core/tools/project-json-to-csproj.md
           - name: AssemblyInfo 属性をプロパティにマップする
             href: ../core/migration/assembly-info.md
-          - name: CLI の変更概要
-            href: ../core/tools/cli-msbuild-architecture.md
-          - name: DNX からの移行
-            href: ../core/migration/from-dnx.md
       - name: .NET Framework から移植する
         items:
           - name: 概要
             href: ../core/porting/index.md
+          - name: .NET Upgrade Assistant ツール
+            items:
+              - name: 概要
+                href: ../core/porting/upgrade-assistant-overview.md
+              - name: Windows Presentation Foundation
+                href: ../core/porting/upgrade-assistant-wpf-framework.md
+              - name: Windows フォーム
+                href: ../core/porting/upgrade-assistant-winforms-framework.md
+              - name: ASP.NET Core
+                href: ../core/porting/upgrade-assistant-aspnetmvc.md
           - name: サード パーティの依存関係を分析する
             href: ../core/porting/third-party-deps.md
           - name: ライブラリを移植する

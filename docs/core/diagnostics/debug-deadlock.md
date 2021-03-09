@@ -3,65 +3,65 @@ title: デッドロックのデバッグ - .NET Core
 description: .NET Core でのロックに関する問題のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538697"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105585"
 ---
-# <a name="debug-a-deadlock-in-net-core"></a><span data-ttu-id="20eaf-103">.NET Core でデッドロックをデバッグする</span><span class="sxs-lookup"><span data-stu-id="20eaf-103">Debug a deadlock in .NET Core</span></span>
+# <a name="debug-a-deadlock-in-net-core"></a><span data-ttu-id="d2775-103">.NET Core でデッドロックをデバッグする</span><span class="sxs-lookup"><span data-stu-id="d2775-103">Debug a deadlock in .NET Core</span></span>
 
-<span data-ttu-id="20eaf-104">**この記事の対象: ✔️** .NET Core 3.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="20eaf-104">**This article applies to: ✔️** .NET Core 3.1 SDK and later versions</span></span>
+<span data-ttu-id="d2775-104">**この記事の対象: ✔️** .NET Core 3.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="d2775-104">**This article applies to: ✔️** .NET Core 3.1 SDK and later versions</span></span>
 
-<span data-ttu-id="20eaf-105">このチュートリアルでは、デッドロック シナリオをデバッグする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-105">In this tutorial, you'll learn how to debug a deadlock scenario.</span></span> <span data-ttu-id="20eaf-106">示されている例の [ASP.NET Core Web アプリ](/samples/dotnet/samples/diagnostic-scenarios) ソース コード リポジトリを使用して、デッドロックを意図的に発生させることができます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-106">Using the provided example [ASP.NET Core web app](/samples/dotnet/samples/diagnostic-scenarios) source code repository, you can cause a deadlock intentionally.</span></span> <span data-ttu-id="20eaf-107">エンドポイントでは、ハングとスレッドが蓄積します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-107">The endpoint will experience a hang and thread accumulation.</span></span> <span data-ttu-id="20eaf-108">コア ダンプ、コア ダンプ分析、プロセス トレースなど、さまざまなツールを使用して問題を分析する方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-108">You'll learn how you can use various tools to analyze the problem, such as core dumps, core dump analysis, and process tracing.</span></span>
+<span data-ttu-id="d2775-105">このチュートリアルでは、デッドロック シナリオをデバッグする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2775-105">In this tutorial, you'll learn how to debug a deadlock scenario.</span></span> <span data-ttu-id="d2775-106">示されている例の [ASP.NET Core Web アプリ](/samples/dotnet/samples/diagnostic-scenarios) ソース コード リポジトリを使用して、デッドロックを意図的に発生させることができます。</span><span class="sxs-lookup"><span data-stu-id="d2775-106">Using the provided example [ASP.NET Core web app](/samples/dotnet/samples/diagnostic-scenarios) source code repository, you can cause a deadlock intentionally.</span></span> <span data-ttu-id="d2775-107">エンドポイントでは、ハングとスレッドが蓄積します。</span><span class="sxs-lookup"><span data-stu-id="d2775-107">The endpoint will experience a hang and thread accumulation.</span></span> <span data-ttu-id="d2775-108">コア ダンプ、コア ダンプ分析、プロセス トレースなど、さまざまなツールを使用して問題を分析する方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="d2775-108">You'll learn how you can use various tools to analyze the problem, such as core dumps, core dump analysis, and process tracing.</span></span>
 
-<span data-ttu-id="20eaf-109">このチュートリアルでは、次の作業を行います。</span><span class="sxs-lookup"><span data-stu-id="20eaf-109">In this tutorial, you will:</span></span>
+<span data-ttu-id="d2775-109">このチュートリアルでは、次の作業を行います。</span><span class="sxs-lookup"><span data-stu-id="d2775-109">In this tutorial, you will:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="20eaf-110">アプリのハングを調査する</span><span class="sxs-lookup"><span data-stu-id="20eaf-110">Investigate an app hang</span></span>
-> - <span data-ttu-id="20eaf-111">コア ダンプ ファイルを生成する</span><span class="sxs-lookup"><span data-stu-id="20eaf-111">Generate a core dump file</span></span>
-> - <span data-ttu-id="20eaf-112">ダンプ ファイル内のプロセス スレッドを分析する</span><span class="sxs-lookup"><span data-stu-id="20eaf-112">Analyze process threads in the dump file</span></span>
-> - <span data-ttu-id="20eaf-113">コールスタックと同期ブロックを分析する</span><span class="sxs-lookup"><span data-stu-id="20eaf-113">Analyze callstacks and sync blocks</span></span>
-> - <span data-ttu-id="20eaf-114">デッドロックを診断して解決する</span><span class="sxs-lookup"><span data-stu-id="20eaf-114">Diagnose and solve a deadlock</span></span>
+> - <span data-ttu-id="d2775-110">アプリのハングを調査する</span><span class="sxs-lookup"><span data-stu-id="d2775-110">Investigate an app hang</span></span>
+> - <span data-ttu-id="d2775-111">コア ダンプ ファイルを生成する</span><span class="sxs-lookup"><span data-stu-id="d2775-111">Generate a core dump file</span></span>
+> - <span data-ttu-id="d2775-112">ダンプ ファイル内のプロセス スレッドを分析する</span><span class="sxs-lookup"><span data-stu-id="d2775-112">Analyze process threads in the dump file</span></span>
+> - <span data-ttu-id="d2775-113">コールスタックと同期ブロックを分析する</span><span class="sxs-lookup"><span data-stu-id="d2775-113">Analyze callstacks and sync blocks</span></span>
+> - <span data-ttu-id="d2775-114">デッドロックを診断して解決する</span><span class="sxs-lookup"><span data-stu-id="d2775-114">Diagnose and solve a deadlock</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="20eaf-115">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="20eaf-115">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="d2775-115">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="d2775-115">Prerequisites</span></span>
 
-<span data-ttu-id="20eaf-116">このチュートリアルでは次のものを使用します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-116">The tutorial uses:</span></span>
+<span data-ttu-id="d2775-116">このチュートリアルでは次のものを使用します。</span><span class="sxs-lookup"><span data-stu-id="d2775-116">The tutorial uses:</span></span>
 
-- <span data-ttu-id="20eaf-117">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="20eaf-117">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) or a later version</span></span>
-- <span data-ttu-id="20eaf-118">シナリオをトリガーするための[サンプル デバッグ ターゲット - Web アプリ](/samples/dotnet/samples/diagnostic-scenarios)</span><span class="sxs-lookup"><span data-stu-id="20eaf-118">[Sample debug target - web app](/samples/dotnet/samples/diagnostic-scenarios) to trigger the scenario</span></span>
-- <span data-ttu-id="20eaf-119">[dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する</span><span class="sxs-lookup"><span data-stu-id="20eaf-119">[dotnet-trace](dotnet-trace.md) to list processes</span></span>
-- <span data-ttu-id="20eaf-120">[dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する</span><span class="sxs-lookup"><span data-stu-id="20eaf-120">[dotnet-dump](dotnet-dump.md) to collect, and analyze a dump file</span></span>
+- <span data-ttu-id="d2775-117">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="d2775-117">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) or a later version</span></span>
+- <span data-ttu-id="d2775-118">シナリオをトリガーするための[サンプル デバッグ ターゲット - Web アプリ](/samples/dotnet/samples/diagnostic-scenarios)</span><span class="sxs-lookup"><span data-stu-id="d2775-118">[Sample debug target - web app](/samples/dotnet/samples/diagnostic-scenarios) to trigger the scenario</span></span>
+- <span data-ttu-id="d2775-119">[dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する</span><span class="sxs-lookup"><span data-stu-id="d2775-119">[dotnet-trace](dotnet-trace.md) to list processes</span></span>
+- <span data-ttu-id="d2775-120">[dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する</span><span class="sxs-lookup"><span data-stu-id="d2775-120">[dotnet-dump](dotnet-dump.md) to collect, and analyze a dump file</span></span>
 
-## <a name="core-dump-generation"></a><span data-ttu-id="20eaf-121">コア ダンプ生成</span><span class="sxs-lookup"><span data-stu-id="20eaf-121">Core dump generation</span></span>
+## <a name="core-dump-generation"></a><span data-ttu-id="d2775-121">コア ダンプ生成</span><span class="sxs-lookup"><span data-stu-id="d2775-121">Core dump generation</span></span>
 
-<span data-ttu-id="20eaf-122">アプリケーション無応答を調査するために、コア ダンプまたはメモリ ダンプを使用すると、そのスレッドの状態と、競合の問題が発生している可能性のあるすべてのロックを調べることができます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-122">To investigate application unresponsiveness, a core dump or memory dump allows you to inspect the state of its threads and any possible locks that may have contention issues.</span></span> <span data-ttu-id="20eaf-123">サンプルのルート ディレクトリから次のコマンドを使用して、[サンプル デバッグ](/samples/dotnet/samples/diagnostic-scenarios) アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-123">Run the [sample debug](/samples/dotnet/samples/diagnostic-scenarios) application using the following command from the sample root directory:</span></span>
+<span data-ttu-id="d2775-122">アプリケーション無応答を調査するために、コア ダンプまたはメモリ ダンプを使用すると、そのスレッドの状態と、競合の問題が発生している可能性のあるすべてのロックを調べることができます。</span><span class="sxs-lookup"><span data-stu-id="d2775-122">To investigate application unresponsiveness, a core dump or memory dump allows you to inspect the state of its threads and any possible locks that may have contention issues.</span></span> <span data-ttu-id="d2775-123">サンプルのルート ディレクトリから次のコマンドを使用して、[サンプル デバッグ](/samples/dotnet/samples/diagnostic-scenarios) アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="d2775-123">Run the [sample debug](/samples/dotnet/samples/diagnostic-scenarios) application using the following command from the sample root directory:</span></span>
 
 ```dotnetcli
 dotnet run
 ```
 
-<span data-ttu-id="20eaf-124">このプロセス ID を検索するには、次のコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-124">To find the process ID, use the following command:</span></span>
+<span data-ttu-id="d2775-124">このプロセス ID を検索するには、次のコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="d2775-124">To find the process ID, use the following command:</span></span>
 
 ```dotnetcli
 dotnet-trace ps
 ```
 
-<span data-ttu-id="20eaf-125">ご自分のコマンド出力からプロセス ID をメモしておきます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-125">Take note of the process ID from your command output.</span></span> <span data-ttu-id="20eaf-126">プロセス ID は `4807` でしたが、この ID は異なります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-126">Our process ID was `4807`, but yours will be different.</span></span> <span data-ttu-id="20eaf-127">サンプル サイトの API エンドポイントである次の URL に移動します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-127">Navigate to the following URL, which is an API endpoint on the sample site:</span></span>
+<span data-ttu-id="d2775-125">ご自分のコマンド出力からプロセス ID をメモしておきます。</span><span class="sxs-lookup"><span data-stu-id="d2775-125">Take note of the process ID from your command output.</span></span> <span data-ttu-id="d2775-126">プロセス ID は `4807` でしたが、この ID は異なります。</span><span class="sxs-lookup"><span data-stu-id="d2775-126">Our process ID was `4807`, but yours will be different.</span></span> <span data-ttu-id="d2775-127">サンプル サイトの API エンドポイントである次の URL に移動します。</span><span class="sxs-lookup"><span data-stu-id="d2775-127">Navigate to the following URL, which is an API endpoint on the sample site:</span></span>
 
 `https://localhost:5001/api/diagscenario/deadlock`
 
-<span data-ttu-id="20eaf-128">サイトへの API 要求がハングし、応答がありません。</span><span class="sxs-lookup"><span data-stu-id="20eaf-128">The API request to the site will hang and not respond.</span></span> <span data-ttu-id="20eaf-129">要求を約 10 から 15 秒間実行します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-129">Let the request run for about 10-15 seconds.</span></span> <span data-ttu-id="20eaf-130">その後、次のコマンドを使用して、コア ダンプを作成します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-130">Then create the core dump using the following command:</span></span>
+<span data-ttu-id="d2775-128">サイトへの API 要求がハングし、応答がありません。</span><span class="sxs-lookup"><span data-stu-id="d2775-128">The API request to the site will hang and not respond.</span></span> <span data-ttu-id="d2775-129">要求を約 10 から 15 秒間実行します。</span><span class="sxs-lookup"><span data-stu-id="d2775-129">Let the request run for about 10-15 seconds.</span></span> <span data-ttu-id="d2775-130">その後、次のコマンドを使用して、コア ダンプを作成します。</span><span class="sxs-lookup"><span data-stu-id="d2775-130">Then create the core dump using the following command:</span></span>
 
-### <a name="linux"></a>[<span data-ttu-id="20eaf-131">Linux</span><span class="sxs-lookup"><span data-stu-id="20eaf-131">Linux</span></span>](#tab/linux)
+### <a name="linux"></a>[<span data-ttu-id="d2775-131">Linux</span><span class="sxs-lookup"><span data-stu-id="d2775-131">Linux</span></span>](#tab/linux)
 
 ```bash
 sudo dotnet-dump collect -p 4807
 ```
 
-### <a name="windows"></a>[<span data-ttu-id="20eaf-132">Windows</span><span class="sxs-lookup"><span data-stu-id="20eaf-132">Windows</span></span>](#tab/windows)
+### <a name="windows"></a>[<span data-ttu-id="d2775-132">Windows</span><span class="sxs-lookup"><span data-stu-id="d2775-132">Windows</span></span>](#tab/windows)
 
 ```console
 dotnet-dump collect -p 4807
@@ -69,15 +69,15 @@ dotnet-dump collect -p 4807
 
 ---
 
-## <a name="analyze-the-core-dump"></a><span data-ttu-id="20eaf-133">コア ダンプを分析する</span><span class="sxs-lookup"><span data-stu-id="20eaf-133">Analyze the core dump</span></span>
+## <a name="analyze-the-core-dump"></a><span data-ttu-id="d2775-133">コア ダンプを分析する</span><span class="sxs-lookup"><span data-stu-id="d2775-133">Analyze the core dump</span></span>
 
-<span data-ttu-id="20eaf-134">コア ダンプ分析を開始するには、次の `dotnet-dump analyze` コマンドを使用してコア ダンプを開きます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-134">To start the core dump analysis, open the core dump using the following `dotnet-dump analyze` command.</span></span> <span data-ttu-id="20eaf-135">引数は、前に収集されたコア ダンプ ファイルへのパスです。</span><span class="sxs-lookup"><span data-stu-id="20eaf-135">The argument is the path to the core dump file that was collected earlier.</span></span>
+<span data-ttu-id="d2775-134">コア ダンプ分析を開始するには、次の `dotnet-dump analyze` コマンドを使用してコア ダンプを開きます。</span><span class="sxs-lookup"><span data-stu-id="d2775-134">To start the core dump analysis, open the core dump using the following `dotnet-dump analyze` command.</span></span> <span data-ttu-id="d2775-135">引数は、前に収集されたコア ダンプ ファイルへのパスです。</span><span class="sxs-lookup"><span data-stu-id="d2775-135">The argument is the path to the core dump file that was collected earlier.</span></span>
 
 ```dotnetcli
 dotnet-dump analyze  ~/.dotnet/tools/core_20190513_143916
 ```
 
-<span data-ttu-id="20eaf-136">潜在的なハングを確認するため、プロセスのスレッド アクティビティの全体的な感触をつかむ必要があります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-136">Since you're looking at a potential hang, you want an overall feel for the thread activity in the process.</span></span> <span data-ttu-id="20eaf-137">次に示すように、`threads` コマンドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-137">You can use the `threads` command as shown below:</span></span>
+<span data-ttu-id="d2775-136">潜在的なハングを確認するため、プロセスのスレッド アクティビティの全体的な感触をつかむ必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2775-136">Since you're looking at a potential hang, you want an overall feel for the thread activity in the process.</span></span> <span data-ttu-id="d2775-137">次に示すように、`threads` コマンドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="d2775-137">You can use the `threads` command as shown below:</span></span>
 
 ```console
 > threads
@@ -117,15 +117,15 @@ dotnet-dump analyze  ~/.dotnet/tools/core_20190513_143916
  321 0x1DD4C (122188)
  ```
 
-<span data-ttu-id="20eaf-138">出力には、プロセスで現在実行中のすべてのスレッドが、関連付けられているデバッガーのスレッド ID およびオペレーティング システムのスレッド ID と共に表示されます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-138">The output shows all the threads currently running in the process with their associated debugger thread ID and operating system thread ID.</span></span> <span data-ttu-id="20eaf-139">出力に基づいて、300 を超えるスレッドがあります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-139">Based on the output, there are over 300 threads.</span></span>
+<span data-ttu-id="d2775-138">出力には、プロセスで現在実行中のすべてのスレッドが、関連付けられているデバッガーのスレッド ID およびオペレーティング システムのスレッド ID と共に表示されます。</span><span class="sxs-lookup"><span data-stu-id="d2775-138">The output shows all the threads currently running in the process with their associated debugger thread ID and operating system thread ID.</span></span> <span data-ttu-id="d2775-139">出力に基づいて、300 を超えるスレッドがあります。</span><span class="sxs-lookup"><span data-stu-id="d2775-139">Based on the output, there are over 300 threads.</span></span>
 
-<span data-ttu-id="20eaf-140">次の手順では、各スレッドのコールスタックを取得することによって、スレッドがどのような処理を行っているかを正確に把握します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-140">The next step is to get a better understanding of what the threads are currently doing by getting each thread's callstack.</span></span> <span data-ttu-id="20eaf-141">`clrstack` コマンドは、コールスタックを出力するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-141">The `clrstack` command can be used to output callstacks.</span></span> <span data-ttu-id="20eaf-142">1 つのコールスタックまたはすべてのコールスタックを出力できます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-142">It can either output a single callstack or all the callstacks.</span></span> <span data-ttu-id="20eaf-143">次のコマンドを使用して、プロセス内のすべてのスレッドのすべてのコールスタックを出力します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-143">Use the following command to output all the callstacks for all the threads in the process:</span></span>
+<span data-ttu-id="d2775-140">次の手順では、各スレッドのコールスタックを取得することによって、スレッドがどのような処理を行っているかを正確に把握します。</span><span class="sxs-lookup"><span data-stu-id="d2775-140">The next step is to get a better understanding of what the threads are currently doing by getting each thread's callstack.</span></span> <span data-ttu-id="d2775-141">`clrstack` コマンドは、コールスタックを出力するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="d2775-141">The `clrstack` command can be used to output callstacks.</span></span> <span data-ttu-id="d2775-142">1 つのコールスタックまたはすべてのコールスタックを出力できます。</span><span class="sxs-lookup"><span data-stu-id="d2775-142">It can either output a single callstack or all the callstacks.</span></span> <span data-ttu-id="d2775-143">次のコマンドを使用して、プロセス内のすべてのスレッドのすべてのコールスタックを出力します。</span><span class="sxs-lookup"><span data-stu-id="d2775-143">Use the following command to output all the callstacks for all the threads in the process:</span></span>
 
 ```console
 clrstack -all
 ```
 
-<span data-ttu-id="20eaf-144">出力の代表的な部分は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-144">A representative portion of the output looks like:</span></span>
+<span data-ttu-id="d2775-144">出力の代表的な部分は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="d2775-144">A representative portion of the output looks like:</span></span>
 
 ```console
   ...
@@ -206,7 +206,7 @@ OS Thread Id: 0x1dc88
 ...
 ```
 
-<span data-ttu-id="20eaf-145">300 を超えるすべてのスレッドのコールスタックを観察すると、ほとんどのスレッドが共通のコールスタックを共有するパターンが示されます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-145">Observing the callstacks for all 300+ threads shows a pattern where a majority of the threads share a common callstack:</span></span>
+<span data-ttu-id="d2775-145">300 を超えるすべてのスレッドのコールスタックを観察すると、ほとんどのスレッドが共通のコールスタックを共有するパターンが示されます。</span><span class="sxs-lookup"><span data-stu-id="d2775-145">Observing the callstacks for all 300+ threads shows a pattern where a majority of the threads share a common callstack:</span></span>
 
 ```console
 OS Thread Id: 0x1dc88
@@ -220,9 +220,9 @@ OS Thread Id: 0x1dc88
 00007F2ADFFAED70 00007f30593044af [DebuggerU2MCatchHandlerFrame: 00007f2adffaed70]
 ```
 
-<span data-ttu-id="20eaf-146">コールスタックを見ると、要求がデッドロック メソッドに到達し、これによって `Monitor.ReliableEnter` が呼び出されているように見えます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-146">The callstack seems to show that the request arrived in our deadlock method that in turn makes a call to `Monitor.ReliableEnter`.</span></span> <span data-ttu-id="20eaf-147">このメソッドは、スレッドによってモニター ロックが開始されようとしていることを示します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-147">This method indicates that the threads are trying to enter a monitor lock.</span></span> <span data-ttu-id="20eaf-148">これらは、ロックが利用可能になるのを待機しています。</span><span class="sxs-lookup"><span data-stu-id="20eaf-148">They're waiting on the availability of the lock.</span></span> <span data-ttu-id="20eaf-149">これは、別のスレッドによってロックされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-149">It's likely locked by a different thread.</span></span>
+<span data-ttu-id="d2775-146">コールスタックを見ると、要求がデッドロック メソッドに到達し、これによって `Monitor.ReliableEnter` が呼び出されているように見えます。</span><span class="sxs-lookup"><span data-stu-id="d2775-146">The callstack seems to show that the request arrived in our deadlock method that in turn makes a call to `Monitor.ReliableEnter`.</span></span> <span data-ttu-id="d2775-147">このメソッドは、スレッドによってモニター ロックが開始されようとしていることを示します。</span><span class="sxs-lookup"><span data-stu-id="d2775-147">This method indicates that the threads are trying to enter a monitor lock.</span></span> <span data-ttu-id="d2775-148">これらは、ロックが利用可能になるのを待機しています。</span><span class="sxs-lookup"><span data-stu-id="d2775-148">They're waiting on the availability of the lock.</span></span> <span data-ttu-id="d2775-149">これは、別のスレッドによってロックされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d2775-149">It's likely locked by a different thread.</span></span>
 
-<span data-ttu-id="20eaf-150">次の手順では、実際にモニター ロックが保持されているスレッドを確認します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-150">The next step then is to find out which thread is actually holding the monitor lock.</span></span> <span data-ttu-id="20eaf-151">通常、モニターではロック情報が同期ブロック テーブルに格納されるため、`syncblk` コマンドを使用して詳細情報を取得できます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-151">Since monitors typically store lock information in the sync block table, we can use the `syncblk` command to get more information:</span></span>
+<span data-ttu-id="d2775-150">次の手順では、実際にモニター ロックが保持されているスレッドを確認します。</span><span class="sxs-lookup"><span data-stu-id="d2775-150">The next step then is to find out which thread is actually holding the monitor lock.</span></span> <span data-ttu-id="d2775-151">通常、モニターではロック情報が同期ブロック テーブルに格納されるため、`syncblk` コマンドを使用して詳細情報を取得できます。</span><span class="sxs-lookup"><span data-stu-id="d2775-151">Since monitors typically store lock information in the sync block table, we can use the `syncblk` command to get more information:</span></span>
 
 ```console
 > syncblk
@@ -237,11 +237,11 @@ ComClassFactory 0
 Free            0
 ```
 
-<span data-ttu-id="20eaf-152">2 つの興味深い列は、**MonitorHeld** と **Owning Thread Info** です。</span><span class="sxs-lookup"><span data-stu-id="20eaf-152">The two interesting columns are **MonitorHeld** and **Owning Thread Info**.</span></span> <span data-ttu-id="20eaf-153">**MonitorHeld** 列には、スレッドによってモニター ロックが取得されたかどうかと、待機中のスレッドの数が示されます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-153">The **MonitorHeld** column shows whether a monitor lock is acquired by a thread and the number of waiting threads.</span></span> <span data-ttu-id="20eaf-154">**Owning Thread Info** 列には、モニター ロックが現在所有されているスレッドが表示されます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-154">The **Owning Thread Info** column shows which thread currently owns the monitor lock.</span></span> <span data-ttu-id="20eaf-155">スレッド情報には、3 つの異なるサブ列があります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-155">The thread info has three different subcolumns.</span></span> <span data-ttu-id="20eaf-156">2 番目のサブ列には、オペレーティング システムのスレッド ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-156">The second subcolumn shows operating system thread ID.</span></span>
+<span data-ttu-id="d2775-152">2 つの興味深い列は、**MonitorHeld** と **Owning Thread Info** です。</span><span class="sxs-lookup"><span data-stu-id="d2775-152">The two interesting columns are **MonitorHeld** and **Owning Thread Info**.</span></span> <span data-ttu-id="d2775-153">**MonitorHeld** 列には、スレッドによってモニター ロックが取得されたかどうかと、待機中のスレッドの数が示されます。</span><span class="sxs-lookup"><span data-stu-id="d2775-153">The **MonitorHeld** column shows whether a monitor lock is acquired by a thread and the number of waiting threads.</span></span> <span data-ttu-id="d2775-154">**Owning Thread Info** 列には、モニター ロックが現在所有されているスレッドが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d2775-154">The **Owning Thread Info** column shows which thread currently owns the monitor lock.</span></span> <span data-ttu-id="d2775-155">スレッド情報には、3 つの異なるサブ列があります。</span><span class="sxs-lookup"><span data-stu-id="d2775-155">The thread info has three different subcolumns.</span></span> <span data-ttu-id="d2775-156">2 番目のサブ列には、オペレーティング システムのスレッド ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d2775-156">The second subcolumn shows operating system thread ID.</span></span>
 
-<span data-ttu-id="20eaf-157">この時点で、2 つの異なるスレッド (0x5634 と 0x51d4) にモニター ロックが保持されていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-157">At this point, we know two different threads (0x5634 and 0x51d4) hold a monitor lock.</span></span> <span data-ttu-id="20eaf-158">次の手順では、これらのスレッドによってどのような処理が行われているかを見ていきます。</span><span class="sxs-lookup"><span data-stu-id="20eaf-158">The next step is to take a look at what those threads are doing.</span></span> <span data-ttu-id="20eaf-159">それらにロックが保持されていて、無期限でスタックしているかどうかを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-159">We need to check if they're stuck indefinitely holding the lock.</span></span> <span data-ttu-id="20eaf-160">`setthread` コマンドと `clrstack` コマンドを使用して各スレッドに切り替えて、コールスタックを表示してみましょう。</span><span class="sxs-lookup"><span data-stu-id="20eaf-160">Let's use the `setthread` and `clrstack` commands to switch to each of the threads and display the callstacks.</span></span>
+<span data-ttu-id="d2775-157">この時点で、2 つの異なるスレッド (0x5634 と 0x51d4) にモニター ロックが保持されていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="d2775-157">At this point, we know two different threads (0x5634 and 0x51d4) hold a monitor lock.</span></span> <span data-ttu-id="d2775-158">次の手順では、これらのスレッドによってどのような処理が行われているかを見ていきます。</span><span class="sxs-lookup"><span data-stu-id="d2775-158">The next step is to take a look at what those threads are doing.</span></span> <span data-ttu-id="d2775-159">それらにロックが保持されていて、無期限でスタックしているかどうかを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2775-159">We need to check if they're stuck indefinitely holding the lock.</span></span> <span data-ttu-id="d2775-160">`setthread` コマンドと `clrstack` コマンドを使用して各スレッドに切り替えて、コールスタックを表示してみましょう。</span><span class="sxs-lookup"><span data-stu-id="d2775-160">Let's use the `setthread` and `clrstack` commands to switch to each of the threads and display the callstacks.</span></span>
 
-<span data-ttu-id="20eaf-161">最初のスレッドを確認するには、`setthread` コマンドを実行し、0x5634 スレッドのインデックス (このインデックスは 28) を探します。</span><span class="sxs-lookup"><span data-stu-id="20eaf-161">To look at the first thread, run the `setthread` command, and find the index of the 0x5634 thread (our index was 28).</span></span> <span data-ttu-id="20eaf-162">デッドロック関数によってロックの取得が待機されていますが、既にロックが所有されています。</span><span class="sxs-lookup"><span data-stu-id="20eaf-162">The deadlock function is waiting to acquire a lock, but it already owns the lock.</span></span> <span data-ttu-id="20eaf-163">それは、既に保持されているロックを待機しているデッドロック内にあります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-163">It's in deadlock waiting for the lock it already holds.</span></span>
+<span data-ttu-id="d2775-161">最初のスレッドを確認するには、`setthread` コマンドを実行し、0x5634 スレッドのインデックス (このインデックスは 28) を探します。</span><span class="sxs-lookup"><span data-stu-id="d2775-161">To look at the first thread, run the `setthread` command, and find the index of the 0x5634 thread (our index was 28).</span></span> <span data-ttu-id="d2775-162">デッドロック関数によってロックの取得が待機されていますが、既にロックが所有されています。</span><span class="sxs-lookup"><span data-stu-id="d2775-162">The deadlock function is waiting to acquire a lock, but it already owns the lock.</span></span> <span data-ttu-id="d2775-163">それは、既に保持されているロックを待機しているデッドロック内にあります。</span><span class="sxs-lookup"><span data-stu-id="d2775-163">It's in deadlock waiting for the lock it already holds.</span></span>
 
 ```console
 > setthread 28
@@ -260,16 +260,16 @@ OS Thread Id: 0x5634 (28)
 0000004E46AFF3A0 00007ffebdcc6b63 [DebuggerU2MCatchHandlerFrame: 0000004e46aff3a0]
 ```
 
-<span data-ttu-id="20eaf-164">2 番目のスレッドも同様です。</span><span class="sxs-lookup"><span data-stu-id="20eaf-164">The second thread is similar.</span></span> <span data-ttu-id="20eaf-165">ここでも既に所有しているロックの取得が試みられています。</span><span class="sxs-lookup"><span data-stu-id="20eaf-165">It's also trying to acquire a lock that it already owns.</span></span> <span data-ttu-id="20eaf-166">待機中の 300 を超える残りのスレッドによっても、デッドロックの原因となったいずれかのロックが待機されている可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="20eaf-166">The remaining 300+ threads that are all waiting are most likely also waiting on one of the locks that caused the deadlock.</span></span>
+<span data-ttu-id="d2775-164">2 番目のスレッドも同様です。</span><span class="sxs-lookup"><span data-stu-id="d2775-164">The second thread is similar.</span></span> <span data-ttu-id="d2775-165">ここでも既に所有しているロックの取得が試みられています。</span><span class="sxs-lookup"><span data-stu-id="d2775-165">It's also trying to acquire a lock that it already owns.</span></span> <span data-ttu-id="d2775-166">待機中の 300 を超える残りのスレッドによっても、デッドロックの原因となったいずれかのロックが待機されている可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="d2775-166">The remaining 300+ threads that are all waiting are most likely also waiting on one of the locks that caused the deadlock.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="20eaf-167">関連項目</span><span class="sxs-lookup"><span data-stu-id="20eaf-167">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2775-167">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2775-167">See also</span></span>
 
-- <span data-ttu-id="20eaf-168">[dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する</span><span class="sxs-lookup"><span data-stu-id="20eaf-168">[dotnet-trace](dotnet-trace.md) to list processes</span></span>
-- <span data-ttu-id="20eaf-169">[dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する</span><span class="sxs-lookup"><span data-stu-id="20eaf-169">[dotnet-counters](dotnet-counters.md) to check managed memory usage</span></span>
-- <span data-ttu-id="20eaf-170">[dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する</span><span class="sxs-lookup"><span data-stu-id="20eaf-170">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file</span></span>
-- [<span data-ttu-id="20eaf-171">dotnet/診断</span><span class="sxs-lookup"><span data-stu-id="20eaf-171">dotnet/diagnostics</span></span>](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- <span data-ttu-id="d2775-168">[dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する</span><span class="sxs-lookup"><span data-stu-id="d2775-168">[dotnet-trace](dotnet-trace.md) to list processes</span></span>
+- <span data-ttu-id="d2775-169">[dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する</span><span class="sxs-lookup"><span data-stu-id="d2775-169">[dotnet-counters](dotnet-counters.md) to check managed memory usage</span></span>
+- <span data-ttu-id="d2775-170">[dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する</span><span class="sxs-lookup"><span data-stu-id="d2775-170">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file</span></span>
+- [<span data-ttu-id="d2775-171">dotnet/診断</span><span class="sxs-lookup"><span data-stu-id="d2775-171">dotnet/diagnostics</span></span>](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
 
-## <a name="next-steps"></a><span data-ttu-id="20eaf-172">次の手順</span><span class="sxs-lookup"><span data-stu-id="20eaf-172">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="d2775-172">次の手順</span><span class="sxs-lookup"><span data-stu-id="d2775-172">Next steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="20eaf-173">.NET Core で使用できる診断ツール</span><span class="sxs-lookup"><span data-stu-id="20eaf-173">What diagnostic tools are available in .NET Core</span></span>](index.md)
+> [<span data-ttu-id="d2775-173">.NET Core で使用できる診断ツール</span><span class="sxs-lookup"><span data-stu-id="d2775-173">What diagnostic tools are available in .NET Core</span></span>](index.md)

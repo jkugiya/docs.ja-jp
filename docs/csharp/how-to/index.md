@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dae10bf0019c283f568c4850d3bfa0abad6df85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537406"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258196"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -24,9 +24,9 @@ C# の開発者には一般的な方法といえるヒントやコツがいく�
 - C# のプログラマでも[ Visual Basic の `My` 名前空間を使用する場合がある](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [拡張メソッドを使用して `enum` 型の新しいメソッドを作成する](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
-### <a name="class-and-struct-members"></a>クラスと構造体のメンバー
+### <a name="class-record-and-struct-members"></a>クラス、レコード、構造体のメンバー
 
-クラスと構造体を作成してプログラムを実装します。 次の手法は、クラスまたは構造体を作成するときによく使用されます。
+クラス、レコード、および構造体を作成してプログラムを実装します。 次の手法は、クラス、レコード、または構造体を作成するときによく使用されます。
 
 - [自動的に実装されたプロパティを宣言する](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)。
 - [読み取り/書き込みのプロパティを宣言して使用する](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md)。

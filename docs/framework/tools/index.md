@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556682"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258778"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 
@@ -23,7 +23,7 @@ ms.locfileid: "90556682"
 
 アセンブリ キャッシュ ビューアー (*Shfusion.dll*) を除き、これらのツールはすべてコマンド ラインから実行できます。 エクスプローラーから *Shfusion.dll* にアクセスする必要があります。
   
-コマンド ライン ツールの最適な実行方法は、Visual Studio 用開発者コマンド プロンプトを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+コマンド ライン ツールの最適な実行方法は、Visual Studio によってインストールされる開発者シェルの 1 つを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)に関するページを参照してください。
 
 > [!NOTE]
 > ツールの中には、32 ビット コンピューターまたは 64 ビット コンピューターに固有のものもあります。 該当するコンピューターに適切なバージョンのツールを実行します。
@@ -47,9 +47,6 @@ ActiveX コントロール用の COM タイプ ライブラリに属する型定
 
 - [Clrver.exe (CLR バージョン ツール)](clrver-exe-clr-version-tool.md)  
 コンピューターにインストールされている共通言語ランタイム (CLR) のすべてのバージョンを報告します。
-
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)  
-.NET Framework ツールをより簡単に使用できるようになります。 それは、特定の環境変数を自動的に設定するコマンド プロンプトです。
 
 - [CorFlags.exe (CorFlags 変換ツール)](corflags-exe-corflags-conversion-tool.md)  
 移植可能な実行可能 (PE) イメージのヘッダー内の CorFlags セクションを構成します。

@@ -6,12 +6,12 @@ metadata:
   description: .NET アプリの設計、構築、移行について推奨される方法について説明します。
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: aab236c52bf4217567fe76e8c4f9ffcb51ad17f5
-  ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+  ms.openlocfilehash: 68851c514723f6db7017c3000e88242f3fad2592
+  ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "100583106"
+  ms.lasthandoff: 03/05/2021
+  ms.locfileid: "102206701"
 landingContent:
 - title: ASP.NET Core MVC アプリの開発
   linkLists:
@@ -23,6 +23,8 @@ landingContent:
       url: blazor-for-web-forms-developers/index.md
     - text: WCF 開発者向け ASP.NET Core gRPC
       url: grpc-for-wcf-developers/index.md
+    - text: .NET Core への既存の ASP.NET アプリの移植
+      url: porting-existing-aspnet-apps/index.md
 - title: Azure 用のクラウド ネイティブ .NET アプリを開発する
   linkLists:
   - linkListType: concept

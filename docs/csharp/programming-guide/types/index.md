@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: a592a4236575a6dd2f782142c470ce3945e130b9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190248"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255647"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -64,14 +64,14 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 ## <a name="custom-types"></a>カスタム型
 
-カスタムの型を独自に作成するには、[struct](../../language-reference/builtin-types/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md)、[enum](../../language-reference/builtin-types/enum.md) の各構成要素を使用します。 .NET クラス ライブラリ自体が、マイクロソフトによって提供された、ユーザーが独自のアプリケーションで使用できるカスタムの型のコレクションです。 既定では、クラス ライブラリで最も頻繁に使用される型は任意の C# プログラムで使用可能になっています。 それ以外は、それらが定義されているアセンブリへのプロジェクト参照を明示的に追加した場合にのみ使用可能になります。 コンパイラがアセンブリを参照できるようになると、そのアセンブリ内で宣言されている型の変数 (および定数) をソース コード内で宣言できるようになります。 詳細については、「[.NET クラス ライブラリの概要](../../../standard/class-library-overview.md)」を参照してください。
+独自のカスタム型を作成するには、[struct](../../language-reference/builtin-types/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md)、[enum](../../language-reference/builtin-types/enum.md)、および [record](../../language-reference/builtin-types/record.md) の各構造体を使用します。 .NET クラス ライブラリ自体が、マイクロソフトによって提供された、ユーザーが独自のアプリケーションで使用できるカスタムの型のコレクションです。 既定では、クラス ライブラリで最も頻繁に使用される型は任意の C# プログラムで使用可能になっています。 それ以外は、それらが定義されているアセンブリへのプロジェクト参照を明示的に追加した場合にのみ使用可能になります。 コンパイラがアセンブリを参照できるようになると、そのアセンブリ内で宣言されている型の変数 (および定数) をソース コード内で宣言できるようになります。 詳細については、「[.NET クラス ライブラリの概要](../../../standard/class-library-overview.md)」を参照してください。
 
 ## <a name="the-common-type-system"></a>共通型システム
 
 .NET で型システムを使用する場合は、次の 2 つの基本事項を理解しておく必要があります。
 
 - 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32?displayProperty=nameWithType> (C# のキーワードは [int](../../language-reference/builtin-types/integral-numeric-types.md)) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object?displayProperty=nameWithType> (C# のキーワードは [object](../../language-reference/builtin-types/reference-types.md)) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../../../standard/base-types/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](../classes-and-structs/inheritance.md)」を参照してください。
-- CTS の各型は、"*値型*" または "*参照型*" として定義されます。 この型には、.NET クラス ライブラリのすべてのカスタムの型だけでなく、ユーザーが独自に定義した型も含まれます。 [struct](../../language-reference/builtin-types/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型は `structs` です。 [class](../../language-reference/keywords/class.md) キーワードを使用して定義した型は、参照型です。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
+- CTS の各型は、"*値型*" または "*参照型*" として定義されます。 この型には、.NET クラス ライブラリのすべてのカスタムの型だけでなく、ユーザーが独自に定義した型も含まれます。 [struct](../../language-reference/builtin-types/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型は `structs` です。 [class](../../language-reference/keywords/class.md) または [record](../../language-reference/builtin-types/record.md) のキーワードを使用して定義した型は、参照型です。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
 
 次の図は、CTS における値型と参照型の関係を示しています。
 
@@ -112,7 +112,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 ### <a name="reference-types"></a>参照型
 
-[class](../../language-reference/keywords/class.md)、[delegate](../../language-reference/builtin-types/reference-types.md)、配列、または [interface](../../language-reference/keywords/interface.md) として定義された型は、"*参照型*" です。 参照型の変数を宣言した場合、実行時には、[new](../../language-reference/operators/new-operator.md) 演算子によってオブジェクトが明示的に作成されるまで、この変数には [null](../../language-reference/keywords/null.md) が格納されます。または、次の例に示すように `new` を使用して、別の場所で作成されたオブジェクトを割り当てることもできます。
+[class](../../language-reference/keywords/class.md)、[record](../../language-reference/builtin-types/record.md)、[delegate](../../language-reference/builtin-types/reference-types.md)、配列、または [interface](../../language-reference/keywords/interface.md) として定義された型は、"*参照型*" です。 参照型の変数を宣言した場合、実行時には、[new](../../language-reference/operators/new-operator.md) 演算子によってオブジェクトが明示的に作成されるまで、この変数には [null](../../language-reference/keywords/null.md) が格納されます。または、次の例に示すように `new` を使用して、別の場所で作成されたオブジェクトを割り当てることもできます。
 
 :::code language="csharp" source="snippets/index/Program.cs" id="DeclarationAndAssignment":::
 

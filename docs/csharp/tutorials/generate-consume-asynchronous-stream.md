@@ -4,16 +4,16 @@ description: この上級チュートリアルでは、非同期ストリーム�
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 48d749af47139ca97df9c05f2ef450870b41bef5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420371"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259627"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する
 
-C# 8.0 では、データのストリーミング元をモデル化する**非同期ストリーム**が導入されました。 データ ストリームでは、多くの場合、要素を非同期で取得または生成します。 非同期ストリームは .NET Standard 2.1 で導入された新しいインターフェイスに依存します。 このインターフェイスは .NET Core 3.0 以降でサポートされています。 非同期でストリーミングするデータ ソースにとって自然なプログラミング モデルが与えられます。
+C# 8.0 では、データのストリーミング元をモデル化する **非同期ストリーム** が導入されました。 データ ストリームでは、多くの場合、要素を非同期で取得または生成します。 非同期ストリームは .NET Standard 2.1 で導入された新しいインターフェイスに依存します。 このインターフェイスは .NET Core 3.0 以降でサポートされています。 非同期でストリーミングするデータ ソースにとって自然なプログラミング モデルが与えられます。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
@@ -42,13 +42,13 @@ C# 8.0 では、データのストリーミング元をモデル化する**非�
 
 ## <a name="run-the-starter-application"></a>初期アプリケーションを実行する
 
-このチュートリアルで使用される初期アプリケーションのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
+このチュートリアルで使用される初期アプリケーションのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
 
 初期アプリケーションは、[GitHub GraphQL](https://developer.github.com/v4/) インターフェイスを使用して、[dotnet/docs](https://github.com/dotnet/docs) リポジトリに書き込まれた最近の問題を取得するコンソール アプリケーションです。 まず、初期アプリの `Main` メソッドについて次のコードを参照します。
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-`GitHubKey` 環境変数を自分の個人用アクセス トークンに設定するか、`GenEnvVariable` への呼び出しの最後の引数を自分の個人用アクセス トークンで置き換えることができます。 ソースを他人と共有する場合、自分のアクセス コードをソース コードに置かないでください。 共有ソース リポジトリにアクセス コードをアップロードしないでください。
+`GitHubKey` 環境変数を自分の個人用アクセス トークンに設定するか、`GetEnvVariable` への呼び出しの最後の引数を自分の個人用アクセス トークンで置き換えることができます。 ソースを他人と共有する場合、自分のアクセス コードをソース コードに置かないでください。 共有ソース リポジトリにアクセス コードをアップロードしないでください。
 
 GitHub クライアントの作成後に、`Main` 内のコードによって進行状況レポート オブジェクトとキャンセル トークンが作成されます。 これらのオブジェクトが作成されると、`Main` によって `runPagedQueryAsync` が呼び出されて、作成された直近 250 件の問題が取得されます。 そのタスクが完了すると、結果が表示されます。
 
@@ -144,7 +144,7 @@ try
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-完了したチュートリアルのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
+完了したチュートリアルのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
 
 ## <a name="run-the-finished-application"></a>完成したアプリケーションを実行する
 

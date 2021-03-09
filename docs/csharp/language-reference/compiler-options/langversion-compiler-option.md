@@ -10,12 +10,12 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: b0e966bcc87303c0a7c2199fbfac743b22481424
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 987177cc203b4c6202e8c14d8a9f4b41721e836f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125476"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104875"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# コンパイラ オプション)
 
@@ -64,11 +64,11 @@ C# 言語バージョンを指定するその他の方法については、[C# �
 | C# 1.0           | [DOC のダウンロード][csharp-1]   | C# 言語仕様バージョン 1.0:Microsoft Corporation            |
 
 [csharp-6]: /dotnet/csharp/language-reference/language-specification/introduction
-[csharp-5]: https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf
+[csharp-5]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf
 [csharp-3]: https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc
-[csharp-2]: https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf
-[csharp-1.2]: https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf
-[csharp-1]: https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf
+[csharp-2]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_4th_edition_june_2006.pdf
+[csharp-1.2]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_2nd_edition_december_2002.pdf
+[csharp-1]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_1st_edition_december_2001.pdf
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>すべての言語機能をサポートするために必要な SDK の最小バージョン
 

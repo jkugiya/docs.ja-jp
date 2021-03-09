@@ -3,12 +3,12 @@ title: .NET アーキテクチャ コンポーネント
 description: .NET Standard、.NET 実装、.NET ランタイム、ツールなど、.NET アーキテクチャ コンポーネントについて説明します。
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 884deb61ab5cda5054fb54134c3338b4d05599ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100423136"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106398"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -99,21 +99,21 @@ UWP は、モノのインターネット (IoT) 用に最新のタッチ対応の
 
 C# 言語および共通言語基盤 (CLI) の仕様は、[エクマ インターナショナル&reg;](https://www.ecma-international.org/)を介して標準化されています。 これらの標準の初版は、2001 年 12 月に Ecma によって公開されました。
 
-標準の後続の改訂は、Programming Languages Technical Committee ([TC49](https://www.ecma-international.org/memento/tc49.htm)) 内の TC49-TG2 (C#) および TC49-TG3 (CLI) タスク グループによって展開され、Ecma General Assembly で採用され、その後、ISO Fast-Track プロセスを介して ISO/IEC JTC 1 で採用されました。
+標準の後続の改訂は、Programming Languages Technical Committee ([TC49](https://www.ecma-international.org/technical-committees/tc49/)) 内の TC49-TG2 (C#) および TC49-TG3 (CLI) タスク グループによって展開され、Ecma General Assembly で採用され、その後、ISO Fast-Track プロセスを介して ISO/IEC JTC 1 で採用されました。
 
 ### <a name="latest-standards"></a>最新の標準
 
-[C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) および [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)) については、次の公式の Ecma ドキュメントを入手できます。
+[C#](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/) および [CLI](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) ([TR-84](https://www.ecma-international.org/publications-and-standards/technical-reports/ecma-tr-84/)) については、次の公式の Ecma ドキュメントを入手できます。
 
-- **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)):[ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **The Common Language Infrastructure** (共通言語基盤):[ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)。
+- **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)):[ECMA-334.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)
+- **The Common Language Infrastructure** (共通言語基盤):[ECMA-335.pdf](hhttps://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf)。
 - **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報):[ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 形式。
 
 公式の ISO/IEC ドキュメントは、ISO/IEC の「[Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/)」(公開されている標準) ページから入手できます。 そのページのリンクを次に示します。
 
 - **情報技術 - プログラミング言語 - C#** :[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
 - **情報技術 - 共通言語基盤 (CLI) パーティション I から VI**:[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **情報技術 - 共通言語基盤 (CLI) - Partition IV XML ファイルから派生した情報に関するテクニカル レポート**:[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **情報技術 - 共通言語基盤 (CLI) - Partition IV XML ファイルから派生した情報に関するテクニカル レポート**:[ISO/IEC TR 23272:2011](https://www.ecma-international.org/wp-content/uploads/ECMA_TR-84_6th_edition_june_2012.pdf)
 
 ## <a name="see-also"></a>関連項目
 

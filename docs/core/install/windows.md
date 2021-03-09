@@ -4,12 +4,12 @@ description: .NET をインストールできる Windows のバージョンに�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 55746b29b579a6d3aacb7d11c5604dc601440ab5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506293"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105103"
 ---
 # <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
@@ -24,7 +24,7 @@ ms.locfileid: "99506293"
 .NET の最新バージョンは 5.0 です。
 
 > [!div class="button"]
-> [.NET をダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET をダウンロードする](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>サポートされているリリース
 
@@ -76,7 +76,7 @@ Windows には、3 つの異なるランタイムをインストールできま�
   このランタイムは最も単純なランタイムであり、他のランタイムは含まれていません。 .NET アプリとの互換性を最善にするには、"*ASP.NET Core ランタイム*" と "*Desktop ランタイム*" の両方をインストールすることを強くお勧めします。
 
 > [!div class="button"]
-> [.NET ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>SDK に関する情報
 
@@ -263,12 +263,12 @@ Visual Studio Code は、デスクトップ上で動作する強力で軽量な�
 Visual Studio Code には、Visual Studio のような自動化された .NET Core インストーラーは付属していませんが、.NET Core のサポートを簡単に追加できます。
 
 01. [Visual Studio Code をダウンロードしてインストールします](https://code.visualstudio.com/Download)。
-01. [.NET Core SDK をダウンロードしてインストールします](https://dotnet.microsoft.com/download/dotnet-core)。
+01. [.NET Core SDK をダウンロードしてインストールします](https://dotnet.microsoft.com/download/dotnet)。
 01. [Visual Studio Code マーケットプレースから C# 拡張機能をインストールします](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)。
 
 ## <a name="windows-installer"></a>Windows インストーラー
 
-.NET の[ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-core)には、Windows インストーラーの実行可能ファイルが用意されています。
+.NET の[ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet)には、Windows インストーラーの実行可能ファイルが用意されています。
 
 Windows インストーラーを使用して .NET をインストールする場合、`DOTNETHOME_X64` および `DOTNETHOME_X86` パラメーターを設定することによってインストール パスをカスタマイズできます。
 
@@ -298,14 +298,14 @@ dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
 
 ## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
 
-.NET 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として行われます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
+.NET 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として行われます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet)を使用することをお勧めします。
 
 .NET SDK と .NET ランタイムはどちらも、ダウンロード後に手動でインストールできます。 .NET SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムのバイナリ リリースをダウンロードします。
 
 - [.NET 5.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
-- [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
+- [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet/3.1)
+- [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet)
 
 .NET を抽出するためのディレクトリを作成します (`%USERPROFILE%\dotnet` など)。 次に、ダウンロードした zip ファイルをそのディレクトリに抽出します。
 

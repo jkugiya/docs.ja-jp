@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 9caecdcc3516db2bd71420184fbd21f7837552a7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 8d086c5c595197894e01a347f82b2c6341263fc5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437922"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104966"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 の新機能
 
@@ -23,7 +23,7 @@ Visual Studio for Mac でも .NET Core 3.1 がサポートされており、Visu
 
 リリースの詳細については、「[.NET Core 3.1 についてのお知らせ](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)」を参照してください。
 
-- Windows、macOS、または Linux 上に [.NET Core 3.1 をダウンロードして使い始めましょう](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
+- Windows、macOS、または Linux 上に [.NET Core 3.1 をダウンロードして使い始めましょう](https://dotnet.microsoft.com/download/dotnet/3.1)。
 
 ## <a name="long-term-support"></a>長期的なサポート
 

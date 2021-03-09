@@ -2,12 +2,12 @@
 title: 分散トレース - .NET
 description: .NET の分散トレースの概要です。
 ms.date: 02/02/2021
-ms.openlocfilehash: d29c803dfec00474562abdc61ce65ea3f3faa133
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 44022232d4451f8d8a255a352206d7bdc9cb4e5c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431439"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105572"
 ---
 # <a name="net-distributed-tracing"></a>.NET の分散トレース
 
@@ -119,14 +119,14 @@ HTTP 受信要求からトレース データを発行する方法の例を次�
 `ActivityListener` クラスにより、さまざまなイベントを処理するためのさまざまなコールバックが提供されています。
 
 ```csharp
-
-ActivityListener listener = new ActivityListener()
-
-ShouldListenTo = (activitySource) => object.ReferenceEquals(source, activitySource),
-ActivityStarted = activity => /* Handle the Activity start event here */ DoSomething(),
-ActivityStopped = activity => /* Handle the Activity stop event here */ DoSomething(),
-SampleUsingParentId = (ref ActivityCreationOptions<string> activityOptions) => ActivitySamplingResult.AllData,
-Sample = (ref ActivityCreationOptions<ActivityContext> activityOptions) => ActivitySamplingResult.AllData
+var listener = new ActivityListener
+{
+    ShouldListenTo = (activitySource) => object.ReferenceEquals(source, activitySource),
+    ActivityStarted = activity => /* Handle the Activity start event here */ DoSomething(),
+    ActivityStopped = activity => /* Handle the Activity stop event here */ DoSomething(),
+    SampleUsingParentId = (ref ActivityCreationOptions<string> activityOptions) => ActivitySamplingResult.AllData,
+    Sample = (ref ActivityCreationOptions<ActivityContext> activityOptions) => ActivitySamplingResult.AllData
+};
 
 // Enable the listener
 ActivitySource.AddActivityListener(listener);

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 5202619909de4a132bda8ab3dca63337c6f3493f
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c3c04f746f0e2cf15bc1881544b93a538dbdc04e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792103"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104836"
 ---
 # <a name="uinteger-data-type"></a>UInteger データ型
 
@@ -69,7 +69,7 @@ Dim number = &H_0FAC_14D7ui
 
 - **負の数値。** `UInteger` は符号なしの型であるため、負の数を表すことはできません。 `UInteger` 型に評価される式で、単項マイナス (`-`) 演算子を使用すると、Visual Basic で式が最初に `Long` に変換されます。
 
-- **CLS 準拠。** `UInteger` データ型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
+- **CLS 準拠。** `UInteger` データ型は[共通言語仕様](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
 
 - **相互運用の考慮事項。** オートメーション オブジェクトや COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントとやり取りする場合、`uint` などの型は、他の環境ではデータ幅 (16 ビット) が異なる可能性があることに注意してください。 そのようなコンポーネントに 16 ビットの引数を渡す場合は、Visual Basic のマネージド コードで、`UInteger` ではなく `UShort` として宣言します。
 

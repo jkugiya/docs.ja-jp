@@ -10,12 +10,12 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.prod: azure-dotnet
-  ms.openlocfilehash: 3f84758863561be809078b888f18308d5cbcfb82
-  ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+  ms.openlocfilehash: 121499bc7f26ba6b07851696ae20b9ebf730de2a
+  ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/30/2021
-  ms.locfileid: "99216065"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102105718"
 landingContent:
 - title: Azure で .NET の使用を開始する
   linkLists:
@@ -26,7 +26,7 @@ landingContent:
   - linkListType: get-started
     links:
     - text: .NET 開発者ツール
-      url: tools.md
+      url: ./dotnet-dev-env-checklist.md
     - text: アプリを認証する
       url: authentication.md
     - text: ログの記録
@@ -220,4 +220,4 @@ landingContent:
     - text: Microsoft プラットフォームとツールでのコンテナー化された Docker アプリケーションのライフサイクル
       url: ../architecture/containerized-lifecycle/index.md
     - text: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する
-      url: /dotnet/architecture/modernize-with-azure-containers/
+      url: ../architecture/modernize-with-azure-containers/index.md

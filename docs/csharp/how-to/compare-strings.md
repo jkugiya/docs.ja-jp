@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 5c417ccbdd763de5bbb67ae6a17ac1a5ff165065
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324180"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104979"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\# で文字列を比較する方法
 
@@ -31,7 +31,6 @@ ms.locfileid: "85324180"
 
 既定では、最も一般的な操作は次のとおりです。
 
-- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
 - <xref:System.String.op_Equality%2A?displayProperty=nameWithType> と <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>。つまり、それぞれ[等価演算子 `==` と `!=`](../language-reference/operators/equality-operators.md#string-equality)。
 
@@ -122,7 +121,7 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 
 ## <a name="reference-equality-and-string-interning"></a>参照の等価性と文字列インターン
 
-どの例でも <xref:System.Object.ReferenceEquals%2A> を使用していません。 このメソッドによって、2 つの文字列が同じオブジェクトであるかどうかが判断されます。異なる場合、文字列比較で結果が一致しません。 次の例は、C# の*文字列のインターン*機能を示しています。 プログラムで 2 つ以上の同じ文字列変数を宣言すると、コンパイラはそれらをすべて同じ場所に保管します。 <xref:System.Object.ReferenceEquals%2A> メソッドを呼び出すと、2 つの文字列がメモリ内の同じオブジェクトを実際に参照していることを確認できます。 インターン処理を回避するには、<xref:System.String.Copy%2A?displayProperty=nameWithType> メソッドを使用します。 コピーが行われた後、同じ値が含まれていても、2 つの文字列は別の記憶場所を使用します。 次の例を実行し、文字列 `a` と `b` が*インターン処理される*ことを示します。これは、同じ記憶域を共有することを意味します。 文字列 `a` と `c` は異なります。
+どの例でも <xref:System.Object.ReferenceEquals%2A> を使用していません。 このメソッドによって、2 つの文字列が同じオブジェクトであるかどうかが判断されます。異なる場合、文字列比較で結果が一致しません。 次の例は、C# の *文字列のインターン* 機能を示しています。 プログラムで 2 つ以上の同じ文字列変数を宣言すると、コンパイラはそれらをすべて同じ場所に保管します。 <xref:System.Object.ReferenceEquals%2A> メソッドを呼び出すと、2 つの文字列がメモリ内の同じオブジェクトを実際に参照していることを確認できます。 インターン処理を回避するには、<xref:System.String.Copy%2A?displayProperty=nameWithType> メソッドを使用します。 コピーが行われた後、同じ値が含まれていても、2 つの文字列は別の記憶場所を使用します。 次の例を実行し、文字列 `a` と `b` が *インターン処理される* ことを示します。これは、同じ記憶域を共有することを意味します。 文字列 `a` と `c` は異なります。
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 

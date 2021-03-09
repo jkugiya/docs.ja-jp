@@ -4,12 +4,12 @@ description: さまざまな種類のアプリをビルドするための無料�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d08e00ee9702c71cacc8a6588c1f4290b4ab3ae9
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096801"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105090"
 ---
 # <a name="introduction-to-net"></a>.NET の概要
 
@@ -132,7 +132,7 @@ Tizen プラットフォーム上の [.NET は Tizen によってサポート](h
 
 [.NET SDK](sdk.md) は、.NET アプリケーションを開発および実行するためのライブラリとツールのセットです。
 
-[.NET をダウンロードする](https://dotnet.microsoft.com/download/dotnet-core/)ときに、.NET ランタイムや ASP.NET Core ランタイムなどの、SDK または "*ランタイム*" を選択できます。 .NET アプリを実行するために準備するコンピューター上にランタイムをインストールします。 開発に使用するコンピューター上に SDK をインストールします。 SDK をダウンロードすると、それと共にランタイムを自動的に取得することになります。
+[.NET をダウンロードする](https://dotnet.microsoft.com/download/dotnet)ときに、.NET ランタイムや ASP.NET Core ランタイムなどの、SDK または "*ランタイム*" を選択できます。 .NET アプリを実行するために準備するコンピューター上にランタイムをインストールします。 開発に使用するコンピューター上に SDK をインストールします。 SDK をダウンロードすると、それと共にランタイムを自動的に取得することになります。
 
 SDK のダウンロードには次のコンポーネントが含まれます。
 
@@ -340,7 +340,7 @@ Entity Framework (EF) Core は、[オープン ソース](https://github.com/asp
   |Context  |"ランタイム" の意味 |
   |---------|---------|
   | [共通言語ランタイム (CLR)](#clr)| マネージド プログラムの実行環境。 OS は、ランタイム環境の一部ですが、.NET ランタイムの一部ではありません。 |
-  | [.NET のダウンロード ページの .NET ランタイム](https://dotnet.microsoft.com/download/dotnet-core) | [CLR](#clr) および[ランタイム ライブラリ](#runtime-libraries)。これらは組み合わせて使用され、[フレームワーク依存](#deployment-models)アプリを実行するためのサポートが提供されます。 このページには、ASP.NET Core サーバー アプリと Windows デスクトップ アプリのランタイムの選択肢が示されます。 |
+  | [.NET のダウンロード ページの .NET ランタイム](https://dotnet.microsoft.com/download/dotnet) | [CLR](#clr) および[ランタイム ライブラリ](#runtime-libraries)。これらは組み合わせて使用され、[フレームワーク依存](#deployment-models)アプリを実行するためのサポートが提供されます。 このページには、ASP.NET Core サーバー アプリと Windows デスクトップ アプリのランタイムの選択肢が示されます。 |
   | [ランタイム識別子 (RID)](rid-catalog.md) | .NET アプリが実行される OS プラットフォームおよび CPU アーキテクチャ。 次に例を示します。Windows x64、Linux x64。 |
 
 * **フレームワーク**
@@ -350,7 +350,7 @@ Entity Framework (EF) Core は、[オープン ソース](https://github.com/asp
   | .NET Framework | .NET の元の Windows のみの実装。 "Framework" の頭文字は大文字です。 |
   | ターゲット フレームワーク | .NET アプリまたはライブラリが依存する API のコレクション。 例: .NET Core 3.1、.NET Standard 2.0 |
   | ターゲット フレームワーク モニカー (TFM)  | TFM は、.NET アプリまたはライブラリのターゲット フレームワークを指定するための標準化されたトークン形式です。 例: .NET Framework 4.6.2 の `net462`。 |
-  | フレームワークに依存するアプリ | [.NET のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-core)からランタイムをインストールしたコンピューター上でのみ実行できるアプリ。 この使用法の "フレームワーク" は、.NET のダウンロード ページからダウンロードする "ランタイム" と同じものです。 |
+  | フレームワークに依存するアプリ | [.NET のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet)からランタイムをインストールしたコンピューター上でのみ実行できるアプリ。 この使用法の "フレームワーク" は、.NET のダウンロード ページからダウンロードする "ランタイム" と同じものです。 |
   | フレームワーク ライブラリ | [ランタイム ライブラリ](#runtime-libraries)のシノニムとして使用されることがあります。 |
 
 * **SDK**

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 9082fc9444f0754c60a6aa3f9b58db1d833349b8
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 5e47fc49e8e0a6df4d1fcc70174a8519752fd3e1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792090"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104823"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong データ型 (Visual Basic)
 
@@ -67,7 +67,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **負の数値。** `ULong` は符号なしの型であるため、負の数を表すことはできません。 `ULong` 型に評価される式で、単項マイナス (`-`) 演算子を使用すると、Visual Basic で式が最初に `Decimal` に変換されます。
 
-- **CLS 準拠。** `ULong` データ型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
+- **CLS 準拠。** `ULong` データ型は[共通言語仕様](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
 
 - **相互運用の考慮事項。** オートメーション オブジェクトや COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントとやり取りする場合、`ulong` などの型は、他の環境ではデータ幅 (32 ビット) が異なる可能性があることに注意してください。 そのようなコンポーネントに 32 ビットの引数を渡す場合は、Visual Basic のマネージド コードで、`ULong` ではなく `UInteger` として宣言します。
 

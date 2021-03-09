@@ -537,13 +537,15 @@ items:
             href: programming-guide/types/using-type-dynamic.md
           - name: 'チュートリアル: 動的オブジェクトの作成と使用 (C# および Visual Basic)'
             href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
-      - name: クラスと構造体
+      - name: クラス、レコード、構造体
         items:
           - name: 概要
-            displayName: classes
+            displayName: 'classes, records'
             href: programming-guide/classes-and-structs/index.md
           - name: クラス
             href: programming-guide/classes-and-structs/classes.md
+          - name: レコード
+            href: programming-guide/classes-and-structs/records.md
           - name: オブジェクト
             href: programming-guide/classes-and-structs/objects.md
           - name: 継承

@@ -35,6 +35,8 @@
           href: configuration-differences.md
         - name: ルーティングの相違点
           href: routing-differences.md
+        - name: ログの相違点
+          href: logging-differences.md
         - name: Razor Pages と ASP.NET MVC の比較
           href: comparing-razor-pages-aspnet-mvc.md
         - name: Web API の相違点

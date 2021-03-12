@@ -286,6 +286,8 @@ items:
             href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
           - name: Main() の戻り値
             href: programming-guide/main-and-command-args/main-return-values.md
+          - name: 最上位レベルのステートメント
+            href: programming-guide/main-and-command-args/top-level-statements.md
       - name: プログラミングの概念
         items:
           - name: 概要
@@ -1133,6 +1135,8 @@ items:
                 href: language-reference/keywords/add.md
               - name: get
                 href: language-reference/keywords/get.md
+              - name: Init
+                href: language-reference/keywords/init.md
               - name: partial (型)
                 href: language-reference/keywords/partial-type.md
               - name: partial (メソッド)

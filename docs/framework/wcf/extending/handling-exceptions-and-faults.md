@@ -3,12 +3,12 @@ description: 詳細については、「例外とエラーの処理」を参照�
 title: 例外とエラーの処理
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 9851d63705ba8b28819b11e3893bcd6b019d565d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 16ae72d54177b664bc41be6e639d0a44867df569
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99735076"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605062"
 ---
 # <a name="handling-exceptions-and-faults"></a>例外とエラーの処理
 
@@ -22,7 +22,7 @@ ms.locfileid: "99735076"
 
  チャネルがスローするすべての例外は、<xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>、または <xref:System.ServiceModel.CommunicationException> から派生した種類のいずれかである必要があります  (<xref:System.ObjectDisposedException> のような例外をスローすることもできますが、これは呼び出し元のコードがチャネルを誤用したことを示す場合だけです。 チャネルが正しく使用されている場合は、指定された例外のみをスローする必要があります)。WCF には、から派生する7つの例外の種類が用意されて <xref:System.ServiceModel.CommunicationException> おり、チャネルで使用するように設計されています。 <xref:System.ServiceModel.CommunicationException> から派生した例外には、システムのその他の部分で使用するように設計されているものもあります。 これらの例外の種類を以下に示します。  
   
-|例外の種類|意味|内部例外の内容|復旧戦略|  
+|例外の種類|説明|内部例外の内容|復旧戦略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 次に例を示します。 <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> または <xref:System.Net.Sockets.SocketException>|別のアドレスで実行してください。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|このプロセスは、リッスン用に指定されたエンドポイント アドレスへのアクセスを許可されていません。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 たとえば、<xref:System.IO.PipeException>、または <xref:System.Net.HttpListenerException> です。|別の資格情報を使用して試行します。|  
@@ -49,8 +49,8 @@ ms.locfileid: "99735076"
 
  SOAP 1.1 および SOAP 1.2 では、エラーの具体的な構造が定義されています。 この 2 つの仕様にはいくつかの違いがありますが、通常、Message 型と MessageFault 型を使用して、エラーを作成および使用します。  
   
- ![例外とエラーの処理](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
-SOAP 1.2 エラー (左) と SOAP 1.1 エラー (右)。 Fault 要素が名前空間で修飾されているのは SOAP 1.1 のみ。  
+ ![SOAP 1.2 エラーおよび SOAP 1.1 エラー](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif)  
+SOAP 1.2 エラー (左) と SOAP 1.1 エラー (右)。 SOAP 1.1 では、Fault 要素だけが名前空間で修飾されています。  
   
  SOAP では、エラー メッセージとは、`<env:Fault>` の子要素としてエラー要素 (`<env:Body>` という名前の要素) だけを含むメッセージと定義されています。 図 1 に示すように、エラー要素の内容は SOAP 1.1 と SOAP 1.2 で若干異なります。 ただし、次のように、<xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> クラスでは、これらの違いを 1 つのオブジェクト モデルに正規化します。  
   
@@ -324,7 +324,7 @@ public class MessageFault
   
 - コアコンポーネントに加えて、 [サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) を使用して、WCF トレースを表示および検索することもできます。 このツールは、WCF によって生成され、を使用して出力されるトレースファイル専用に設計されてい <xref:System.Diagnostics.XmlWriterTraceListener> ます。 トレースに関与するさまざまなコンポーネントを次の図に示します。  
   
- ![例外とエラーの処理](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![トレースコンポーネント](./media/wcfc-tracinginchannelsc.gif)  
   
 ### <a name="tracing-from-a-custom-channel"></a>カスタム チャネルからのトレース  
 

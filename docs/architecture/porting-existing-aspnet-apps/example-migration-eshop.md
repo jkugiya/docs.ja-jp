@@ -3,12 +3,12 @@ title: EShop から ASP.NET Core への移行の例
 description: サンプルオンラインストアアプリを参照として使用して、既存の ASP.NET MVC アプリを ASP.NET Core に移行するチュートリアルです。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 83110909632e4eb433e1fabaedf3490ce594e12e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401387"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605257"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>EShop から ASP.NET Core への移行の例
 
@@ -26,7 +26,7 @@ ms.locfileid: "102401387"
 
 ## <a name="run-apiport-to-identify-problematic-apis"></a>*Apiport* を実行して問題のある api を特定する
 
-移行を準備するための最初の手順は、 *Apiport* ツールを実行することです。 このツールでは、アプリが呼び出す .NET Framework Api の数と、それに相当する .NET Standard または .NET Core の数が識別されます。 主に、サードパーティの依存関係ではなく、独自のアプリのロジックに重点を置いて、移植する必要がある依存関係に注意して `System.Web` ください。 ApiPort ツールは、 [依存関係の理解と更新](/understand-update-dependencies.md)に関する最後の章で導入されました。
+移行を準備するための最初の手順は、 *Apiport* ツールを実行することです。 このツールでは、アプリが呼び出す .NET Framework Api の数と、それに相当する .NET Standard または .NET Core の数が識別されます。 主に、サードパーティの依存関係ではなく、独自のアプリのロジックに重点を置いて、移植する必要がある依存関係に注意して `System.Web` ください。 ApiPort ツールは、 [依存関係の理解と更新](understand-update-dependencies.md)に関する最後の章で導入されました。
 
 [ *Apiport* ツールをインストールして構成](../../standard/analyzers/portability-analyzer.md)した後、図4-2 に示すように、Visual Studio 内から分析を実行します。
 
@@ -848,7 +848,7 @@ var myClient = new MyServiceClient(binding, endpointAddress);
 
 設定の構成ファイルに依存するのではなく、WCF クライアントおよびその他の .NET Framework の種類には、コードで設定を指定する必要があります。 このように構成すると、これらの型は ASP.NET Core 2.2 アプリで引き続き機能します。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - [eShopModernizing GitHub リポジトリ](https://github.com/dotnet-architecture/eShopModernizing)
 - [.NET Upgrade Assistant ツール](https://aka.ms/dotnet-upgrade-assistant)

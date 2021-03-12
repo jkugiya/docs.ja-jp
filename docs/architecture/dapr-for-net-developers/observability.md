@@ -4,12 +4,12 @@ description: 可観測性ビルディングブロックの説明、その機能�
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: c7c941625f5867ad58eee602bfc42183bee87183
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401451"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604711"
 ---
 # <a name="the-dapr-observability-building-block"></a>Dapr 可観測性ビルディングブロック
 
@@ -40,7 +40,7 @@ Dapr がプラミングを抽象化するため、アプリケーションは可
 
 Dapr の [サイドカーアーキテクチャ](dapr-at-20000-feet.md#sidecar-architecture) は、組み込みの可観測性機能を有効にします。 サービスが通信する際、Dapr はトラフィックをインターセプトし、トレース、メトリック、およびログ情報を抽出します。 テレメトリはオープン標準形式で公開されます。 既定では、Dapr は [OpenTelemetry](https://opentelemetry.io/) と [Zipkin](https://zipkin.io/)をサポートしています。
 
-Dapr には、さまざまなバックエンド監視ツールにテレメトリを発行できる [コレクター](https://docs.dapr.io/operations/monitoring/open-telemetry-collector/) が用意されています。 これらのツールは、分析とクエリのために Dapr テレメトリを提示します。 図9-1 は、Dapr 可観測性アーキテクチャを示しています。
+Dapr には、さまざまなバックエンド監視ツールにテレメトリを発行できる [コレクター](https://docs.dapr.io/operations/monitoring/tracing/open-telemetry-collector/) が用意されています。 これらのツールは、分析とクエリのために Dapr テレメトリを提示します。 図9-1 は、Dapr 可観測性アーキテクチャを示しています。
 
 ![Dapr 可観測性アーキテクチャ](media/observability/observability-architecture.png)
 
@@ -285,7 +285,7 @@ Dapr は、Dapr システムサービスとそのランタイムに対して多�
 | dapr_http_server_request_count     | ランタイム | HTTP サーバーで開始された HTTP 要求の数。           |
 | dapr_http/クライアント/sent_bytes        | ランタイム | HTTP クライアントによって要求本文で送信された合計バイト数 (ヘッダーは含まれません)。 |
 
-使用可能なメトリックの詳細については、 [Dapr メトリックのドキュメント](https://docs.dapr.io/developing-applications/building-blocks/observability/metrics)を参照してください。
+使用可能なメトリックの詳細については、 [Dapr メトリックのドキュメント](https://docs.dapr.io/operations/monitoring/metrics/)を参照してください。
 
 #### <a name="configure-dapr-metrics"></a>Dapr メトリックを構成する
 
@@ -312,9 +312,9 @@ Prometheus ようが監視バックエンドにメトリックを収集して公
 
 ![Dapr システムサービスのメトリックを表示する Grafana ダッシュボード](media/observability/grafana-sample.png)
 
-Dapr のドキュメントには、 [Prometheus と Grafana をインストールするためのチュートリアル](https://docs.dapr.io/operations/monitoring/grafana/)が含まれています。
+Dapr のドキュメントには、 [Prometheus と Grafana をインストールするためのチュートリアル](https://docs.dapr.io/operations/monitoring/metrics/grafana/)が含まれています。
 
-### <a name="logging"></a>ログの記録
+### <a name="logging"></a>ログ記録
 
 ログ記録を使用すると、実行時にサービスに何が起こっているかを把握できます。 アプリケーションを実行すると、dapr は Dapr システムサービスと Dapr システムサービスからログエントリを自動的に生成します。 ただし、アプリケーションコードでインストルメント化されたログエントリは、自動的には含まれ **ません** 。 アプリケーションコードからログを出力するには、 [OPENTELEMETRY sdk for .net](https://opentelemetry.io/docs/net/)などの特定の sdk をインポートします。 アプリケーションコードのログ記録については、この章の「 *Dapr .NET SDK の使用*」セクションを参照してください。  
 
@@ -325,7 +325,7 @@ Dapr は構造化ログを出力します。 各ログエントリの形式は�
 | フィールド    | 説明                                          | 例                             |
 | -------- | ---------------------------------------------------- | ----------------------------------- |
 | time     | 全形式で書式設定されたタイムスタンプ                          | `2021-01-10T14:19:31.000Z`          |
-| level    | エントリのレベル ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |
+| レベル    | エントリのレベル ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |
 | type     | ログの種類                                             | `log`                               |
 | msg      | ログメッセージ                                          | `metrics server started on :62408/` |
 | scope    | ログのスコープ                                        | `dapr.runtime`                      |
@@ -381,7 +381,7 @@ helm install dapr dapr/dapr --namespace dapr-system --set global.logAsJson=true
 
 #### <a name="collect-logs"></a>ログの収集
 
-Dapr によって出力されたログは、分析のために監視バックエンドに渡すことができます。 ログコレクターは、システムからログを収集して監視バックエンドに送信するコンポーネントです。 一般的なログコレクターは [Fluentd](https://www.fluentd.org/)です。 「 [How to: Set Up Fluentd, エラスティック search And Kibana In Kubernetes in](https://docs.dapr.io/operations/monitoring/fluentd/) The dapr documentation」をご覧ください。 この記事では、Fluentd を log collector として設定し、 [ELK Stack](https://www.elastic.co/elastic-stack) (エラスティック検索と Kibana) を監視バックエンドとして設定する手順について説明します。
+Dapr によって出力されたログは、分析のために監視バックエンドに渡すことができます。 ログコレクターは、システムからログを収集して監視バックエンドに送信するコンポーネントです。 一般的なログコレクターは [Fluentd](https://www.fluentd.org/)です。 「 [How to: Set Up Fluentd, エラスティック search And Kibana In Kubernetes in](https://docs.dapr.io/operations/monitoring/logging/fluentd/) The dapr documentation」をご覧ください。 この記事では、Fluentd を log collector として設定し、 [ELK Stack](https://www.elastic.co/elastic-stack) (エラスティック検索と Kibana) を監視バックエンドとして設定する手順について説明します。
 
 ### <a name="health-status"></a>正常性状態
 
@@ -504,7 +504,7 @@ Dapr は、構造化されたログを出力するように構成できます。
 
 Dapr は、Dapr サービスと構成に関する情報を提示するダッシュボードを提供します。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview/)
 - [テレメトリを開く](https://opentelemetry.io/)

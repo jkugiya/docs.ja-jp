@@ -5,12 +5,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 788161db2e38dc942b0c638128f8599b0436c8fd
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280625"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604581"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>方法: MMC スナップインを使用して証明書を表示する
 
@@ -51,7 +51,7 @@ Windows システムの Microsoft 管理コンソール (MMC) を使用して確
   
 6. [スナップインの **追加と削除** ] ウィンドウで、[ **OK]** を選択します。  
   
-    ![証明書スナップインの追加](./media/mmc-certificate-snap-in-selected.png)
+    ![[OK] ボタンが強調表示されている [スナップインの追加と削除] ウィンドウ](./media/mmc-certificate-snap-in-selected.png)
 
 7. 省略可能: [ **ファイル** ] メニューの [ **保存** ] または [ **名前を付けて保存** ] を選択すると、後で使用するために MMC コンソールファイルが保存されます。  
 

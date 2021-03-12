@@ -3,12 +3,12 @@ description: '詳細情報: メッセージ交換パターンの選択'
 title: メッセージ交換パターンの選択
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: c452a65e4d4108123deaab93be9bd825127eba70
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c0849ddb16596ebd6e064bb39f0727ac51642eb7
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99685856"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605361"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>メッセージ交換パターンの選択
 
@@ -30,7 +30,7 @@ ms.locfileid: "99685856"
   
      二重 MEP では、クライアントにより任意の数のメッセージを送信して、任意の順序で受信できます。 二重 MEP は、話される語の 1 つずつがメッセージである電話の会話に似ています。 この MEP ではどちらの側も送信および受信できるので、クライアントおよびサービス チャネルによって実装されるインターフェイスは <xref:System.ServiceModel.Channels.IDuplexChannel> になります。  
   
- ![メッセージ交換パターンの選択](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![3つの基本的なメッセージ交換パターンを示すフローチャート](./media/wcfc-basicthreemepsc.gif)  
 3 つの基本的なメッセージ交換パターンです。 上から順に、データグラム、要求 - 応答、二重。  
   
  これらの各 MEPs は、 *セッション* をサポートすることもできます。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "99685856"
   
  チャネル オブジェクト モデルでは、各論理セッションは、セッションの多いチャネルの 1 つのインスタンスとしてマニフェストされます。 したがって、クライアントによって作成され、サービスで受け入れられるすべての新しいセッションは、それぞれの側のセッションの多い新しいチャネルに対応します。 セッションの少ないチャネルの構造 (上) と、セッションの多いチャネルの構造 (下) を次の図に示します。  
   
- ![メッセージ交換パターンの選択](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![セッションレスチャネルとセッションフルチャネルの構造を示すフローチャート](./media/wcfc-sessionandsessionlesschannelsc.gif)  
   
  クライアントがセッションの多い新しいチャネルを作成し、メッセージを送信します。 サービス側では、チャネル リスナーがこのメッセージを受信し、メッセージが新しいセッションに属することを検出します。チャネル リスナーはセッションの多い新しいチャネルを作成し、(チャネル リスナーで AcceptChannel を呼び出しているアプリケーションへの応答として) アプリケーションに渡します。 アプリケーションは、同じセッションの多いチャネルを介して、このメッセージと同じセッションで送信される後続のすべてのメッセージを受信します。  
   

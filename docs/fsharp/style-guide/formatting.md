@@ -2,12 +2,12 @@
 title: F# コードのフォーマットに関するガイドライン
 description: 'F # コードを書式設定するためのガイドラインについて説明します。'
 ms.date: 08/31/2020
-ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259903"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605452"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -621,10 +621,10 @@ type MyRecord =
 let foo a =
     a
     |> Option.map
-        (fun x ->
-            {
-                MyField = x
-            })
+           (fun x ->
+                {
+                    MyField = x
+                })
 ```
 
 リストおよび配列要素にも同じ規則が適用されます。
@@ -836,10 +836,10 @@ match lam with
 ```fsharp
 lambdaList
 |> List.map
-    (function
-        | Abs(x, body) -> 1 + sizeLambda 0 body
-        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-        | Var v -> 1)
+       (function
+            | Abs(x, body) -> 1 + sizeLambda 0 body
+            | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+            | Var v -> 1)
 ```
 
 またはで定義された関数でパターンマッチングを `let` `let rec` 行う場合は `let` 、 `function` キーワードが使用されている場合でも、の開始後に4つのスペースをインデントする必要があります。
@@ -916,17 +916,43 @@ let printVolumes x =
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
-            printfn $"%d{a + elem}")
+             printfn $"A very long line to format the value: %d{a + elem}")
         list1
 
 let printListWithOffsetPiped a list1 =
     list1
     |> List.iter
-        (fun elem ->
-            printfn $"%d{a + elem}")
+           (fun elem ->
+                printfn $"A very long line to format the value: %d{a + elem}")
 ```
 
 ラムダ式の本体が複数行の長さである場合は、ローカルスコープの関数にリファクタリングすることを検討してください。
+
+通常、パラメーターは、関数が `fun` / `function` 表示されるコンテキストに関係なく、関数またはキーワードに対して相対的にインデントされる必要があります。
+
+```fsharp
+// With 4 spaces indentation
+list1
+|> List.fold
+       someLongParam
+       anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+            printfn $"A very long line to format the value: %d{elem}")
+
+// With 2 spaces indentation
+list1
+|> List.fold
+     someLongParam
+     anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+          printfn $"A very long line to format the value: %d{elem}")
+```
 
 関数が単一の複数行の組引数を受け取る場合、 [コンストラクター、静的メンバー、およびメンバー呼び出しの書式設定](#formatting-constructors-static-members-and-member-invocations) についても同じ規則が適用されます。
 

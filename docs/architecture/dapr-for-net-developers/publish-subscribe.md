@@ -3,12 +3,12 @@ title: Dapr publish & subscribe ビルディングブロック
 description: Dapr 発行 & サブスクライブのビルドブロックとその適用方法の説明
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: 3d00c5a3171dd5a7287d07675f5a3742697e784b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102401483"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604685"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>Dapr publish & subscribe ビルディングブロック
 
@@ -125,7 +125,7 @@ JSON 応答では、アプリケーションがトピックとにサブスクラ
 
 次の表に、使用可能な値を示し `status` ます。
 
-| Status           | アクション                                                       |
+| 状態           | アクション                                                       |
 | ---------------- | ------------------------------------------------------------ |
 | SUCCESS          | メッセージは正常に処理され、削除されたと見なされます。 |
 | 再試行            | メッセージは再試行されます。                                      |
@@ -293,7 +293,7 @@ scopes:
 
 ## <a name="reference-application-eshopondapr"></a>参照アプリケーション: eShopOnDapr
 
-付随する [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) アプリは、dapr を実装するマイクロサービスアプリケーションを構築するためのエンドツーエンドの参照アーキテクチャを提供します。 eShopOnDapr は、数年前に作成された、広く普及している [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainer) アプリの進化です。 どちらのバージョンも、マイクロサービス間の [統合イベント](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) の通信には、pub/sub パターンを使用します。 統合イベントには次のものがあります。
+付随する [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) アプリは、dapr を実装するマイクロサービスアプリケーションを構築するためのエンドツーエンドの参照アーキテクチャを提供します。 eShopOnDapr は、数年前に作成された、広く普及している [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) アプリの進化です。 どちらのバージョンも、マイクロサービス間の [統合イベント](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) の通信には、pub/sub パターンを使用します。 統合イベントには次のものがあります。
 
 - ユーザーが買い物かごをチェックアウトしたとき。
 - 注文の支払いが成功した場合。

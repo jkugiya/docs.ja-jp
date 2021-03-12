@@ -2,12 +2,12 @@
 title: コンパイラのエラーと警告
 description: F# コンパイラによって生成されるエラーと警告の説明と解決策
 ms.date: 12/21/2019
-ms.openlocfilehash: 58430297abe807027afdc52841d67d1233401ff1
-ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
+ms.openlocfilehash: 9769ddee989f0774cfae8842e60dbd3fd2065f9c
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2021
-ms.locfileid: "97856121"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190178"
 ---
 # <a name="f-compiler-messages"></a>F# コンパイラのメッセージ
 
@@ -20,7 +20,7 @@ ms.locfileid: "97856121"
 このセクションに、特定の警告またはエラーがまだ記録されていない場合は、次を行います。
 
 - このページの最後に移動し、エラーの番号またはテキストを含めてフィードバックを送信する、または
-- 「[Create-new-fsharp-compiler-message.fsx](https://github.com/dotnet/docs/blob/master/docs/fsharp/language-reference/compiler-messages/util/create-new-fsharp-compiler-message.fsx)」の手順に従って、このリポジトリの pull request を開いて、自分で追加する。
+- 「[Create-new-fsharp-compiler-message.fsx](https://github.com/dotnet/docs/blob/main/docs/fsharp/language-reference/compiler-messages/util/create-new-fsharp-compiler-message.fsx)」の手順に従って、このリポジトリの pull request を開いて、自分で追加する。
 
 ## <a name="see-also"></a>関連項目
 

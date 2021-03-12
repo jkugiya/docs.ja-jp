@@ -3,12 +3,12 @@ title: フロントエンドのクライアント通信
 description: フロントエンドクライアントがクラウドネイティブシステムと通信する方法について説明します。
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: b28fd05aded652057deecd6814199e0360202a07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506241"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604516"
 ---
 # <a name="front-end-client-communication"></a>フロントエンドのクライアント通信
 
@@ -43,7 +43,7 @@ ms.locfileid: "99506241"
 
 API ゲートウェイを簡単かつ迅速に維持するには、慎重に行う必要があります。 通常、ビジネスロジックはゲートウェイから保持されます。 複雑なゲートウェイのリスクはボトルネックになり、最終的にはモノリス自体になります。 多くの場合、大規模なシステムでは、クライアントの種類 (モバイル、web、デスクトップ) またはバックエンドの機能によってセグメント化された複数の API ゲートウェイを公開します。 [フロントエンドのバックエンド](/azure/architecture/patterns/backends-for-frontends)パターンは、複数のゲートウェイを実装するための方向を提供します。 このパターンを図4-4 に示します。
 
-![API ゲートウェイパターン](./media/backend-for-frontend-pattern.png)
+![フロントエンドパターンのバックエンド](./media/backend-for-frontend-pattern.png)
 
 **図 4-4** フロントエンドパターンのバックエンド
 

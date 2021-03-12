@@ -3,12 +3,12 @@ title: 2 万フィートの Dapr
 description: Dapr の概要、その機能、およびしくみについて説明します。
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: c6157d29274df73f6ea1fef44b8e5cd5d0239471
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401471"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604750"
 ---
 # <a name="dapr-at-20000-feet"></a>2 万フィートの Dapr
 
@@ -77,7 +77,7 @@ Dapr は、最新の分散アプリケーションに固有の大きな課題に
 
 各 Dapr ビルディングブロックの詳細な説明とコードサンプルについては、今後の章で説明します。 この時点で、jet はさらに多くのことを降下します。 新しいパースペクティブから、Dapr コンポーネントレイヤーについて詳しく見ていきます。
 
-### <a name="components"></a>Components
+### <a name="components"></a>コンポーネント
 
 ビルドブロックは、分散アプリケーション機能を呼び出すための API を公開しますが、Dapr コンポーネントは、それを実現するための具象実装を提供します。
 
@@ -155,7 +155,6 @@ Dapr **状態ストア** コンポーネントを検討してください。 CRU
 | [バインド](https://github.com/dapr/components-contrib/tree/master/bindings) | 外部システムからアプリケーションイベントをトリガーし、オプションのデータペイロードを使用して外部システムを呼び出すための、統一されたインターフェイスを提供します。 |
 | [ミドルウェア](https://github.com/dapr/components-contrib/tree/master/middleware) | カスタムミドルウェアが要求処理パイプラインにプラグインし、要求または応答に対して追加のアクションを呼び出すことができるようにします。 |
 | [シークレットストア](https://github.com/dapr/components-contrib/tree/master/secretstores) | クラウド、エッジ、商用、オープンソースサービスなど、外部シークレットストアと対話するための統一インターフェイスを提供します。 |
-| [エクスポーターのトレース](https://github.com/dapr/components-contrib/tree/master/exporters) | テレメトリラッパーを開くための統一インターフェイスを提供します。 |
 
 ジェットが Dapr に対して実行を完了すると、後でもう一度確認し、相互に接続する方法を確認できます。
 
@@ -247,7 +246,7 @@ Dapr は、中核となる分散マイクロサービスアプリケーション
 
 次の章では、アプリケーションでの Dapr の使用方法について、実践的な実践的な指示を提供しています。
 
-### <a name="references"></a>関連項目
+### <a name="references"></a>リファレンス
 
 - [Dapr のドキュメント](https://dapr.io/)
 - [Dapr の学習](https://www.amazon.com/Learning-Dapr-Building-Distributed-Applications/dp/1492072427/ref=sr_1_1?dchild=1&keywords=dapr&qid=1604794794&sr=8-1)

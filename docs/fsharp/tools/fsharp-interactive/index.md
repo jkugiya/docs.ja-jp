@@ -4,12 +4,12 @@ description: F# インタラクティブ (dotnet fsi) を使用して、コン�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 200caf6be5977e4a4d11bda8ba57f276cb4f5ff6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426978"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605127"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -137,7 +137,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 > [!NOTE]
 > 現在、フレームワーク参照 (`Microsoft.NET.Sdk.Web` や `Microsoft.NET.Sdk.WindowsDesktop` など) を使用するスクリプトには制限があります。 Saturn、Giraffe、WinForms などのパッケージは使用できません。 これは、イシュー [#9417](https://github.com/dotnet/fsharp/issues/9417) で追跡されています。
 
-詳細については、[パッケージ管理の機能拡張とその他の拡張機能](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)に関するページを参照してください。
+詳細については、[パッケージ管理の機能拡張とその他の拡張機能](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html)に関するページを参照してください。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F# インタラクティブでディスク上のアセンブリを参照する
 

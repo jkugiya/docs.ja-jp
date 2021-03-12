@@ -2,12 +2,12 @@
 title: eShopOnContainers を Azure にデプロイする
 description: Azure Kubernetes Service、ヘルム、および DevSpaces を使用した eShopOnContainers アプリケーションのデプロイ。
 ms.date: 01/19/2021
-ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: da68fa1510841b6cef9117b6d84e7ed30c565698
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505792"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604568"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers を Azure にデプロイする
 
@@ -55,7 +55,7 @@ spec:
 
 EShopOnContainers ヘルムグラフは、/k8s/ヘルムフォルダーにあります。 図2-6 は、アプリケーションのさまざまなコンポーネントを、ヘルムが配置を定義するために使用するフォルダー構造に編成する方法を示しています。
 
-![eShopOnContainers アーキテクチャ ](./media/eshoponcontainers-helm-folder.png)
+![EShopOnContainers ヘルムフォルダー ](./media/eshoponcontainers-helm-folder.png)
  **図 2-6**。 EShopOnContainers ヘルムフォルダー。
 
 個々のコンポーネントは、コマンドを使用してインストールされ `helm install` ます。 eShop には、それぞれのヘルムグラフを使用してコンポーネントをループしてインストールする "deploy all" スクリプトが含まれています。 結果として、ソース管理のアプリケーションでバージョン管理された反復可能なプロセスが生成されます。これにより、チームのすべてのユーザーが1行のスクリプトコマンドで AKS クラスターにデプロイできるようになります。
@@ -70,12 +70,12 @@ EShopOnContainers ヘルムグラフは、/k8s/ヘルムフォルダーにあり
 
 図2-7 では、Developer Susie が開発スペースに自転車マイクロサービスの更新バージョンをデプロイしたことがわかります。 次に、自分のスペースの名前 (susie.s.dev.myapp.eus.azds.io) で始まるカスタム URL を使用して、自分の変更をテストできます。
 
-![eShopOnContainers アーキテクチャ ](./media/azure-devspaces-one.png)
+![Bikes マイクロサービスを示す eShopOnContainers アーキテクチャ ](./media/azure-devspaces-one.png)
  **図 2-7**。 Developer Susie は独自のバージョンの Bikes マイクロサービスをデプロイしてテストします。
 
 同時に、開発者 John は予約マイクロサービスをカスタマイズし、変更をテストする必要があります。 図2-8 に示すように、Susie の変更と競合することなく、自分の開発スペースに自分の変更をデプロイします。 John は、スペースの名前 (john.s.dev.myapp.eus.azds.io) をプレフィックスとした独自の URL を使用して、自分の変更をテストします。
 
-![eShopOnContainers アーキテクチャ ](./media/azure-devspaces-two.png)
+![John の予約マイクロサービスのバージョンを示す eShopOnContainers アーキテクチャ ](./media/azure-devspaces-two.png)
  **図 2-8**。 開発者 John は独自のバージョンの予約マイクロサービスをデプロイし、他の開発者と競合することなくテストします。
 
 Azure Dev Spaces を使用すると、チームは AKS を直接操作しながら、変更の変更、配置、およびテストを行うことができます。 この方法では、すべての開発者が独自の AKS 環境を使用するため、個別の専用ホスト環境が必要になります。 開発者は CLI を使用して Azure Dev Spaces を操作したり、アプリケーションを起動して Visual Studio から直接 Azure Dev Spaces したりできます。 [Azure Dev Spaces のしくみと構成方法の詳細については、こちらを参照してください。](/azure/dev-spaces/how-dev-spaces-works)

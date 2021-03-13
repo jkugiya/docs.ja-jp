@@ -3,13 +3,14 @@ title: 匿名型またはタプル型の選択
 description: 匿名型またはタプル型を選択する適切なタイミングについて学習します。
 author: IEvangelist
 ms.author: dapine
+ms.topic: conceptual
 ms.date: 07/01/2020
-ms.openlocfilehash: f8465b2f22ecfafd739355ddd35635e2eee49232
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f171851c383862828600f6f43ce1e3fc1b3a168
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823200"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693086"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>匿名型またはタプル型の選択
 

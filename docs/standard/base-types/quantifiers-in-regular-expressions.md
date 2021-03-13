@@ -2,6 +2,7 @@
 title: 量指定子 (正規表現)
 description: 一致する入力中に存在する必要がある文字、グループ、または文字クラスの出現数を指定する、正規表現の量指定子について説明します。
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 75d37527507b596d6017171279e84b8348489831
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5bee54d24726de1a904254dbd33d6d9be539ae09
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733582"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692930"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>量指定子 (正規表現)
 

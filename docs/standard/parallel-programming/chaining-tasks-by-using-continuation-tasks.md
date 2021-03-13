@@ -1,19 +1,19 @@
 ---
 title: 継続タスクを使用したタスクの連結
 description: .NET の継続タスクを使用してタスクを連鎖させる方法について説明します。 継続タスクは、別のタスクによって呼び出される非同期タスクです。
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c42b6ef7b72cec1846517c700ab6ed34046ed7de
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830611"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025421"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 

@@ -3,12 +3,12 @@ title: .NET アーキテクチャ コンポーネント
 description: .NET Standard、.NET 実装、.NET ランタイム、ツールなど、.NET アーキテクチャ コンポーネントについて説明します。
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 884deb61ab5cda5054fb54134c3338b4d05599ca
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: d1780d8f85159c12ef4e11b2ac53091b61629352
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106398"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605322"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -106,7 +106,7 @@ C# 言語および共通言語基盤 (CLI) の仕様は、[エクマ インタ�
 [C#](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/) および [CLI](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) ([TR-84](https://www.ecma-international.org/publications-and-standards/technical-reports/ecma-tr-84/)) については、次の公式の Ecma ドキュメントを入手できます。
 
 - **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)):[ECMA-334.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)
-- **The Common Language Infrastructure** (共通言語基盤):[ECMA-335.pdf](hhttps://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf)。
+- **The Common Language Infrastructure** (共通言語基盤):[ECMA-335.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf)。
 - **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報):[ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 形式。
 
 公式の ISO/IEC ドキュメントは、ISO/IEC の「[Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/)」(公開されている標準) ページから入手できます。 そのページのリンクを次に示します。

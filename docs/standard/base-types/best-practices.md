@@ -2,6 +2,7 @@
 title: .NET の正規表現に関するベスト プラクティス
 description: .NET での効率的で効果的な正規表現の作成方法について説明します。
 ms.date: 06/30/2020
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ae74d263034de4d402520d751fe97af9e33a2a48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6a4c1ac5879447d829bcd162f764c33adcbea184
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820593"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693151"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 

@@ -2,6 +2,7 @@
 title: カスタム数値形式文字列
 description: .NET で数値データを書式設定するためのカスタム数値書式設定文字列を作成する方法について説明します。 カスタム数値書式設定文字列には、1 つ以上のカスタム数値指定子があります。
 ms.date: 06/25/2018
+ms.topic: reference
 dev_langs:
 - csharp
 - vb
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7665c0980d631069728bcce8178763eb934e054b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 52cdf8a28a43239d5c218b7154d67a1d0b3c210d
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824390"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693008"
 ---
 # <a name="custom-numeric-format-strings"></a>カスタム数値形式文字列
 
@@ -232,7 +233,7 @@ ms.locfileid: "94824390"
 - '
 - [\\](#SpecifierEscape)
 - [.](#SpecifierPt)
-- [、](#SpecifierTh)
+- [,](#SpecifierTh)
 - [E または e](#SpecifierExponent)。書式指定文字列の位置によって変わります。
 
 その他の文字はすべて、文字リテラルとして常に解釈され、書式設定操作では、変更されずに結果の文字列に含まれます。  解析操作では、これらは入力文字列の文字と完全に一致している必要があります。比較では大文字小文字を区別します。

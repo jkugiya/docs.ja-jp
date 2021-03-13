@@ -15,18 +15,18 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: be2311c601effbebd519e33b7a5e13d49f44bd05
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: c881abc3e88df4c1855a0faa29936621a4488078
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687495"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103044"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
 
 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して、ファイル内の MSIL (Microsoft Intermediate Language) 情報を表示できます。 調べる対象のファイルがアセンブリの場合、この情報にはアセンブリの属性と他のモジュールやアセンブリへの参照が含まれることがあります。 この情報は、ファイルがアセンブリまたはアセンブリの一部かどうか、およびファイルに他のモジュールまたはアセンブリへの参照があるかどうかを判断するために役立ちます。
 
-*Ildasm.exe* を使用してアセンブリの内容を表示するには、コマンド プロンプトで「 **ildasm \<assembly name>** 」と入力します。 たとえば、次のコマンドでは、 *Hello.exe* アセンブリが逆アセンブルされます。
+*Ildasm.exe* を使用してアセンブリの内容を表示するには、コマンド プロンプトで「**ildasm \<assembly name>** 」と入力します。 たとえば、次のコマンドでは、*Hello.exe* アセンブリが逆アセンブルされます。
 
 ```cmd
 ildasm Hello.exe
@@ -36,7 +36,7 @@ ildasm Hello.exe
 
 ## <a name="example"></a>例
 
-次の例では、基本の "Hello World" プログラムを使用します。 プログラムをコンパイルした後、 *Ildasm.exe* を使用して *Hello.exe* アセンブリを逆アセンブルし、アセンブリ マニフェストを表示します。
+次の例では、基本の "Hello World" プログラムを使用します。 プログラムをコンパイルした後、*Ildasm.exe* を使用して *Hello.exe* アセンブリを逆アセンブルし、アセンブリ マニフェストを表示します。
 
 ```cpp
 using namespace System;
@@ -120,7 +120,7 @@ End Class
 アセンブリ マニフェストは、アセンブリの内容に応じて、多くの異なるディレクティブを格納できます。 アセンブリ マニフェストに含まれる多様なディレクティブの一覧については、ECMA のドキュメント、特に「Partition II: Metadata Definition and Semantics」(パーティション II: メタデータの定義とセマンティクス) および「Partition III:CIL Instruction Set」(パーティション III: CIL 命令セット) を参照してください。
 
 - [ECMA の C# および共通言語基盤の標準](../components.md#applicable-standards)
-- [Standard ECMA-335 - 共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
+- [Standard ECMA-335 - 共通言語基盤 (CLI)](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)
 
 ## <a name="see-also"></a>関連項目
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 04e97ce5628ec2ea7cbc10c0526e6cd1f9b16725
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821923"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259305"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>.NET で日付と時刻文字列を解析する
 
@@ -55,7 +55,7 @@ ms.locfileid: "94821923"
 > この記事にあるすべての C# サンプルは、ブラウザーで実行できます。 出力を確認するには、 **[実行]** ボタンを押します。 また、サンプルを編集して自分で実験することもできます。
 
 > [!NOTE]
-> これらの例は、[C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) と [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions) 両方の GitHub ドキュメント リポジトリで使用可能です。
+> これらの例は、[C#](https://github.com/dotnet/docs/tree/main/samples/snippets/csharp/how-to/conversions) と [Visual Basic](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic/how-to/conversions) 両方の GitHub ドキュメント リポジトリで使用可能です。
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

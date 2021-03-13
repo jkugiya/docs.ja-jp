@@ -2,6 +2,7 @@
 title: .NET 正規表現での文字のエスケープ
 description: .NET 正規表現での特殊文字とエスケープ文字について説明します。
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44c297b7cc897ee08d3434dfcb18df0024b44e6f
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734388"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693099"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ
 
@@ -38,7 +39,7 @@ ms.locfileid: "95734388"
   
 |文字または文字シーケンス|説明|  
 |---------------------------|-----------------|  
-|次の文字を除くすべての文字:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |**文字またはシーケンス** の列にリストされているもの以外の文字は、正規表現で特別な意味を持ちません。それらは、その文字自体と一致します。<br /><br /> **文字またはシーケンス** の列に含まれる文字は、特殊な正規表現言語要素です。 正規表現でそれらの文字と一致するためには、エスケープするか、[正の文字グループ](character-classes-in-regular-expressions.md)に含める必要があります。 たとえば、正規表現の `\$\d+` または `[$]\d+`は「$1200」と一致します。|  
+|次の文字を除くすべての文字:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |。**文字またはシーケンス** の列にリストされているもの以外の文字は、正規表現で特別な意味を持ちません。それらは、その文字自体と一致します。<br /><br /> **文字またはシーケンス** の列に含まれる文字は、特殊な正規表現言語要素です。 正規表現でそれらの文字と一致するためには、エスケープするか、[正の文字グループ](character-classes-in-regular-expressions.md)に含める必要があります。 たとえば、正規表現の `\$\d+` または `[$]\d+`は「$1200」と一致します。|  
 |`\a`|ビープ音 (アラーム) 文字の `\u0007`。|  
 |`\b`|`[`*character_group*`]` 文字クラスでバックスペースの `\u0008` と一致します  (「[文字クラス](character-classes-in-regular-expressions.md)」を参照してください)。文字クラスの外部では、`\b` はワード境界と一致するアンカーです (「[アンカー](anchors-in-regular-expressions.md)」を参照してください)。|  
 |`\t`|タブの `\u0009`。|  

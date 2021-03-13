@@ -1,24 +1,27 @@
 ---
 title: System.Text.Json でプロパティを無視する方法
 description: .NET の System.Text.Json を使用してシリアル化するときにプロパティを無視する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 01/15/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 6d703156d50a3e00a33cea5e15be2df911ed7c1b
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: b2ff4c147e2fac0ba5bf3367f881fc9d8ee8f1af
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008813"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583911"
 ---
-# <a name="how-to-ignore-properties-with-no-locsystemtextjson"></a>System.Text.Json でプロパティを無視する方法
+# <a name="how-to-ignore-properties-with-systemtextjson"></a>System.Text.Json でプロパティを無視する方法
 
 C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化する場合、既定では、すべてのパブリック プロパティがシリアル化されます。 生成される JSON にその一部を出現させないようにするには、いくつかのオプションがあります。 この記事では、さまざまな条件に基づいてプロパティを無視する方法について説明します。
 
@@ -44,6 +47,7 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 シリアル化する型と JSON 出力の例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithIgnoreAttribute":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithIgnoreAttribute":::
 
 ```json
 {
@@ -63,6 +67,7 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 次の例では、[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 属性の `Condition` プロパティの使用方法を示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/JsonIgnoreAttributeExample.cs" highlight="10,13,16":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/JsonIgnoreAttributeExample.vb" :::
 ::: zone-end
 
 ## <a name="ignore-all-read-only-properties"></a>すべての読み取り専用プロパティを無視する
@@ -70,10 +75,12 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 パブリック ゲッターが含まれていてもパブリック セッターがない場合、プロパティは読み取り専用です。 シリアル化のときにすべての読み取り専用プロパティを無視するには、次の例で示されているように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> を `true` に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/SerializeExcludeReadOnlyProperties.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/SerializeExcludeReadOnlyProperties.vb" id="Serialize":::
 
 シリアル化する型と JSON 出力の例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithROProperty":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithROProperty":::
 
 ```json
 {
@@ -95,6 +102,7 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 すべての null 値プロパティを無視するには、次の例で示されているように、<xref:System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition> プロパティを <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull> に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/IgnoreNullOnSerialize.cs" highlight="28":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/IgnoreNullOnSerialize.vb" :::
 
 ::: zone-end
 
@@ -102,6 +110,7 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 シリアル化のときにすべての null 値プロパティを無視するには、次の例で示されているように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> プロパティを `true` に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/SerializeExcludeNullValueProperties.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/SerializeExcludeNullValueProperties.vb" id="Serialize":::
 
 シリアル化するオブジェクトと JSON 出力の例を次に示します。
 
@@ -126,6 +135,7 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 値型プロパティで既定値がシリアル化されないようにするには、次の例で示されているように、<xref:System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition> プロパティを <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault> に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/IgnoreValueDefaultOnSerialize.cs" highlight="28":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/IgnoreValueDefaultOnSerialize.vb" :::
 ::: zone-end
 
 <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault> を設定すると、null 値参照型および null 許容値型のプロパティもシリアル化されなくなります。

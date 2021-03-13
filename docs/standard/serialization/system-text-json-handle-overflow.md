@@ -5,19 +5,22 @@ ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 265ce4f77d353720419122d17c36e508a377b68f
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 61f21d131922bc98d7f70093abf55eed3dcd8a61
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008917"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583703"
 ---
-# <a name="how-to-handle-overflow-json-with-no-locsystemtextjson"></a>System.Text.Json でオーバーフロー JSON を処理する方法
+# <a name="how-to-handle-overflow-json-with-systemtextjson"></a>System.Text.Json でオーバーフロー JSON を処理する方法
 
 この記事では、`System.Text.Json` 名前空間を使用してオーバーフロー JSON を処理する方法について説明します。
 
@@ -26,6 +29,7 @@ ms.locfileid: "97008917"
 逆シリアル化中に、ターゲット型のプロパティで表されないデータを JSON 内で受け取ることがあります。 たとえば、ターゲット型が次のようになっているとします。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
 逆シリアル化される JSON は次のとおりです。
 
@@ -49,6 +53,7 @@ ms.locfileid: "97008917"
 表示されている JSON を示されている型に逆シリアル化すると、`DatesAvailable` と `SummaryWords` のプロパティは行き先がなくなり、失われます。 これらのプロパティのような余分なデータをキャプチャするには、[[JsonExtensionData]](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) 属性を `Dictionary<string,object>` 型または `Dictionary<string,JsonElement>` 型のプロパティに適用します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithExtensionData":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithExtensionData":::
 
 前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 

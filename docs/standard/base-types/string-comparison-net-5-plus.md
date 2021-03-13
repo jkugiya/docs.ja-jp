@@ -1,13 +1,14 @@
 ---
 title: .NET 5 以降で文字列を比較するときの動作の変更
 description: Windows の .NET 5 以降のバージョンでの文字列比較の動作の変更について説明します。
+ms.topic: conceptual
 ms.date: 12/07/2020
-ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 0db8477ce4e8c3a7167c719e2a29a32e5346a8e7
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851752"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692696"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5 以降で文字列を比較するときの動作の変更
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1eb5e57f5cc1065f1b8510e4fb0a980a85abca29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a364435a5b0a480b0f6f70315e2d5465f61e6b5a
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714212"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794660"
 ---
 # <a name="weak-references"></a>弱い参照
 
@@ -27,7 +27,7 @@ ms.locfileid: "95714212"
   
  ユーザーがアプリケーションの別の部分に切り替えている場合、<xref:System.WeakReference> クラスを使用して、ツリーへの弱い参照を作成し、すべての強い参照を破棄できます。 ユーザーがツリーに戻ると、アプリケーションはツリーへの強い参照を取得しようとします。成功した場合、ツリーの再作成は回避されます。  
   
- オブジェクトで弱い参照を確立するには、追跡されるオブジェクトのインスタンスを使用して、<xref:System.WeakReference> を作成します。 次に、そのオブジェクトの <xref:System.WeakReference.Target%2A> プロパティを設定して、オブジェクトへの元の参照を `null` に設定します。 コード例については、クラス ライブラリの「<xref:System.WeakReference>」を参照してください。  
+ オブジェクトで弱い参照を確立するには、追跡されるオブジェクトのインスタンスを使用して、<xref:System.WeakReference> を作成します。 コード例については、クラス ライブラリの「<xref:System.WeakReference>」を参照してください。  
   
 ## <a name="short-and-long-weak-references"></a>短期間と長期間の弱い参照  
 

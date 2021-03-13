@@ -5,19 +5,22 @@ ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: d0d4bf8841cd8057b20f51ab7d2ab407e2299152
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009743"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584374"
 ---
-# <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>System.Text.Json で大文字と小文字を区別しないプロパティ名の照合を有効にする方法
+# <a name="how-to-enable-case-insensitive-property-name-matching-with-systemtextjson"></a>System.Text.Json で大文字と小文字を区別しないプロパティ名の照合を有効にする方法
 
 この記事では、`System.Text.Json` 名前空間を使用して、大文字と小文字を区別しないプロパティ名の照合を有効にする方法について説明します。
 
@@ -29,6 +32,7 @@ ms.locfileid: "97009743"
 > [Web の既定値](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions)では大文字と小文字が区別されません。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeCaseInsensitive.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/DeserializeCaseInsensitive.vb" id="Deserialize":::
 
 キャメル ケースのプロパティ名を持つ JSON の例を次に示します。 これはパスカル ケースのプロパティ名を持つ次の型に逆シリアル化できます。
 
@@ -41,6 +45,7 @@ ms.locfileid: "97009743"
 ```
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
 ## <a name="see-also"></a>関連項目
 

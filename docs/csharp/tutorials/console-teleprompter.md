@@ -4,12 +4,12 @@ description: このチュートリアルでは、.NET Core と C# 言語のさ�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: fc5e8a929dfe0b7a3f55174e38e596331900edc7
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804895"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231382"
 ---
 # <a name="console-app"></a>コンソール アプリ
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>ファイルの読み取りとエコー
 
-最初に追加する機能は、テキスト ファイルを読み取り、そのテキストすべてをコンソールに表示する機能です。 まず、テキスト ファイルを追加しましょう。 この[サンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)の GitHub リポジトリから、[sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) ファイルをプロジェクト ディレクトリにコピーします。 これがアプリケーションのスクリプトとして機能します。 このトピックのサンプル アプリをダウンロードする方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」をご覧ください。
+最初に追加する機能は、テキスト ファイルを読み取り、そのテキストすべてをコンソールに表示する機能です。 まず、テキスト ファイルを追加しましょう。 この[サンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)の GitHub リポジトリから、[sampleQuotes.txt](https://github.com/dotnet/samples/raw/main/csharp/getting-started/console-teleprompter/sampleQuotes.txt) ファイルをプロジェクト ディレクトリにコピーします。 これがアプリケーションのスクリプトとして機能します。 このトピックのサンプル アプリをダウンロードする方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」をご覧ください。
 
 次に、以下のメソッドを `Program` クラス (`Main` メソッドの真下) に追加します。
 
@@ -82,11 +82,11 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスは <xref:System.Collections.Generic> 名前空間で定義されます。 <xref:System.IO.File> クラスは <xref:System.IO> 名前空間で定義されます。
 
-このメソッドは*反復子メソッド*と呼ばれる特殊な型の C# メソッドです。 列挙子メソッドは、遅延評価されるシーケンスを返します。 つまり、シーケンスを使用するコードによって要求されると、そのシーケンス内の各項目が生成されことになります。 列挙子メソッドは、1 つまたは複数の [`yield return`](../language-reference/keywords/yield.md) ステートメントを含むメソッドです。 `ReadFrom` メソッドによって返されるオブジェクトには、シーケンス内の各項目を生成するコードが含まれています。 この例では、ソース ファイルからテキストの次の行を読み取り、その文字列を返す処理が含まれます。 呼び出し元のコードがシーケンスから次の項目を要求するたびに、コードはファイルからテキストの次の行を読み取り、それを返します。 ファイルが完全に読み取られたら、シーケンスはこれ以上項目がないことを示します。
+このメソッドは *反復子メソッド* と呼ばれる特殊な型の C# メソッドです。 列挙子メソッドは、遅延評価されるシーケンスを返します。 つまり、シーケンスを使用するコードによって要求されると、そのシーケンス内の各項目が生成されことになります。 列挙子メソッドは、1 つまたは複数の [`yield return`](../language-reference/keywords/yield.md) ステートメントを含むメソッドです。 `ReadFrom` メソッドによって返されるオブジェクトには、シーケンス内の各項目を生成するコードが含まれています。 この例では、ソース ファイルからテキストの次の行を読み取り、その文字列を返す処理が含まれます。 呼び出し元のコードがシーケンスから次の項目を要求するたびに、コードはファイルからテキストの次の行を読み取り、それを返します。 ファイルが完全に読み取られたら、シーケンスはこれ以上項目がないことを示します。
 
 新機能としてさらに、C# 構文要素が 2 つあります。 このメソッド内の [`using`](../language-reference/keywords/using-statement.md) ステートメントは、リソースのクリーンアップを管理するものです。 `using` ステートメント内で初期化された変数 (この例では `reader`) は、<xref:System.IDisposable> インターフェイスを実装する必要があります。 そのインターフェイスは、リソースの解放が必要なときに呼び出す必要がある 1 つのメソッド `Dispose` を定義します。 実行が `using` ステートメントの右中かっこに達したときに、コンパイラがその呼び出しを生成します。 コンパイラによって生成されたコードでは、using ステートメントによって定義されたブロック内のコードから例外がスローされた場合でも、確実にリソースを解放させます。
 
-`reader` 変数は `var` キーワードを使用して定義されます。 [`var`](../language-reference/keywords/var.md) は*暗黙的に型指定されたローカル変数*を定義します。 つまり、変数の型は、変数に割り当てられているオブジェクトのコンパイル時の型によって決まるということです。 ここでは、<xref:System.IO.File.OpenText(System.String)> メソッドからの戻り値のことで、これは <xref:System.IO.StreamReader> オブジェクトです。
+`reader` 変数は `var` キーワードを使用して定義されます。 [`var`](../language-reference/keywords/var.md) は *暗黙的に型指定されたローカル変数* を定義します。 つまり、変数の型は、変数に割り当てられているオブジェクトのコンパイル時の型によって決まるということです。 ここでは、<xref:System.IO.File.OpenText(System.String)> メソッドからの戻り値のことで、これは <xref:System.IO.StreamReader> オブジェクトです。
 
 ここで、`Main` メソッドにファイルを読み取るコードを入力してみましょう。
 

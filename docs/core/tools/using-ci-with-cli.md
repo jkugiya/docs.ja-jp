@@ -2,12 +2,12 @@
 title: .NET SDK とツールを使用した継続的インテグレーション (CI)
 description: 継続的インテグレーションで .NET SDK とそのツールをビルド サーバー上で使用する方法について説明します。
 ms.date: 05/18/2017
-ms.openlocfilehash: 6d92bf7250ab4aea33325b1a23e7661a296e9756
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: fd1548f5c2d0a5191dd54c315c90a8ce3f8a5305
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633819"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189996"
 ---
 # <a name="using-the-net-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET SDK とツールを使用する
 
@@ -126,7 +126,7 @@ Travis CI は、*ビルド マトリックス* において、macOS ジョブと
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) は、`Visual Studio 2017` worker イメージで .NET Core 1.0.1 SDK をインストールします。 異なるバージョンの .NET SDK を含む他のビルド イメージも利用できます。 詳細については、[appveyor.yml の例](https://github.com/dotnet/docs/blob/master/appveyor.yml)と AppVoyor ドキュメントの [worker イメージのビルド](https://www.appveyor.com/docs/build-environment/#build-worker-images)に関する記事を参照してください。
+[AppVeyor](https://www.appveyor.com/) は、`Visual Studio 2017` worker イメージで .NET Core 1.0.1 SDK をインストールします。 異なるバージョンの .NET SDK を含む他のビルド イメージも利用できます。 詳細については、[appveyor.yml の例](https://github.com/dotnet/docs/blob/main/appveyor.yml)と AppVoyor ドキュメントの [worker イメージのビルド](https://www.appveyor.com/docs/build-environment/#build-worker-images)に関する記事を参照してください。
 
 .NET SDK バイナリがインストール スクリプトを使用してダウンロードおよび解凍され、`PATH` 環境変数に追加されます。 複数の .NET SDK バージョンとの統合テストを実行するためにビルド マトリックスを追加します。
 

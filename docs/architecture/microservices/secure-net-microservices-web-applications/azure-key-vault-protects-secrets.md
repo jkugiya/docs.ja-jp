@@ -3,12 +3,12 @@ title: 実稼働時に機密情報を保護するために Azure Key Vault を�
 description: .NET マイクロサービスと Web アプリケーションのセキュリティ - Azure Key Vault は、管理者が完全に制御するアプリケーションのシークレットを処理できる優れた方法です。 管理者は開発値の割り当てや取り消しを行うこともできます。開発者に処理してもらう必要はありません。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 5d024894fe1540df04514031bf0b6e0754ddc75c
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 94243468b35e2db9818ae9afacd5beec0a12075e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633924"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604620"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>実稼働時にシークレットを保護するために Azure Key Vault を使用する
 
@@ -47,9 +47,6 @@ ms.locfileid: "97633924"
 
 - **ASP.NET Core でのデータ保護のキー管理と有効期間** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
-
-- **Microsoft.Extensions.Configuration** GitHub リポジトリ。 \
-  <https://github.com/dotnet/extensions/tree/master/src/Configuration>
 
 >[!div class="step-by-step"]
 >[前へ](developer-app-secrets-storage.md)

@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 4b6b0d9765d78aac5f267dfac4a907f920230feb
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: db458e9ebb0c6ad930f82e1d67619632a493ae3b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258222"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604698"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -40,7 +40,7 @@ dotnet/samples GitHub リポジトリには、以下のチュートリアルで�
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>`nethost.h` と `hostfxr.h` を使用してホストを作成する
 
-以下は、`nethost` および `hostfxr` ライブラリを使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 [サンプル](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)では、.NET SDK でインストールされる `nethost` ヘッダーとライブラリ、および [dotnet/runtime](https://github.com/dotnet/runtime) リポジトリからの [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) および [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) ファイルのコピーが使用されます。
+以下は、`nethost` および `hostfxr` ライブラリを使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 [サンプル](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)では、.NET SDK でインストールされる `nethost` ヘッダーとライブラリ、および [dotnet/runtime](https://github.com/dotnet/runtime) リポジトリからの [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/coreclr_delegates.h) および [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) ファイルのコピーが使用されます。
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>ステップ 1 - `hostfxr` を読み込んで、エクスポートされたホスティング関数を取得する
 

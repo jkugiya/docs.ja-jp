@@ -4,12 +4,12 @@ description: 'ASP.NET Core 5.0 での破壊的変更について学習します�
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 3cd40d2b04d0cdf0863e3a3fb6d790c2b35692bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00764493fb2d8d300612f2bd9dc6e512b10be25f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760034"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190061"
 ---
 # <a name="security-cookie-name-encoding-removed"></a>セキュリティ:Cookie 名のエンコードを削除
 
@@ -46,8 +46,8 @@ ASP.NET Core 5.0 以降にプロジェクトを移動する場合、Cookie 名�
 
 - <xref:Microsoft.AspNetCore.Http.HttpRequest.Cookies%2A?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Http.HttpResponse.Cookies%2A?displayProperty=nameWithType>
-- <xref:Microsoft.Owin.IOwinRequest.Cookies?displayProperty=nameWithType>
-- <xref:Microsoft.Owin.IOwinResponse.Cookies?displayProperty=nameWithType>
+- `Microsoft.Owin.IOwinRequest.Cookies`
+- `Microsoft.Owin.IOwinResponse.Cookies`
 
 <!--
 

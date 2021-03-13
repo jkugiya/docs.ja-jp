@@ -9,12 +9,12 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c0fb5b2206251d880618a68e5cdb2db2b19c57da
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379111"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259513"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>XmlSerializer を使用してオブジェクトを逆シリアル化する方法
 
@@ -31,10 +31,11 @@ ms.locfileid: "83379111"
     ' of object that is being deserialized.
     Dim mySerializer As New XmlSerializer(GetType(MySerializableClass))
     ' To read the file, create a FileStream.
-    Dim myFileStream As New FileStream("myFileName.xml", FileMode.Open)
-    ' Call the Deserialize method and cast to the object type.
-    Dim myObject = CType( _
-    mySerializer.Deserialize(myFileStream), MySerializableClass)
+    Using myFileStream As New FileStream("myFileName.xml", FileMode.Open)
+        ' Call the Deserialize method and cast to the object type.
+        Dim myObject = CType( _
+             mySerializer.Deserialize(myFileStream), MySerializableClass)
+     End Using
     ```
 
     ```csharp
@@ -42,9 +43,9 @@ ms.locfileid: "83379111"
     // of object that is being deserialized.
     var mySerializer = new XmlSerializer(typeof(MySerializableClass));
     // To read the file, create a FileStream.
-    var myFileStream = new FileStream("myFileName.xml", FileMode.Open);
+    using var myFileStream = new FileStream("myFileName.xml", FileMode.Open);
     // Call the Deserialize method and cast to the object type.
-    var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
+    var myObject = (MySerializableClass)mySerializer.Deserialize(myFileStream);
     ```
 
 ## <a name="see-also"></a>関連項目

@@ -2,6 +2,7 @@
 title: .NET で文字列を比較する
 description: .NET で文字列を比較する方法について確認します。 Compare、CompareOrdinal、CompareTo、StartsWith、EndsWith、Equals、IndexOf、LastIndexOf の各メソッドについて説明します。
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 08a92e314ad0900679d46cc759c80db89b43f0f0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ca2e89fa8c42807757f4ed004c8f8ddaaeafba3b
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823148"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693073"
 ---
 # <a name="compare-strings-in-net"></a>.NET で文字列を比較する
 

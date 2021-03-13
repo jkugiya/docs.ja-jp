@@ -6,19 +6,22 @@ no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2559b081010fb0a2fa208b121cb095efdeb8da2e
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 19ceaeb882e8126826e7928122c25027bcb12275
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009810"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581463"
 ---
-# <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>System.Text.Json でいくつかの種類の無効な JSON を許可する方法
+# <a name="how-to-allow-some-kinds-of-invalid-json-with-systemtextjson"></a>System.Text.Json でいくつかの種類の無効な JSON を許可する方法
 
 この記事では、JSON でコメント、末尾のコンマ、および引用符で囲まれた数値を許可する方法と、数値を文字列として書き込む方法について説明します。
 
@@ -28,6 +31,7 @@ ms.locfileid: "97009810"
 また、末尾のコンマを許可するには、<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> プロパティを `true` に設定します。 両方を許可する方法を次の例に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeCommasComments.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/DeserializeCommasComments.vb" id="Deserialize":::
 
 次に、コメントと末尾のコンマを含む JSON の例を示します。
 
@@ -66,6 +70,7 @@ ms.locfileid: "97009810"
 引用符で囲まれた数値をシリアル化したり、引用符で囲まれた数値を入力オブジェクト グラフ全体で受け付けるには、次の例で示されているように、<xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> を設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/QuotedNumbers.cs" highlight="27-29":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/QuotedNumbers.vb" :::
 
 ASP.NET Core を通じて間接的に `System.Text.Json` を使用すると、ASP.NET Core により [Web の既定のオプション](xref:System.Text.Json.JsonSerializerDefaults.Web)が指定されるため、逆シリアル化のときに引用符で囲まれた数値を使用できます。
 

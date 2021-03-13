@@ -1,6 +1,7 @@
 ---
 title: .NET での型変換
 description: .NET での型変換について確認します。ここでは、変換元の値と等価な値が新しい型で作成されますが、それが元のものと同一であるとは限りません。
+ms.topic: conceptual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 8e1ea153ccd65de967a34e79d4a26c96e678c4ad
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9dcd1533312c259fd1e120c224c49efa4f829fee
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831027"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692644"
 ---
 # <a name="type-conversion-in-net"></a>.NET での型変換
 

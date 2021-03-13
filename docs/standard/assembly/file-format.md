@@ -4,12 +4,12 @@ description: .NET アプリおよびライブラリを記述する場合や含�
 author: richlander
 ms.date: 08/20/2019
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: b1de3f46f04f24dd4bbb2f695de8741feb29f226
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d786167ef0eb69498ad3df219cd1dd5d686f4851
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731541"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103934"
 ---
 # <a name="net-assembly-file-format"></a>.NET アセンブリ ファイルの形式
 
@@ -17,7 +17,7 @@ ms.locfileid: "95731541"
 
 > 各 CLI コンポーネントには、そのコンポーネントに固有の宣言、実装、参照のためのメタデータが含まれます。 そのため、コンポーネント固有のメタデータはコンポーネント メタデータと呼ばれ、結果として得られるコンポーネントは自己記述と呼ばれます (ECMA 335 I.9.1 のコンポーネントおよびアセンブリの仕様)。
 
-この形式は [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) として仕様が完全に指定され、標準化されています。 すべての .NET コンパイラとランタイムが、この形式を使用します。 ドキュメント化された、更新が頻繁でないバイナリ形式の存在は、相互運用性の面で大きなメリットであり、ほぼ間違いなく必要条件になっています。 この形式は、ジェネリックおよびプロセッサ アーキテクチャに対応するために、2005 年 (.NET Framework 2.0) に実質的な方法で最後に更新されたものです。
+この形式は [ECMA 335](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) として仕様が完全に指定され、標準化されています。 すべての .NET コンパイラとランタイムが、この形式を使用します。 ドキュメント化された、更新が頻繁でないバイナリ形式の存在は、相互運用性の面で大きなメリットであり、ほぼ間違いなく必要条件になっています。 この形式は、ジェネリックおよびプロセッサ アーキテクチャに対応するために、2005 年 (.NET Framework 2.0) に実質的な方法で最後に更新されたものです。
 
 この形式は CPU や OS に依存しません。 多くのチップや CPU を対象にした .NET 実装の一部として使用されています。 この形式自体は Windows で開発された経緯がありますが、任意のオペレーティング システムに実装できます。 OS の相互運用性にかかわる、この形式の最も重要なオプションと言えるのは、ほとんどの値をリトル エンディアン形式で格納することです。 コンピューターのポインター サイズ (32 ビット、64 ビットなど) に対する特定の関係はありません。
 

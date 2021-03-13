@@ -2,6 +2,7 @@
 title: .NET でのchar文字エンコードの概要
 description: .NET でのchar文字のエンコードとデコードについて説明します。
 ms.date: 03/09/2020
+ms.topic: conceptual
 no-loc:
 - Rune
 - char
@@ -10,20 +11,20 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 92710e2d223d1d765efc7e877cb16546ef372907
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282314"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "98693138"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 
 この記事では、.NET で使用されるchar文字エンコード システムの概要について説明します。 この記事では、<xref:System.String>、<xref:System.Char>、<xref:System.Text.Rune>、および <xref:System.Globalization.StringInfo> 型が Unicode、UTF-16、および UTF-8 でどのように動作するかについて説明します。
 
-ここでは、" *char文字* " という用語を、" *読者が 1 つの表示要素として認識するもの* " という一般的な意味で使用します。 一般的な例としては、文字 "a"、記号 "@"、絵文字 "🐂" などがあります。 場合によっては、1 つのchar文字に見えるものが、[書記素クラスター](#grapheme-clusters)に関するセクションで説明しているように、実際には複数の独立した表示要素で構成されていることがあります。
+ここでは、" *char文字*" という用語を、"*読者が 1 つの表示要素として認識するもの*" という一般的な意味で使用します。 一般的な例としては、文字 "a"、記号 "@"、絵文字 "🐂" などがあります。 場合によっては、1 つのchar文字に見えるものが、[書記素クラスター](#grapheme-clusters)に関するセクションで説明しているように、実際には複数の独立した表示要素で構成されていることがあります。
 
-## <a name="the-no-locstring-and-no-locchar-types"></a>string 型と char 型
+## <a name="the-string-and-char-types"></a>string 型と char 型
 
 [string](xref:System.String) クラスのインスタンスは、何らかのテキストを表します。 `string` は、論理的には 16 ビット値のシーケンスであり、そのそれぞれが [char](xref:System.Char) 構造体のインスタンスです。 [string.Length](xref:System.String.Length) プロパティでは、`string` インスタンスに含まれる `char` インスタンスの数が返されます。
 
@@ -46,7 +47,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-各文字は、1 つの `char` 値で表されます。 このパターンは、世界のほとんどの言語に当てはまります。 たとえば、 *nǐ hǎo* のように発音し " *こんにちは* " を意味する中国語の 2 char文字に対する出力を次に示します。
+各文字は、1 つの `char` 値で表されます。 このパターンは、世界のほとんどの言語に当てはまります。 たとえば、*nǐ hǎo* のように発音し "*こんにちは*" を意味する中国語の 2 char文字に対する出力を次に示します。
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +59,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-ただし、一部の言語および一部の記号と絵文字については、1 つの文字を表すために 2 つの `char` インスタンスが必要です。 たとえば、オセージ語で " *オセージ* " を表す単語に含まれるchar文字と `char` インスタンスを比較してください。
+ただし、一部の言語および一部の記号と絵文字については、1 つの文字を表すために 2 つの `char` インスタンスが必要です。 たとえば、オセージ語で "*オセージ*" を表す単語に含まれるchar文字と `char` インスタンスを比較してください。
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -97,7 +98,7 @@ s[1] = '�' ('\udc02')
 
 これらの例では、`char` インスタンスの数を示す `string.Length` の値が、必ずしも表示される文字数を示していないことがわかります。 1 つの `char` インスタンスは、必ずしもそれ自体で 1 char文字を表すとは限りません。
 
-1 つのchar文字にマップされる `char` のペアは、" *サロゲート ペア* " と呼ばれます。 それらがどのように動作するかを理解するには、Unicode と UTF-16 のエンコードについて理解する必要があります。
+1 つのchar文字にマップされる `char` のペアは、"*サロゲート ペア*" と呼ばれます。 それらがどのように動作するかを理解するには、Unicode と UTF-16 のエンコードについて理解する必要があります。
 
 ## <a name="unicode-code-points"></a>Unicode コード ポイント
 
@@ -120,7 +121,7 @@ Unicode 標準では、110 万個を超える[コード ポイント](https://ww
 コード ポイントの全範囲内には、次の 2 つの部分範囲があります。
 
 * `U+0000..U+FFFF` の範囲の **基本多言語面 (BMP)** 。 この 16 ビットの範囲によって 65,536 個のコード ポイントが提供され、世界の書記体系の大部分を十分にカバーできます。
-* `U+10000..U+10FFFF` の範囲の **補助コード ポイント** 。 この 21 ビットの範囲によって、100 万個を超える追加のコード ポイントが提供されます。これは、あまり一般的ではない言語や、絵文字などのその他の目的のために使用できます。
+* `U+10000..U+10FFFF` の範囲の **補助コード ポイント**。 この 21 ビットの範囲によって、100 万個を超える追加のコード ポイントが提供されます。これは、あまり一般的ではない言語や、絵文字などのその他の目的のために使用できます。
 
 次の図は、BMP と補助コード ポイントの関係を示しています。
 
@@ -128,19 +129,19 @@ Unicode 標準では、110 万個を超える[コード ポイント](https://ww
 
 ## <a name="utf-16-code-units"></a>UTF-16 コード単位
 
-16 ビット Unicode Transformation Format ( [UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) は、16 ビットの " *コード単位* " を使用して Unicode コード ポイントを表す、文字 charエンコード システムです。 .NET では、`string` 内のテキストをエンコードするために UTF-16 が使用されています。 `char` インスタンスは、16 ビットのコード単位を表します。
+16 ビット Unicode Transformation Format ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) は、16 ビットの "*コード単位*" を使用して Unicode コード ポイントを表す、文字 charエンコード システムです。 .NET では、`string` 内のテキストをエンコードするために UTF-16 が使用されています。 `char` インスタンスは、16 ビットのコード単位を表します。
 
 1 つの 16 ビット コード単位は、基本多言語面の 16 ビット範囲に含まれる任意のコード ポイントを表すことができます。 ただし、補助範囲内のコード ポイントについては、2 つの `char` インスタンスが必要です。
 
 ## <a name="surrogate-pairs"></a>サロゲート ペア
 
-2 つの 16 ビット値から 1 つの 21 ビット値への変換は、`U+D800` から `U+DFFF` (10 進数の 55,296 から 57,343) まで (境界も含める) の、" *サロゲート コード ポイント* " と呼ばれる特殊な範囲を使用して行われます。
+2 つの 16 ビット値から 1 つの 21 ビット値への変換は、`U+D800` から `U+DFFF` (10 進数の 55,296 から 57,343) まで (境界も含める) の、"*サロゲート コード ポイント*" と呼ばれる特殊な範囲を使用して行われます。
 
 次の図は、BMP とサロゲート コード ポイントの関係を示しています。
 
 :::image type="content" source="media/character-encoding-introduction/bmp-and-surrogate.svg" alt-text="BMP とサロゲート コード ポイント":::
 
-" *上位サロゲート* " コード ポイント (`U+D800..U+DBFF`) の直後に " *下位サロゲート* " コード ポイント (`U+DC00..U+DFFF`) が続く場合、そのペアは、次の数式を使用して補助コード ポイントとして解釈されます。
+"*上位サロゲート*" コード ポイント (`U+D800..U+DBFF`) の直後に "*下位サロゲート*" コード ポイント (`U+DC00..U+DFFF`) が続く場合、そのペアは、次の数式を使用して補助コード ポイントとして解釈されます。
 
 ```
 code point = 0x10000 +
@@ -156,7 +157,7 @@ code point = 65,536 +
   (low surrogate code point - 56,320)
 ```
 
-" *上位* " サロゲート コード ポイントには、" *下位* " サロゲート コード ポイントよりも大きい数値は含まれません。 上位サロゲート コード ポイントが "上位" と呼ばれる理由は、完全な 21 ビットのコード ポイント範囲の上位 11 ビットを計算するために使用されるからです。 下位サロゲート コード ポイントは、下位 10 ビットを計算するために使用されます。
+"*上位*" サロゲート コード ポイントには、"*下位*" サロゲート コード ポイントよりも大きい数値は含まれません。 上位サロゲート コード ポイントが "上位" と呼ばれる理由は、完全な 21 ビットのコード ポイント範囲の上位 11 ビットを計算するために使用されるからです。 下位サロゲート コード ポイントは、下位 10 ビットを計算するために使用されます。
 
 たとえば、サロゲート ペア `0xD83C` と `0xDF39` に対応する実際のコード ポイントは、次のように計算されます。
 
@@ -186,7 +187,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="スカラー値":::
 
-### <a name="the-no-locrune-type-as-a-scalar-value"></a>スカラー値としての Rune 型
+### <a name="the-rune-type-as-a-scalar-value"></a>スカラー値としての Rune 型
 
 .NET Core 3.0 以降では、<xref:System.Text.Rune?displayProperty=fullName> 型によって Unicode スカラー値が表されます。 **`Rune` は、.NET Core 2.x または .NET Framework 4.x では使用できません。**
 
@@ -202,7 +203,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="no-locrune-usage-example-changing-letter-case"></a>Rune の使用例: 大文字と小文字の変更
+### <a name="rune-usage-example-changing-letter-case"></a>Rune の使用例: 大文字と小文字の変更
 
 `char` を受け取り、スカラー値であるコード ポイントを操作していると仮定する API は、その `char` がサロゲート ペアのものであった場合、正しく動作しません。 たとえば、string に含まれる各 char に対して <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> を呼び出す、次のようなメソッドを考えてみます。
 
@@ -217,7 +218,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-no-locrune-apis"></a>その他の Rune API
+### <a name="other-rune-apis"></a>その他の Rune API
 
 `Rune` 型では、多くの `char` API と類似した機能が公開されています。 たとえば、以下のメソッドは、`char` 型の静的 API に対応しています。
 
@@ -264,9 +265,9 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 `string` の書記素クラスターを列挙するには、次の例に示すように <xref:System.Globalization.StringInfo> クラスを使用します。 Swift に慣れている場合、.NET の `StringInfo` 型は、概念的に [Swift の `character` 型](https://developer.apple.com/documentation/swift/character)と似ています。
 
-### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>例: char、Rune、テキスト要素のインスタンス数を数える
+### <a name="example-count-char-rune-and-text-element-instances"></a>例: char、Rune、テキスト要素のインスタンス数を数える
 
-.NET API では、書記素クラスターは " *テキスト要素* " と呼ばれます。 次のメソッドは、`string` に含まれる `char`、`Rune`、およびテキスト要素のインスタンスの違いを示しています。
+.NET API では、書記素クラスターは "*テキスト要素*" と呼ばれます。 次のメソッドは、`string` に含まれる `char`、`Rune`、およびテキスト要素のインスタンスの違いを示しています。
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/CountTextElements.cs" id="SnippetCountMethod":::
 
@@ -274,7 +275,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 .NET Framework または .NET Core 3.1 以前でこのコードを実行すると、絵文字のテキスト要素の数として `4` が表示されます。 これは、.NET 5 で修正されている `StringInfo` クラスのバグが原因です。
 
-### <a name="example-splitting-no-locstring-instances"></a>例: string インスタンスの分割
+### <a name="example-splitting-string-instances"></a>例: string インスタンスの分割
 
 `string` インスタンスを分割する場合は、サロゲート ペアと書記素クラスターを分割しないようにします。 不適切なコードを示す次の例について考えてみましょう。ここでは、string 内の 10 文字 charごとに改行を挿入しようとしています。
 

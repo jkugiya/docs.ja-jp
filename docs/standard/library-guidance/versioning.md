@@ -1,13 +1,13 @@
 ---
 title: バージョン管理および .NET ライブラリ
 description: .NET ライブラリのバージョン管理に関するベスト プラクティスの推奨事項。
-ms.date: 12/10/2018
-ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 01/26/2021
+ms.openlocfilehash: 36518a607d1c375374ed7cda0e3f3484b55aff11
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290124"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259643"
 ---
 # <a name="versioning"></a>バージョン管理
 
@@ -49,7 +49,7 @@ NuGet パッケージ バージョンは、最も開発者の目に留まるバ�
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-.NET Framework の CLR では、厳密な名前のアセンブリを読み込むには、完全一致が求められます。 たとえば、`Libary1, Version=1.0.0.0` が `Newtonsoft.Json, Version=11.0.0.0` への参照を使ってコンパイルされたとします。 .NET Framework は、バージョンが厳密に同じである `11.0.0.0` のみを読み込みます。 実行時に別のバージョンを読み込むには、バインド リダイレクトが .NET アプリケーションの構成ファイルに追加される必要があります。
+.NET Framework の CLR では、厳密な名前のアセンブリを読み込むには、完全一致が求められます。 たとえば、`Library1, Version=1.0.0.0` が `Newtonsoft.Json, Version=11.0.0.0` への参照を使ってコンパイルされたとします。 .NET Framework は、バージョンが厳密に同じである `11.0.0.0` のみを読み込みます。 実行時に別のバージョンを読み込むには、バインド リダイレクトが .NET アプリケーションの構成ファイルに追加される必要があります。
 
 アセンブリ バージョンと組み合わせた厳密な名前によって、[厳密なアセンブリ バージョンの読み込み](../assembly/versioning.md)が可能になります。 ライブラリに厳密な名前を付与すると多くのメリットがありますが、しばしば、アセンブリが見つからないという実行時例外に陥り、修正のために `app.config` または `web.config` での[バインド リダイレクトが必要](../../framework/configure-apps/redirect-assembly-versions.md)になります。 .NET Core では、アセンブリの読み込みはより緩やかです。 .NET Core ランタイムは、実行時に、より新しいバージョンのアセンブリを自動的に読み込みます。
 
@@ -88,7 +88,7 @@ NuGet パッケージ バージョンは、最も開発者の目に留まるバ�
 アセンブリの情報バージョンは、追加のバージョン情報を記録するために使用され、実行時の動作に影響を及ぼしません。 このバージョンの設定は省略可能です。 ソース リンクを使用している場合、NuGet パッケージ バージョンとソース管理バージョンを使って、このバージョンがビルド上に設定されます。 たとえば、`1.0.0-beta1+204ff0a` には、アセンブリの構成元となったソース コードのコミット ハッシュが含まれます。 詳細については、「[ソース リンク](./sourcelink.md)」を参照してください。
 
 ```xml
-<AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
+<InformationalVersion>The quick brown fox jumped over the lazy dog.</InformationalVersion>
 ```
 
 > [!NOTE]

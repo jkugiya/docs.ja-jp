@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: ccd9bcfe2702083573cef979b40ff4d7167e8041
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6f3c1e2d4d6a0b8e794863f2c0b4fd947ac12836
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128402"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190087"
 ---
 # <a name="contextual-keywords-c-reference"></a>コンテキスト キーワード (C# リファレンス)
 
@@ -24,6 +24,7 @@ ms.locfileid: "89128402"
 |[dynamic](../builtin-types/reference-types.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](./get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
 |[global](../operators/namespace-alias-qualifier.md)|グローバル名前空間のエイリアス (それ以外の場合は無名です)。|  
+|[init](./init.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
 |[partial](./partial-type.md)|同一コンパイル ユニットに部分クラス、部分構造体、または部分インターフェイスを定義します。|  
 |[remove](./remove.md)|クライアント コードがイベントのサブスクライブを解除するときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[set](./set.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  

@@ -2,6 +2,7 @@
 title: 文字列を型に変換する
 description: .NET での文字列の解析について理解します。 解析では、.NET の基本データ型を表す文字列をその基本データ型に変換します。 解析は書式設定の逆の操作です。
 ms.date: 03/30/2017
+ms.topic: conceptual
 helpviewer_keywords:
 - parsing strings, about parsing strings
 - IFormatProvider interface, parsing strings
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: a5c38c29a45a9ce6f8aed7205c5bd44bebb023c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff357f8b8225c84e2f6c0e022b269f0ab774dfed
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683720"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692852"
 ---
 # <a name="parse-strings-in-net"></a>.NET で文字列を解析する
 

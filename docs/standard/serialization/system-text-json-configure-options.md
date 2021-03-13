@@ -1,24 +1,27 @@
 ---
 title: System.Text.Json で JsonSerializerOptions をインスタンス化する方法
 description: パフォーマンスの問題を回避する方法と、JsonSerializerOptions インスタンスで使用可能なコンストラクターを使用する方法について説明します。
-ms.date: 12/02/2020
+ms.date: 01/19/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 5f32e1369e58dd9550f28abc822f187dee46c022
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a74f4e0aa286f182906033e34be7bad63a72503f
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009834"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583233"
 ---
-# <a name="how-to-instantiate-jsonserializeroptions-instances-with-no-locsystemtextjson"></a>System.Text.Json で JsonSerializerOptions インスタンスをインスタンス化する方法
+# <a name="how-to-instantiate-jsonserializeroptions-instances-with-systemtextjson"></a>System.Text.Json で JsonSerializerOptions インスタンスをインスタンス化する方法
 
 この記事では、<xref:System.Text.Json.JsonSerializerOptions> の使用時にパフォーマンスの問題を回避する方法について説明します。 また、使用可能なパラメーター化コンストラクターの使用方法についても説明します。
 
@@ -42,6 +45,7 @@ ms.locfileid: "97009834"
 次の例で示されているように、既存のインスタンスと同じオプションを使用して新しいインスタンスを作成できる [JsonSerializerOptions コンストラクター](xref:System.Text.Json.JsonSerializerOptions.%23ctor(System.Text.Json.JsonSerializerOptions))があります。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CopyOptions.cs" highlight="29":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/CopyOptions.vb" :::
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -60,6 +64,7 @@ Web アプリ用に異なる既定値があるオプションは次のとおり�
 次の例で示されているように、ASP.NET Core によって Web アプリ用に使用される既定のオプションで新しいインスタンスを作成できる [JsonSerializerOptions コンストラクター](xref:System.Text.Json.JsonSerializerOptions.%23ctor(System.Text.Json.JsonSerializerDefaults)?view=net-5.0&preserve-view=true)があります。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/OptionsDefaults.cs" highlight="24":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/OptionsDefaults.vb" :::
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"

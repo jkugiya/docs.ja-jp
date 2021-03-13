@@ -2,12 +2,12 @@
 title: 照合順序
 ms.date: 12/13/2019
 description: カスタムの照合順序を作成する方法について説明します。
-ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ab330e798c95fec82892f02f4a1b6b96df6113b3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242973"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190425"
 ---
 # <a name="collation"></a>照合順序
 
@@ -21,7 +21,7 @@ ms.locfileid: "81242973"
 
 ## <a name="custom-collation"></a>カスタム照合順序
 
-<xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A> を使用して、独自の照合シーケンスを定義したり、組み込みの照合順序をオーバーライドしたりすることもできます。 次の例では、Unicode 文字をサポートするように NOCASE 照合順序をオーバーライドする方法を示しています。 [コード サンプル全体](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs)は GitHub で入手できます。
+<xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A> を使用して、独自の照合シーケンスを定義したり、組み込みの照合順序をオーバーライドしたりすることもできます。 次の例では、Unicode 文字をサポートするように NOCASE 照合順序をオーバーライドする方法を示しています。 [コード サンプル全体](https://github.com/dotnet/docs/blob/main/samples/snippets/standard/data/sqlite/CollationSample/Program.cs)は GitHub で入手できます。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

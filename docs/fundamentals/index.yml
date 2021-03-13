@@ -1,0 +1,245 @@
+### YamlMime:Landing
+title: .NET のドキュメント
+summary: さまざまな種類のアプリケーションを構築するための、オープンソースの開発者プラットフォームである .NET について説明します。
+metadata:
+  title: .NET のドキュメント
+  description: さまざまな種類のアプリケーションを構築するための、オープンソースの開発者プラットフォームである .NET について説明します。
+  ms.topic: landing-page
+  ms.date: 03/10/2021
+  ms.openlocfilehash: b9f3cd486d2672a93a58a83f1b3db4de97755c3d
+  ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/11/2021
+  ms.locfileid: "103235237"
+landingContent:
+- title: .NET について
+  linkLists:
+  - linkListType: download
+    links:
+    - text: .NET をダウンロードする
+      url: https://dotnet.microsoft.com/download
+  - linkListType: overview
+    links:
+    - text: .NET とは何ですか?
+      url: https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet
+    - text: .NET の概要
+      url: ../core/introduction.md
+    - text: .NET Core SDK の概要
+      url: ../core/sdk.md
+  - linkListType: get-started
+    links:
+    - text: .NET Core の概要
+      url: ../core/get-started.md
+    - text: ASP.NET Core の概要
+      url: /aspnet/core/
+    - text: .NET の Q&A
+      url: /answers/products/dotnet
+  - linkListType: concept
+    links:
+    - text: .NET Standard
+      url: ../standard/net-standard.md
+    - text: ターゲット フレームワーク
+      url: ../standard/frameworks.md
+    - text: 共通言語ランタイム (CLR)
+      url: ../standard/clr.md
+    - text: .NET Core サポートポリシー
+      url: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
+  - linkListType: whats-new
+    links:
+    - text: .NET 5 の新機能
+      url: ../core/dotnet-five.md
+    - text: .NET Core 3.1 の新機能
+      url: ../core/whats-new/dotnet-core-3-1.md
+    - text: .NET Core 3.0 の新機能
+      url: ../core/whats-new/dotnet-core-3-0.md
+- title: .NET Core をインストールします。
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 使用する .NET Core のバージョンを選択する
+      url: ../core/versions/selection.md
+  - linkListType: how-to-guide
+    links:
+    - text: .NET Core SDK をインストールする
+      url: ../core/install/windows.md
+    - text: .NET Core ランタイムをインストールする
+      url: ../core/install/windows.md
+    - text: Linux パッケージ マネージャーを使用してインストールする
+      url: ../core/install/linux-ubuntu.md
+    - text: インストールされているバージョンを確認する
+      url: ../core/install/how-to-detect-installed-versions.md
+  - linkListType: reference
+    links:
+    - text: .NET Core SDK とランタイムの依存関係
+      url: ../core/install/windows.md
+- title: .NET Core の概要
+  linkLists:
+  - linkListType: video
+    links:
+    - text: 'チュートリアル: 10 分で Hello World'
+      url: https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio Code で Hello World アプリを作成する
+      url: ../core/tutorials/with-visual-studio-code.md
+    - text: Visual Studio で Hello World アプリを作成する
+      url: ../core/tutorials/with-visual-studio.md
+    - text: NET Core アプリのコンテナー化
+      url: ../core/docker/build-container.md
+  - linkListType: deploy
+    links:
+    - text: アプリの発行
+      url: ../core/deploying/index.md
+- title: .NET Framework からの移行
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET Framework から .NET Core への移植
+      url: ../core/porting/index.md
+- title: コマンド ラインからの .NET Core の使用
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET Core CLI
+      url: ../core/tools/index.md
+  - linkListType: tutorial
+    links:
+    - text: CLI の使用を開始する
+      url: ../core/tutorials/with-visual-studio-code.md
+  - linkListType: deploy
+    links:
+    - text: アプリを発行する
+      url: ../core/deploying/deploy-with-cli.md
+  - linkListType: reference
+    links:
+    - text: dotnet new
+      url: ../core/tools/dotnet-new.md
+    - text: dotnet publish
+      url: ../core/tools/dotnet-publish.md
+- title: .NET Core を使用した単体テスト
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET Core と .NET Standard の単体テスト
+      url: ../core/testing/index.md
+  - linkListType: tutorial
+    links:
+    - text: dotnet テストと xUnit を使用した C# コードのテスト
+      url: ../core/testing/unit-testing-with-dotnet-test.md
+    - text: NUnit を使用した単体テスト
+      url: ../core/testing/unit-testing-with-nunit.md
+    - text: MSTest を使用した単体テスト
+      url: ../core/testing/unit-testing-with-mstest.md
+  - linkListType: concept
+    links:
+    - text: 単体テストを記述するためのベスト プラクティス
+      url: ../core/testing/unit-testing-best-practices.md
+- title: データのシリアル化
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: JSON のシリアル化と逆シリアル化
+      url: ../standard/serialization/system-text-json-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: C# を使用した JSON のシリアル化と逆シリアル化
+      url: ../standard/serialization/system-text-json-how-to.md
+    - text: Newtonsoft. Json から System.Text.Json への移行
+      url: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - text: JSON シリアル化のためのカスタム コンバーターの作成
+      url: ../standard/serialization/system-text-json-converters-how-to.md
+  - linkListType: sample
+    links:
+    - text: XML シリアル化の例
+      url: ../standard/serialization/examples-of-xml-serialization.md
+- title: 日付、数値、文字列の書式設定と変換
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 数値書式指定文字列
+      url: ../standard/base-types/standard-numeric-format-strings.md
+    - text: 日付と時刻の書式指定文字列
+      url: ../standard/base-types/standard-date-and-time-format-strings.md
+    - text: 複合書式指定
+      url: ../standard/base-types/composite-formatting.md
+    - text: タイム ゾーン間での時刻の変換
+      url: ../standard/datetime/converting-between-time-zones.md
+    - text: 文字列からの文字のトリムと削除
+      url: ../standard/base-types/trimming.md
+    - text: .NET の正規表現
+      url: ../standard/base-types/regular-expressions.md
+  - linkListType: how-to-guide
+    links:
+    - text: 文字列を DateTime に変換する
+      url: ../standard/base-types/parsing-datetime.md
+    - text: 数値に先行するゼロを埋め込む
+      url: ../standard/base-types/how-to-pad-a-number-with-leading-zeros.md
+    - text: 日付および時刻の値のミリ秒部分を表示する
+      url: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
+  - linkListType: reference
+    links:
+    - text: 正規表現言語
+      url: ../standard/base-types/regular-expression-language-quick-reference.md
+- title: イベントと例外の使用
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 例外の推奨事項
+      url: ../standard/exceptions/best-practices-for-exceptions.md
+    - text: イベントの処理と発生
+      url: ../standard/events/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: try-catch ブロックを使用して例外をキャッチする
+      url: ../standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - text: イベントの発生と使用
+      url: ../standard/events/how-to-raise-and-consume-events.md
+- title: ファイルおよびストリーム入出力
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ファイルおよびストリーム入出力
+      url: ../standard/io/index.md
+    - text: Windows 上のファイル パス形式
+      url: ../standard/io/file-path-formats.md
+  - linkListType: how-to-guide
+    links:
+    - text: テキストのファイルへの書き込み
+      url: ../standard/io/how-to-write-text-to-a-file.md
+    - text: ファイルのテキストの読み取り
+      url: ../standard/io/how-to-read-text-from-a-file.md
+    - text: ファイルを圧縮して抽出する
+      url: ../standard/io/how-to-compress-and-extract-files.md
+    - text: ログ ファイルを開いて情報を追加する
+      url: ../standard/io/how-to-open-and-append-to-a-log-file.md
+- title: メモリ使用量の管理
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ガベージ コレクションの基礎
+      url: ../standard/garbage-collection/fundamentals.md
+    - text: Dispose メソッドの実装
+      url: ../standard/garbage-collection/implementing-dispose.md
+    - text: DisposeAsync メソッドの実装
+      url: ../standard/garbage-collection/implementing-disposeasync.md
+- title: 並列プログラミングについて
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET での並列プログラミング
+      url: ../standard/parallel-programming/index.md
+  - linkListType: concept
+    links:
+    - text: タスク並列ライブラリ (TPL)
+      url: ../standard/parallel-programming/task-parallel-library-tpl.md
+    - text: タスク ベースの非同期プログラミング
+      url: ../standard/parallel-programming/task-based-asynchronous-programming.md
+    - text: タスクのキャンセル
+      url: ../standard/parallel-programming/task-cancellation.md
+  - linkListType: how-to-guide
+    links:
+    - text: Parallel.ForEach を使用して単純な並列プログラムを記述する
+      url: ../standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+    - text: タスクから値を返す
+      url: ../standard/parallel-programming/how-to-return-a-value-from-a-task.md

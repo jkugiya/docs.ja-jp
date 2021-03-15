@@ -1,122 +1,172 @@
 ---
-title: .NET Framework から .NET Core への移植
-description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
-author: cartermp
-ms.date: 10/22/2019
-ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+title: .NET Framework から .NET 5 に移植する
+description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET 5 (および .NET Core 3.1) に移植する際に役立つツールを確認します。
+author: adegeo
+ms.date: 03/03/2020
+no-loc:
+- package.config
+- PackageReference
+ms.openlocfilehash: 8515689cf4a1be917f12bb8f3315cda89988d773
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189936"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605049"
 ---
-# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
+# <a name="overview-of-porting-from-net-framework-to-net"></a>.NET Framework から .NET への移植の概要
 
-現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次について説明します。
+この記事では、.NET Framework から .NET (旧称 .NET Core) にコードを移植する際に考慮する必要がある事項の概要について説明します。 多くのプロジェクトでは、.NET Framework から .NET に比較的簡単に移植できます。 プロジェクトの複雑さによって、プロジェクト ファイルを最初に移行した後に実行する作業の量が決まります。
 
-* 移植プロセスの概要。
-* コードを .NET Core に移植するときに役立つ場合があるツールの一覧。
+.NET にアプリ モデルがあるプロジェクト (ライブラリ、コンソール アプリ、デスクトップ アプリなど) では、通常ほとんど変更することはありません。 ASP.NET から ASP.NET Core への移行など、新しいアプリ モデルを必要とするプロジェクトではさらに作業が必要となります。 古いアプリ モデルの多くのパターンには、変換中に使用できる同等のものがあります。
 
-## <a name="overview-of-the-porting-process"></a>移植プロセスの概要
+## <a name="unavailable-technologies"></a>利用できないテクノロジ
 
-多くのプロジェクトは、.NET Framework から .NET Core (または .NET Standard) に比較的簡単に移植できます。 多数の変更が必要ですが、その多くは次に示すパターンどおりです。 .NET Core にアプリ モデルがあるプロジェクト (ライブラリ、コンソール アプリ、デスクトップ アプリケーションなど) では、通常ほとんど変更することはありません。 ASP.NET から ASP.NET Core への移行など、新しいアプリケーション モデルを必要とするプロジェクトでは、多少の作業が必要になりますが、多くのパターンには変換時に使用できるアナログがあります。 このドキュメントでは、ユーザーがどのような主戦略を使用してコード ベースをターゲットの .NET Standard または .NET Core に正常に変換したか理解し、ソリューション全体とプロジェクト別の 2 つのレベルで変換を行う方法について説明します。 アプリ モデル固有の変換については、下部にあるリンクを参照してください。
+.NET Framework には .NET に存在しない、次のようないくつかのテクノロジがあります。
 
-ご自分のプロジェクトを .NET Core に移植する場合は、次の手順を使用することをお勧めします。 これらの各手順では、動作が変わってしまう可能性がある場所を示しています。それ以降の手順に進む前に、ご自分のライブラリまたはアプリケーションは十分にテストしてください。 最初の手順では、ご自分のプロジェクトを .NET Standard または .NET Core に切り替えられることができるように準備します。 単体テストがある場合は、最初にそれらを変換して、作業中の製品の変更のテストを継続できるようにすることをお勧めします。 .NET Core への移植はコードベースにとって大きな変更となるため、テスト プロジェクトを移植して、ご自分のコードの移植時にテストを実行できるようにすることを強くお勧めします。 MSTest、xUnit、NUnit はすべて .NET Core で動作します。
+- [アプリケーション ドメイン](net-framework-tech-unavailable.md#application-domains)
 
-## <a name="getting-started"></a>作業の開始
+  追加のアプリケーション ドメインの作成はサポートされていません。 コードの分離のためには、代替方法として別個のプロセスやコンテナーを使用します。
 
-このプロセスを通して、次のツールを使用します。
+- [リモート処理](net-framework-tech-unavailable.md#remoting)
 
-- Visual Studio 2019
-- [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) をダウンロードします
-- _省略可能_ [dotnet try-convert](https://github.com/dotnet/try-convert) をインストールします
+  リモート処理は、現在サポートされていないアプリケーション ドメインとの間の通信に使用されます。 プロセスとの間の通信については、リモート処理に代わる方法として、<xref:System.IO.Pipes> クラスまたは <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> クラスなどのプロセス間通信 (IPC) メカニズムを検討してください。
 
-## <a name="porting-a-solution"></a>ソリューションの移植
+- [コード アクセス セキュリティ (CAS)](net-framework-tech-unavailable.md#code-access-security-cas)
 
-ソリューションに複数のプロジェクトがある場合は、特定の順序でプロジェクトに対応する必要があるため、移植が複雑に思える場合があります。 他のプロジェクトに依存しないソリューション内のプロジェクトを最初に変換してから、ソリューション全体を変換し続ける、ボトムアップ アプローチでこの変換プロセスは行う必要があります。
+  CAS は .NET Framework でサポートされているサンドボックス化手法でしたが、.NET Framework 4.0 では非推奨とされました。 これはセキュリティ透過性によって置き換えられており、.NET ではサポートされていません。 代わりに、仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用してください。
 
-次のツールを使用すると、どのプロジェクトから移行するかを割り出すことができます。
+- [セキュリティ透過性](net-framework-tech-unavailable.md#security-transparency)
 
-- [Visual Studio の依存関係図](/visualstudio/modeling/create-layer-diagrams-from-your-code)に関する説明からは、ソリューション内のコードの有向グラフを作成できます。
-- `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` を実行すると、プロジェクト参照の一覧を含む json ドキュメントを生成できます。
-- アセンブリの依存関係図を取得するには、`-r DGML` スイッチを使用して [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) を実行します。 詳細については、[このページ](../../standard/analyzers/portability-analyzer.md#solution-wide-view)を参照してください。
+  CAS と同様に、このサンドボックス化手法は .NET Framework アプリケーションでは推奨されなくなり、.NET ではサポートされません。 代わりに、仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用してください。
+  
+- <xref:System.EnterpriseServices?displayProperty=fullName>
 
-依存関係の情報を取得した後は、その情報を使用してリーフ ノードから開始し、次のセクションのステップを適用して依存関係ツリーを操作できます。
+  <xref:System.EnterpriseServices?displayProperty=fullName> (COM+) は .NET ではサポートされていません。
 
-## <a name="per-project-steps"></a>プロジェクト別の手順
+- Windows Workflow Foundation (WF) と Windows Communication Foundation (WCF)
 
-プロジェクトを .NET Core に移植する場合は、次の手順を使用することをお勧めします。
+  WF と WCF は .NET 5 以降 (.NET Core を含む) ではサポートされていません。 代替方法については、「[CoreWF](https://github.com/UiPath/corewf)」、および [CoreWCF](https://github.com/CoreWCF/CoreWCF) に関するページを参照してください。
 
-1. [Visual Studio の変換ツール](/nuget/consume-packages/migrate-packages-config-to-package-reference)を使用して、すべての `packages.config` の依存関係を [PackageReference](/nuget/consume-packages/package-references-in-project-files) 形式に変換します。
+サポートされないテクノロジの詳細については、「[.NET Core と .NET 5 以降で使用できない .NET Framework テクノロジ](net-framework-tech-unavailable.md)」を参照してください。
 
-   この手順では、依存関係を従来の `packages.config` 形式から変換します。 `packages.config` は .NET Core では機能しないため、パッケージの依存関係がある場合は、この変換が必須です。 また、プロジェクトで直接使用される依存関係のみに対して実行します。これにより、管理する必要がある依存関係の数を減らせるので、後の手順を楽にできます。
+## <a name="windows-desktop-technologies"></a>Windows デスクトップ テクノロジ
 
-1. ご自分のプロジェクト ファイルのファイル構造を新しい SDK 形式のものに変換します。 .NET Core 用の新しいプロジェクトを作成してソース ファイルをコピーするか、ツールを使ってお使いの既存のプロジェクト ファイルを変換することができます。
+.NET Framework 用に作成された多くのアプリケーションでは、Windows フォームや Windows Presentation Foundation (WPF) などのデスクトップ テクノロジが使用されます。 Windows フォームと WPF はどちらも .NET に移植されていますが、これらは引き続き Windows 専用のテクノロジです。
 
-   .NET Core では、.NET Framework よりも簡素化された (異なる) [プロジェクト ファイル形式](../project-sdk/overview.md)が使用されます。 続行するには、プロジェクト ファイルをこの形式に変換する必要があります。 このプロジェクト形式では、この時点では、まだターゲットとしたい .NET Framework もターゲットにすることができます。
+Windows フォームまたは WPF アプリケーションを移行する前に、次の依存関係を考慮してください。
 
-   [dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使用すると、より小規模なソリューションや個々のプロジェクトを、1 回の操作で .NET Core プロジェクトのファイル形式に移植することが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" としてお使いください。 SDK 形式のプロジェクトで使用されるターゲットと旧形式のプロジェクト ファイルで使用されるものとの間には違いが多数あるため、このソリューションではプロジェクトの移行は保証されません。
+01. .NET 用のプロジェクト ファイルでは、.NET Framework とは異なる形式が使用されます。
+01. ご利用のプロジェクトで、.NET では利用できない API が使用される場合があります。
+01. サードパーティ製のコントロールとライブラリが .NET に移植されていなく、引き続き .NET Framework でしか使用できない可能性があります。
+01. ご利用のプロジェクトでは、.NET で[使用できなくなったテクノロジ](net-framework-tech-unavailable.md)が使用されます。
 
-1. 移植するすべてのプロジェクトを、.NET Framework 4.7.2 以降をターゲットとするように再ターゲットします。
+.NET ではオープンソース バージョンの Windows フォームと WPF が使用されており、.NET Framework に対する拡張機能が含まれています。
 
-   この手順により、.NET Core で特定の API がサポートされない場合に、.NET Framework 固有のターゲットに対して API の代替を確実に使用できます。
+デスクトップ アプリケーションを .NET 5 に移行するチュートリアルについては、次の記事のいずれかを参照してください。
 
-1. すべての依存関係を最新バージョンに更新します。 プロジェクトで、.NET Standard でサポートされていない古いバージョンのライブラリが使用されている場合があります。 ただし、単純に切り替えれば以降のバージョンでサポートされるようにできる場合があります。 ライブラリに破壊的変更がある場合は、コードの変更が必要になることがあります。
-
-1. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) を使ってアセンブリを分析し、それらが .NET Core に移植可能かどうかを確認します。
-
-   .NET Portability Analyzer ツールでは、ご自分のコンパイル済みのアセンブリを分析し、レポートを生成します。 このレポートには、移植性に関する大まかな概要と、使用している API のうち .NET Core では利用できないものそれぞれについての内訳が表示されます。 このツールを使用する場合、変更する必要がある可能性がある API に集中して取り組めるよう、変更するプロジェクトを個々に送信してください。 .NET Core には、多くの API と同等の、ユーザーが切り替えたいと思うものが用意されています。
-
-   Analyzer で生成されたレポートを確認するときの重要な情報は、使用されている実際の API です。必ずしもターゲットのプラットフォームのサポートのパーセンテージではありません。 .NET Standard と Core には、多くの API と同等の選択肢があります。そのため、お使いのライブラリまたはアプリケーションでの API の使われ方のシナリオを理解しておくと、移植において何をする必要があるかを判断することができます。
-
-   同等の API がなく、コンパイラ プリプロセッサ ディレクティブ (つまり、`#if NET45`) を多少使用して、そのプラットフォームに特別対応をする必要がある場合もあります。 この時点では、あなたのプロジェクトでは、変わらず .NET Framework をターゲットにしています。 これらのターゲットがあるケースでは、シナリオとして理解できる広く知られた条件を都度使用することをお勧めします。  たとえば、.NET Core では限定的にしか AppDomain をサポートしていません。しかし、アセンブリを読み込みアンロードするシナリオ用に .NET Core では利用できない新しい API があります。 これをコードで処理するには、一般的に次のような方法を使用します。
-
-   ```csharp
-   #if FEATURE_APPDOMAIN_LOADING
-   // Code that uses appdomains
-   #elif FEATURE_ASSEMBLY_LOAD_CONTEXT
-   // Code that uses assembly load context
-   #else
-   #error Unsupported platform
-   #endif
-   ```
-
-1. [.NET API アナライザー](../../standard/analyzers/api-analyzer.md)をプロジェクトにインストールして、一部のプラットフォームで <xref:System.PlatformNotSupportedException> をスローする API と、発生する可能性のあるその他の互換性の問題を識別します。
-
-   このツールは移植性アナライザーに似ていますが、.NET Core 上にコードをビルドできるかどうかが分析されるのではなく、実行時に <xref:System.PlatformNotSupportedException> をスローするような方法で API を使っているかどうかが分析されます。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。 .NET Core で例外をスローする API の詳細については、「[.NET Core で常に例外をスローする API](../compatibility/unsupported-apis.md)」を参照してください。
-
-1. この時点で、ターゲットを .NET Core (一般的にはアプリケーション用) または .NET Standard (ライブラリ用) に切り替えることができます。
-
-   .NET Core と .NET Standard のどちらを選択するかは、プロジェクトの実行場所に大きく関係します。 他のアプリケーションで使用されたり、NuGet 経由で配布されるのがライブラリである場合は、通常は .NET Standard がターゲットとなります。 ただし、パフォーマンスやその他の理由で .NET Core にしかない API がある場合があります。そのような場合、パフォーマンスや機能が低い .NET Standard のビルドがあっても .NET Core をターゲットにする必要があります。 .NET Standard をターゲットにすると、(WebAssembly などの) 新しいプラットフォームでプロジェクトを実行できます。 プロジェクトが (ASP.NET Core など) 特定のアプリケーション フレームワークに依存している場合、ターゲットは依存関係がサポートする内容によって制限されます。
-
-   .NET Framework または .NET Standard 用に条件付きでコードをコンパイルするプリプロセッサ ディレクティブがない場合は、プロジェクト ファイルで次を検索するのと同じくらいこれは簡単です。
-
-   ```xml
-   <TargetFramework>net472</TargetFramework>
-   ```
-
-   目的のフレームワークに切り替えます。 .NET Core 3.1 の場合、次のようになります。
-
-   ```xml
-   <TargetFramework>netcoreapp3.1</TargetFramework>
-   ```
-
-   ただし、このライブラリに .NET Framework の特定のビルドを引き続きサポートさせたい場合は、次のように置き換えて[マルチターゲット](../../standard/library-guidance/cross-platform-targeting.md)化させることができます。
-
-   ```xml
-   <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
-   ```
-
-   (レジストリ アクセスなどの) Windows 専用の API を使用する場合は、[Windows 互換機能パック](./windows-compat-pack.md)をインストールしてください。
-
-## <a name="next-steps"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [依存関係の分析](third-party-deps.md)
-> [NuGet パッケージのパッケージ化](../deploying/creating-nuget-packages.md)
-
-## <a name="see-also"></a>こちらもご覧ください
-
-- [ASP.NET から ASP.NET Core への移行](/aspnet/core/migration/proper-to-2x)
-- [WPF アプリを .NET Core に移行する](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
+- [.NET Framework WPF アプリを .NET に移行する](/dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0&preserve-view=true)
 - [.NET Framework Windows フォーム アプリを .NET に移行する](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)
+
+## <a name="windows-specific-apis"></a>Windows 固有の API
+
+アプリケーションでは、.NET でサポートされているプラットフォームで引き続きネイティブ ライブラリを P/Invoke できます。 このテクノロジは、Windows に限定されていません。 ただし、参照しているライブラリが _user32.dll_ や _kernel32.dll_ などの Windows 固有のものである場合、コードは Windows 上でのみ機能します。 アプリを実行するプラットフォームごとに、プラットフォーム固有のバージョンを見つけるか、すべてのプラットフォームで実行できるようにコードを汎用的にする必要があります。
+
+アプリケーションを .NET Framework から .NET に移植する場合、アプリケーションでは、.NET Framework と共に配布されるライブラリがおそらく使用されます。 .NET Framework で使用できた API の多くは、Windows レジストリや GDI+ 描画モデルなどの Windows 固有のテクノロジに依存しているため、.NET に移植されていませんでした。
+
+**Windows 互換機能パック** は、.NET に .NET Framework API サーフェイスの大部分を提供し、[Microsoft.Windows.Compatibility NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)を通じて提供されます。
+
+詳細については、「[Windows 互換機能パックを使用してコードを .NET に移植する](windows-compat-pack.md)」を参照してください。
+
+## <a name="net-framework-compatibility-mode"></a>.NET Framework 互換モード
+
+.NET Standard 2.0 で、.NET Framework 互換モードが導入されました。 この互換モードにより、.NET Standard と .NET 5+ (および .NET Core 3.1) プロジェクトが Windows 専用の .NET Framework ライブラリを参照できるようになります。 .NET Framework ライブラリの参照はすべてのプロジェクトで機能するわけではありません (例えばライブラリで Windows Presentation Foundation (WPF) API を使用していても、多くの移植シナリオがブロック解除される場合など)。 詳細については、[依存関係の分析による .NET Framework から .NET へのコードの移植](third-party-deps.md#net-framework-compatibility-mode)に関する記事を参照してください。
+
+## <a name="cross-platform"></a>クロスプラットフォーム
+
+.NET (旧称 .NET Core) は、クロスプラットフォームになるように設計されています。 コードが Windows 固有のテクノロジに依存していない場合は、macOS、Linux、Android などの他のプラットフォームで実行することができます。 これには、次のようなプロジェクト タイプが含まれます。
+
+- ライブラリ
+- コンソールベースのツール
+- オートメーション
+- ASP.NET サイト
+
+.NET Framework は、Windows のみのコンポーネントです。 コードで Windows フォームや Windows Presentation Foundation (WPF) などの Windows 固有のテクノロジまたは API を使用している場合でも、コードは .NET で実行できますが、他のオペレーティング システムでは実行できません。
+
+ライブラリまたはコンソールベースのアプリケーションは、ほとんど変更せずにクロスプラットフォームで使用できる可能性があります。 .NET に移植する場合は、これを考慮して、他のプラットフォームでアプリケーションをテストすることができます。
+
+## <a name="the-future-of-net-standard"></a>今後の .NET Standard
+
+[.NET Standard](https://github.com/dotnet/standard) は、複数の .NET 実装で使用できる .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することでした。 .NET 5 以降では、統一性を確立するための別のアプローチが採用されており、この新しいアプローチによって、多くのシナリオで .NET Standard が不要になります。 詳細については、「[.NET 5 と .NET Standard](../../standard/net-standard.md#net-5-and-net-standard)」を参照してください。
+
+.NET Standard 2.0 は、.NET Framework をサポートする最後のバージョンでした。
+
+## <a name="tools-to-assist-porting"></a>移植を支援するツール
+
+アプリケーションを .NET Framework から .NET に手動で移植する代わりに、さまざまなツールを使用して、移行のいくつかの側面を自動化できます。 複雑なプロジェクトの移植は、それ自体が複雑なプロセスです。 これらのツールが、その過程で役立つ場合があります。
+
+アプリケーションの移植に役立つツールを使用する場合でも、この記事の[「移植時の考慮事項」のセクション](#considerations-when-porting)を確認してください。
+
+### <a name="net-upgrade-assistant"></a>.NET Upgrade Assistant
+
+[.NET Upgrade Assistant](upgrade-assistant-overview.md) は、さまざまな種類の .NET Framework アプリに対して実行できるコマンド ライン ツールです。 これは、.NET Framework アプリの .NET 5 へのアップグレードを支援するように設計されています。 このツールを実行した後、**ほとんどの場合、アプリでは移行を完遂するためにより多くの作業が必要になります**。 このツールには、移行を完遂するのを支援するアナライザーのインストールが含まれています。 このツールは、次の種類の .NET Framework アプリケーションで動作します。
+
+- Windows フォーム
+- WPF
+- ASP.NET MVC
+- コンソール
+- クラス ライブラリ
+
+このツールは、この記事に記載されている他のツールを使用して、移行プロセスを支援します。 ツールの詳細については、「[.NET Upgrade Assistant の概要](upgrade-assistant-overview.md)」を参照してください。
+
+### <a name="try-convert"></a>try-convert
+
+try-convert は、デスクトップ アプリを .NET 5 に移動するなど、プロジェクトかソリューション全体を .NET SDK に変換できる .NET グローバル ツールです。 ただし、カスタム タスク、ターゲット、インポートなどの複雑なビルド プロセスがプロジェクトに含まれている場合は、このツールをお勧めしません。
+
+詳細については、[try-convert の GitHub リポジトリ](https://github.com/dotnet/try-convert)を参照してください。
+
+### <a name="net-portability-analyzer"></a>.NET Portability Analyzer
+
+.NET Portability Analyzer というツールがアセンブリを分析し、指定された対象の .NET プラットフォームでアプリケーションまたはライブラリを移植するために不足している .NET API の詳細なレポートを提供します。
+
+Visual Studio で .NET Portability Analyzer を使用するには、[マーケットプレイスの拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)をインストールします。
+
+詳細については、[.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) に関するページを参照してください。
+
+### <a name="net-api-analyzer"></a>.NET API アナライザー
+
+[.NET API アナライザー](../../standard/analyzers/api-analyzer.md)は、実行時に <xref:System.PlatformNotSupportedException> をスローする API を使用しているかどうかを分析します。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。 .NET で例外をスローする API の詳細については、[.NET Core で常に例外をスローする API](../compatibility/unsupported-apis.md) に関する記事を参照してください。
+
+API アナライザーは、プロジェクトに追加する NuGet パッケージ [Microsoft.DotNet.Analyzers.Compatibility](https://www.nuget.org/packages/Microsoft.DotNet.Analyzers.Compatibility/) として提供されています。
+
+詳細については、「[.NET API アナライザー](../../standard/analyzers/api-analyzer.md)」をご覧ください。
+
+## <a name="considerations-when-porting"></a>移植時の考慮事項
+
+アプリケーションを .NET に移植する場合は、次の提案を順番に検討してください。
+
+✔️ [.NET Upgrade Assistant](upgrade-assistant-overview.md) を使用してプロジェクトを移行することを検討します。 このツールはプレビュー段階ですが、この記事で説明している手動の手順のほとんどは自動化されており、移行パスを続行するための開始点として最適です。
+
+✔️ 依存関係を最初に調べることを検討します。 依存関係は、.NET 5、.NET Standard、または .NET Core を対象にする必要があります。
+
+✔️ NuGet の _packages.config_ ファイルを、プロジェクト ファイルの [PackageReference](/nuget/consume-packages/package-references-in-project-files) 設定に移行します。 Visual Studio を使用して [、 _package.config_ ファイルを変換します](/nuget/consume-packages/migrate-packages-config-to-package-reference#migration-steps)。
+
+✔️ アプリをまだ移植できない場合でも、最新のプロジェクト ファイル形式にアップグレードすることを検討します。 .NET Framework プロジェクトでは、古いプロジェクト形式が使用されます。 SDK スタイルのプロジェクトとして知られている最新のプロジェクト形式は、.NET Core 以降に対して作成されていますが、.NET Framework でも動作します。 プロジェクト ファイルを最新の形式にすると、それを基盤として今後もアプリを移植できます。
+
+✔️ .NET Framework プロジェクトを少なくとも .NET Framework 4.7.2 に再ターゲットします。 これにより、.NET Standard が既存の API をサポートしていない場合に、最新の代替 API を使用できるようになります。
+
+✔️ .NET Core 3.1 ではなく、.NET 5 を対象にすることを検討します。 .NET Core 3.1 は長期サポート (LTS) の対象になっていますが、最新は .NET 5 であり、.NET 6 はリリースされると LTS になります。
+
+✔️ **Windows フォームと WPF** のプロジェクトの対象を .NET 5 とします。 .NET 5 には、デスクトップ アプリの多くの機能強化が含まれています。
+
+✔️ .NET Framework プロジェクトでも使用可能なライブラリを移行している場合は、.NET Standard 2.0 を対象とすることを検討します。 また、ライブラリをマルチターゲットに設定し、.NET Framework と .NET Standard の両方をターゲットにすることもできます。
+
+✔️ 移行後に API 不足のエラーが発生した場合は、[Microsoft.Windows.Compatibility NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)に参照を追加します。 .NET Framework API サーフェイスの大部分は、NuGet パッケージを使用して .NET で使用できます。
+
+## <a name="see-also"></a>関連項目
+
+- [.NET Upgrade Assistant の概要](upgrade-assistant-overview.md)
+- [ASP.NET から ASP.NET Core への移行](/aspnet/core/migration/proper-to-2x)
+- [.NET Framework WPF アプリを .NET に移行する](/dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0&preserve-view=true)
+- [.NET Framework Windows フォーム アプリを .NET に移行する](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)
+- [.NET Framework ライブラリを .NET に移植する](libraries.md)
+- [サーバー アプリ用 .NET 5 と .NET Framework](../../standard/choosing-core-framework-server.md)

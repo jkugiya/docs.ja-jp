@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303050"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605283"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -31,7 +31,7 @@ ms.locfileid: "87303050"
 
 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。
 
-インターフェイスには、instance メソッド、プロパティ、イベント、インデクサー、またはこれらの 4 種類のメンバーの任意の組み合わせを含めることができます。 インターフェイスには、静的コンストラクター、フィールド、定数、または演算子を含めることができます。 例へのリンクについては、「[関連項目](./index.md#BKMK_RelatedSections)」を参照してください。 インターフェイスには、インスタンス フィールド、インスタンス コンストラクター、またはファイナライザーを含めることができません。 インターフェイス メンバーは、既定でパブリックです。
+インターフェイスには、instance メソッド、プロパティ、イベント、インデクサー、またはこれらの 4 種類のメンバーの任意の組み合わせを含めることができます。 インターフェイスには、静的コンストラクター、フィールド、定数、または演算子を含めることができます。 例へのリンクについては、「[関連項目](./index.md#BKMK_RelatedSections)」を参照してください。 インターフェイスには、インスタンス フィールド、インスタンス コンストラクター、またはファイナライザーを含めることができません。 インターフェイス メンバーは、既定ではパブリックであり、`public`、`protected`、`internal`、`private`、`protected internal`、`private protected` などのアクセシビリティ修飾子を明示的に指定できます。 `private` メンバーには既定の実装が必要です。
 
 インターフェイスのメンバーを実装するには、実装するクラスの対応するメンバーがパブリックかつ非静的であり、インターフェイスのメンバーと同じ名前およびシグネチャを持つ必要があります。
 

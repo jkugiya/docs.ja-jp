@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: af2198360670360f94f7fdf30d2890bc7dfd436d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99773863"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255693"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>.NET CLI を使用した .NET アプリの発行
 
@@ -137,7 +137,7 @@ FDE を公開すると、アプリが実行されるシステムで使用でき�
 
 - `-r <RID>` このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。 ランタイム識別子の一覧については、[ランタイム識別子 (RID) のカタログ](../rid-catalog.md)に関する記事をご覧ください。
 
-- `--self-contained false` このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。
+- `--self-contained false` このスイッチは、自己完結型の展開 (SCD) を作成する `-r` スイッチの既定の動作を無効にします。 このスイッチは、FDE を作成します。
 
 | 公開モード                   | SDK バージョン | コマンド                                                     |
 |--------------------------------|-------------|-------------------------------------------------------------|

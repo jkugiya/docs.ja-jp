@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:キーと値のペアに対して PropertyNamingPolicy、PropertyNameCaseInsensitive、Encoder のオプションが許可される
-description: .NET 5.0 での破壊的変更について学習します。キーと値のペア インスタンスの Key と Value のプロパティ名のシリアル化および逆シリアル化時、PropertyNamingPolicy、PropertyNameCaseInsensitive、Encoder のオプションが許可されます。
+description: .NET 5 での破壊的変更について学習します。キーと値のペア インスタンスの Key と Value のプロパティ名のシリアル化および逆シリアル化時、PropertyNamingPolicy、PropertyNameCaseInsensitive、Encoder のオプションが許可されます。
 ms.date: 10/18/2020
-ms.openlocfilehash: 5d75cb7feea32cc4b942e5261c5b609e00a5082c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe6298a677488574fdd7bdc7e887ed3b244ba8d6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759944"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256323"
 ---
 # <a name="propertynamingpolicy-propertynamecaseinsensitive-and-encoder-options-are-honored-when-serializing-and-deserializing-key-value-pairs"></a>キーと値のペアのシリアル化および逆シリアル化時、PropertyNamingPolicy、PropertyNameCaseInsensitive、Encoder オプションが許可される
 
@@ -27,7 +27,7 @@ Console.WriteLine(JsonSerializer.Serialize(kvp, options));
 // Actual: {"Key":1,"Value":1}
 ```
 
-.NET 5.0 以降では、<xref:System.Collections.Generic.KeyValuePair%602> インスタンスをシリアル化するときに、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> オプションと <xref:System.Text.Json.JsonSerializerOptions.Encoder> オプションが許可されます。 次のコード例は、指定したプロパティの名前付けポリシーに従い、シリアル化後に <xref:System.Collections.Generic.KeyValuePair%602.Key> プロパティと <xref:System.Collections.Generic.KeyValuePair%602.Value> プロパティがキャメル ケースで表示されることを示しています。
+.NET 5 以降では、<xref:System.Collections.Generic.KeyValuePair%602> インスタンスをシリアル化するときに、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> オプションと <xref:System.Text.Json.JsonSerializerOptions.Encoder> オプションが許可されます。 次のコード例は、指定したプロパティの名前付けポリシーに従い、シリアル化後に <xref:System.Collections.Generic.KeyValuePair%602.Key> プロパティと <xref:System.Collections.Generic.KeyValuePair%602.Value> プロパティがキャメル ケースで表示されることを示しています。
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
@@ -47,7 +47,7 @@ string json = @"{""key"":1,""value"":1}";
 JsonSerializer.Deserialize<KeyValuePair<int, int>>(json, options);
 ```
 
-.NET 5.0 以降の場合、<xref:System.Text.Json.JsonSerializer> を使用してシリアル化するときに、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> オプションと <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> オプションが許可されます。 たとえば、以下のコードスニペットは、指定されたプロパティ命名ポリシーでそれが許可されているため、小文字の <xref:System.Collections.Generic.KeyValuePair%602.Key> と <xref:System.Collections.Generic.KeyValuePair%602.Value> プロパティ名の逆シリアル化に成功したことを示しています。
+.NET 5 以降の場合、<xref:System.Text.Json.JsonSerializer> を使用してシリアル化するときに、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> オプションと <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> オプションが許可されます。 たとえば、以下のコードスニペットは、指定されたプロパティ命名ポリシーでそれが許可されているため、小文字の <xref:System.Collections.Generic.KeyValuePair%602.Key> と <xref:System.Collections.Generic.KeyValuePair%602.Value> プロパティ名の逆シリアル化に成功したことを示しています。
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };

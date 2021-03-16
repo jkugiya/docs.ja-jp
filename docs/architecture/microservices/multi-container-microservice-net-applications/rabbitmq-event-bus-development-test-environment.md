@@ -2,12 +2,12 @@
 title: 開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発環境またはテスト環境の統合イベント向けに RabbitMQ でイベント バスのメッセージングを実装します。
 ms.date: 01/13/2021
-ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b67b6cf92ac2c29b9eff07c2c9603206e42968a3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188082"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258079"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>RabbitMQ で単純な発行方法を実装する
 
-次のコードは、全体のシナリオを紹介する RabbitMQ のイベント バス実装の "*_簡略化された_*" バージョンです。 実際にこの方法で接続を処理することはありません。 完全な実装を確認するには、[dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) リポジトリで実際のコードを参照してください。
+次のコードは、全体のシナリオを紹介する RabbitMQ のイベント バス実装の ***簡略化された*** バージョンです。 実際にこの方法で接続を処理することはありません。 完全な実装を確認するには、[dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) リポジトリで実際のコードを参照してください。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -116,12 +116,14 @@ Subscribe メソッドは IIntegrationEventHandler オブジェクト (現在の
 
 RabbitMQ に対応した実働可能なソリューション。
 
-- *EasyNetQ* - RabbitMQ 向けのオープン ソース .NET API クライアント
+- **EasyNetQ** - RabbitMQ 向けのオープン ソース .NET API クライアント \
   <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>
   
+- **Rebus** - オープンソースの .NET Service Bus <https://github.com/rebus-org/Rebus>
+
 > [!div class="step-by-step"]
 > [前へ](integration-event-based-microservice-communications.md)
 > [次へ](subscribe-events.md)

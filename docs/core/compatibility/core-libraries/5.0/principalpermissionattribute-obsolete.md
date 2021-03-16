@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:PrincipalPermissionAttribute は現在使用されていないエラーです
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。PrincipalPermissionAttribute コンストラクターは非推奨であり、コンパイル時のエラーを発生させます。
+description: Core .NET ライブラリにおける .NET 5 の破壊的変更について学習します。PrincipalPermissionAttribute コンストラクターは非推奨であり、コンパイル時のエラーを発生させます。
 ms.date: 11/01/2020
-ms.openlocfilehash: 138bbf25fd493c1bb9c2b3f10b62681c735ea7b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7568883935633e98b884b553efccf50504448b77
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759452"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257233"
 ---
 # <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute は現在使用されていないエラーです
 
@@ -25,13 +25,13 @@ public void MyMethod()
 }
 ```
 
-.NET 5.0 以降では、<xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性をメソッドに適用できません。 この属性のコンストラクターは非推奨であり、コンパイル時のエラーを発生させます。 他の非推奨警告とは異なり、エラーを非表示にすることはできません。
+.NET 5 以降では、<xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性をメソッドに適用できません。 この属性のコンストラクターは非推奨であり、コンパイル時のエラーを発生させます。 他の非推奨警告とは異なり、エラーを非表示にすることはできません。
 
 ## <a name="reason-for-change"></a>変更理由
 
-<xref:System.Security.Permissions.SecurityAttribute> をサブクラス化する他の型と同様に、<xref:System.Security.Permissions.PrincipalPermissionAttribute> 型は .NET のコード アクセス セキュリティ (CAS) インフラストラクチャに含まれます。 .NET Framework 2.x から 4.x では、完全信頼のシナリオの下でアプリケーションが実行されている場合でも、ランタイムによってメソッド エントリで <xref:System.Security.Permissions.PrincipalPermissionAttribute> 注釈が強制されます。 .NET Core と .NET 5.0 以降では CAS 属性がサポートされず、ランタイムで無視されます。
+<xref:System.Security.Permissions.SecurityAttribute> をサブクラス化する他の型と同様に、<xref:System.Security.Permissions.PrincipalPermissionAttribute> 型は .NET のコード アクセス セキュリティ (CAS) インフラストラクチャに含まれます。 .NET Framework 2.x から 4.x では、完全信頼のシナリオの下でアプリケーションが実行されている場合でも、ランタイムによってメソッド エントリで <xref:System.Security.Permissions.PrincipalPermissionAttribute> 注釈が強制されます。 .NET Core と .NET 5 以降では CAS 属性がサポートされず、ランタイムで無視されます。
 
-.NET Framework の動作と .NET Core と .NET 5.0 の動作がこのように違うことで、アクセスをブロックすべきなのに許可される "フェール オープン" シナリオが発生します。 "フェール オープン" シナリオを回避するため、.NET 5.0 以降を対象とするコードではこの属性を適用できません。
+.NET Framework の動作と .NET Core と .NET 5 の動作がこのように違うことで、アクセスをブロックすべきなのに許可される "フェール オープン" シナリオが発生します。 "フェール オープン" シナリオを回避するため、.NET 5 以降を対象とするコードではこの属性を適用できません。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 

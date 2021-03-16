@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:SSE および SSE2 の CompareGreaterThan メソッドで NaN 入力が正しく処理される
-description: Core .NET ライブラリでの .NET 5.0 の破壊的変更について学習します。この変更後、SSE と SSE2 の比較メソッドは、NaN 入力を正しく処理するように修正されています。
+description: Core .NET ライブラリでの .NET 5 の破壊的変更について学習します。この変更後、SSE と SSE2 の比較メソッドは、NaN 入力を正しく処理するように修正されています。
 ms.date: 11/01/2020
-ms.openlocfilehash: 4abffa8d8bf2abfa9ef83673db9154de035d952c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 23955f08f70d82635a0a93b9bbb9a05efbbab6a9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759350"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257116"
 ---
 # <a name="sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs"></a>SSE および SSE2 の CompareGreaterThan メソッドで NaN 入力が正しく処理される
 
@@ -26,7 +26,7 @@ ms.locfileid: "95759350"
 
 以前は、一覧にある <xref:System.Runtime.Intrinsics.X86.Sse> メソッドと <xref:System.Runtime.Intrinsics.X86.Sse2> メソッドに `NaN` を入力すると、間違った結果が返されました。 また、この結果は、<xref:System.Runtime.Intrinsics.X86.Avx> クラスでこれに相当するメソッドで生成される結果とは違っていました。
 
-.NET 5.0 より、これらのメソッドで `NaN` 入力が正しく処理され、<xref:System.Runtime.Intrinsics.X86.Avx> クラスでこれに相当するメソッドと同じ結果が返されるようになりました。
+.NET 5 より、これらのメソッドで `NaN` 入力が正しく処理され、<xref:System.Runtime.Intrinsics.X86.Avx> クラスでこれに相当するメソッドと同じ結果が返されるようになりました。
 
 Streaming SIMD Extensions (SSE) および Streaming SIMD Extensions 2 (SSE2) の業界標準アーキテクチャ (ISA) には、これらの比較メソッドの直接的なハードウェア サポートがありません。そのため、ソフトウェアで実装されます。 以前は、メソッドは不適切に実装され、`NaN` 入力が間違って処理されていました。 ネイティブから移植されたコードについては、間違った動作からバグが発生することがあります。 256 ビット コード パスの場合、これらのメソッドから、<xref:System.Runtime.Intrinsics.X86.Avx> クラスでの同等のメソッドとは異なる結果が生成されることもあります。
 

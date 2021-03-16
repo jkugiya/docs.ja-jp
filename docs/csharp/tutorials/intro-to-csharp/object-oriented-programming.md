@@ -2,19 +2,19 @@
 title: オブジェクト指向プログラミング (C#)
 description: C# は、抽象化、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。
 ms.date: 09/30/2020
-ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794847"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255406"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 
 C# はオブジェクト指向言語です。 オブジェクト指向プログラミングで使用される 4 つの主要な手法は次のとおりです。
 
-- "*抽象化*" とは、型コンシューマーから不要な詳細を隠すことです。
-- "*カプセル化*" とは、関連するプロパティ、メソッド、およびその他のメンバーのグループが 1 つの単位またはオブジェクトとして扱われることを意味します。
+- "*抽象化*" とは、関連するプロパティ、メソッド、およびその他のメンバーのグループが 1 つの単位またはオブジェクトとして扱われることを意味します。
+- "*カプセル化*" とは、型コンシューマーから不要な詳細を隠すことです。
 - "*継承*" は、既存のクラスに基づいて新しいクラスを作成する機能です。
 - "*ポリモーフィズム*" とは、同じプロパティまたはメソッドを異なる方法で実装している複数のクラスを、交換して使用できることです。
 
@@ -183,7 +183,7 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 ## <a name="summary"></a>まとめ
 
-うまくいかない場合は、このチュートリアルのソースを [GitHub リポジトリ](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)で確認できます。
+うまくいかない場合は、このチュートリアルのソースを [GitHub リポジトリ](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)で確認できます。
 
 このチュートリアルでは、オブジェクト指向プログラミングで使用される多くの手法を示しました。
 

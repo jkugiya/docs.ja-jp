@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:LastIndexOf では、空の検索文字列の処理が改善されています
-description: Core .NET ライブラリでの .NET 5.0 の破壊的変更について学習します。この変更後、LastIndexOf と関連 API により、長さ 0 のサブ文字列を検索するときに正しい値が返されるようになりました。
+description: Core .NET ライブラリでの .NET 5 の破壊的変更について学習します。この変更後、LastIndexOf と関連 API により、長さ 0 の substring を検索するときに正しい値が返されるようになりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d1a676eb2b9ed3de6a745db27d53bd43560a32f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dc34300d867fe1bb9264494b3f2261bad2c1eea
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759345"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257428"
 ---
 # <a name="lastindexof-has-improved-handling-of-empty-search-strings"></a>LastIndexOf では、空の検索文字列の処理が改善されています
 
@@ -24,7 +24,7 @@ ReadOnlySpan<char> span = "Hello";
 Console.WriteLine(span.LastIndexOf("")); // prints '0' (incorrect)
 ```
 
-.NET 5.0 以降では、これらの API によって `LastIndexOf` の正しい値が返されます。
+.NET 5 以降では、これらの API によって `LastIndexOf` の正しい値が返されます。
 
 ```csharp
 Console.WriteLine("Hello".LastIndexOf("")); // prints '5' (correct)
@@ -45,7 +45,7 @@ Console.WriteLine(span.LastIndexOf("")); // prints '5' (correct)
 
 ## <a name="recommended-action"></a>推奨アクション
 
-何らかのアクションをとる必要はありません。 .NET 5.0 ランタイムでは、新しい動作が自動的に提供されます。
+何らかのアクションをとる必要はありません。 .NET 5 ランタイムでは、新しい動作が自動的に提供されます。
 
 以前の動作を復元するための互換性スイッチはありません。
 

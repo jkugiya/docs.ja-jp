@@ -5,12 +5,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 015be752e5c98ec732e1b95130979446071810f1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100474175"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478057"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic コンパイラ オプション一覧 (カテゴリ別)
 
@@ -26,7 +26,7 @@ Visual Basic コマンドライン コンパイラは、Visual Studio 統合開�
 |[-utf8output](utf8output.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|  
 |[-verbose](verbose.md)|コンパイル中に追加の情報を出力します。|  
 |`-modulename:<string>`|ソース モジュールの名前を指定します。|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|コンパイラ出力用の言語を指定します。|
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/advanced.md#preferreduilang)|コンパイラ出力用の言語を指定します。|
   
 ## <a name="optimization"></a>最適化  
   

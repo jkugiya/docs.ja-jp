@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: 一部の Latin-1 文字に対して変更された Unicode カテゴリ'
-description: .NET 5.0 でのグローバリゼーションに関する破壊的変更について学習します。Char メソッドで、Latin-1 範囲の文字に対して正しい Unicode カテゴリが返されるようになりました。
+description: .NET 5 でのグローバリゼーションに関する破壊的変更について学習します。Char メソッドで、Latin-1 範囲の文字に対して正しい Unicode カテゴリが返されるようになりました。
 ms.date: 04/07/2020
-ms.openlocfilehash: 8bd093a89857c83921fc0bf987348b529f74ce68
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03355c488d2bdae78f989e647c9b5b7913d73649
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760052"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256674"
 ---
 # <a name="unicode-category-changed-for-some-latin-1-characters"></a>一部の Latin-1 文字に対して変更された Unicode カテゴリ
 
@@ -15,11 +15,11 @@ ms.locfileid: "95760052"
 
 ## <a name="change-description"></a>変更内容
 
-以前のバージョンの .NET の <xref:System.Char> メソッドでは、Latin-1 範囲の文字に対して Unicode カテゴリの固定リストが使用されていました。 ただし、それらの API が実装された後に、Unicode 標準でこれらの文字の一部のカテゴリが変更されたため、不一致が発生していました。 また、<xref:System.Char> と、Unicode 標準に準拠する <xref:System.Globalization.CharUnicodeInfo> API の間でも一致していませんでした。 .NET 5.0 以降のバージョンの <xref:System.Char> メソッドでは、すべての文字について Unicode 標準に一致する Unicode カテゴリが使用され、返されます。
+以前のバージョンの .NET の <xref:System.Char> メソッドでは、Latin-1 範囲の文字に対して Unicode カテゴリの固定リストが使用されていました。 ただし、それらの API が実装された後に、Unicode 標準でこれらの文字の一部のカテゴリが変更されたため、不一致が発生していました。 また、<xref:System.Char> と、Unicode 標準に準拠する <xref:System.Globalization.CharUnicodeInfo> API の間でも一致していませんでした。 .NET 5 以降のバージョンの <xref:System.Char> メソッドでは、すべての文字について Unicode 標準に一致する Unicode カテゴリが使用され、返されます。
 
 次の表では、.NET 5.0 で Unicode カテゴリが変更された文字を示します。
 
-| 文字    | Unicode カテゴリ<br>以前の .NET バージョンの場合 | Unicode カテゴリ<br>.NET 5.0 以降のバージョンの場合 |
+| 文字    | Unicode カテゴリ<br>以前の .NET バージョンの場合 | Unicode カテゴリ<br>.NET 5 以降のバージョンの場合 |
 |:------------:|:---------------------------------------------:|:--------------------------------------------------:|
 | § (\u00a7)   | `OtherSymbol`                                 | `OtherPunctuation`                                 |
 | ª (\u00aa)   | `LowercaseLetter`                             | `OtherLetter`                                      |

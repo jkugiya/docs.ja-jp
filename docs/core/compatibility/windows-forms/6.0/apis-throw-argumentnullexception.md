@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:一部の API によって ArgumentNullException がスローされる
-description: .NET 6.0 での破壊的変更について説明します。一部の API で引数が検証され、ArgumentNullException がスローされるようになりました。
+description: .NET 6 での破壊的変更について説明します。一部の API で引数が検証され、ArgumentNullException がスローされるようになりました。
 ms.date: 01/29/2021
-ms.openlocfilehash: f9d7dc8bb57ed8dc5b4ff41bda9b3bde7db7b880
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804150"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255738"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>一部の API によって ArgumentNullException がスローされる
 
@@ -17,7 +17,7 @@ ms.locfileid: "99804150"
 
 以前のバージョンの .NET では、影響を受ける API を呼び出すときに引数を `null` にすると、<xref:System.NullReferenceException> がスローされます。
 
-.NET 6.0 以降では、影響を受ける API を呼び出すときに引数を `null` にすると、<xref:System.ArgumentNullException> がスローされます。
+.NET 6 以降では、影響を受ける API を呼び出すときに引数を `null` にすると、<xref:System.ArgumentNullException> がスローされます。
 
 ## <a name="reason-for-change"></a>変更理由
 

@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: WinForms と WPF アプリで Microsoft.NET.Sdk が使用される'
-description: .NET 5.0 での破壊的変更について学習します。この変更により、Windows フォーム アプリと Windows Presentation Framework (WPF) アプリでは、.NET Core WinForms と WPF SDK ではなく、.NET SDK が使用されるようになりました。
+description: .NET 5 での破壊的変更について学習します。この変更により、Windows フォーム アプリと Windows Presentation Framework (WPF) アプリでは、.NET Core WinForms と WPF SDK ではなく、.NET SDK が使用されるようになりました。
 ms.date: 09/18/2020
-ms.openlocfilehash: 5eafed03fbf034f6a6457217a8527a877214e239
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633820"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256206"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms と WPF アプリで Microsoft.NET.Sdk が使用される
 
@@ -15,7 +15,7 @@ Windows フォームと Windows Presentation Framework (WPF) アプリで、.NET
 
 ## <a name="change-description"></a>変更内容
 
-以前のバージョンの .NET Core では、WinForms および WPF アプリで別の[プロジェクト SDK](../../../project-sdk/overview.md) (`Microsoft.NET.Sdk.WindowsDesktop`) が使用されていました。 .NET 5.0 以降、WinForms および WPF SDK の両方で .NET SDK (`Microsoft.NET.Sdk`) が統合されました。 また、.NET 5 では、`netcoreapp` と `netstandard` が新しい[ターゲット フレーム ワークモニカー (TFM)](../../../../standard/frameworks.md) に置き換えられています。 次の例では、WPF プロジェクト ファイルを .NET 5.0 以降に変更する場合に、行う必要がある変更を示しています。
+以前のバージョンの .NET Core では、WinForms および WPF アプリで別の[プロジェクト SDK](../../../project-sdk/overview.md) (`Microsoft.NET.Sdk.WindowsDesktop`) が使用されていました。 .NET 5 以降、WinForms および WPF SDK の両方で .NET SDK (`Microsoft.NET.Sdk`) が統合されました。 また、.NET 5 では、`netcoreapp` と `netstandard` が新しい[ターゲット フレーム ワークモニカー (TFM)](../../../../standard/frameworks.md) に置き換えられています。 次の例では、WPF プロジェクト ファイルを .NET 5 以降に変更する場合に、行う必要がある変更を示しています。
 
 以前の .NET Core バージョンの場合:
 
@@ -31,7 +31,7 @@ Windows フォームと Windows Presentation Framework (WPF) アプリで、.NET
 </Project>
 ```
 
-.NET 5.0 以降のバージョンの場合:
+.NET 5 以降のバージョンの場合:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

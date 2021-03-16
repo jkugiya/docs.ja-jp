@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:Vector<T> が NotSupportedException をスローする
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。Vector<T> によって、サポートされていない型パラメーターに対して常に例外がスローされます。
+description: Core .NET ライブラリにおける .NET 5 の破壊的変更について学習します。Vector<T> によって、サポートされていない型パラメーターに対して常に例外がスローされます。
 ms.date: 11/01/2020
-ms.openlocfilehash: 63db7c6b720735b180ed11098227b31a14008f74
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dccd39c01f4debd7d1432195e7f3cb14aeda5f65
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759770"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257012"
 ---
 # <a name="vectort-always-throws-notsupportedexception-for-unsupported-types"></a>Vector\<T> で、サポートされていない型に対して常に NotSupportedException がスローされる
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759770"
 
 以前の <xref:System.Numerics.Vector%601> のメンバーでは、`T` が [サポートされていない型](#unsupported-types)だった場合に、常に <xref:System.NotSupportedException> がスローされるとは限りませんでした。 例外が常にスローされなかったのは、ハードウェアの高速化をサポートしていたコード パスが原因でした。 たとえば、ハードウェアの高速化がないプラットフォーム (ARM32 など) で `Vector<bool> + Vector<bool>` を使用すると、例外をスローするのではなく `default` が返されました。 サポートされていない型について、<xref:System.Numerics.Vector%601> のメンバーが示す動作には、異なるプラットフォームやハードウェア構成にわたる一貫性がありませんでした。
 
-.NET 5.0 以降、<xref:System.Numerics.Vector%601> のメンバーでは、`T` がサポートされていない型である場合に、すべてのハードウェア構成で常に <xref:System.NotSupportedException> がスローされます。
+.NET 5 以降、<xref:System.Numerics.Vector%601> のメンバーでは、`T` がサポートされていない型である場合に、すべてのハードウェア構成で常に <xref:System.NotSupportedException> がスローされます。
 
 ### <a name="unsupported-types"></a>サポートされていない型
 

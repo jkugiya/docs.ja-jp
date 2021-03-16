@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 72d6249ed56ae6ae34a6f51102e1e7bbd3f64ab7
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507257"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104116"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 型の既定値 (C# リファレンス)
 
@@ -18,7 +18,7 @@ ms.locfileid: "79507257"
 
 |種類|既定値|
 |---------|------------------|
-|すべての参照型|`null`|
+|任意の[参照型](../keywords/reference-types.md)|`null`|
 |任意の[組み込み整数数値型](integral-numeric-types.md)|0 (ゼロ)|
 |任意の[組み込み浮動小数点数値型](floating-point-numeric-types.md)|0 (ゼロ)|
 |[bool](bool.md)|`false`|

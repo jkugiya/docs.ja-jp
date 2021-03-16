@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: 暗号抽象化の既定の実装のインスタンス化はサポートされていない'
-description: .NET 5.0 の破壊的変更について学習します。この変更により、暗号抽象化に対するパラメーターなしの Create() オーバーロードは古い機能となります。
+description: .NET 5 の破壊的変更について学習します。この変更により、暗号抽象化に対するパラメーターなしの Create() オーバーロードは古い機能となります。
 ms.date: 10/16/2020
-ms.openlocfilehash: 8ed7d0b72347ec41ec65ccd9e4004266619c84f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b75f3568317d1db8ae1bb629f760aaec7e69776a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759890"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256791"
 ---
 # <a name="instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported"></a>暗号抽象化の既定の実装のインスタンス化はサポートされていない
 
@@ -41,7 +41,7 @@ Console.WriteLine(alg.GetType());
 HashAlgorithm alg = HashAlgorithm.Create();
 ```
 
-.NET 5.0 以降のバージョンにおいては、<xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> などの抽象暗号プリミティブ ファクトリは、古い形式としてマークされ、ID `SYSLIB0007` のコンパイル時警告が生成されます。 実行時には、これらのメソッドからは引き続き <xref:System.PlatformNotSupportedException> がスローされます。
+.NET 5 以降のバージョンにおいては、<xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> などの抽象暗号プリミティブ ファクトリは、古い形式としてマークされ、ID `SYSLIB0007` のコンパイル時警告が生成されます。 実行時には、これらのメソッドからは引き続き <xref:System.PlatformNotSupportedException> がスローされます。
 
 ```csharp
 // Throws PlatformNotSupportedException.

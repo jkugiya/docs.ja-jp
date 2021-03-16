@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されない
-description: .NET 5.0 での破壊的変更について学習します。JsonSerializer で非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されなくなりました。
+description: .NET 5 での破壊的変更について学習します。JsonSerializer で非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されなくなりました。
 ms.date: 10/18/2020
-ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 9781061fa89eb3bffb53a4f08bacbd88f3bc9265
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794702"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256271"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されない
 
@@ -17,7 +17,7 @@ ms.locfileid: "98794702"
 
 .NET Standard 2.0 以降をサポートするスタンドアロン [System.Text.Json NuGet パッケージ](https://www.nuget.org/packages/System.Text.Json/) (つまり、バージョン 4.6.0-4.7.2) の動作は、.NET Core 3.0 および 3.1 の組み込みの動作と一致しません。 .NET Core 3.x では、internal と private コンストラクターを逆シリアル化に使用できます。 スタンドアロン パッケージで、非パブリック コンストラクターは使用できません。また、非パブリックのパラメーターなしのコンストラクターが定義されていない場合は、<xref:System.MissingMethodException> がスローされます。
 
-.NET 5.0 以降および System.Text.Json NuGet パッケージ 5.0.0 では、NuGet パッケージと組み込み API 間で動作に一貫性があります。 非パブリック コンストラクター (パラメーターなしのコンストラクターを含む) は、既定ではシリアライザーによって無視されます。 逆シリアル化のために、次のいずれかのコンストラクターがシリアライザーによって使用されます。
+.NET 5 以降および System.Text.Json NuGet パッケージ 5.0.0 では、NuGet パッケージと組み込み API 間で動作に一貫性があります。 非パブリック コンストラクター (パラメーターなしのコンストラクターを含む) は、既定ではシリアライザーによって無視されます。 逆シリアル化のために、次のいずれかのコンストラクターがシリアライザーによって使用されます。
 
 - <xref:System.Text.Json.Serialization.JsonConstructorAttribute> の注釈が付けられたパブリック コンストラクター。
 - パブリックのパラメーターなしのコンストラクター。

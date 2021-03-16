@@ -10,18 +10,18 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efa07ee4166d3f02ca3885c5efc4373be8eac2fd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440882"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258534"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
 IL 逆アセンブラーは、IL アセンブラー (*Ilasm.exe*) と対をなすツールです。 *Ildasm.exe* は、中間言語 (IL: Intermediate Language) コードを含む、ポータブル実行可能 (PE) ファイルを使用して、*Ilasm.exe* に対する入力として適したテキスト ファイルを作成します。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
 
 コマンド プロンプトに次のように入力します。
 
@@ -188,4 +188,4 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 - [ツール](index.md)
 - [Ilasm.exe (IL アセンブラー)](ilasm-exe-il-assembler.md)
 - [マネージド実行プロセス](../../standard/managed-execution-process.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

@@ -1,6 +1,6 @@
 ---
-title: 型の値の等価性を定義する方法 - C# プログラミング ガイド
-description: 型の値の等価性を定義する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
+title: クラスまたは構造体の値の等価性を定義する方法 - C# プログラミング ガイド
+description: クラスまたは構造体の値の等価性を定義する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a63fd8d11d0241063364e0156ee73a86aaeb7b35
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162727"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259565"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>型の値の等価性を定義する方法 (C# プログラミング ガイド)
+# <a name="how-to-define-value-equality-for-a-class-or-struct-c-programming-guide"></a>クラスまたは構造体の値の等価性を定義する方法 (C# プログラミング ガイド)
 
-クラスまたは構造体を定義する場合は、型に値の等価性 (同値) のカスタム定義を作成することが有用かどうかを判断します。 通常、値の等価性を実装するのは、その型のオブジェクトがある種のコレクションに追加されることが想定されている場合、または、そのオブジェクトの主な目的が一連のフィールドまたはプロパティを格納することである場合です。 値の等価性は、型のすべてのフィールドおよびプロパティの比較に基づいて定義できます。また、サブセットに基づいて定義することもできます。
+[レコード](../classes-and-structs/records.md)を定義すると、コンパイラにより、値の等価性が自動的に実装されます。 クラスまたは構造体を定義する場合は、型に値の等価性 (同値) のカスタム定義を作成することが有用かどうかを判断します。 通常、値の等価性を実装するのは、その型のオブジェクトがある種のコレクションに追加されることが想定されている場合、または、そのオブジェクトの主な目的が一連のフィールドまたはプロパティを格納することである場合です。 値の等価性は、型のすべてのフィールドおよびプロパティの比較に基づいて定義できます。また、サブセットに基づいて定義することもできます。
 
 いずれの場合も、クラスおよび構造体の両方について、等価性を保証する 5 つの条件に従って実装する必要があります (次のルールの場合、`x`、`y`、`z` が null ではないと想定しています)。  
   

@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて説明します。
 ms.date: 09/22/2020
-ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957880"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206688"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -52,6 +52,9 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 * Windows 上で動作する PowerShell スクリプト。
 * Linux/macOS で動作する bash スクリプト。
+
+> [!NOTE]
+> .NET によって利用統計情報が収集されます。 詳細とオプトアウトの方法については、「[.NET SDK 製品利用統計情報](telemetry.md)」を参照してください。
 
 ### <a name="purpose"></a>目的
 

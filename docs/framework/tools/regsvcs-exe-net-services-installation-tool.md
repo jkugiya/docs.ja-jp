@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 58a20084457cb217f3af73f4b4ff9ea251647782
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a989ddf8b14806879917e4078f60486f225b00e3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238550"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259204"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET サービス インストール ツール)
 
@@ -27,7 +27,7 @@ ms.locfileid: "96238550"
   
 - プログラムでクラスに追加したサービスの設定。  
   
- このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
+ ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -92,4 +92,4 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 
 - [ツール](index.md)
 - [方法: 厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

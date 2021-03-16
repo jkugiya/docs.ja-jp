@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:UTF-7 コード パスが古い形式に
-description: Core .NET ライブラリでの .NET 5.0 の破壊的変更について学習します。この変更後、UTF7 コンストラクターと UTF7Encoding コンストラクターは古い形式となりました。
+description: Core .NET ライブラリでの .NET 5 の破壊的変更について学習します。この変更後、UTF7 と UTF7Encoding コンストラクターは古い形式となりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: d58305f59a30cdf31a525c3789bd6497201c50ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a0ba771e0fac2908ca37f16afb10118e1537161
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759357"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256986"
 ---
 # <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 コード パスが古い形式に
 
@@ -26,7 +26,7 @@ Encoding enc2 = Encoding.GetEncoding(65000); // By code page.
 
 また、UTF-7 エンコードを表すインスタンスが <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> メソッドによって列挙されていました。これは、システムに登録されているすべての <xref:System.Text.Encoding> インスタンスを列挙します。
 
-.NET 5.0 以降では、<xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> プロパティと <xref:System.Text.UTF7Encoding.%23ctor%2A> コンストラクターは古くなり、警告 `SYSLIB0001` (プレビュー バージョンでは `MSLIB0001`) が生成されます。 ただし、<xref:System.Text.UTF7Encoding> クラスを使用しているときに呼び出し元が受け取る警告の数を減らすために、<xref:System.Text.UTF7Encoding> 型自体は古い形式に設定されていません。
+.NET 5 以降では、<xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> プロパティと <xref:System.Text.UTF7Encoding.%23ctor%2A> コンストラクターは古くなり、警告 `SYSLIB0001` (プレビュー バージョンでは `MSLIB0001`) が生成されます。 ただし、<xref:System.Text.UTF7Encoding> クラスを使用しているときに呼び出し元が受け取る警告の数を減らすために、<xref:System.Text.UTF7Encoding> 型自体は古い形式に設定されていません。
 
 ```csharp
 // The next line generates warning SYSLIB0001.

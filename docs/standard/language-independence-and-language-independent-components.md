@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4080cb38ca3b7d79c0ad4291198b13567511093c
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106372"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480833"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -594,8 +594,6 @@ C# のソース コード ファイルをモジュールにコンパイルする
 ```console
 csc /t:module NumberUtil.cs
 ```
-
-C# コンパイラのコマンド ライン構文の詳細については、「[csc.exe を使用したコマンド ラインからのビルド](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」を参照してください。
 
 次に、[リンカー オプション](/cpp/build/reference/linker-options)を使用して 2 つのモジュールをアセンブリにコンパイルします。
 

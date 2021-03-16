@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c810a7116f88f2eb7fc25efbfc6f44b60f2768b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238471"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259126"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
 
 > [!Note]  
 > Windows 10 SDK、Windows 10 HLK、Windows 10 WDK、および Windows 10 ADK **ビルド 20236 以降** の場合、ダイジェスト アルゴリズムを指定する必要があります。 SignTool の `sign` コマンドを使用するには、署名時およびタイムスタンプ時に、それぞれ `/fd` **ファイル ダイジェスト アルゴリズム** および `/td` **タイムスタンプ ダイジェスト アルゴリズム** オプションを指定する必要があります。 署名時に `/fd` が指定されていない場合、およびタイムスタンプ時に `/td` が指定されていない場合は、警告 (エラー コード 0、初期) がスローされます。 SignTool の以降のバージョンでは、警告がエラーになります。 SHA256 が推奨され、業界によって SHA1 より安全であると見なされています。  
@@ -231,4 +231,4 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ## <a name="see-also"></a>関連項目
 
 - [ツール](index.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

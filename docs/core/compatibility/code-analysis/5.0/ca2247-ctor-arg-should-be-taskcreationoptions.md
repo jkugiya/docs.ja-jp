@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:CA2247:TaskCompletionSource コンストラクターの引数は、TaskCreationOptions 値にする必要があります
-description: .NET 5.0 での破壊的変更について学習します。これは、コード分析ルール CA2247 の有効化によって発生します。
+description: .NET 5 での破壊的変更について学習します。これは、コード分析ルール CA2247 の有効化によって発生します。
 ms.date: 09/03/2020
-ms.openlocfilehash: 323fd5a05da4dfeb68ef75d88d5d293ba01c8ade
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6c7accaad312352a1448406f2bbf4189f3df1ee5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759795"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257701"
 ---
 # <a name="warning-ca2247-argument-to-taskcompletionsource-constructor-should-be-taskcreationoptions-value"></a>警告 CA2247:TaskCompletionSource コンストラクターの引数は、TaskCreationOptions 値にする必要があります
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759795"
 
 ## <a name="change-description"></a>変更内容
 
-.NET 5.0 以降、.NET SDK には [.NET ソース コード アナライザー](../../../../fundamentals/code-analysis/overview.md)が含まれています。 これらのルールのいくつかは、[CA2247](/visualstudio/code-quality/ca2247) を含め、既定で有効になっています。 このルールに違反し、警告をエラーとして扱うように構成されているコードがプロジェクトに含まれている場合、この変更によってビルドが破損する可能性があります。
+.NET 5 以降、.NET SDK には [.NET ソース コード アナライザー](../../../../fundamentals/code-analysis/overview.md)が含まれています。 これらのルールのいくつかは、[CA2247](/visualstudio/code-quality/ca2247) を含め、既定で有効になっています。 このルールに違反し、警告をエラーとして扱うように構成されているコードがプロジェクトに含まれている場合、この変更によってビルドが破損する可能性があります。
 
 ルール CA2247 によって、<xref:System.Threading.Tasks.TaskContinuationOptions> 型の引数を渡す <xref:System.Threading.Tasks.TaskCompletionSource%601> コンストラクターへの呼び出しが検索されます。 <xref:System.Threading.Tasks.TaskCompletionSource%601> 型には、<xref:System.Threading.Tasks.TaskCreationOptions> 値を受け入れるコンストラクターと、<xref:System.Object> を受け入れる別のコンストラクターがあります。 <xref:System.Threading.Tasks.TaskCreationOptions> 値ではなく <xref:System.Threading.Tasks.TaskContinuationOptions> 値を誤って渡した場合、<xref:System.Object> パラメーターを持つコンストラクターが実行時に呼び出されます。 コードは、コンパイルされ、実行されますが、意図した動作を含みません。
 

@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: 85220cac360aaf32195c0b0f1d2866729e11c442
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638978"
@@ -74,5 +74,5 @@ ms.locfileid: "99638978"
 - [\<oneWay>](oneway.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

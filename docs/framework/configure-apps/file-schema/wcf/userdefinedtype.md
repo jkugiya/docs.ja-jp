@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
 ms.openlocfilehash: 11f4380f54abbdb0faf37998b07473e38ec9245f
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99773421"
@@ -103,5 +103,5 @@ ms.locfileid: "99773421"
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](comcontracts.md)
-- [COM + アプリケーションとの統合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [COM+ アプリケーションとの統合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
 - [方法: COM+ サービス設定を構成する](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

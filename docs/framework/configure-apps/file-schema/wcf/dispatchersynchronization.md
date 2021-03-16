@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
 ms.openlocfilehash: 93664dec3648ed58df7e3e5c0760f1694c60ba7e
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99749605"
@@ -28,7 +28,7 @@ ms.locfileid: "99749605"
                                    maxPendingReceives="Integer" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
   
 `Type`  
   

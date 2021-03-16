@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:既定以外の診断 ID を持つ API の旧型式化
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。カスタム診断 ID を持つ一部の API が古いものとしてマークされています。
+description: Core .NET ライブラリにおける .NET 5 の破壊的変更について学習します。カスタム診断 ID を持つ一部の API が古いものとしてマークされています。
 ms.date: 11/01/2020
-ms.openlocfilehash: 9bd7ce18aed38955f9abc91e0c8b09e827c401d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9aa4543ae6660f2d2fceac2419340bc6c90f1c54
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759927"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257376"
 ---
 # <a name="api-obsoletions-with-non-default-diagnostic-ids"></a>既定以外の診断 ID を持つ API の旧型式化
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759927"
 
 ## <a name="change-description"></a>変更内容
 
-以前のバージョンの .NET では、ビルドの警告なしにこれらの API を使用できます。 .NET 5.0 以降のバージョンでは、これらの API を使用すると、カスタム診断 ID に関するコンパイル時の警告またはエラーが生成されます。 カスタム診断 ID を使用すると、すべての旧型式であるという警告を一括抑制する代わりに、旧型式であるという警告を個別に抑制することができます。
+以前のバージョンの .NET では、ビルドの警告なしにこれらの API を使用できます。 .NET 5 以降のバージョンでは、これらの API を使用すると、カスタム診断 ID に関するコンパイル時の警告またはエラーが生成されます。 カスタム診断 ID を使用すると、すべての旧型式であるという警告を一括抑制する代わりに、旧型式であるという警告を個別に抑制することができます。
 
 次の表に、古い API に対するカスタム診断 ID とそれに対応する警告メッセージを示します。
 

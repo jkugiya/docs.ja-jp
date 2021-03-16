@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:LINQ OrderBy.First{OrDefault} の複雑さが増大
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。OrderBy.First の実装が変更されました。
+description: Core .NET ライブラリにおける .NET 5 の破壊的変更について学習します。OrderBy.First の実装が変更されました。
 ms.date: 11/01/2020
-ms.openlocfilehash: 3c4f8fd0bb2051c3e1ac14eab091be11f10f88b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4cd2dda5f60976f935505d6a6cb1e4c23d150d09
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759812"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257272"
 ---
 # <a name="complexity-of-linq-orderbyfirstordefault-increased"></a>LINQ OrderBy.First{OrDefault} の複雑さが増大
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759812"
 
 .NET Core 1.x - 3.x では、<xref:System.Linq.Enumerable.OrderBy%2A> または <xref:System.Linq.Enumerable.OrderByDescending%2A> に続けて、<xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> または <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> を呼び出した場合、`O(N)` の複雑さで動作します。 最初の (または既定の) 要素のみが必要であるため、それを検索するのに必要な列挙は 1 つのみです。 ただし、<xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> または <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> に指定された述語は厳密には `N` 回呼び出されます。ここで、`N` はシーケンスの長さです。
 
-.NET 5.0 以降のバージョンでは、次のような[変更が加えられました](https://github.com/dotnet/runtime/pull/36643): <xref:System.Linq.Enumerable.OrderBy%2A> または <xref:System.Linq.Enumerable.OrderByDescending%2A> の後に <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> または <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> を呼び出すと、`O(N)` の複雑さではなく `O(N log N)` の複雑さで動作します。 ただし、<xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> または <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> に指定された述語の呼び出し回数は、`N` 回より "*少なく*" することができます。これは、全体的なパフォーマンスにとって重要なことです。
+.NET 5 以降のバージョンでは、次のような[変更が加えられました](https://github.com/dotnet/runtime/pull/36643): <xref:System.Linq.Enumerable.OrderBy%2A> または <xref:System.Linq.Enumerable.OrderByDescending%2A> の後に <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> または <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> を呼び出すと、`O(N)` の複雑さではなく `O(N log N)` の複雑さで動作します。 ただし、<xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> または <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> に指定された述語の呼び出し回数は、`N` 回より "*少なく*" することができます。これは、全体的なパフォーマンスにとって重要なことです。
 
 > [!NOTE]
 > この変更は、.NET Framework での操作の実装と複雑さに一致します。

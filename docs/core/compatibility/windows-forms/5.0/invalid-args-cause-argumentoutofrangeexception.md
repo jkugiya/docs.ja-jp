@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: WinForms プロパティによる ArgumentOutOfRangeException のスロー'
-description: .NET 5.0 での破壊的変更について学習します。この変更により、一部の Windows フォームのプロパティは、無効な引数の ArgumentOutOfRangeException をスローするようになりました。
+description: .NET 5 での破壊的変更について学習します。この変更により、一部の Windows フォームのプロパティは、無効な引数の ArgumentOutOfRangeException をスローするようになりました。
 ms.date: 06/18/2020
-ms.openlocfilehash: 94593047d16304ce401b23993ad4ca173c10812b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 493669af1ed5646d93e7c7d2688afd40f3fa731c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759873"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256154"
 ---
 # <a name="winforms-properties-now-throw-argumentoutofrangeexception"></a>WinForms プロパティによる ArgumentOutOfRangeException のスロー
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759873"
 
 ## <a name="change-description"></a>変更の説明
 
-以前は、これらのプロパティでは、範囲外の引数が渡されたときに <xref:System.NullReferenceException>、<xref:System.IndexOutOfRangeException>、<xref:System.ArgumentException> などのさまざまな例外がスローされていました。 .NET 5.0 以降、これらのプロパティでは、範囲外の引数が渡されたときに <xref:System.ArgumentOutOfRangeException> がスローされるようになりました。
+以前は、これらのプロパティでは、範囲外の引数が渡されたときに <xref:System.NullReferenceException>、<xref:System.IndexOutOfRangeException>、<xref:System.ArgumentException> などのさまざまな例外がスローされていました。 .NET 5 以降、これらのプロパティでは、範囲外の引数が渡されたときに <xref:System.ArgumentOutOfRangeException> がスローされるようになりました。
 
 <xref:System.ArgumentOutOfRangeException> をスローすることは、.NET ランタイムの動作に準拠しています。 また、どの引数が無効であるのかが明確に伝えられることで、デバッグ エクスペリエンスも向上します。
 

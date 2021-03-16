@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: ほとんどのコード アクセス セキュリティ API は旧型式'
-description: Core .NET ライブラリでの .NET 5.0 に関する破壊的変更について学習します。この変更により、.NET でのほとんどのコード アクセス セキュリティ (CAS) 関連の型は古いものとなり、警告が示されるようになりました。
+description: Core .NET ライブラリでの .NET 5 に関する破壊的変更について学習します。この変更により、.NET でのほとんどのコード アクセス セキュリティ (CAS) 関連の型は古いものとなり、警告が示されるようになりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: e793043e83389730934137d441f7ee776d44540b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc4be58622e81022e74476cf824a19689ba23ea4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759842"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257636"
 ---
 # <a name="most-code-access-security-apis-are-obsolete"></a>ほとんどのコード アクセス セキュリティ API は旧型式
 
@@ -54,7 +54,7 @@ public void DoDeny()
 }
 ```
 
-.NET 5.0 以降のバージョンでは、ほとんどの CAS 関連 API は古いと見なされ、コンパイル時の警告 `SYSLIB0003` が生成されます。
+.NET 5 以降のバージョンでは、ほとんどの CAS 関連 API は古いと見なされ、コンパイル時の警告 `SYSLIB0003` が生成されます。
 
 ```csharp
 [SocketPermission(SecurityAction.Assert, Host = "contoso.com", Port = "443")] // warning SYSLIB0003
@@ -65,7 +65,7 @@ public void DoSomething()
 }
 ```
 
-これは、コンパイル時のみの変更です。 実行時については、以前のバージョンの .NET Core からの変更はありません。 .NET Core 2.x から 3.x で操作を行わないメソッドの場合、.NET 5.0 以降でも引き続き実行時に操作は行われません。 .NET Core 2.x から 3.x で <xref:System.PlatformNotSupportedException> をスローするメソッドの場合、NET 5.0 以降でも引き続き実行時に <xref:System.PlatformNotSupportedException> がスローされます。
+これは、コンパイル時のみの変更です。 実行時については、以前のバージョンの .NET Core からの変更はありません。 .NET Core 2.x から 3.x で操作を行わないメソッドの場合、.NET 5 以降でも引き続き実行時に操作は行われません。 .NET Core 2.x から 3.x で <xref:System.PlatformNotSupportedException> をスローするメソッドの場合、NET 5 以降でも引き続き実行時に <xref:System.PlatformNotSupportedException> がスローされます。
 
 ## <a name="reason-for-change"></a>変更理由
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 015ab6e1d186495d72bddd65678ab15088c0f1b2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fc3b61c80cfd3b40d802c517cdca4085bc274197
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99674884"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259435"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145:アセンブリを作成できません : \<error message>
 
@@ -37,9 +37,7 @@ Visual Basic コンパイラは、マニフェストを伴うアセンブリを�
 
 2. エラーが発生している COM 参照をプロジェクトから削除します。
 
-3. [Visual Studio の開発者コマンド プロンプト](../../../framework/tools/developer-command-prompt-for-vs.md)を開きます。
-
-   Windows 10 で、タスク バーの検索ボックスに「**開発者コマンド プロンプト**」と入力します。 次に、結果の一覧から **VS 2017 用開発者コマンド プロンプト** を選択します。
+3. [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を開きます。
 
 4. アセンブリ ラッパーを格納するディレクトリに、ディレクトリを変更します。
 
@@ -65,4 +63,4 @@ Visual Basic コンパイラは、マニフェストを伴うアセンブリを�
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [方法: 公開キーと秘密キーのキー ペアを作成する](../../../standard/assembly/create-public-private-key-pair.md)
-- [ご意見](/visualstudio/ide/feedback-options)
+- [Visual Studio フィードバック オプション](/visualstudio/ide/feedback-options)

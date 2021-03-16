@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
 ms.openlocfilehash: 9cbb4eacb1a960481ee262db662160b5a342e27f
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639290"
@@ -59,5 +59,5 @@ ms.locfileid: "99639290"
 - [メッセージ エンコーダーを選択する](../../../wcf/feature-details/choosing-a-message-encoder.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

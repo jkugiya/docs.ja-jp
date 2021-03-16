@@ -1,17 +1,17 @@
 ---
 title: 破壊的変更:.NET 5 を対象とする場合の NETCOREAPP3_1 プリプロセッサ シンボルが定義されていない
-description: .NET 5.0 での破壊的変更について学習します。プロジェクトでのプリプロセッサ シンボルの定義は以前のバージョンに対しては行われなくなります。
+description: .NET 5 での破壊的変更について学習します。プロジェクトでのプリプロセッサ シンボルの定義は以前のバージョンに対しては行われなくなります。
 ms.date: 09/17/2020
-ms.openlocfilehash: 61a5e4fce258d2be3d584318e154bb752b88ebe1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 390c8f5af97510db4652f3f42db577e6de158020
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759400"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256531"
 ---
 # <a name="netcoreapp3_1-preprocessor-symbol-is-not-defined-when-targeting-net-5"></a>.NET 5 を対象とする場合の NETCOREAPP3_1 プリプロセッサ シンボルが定義されていない
 
-.NET 5.0 RC2 以降のバージョンでは、プロジェクトでのプリプロセッサ シンボルの定義は対象とするバージョンに対してのみ行われ、以前のバージョンでは行われなくなります。 これは、.NET Core 1.0 - 3.1 と同じ動作です。
+.NET 5 RC2 以降のバージョンでは、プロジェクトでのプリプロセッサ シンボルの定義は対象とするバージョンに対してのみ行われ、以前のバージョンでは行われなくなります。 これは、.NET Core 1.0 - 3.1 と同じ動作です。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 
@@ -19,9 +19,9 @@ ms.locfileid: "95759400"
 
 ## <a name="change-description"></a>変更内容
 
-.NET 5.0 Preview 7 から RC1 では、`net5.0` を対象とするプロジェクトで `NETCOREAPP3_1` と `NET5_0` の両方のプリプロセッサ シンボルが定義されます。 この動作変更は、.NET 5.0 以降で、条件付きコンパイルの[シンボルが累積になる](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols)ことを意図したものでした。
+.NET 5 Preview 7 から RC1 では、`net5.0` を対象とするプロジェクトで `NETCOREAPP3_1` と `NET5_0` の両方のプリプロセッサ シンボルが定義されます。 この動作変更は、.NET 5 以降で、条件付きコンパイルの[シンボルが累積になる](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols)ことを意図したものでした。
 
-.NET 5.0 RC2 以降では、プロジェクトは、以前のバージョンではなく、対象となるターゲット フレームワーク モニカー (TFM) のみに対するシンボルを定義します。
+.NET 5 RC2 以降では、プロジェクトは、以前のバージョンではなく、対象となるターゲット フレームワーク モニカー (TFM) のみに対するシンボルを定義します。
 
 ## <a name="reason-for-change"></a>変更理由
 

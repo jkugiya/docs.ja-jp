@@ -19,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 12ef6724a76ec59bd412427a0a353565b1be2c8e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a553be6877af5875692e5c0745b6b9ee766e143e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558418"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259266"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 
@@ -58,7 +58,7 @@ Ngen.exe とネイティブ イメージ サービスの使用に関する追加
 > [!NOTE]
 > .NET Framework バージョン 1.0 とバージョン 1.1 の Ngen.exe 構文は、「[ネイティブ イメージ ジェネレーター (Ngen.exe) のレガシ構文](/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))」に記されています。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
 
 コマンド プロンプトに次のように入力します。
 
@@ -641,4 +641,4 @@ Ngen.exe は同期コマンドを実行し、ネイティブ イメージ サー
 - [ツール](index.md)
 - [マネージド実行プロセス](../../standard/managed-execution-process.md)
 - [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

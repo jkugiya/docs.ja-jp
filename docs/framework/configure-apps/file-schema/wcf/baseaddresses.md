@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
 ms.openlocfilehash: a32afc23d4332bad149765a318c3ecdc73f99be0
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99749689"
@@ -29,7 +29,7 @@ ms.locfileid: "99749689"
 </baseAddresses>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
 
  `Type`  
   

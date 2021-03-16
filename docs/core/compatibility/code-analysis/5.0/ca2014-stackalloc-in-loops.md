@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更:CA2014: stackalloc はループ内で使用しないでください。'
-description: コード分析ルール CA2014 の有効化によって発生する .NET 5.0 での破壊的変更について学習します。
+description: コード分析ルール CA2014 の有効化によって発生する .NET 5 での破壊的変更について学習します。
 ms.date: 09/03/2020
-ms.openlocfilehash: 7ad6203c0edd930bbbe43cdb8df0413cba833d8e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ac17c8ee588576947e21618a55c0eea883aa37ad
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759319"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257779"
 ---
 # <a name="warning-ca2014-do-not-use-stackalloc-in-loops"></a>警告 CA2014:stackalloc はループ内で使用しないでください。
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759319"
 
 ## <a name="change-description"></a>変更内容
 
-.NET 5.0 以降、.NET SDK には [.NET ソース コード アナライザー](../../../../fundamentals/code-analysis/overview.md)が含まれています。 これらのルールのいくつかは、[CA2014](/visualstudio/code-quality/ca2014) を含め、既定で有効になっています。 このルールに違反し、警告をエラーとして扱うように構成されているコードがプロジェクトに含まれている場合、この変更によってビルドが破損する可能性があります。
+.NET 5 以降、.NET SDK には [.NET ソース コード アナライザー](../../../../fundamentals/code-analysis/overview.md)が含まれています。 これらのルールのいくつかは、[CA2014](/visualstudio/code-quality/ca2014) を含め、既定で有効になっています。 このルールに違反し、警告をエラーとして扱うように構成されているコードがプロジェクトに含まれている場合、この変更によってビルドが破損する可能性があります。
 
 [stackalloc 式](../../../../csharp/language-reference/operators/stackalloc.md)がループ内で使用されるルール CA2014 によって、C# コードが検索されます。 [stackalloc](../../../../csharp/language-reference/operators/stackalloc.md) によって、現在のスタック フレームからメモリが割り当てられます。 現在のメソッド呼び出しが戻るまでメモリは解放されません。これにより、スタック オーバーフローにつながる可能性があります。 スタック オーバーフローの例外をキャッチできないため、スタック オーバーフローが発生した場合はアプリが終了します。
 

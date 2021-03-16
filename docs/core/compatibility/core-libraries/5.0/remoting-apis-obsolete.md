@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:リモート API は旧型式
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。一部のリモート処理関連の API は古いものとしてマークされており、カスタム診断 ID を含む警告が生成されます。
+description: Core .NET ライブラリにおける .NET 5 の破壊的変更について学習します。一部のリモート処理関連の API は古いものとしてマークされており、カスタム診断 ID を含む警告が生成されます。
 ms.date: 11/01/2020
-ms.openlocfilehash: 5687b1471028b077674cfd31cb77ce95dc51bef5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c4f7cd200cadd11321da60f2b4a0d191497aae8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759447"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257170"
 ---
 # <a name="remoting-apis-are-obsolete"></a>リモート API は旧型式
 
@@ -24,7 +24,7 @@ ms.locfileid: "95759447"
 
 .NET Framework 2.x から 4.x では、<xref:System.MarshalByRefObject.GetLifetimeService> および <xref:System.MarshalByRefObject.InitializeLifetimeService> メソッドによって、.NET リモート処理に関するインスタンスの有効期間が制御されます。 .NET Core 2.x から 3.x では、これらのメソッドによって常に、実行時に <xref:System.PlatformNotSupportedException> がスローされます。
 
-.NET 5.0 以降のバージョンでは、<xref:System.MarshalByRefObject.GetLifetimeService> および <xref:System.MarshalByRefObject.InitializeLifetimeService> メソッドは古いものとしてマークされ、警告が示されますが、実行時には引き続き <xref:System.PlatformNotSupportedException> がスローされます。
+.NET 5 以降のバージョンでは、<xref:System.MarshalByRefObject.GetLifetimeService> および <xref:System.MarshalByRefObject.InitializeLifetimeService> メソッドは古いものとしてマークされ、警告が示されますが、実行時には引き続き <xref:System.PlatformNotSupportedException> がスローされます。
 
 ```csharp
 // MemoryStream, like all Stream instances, subclasses MarshalByRefObject.
@@ -37,7 +37,7 @@ obj.InitializeLifetimeService();
 
 ## <a name="reason-for-change"></a>変更理由
 
-[.NET リモート処理](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71))はレガシ テクノロジです。 これにより、(異なるコンピューター上にある可能性があっても) 別のプロセスでオブジェクトをインスタンス化し、通常のインプロセス .NET オブジェクト インスタンスの場合と同じように、そのオブジェクトとやりとりすることができます。 .NET リモート処理インフラストラクチャは .NET Framework 2.x から 4.x にのみ存在します。 .NET Core および .NET 5.0 以降のバージョンで .NET リモート処理はサポートされておらず、リモート API が存在しないか、常にこれらのランタイムで例外がスローされます。
+[.NET リモート処理](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71))はレガシ テクノロジです。 これにより、(異なるコンピューター上にある可能性があっても) 別のプロセスでオブジェクトをインスタンス化し、通常のインプロセス .NET オブジェクト インスタンスの場合と同じように、そのオブジェクトとやりとりすることができます。 .NET リモート処理インフラストラクチャは .NET Framework 2.x から 4.x にのみ存在します。 .NET Core および .NET 5 以降のバージョンで .NET リモート処理はサポートされておらず、リモート API が存在しないか、常にこれらのランタイムで例外がスローされます。
 
 開発者がこれらの API を使用しないようにするために、選択されたリモート処理関連の API を古いものと見なしています。 これらの API は、将来のバージョンの .NET で完全に削除される可能性があります。
 

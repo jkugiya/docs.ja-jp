@@ -1,17 +1,17 @@
 ---
 title: '破壊的変更: グローバル アセンブリ キャッシュ API は旧型式'
-description: Core .NET ライブラリでの .NET 5.0 に関する破壊的変更について学習します。この変更により、GAC を処理する API は、失敗するか、操作が実行されません。
+description: Core .NET ライブラリでの .NET 5 に関する破壊的変更について学習します。この変更により、GAC を処理する API は、失敗するか、操作が実行されません。
 ms.date: 11/01/2020
-ms.openlocfilehash: 2f74fccc68b7a925d909938d77578df8ebe8d60d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 39c7b092b06754a28723693c0147b7ec3a0b705e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759830"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257480"
 ---
 # <a name="global-assembly-cache-apis-are-obsolete"></a>グローバル アセンブリ キャッシュ API は旧型式
 
-.NET Core および .NET 5.0 以降のバージョンでは、.NET Framework に存在していたグローバル アセンブリ キャッシュ (GAC) の概念がなくなりました。 そのため、GAC を処理するすべての .NET Core および .NET 5 以降の API は失敗するか、操作が実行されません。
+.NET Core および .NET 5 以降のバージョンでは、.NET Framework に存在していたグローバル アセンブリ キャッシュ (GAC) の概念がなくなりました。 そのため、GAC を処理するすべての .NET Core および .NET 5 以降の API は失敗するか、操作が実行されません。
 
 開発者がこれらの API を使用しないようにするために、一部の GAC 関連の API は古いものとしてマークされており、コンパイル時に `SYSLIB0005` 警告が生成されます。 これらの API は、将来のバージョンの .NET で削除される可能性があります。
 
@@ -31,7 +31,7 @@ Assembly asm = typeof(object).Assembly;
 Console.WriteLine(asm.GlobalAssemblyCache);
 ```
 
-.NET 5.0 以降のバージョンでは、<xref:System.Reflection.Assembly.GlobalAssemblyCache> プロパティからは引き続き、常に `false` が返されます。 しかし、プロパティ getter も、プロパティへのアクセスを停止する必要があることを呼び出し元に示すために、古いものとしてマークされています。 ライブラリとアプリで実行時の動作を決定するために <xref:System.Reflection.Assembly.GlobalAssemblyCache> API を使用することはできません。これは、.NET Core および .NET 5.0 以降のバージョンでは常に `false` が返されるためです。
+.NET 5 以降のバージョンでは、<xref:System.Reflection.Assembly.GlobalAssemblyCache> プロパティからは引き続き、常に `false` が返されます。 しかし、プロパティ getter も、プロパティへのアクセスを停止する必要があることを呼び出し元に示すために、古いものとしてマークされています。 ライブラリとアプリで実行時の動作を決定するために <xref:System.Reflection.Assembly.GlobalAssemblyCache> API を使用することはできません。これは、.NET Core および .NET 5 以降のバージョンでは常に `false` が返されるためです。
 
 ```csharp
 Assembly asm = typeof(object).Assembly;
@@ -43,7 +43,7 @@ Console.WriteLine(asm.GlobalAssemblyCache);
 
 ## <a name="reason-for-change"></a>変更理由
 
-.NET Core および .NET 5.0 以降のバージョンでは、グローバル アセンブリ キャッシュ (GAC) は概念として存在しません。
+.NET Core および .NET 5 以降のバージョンでは、グローバル アセンブリ キャッシュ (GAC) は概念として存在しません。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 

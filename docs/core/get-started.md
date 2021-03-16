@@ -5,22 +5,22 @@ author: adegeo
 ms.author: adegeo
 ms.date: 09/29/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ad2b96e668c52ee80b707e31a63eac2433f3c9e
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: f196f5cfe914fe7ecddec61d2abf618c21968bbd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756092"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105155"
 ---
 # <a name="get-started-with-net"></a>.NET を使って作業を開始する
 
-この記事では、"Hello World!" .NET アプリを作成して実行する方法について説明します。 .NET app.
+この記事では、"Hello World!" .NET アプリを作成して実行する方法について説明します。 .NET アプリ。
 
 .NET についてよくわからない場合は、[.NET の概要](introduction.md)のページからお読みください。
 
 ## <a name="create-an-application"></a>アプリケーションの作成
 
-まず、ご利用のコンピューターで [.NET SDK](https://dotnet.microsoft.com/download/dotnet-core) をダウンロードしてインストールします。
+まず、ご利用のコンピューターで [.NET SDK](https://dotnet.microsoft.com/download/dotnet) をダウンロードしてインストールします。
 
 次に、**PowerShell**、**コマンド プロンプト**、**bash** などのターミナルを開きます。 次の `dotnet` コマンドを入力し、C# アプリケーションを作成して実行します。
 

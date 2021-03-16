@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 6567a4c738b3d6c8f14d1ab13ba005cb22bb7328
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247305"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258281"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 
@@ -33,7 +33,7 @@ ms.locfileid: "96247305"
 > [!NOTE]
 > 64 ビット コンピューターには、64 ビット バージョンと 32 ビット バージョンの両方のセキュリティ ポリシーが含まれます。 32 ビット アプリケーションと 64 ビット アプリケーションの両方にポリシーの変更を適用するには、Caspol.exe の 32 ビット バージョンと 64 ビット バージョンの両方を実行します。  
   
- コード アクセス セキュリティ ポリシー ツールは、.NET Framework および Visual Studio と共に自動的にインストールされます。 Caspol.exe は、32 ビット システムでは %windir%\Microsoft.NET\Framework\\*version* に、64 ビット システムでは %windir%\Microsoft.NET\Framework64\\*version* にあります。 (たとえば、場所は、64 ビット システムの .NET Framework 4 では %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe)。コンピューターで複数のバージョンの .NET Framework を side-by-side で実行している場合は、複数のバージョンのツールがインストールされると考えられます。 インストール ディレクトリからツールを実行できます。 ただし、インストール フォルダーに移動する必要のない[コマンド プロンプト](developer-command-prompt-for-vs.md)を使用することをお勧めします。  
+ コード アクセス セキュリティ ポリシー ツールは、.NET Framework および Visual Studio と共に自動的にインストールされます。 Caspol.exe は、32 ビット システムでは %windir%\Microsoft.NET\Framework\\*version* に、64 ビット システムでは %windir%\Microsoft.NET\Framework64\\*version* にあります。 (たとえば、場所は、64 ビット システムの .NET Framework 4 では %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe)。コンピューターで複数のバージョンの .NET Framework を side-by-side で実行している場合は、複数のバージョンのツールがインストールされると考えられます。 インストール ディレクトリからツールを実行できます。 ただし、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用することをお勧めします。これにより、インストール フォルダーに移動する必要がなくなります。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -255,4 +255,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>関連項目
 
 - [ツール](index.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

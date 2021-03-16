@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238445"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259048"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 
@@ -27,7 +27,7 @@ ms.locfileid: "96238445"
 
  厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」 と「[方法: 厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)」 を参照してください。  
   
- 厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
+ 厳密名ツールは Visual Studio と共に自動的にインストールされます。 ツールを起動するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
 
 > [!NOTE]
 > 64 ビット コンピューターでは、Visual Studio 用開発者コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。
@@ -131,4 +131,4 @@ sn -d MyContainer
 - [ツール](index.md)
 - [Al.exe (アセンブリ リンカー)](al-exe-assembly-linker.md)
 - [厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

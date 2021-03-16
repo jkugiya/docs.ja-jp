@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: 既定の ActivityIdFormat は W3C'
-description: Core .NET ライブラリでの .NET 5.0 に関する破壊的変更について学習します。この変更により、既定の ActivityIdFormat は W3C になりました。
+description: Core .NET ライブラリでの .NET 5 に関する破壊的変更について学習します。この変更により、既定の ActivityIdFormat は W3C になりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: 77ee705ac18065c84ddeab3127e01b6a40c3b84d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f15c2d61443117cfbcb2be7de9561fecbff9a1d9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759836"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257506"
 ---
 # <a name="default-activityidformat-is-w3c"></a>既定の ActivityIdFormat は W3C
 
@@ -15,9 +15,9 @@ ms.locfileid: "95759836"
 
 ## <a name="change-description"></a>変更の説明
 
-W3C アクティビティ ID 形式は、階層 ID 形式の代替として .NET Core 3.0 で導入されました。 ただし、互換性を維持するため、W3C 形式は .NET 5.0 まで既定になりませんでした。 [W3C 形式が承認](https://www.w3.org/TR/trace-context/)され、複数の言語実装で牽引力を得たため、.NET 5.0 で既定が変更されました。
+W3C アクティビティ ID 形式は、階層 ID 形式の代替として .NET Core 3.0 で導入されました。 ただし、互換性を維持するため、W3C 形式は .NET 5.0 まで既定になりませんでした。 [W3C 形式が承認](https://www.w3.org/TR/trace-context/)され、複数の言語実装で牽引力を得たため、.NET 5 で既定が変更されました。
 
-アプリのターゲットが .NET 5.0 以降のプラットフォームであれば、<xref:System.Diagnostics.ActivityIdFormat.Hierarchical> が既定の形式となる以前の動作が見られます。 この既定は net45+、netstandard1.1+、netcoreapp (1.x、2.x、3.x) に適用されます。 .NET 5.0 以降では、<xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> は <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> に設定されます。
+アプリのターゲットが .NET 5 以降のプラットフォームであれば、<xref:System.Diagnostics.ActivityIdFormat.Hierarchical> が既定の形式となる以前の動作が見られます。 この既定は net45+、netstandard1.1+、netcoreapp (1.x、2.x、3.x) に適用されます。 .NET 5 以降では、<xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> は <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> に設定されます。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 

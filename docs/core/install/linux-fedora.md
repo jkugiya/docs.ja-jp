@@ -3,13 +3,13 @@ title: Fedora に .NET をインストールする - .NET
 description: Fedora に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 01/06/2021
-ms.openlocfilehash: 9dd8c6264831e2a9382960be505639f1eba95151
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.date: 02/17/2021
+ms.openlocfilehash: efaad4788db2200b1a47f9b4ae2414730588c6ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970825"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255759"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>Fedora に .NET SDK または .NET ランタイムをインストールする
 
@@ -17,31 +17,19 @@ ms.locfileid: "97970825"
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+パッケージ マネージャーを使用せずに .NET をインストールする方法の詳細については、次の記事のいずれかを参照してください。
+
+- [Snap を使用して .NET SDK または .NET ランタイムをインストールする。](linux-snap.md)
+- [スクリプトを使用して .NET SDK または .NET ランタイムをインストールする。](linux-scripted-manual.md#scripted-install)
+- [手動で .NET SDK または .NET ランタイムをインストールする。](linux-scripted-manual.md#manual-install)
 
 ## <a name="install-net-50"></a>.NET 5.0 をインストールする
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-**Fedora 32**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
-```
-
-**Fedora 33**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
-```
+Fedora の既定のパッケージ リポジトリで利用可能な最新バージョンの .NET は、.NET 5.0 です。
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="install-net-core-31"></a>.NET Core 3.1 をインストールする
-
-Fedora の既定のパッケージ リポジトリで利用可能な最新バージョンの .NET は、.NET Core 3.1 です。
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
@@ -109,7 +97,11 @@ Fedora の既定のパッケージ リポジトリで利用可能な最新バー
 
 ### <a name="unable-to-find-package"></a>パッケージが見つからない
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+パッケージ マネージャーを使用せずに .NET をインストールする方法の詳細については、次の記事のいずれかを参照してください。
+
+- [Snap を使用して .NET SDK または .NET ランタイムをインストールする。](linux-snap.md)
+- [スクリプトを使用して .NET SDK または .NET ランタイムをインストールする。](linux-scripted-manual.md#scripted-install)
+- [手動で .NET SDK または .NET ランタイムをインストールする。](linux-scripted-manual.md#manual-install)
 
 ### <a name="failed-to-fetch"></a>フェッチできない
 

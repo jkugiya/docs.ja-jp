@@ -3,72 +3,71 @@ title: メモリ リークのデバッグ チュートリアル
 description: .NET Core でメモリ リークをデバッグする方法について説明します。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431452"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255673"
 ---
-# <a name="debug-a-memory-leak-in-net-core"></a><span data-ttu-id="e6183-103">.NET Core でメモリ リークをデバッグする</span><span class="sxs-lookup"><span data-stu-id="e6183-103">Debug a memory leak in .NET Core</span></span>
+# <a name="debug-a-memory-leak-in-net-core"></a><span data-ttu-id="051ca-103">.NET Core でメモリ リークをデバッグする</span><span class="sxs-lookup"><span data-stu-id="051ca-103">Debug a memory leak in .NET Core</span></span>
 
-<span data-ttu-id="e6183-104">**この記事の対象:** ✔️ .NET Core 3.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="e6183-104">**This article applies to:** ✔️ .NET Core 3.1 SDK and later versions</span></span>
+<span data-ttu-id="051ca-104">**この記事の対象:** ✔️ .NET Core 3.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="051ca-104">**This article applies to:** ✔️ .NET Core 3.1 SDK and later versions</span></span>
 
-<span data-ttu-id="e6183-105">アプリで必要なタスクを実行する必要がなくなったオブジェクトを参照すると、メモリ リークが発生することがあります。</span><span class="sxs-lookup"><span data-stu-id="e6183-105">A memory leak may happen when your app references objects that it no longer needs to perform the desired task.</span></span> <span data-ttu-id="e6183-106">このようなオブジェクトを参照すると、ガベージ コレクターが使用済みメモリを再利用できなくなるため、多くの場合、パフォーマンスが低下し、<xref:System.OutOfMemoryException> がスローされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e6183-106">Referencing said objects makes the garbage collector to be unable to reclaim the memory used, often resulting in performance degradation and potentially end up throwing a <xref:System.OutOfMemoryException>.</span></span>
+<span data-ttu-id="051ca-105">アプリで必要なタスクを実行する必要がなくなったオブジェクトを参照すると、メモリ リークが発生することがあります。</span><span class="sxs-lookup"><span data-stu-id="051ca-105">A memory leak may happen when your app references objects that it no longer needs to perform the desired task.</span></span> <span data-ttu-id="051ca-106">このようなオブジェクトを参照すると、ガベージ コレクターが使用済みメモリを再利用できなくなるため、多くの場合、パフォーマンスが低下し、<xref:System.OutOfMemoryException> がスローされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="051ca-106">Referencing said objects makes the garbage collector to be unable to reclaim the memory used, often resulting in performance degradation and potentially end up throwing a <xref:System.OutOfMemoryException>.</span></span>
 
-<span data-ttu-id="e6183-107">このチュートリアルでは、.NET 診断 CLI ツールを使用して .NET Core アプリのメモリ リークを分析するためのツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="e6183-107">This tutorial demonstrates the tools to analyze a memory leak in a .NET Core app using the .NET diagnostics CLI tools.</span></span> <span data-ttu-id="e6183-108">Windows を使用している場合は、[Visual Studio のメモリ診断ツール](/visualstudio/profiling/memory-usage)を使用して、メモリ リークをデバッグすることができます。</span><span class="sxs-lookup"><span data-stu-id="e6183-108">If you are on Windows, you may be able to [use Visual Studio's Memory Diagnostic tools](/visualstudio/profiling/memory-usage) to debug the memory leak.</span></span>
+<span data-ttu-id="051ca-107">このチュートリアルでは、.NET 診断 CLI ツールを使用して .NET Core アプリのメモリ リークを分析するためのツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="051ca-107">This tutorial demonstrates the tools to analyze a memory leak in a .NET Core app using the .NET diagnostics CLI tools.</span></span> <span data-ttu-id="051ca-108">Windows を使用している場合は、[Visual Studio のメモリ診断ツール](/visualstudio/profiling/memory-usage)を使用して、メモリ リークをデバッグすることができます。</span><span class="sxs-lookup"><span data-stu-id="051ca-108">If you are on Windows, you may be able to [use Visual Studio's Memory Diagnostic tools](/visualstudio/profiling/memory-usage) to debug the memory leak.</span></span>
 
-<span data-ttu-id="e6183-109">このチュートリアルでは、意図的にメモリをリークするように設計されたサンプル アプリを使用します。</span><span class="sxs-lookup"><span data-stu-id="e6183-109">This tutorial uses a sample app, which is designed to intentionally leak memory.</span></span> <span data-ttu-id="e6183-110">このサンプルは演習として提供されています。</span><span class="sxs-lookup"><span data-stu-id="e6183-110">The sample is provided as an exercise.</span></span> <span data-ttu-id="e6183-111">意図せずにメモリをリークしているアプリも分析できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-111">You can analyze an app that is unintentionally leaking memory too.</span></span>
+<span data-ttu-id="051ca-109">このチュートリアルでは、意図的にメモリをリークするように設計されたサンプル アプリを使用します。</span><span class="sxs-lookup"><span data-stu-id="051ca-109">This tutorial uses a sample app, which is designed to intentionally leak memory.</span></span> <span data-ttu-id="051ca-110">このサンプルは演習として提供されています。</span><span class="sxs-lookup"><span data-stu-id="051ca-110">The sample is provided as an exercise.</span></span> <span data-ttu-id="051ca-111">意図せずにメモリをリークしているアプリも分析できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-111">You can analyze an app that is unintentionally leaking memory too.</span></span>
 
-<span data-ttu-id="e6183-112">このチュートリアルでは、次の作業を行います。</span><span class="sxs-lookup"><span data-stu-id="e6183-112">In this tutorial, you will:</span></span>
+<span data-ttu-id="051ca-112">このチュートリアルでは、次の作業を行います。</span><span class="sxs-lookup"><span data-stu-id="051ca-112">In this tutorial, you will:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="e6183-113">[dotnet-counters](dotnet-counters.md) を使用してマネージド メモリの使用量を確認します。</span><span class="sxs-lookup"><span data-stu-id="e6183-113">Examine managed memory usage with [dotnet-counters](dotnet-counters.md).</span></span>
-> - <span data-ttu-id="e6183-114">ダンプ ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="e6183-114">Generate a dump file.</span></span>
-> - <span data-ttu-id="e6183-115">ダンプ ファイルを使用してメモリ使用量を分析します。</span><span class="sxs-lookup"><span data-stu-id="e6183-115">Analyze the memory usage using the dump file.</span></span>
+> - <span data-ttu-id="051ca-113">[dotnet-counters](dotnet-counters.md) を使用してマネージド メモリの使用量を確認します。</span><span class="sxs-lookup"><span data-stu-id="051ca-113">Examine managed memory usage with [dotnet-counters](dotnet-counters.md).</span></span>
+> - <span data-ttu-id="051ca-114">ダンプ ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="051ca-114">Generate a dump file.</span></span>
+> - <span data-ttu-id="051ca-115">ダンプ ファイルを使用してメモリ使用量を分析します。</span><span class="sxs-lookup"><span data-stu-id="051ca-115">Analyze the memory usage using the dump file.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="e6183-116">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="e6183-116">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="051ca-116">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="051ca-116">Prerequisites</span></span>
 
-<span data-ttu-id="e6183-117">このチュートリアルでは次のものを使用します。</span><span class="sxs-lookup"><span data-stu-id="e6183-117">The tutorial uses:</span></span>
+<span data-ttu-id="051ca-117">このチュートリアルでは次のものを使用します。</span><span class="sxs-lookup"><span data-stu-id="051ca-117">The tutorial uses:</span></span>
 
-- <span data-ttu-id="e6183-118">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。</span><span class="sxs-lookup"><span data-stu-id="e6183-118">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) or a later version.</span></span>
-- <span data-ttu-id="e6183-119">プロセスを一覧表示するための [dotnet-trace](dotnet-trace.md)。</span><span class="sxs-lookup"><span data-stu-id="e6183-119">[dotnet-trace](dotnet-trace.md) to list processes.</span></span>
-- <span data-ttu-id="e6183-120">マネージド メモリ使用量を確認するための [dotnet-counters](dotnet-counters.md)。</span><span class="sxs-lookup"><span data-stu-id="e6183-120">[dotnet-counters](dotnet-counters.md) to check managed memory usage.</span></span>
-- <span data-ttu-id="e6183-121">ダンプ ファイルを収集して分析するための [dotnet-dump](dotnet-dump.md)。</span><span class="sxs-lookup"><span data-stu-id="e6183-121">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file.</span></span>
-- <span data-ttu-id="e6183-122">診断する[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/) アプリ。</span><span class="sxs-lookup"><span data-stu-id="e6183-122">A [sample debug target](/samples/dotnet/samples/diagnostic-scenarios/) app to diagnose.</span></span>
+- <span data-ttu-id="051ca-118">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 以降のバージョン。</span><span class="sxs-lookup"><span data-stu-id="051ca-118">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) or a later version.</span></span>
+- <span data-ttu-id="051ca-119">マネージド メモリ使用量を確認するための [dotnet-counters](dotnet-counters.md)。</span><span class="sxs-lookup"><span data-stu-id="051ca-119">[dotnet-counters](dotnet-counters.md) to check managed memory usage.</span></span>
+- <span data-ttu-id="051ca-120">ダンプ ファイルを収集して分析するための [dotnet-dump](dotnet-dump.md)。</span><span class="sxs-lookup"><span data-stu-id="051ca-120">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file.</span></span>
+- <span data-ttu-id="051ca-121">診断する[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/) アプリ。</span><span class="sxs-lookup"><span data-stu-id="051ca-121">A [sample debug target](/samples/dotnet/samples/diagnostic-scenarios/) app to diagnose.</span></span>
 
-<span data-ttu-id="e6183-123">このチュートリアルでは、サンプルとツールがインストールされ、使用できる状態であることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="e6183-123">The tutorial assumes the sample and tools are installed and ready to use.</span></span>
+<span data-ttu-id="051ca-122">このチュートリアルでは、サンプルとツールがインストールされ、使用できる状態であることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="051ca-122">The tutorial assumes the sample and tools are installed and ready to use.</span></span>
 
-## <a name="examine-managed-memory-usage"></a><span data-ttu-id="e6183-124">マネージド メモリ使用量を確認する</span><span class="sxs-lookup"><span data-stu-id="e6183-124">Examine managed memory usage</span></span>
+## <a name="examine-managed-memory-usage"></a><span data-ttu-id="051ca-123">マネージド メモリ使用量を確認する</span><span class="sxs-lookup"><span data-stu-id="051ca-123">Examine managed memory usage</span></span>
 
-<span data-ttu-id="e6183-125">このシナリオの根本原因を突き止めるのに役立つ診断データの収集を開始する前に、メモリ リーク (メモリの増加) が実際に発生していることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6183-125">Before you start collecting diagnostics data to help us root cause this scenario, you need to make sure you're actually seeing a memory leak (memory growth).</span></span> <span data-ttu-id="e6183-126">それを確認するには、[dotnet-counters](dotnet-counters.md) ツールを使用できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-126">You can use the [dotnet-counters](dotnet-counters.md) tool to confirm that.</span></span>
+<span data-ttu-id="051ca-124">このシナリオの根本原因を突き止めるのに役立つ診断データの収集を開始する前に、メモリ リーク (メモリの増加) が実際に発生していることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="051ca-124">Before you start collecting diagnostics data to help us root cause this scenario, you need to make sure you're actually seeing a memory leak (memory growth).</span></span> <span data-ttu-id="051ca-125">それを確認するには、[dotnet-counters](dotnet-counters.md) ツールを使用できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-125">You can use the [dotnet-counters](dotnet-counters.md) tool to confirm that.</span></span>
 
-<span data-ttu-id="e6183-127">コンソール ウィンドウを開き、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)をダウンロードして解凍したディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="e6183-127">Open a console window and navigate to the directory where you downloaded and unzipped the [sample debug target](/samples/dotnet/samples/diagnostic-scenarios/).</span></span> <span data-ttu-id="e6183-128">ターゲットを実行します。</span><span class="sxs-lookup"><span data-stu-id="e6183-128">Run the target:</span></span>
+<span data-ttu-id="051ca-126">コンソール ウィンドウを開き、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)をダウンロードして解凍したディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="051ca-126">Open a console window and navigate to the directory where you downloaded and unzipped the [sample debug target](/samples/dotnet/samples/diagnostic-scenarios/).</span></span> <span data-ttu-id="051ca-127">ターゲットを実行します。</span><span class="sxs-lookup"><span data-stu-id="051ca-127">Run the target:</span></span>
 
 ```dotnetcli
 dotnet run
 ```
 
-<span data-ttu-id="e6183-129">別のコンソールから、[dotnet-trace](dotnet-trace.md) ツールを使用してプロセス ID を見つけます。</span><span class="sxs-lookup"><span data-stu-id="e6183-129">From a separate console, find the process ID using the [dotnet-trace](dotnet-trace.md) tool:</span></span>
+<span data-ttu-id="051ca-128">別のコンソールから、プロセス ID を見つけます。</span><span class="sxs-lookup"><span data-stu-id="051ca-128">From a separate console, find the process ID:</span></span>
 
 ```console
-dotnet-trace ps
+dotnet-counters ps
 ```
 
-<span data-ttu-id="e6183-130">出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="e6183-130">The output should be similar to:</span></span>
+<span data-ttu-id="051ca-129">出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="051ca-129">The output should be similar to:</span></span>
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios
 ```
 
-<span data-ttu-id="e6183-131">次に、[dotnet-counters](dotnet-counters.md) ツールを使用してマネージド メモリ使用量を確認します。</span><span class="sxs-lookup"><span data-stu-id="e6183-131">Now, check managed memory usage with the [dotnet-counters](dotnet-counters.md) tool.</span></span> <span data-ttu-id="e6183-132">`--refresh-interval` は、更新間隔を秒数で指定します。</span><span class="sxs-lookup"><span data-stu-id="e6183-132">The `--refresh-interval` specifies the number of seconds between refreshes:</span></span>
+<span data-ttu-id="051ca-130">次に、[dotnet-counters](dotnet-counters.md) ツールを使用してマネージド メモリ使用量を確認します。</span><span class="sxs-lookup"><span data-stu-id="051ca-130">Now, check managed memory usage with the [dotnet-counters](dotnet-counters.md) tool.</span></span> <span data-ttu-id="051ca-131">`--refresh-interval` は、更新間隔を秒数で指定します。</span><span class="sxs-lookup"><span data-stu-id="051ca-131">The `--refresh-interval` specifies the number of seconds between refreshes:</span></span>
 
 ```console
 dotnet-counters monitor --refresh-interval 1 -p 4807
 ```
 
-<span data-ttu-id="e6183-133">ライブ出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="e6183-133">The live output should be similar to:</span></span>
+<span data-ttu-id="051ca-132">ライブ出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="051ca-132">The live output should be similar to:</span></span>
 
 ```console
 Press p to pause, r to resume, q to quit.
@@ -96,61 +95,61 @@ Press p to pause, r to resume, q to quit.
     Working Set (MB)                                  83
 ```
 
-<span data-ttu-id="e6183-134">次の行に焦点を当てます。</span><span class="sxs-lookup"><span data-stu-id="e6183-134">Focusing on this line:</span></span>
+<span data-ttu-id="051ca-133">次の行に焦点を当てます。</span><span class="sxs-lookup"><span data-stu-id="051ca-133">Focusing on this line:</span></span>
 
 ```console
     GC Heap Size (MB)                                  4
 ```
 
-<span data-ttu-id="e6183-135">スタートアップの直後、マネージド ヒープ メモリは 4 MB であることがわかります。</span><span class="sxs-lookup"><span data-stu-id="e6183-135">You can see that the managed heap memory is 4 MB right after startup.</span></span>
+<span data-ttu-id="051ca-134">スタートアップの直後、マネージド ヒープ メモリは 4 MB であることがわかります。</span><span class="sxs-lookup"><span data-stu-id="051ca-134">You can see that the managed heap memory is 4 MB right after startup.</span></span>
 
-<span data-ttu-id="e6183-136">次に、URL `https://localhost:5001/api/diagscenario/memleak/20000` を指定します。</span><span class="sxs-lookup"><span data-stu-id="e6183-136">Now, hit the URL `https://localhost:5001/api/diagscenario/memleak/20000`.</span></span>
+<span data-ttu-id="051ca-135">次に、URL `https://localhost:5001/api/diagscenario/memleak/20000` を指定します。</span><span class="sxs-lookup"><span data-stu-id="051ca-135">Now, hit the URL `https://localhost:5001/api/diagscenario/memleak/20000`.</span></span>
 
-<span data-ttu-id="e6183-137">メモリ使用量が 30 MB に増加していることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e6183-137">Observe that the memory usage has grown to 30 MB.</span></span>
+<span data-ttu-id="051ca-136">メモリ使用量が 30 MB に増加していることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="051ca-136">Observe that the memory usage has grown to 30 MB.</span></span>
 
 ```console
     GC Heap Size (MB)                                 30
 ```
 
-<span data-ttu-id="e6183-138">メモリ使用量を監視することにより、メモリが増加していること、またはリークしていることを確実に知ることができます。</span><span class="sxs-lookup"><span data-stu-id="e6183-138">By watching the memory usage, you can safely say that memory is growing or leaking.</span></span> <span data-ttu-id="e6183-139">次の手順では、メモリ分析に適切なデータを収集します。</span><span class="sxs-lookup"><span data-stu-id="e6183-139">The next step is to collect the right data for memory analysis.</span></span>
+<span data-ttu-id="051ca-137">メモリ使用量を監視することにより、メモリが増加していること、またはリークしていることを確実に知ることができます。</span><span class="sxs-lookup"><span data-stu-id="051ca-137">By watching the memory usage, you can safely say that memory is growing or leaking.</span></span> <span data-ttu-id="051ca-138">次の手順では、メモリ分析に適切なデータを収集します。</span><span class="sxs-lookup"><span data-stu-id="051ca-138">The next step is to collect the right data for memory analysis.</span></span>
 
-### <a name="generate-memory-dump"></a><span data-ttu-id="e6183-140">メモリ ダンプを生成する</span><span class="sxs-lookup"><span data-stu-id="e6183-140">Generate memory dump</span></span>
+### <a name="generate-memory-dump"></a><span data-ttu-id="051ca-139">メモリ ダンプを生成する</span><span class="sxs-lookup"><span data-stu-id="051ca-139">Generate memory dump</span></span>
 
-<span data-ttu-id="e6183-141">メモリ リークの可能性について分析するときは、アプリのメモリ ヒープにアクセスする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6183-141">When analyzing possible memory leaks, you need access to the app's memory heap.</span></span> <span data-ttu-id="e6183-142">その後、メモリーの内容を分析できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-142">Then you can analyze the memory contents.</span></span> <span data-ttu-id="e6183-143">オブジェクト間の関係を確認して、メモリが解放されない理由についての理論を作成します。</span><span class="sxs-lookup"><span data-stu-id="e6183-143">Looking at relationships between objects, you create theories on why memory isn't being freed.</span></span> <span data-ttu-id="e6183-144">一般的な診断データのソースは、Windows 上のメモリ ダンプ、または Linux 上の同等のコア ダンプです。</span><span class="sxs-lookup"><span data-stu-id="e6183-144">A common diagnostics data source is a memory dump on Windows or the equivalent core dump on Linux.</span></span> <span data-ttu-id="e6183-145">.NET Core アプリケーションのダンプを生成するには、[dotnet-dump](dotnet-dump.md) ツールを使用できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-145">To generate a dump of a .NET Core application, you can use the [dotnet-dump)](dotnet-dump.md) tool.</span></span>
+<span data-ttu-id="051ca-140">メモリ リークの可能性について分析するときは、アプリのメモリ ヒープにアクセスする必要があります。</span><span class="sxs-lookup"><span data-stu-id="051ca-140">When analyzing possible memory leaks, you need access to the app's memory heap.</span></span> <span data-ttu-id="051ca-141">その後、メモリーの内容を分析できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-141">Then you can analyze the memory contents.</span></span> <span data-ttu-id="051ca-142">オブジェクト間の関係を確認して、メモリが解放されない理由についての理論を作成します。</span><span class="sxs-lookup"><span data-stu-id="051ca-142">Looking at relationships between objects, you create theories on why memory isn't being freed.</span></span> <span data-ttu-id="051ca-143">一般的な診断データのソースは、Windows 上のメモリ ダンプ、または Linux 上の同等のコア ダンプです。</span><span class="sxs-lookup"><span data-stu-id="051ca-143">A common diagnostics data source is a memory dump on Windows or the equivalent core dump on Linux.</span></span> <span data-ttu-id="051ca-144">.NET Core アプリケーションのダンプを生成するには、[dotnet-dump](dotnet-dump.md) ツールを使用できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-144">To generate a dump of a .NET Core application, you can use the [dotnet-dump](dotnet-dump.md) tool.</span></span>
 
-<span data-ttu-id="e6183-146">前に開始した[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)を使用して、次のコマンドを実行し、Linux コア ダンプを生成します。</span><span class="sxs-lookup"><span data-stu-id="e6183-146">Using the [sample debug target](/samples/dotnet/samples/diagnostic-scenarios/) previously started, run the following command to generate a Linux core dump:</span></span>
+<span data-ttu-id="051ca-145">前に開始した[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)を使用して、次のコマンドを実行し、Linux コア ダンプを生成します。</span><span class="sxs-lookup"><span data-stu-id="051ca-145">Using the [sample debug target](/samples/dotnet/samples/diagnostic-scenarios/) previously started, run the following command to generate a Linux core dump:</span></span>
 
 ```dotnetcli
 dotnet-dump collect -p 4807
 ```
 
-<span data-ttu-id="e6183-147">結果として、同じフォルダーにコア ダンプが生成されます。</span><span class="sxs-lookup"><span data-stu-id="e6183-147">The result is a core dump located in the same folder.</span></span>
+<span data-ttu-id="051ca-146">結果として、同じフォルダーにコア ダンプが生成されます。</span><span class="sxs-lookup"><span data-stu-id="051ca-146">The result is a core dump located in the same folder.</span></span>
 
 ```console
 Writing minidump with heap to ./core_20190430_185145
 Complete
 ```
 
-### <a name="restart-the-failed-process"></a><span data-ttu-id="e6183-148">失敗したプロセスを再起動する</span><span class="sxs-lookup"><span data-stu-id="e6183-148">Restart the failed process</span></span>
+### <a name="restart-the-failed-process"></a><span data-ttu-id="051ca-147">失敗したプロセスを再起動する</span><span class="sxs-lookup"><span data-stu-id="051ca-147">Restart the failed process</span></span>
 
-<span data-ttu-id="e6183-149">ダンプが収集されると、失敗したプロセスを診断するのに十分な情報が得られます。</span><span class="sxs-lookup"><span data-stu-id="e6183-149">Once the dump is collected, you should have sufficient information to diagnose the failed process.</span></span> <span data-ttu-id="e6183-150">失敗したプロセスが運用サーバーで実行されている場合は、今が、そのプロセスを再起動して短期的な修復を行うのに最適なタイミングです。</span><span class="sxs-lookup"><span data-stu-id="e6183-150">If the failed process is running on a production server, now it's the ideal time for short-term remediation by restarting the process.</span></span>
+<span data-ttu-id="051ca-148">ダンプが収集されると、失敗したプロセスを診断するのに十分な情報が得られます。</span><span class="sxs-lookup"><span data-stu-id="051ca-148">Once the dump is collected, you should have sufficient information to diagnose the failed process.</span></span> <span data-ttu-id="051ca-149">失敗したプロセスが運用サーバーで実行されている場合は、今が、そのプロセスを再起動して短期的な修復を行うのに最適なタイミングです。</span><span class="sxs-lookup"><span data-stu-id="051ca-149">If the failed process is running on a production server, now it's the ideal time for short-term remediation by restarting the process.</span></span>
 
-<span data-ttu-id="e6183-151">このチュートリアルでは、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)を終了したので、閉じることができます。</span><span class="sxs-lookup"><span data-stu-id="e6183-151">In this tutorial, you're now done with the [Sample debug target](/samples/dotnet/samples/diagnostic-scenarios/) and you can close it.</span></span> <span data-ttu-id="e6183-152">サーバーを起動したターミナルに移動して、<kbd>Ctrl + C</kbd> を押します。</span><span class="sxs-lookup"><span data-stu-id="e6183-152">Navigate to the terminal that started the server, and press <kbd>Ctrl+C</kbd>.</span></span>
+<span data-ttu-id="051ca-150">このチュートリアルでは、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)を終了したので、閉じることができます。</span><span class="sxs-lookup"><span data-stu-id="051ca-150">In this tutorial, you're now done with the [Sample debug target](/samples/dotnet/samples/diagnostic-scenarios/) and you can close it.</span></span> <span data-ttu-id="051ca-151">サーバーを起動したターミナルに移動して、<kbd>Ctrl + C</kbd> を押します。</span><span class="sxs-lookup"><span data-stu-id="051ca-151">Navigate to the terminal that started the server, and press <kbd>Ctrl+C</kbd>.</span></span>
 
-### <a name="analyze-the-core-dump"></a><span data-ttu-id="e6183-153">コア ダンプを分析する</span><span class="sxs-lookup"><span data-stu-id="e6183-153">Analyze the core dump</span></span>
+### <a name="analyze-the-core-dump"></a><span data-ttu-id="051ca-152">コア ダンプを分析する</span><span class="sxs-lookup"><span data-stu-id="051ca-152">Analyze the core dump</span></span>
 
-<span data-ttu-id="e6183-154">コア ダンプが生成されたので、[dotnet-dump](dotnet-dump.md) ツールを使用してダンプを分析します。</span><span class="sxs-lookup"><span data-stu-id="e6183-154">Now that you have a core dump generated, use the [dotnet-dump](dotnet-dump.md) tool to analyze the dump:</span></span>
+<span data-ttu-id="051ca-153">コア ダンプが生成されたので、[dotnet-dump](dotnet-dump.md) ツールを使用してダンプを分析します。</span><span class="sxs-lookup"><span data-stu-id="051ca-153">Now that you have a core dump generated, use the [dotnet-dump](dotnet-dump.md) tool to analyze the dump:</span></span>
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
 ```
 
-<span data-ttu-id="e6183-155">ここで、`core_20190430_185145` は、分析するコア ダンプの名前です。</span><span class="sxs-lookup"><span data-stu-id="e6183-155">Where `core_20190430_185145` is the name of the core dump you want to analyze.</span></span>
+<span data-ttu-id="051ca-154">ここで、`core_20190430_185145` は、分析するコア ダンプの名前です。</span><span class="sxs-lookup"><span data-stu-id="051ca-154">Where `core_20190430_185145` is the name of the core dump you want to analyze.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e6183-156">*libdl.so* が見つからないことを示すエラーが表示された場合は、*libc6-dev* パッケージのインストールが必要な可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e6183-156">If you see an error complaining that *libdl.so* cannot be found, you may have to install the *libc6-dev* package.</span></span> <span data-ttu-id="e6183-157">詳細については、「[Linux における .NET Core の前提条件](../install/linux.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6183-157">For more information, see [Prerequisites for .NET Core on Linux](../install/linux.md).</span></span>
+> <span data-ttu-id="051ca-155">*libdl.so* が見つからないことを示すエラーが表示された場合は、*libc6-dev* パッケージのインストールが必要な可能性があります。</span><span class="sxs-lookup"><span data-stu-id="051ca-155">If you see an error complaining that *libdl.so* cannot be found, you may have to install the *libc6-dev* package.</span></span> <span data-ttu-id="051ca-156">詳細については、「[Linux における .NET Core の前提条件](../install/linux.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="051ca-156">For more information, see [Prerequisites for .NET Core on Linux](../install/linux.md).</span></span>
 
-<span data-ttu-id="e6183-158">SOS コマンドを入力できるプロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="e6183-158">You'll be presented with a prompt where you can enter SOS commands.</span></span> <span data-ttu-id="e6183-159">一般的に、最初に調べる必要があるのは、マネージド ヒープの全体的な状態です。</span><span class="sxs-lookup"><span data-stu-id="e6183-159">Commonly, the first thing you want to look at is the overall state of the managed heap:</span></span>
+<span data-ttu-id="051ca-157">SOS コマンドを入力できるプロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="051ca-157">You'll be presented with a prompt where you can enter SOS commands.</span></span> <span data-ttu-id="051ca-158">一般的に、最初に調べる必要があるのは、マネージド ヒープの全体的な状態です。</span><span class="sxs-lookup"><span data-stu-id="051ca-158">Commonly, the first thing you want to look at is the overall state of the managed heap:</span></span>
 
 ```console
 > dumpheap -stat
@@ -170,9 +169,9 @@ Statistics:
 Total 428516 objects
 ```
 
-<span data-ttu-id="e6183-160">ここで、ほとんどのオブジェクトが `String` または `Customer` オブジェクトであることがわかります。</span><span class="sxs-lookup"><span data-stu-id="e6183-160">Here you can see that most objects are either `String` or `Customer` objects.</span></span>
+<span data-ttu-id="051ca-159">ここで、ほとんどのオブジェクトが `String` または `Customer` オブジェクトであることがわかります。</span><span class="sxs-lookup"><span data-stu-id="051ca-159">Here you can see that most objects are either `String` or `Customer` objects.</span></span>
 
-<span data-ttu-id="e6183-161">メソッド テーブル (MT) を指定して `dumpheap` コマンドを再び使用すると、すべての `String` インスタンスの一覧を取得できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-161">You can use the `dumpheap` command again with the method table (MT) to get a list of all the `String` instances:</span></span>
+<span data-ttu-id="051ca-160">メソッド テーブル (MT) を指定して `dumpheap` コマンドを再び使用すると、すべての `String` インスタンスの一覧を取得できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-160">You can use the `dumpheap` command again with the method table (MT) to get a list of all the `String` instances:</span></span>
 
 ```console
 > dumpheap -mt 00007faddaa50f90
@@ -193,7 +192,7 @@ Statistics:
 Total 206770 objects
 ```
 
-<span data-ttu-id="e6183-162">次に、`System.String` インスタンスで `gcroot` コマンドを使用して、このオブジェクトがルート指定されている方法と理由を確認します。</span><span class="sxs-lookup"><span data-stu-id="e6183-162">You can now use the `gcroot` command on a `System.String` instance to see how and why the object is rooted.</span></span> <span data-ttu-id="e6183-163">このコマンドは 30 MB のヒープで数分かかるため、しばらくお待ちください。</span><span class="sxs-lookup"><span data-stu-id="e6183-163">Be patient because this command takes several minutes with a 30-MB heap:</span></span>
+<span data-ttu-id="051ca-161">次に、`System.String` インスタンスで `gcroot` コマンドを使用して、このオブジェクトがルート指定されている方法と理由を確認します。</span><span class="sxs-lookup"><span data-stu-id="051ca-161">You can now use the `gcroot` command on a `System.String` instance to see how and why the object is rooted.</span></span> <span data-ttu-id="051ca-162">このコマンドは 30 MB のヒープで数分かかるため、しばらくお待ちください。</span><span class="sxs-lookup"><span data-stu-id="051ca-162">Be patient because this command takes several minutes with a 30-MB heap:</span></span>
 
 ```console
 > gcroot -all 00007f6ad09421f8
@@ -222,27 +221,27 @@ HandleTable:
 Found 2 roots.
 ```
 
-<span data-ttu-id="e6183-164">`String` が `Customer` オブジェクトによって直接保持され、`CustomerCache` オブジェクトによって間接的に保持されていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="e6183-164">You can see that the `String` is directly held by the `Customer` object and indirectly held by a `CustomerCache` object.</span></span>
+<span data-ttu-id="051ca-163">`String` が `Customer` オブジェクトによって直接保持され、`CustomerCache` オブジェクトによって間接的に保持されていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="051ca-163">You can see that the `String` is directly held by the `Customer` object and indirectly held by a `CustomerCache` object.</span></span>
 
-<span data-ttu-id="e6183-165">オブジェクトのダンプを続けて、ほとんどの `String` オブジェクトが同様のパターンに従っていることを確認できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-165">You can continue dumping out objects to see that most `String` objects follow a similar pattern.</span></span> <span data-ttu-id="e6183-166">この時点で、コードの根本原因を特定するのに十分な情報が調査によって提供されています。</span><span class="sxs-lookup"><span data-stu-id="e6183-166">At this point, the investigation provided sufficient information to identify the root cause in your code.</span></span>
+<span data-ttu-id="051ca-164">オブジェクトのダンプを続けて、ほとんどの `String` オブジェクトが同様のパターンに従っていることを確認できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-164">You can continue dumping out objects to see that most `String` objects follow a similar pattern.</span></span> <span data-ttu-id="051ca-165">この時点で、コードの根本原因を特定するのに十分な情報が調査によって提供されています。</span><span class="sxs-lookup"><span data-stu-id="051ca-165">At this point, the investigation provided sufficient information to identify the root cause in your code.</span></span>
 
-<span data-ttu-id="e6183-167">この一般的な手順では、主要なメモリ リークの原因を特定できます。</span><span class="sxs-lookup"><span data-stu-id="e6183-167">This general procedure allows you to identify the source of major memory leaks.</span></span>
+<span data-ttu-id="051ca-166">この一般的な手順では、主要なメモリ リークの原因を特定できます。</span><span class="sxs-lookup"><span data-stu-id="051ca-166">This general procedure allows you to identify the source of major memory leaks.</span></span>
 
-## <a name="clean-up-resources"></a><span data-ttu-id="e6183-168">リソースをクリーンアップする</span><span class="sxs-lookup"><span data-stu-id="e6183-168">Clean up resources</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="051ca-167">リソースをクリーンアップする</span><span class="sxs-lookup"><span data-stu-id="051ca-167">Clean up resources</span></span>
 
-<span data-ttu-id="e6183-169">このチュートリアルでは、サンプル Web サーバーを開始しました。</span><span class="sxs-lookup"><span data-stu-id="e6183-169">In this tutorial, you started a sample web server.</span></span> <span data-ttu-id="e6183-170">このサーバーは、「[失敗したプロセスを再起動する](#restart-the-failed-process)」セクションの説明に従ってシャットダウンされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6183-170">This server should have been shut down as explained in the [Restart the failed process](#restart-the-failed-process) section.</span></span>
+<span data-ttu-id="051ca-168">このチュートリアルでは、サンプル Web サーバーを開始しました。</span><span class="sxs-lookup"><span data-stu-id="051ca-168">In this tutorial, you started a sample web server.</span></span> <span data-ttu-id="051ca-169">このサーバーは、「[失敗したプロセスを再起動する](#restart-the-failed-process)」セクションの説明に従ってシャットダウンされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="051ca-169">This server should have been shut down as explained in the [Restart the failed process](#restart-the-failed-process) section.</span></span>
 
-<span data-ttu-id="e6183-171">また、作成されたダンプ ファイルを削除することもできます。</span><span class="sxs-lookup"><span data-stu-id="e6183-171">You can also delete the dump file that was created.</span></span>
+<span data-ttu-id="051ca-170">また、作成されたダンプ ファイルを削除することもできます。</span><span class="sxs-lookup"><span data-stu-id="051ca-170">You can also delete the dump file that was created.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e6183-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6183-172">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="051ca-171">関連項目</span><span class="sxs-lookup"><span data-stu-id="051ca-171">See also</span></span>
 
-- <span data-ttu-id="e6183-173">[dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する</span><span class="sxs-lookup"><span data-stu-id="e6183-173">[dotnet-trace](dotnet-trace.md) to list processes</span></span>
-- <span data-ttu-id="e6183-174">[dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する</span><span class="sxs-lookup"><span data-stu-id="e6183-174">[dotnet-counters](dotnet-counters.md) to check managed memory usage</span></span>
-- <span data-ttu-id="e6183-175">[dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する</span><span class="sxs-lookup"><span data-stu-id="e6183-175">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file</span></span>
-- [<span data-ttu-id="e6183-176">dotnet/診断</span><span class="sxs-lookup"><span data-stu-id="e6183-176">dotnet/diagnostics</span></span>](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
-- [<span data-ttu-id="e6183-177">Visual Studio を使用してメモリ リークをデバッグする</span><span class="sxs-lookup"><span data-stu-id="e6183-177">Use Visual Studio to debug memory leaks</span></span>](/visualstudio/profiling/memory-usage)
+- <span data-ttu-id="051ca-172">[dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する</span><span class="sxs-lookup"><span data-stu-id="051ca-172">[dotnet-trace](dotnet-trace.md) to list processes</span></span>
+- <span data-ttu-id="051ca-173">[dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する</span><span class="sxs-lookup"><span data-stu-id="051ca-173">[dotnet-counters](dotnet-counters.md) to check managed memory usage</span></span>
+- <span data-ttu-id="051ca-174">[dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する</span><span class="sxs-lookup"><span data-stu-id="051ca-174">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file</span></span>
+- [<span data-ttu-id="051ca-175">dotnet/診断</span><span class="sxs-lookup"><span data-stu-id="051ca-175">dotnet/diagnostics</span></span>](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [<span data-ttu-id="051ca-176">Visual Studio を使用してメモリ リークをデバッグする</span><span class="sxs-lookup"><span data-stu-id="051ca-176">Use Visual Studio to debug memory leaks</span></span>](/visualstudio/profiling/memory-usage)
 
-## <a name="next-steps"></a><span data-ttu-id="e6183-178">次の手順</span><span class="sxs-lookup"><span data-stu-id="e6183-178">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="051ca-177">次の手順</span><span class="sxs-lookup"><span data-stu-id="051ca-177">Next steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e6183-179">.NET Core で高 CPU 使用率をデバッグする</span><span class="sxs-lookup"><span data-stu-id="e6183-179">Debug high CPU in .NET Core</span></span>](debug-highcpu.md)
+> [<span data-ttu-id="051ca-178">.NET Core で高 CPU 使用率をデバッグする</span><span class="sxs-lookup"><span data-stu-id="051ca-178">Debug high CPU in .NET Core</span></span>](debug-highcpu.md)

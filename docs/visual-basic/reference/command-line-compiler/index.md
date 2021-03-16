@@ -1,5 +1,6 @@
 ---
-title: Visual Basic コマンドラインコンパイラ
+description: '詳細情報: Visual Basic コマンド ライン コンパイラ'
+title: コマンド ライン コンパイラ
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -8,27 +9,26 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-ms.openlocfilehash: 21c17be98d5f2c218da720e04a803b16243301ed
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: a3deb0a4ef18158bb85d357ef6e2655d28b9c732
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838079"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "103235229"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Visual Basic コマンドラインコンパイラ
+# <a name="visual-basic-command-line-compiler"></a>Visual Basic のコマンド ライン コンパイラ
 
-Visual Basic コマンドラインコンパイラは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルするための代替手段を提供します。 ここでは、Visual Basic コンパイラオプションについて説明します。
+Visual Basic コマンド ライン コンパイラでは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする方法の代替手段が提供されます。 このセクションでは、Visual Basic コンパイラ オプションについて説明します。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>このセクションの内容
 
-[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Visual Basic コマンドラインコンパイラについて説明します。これは、Visual Studio IDE 内からプログラムをコンパイルする代わりに提供されます。
+[コマンド ラインからのビルド](building-from-the-command-line.md)  
+Visual Basic IDE 内からプログラムをコンパイルする方法の代替手段として提供される、Visual Basic コマンド ライン コンパイラについて説明します。
 
-[Visual Basic コンパイラ オプション一覧 (アルファベット順)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-アルファベット順の表にコンパイラオプションを一覧表示します
+[Visual Basic コンパイラ オプション一覧 (アルファベット順)](compiler-options-listed-alphabetically.md)  
+コンパイラ オプションの一覧がアルファベット順に表示されます
 
-[Visual Basic コンパイラ オプション一覧 (カテゴリ別)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+[Visual Basic コンパイラ オプション一覧 (カテゴリ別)](compiler-options-listed-by-category.md)  
 機能別グループでコンパイラ オプションを示します。
-  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f5703377782977bb69815255d04cf1ee5a274c18
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290942"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477222"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -64,7 +64,7 @@ ms.locfileid: "84290942"
 
 アセンブリを作成するには、いくつかの方法があります。 Visual Studio など、 *.dll* ファイルや *.exe* ファイルを作成できる開発ツールを使用できます。 他の開発環境のモジュールを使ってアセンブリを作成するには、Windows SDK の各種ツールを使用できます。 動的アセンブリの作成には、<xref:System.Reflection.Emit?displayProperty=nameWithType> などの共通言語ランタイム API も使用できます。
 
-アセンブリをコンパイルするには、Visual Studio でビルドするか、.NET Core コマンド ライン インターフェイス ツールでビルドするか、コマンド ライン コンパイラを使用して .NET Framework アセンブリを構築します。 .NET Core CLI を使ったアセンブリのビルドについて詳しくは、「[.NET Core CLI の概要](../../core/tools/index.md)」をご覧ください。 コマンド ライン コンパイラを使ったアセンブリのビルドについては、「[csc.exe を使用したコマンド ラインからのビルド](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」(C#)、および[コマンド ラインからのビルド](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) (Visual Basic) に関する記事を参照してください。
+アセンブリをコンパイルするには、Visual Studio でビルドするか、.NET Core コマンド ライン インターフェイス ツールでビルドするか、コマンド ライン コンパイラを使用して .NET Framework アセンブリを構築します。 .NET Core CLI を使ったアセンブリのビルドについて詳しくは、「[.NET Core CLI の概要](../../core/tools/index.md)」をご覧ください。
 
 > [!NOTE]
 > Visual Studio でアセンブリをビルドするには、 **[ビルド]** メニューの **[ビルド]** を選択します。
@@ -77,7 +77,7 @@ ms.locfileid: "84290942"
 
 - アセンブリを構成するその他すべてのファイルについて記述するファイル テーブル (自分で作成したその他のアセンブリで *.exe* や *.dll* ファイルが依存しているもの、またはビットマップや Readme ファイルなど)。
 
-- *.dll* やその他のファイルなど、すべての外部依存関係の一覧である*アセンブリ参照リスト*。 アセンブリ参照には、グローバルおよびプライベートの両方のオブジェクトへの参照が含まれます。 グローバル オブジェクトは、その他のすべてのアプリケーションで利用できます。 .NET Core では、グローバル オブジェクトは特定の .NET Core ランタイムと組み合わされます。 .NET Framework では、グローバル オブジェクトはグローバル アセンブリ キャッシュ (GAC) 内にあります。 *System.IO.dll* は、GAC 内のアセンブリの一例です。 プライベート オブジェクトは、アプリがインストールされているディレクトリと同じレベルまたはその下のディレクトリ内に存在する必要があります。
+- *.dll* やその他のファイルなど、すべての外部依存関係の一覧である *アセンブリ参照リスト*。 アセンブリ参照には、グローバルおよびプライベートの両方のオブジェクトへの参照が含まれます。 グローバル オブジェクトは、その他のすべてのアプリケーションで利用できます。 .NET Core では、グローバル オブジェクトは特定の .NET Core ランタイムと組み合わされます。 .NET Framework では、グローバル オブジェクトはグローバル アセンブリ キャッシュ (GAC) 内にあります。 *System.IO.dll* は、GAC 内のアセンブリの一例です。 プライベート オブジェクトは、アプリがインストールされているディレクトリと同じレベルまたはその下のディレクトリ内に存在する必要があります。
 
 アセンブリにはコンテンツ、バージョン管理、および依存関係に関する情報が含まれているため、それらを使用するアプリケーションは、Windows システムのレジストリのような外部ソースに依存しなくても正常に機能することができます。 アセンブリは、 *.dll* の競合を減らし、アプリケーションの信頼性を高め、配置を容易にします。 多くの場合、.NET ベースのアプリケーションは、ターゲット コンピューターにそのファイルをコピーするだけでインストールすることができます。 詳細については、「[アセンブリ マニフェスト](manifest.md)」を参照してください。
 
@@ -86,7 +86,7 @@ ms.locfileid: "84290942"
 アプリケーションでアセンブリを使用するには、アセンブリへの参照を追加する必要があります。 アセンブリが参照された後は、その名前空間のアクセス可能なすべての型、プロパティ、メソッド、およびその他のメンバーを、そのコードがご自分のソース ファイルの一部であるかのようにアプリケーションで使用することができます。
 
 > [!NOTE]
-> .NET クラス ライブラリのほとんどのアセンブリは自動的に参照されます。 システム アセンブリが自動的に参照されない場合、.NET Core では、アセンブリを含む NuGet パッケージへの参照を追加できます。 Visual Studio で NuGet パッケージ マネージャーを使用するか、またはアセンブリの [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 要素を *.csproj* または *.vbproj* プロジェクトに追加します。 .NET Framework では、アセンブリへの参照を追加するには、Visual Studio の **[参照の追加]** ダイアログを使用するか、[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) または [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) コンパイラに向けてコマンド ライン オプション `-reference` を使用します。
+> .NET クラス ライブラリのほとんどのアセンブリは自動的に参照されます。 システム アセンブリが自動的に参照されない場合、.NET Core では、アセンブリを含む NuGet パッケージへの参照を追加できます。 Visual Studio で NuGet パッケージ マネージャーを使用するか、またはアセンブリの [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 要素を *.csproj* または *.vbproj* プロジェクトに追加します。 .NET Framework では、アセンブリへの参照を追加するには、Visual Studio の **[参照の追加]** ダイアログを使用するか、[C#](../../csharp/language-reference/compiler-options/inputs.md#references) または [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) コンパイラに向けてコマンド ライン オプション `-reference` を使用します。
 
 C# では、1 つのアプリケーションで同じアセンブリの 2 つのバージョンを使用することができます。 詳細については、「[extern エイリアス](../../csharp/language-reference/keywords/extern-alias.md)」を参照してください。
 

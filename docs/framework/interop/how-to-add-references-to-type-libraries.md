@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 76f616c36d81b8245f77f011b5c2f9b945e6916b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b5e58c5943eba8db7497b4db56bfbd99b17b1043
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255105"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477626"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>方法: タイプ ライブラリへの参照を追加する
 
@@ -42,12 +42,12 @@ Visual Studio は、タイプ ライブラリに参照を追加する際に、�
   
 1. 「[方法: 相互運用機能アセンブリをタイプ ライブラリから生成する](how-to-generate-interop-assemblies-from-type-libraries.md)」の説明に従って、相互運用機能アセンブリを生成します。  
   
-2. 相互運用アセンブリ名を指定して [-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md) または [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ オプションを使用し、COM 型の型情報を実行可能ファイルに埋め込みます。  
+2. 相互運用アセンブリ名を指定して [-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes) または [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ オプションを使用し、COM 型の型情報を実行可能ファイルに埋め込みます。  
   
 ## <a name="see-also"></a>関連項目
 
 - [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
 - [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む](../../standard/assembly/embed-types-visual-studio.md)
-- [-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)
 - [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

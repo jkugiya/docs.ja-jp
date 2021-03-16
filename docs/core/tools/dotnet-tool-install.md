@@ -2,12 +2,12 @@
 title: dotnet tool install コマンド
 description: dotnet tool install コマンドを実行すると、指定した .NET ツールがお使いのコンピューターにインストールされます。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b04e7fd24edce5d5da67cdd83fbea797118689b4
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634325"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206482"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -71,15 +71,15 @@ dotnet new tool-manifest
 
 ## <a name="options"></a>オプション
 
-- **`add-source <SOURCE>`**
+- **`--add-source <SOURCE>`**
 
-  インストール時に使用するために追加の NuGet パッケージ ソースを追加します。
+  インストール時に使用するために追加の NuGet パッケージ ソースを追加します。 フィードは、何らかの順番ではなく、並列でアクセスされます。 同じパッケージとバージョンが複数のフィードに存在する場合、最も速いフィードが優先されます。 詳細については、「[NuGet パッケージのインストールのしくみ](/nuget/concepts/package-installation-process)」を参照してください。
 
-- **`configfile <FILE>`**
+- **`--configfile <FILE>`**
 
   使用する NuGet 構成 (*nuget.config*) ファイル。
 
-- **`framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
   ツールをインストールする[ターゲット フレームワーク](../../standard/frameworks.md)を指定します。 既定では、.NET SDK によって、最適なターゲット フレームワークの選択が試行されます。
 
@@ -91,7 +91,7 @@ dotnet new tool-manifest
 
   コマンドの短いヘルプを印刷します。
 
-- **`tool-path <PATH>`**
+- **`--tool-path <PATH>`**
 
   グローバル ツールをインストールする場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 PATH が存在しない場合、コマンドではパスの作成を試みます。 `--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。
 

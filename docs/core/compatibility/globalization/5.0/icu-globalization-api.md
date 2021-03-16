@@ -1,23 +1,23 @@
 ---
 title: '破壊的変更: グローバリゼーション API では Windows 上の ICU ライブラリが使用される'
-description: .NET 5.0 でのグローバリゼーションに関する破壊的変更について学習します。NLS ではなく、グローバリゼーション機能に ICU ライブラリが使用されます。
+description: .NET 5 でのグローバリゼーションに関する破壊的変更について学習します。NLS ではなく、グローバリゼーション機能に ICU ライブラリが使用されます。
 ms.date: 05/19/2020
-ms.openlocfilehash: efc20e21969ea4a83c9122e40b262e1dc38e6770
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b8580fcb3ba3c9b95357a7922e3a3062ccd3728
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760053"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256752"
 ---
 # <a name="globalization-apis-use-icu-libraries-on-windows"></a>グローバリゼーション API では Windows 上の ICU ライブラリが使用される
 
-.NET 5.0 以降のバージョンでは、Windows 10 May 2019 Update 以降で実行されると、グローバリゼーション機能用に [International Components for Unicode (ICU)](http://site.icu-project.org/home) ライブラリが使用されます。
+.NET 5 以降のバージョンでは、Windows 10 May 2019 Update 以降で実行されると、グローバリゼーション機能用に [International Components for Unicode (ICU)](http://site.icu-project.org/home) ライブラリが使用されます。
 
 ## <a name="change-description"></a>変更の説明
 
 .NET Core 1.0 から 3.1 および .NET Framework 4 以降では、Windows でのグローバリゼーション機能のために[各国語サポート (NLS)](/windows/win32/intl/national-language-support) API が .NET ライブラリにより使用されます。 たとえば、NLS 関数は、文字列の比較、カルチャ情報の取得、適切なカルチャでの文字列の大文字と小文字の使い分けの実行に使用されていました。
 
-.NET 5.0 以降では、アプリが Windows 10 May 2019 Update 以降で実行されている場合、[ICU](http://site.icu-project.org/home) グローバリゼーション API が既定で .NET ライブラリにより使用されます。
+.NET 5 以降では、アプリが Windows 10 May 2019 Update 以降で実行されている場合、[ICU](http://site.icu-project.org/home) グローバリゼーション API が既定で .NET ライブラリにより使用されます。
 
 > [!NOTE]
 > Windows 10 May 2019 Update 以降のバージョンには、ICU ネイティブ ライブラリが付属しています。 .NET ランタイムで ICU を読み込むことができない場合は、代わりに NLS が使用されます。
@@ -37,7 +37,7 @@ Console.WriteLine(idx);
 ```
 
 - Windows 上の以前のバージョンの .NET では、スニペットにより `6` と出力されます。
-- Windows 19H1 以降のバージョン上の .NET 5.0 以降のバージョンでは、スニペットにより `-1` と出力されます。
+- Windows 19H1 以降のバージョン上の .NET 5 以降のバージョンでは、スニペットにより `-1` と出力されます。
 
 カルチャ依存検索ではなく序数検索を実行してこのコードを修正するには、<xref:System.String.IndexOf(System.String,System.StringComparison)> のオーバーロードを呼び出し、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> を引数として渡します。
 
@@ -55,7 +55,7 @@ string text = string.Format("{0:C}", 100);
 ```
 
 - Windows 上の以前のバージョンの .NET では、テキストの値は `"100,00 €"` になります。
-- Windows 19H1 以降のバージョン上の .NET 5.0 以降のバージョンでは、テキストの値は `"100,00 ¤"` になり、ユーロではなく国際通貨記号が使用されます。 ICU では、通貨は言語ではなく国または地域のプロパティであるように設計されています。
+- Windows 19H1 以降のバージョン上の .NET 5 以降のバージョンでは、テキストの値は `"100,00 ¤"` になり、ユーロではなく国際通貨記号が使用されます。 ICU では、通貨は言語ではなく国または地域のプロパティであるように設計されています。
 
 ## <a name="reason-for-change"></a>変更理由
 

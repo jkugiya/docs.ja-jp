@@ -4,12 +4,12 @@ description: すべての C# プログラムの中核となる型 (数値、文�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1c3cdefe6aba300536386fe4bb66d788814bcd9d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439717"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258183"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -60,7 +60,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
   
 ## <a name="custom-types"></a>カスタム型
 
-カスタムの型を独自に作成するには、[struct](language-reference/builtin-types/struct.md)、[class](language-reference/keywords/class.md)、[interface](language-reference/keywords/interface.md)、[enum](language-reference/builtin-types/enum.md) の各構成要素を使用します。 .NET クラス ライブラリ自体が、マイクロソフトによって提供された、ユーザーが独自のアプリケーションで使用できるカスタムの型のコレクションです。 既定では、クラス ライブラリで最も頻繁に使用される型は任意の C# プログラムで使用可能になっています。 その他の型は、その型が定義されているアセンブリへのプロジェクト参照を明示的に追加した場合にのみ使用可能になります。 コンパイラがアセンブリを参照できるようになると、そのアセンブリ内で宣言されている型の変数 (および定数) をソース コード内で宣言できるようになります。
+独自のカスタム型を作成するには、[struct](language-reference/builtin-types/struct.md)、[class](language-reference/keywords/class.md)、[record](language-reference/builtin-types/record.md)、[interface](language-reference/keywords/interface.md)、および [enum](language-reference/builtin-types/enum.md) の各構造体を使用します。 .NET クラス ライブラリ自体が、マイクロソフトによって提供された、ユーザーが独自のアプリケーションで使用できるカスタムの型のコレクションです。 既定では、クラス ライブラリで最も頻繁に使用される型は任意の C# プログラムで使用可能になっています。 その他の型は、その型が定義されているアセンブリへのプロジェクト参照を明示的に追加した場合にのみ使用可能になります。 コンパイラがアセンブリを参照できるようになると、そのアセンブリ内で宣言されている型の変数 (および定数) をソース コード内で宣言できるようになります。
   
 ## <a name="generic-types"></a>ジェネリック型
 

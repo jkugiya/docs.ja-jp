@@ -1,23 +1,23 @@
 ---
 title: 破壊的変更:ASP.NET Core アプリで、引用符で囲まれた数値を逆シリアル化できる
-description: .NET 5.0 の破壊的変更について学習します。この変更後、例外がスローされるのではなく、JSON 文字列として表される数値が ASP.NET Core アプリによって正常に逆シリアル化されるようになります。
+description: .NET 5 の破壊的変更について学習します。この変更後、例外がスローされるのではなく、JSON 文字列として表される数値が ASP.NET Core アプリによって正常に逆シリアル化されるようになります。
 ms.date: 10/21/2020
-ms.openlocfilehash: fc8a4c6638be391c22c7cfb2fc7c216c88377f29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759368"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256310"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core アプリで、引用符で囲まれた数値を逆シリアル化できる
 
-.NET 5.0 以降では、ASP.NET Core アプリによって、<xref:System.Text.Json.JsonSerializerDefaults.Web?displayProperty=nameWithType> で指定された既定の逆シリアル化オプションが使用されます。 <xref:System.Text.Json.JsonSerializerDefaults.Web> オプション セットには、<xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString?displayProperty=nameWithType>への <xref:System.Text.Json.JsonSerializerOptions.NumberHandling> の設定が含まれます。 この変更は、例外がスローされるのではなく、JSON 文字列として表される数値が ASP.NET Core アプリによって正常に逆シリアル化されることを意味します。
+.NET 5 以降では、ASP.NET Core アプリによって、<xref:System.Text.Json.JsonSerializerDefaults.Web?displayProperty=nameWithType> で指定された既定の逆シリアル化オプションが使用されます。 <xref:System.Text.Json.JsonSerializerDefaults.Web> オプション セットには、<xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString?displayProperty=nameWithType>への <xref:System.Text.Json.JsonSerializerOptions.NumberHandling> の設定が含まれます。 この変更は、例外がスローされるのではなく、JSON 文字列として表される数値が ASP.NET Core アプリによって正常に逆シリアル化されることを意味します。
 
 ## <a name="change-description"></a>変更内容
 
 .NET Core 3.0 から 3.1 では、JSON ペイロードで引用符で囲まれた数値が検出された場合、逆シリアル化中に <xref:System.Text.Json.JsonSerializer> によって <xref:System.Text.Json.JsonException> がスローされます。 引用符で囲まれた数値は、オブジェクト グラフの数値プロパティとマップするために使用されます。 .NET Core 3.0 から 3.1 では、数値は <xref:System.Text.Json.JsonTokenType.Number?displayProperty=nameWithType> トークンからのみ読み取られます。
 
-.NET 5.0 以降では、JSON ペイロードの引用符で囲まれた数値は、既定で ASP.NET Core アプリに対して有効と見なされます。 引用符で囲まれた数値の逆シリアル化中に例外はスローされません。
+.NET 5 以降では、JSON ペイロードの引用符で囲まれた数値は、既定で ASP.NET Core アプリに対して有効と見なされます。 引用符で囲まれた数値の逆シリアル化中に例外はスローされません。
 
 > [!TIP]
 >

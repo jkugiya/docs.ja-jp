@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, walkthroughs
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-ms.openlocfilehash: bbf9ab7d06c952aa2e076fc36c71f37f1bb10884
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: b6e4937b71c50f887a7eb784bc9106360a05fdc2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608388"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259799"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "91608388"
    ![Visual Studio の [新しいプロジェクト] ダイアログの Windows サービス アプリ テンプレート](./media/new-project-dialog.png)
 
    > [!NOTE]
-   > **[Windows サービス]** テンプレートが表示されない場合は、 **.NET デスクトップ開発**ワークロードのインストールが必要である可能性があります。
+   > **[Windows サービス]** テンプレートが表示されない場合は、 **.NET デスクトップ開発** ワークロードのインストールが必要である可能性があります。
    >
    > **[新しいプロジェクト]** ダイアログの左側にある **[Visual Studio インストーラーを開く]** を選択します。 **[.NET デスクトップ開発]** ワークロードを選択し、 **[変更]** を選択します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "91608388"
 
 サービスの名前を **Service1** から **MyNewService** に変更します。
 
-1. **ソリューション エクスプローラー**で **Service1.cs** または **Service1.vb** を選択し、ショートカット メニューから **[名前の変更]** を選択します。 ファイルの名前を **MyNewService.cs** または **MyNewService.vb** に変更し、**Enter** キーを押します
+1. **ソリューション エクスプローラー** で **Service1.cs** または **Service1.vb** を選択し、ショートカット メニューから **[名前の変更]** を選択します。 ファイルの名前を **MyNewService.cs** または **MyNewService.vb** に変更し、**Enter** キーを押します
 
     コード要素 *Service1* に対するすべての参照名を変更するかどうかを確認するポップアップ ウィンドウが表示されます。
 
@@ -65,11 +65,11 @@ ms.locfileid: "91608388"
 
 ### <a name="add-custom-event-log-functionality"></a>サービスにカスタム イベント ログ機能を追加する
 
-1. **ソリューション エクスプローラー**で、**MyNewService.cs** または **MyNewService.vb** のショートカット メニューから **[デザイナーの表示]** を選択します。
+1. **ソリューション エクスプローラー** で、**MyNewService.cs** または **MyNewService.vb** のショートカット メニューから **[デザイナーの表示]** を選択します。
 
 2. **[ツールボックス]** で **[コンポーネント]** を展開し、**EventLog** コンポーネントを **[Service1.cs [デザイン]]** タブまたは **[Service1.vb [デザイン]]** タブにドラッグします。
 
-3. **ソリューション エクスプローラー**で、**MyNewService.cs** または **MyNewService.vb** のショートカット メニューから **[コードの表示]** を選択します。
+3. **ソリューション エクスプローラー** で、**MyNewService.cs** または **MyNewService.vb** のショートカット メニューから **[コードの表示]** を選択します。
 
 4. カスタム イベント ログを定義します。 C# の場合は、既存の `MyNewService()` コンストラクターを編集します。Visual Basic の場合は、`New()` コンストラクターを追加します。
 
@@ -326,7 +326,7 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
 
 Windows サービスを実行するには、まず、サービスをインストールする必要があります。これにより、サービスがサービス コントロール マネージャーに登録されます。 登録の詳細を処理するインストーラーをプロジェクトに追加します。
 
-1. **ソリューション エクスプローラー**で、**MyNewService.cs** または **MyNewService.vb** のショートカット メニューから **[デザイナーの表示]** を選択します。
+1. **ソリューション エクスプローラー** で、**MyNewService.cs** または **MyNewService.vb** のショートカット メニューから **[デザイナーの表示]** を選択します。
 
 2. **[デザイン]** ビューでバックグラウンド領域を選択し、ショートカット メニューから **[インストーラーの追加]** を選択します。
 
@@ -336,7 +336,7 @@ Windows サービスを実行するには、まず、サービスをインスト
 
 4. **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> プロパティが **MyNewService** に設定されていることを確認します。
 
-5. *サンプル サービス*などのテキストを <xref:System.ServiceProcess.ServiceInstaller.Description%2A> プロパティに追加します。
+5. *サンプル サービス* などのテキストを <xref:System.ServiceProcess.ServiceInstaller.Description%2A> プロパティに追加します。
 
      このテキストは **[サービス]** ウィンドウの **[説明]** 列に表示され、サービスに関する説明をユーザーに示します。
 
@@ -458,21 +458,21 @@ Windows サービスは、コマンド ライン引数 (スタートアップ �
 
 ## <a name="build-the-service"></a>サービスをビルドする
 
-1. **ソリューション エクスプローラー**で、**MyNewService** プロジェクトのショートカット メニューから **[プロパティ]** を選択します。
+1. **ソリューション エクスプローラー** で、**MyNewService** プロジェクトのショートカット メニューから **[プロパティ]** を選択します。
 
    プロジェクトのプロパティ ページが表示されます。
 
 2. **[アプリケーション]** タブの **[スタートアップ オブジェクト]** 一覧で **MyNewService.Program** (Visual Basic プロジェクトの場合は **Sub Main**) を選択します。
 
-3. プロジェクトをビルドするには、**ソリューション エクスプローラー**で、プロジェクトのショートカット メニューから **[ビルド]** を選択します (または **Ctrl**+**Shift**+**B** キーを押します)。
+3. プロジェクトをビルドするには、**ソリューション エクスプローラー** で、プロジェクトのショートカット メニューから **[ビルド]** を選択します (または **Ctrl**+**Shift**+**B** キーを押します)。
 
 ## <a name="install-the-service"></a>サービスをインストールする
 
 Windows サービスを構築済みであるため、サービスをインストールできます。 Windows サービスをインストールするには、インストール先のコンピューター上の管理者資格情報が必要です。
 
-1. 管理者資格情報を使用して、[Visual Studio 用開発者コマンド プロンプト](../tools/developer-command-prompt-for-vs.md)を開きます。 Windows の**スタート** メニューから、Visual Studio フォルダーの **[開発者コマンド プロンプト for VS 2017]** を選択し、ショートカット メニューから **[その他]**  >  **[管理者として実行]** を選択します。
+1. 管理者資格情報を使用して、[Visual Studio 用開発者コマンド プロンプト](/visualstudio/ide/reference/command-prompt-powershell)を開きます。
 
-2. **[開発者コマンド プロンプト for Visual Studio]** ウィンドウで、プロジェクトの出力を含むフォルダーに移動します (既定では、プロジェクトの *\bin\Debug* サブディレクトリです)。
+2. **[開発者コマンド プロンプト for Visual Studio]** で、プロジェクトの出力を含むフォルダーに移動します (既定では、プロジェクトの *\bin\Debug* サブディレクトリです)。
 
 3. 次のコマンドを入力します。
 
@@ -489,7 +489,7 @@ Windows サービスを構築済みであるため、サービスをインスト
     - 属性が `true` に設定されていない。
     - `ProjectInstaller` クラスが `public` として定義されていない。
 
-詳細については、「[方法:サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)」を参照してください。
+詳細については、[サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)」を参照してください。
 
 ## <a name="start-and-run-the-service"></a>サービスを開始して実行する
 
@@ -510,7 +510,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 1. Windows で、 **[イベント ビューアー]** デスクトップ アプリを開きます。 Windows 検索バーに「*イベント ビューアー*」と入力し、検索結果から **[イベント ビューアー]** を選択します。
 
    > [!TIP]
-   > Visual Studio でイベント ログにアクセスするには、 **[表示]** メニューから**サーバー エクスプローラー**を開き (または **Ctrl**+**Alt**+**S** キーを押し)、ローカル コンピューターの **[イベント ログ]** ノードを展開します。
+   > Visual Studio でイベント ログにアクセスするには、 **[表示]** メニューから **サーバー エクスプローラー** を開き (または **Ctrl**+**Alt**+**S** キーを押し)、ローカル コンピューターの **[イベント ログ]** ノードを展開します。
 
 2. **[イベント ビューアー]** で、 **[アプリケーションとサービス ログ]** を展開します。
 
@@ -522,7 +522,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 
 Windows サービス アプリが不要になったら、削除することができます。
 
-1. 管理者資格情報を使用して、**Visual Studio 用開発者コマンド プロンプト**を開きます。
+1. 管理者資格情報を使用して、**Visual Studio 用開発者コマンド プロンプト** を開きます。
 
 2. **[開発者コマンド プロンプト for Visual Studio]** ウィンドウで、プロジェクトの出力を含むフォルダーに移動します。
 

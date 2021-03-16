@@ -3,12 +3,12 @@ title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: fb4a869fe67b3292ba430ea563bc2a072590adb2
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582153"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258404"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -79,7 +79,7 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 </Project>
 ```
 
-そのファイルが含まれるディレクトリのすべてのサブディレクトリ内のビルドで、プレビュー C# バージョンが使用されます。 詳しくは、「[ビルドのカスタマイズ](/visualstudio/msbuild/customize-your-build)」を参照してください。
+そのファイルが含まれるディレクトリのすべてのサブディレクトリ内のビルドで、プレビュー C# バージョンが使用されます。 詳細については、「[ビルドのカスタマイズ](/visualstudio/msbuild/customize-your-build)」を参照してください。
 
 ## <a name="c-language-version-reference"></a>C# 言語バージョン リファレンス
 
@@ -88,13 +88,13 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
 > [!TIP]
-> お使いのコンピューターで使用可能な言語バージョンの一覧を表示するには、[Visual Studio の開発者コマンド プロンプト](../../framework/tools/developer-command-prompt-for-vs.md)を開き、次のコマンドを実行します。
+> お使いのマシンで使用可能な言語バージョンの一覧を表示するには、[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を開き、次のコマンドを実行します。
 >
 > ```CMD
 > csc -langversion:?
 > ```
 >
-> このように [-langversion](compiler-options/langversion-compiler-option.md) コンパイル オプションを指定すると、次のような内容が出力されます。
+> このように [-langversion](compiler-options/langversion-compiler-option.md) コンパイル オプションをクエリすると、次のような内容が出力されます。
 >
 > ```CMD
 > Supported language versions:

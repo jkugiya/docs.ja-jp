@@ -3,12 +3,12 @@ title: 破棄 - C# ガイド
 description: C# の破棄のサポートについて説明します。破棄は、未割り当てで破棄可能な変数です。また、破棄の使用例についても説明します。
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: eefa81d3bd8d56c9296e01533aaf93c4725323a3
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432635"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104953"
 ---
 # <a name="discards---c-guide"></a>破棄 - C# ガイド
 
@@ -42,9 +42,9 @@ C# 9.0 以降では、破棄を使用して、ラムダ式の未使用の入力�
 
 ## <a name="pattern-matching-with-switch"></a>`switch` を使用したパターン マッチング
 
-*破棄パターン* は、[switch](language-reference/keywords/switch.md) キーワードを使用したパターン マッチングで使用できます。 各式は常に破棄パターンと一致します。 ([is](language-reference/keywords/is.md) 式で使用できます。 ただし、その意味を変更せずに破棄を削除できるため、このような使い方はまれです)。
+"*破棄パターン*" は、[switch 式](language-reference/operators/switch-expression.md)を使用したパターン マッチングで使用できます。 `null` も含め、あらゆる式は常に破棄パターンと一致します。
 
-[is](language-reference/keywords/is.md) ステートメントを使用して、オブジェクトが <xref:System.IFormatProvider> 実装を提供しているかどうかを判断し、オブジェクトが `null` かどうかをテストする `ProvidesFormatInfo` メソッドの定義例を次に示します。 また、破棄パターンを使用して、その他の任意の型の null 以外のオブジェクトを処理します。
+`switch` 式を使用して、オブジェクトが <xref:System.IFormatProvider> 実装を提供しているかどうかを判断し、オブジェクトが `null` かどうかをテストする `ProvidesFormatInfo` メソッドの定義例を次に示します。 また、破棄パターンを使用して、その他の任意の型の null 以外のオブジェクトを処理します。
 
 :::code language="csharp" source="snippets/discards/discard-pattern2.cs" ID="DiscardSwitchExample" :::
 

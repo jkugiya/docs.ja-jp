@@ -1,23 +1,23 @@
 ---
 title: 破壊的変更:Thread.Abort は古い形式
-description: Core .NET ライブラリでの .NET 5.0 の破壊的変更について学習します。この変更後、Thread.Abort API は古い形式となりました。
+description: Core .NET ライブラリでの .NET 5 の破壊的変更について学習します。この変更後、Thread.Abort API は古い形式となりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d7dfce8fda393bfd88c9b4cf0c59d53942cee25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 29c688250593801bab9b32b9e787911e561ec000
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759348"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257064"
 ---
 # <a name="threadabort-is-obsolete"></a>Thread.Abort は古い形式
 
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API は非推奨になっています。 .NET 5.0 以降のバージョンを対象とするプロジェクトでは、これらのメソッドが呼び出されると、コンパイル時の警告 `SYSLIB0006` が発生します。
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API は非推奨になっています。 .NET 5 以降のバージョンを対象とするプロジェクトでは、これらのメソッドが呼び出されると、コンパイル時の警告 `SYSLIB0006` が発生します。
 
 ## <a name="change-description"></a>変更内容
 
 以前は、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を呼び出したときにコンパイル時の警告は生成されませんでしたが、このメソッドによって実行時に <xref:System.PlatformNotSupportedException> がスローされていました。
 
-.NET 5.0 以降、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> は警告として古い形式を示すマークが付けられるようになりました。 このメソッドを呼び出すと、コンパイラの警告 `SYSLIB0006` が生成されます。 メソッドの実装は変更されず、引き続き <xref:System.PlatformNotSupportedException> がスローされます。
+.NET 5 以降、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> は警告として古い形式を示すマークが付けられるようになりました。 このメソッドを呼び出すと、コンパイラの警告 `SYSLIB0006` が生成されます。 メソッドの実装は変更されず、引き続き <xref:System.PlatformNotSupportedException> がスローされます。
 
 ## <a name="reason-for-change"></a>変更理由
 

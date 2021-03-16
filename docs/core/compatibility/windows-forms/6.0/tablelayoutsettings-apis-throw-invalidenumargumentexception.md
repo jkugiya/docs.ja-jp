@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:一部の TableLayoutSettings プロパティで InvalidEnumArgumentException がスローされる
-description: .NET 6.0 での破壊的変更について学習します。一部の TableLayoutSettings API で、無効な引数に対する InvalidEnumArgumentException がスローされるようになりました。
+description: .NET 6 での破壊的変更について学習します。一部の TableLayoutSettings API で、無効な引数に対する InvalidEnumArgumentException がスローされるようになりました。
 ms.date: 01/18/2021
-ms.openlocfilehash: 8397952e4647347718f11597a100c5d764e7186b
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 2da097122b935ec3a60c2bb009cc8ebbcff6468e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570245"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255725"
 ---
 # <a name="selected-tablelayoutsettings-properties-throw-invalidenumargumentexception"></a>選択された TableLayoutSettings プロパティで InvalidEnumArgumentException がスローされる
 
@@ -15,7 +15,7 @@ ms.locfileid: "98570245"
 
 ## <a name="change-description"></a>変更の説明
 
-以前のバージョンの .NET では、正しくない値を割り当てようとすると、これらのプロパティで <xref:System.ArgumentOutOfRangeException> がスローされます。 .NET 6.0 以降では、そのような場合にこれらのプロパティで <xref:System.ComponentModel.InvalidEnumArgumentException> がスローされます。
+以前のバージョンの .NET では、正しくない値を割り当てようとすると、これらのプロパティで <xref:System.ArgumentOutOfRangeException> がスローされます。 .NET 6 以降では、そのような場合にこれらのプロパティで <xref:System.ComponentModel.InvalidEnumArgumentException> がスローされます。
 
 ## <a name="reason-for-change"></a>変更理由
 

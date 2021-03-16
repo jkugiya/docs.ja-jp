@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:ConsoleLoggerOptions の古いプロパティ
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。ConsoleLoggerFormat 型と ConsoleLoggerOptions のいくつかのプロパティは、古くなりました。
+description: Core .NET ライブラリにおける .NET 5 の破壊的変更について学習します。ConsoleLoggerFormat 型と ConsoleLoggerOptions のいくつかのプロパティは、古くなりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: bd039dfa84ae3399d7fb36f992010a9a3c9f6ddf
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: c6ee294f90e304cebd517bd0139c58a6c7a41e0c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548384"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257311"
 ---
 # <a name="obsolete-properties-on-consoleloggeroptions"></a>ConsoleLoggerOptions の古いプロパティ
 
@@ -15,7 +15,7 @@ ms.locfileid: "99548384"
 
 ## <a name="change-description"></a>変更内容
 
-.NET 5.0 以降では、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> 型および <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions> のいくつかのプロパティは、互換性のために残されています。 互換性のために残されているプロパティは、次のとおりです。
+.NET 5 以降では、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> 型および <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions> のいくつかのプロパティは、互換性のために残されています。 互換性のために残されているプロパティは、次のとおりです。
 
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes?displayProperty=nameWithType>
@@ -49,7 +49,7 @@ ms.locfileid: "99548384"
   <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> と <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> にはいくつかの違いがあります。
 
   - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> には、`Default` と `Systemd` の 2 つのオプションがあるのみです。
-  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> では、大文字と小文字は区別されず、任意の文字列を指定できます。 予約された組み込みの名前は、`Simple`、`Systemd`、`Json` (.NET 5.0 以降) です。
+  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> では、大文字と小文字は区別されず、任意の文字列を指定できます。 予約された組み込みの名前は、`Simple`、`Systemd`、`Json` (.NET 5 以降) です。
   - `"Format": "Systemd"` は `"FormatterName": "Systemd"` にマップされます。
   - `"Format": "Default"` は `"FormatterName": "Simple"` にマップされます。
 

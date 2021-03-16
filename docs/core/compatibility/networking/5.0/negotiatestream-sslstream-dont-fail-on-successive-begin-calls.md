@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:NegotiateStream と SslStream によって連続した Begin 操作を許可する
-description: .NET 5.0 での破壊的変更について学習します。セキュリティ ストリームのエラー ケースは異なる方法で処理され、BeginAuthenticateAsServer または BeginAuthenticateAsClient に対する連続した呼び出しが失敗しなくなりました。
+description: .NET 5 での破壊的変更について学習します。セキュリティ ストリームのエラー ケースは異なる方法で処理され、BeginAuthenticateAsServer または BeginAuthenticateAsClient に対する連続した呼び出しが失敗しなくなりました。
 ms.date: 10/18/2020
-ms.openlocfilehash: e0226d0f5586efca050ca3497ca1490fa21fd943
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c042be01873849cc154111a31fc007521508c7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759384"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256440"
 ---
 # <a name="negotiatestream-and-sslstream-allow-successive-begin-operations"></a>NegotiateStream と SslStream によって連続した Begin 操作を許可する
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759384"
 
 ## <a name="change-description"></a>変更の説明
 
-以前のバージョンの .NET では、最初に `EndAuthenticateAsServer` または `EndAuthenticateAsClient` を呼び出さずに、`BeginAuthenticateAsServer` または `BeginAuthenticateAsClient` を連続して呼び出すと、<xref:System.NotSupportedException> になります。 .NET 5.0 以降では、これらの API は <xref:System.Threading.Tasks.Task> ベースの実装によってサポートされるため、`BeginAuthenticateAsServer` または `BeginAuthenticateAsClient` を連続して呼び出しても <xref:System.NotSupportedException> にはなりません。
+以前のバージョンの .NET では、最初に `EndAuthenticateAsServer` または `EndAuthenticateAsClient` を呼び出さずに、`BeginAuthenticateAsServer` または `BeginAuthenticateAsClient` を連続して呼び出すと、<xref:System.NotSupportedException> になります。 .NET 5 以降では、これらの API は <xref:System.Threading.Tasks.Task> ベースの実装によってサポートされるため、`BeginAuthenticateAsServer` または `BeginAuthenticateAsClient` を連続して呼び出しても <xref:System.NotSupportedException> にはなりません。
 
 ## <a name="reason-for-change"></a>変更理由
 

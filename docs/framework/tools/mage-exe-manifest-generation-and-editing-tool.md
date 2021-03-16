@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: bca26e359c25bf0dfae70f0ddfdc0c75b2081458
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ce3724271663163f26a34b6710b28503f7b0c52e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556324"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259929"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (マニフェストの生成および編集ツール)
 
@@ -19,7 +19,7 @@ ms.locfileid: "90556324"
 
 *Mage.exe* の代わりに、グラフィカルなアプリケーションである *MageUI.exe* を使用することもできます。 詳細については、「 [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)」を参照してください。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、Visual Studio の開発者コマンド プロンプトを使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
 
 Visual Studio には、2 つのバージョンの *Mage.exe* および *MageUI.exe* が含まれています。 バージョン情報を確認するには、*MageUI.exe* を実行し、 **[ヘルプ]** をクリックして、 **[バージョン情報]** をクリックします。 このドキュメントでは、バージョン 4.0.x.x の *Mage.exe* および *MageUI.exe* について説明します。
 
@@ -56,8 +56,8 @@ Mage [commands] [commandOptions]
 |**-csp, -CryptoProvider** `provider-name`||すべてのファイルの種類|秘密キー コンテナーを含む暗号化サービス プロバイダー (CSP) の名前を指定します。 このオプションには **-KeyContainer** オプションが必要です。<br/><br/>このオプションは、.NET Framework 4.7 以降で使用できます。|
 |**-fd, -FromDirectory** `directoryPath`||アプリケーション マニフェスト|`directoryPath`およびそのすべてのサブディレクトリで見つかったすべてのアセンブリとファイルの説明を含んでいるアプリケーション マニフェストを作成します。ここで、 `directoryPath` は、配置対象のアプリケーションが格納されているディレクトリです。 *Mage.exe* では、ディレクトリ内のファイルごとに、そのファイルがアセンブリなのかスタティック ファイルなのかが判断されます。 アセンブリの場合は、 `<dependency>` タグおよび `installFrom` 属性が、アセンブリ名、コード ベースおよびバージョンと共に、アプリケーションに追加されます。 スタティック ファイルの場合は、 `<file>` タグが追加されます。 また、*Mage.exe* は、簡単な一連のヒューリスティックによってアプリケーションのメイン実行可能ファイルを検出し、この実行可能ファイルを ClickOnce アプリケーションのエントリ ポイントとしてマニフェストでマークします。<br /><br /> *Mage.exe* では、ファイルが "データ" ファイルとして自動的にマークされることはありません。 これは手動で行う必要があります。 詳細については、「[方法:ClickOnce アプリケーションにデータ ファイルを含める](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)」を参照してください。<br /><br /> *Mage.exe* では、各ファイルのサイズに基づいて、各ファイルのハッシュも生成されます。 ClickOnce では、マニフェスト作成後に、配置の各ファイルが改ざんされていないことを確認するためにこれらのハッシュを使用します。 配置対象のファイルに変更を加えた場合には、*Mage.exe* を **-Update** コマンドおよび **-FromDirectory** オプションを付けて実行すると、参照している全ファイルのハッシュおよびアセンブリ バージョンを更新できます。<br /><br /> **-FromDirectory** を指定すると、 `directoryPath`で見つかった全サブディレクトリの全ファイルが含まれます。<br /><br /> **-FromDirectory** を **-Update** コマンドと共に使用すると、アプリケーション マニフェスト内のファイルのうち、このディレクトリに存在しなくなったファイルが *Mage.exe* によってマニフェストから削除されます。|
 |**-if, -IconFile**  `filePath`||アプリケーション マニフェスト|.ICO アイコン ファイルの完全パスを指定します。 このアイコンは、[スタート] メニューおよび [プログラムの追加と削除] エントリのアプリケーション名の横に表示されます。 アイコンを指定しない場合は、既定のアイコンが使用されます。|
-|**-ip, -IncludeProviderURL**  `url`|true|配置マニフェスト|**-ProviderURL**で設定された更新プログラムの場所の値が配置マニフェストに含まれているかどうかを示します。|
-|**-i, -Install** `willInstall`|true|配置マニフェスト|ClickOnce アプリケーションをローカル コンピューターにインストールするのか、Web サイトで実行するのかを指定します。 アプリケーションをインストールすると、アプリケーションは Windows の **[スタート]** メニューに表示されます。 有効な値は、"true" または "t"、および "false" または "f" です。<br /><br /> **-MinVersion** オプションを指定し、ユーザーが **-MinVersion** より前のバージョンをインストールしていた場合は、 **-Install**に渡した値に関係なく、アプリケーションがインストールされます。<br /><br /> このオプションは、 **-BrowserHosted** オプションと一緒に使用することはできません。 1 つのマニフェストに両方のオプションを使用しようとすると、エラーが発生します。|
+|**-ip, -IncludeProviderURL**  `url`|true|配置マニフェスト|**-ProviderURL** で設定された更新プログラムの場所の値が配置マニフェストに含まれているかどうかを示します。|
+|**-i, -Install** `willInstall`|true|配置マニフェスト|ClickOnce アプリケーションをローカル コンピューターにインストールするのか、Web サイトで実行するのかを指定します。 アプリケーションをインストールすると、アプリケーションは Windows の **[スタート]** メニューに表示されます。 有効な値は、"true" または "t"、および "false" または "f" です。<br /><br /> **-MinVersion** オプションを指定し、ユーザーが **-MinVersion** より前のバージョンをインストールしていた場合は、 **-Install** に渡した値に関係なく、アプリケーションがインストールされます。<br /><br /> このオプションは、 **-BrowserHosted** オプションと一緒に使用することはできません。 1 つのマニフェストに両方のオプションを使用しようとすると、エラーが発生します。|
 |**-kc, -KeyContainer** `name`||すべてのファイルの種類|秘密キーの名前を含むキー コンテナーを指定します。 このオプションには **CryptoProvider** オプションが必要です。<br/><br/>このオプションは、.NET Framework 4.7 以降で使用できます。|
 |**-mv, -MinVersion**  `[version]`|**-Version** フラグで指定された、ClickOnce 配置マニフェストに示されたバージョン。|配置マニフェスト|ユーザーが実行できる、このアプリケーションの最小バージョンです。 このフラグで指定したバージョンが、アプリケーションの最低限必要なバージョンになります。 大幅に変更された更新プログラムを含むバージョンや、重大なセキュリティ問題を解決したバージョンの製品をリリースした場合に、このフラグを使用すると、この更新バージョンを必ずインストールするように指定でき、ユーザーは古いバージョンを実行できなくなります。<br /><br /> `version` は、 **-Version** フラグの引数と同じ意味を持ちます。|
 |**-n, -Name** `nameString`|配置|すべてのファイルの種類|アプリケーションを識別するための名前です。 ClickOnce では、 **[スタート]** メニュー (アプリケーションをインストールする場合) や [Permission Elevation] ダイアログ ボックスでこのアプリケーションを示す名前として、この名前が使用されます。 **注:** 既存のマニフェストを更新するときにこのオプションで発行者名を指定しない場合、*Mage.exe* はコンピューターで定義された組織名でマニフェストを更新します。 別の名前を使用するには、必ずこのオプションを使用して希望する発行者名を指定してください。|
@@ -67,7 +67,7 @@ Mage [commands] [commandOptions]
 |**-pub, -Publisher** `publisherName`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|配置マニフェストとアプリケーション マニフェストのいずれかの description 要素に発行者名を追加します。 アプリケーション マニフェストで使用する場合、 **-UseManifestForTrust** も指定する必要があります (値は "true" または "t" に設定します)。指定しないと、エラーが発生します。|
 |**-s, -SupportURL**  `url`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|[プログラムの追加と削除] で、ClickOnce アプリケーションのエントリに表示されるリンクを指定します。|
 |**-ti, -TimestampUri** `uri`||アプリケーション マニフェスト<br /><br /> 配置マニフェスト|デジタル タイムスタンプ サービスの URL です。 マニフェストにタイムスタンプを設定すると、マニフェストに再署名することを防止できますが、アプリケーションの次のバージョンを配置する前にデジタル証明書の有効期限が切れるようにする必要があります。 詳細については、 [Windows ルート証明書プログラムのメンバー](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))を参照してください。|
-|**-t, -ToFile** `filePath`|-   New:<br />-   配置マニフェストの場合: deploy.application<br />-   アプリケーション マニフェストの場合: application.exe.manifest<br />-   Update コマンド オプション:<br />-   入力ファイル|すべてのファイルの種類|作成または変更されたファイルの出力パスを指定します。<br /><br /> **-New** を使用するときに **-ToFile**を指定しなかった場合、出力ファイルは現在の作業ディレクトリに書き込まれます。 **-Update** を使用する場合に **-ToFile** を指定しなかった場合、*Mage.exe* では、入力ファイルにファイルが書き戻されます。|
+|**-t, -ToFile** `filePath`|-   New:<br />-   配置マニフェストの場合: deploy.application<br />-   アプリケーション マニフェストの場合: application.exe.manifest<br />-   Update コマンド オプション:<br />-   入力ファイル|すべてのファイルの種類|作成または変更されたファイルの出力パスを指定します。<br /><br /> **-New** を使用するときに **-ToFile** を指定しなかった場合、出力ファイルは現在の作業ディレクトリに書き込まれます。 **-Update** を使用する場合に **-ToFile** を指定しなかった場合、*Mage.exe* では、入力ファイルにファイルが書き戻されます。|
 |**-tr, -TrustLevel** `level`|アプリケーション URL が存在するゾーンに基づいて。|アプリケーション マニフェスト|クライアント コンピューター上のアプリケーションに与える信頼のレベルです。 有効な値には、"Internet"、"Intranet"、および "FullTrust" が含まれます。|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|アプリケーション マニフェスト|アプリケーションをクライアントで実行するときに、アプリケーション マニフェストのデジタル署名を信頼の決定に使用するかどうかを指定します。 "true" または "t" を指定すると、信頼の決定にアプリケーション マニフェストが使用されます。 "false" または "f" を指定すると、信頼の決定に配置マニフェストの署名が使用されます。|
 |**-v, -Version** `versionNumber`|1.0.0.0|アプリケーション マニフェスト<br /><br /> 配置マニフェスト|配置のバージョンです。 引数は "*N.N.N.N*" という形式の有効なバージョン文字列である必要があります。ここで "*N*" は、32 ビット符号なし整数です。|
@@ -224,4 +224,4 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)
 - [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)

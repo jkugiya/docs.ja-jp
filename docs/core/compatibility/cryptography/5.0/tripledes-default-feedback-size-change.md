@@ -1,23 +1,23 @@
 ---
 title: '破壊的変更: TripleDES.Create で作成されるインスタンスの既定の FeedbackSize 値の変更'
-description: .NET 5.0 での破壊的変更について学習します。この変更により、TripleDES.Create() から返される TripleDES インスタンス上の FeedbackSize プロパティの既定値は、64 から 8 に変更されました。
+description: .NET 5 での破壊的変更について学習します。この変更により、TripleDES.Create() から返される TripleDES インスタンス上の FeedbackSize プロパティの既定値は、64 から 8 に変更されました。
 ms.date: 10/16/2020
-ms.openlocfilehash: 4179da17bf2e5cc5fcc7d64d83ba92119f912042
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d3259da30cce84e83a3f13c610dad5884b445b8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759896"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256765"
 ---
 # <a name="default-feedbacksize-value-for-instances-created-by-tripledescreate-changed"></a>TripleDES.Create で作成されるインスタンスの既定の FeedbackSize 値の変更
 
 <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType> から返される <xref:System.Security.Cryptography.TripleDES> インスタンスの <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize?displayProperty=nameWithType> プロパティの既定値が 64 から 8 に変更され、.NET Framework からの移行がより簡単になりました。 このプロパティは、呼び出し元のコードで直接使用されていない限り、<xref:System.Security.Cryptography.SymmetricAlgorithm.Mode> プロパティが <xref:System.Security.Cryptography.CipherMode.CFB?displayProperty=nameWithType>場合にのみ使用されます。
 
-<xref:System.Security.Cryptography.CipherMode.CFB> モードのサポートは最初に 5.0 RC1 リリース用の .NET に追加されたため、この変更の影響を受けるのは .NET 5.0 RC1 および .NET 5.0 RC2 アプリケーションのみであるはずです。
+<xref:System.Security.Cryptography.CipherMode.CFB> モードのサポートは最初に 5.0 RC1 リリース用の .NET に追加されたため、この変更の影響を受けるのは .NET 5 RC1 および .NET 5 RC2 アプリケーションのみであるはずです。
 
-## <a name="change-description"></a>変更の説明
+## <a name="change-description"></a>変更内容
 
-.Net Core と以前のプレリリース バージョンの .NET 5.0 では、`TripleDES.Create().FeedbackSize` の既定値は 64 です。 RTM バージョンの .NET 5.0 以降では、`TripleDES.Create().FeedbackSize` の既定値は 8 です。
+.Net Core と以前のプレリリース バージョンの .NET 5 では、`TripleDES.Create().FeedbackSize` の既定値は 64 です。 RTM バージョンの .NET 5 以降では、`TripleDES.Create().FeedbackSize` の既定値は 8 です。
 
 ## <a name="reason-for-change"></a>変更理由
 
@@ -31,7 +31,7 @@ ms.locfileid: "95759896"
 
 ## <a name="recommended-action"></a>推奨アクション
 
-RC1 または RC2 バージョンの .NET 5.0 でデータの暗号化またはその解除を行うアプリケーションにより、次の条件が満たされたときに CFB64 を使用して操作が行われます。
+RC1 または RC2 バージョンの .NET 5 でデータの暗号化またはその解除を行うアプリケーションにより、次の条件が満たされたときに CFB64 を使用して操作が行われます。
 
 - <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType> の <xref:System.Security.Cryptography.TripleDES> インスタンスを使用する。
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize> に既定値を使用する。

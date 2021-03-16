@@ -1,23 +1,23 @@
 ---
 title: 破壊的変更:null 許容参照型の注釈の変更
-description: .NET 6.0 のコア .NET ライブラリで、null 許容参照型の注釈が一部変更されたことによる破壊的変更について説明します。
+description: .NET 6 のコア .NET ライブラリで、null 許容参照型の注釈が一部変更されたことによる破壊的変更について説明します。
 ms.date: 02/11/2021
-ms.openlocfilehash: a0133ce49ba33d0e835b718f3f2b19180526c61b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: fe56fd3006528238713bd08f353b5044092043a2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488225"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256934"
 ---
 # <a name="changes-to-nullable-reference-type-annotations"></a>null 許容参照型の注釈の変更
 
-.NET 6.0 の .NET ライブラリの null 許容参照型の注釈が一部変更されました。
+.NET 6 の .NET ライブラリの null 許容参照型の注釈が一部変更されました。
 
 ## <a name="change-description"></a>変更内容
 
-以前のバージョンの .NET では、一部の null 許容照型の注釈が正しくなく、ビルド警告がない、または正しくありませんでした。 .NET 6.0 以降では、以前適用されていた一部の注釈が更新されています。 影響を受ける API は、新しいビルド警告を生成し、正しくないビルド警告を生成しません。
+以前のバージョンの .NET では、一部の null 許容照型の注釈が正しくなく、ビルド警告がない、または正しくありませんでした。 .NET 6 以降では、以前適用されていた一部の注釈が更新されています。 影響を受ける API は、新しいビルド警告を生成し、正しくないビルド警告を生成しません。
 
-これらの変更の一部は、ビルド時に新しい警告を発する可能性があるため、"*破壊的*" と見なされています。 .NET 6.0 に移行するときは、これらの API を参照するコードを更新する必要があります。
+これらの変更の一部は、ビルド時に新しい警告を発する可能性があるため、"*破壊的*" と見なされています。 .NET 6 に移行するときは、これらの API を参照するコードを更新する必要があります。
 
 このページでは、破壊的と見なされないその他の変更についても説明しています。 更新された API を参照するコードには、不要になった演算子やプラグマを削除できることによってメリットがある場合があります。
 
@@ -63,6 +63,12 @@ ms.locfileid: "100488225"
 | <xref:System.Data.IDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` パラメーター型が null 許容に | あり | Preview 1 |
 | <xref:System.Data.Common.DbDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` パラメーター型が null 許容に | あり | Preview 1 |
 | <xref:System.Data.Common.DbDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` パラメーター型が null 許容に | あり | Preview 1 |
+| <xref:System.Net.HttpListenerContext.AcceptWebSocketAsync%2A?displayProperty=fullName> | `subProtocol` パラメーター型が null 許容に | 非破壊的 | Preview 2 |
+| <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> と、[`bool` を返すその他のもの](https://github.com/dotnet/runtime/pull/47598/files)をオーバーライドするメソッド | 最初の null 許容パラメーターに `[NotNullWhen(true)]` を追加 | あり | Preview 2 |
+
+## <a name="see-also"></a>関連項目
+
+- [ASP.NET Core での null 許容参照型の注釈の変更](../../aspnet-core/6.0/nullable-reference-type-annotations-changed.md)
 
 <!--
 

@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:StringInfo と TextElementEnumerator は現在 UAX29 に準拠する
-description: .NET 5.0 でのグローバリゼーションの破壊的変更について学習します。この変更後、StringInfo と TextElementEnumerator により、最新バージョンの Unicode 標準に従って書記素クラスターが処理されるようになりました。
+description: .NET 5 でのグローバリゼーションの破壊的変更について学習します。この変更後、StringInfo と TextElementEnumerator により、最新バージョンの Unicode 標準に従って書記素クラスターが処理されるようになりました。
 ms.date: 04/07/2020
-ms.openlocfilehash: cd5ae5a3eb9f2dd9c02bc179a40d454d24101199
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf770e30bfadf1973bbe018cc9d2783ed6234723
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759342"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256706"
 ---
 # <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo と TextElementEnumerator は現在 UAX29 に準拠する
 

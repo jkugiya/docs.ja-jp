@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d3b5b1720f29c70b5276d1c79275d8c057b179a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247344"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259474"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
 
@@ -24,7 +24,7 @@ ActiveX コントロール インポーターは、ActiveX コントロール用
   
  ActiveX コントロールをホストするには、<xref:System.Windows.Forms.AxHost> から派生するラッパー コントロールを生成する必要があります。 ラッパー コントロールには、基になる ActiveX コントロールのインスタンスが 1 つ含まれます。 このインスタンスは、ActiveX コントロールとの通信方法を認識しますが、Windows フォーム コントロールとして表示されます。 生成されたコントロールは、ActiveX コントロールをホストし、そのプロパティ、メソッド、およびイベントを、生成されたコントロールのプロパティ、メソッド、およびイベントとして公開します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
   
  コマンド プロンプトに次のように入力します。  
   

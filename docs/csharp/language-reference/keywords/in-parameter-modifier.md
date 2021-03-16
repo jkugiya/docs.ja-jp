@@ -5,16 +5,16 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 171218dcc4904b797b0c9a66b56bcb970607684e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188409"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104849"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in パラメーター修飾子 (C# リファレンス)
 
-`in` キーワードによって、参照により引数が渡されます。 仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 これは、[ref](ref.md) または [out](out-parameter-modifier.md) キーワードと似ています。ただし、呼び出されたメソッドで `in` 引数を変更することはできません。 `ref` 引数には変更が許される一方で、`out` 引数の場合、呼び出されたメソッドによって変更される必要があります。そのような変更は、呼び出し元のコンテキストで観察できます。
+`in` キーワードを指定すると、引数が参照渡しされますが、引数が変更されることはありません。 仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 これは、[ref](ref.md) または [out](out-parameter-modifier.md) キーワードと似ています。ただし、呼び出されたメソッドで `in` 引数を変更することはできません。 `ref` 引数には変更が許される一方で、`out` 引数の場合、呼び出されたメソッドによって変更される必要があります。そのような変更は、呼び出し元のコンテキストで観察できます。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -120,14 +120,8 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 - 拡張メソッドの最初の引数では、その引数が構造体でない限り、`in` 修飾子を使用することはできません。
 - 拡張メソッドの 1 番目の引数がジェネリック型である場合 (その型が構造体として制約されている場合でも)。
 
+`in` 修飾子、それと `ref` および `out` との違いについては、[安全で効率的なコードの記述](../../write-safe-efficient-code.md)に関する記事で説明されています。
+
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>関連項目
-
-- [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# のキーワード](index.md)
-- [メソッド パラメーター](method-parameters.md)
-- [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)

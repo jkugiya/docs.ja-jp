@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:PublishDepsFilePath の動作の変更
-description: PublishDepsFilePath MSBuild プロパティがシングルファイル アプリケーションに対して空になるという、.NET 5.0 の破壊的変更について学習します。
+description: PublishDepsFilePath MSBuild プロパティがシングルファイル アプリケーションに対して空になるという、.NET 5 の破壊的変更について学習します。
 ms.date: 09/17/2020
-ms.openlocfilehash: 70631beff31aa3388e59f3b79875ef437351451a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760081"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256505"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>PublishDepsFilePath の動作の変更
 
@@ -21,7 +21,7 @@ ms.locfileid: "95760081"
 
 以前のバージョンの .NET での `PublishDepsFilePath` MSBuild プロパティは、非単一ファイル アプリケーションの場合は出力ディレクトリ内にあるアプリの *deps. json* ファイルへのパス、単一ファイル アプリの場合は中間ディレクトリ内のパスです。
 
-.NET 5.0 以降では、単一ファイル アプリケーションの場合は `PublishDepsFilePath` が空になり、新しい `IntermediateDepsFilePath` プロパティによって中間ディレクトリ内に *deps.json* の場所が指定されます。 また、非単一ファイル アプリケーションの場合は、ビルドの後半まで、*deps. json* ファイルを出力ディレクトリ (すなわち、`PublishDepsFilePath` によって指定されるパス) にコピーすることはできません。
+.NET 5 以降では、単一ファイル アプリケーションの場合は `PublishDepsFilePath` が空になり、新しい `IntermediateDepsFilePath` プロパティによって中間ディレクトリ内に *deps.json* の場所が指定されます。 また、非単一ファイル アプリケーションの場合は、ビルドの後半まで、*deps. json* ファイルを出力ディレクトリ (すなわち、`PublishDepsFilePath` によって指定されるパス) にコピーすることはできません。
 
 ## <a name="reason-for-change"></a>変更理由
 

@@ -3,12 +3,12 @@ title: メモリ リークのデバッグ チュートリアル
 description: .NET Core でメモリ リークをデバッグする方法について説明します。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431452"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255673"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core でメモリ リークをデバッグする
 
@@ -32,8 +32,7 @@ ms.locfileid: "100431452"
 
 このチュートリアルでは次のものを使用します。
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
-- プロセスを一覧表示するための [dotnet-trace](dotnet-trace.md)。
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 以降のバージョン。
 - マネージド メモリ使用量を確認するための [dotnet-counters](dotnet-counters.md)。
 - ダンプ ファイルを収集して分析するための [dotnet-dump](dotnet-dump.md)。
 - 診断する[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/) アプリ。
@@ -50,10 +49,10 @@ ms.locfileid: "100431452"
 dotnet run
 ```
 
-別のコンソールから、[dotnet-trace](dotnet-trace.md) ツールを使用してプロセス ID を見つけます。
+別のコンソールから、プロセス ID を見つけます。
 
 ```console
-dotnet-trace ps
+dotnet-counters ps
 ```
 
 出力は次のようになります。

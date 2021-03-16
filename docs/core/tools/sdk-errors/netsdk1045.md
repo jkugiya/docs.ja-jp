@@ -5,12 +5,12 @@ ms.topic: error-reference
 ms.date: 02/12/2021
 f1_keywords:
 - NETSDK1045
-ms.openlocfilehash: 900402ae01f945b1096170ea4fc79d00ea789b62
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 7f21270fdc7c2db862a49302a302bf8121fc86a5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488206"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104103"
 ---
 # <a name="netsdk1045-the-current-net-sdk-does-not-support-newer-version-as-a-target"></a>NETSDK1045: 現在の .NET SDK では、ターゲットとして '新しいバージョン' がサポートされていません。
 
@@ -40,7 +40,7 @@ dotnet --list-sdks
 
 .NET SDK の各バージョンは、x86 と x64 の両方のアーキテクチャで使用できます。 プロジェクトで間違ったアーキテクチャ用の .NET SDK を検索しようしているか、プロジェクトに必要なアーキテクチャ用の .NET SDK がインストールされていない可能性があります。 インストール フォルダーに必要なアーキテクチャがあるかどうかを確認してください。 たとえば、Windows では、.NET SDK の x86 バージョンが *C:\Program Files (x86)\dotnet* にインストールされ、x64 バージョンが *C:\Program Files\dotnet* にインストールされます。 「[.NET が既にインストールされていることを確認する方法](../../install/how-to-detect-installed-versions.md)」を参照し、ご利用のオペレーティング システムを選択して、コンピューターにインストールされているものを検出する方法を確認してください。
 
-必要なバージョンがインストールされていない場合は、[こちら](https://dotnet.microsoft.com/download/dotnet-core)からダウンロードしてください。
+必要なバージョンがインストールされていない場合、[.NET ダウンロード](https://dotnet.microsoft.com/download/dotnet) ページで、必要なバージョンを見つけてください。
 
 ## <a name="preview-not-enabled"></a>プレビューが有効になっていない
 

@@ -1,21 +1,21 @@
 ---
 title: 破壊的変更:ネイティブ コードから WinForms オブジェクトにアクセスできない
-description: ネイティブ コードから Windows フォーム オブジェクトにアクセスできなくなった .NET 5.0 の破壊的変更について説明します。
+description: ネイティブ コードから Windows フォーム オブジェクトにアクセスできなくなった .NET 5 の破壊的変更について説明します。
 ms.date: 01/29/2021
-ms.openlocfilehash: 53343f3f07817f735fa3b0ee77a352dcc80d4b6c
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 823d37cb8115b8669b254878325a350809393e79
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506477"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256094"
 ---
 # <a name="native-code-cant-access-windows-forms-objects"></a>ネイティブ コードが Windows フォーム オブジェクトにアクセスできない
 
-.NET 5.0 以降、ネイティブ コードから Windows フォーム オブジェクトにアクセスできなくなりました。
+.NET 5 以降、ネイティブ コードから Windows フォーム オブジェクトにアクセスできなくなりました。
 
 ## <a name="change-description"></a>変更内容
 
-以前の .NET バージョンでは、一部の Windows フォームの種類は、COM 相互運用機能から参照できるように修飾されていたため、ネイティブ コードからアクセスできました。 .NET 5.0 以降、Windows フォーム API は、COM 相互運用機能から参照できなくなり、ネイティブ コードにアクセスできなくなりました。 .NET ランタイムでは、すぐに使用できるカスタム タイプ ライブラリの作成がサポートされなくなりました。 さらに、.NET ランタイムは .NET Framework のタイプ ライブラリに依存できなくなりました (.NET Framework の場合と同じようにクラスの構造を維持する必要があります)。
+以前の .NET バージョンでは、一部の Windows フォームの種類は、COM 相互運用機能から参照できるように修飾されていたため、ネイティブ コードからアクセスできました。 .NET 5 以降、Windows フォーム API は、COM 相互運用機能から参照できなくなり、ネイティブ コードにアクセスできなくなりました。 .NET ランタイムでは、すぐに使用できるカスタム タイプ ライブラリの作成がサポートされなくなりました。 さらに、.NET ランタイムは .NET Framework のタイプ ライブラリに依存できなくなりました (.NET Framework の場合と同じようにクラスの構造を維持する必要があります)。
 
 ## <a name="reason-for-change"></a>変更理由
 
@@ -67,7 +67,7 @@ public class Form1 : Form
 }
 ```
 
-.NET 5.0 以降のバージョンでこのサンプルを動作させるには、2 つの方法があります。
+.NET 5 以降のバージョンでこのサンプルを動作させるには、2 つの方法があります。
 
 - `IDispatch` をサポートするユーザー宣言の `ObjectForScripting` オブジェクトを導入します (プロジェクト レベルで明示的に変更されない限り、既定で適用されます)。
 

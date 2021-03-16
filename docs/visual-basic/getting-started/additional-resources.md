@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400618"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258970"
 ---
 # <a name="additional-resources"></a>その他の技術情報
 
@@ -32,13 +32,14 @@ ms.locfileid: "93400618"
 
 |URL|説明|
 |----------|----------------|
-|[Visual Basic ドキュメントのサンプル](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic および .NET のドキュメント全体で使用されるサンプルが含まれています。|
+|[Visual Basic ドキュメントのサンプル](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|Visual Basic および .NET のドキュメント全体で使用されるサンプルが含まれています。|
+|[サンプル ブラウザー](https://docs.microsoft.com/samples/browse/?languages=vb)|Visual Basic で記述されたコード サンプルが含まれています|
 
 ### <a name="forums"></a>フォーラム
 
 |URL|説明|
 |----------|----------------|
-|[Visual Basic フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|一般的な Visual Basic の問題についてディスカッションを行います。|
+|[Microsoft Q&A](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|Visual Basic プログラミング言語に関する技術的な質問。|
 
 ### <a name="videos-and-webcasts"></a>ビデオと Web キャスト
 
@@ -64,4 +65,4 @@ ms.locfileid: "93400618"
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic 入門](index.md)
-- [ご意見](/visualstudio/ide/feedback-options)
+- [Visual Studio フィードバック オプション](/visualstudio/ide/feedback-options)

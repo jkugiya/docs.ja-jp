@@ -4,12 +4,12 @@ description: C# 言語に対する最新の機能強化により、以前はア�
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021486"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106619"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>安全で効率的な C# コードを記述する
 
@@ -21,14 +21,14 @@ C# の新しい機能により、よりよいパフォーマンスの検証可�
 
 この記事では、以下のリソース管理手法に焦点を当てます。
 
-- [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) を宣言して、型が**不変**であることを表します。 それにより、コンパイラでは [`in`](language-reference/keywords/in-parameter-modifier.md) パラメーターを使用するときに防御用のコピーを保存できます。
+- [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) を宣言して、型が **不変** であることを表します。 それにより、コンパイラでは [`in`](language-reference/keywords/in-parameter-modifier.md) パラメーターを使用するときに防御用のコピーを保存できます。
 - 型を変更できない場合は、メンバーが状態を変更しないことを示すために、`struct` メンバーの [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members) を宣言します。
 - 戻り値が <xref:System.IntPtr.Size?displayProperty=nameWithType> より大きい `struct` であり、ストレージの有効期間が値を返すメソッドより長い場合に、[`ref readonly`](language-reference/keywords/ref.md#reference-return-values) を使用して戻します。
 - `readonly struct` のサイズが <xref:System.IntPtr.Size?displayProperty=nameWithType> より大きいときは、パフォーマンスのため、`in` として渡す必要があります。
 - `readonly` 修飾子で宣言されている場合、またはメソッドが構造体の `readonly` メンバーのみを呼び出す場合を除き、`in` パラメーターとして `struct` は渡さないでください。 このガイダンスに違反すると、パフォーマンスが低下し、動作が不明瞭になる場合があります。
 - バイトのシーケンスとしてメモリを操作するには、[`ref struct`](language-reference/builtin-types/struct.md#ref-struct) または <xref:System.Span%601> や <xref:System.ReadOnlySpan%601> などの `readonly ref struct` を使用します。
 
-これらの手法では、**参照**と**値**に関する 2 つの相反する目標のバランスを取ることが強要されます。 [参照型](programming-guide/types/index.md#reference-types)の変数では、メモリ内の場所への参照が保持されます。 [値の型](programming-guide/types/index.md#value-types)の変数には、値が直接格納されます。 これらの違いにより、メモリ リソースを管理するために重要となる主な違いが強調されます。 **値の型**は、通常、メソッドに渡されるとき、またはメソッドから戻されるときに、コピーされます。 この動作には、値の型のメンバーを呼び出すときの、`this` の値のコピーが含まれます。 コピーのコストは、型のサイズに関係します。 **参照型**は、マネージド ヒープ上に割り当てられます。 新しいオブジェクトごとに新しく割り当てる必要があり、後でそれを回収する必要があります。 どちらの操作にも時間がかかります。 参照型が引数としてメソッドに渡されるとき、またはメソッドから戻されるときは、参照がコピーされます。
+これらの手法では、**参照** と **値** に関する 2 つの相反する目標のバランスを取ることが強要されます。 [参照型](programming-guide/types/index.md#reference-types)の変数では、メモリ内の場所への参照が保持されます。 [値の型](programming-guide/types/index.md#value-types)の変数には、値が直接格納されます。 これらの違いにより、メモリ リソースを管理するために重要となる主な違いが強調されます。 **値の型** は、通常、メソッドに渡されるとき、またはメソッドから戻されるときに、コピーされます。 この動作には、値の型のメンバーを呼び出すときの、`this` の値のコピーが含まれます。 コピーのコストは、型のサイズに関係します。 **参照型** は、マネージド ヒープ上に割り当てられます。 新しいオブジェクトごとに新しく割り当てる必要があり、後でそれを回収する必要があります。 どちらの操作にも時間がかかります。 参照型が引数としてメソッドに渡されるとき、またはメソッドから戻されるときは、参照がコピーされます。
 
 この記事では、次に示す 3 次元の点の構造体を概念の例として使用し、これらの推奨事項を説明します。
 
@@ -160,8 +160,7 @@ public struct Point3D
 
 `originReference` の宣言では、`readonly` 修飾子が必要です。
 
-コンパイラでは、呼び出し元で参照を変更できないように強制されます。 値を直接割り当てようとすると、コンパイル時エラーが生成されます。 ただし、メンバー メソッドによって構造体の状態が変更されるかどうかは、コンパイラでは認識できません。
-オブジェクトが変更されないように、コンパイラではコピーが作成され、そのコピーを使用してメンバー参照が呼び出されます。 変更されるとすれば、その防御用のコピーに行われます。
+コンパイラでは、呼び出し元で参照を変更できないように強制されます。 値を直接割り当てようとすると、コンパイル時エラーが生成されます。 その他の場合では、読み取り専用の参照が安全に利用できるまで、防御用のコピーがコンパイラによって割り当てられます。 スタティック分析ルールによって、構造体を変更できるかどうかが判断されます。 構造体が `readonly struct` のときや、メンバーが構造体の `readonly` メンバーのときは、防御用のコピーがコンパイラによって作成されることはありません。 構造体を `in` 引数として渡す目的では、防御用のコピーは不要です。
 
 ## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>`System.IntPtr.Size` より大きい `readonly struct` パラメーターに `in` 修飾子を適用する
 
@@ -216,7 +215,7 @@ public struct Point3D
 
 ## <a name="avoid-mutable-structs-as-an-in-argument"></a>`in` 引数として変更可能な構造体を使用しない
 
-上で説明した手法では、参照を返し、参照で値を渡すことにより、コピーを避ける方法が説明されています。 これらの手法は、引数の型が `readonly struct` 型として宣言されているときに最善の結果が得られます。 そうでない場合は、多くの状況において、引数の読み取り専用性を強制するために、コンパイラで**防御用コピー**を作成する必要があります。 原点からの 3D の点の距離を計算する以下の例について考えます。
+上で説明した手法では、参照を返し、参照で値を渡すことにより、コピーを避ける方法が説明されています。 これらの手法は、引数の型が `readonly struct` 型として宣言されているときに最善の結果が得られます。 そうでない場合は、多くの状況において、引数の読み取り専用性を強制するために、コンパイラで **防御用コピー** を作成する必要があります。 原点からの 3D の点の距離を計算する以下の例について考えます。
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 

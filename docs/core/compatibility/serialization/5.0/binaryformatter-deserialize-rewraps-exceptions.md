@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:BinaryFormatter.Deserialize によって例外の一部が再ラップされる
-description: .NET 5.0 での破壊的変更について学習します。BinaryFormatter.Deserialize によって SerializationException 内の例外オブジェクトの一部が再ラップされます。
+description: .NET 5 での破壊的変更について学習します。BinaryFormatter.Deserialize によって SerializationException 内の例外オブジェクトの一部が再ラップされます。
 ms.date: 08/18/2020
-ms.openlocfilehash: 90dc4cce6785fdb38644cca2a2e9aff65eb7a313
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e357035908f34c6c5c77d2a0728ab213bdc791a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759380"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256349"
 ---
 # <a name="binaryformatterdeserialize-rewraps-some-exceptions-in-serializationexception"></a>BinaryFormatter.Deserialize によって SerializationException の例外の一部が再ラップされる
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759380"
 
 以前の <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> メソッドでは、<xref:System.ArgumentNullException> などの一部の任意の例外が、スタックの上の呼び出し元に伝達されることが可能でした。
 
-.NET 5.0 以降の <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> メソッドでは、無効な逆シリアル化操作によって発生した例外がより積極的にキャッチされ、<xref:System.Runtime.Serialization.SerializationException> にラップされます。
+.NET 5 以降の <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> メソッドでは、無効な逆シリアル化操作によって発生した例外がより積極的にキャッチされ、<xref:System.Runtime.Serialization.SerializationException> にラップされます。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 

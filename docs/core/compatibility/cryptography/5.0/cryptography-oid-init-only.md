@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:Cryptography.Oid は機能的に初期化専用
-description: .NET 5.0 の破壊的変更について学習します。この変更後、Cryptography.Oid クラスのプロパティ setter は、値を変更しようとしたときに例外をスローするようになりました。
+description: .NET 5 の破壊的変更について学習します。この変更後、Cryptography.Oid クラスのプロパティ setter は、値を変更しようとしたときに例外をスローするようになりました。
 ms.date: 08/16/2020
-ms.openlocfilehash: a3b5a393e2a84f7c9a60c2a821ecfda9c6acd2e3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa1e72adcda61f2292574729e36cdc578bf907d2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759354"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256869"
 ---
 # <a name="systemsecuritycryptographyoid-is-functionally-init-only"></a>System.Security.Cryptography.Oid は機能的に初期化専用
 
@@ -17,7 +17,7 @@ ASN.1 オブジェクト識別子の値とその "わかりやすい" 名前を�
 
 以前のバージョンでは、<xref:System.Security.Cryptography.Oid> のプロパティの setter を使用して、<xref:System.Security.Cryptography.Oid.FriendlyName> および <xref:System.Security.Cryptography.Oid.Value> プロパティの値を変更できます。
 
-.NET 5.0 以降のバージョンでは、プロパティの setter は値の初期化にのみ使用できます。 プロパティにコンストラクターから、あるいはプロパティの setter の前の呼び出しからの値が設定されると、プロパティの setter で常に <xref:System.PlatformNotSupportedException> がスローされます。
+.NET 5 以降のバージョンでは、プロパティの setter は値の初期化にのみ使用できます。 プロパティにコンストラクターから、あるいはプロパティの setter の前の呼び出しからの値が設定されると、プロパティの setter で常に <xref:System.PlatformNotSupportedException> がスローされます。
 
 ## <a name="reason-for-change"></a>変更理由
 

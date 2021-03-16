@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:WinForms メソッドで ArgumentNullException がスローされるようになった
-description: .NET 5.0 での破壊的変更について学習します。一部の Windows フォーム メソッドで、null 引数に対して ArgumentNullException がスローされるようになりました。
+description: .NET 5 での破壊的変更について学習します。一部の Windows フォーム メソッドで、null 引数に対して ArgumentNullException がスローされるようになりました。
 ms.date: 09/18/2020
-ms.openlocfilehash: 77280827d44b0e58533339a09357d518a0bfe508
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d72f8e3320430396132de20c252cd5e8759dce3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759914"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256100"
 ---
 # <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms メソッドで ArgumentNullException がスローされるようになった
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759914"
 
 ## <a name="change-description"></a>変更の説明
 
-以前は、null の引数が渡された場合、特定の Windows フォーム メソッドでは <xref:System.NullReferenceException> がスローされていました。 .NET 5.0 以降、これらのメソッドでは、null 引数に対して <xref:System.ArgumentNullException> が代わりにスローされるようになりました。
+以前は、null の引数が渡された場合、特定の Windows フォーム メソッドでは <xref:System.NullReferenceException> がスローされていました。 .NET 5 以降、これらのメソッドでは、null 引数に対して <xref:System.ArgumentNullException> が代わりにスローされるようになりました。
 
 <xref:System.ArgumentNullException> をスローすることは、.NET ランタイムの動作に準拠しています。 また、引数が null であることと、どの引数がそうであるのかが明確に伝えられることで、デバッグ エクスペリエンスが向上します。
 
@@ -49,8 +49,8 @@ ms.locfileid: "95759914"
 > | <xref:System.Windows.Forms.ListViewGroup.System%23Runtime%23Serialization%23ISerializable%23GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | `info` | Preview 5 |
 > | <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor(System.String,System.Int32,System.Int32)> | `className` | Preview 5 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox)> | `owner` | Preview 6 |
-> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Object[])> | `owner`、`value` | Preview 6 |
-> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)> | `owner`、`value` | Preview 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Object[])> | `owner`, `value` | Preview 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)> | `owner`, `value` | Preview 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Object[])?displayProperty=nameWithType> | `items` | Preview 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Windows.Forms.ListBox.ObjectCollection)?displayProperty=nameWithType> | `value` | Preview 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.CopyTo(System.Object[],System.Int32)?displayProperty=nameWithType> | `destination` | Preview 6 |

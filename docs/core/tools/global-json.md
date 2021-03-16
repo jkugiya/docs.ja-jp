@@ -4,12 +4,12 @@ description: .NET CLI コマンドを実行するときに global.json ファイ
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc471cf5b50cf91c38b46607ccf38bd4d087aa6a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634000"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104142"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
@@ -153,7 +153,7 @@ SDK バージョンを選択するときに、特定の SDK バージョンが�
 
 ご使用のマシンにインストールされている SDK のバージョンを把握しておくと、*global.json* ファイルにそれを設定するときに役立ちます。 その方法の詳細については、[.NET が既にインストールされていることを確認する方法](../install/how-to-detect-installed-versions.md#check-sdk-versions)に関するセクションを参照してください。
 
-.NET SDK の別のバージョンをコンピューターにインストールするには、[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページにアクセスしてください。
+.NET SDK の別のバージョンをコンピューターにインストールするには、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet) ページにアクセスしてください。
 
 次の例のような [dotnet new](dotnet-new.md) コマンドを実行することにより、新しい *global.json* ファイルを現在のディレクトリに作成できます。
 

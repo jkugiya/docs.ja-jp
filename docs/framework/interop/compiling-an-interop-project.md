@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
-ms.openlocfilehash: 1cf5bdbedd53227e812b0d2ed97778ab34a81444
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9621d2e060db38549dcaab2e55e7645179831767
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557098"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480170"
 ---
 # <a name="compiling-an-interop-project"></a>相互運用プロジェクトのコンパイル
 
@@ -31,7 +31,7 @@ ms.locfileid: "90557098"
 
  Visual Studio での相互運用機能型の埋め込みについては、「[チュートリアル:Visual Studio でマネージド アセンブリからの型を埋め込む](../../standard/assembly/embed-types-visual-studio.md)」を参照してください。
 
- コマンド ライン コンパイラを使用して相互運用アセンブリを参照し、実行可能ファイルに型情報を埋め込むには、[-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md) または [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ スイッチを使用して、相互運用アセンブリの名前を指定します。
+ コマンド ライン コンパイラを使用して相互運用アセンブリを参照し、実行可能ファイルに型情報を埋め込むには、[-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes) または [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ スイッチを使用して、相互運用アセンブリの名前を指定します。
 
 > [!NOTE]
 > Visual C++ アプリケーションは型情報を埋め込むことはできませんが、型情報を埋め込むことができるアプリケーションまたはアドインと相互運用できます。

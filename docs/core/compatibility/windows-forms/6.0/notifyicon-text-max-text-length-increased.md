@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:NotifyIcon。テキストの最大文字数の増加
-description: .NET 6.0 での破壊的変更について学習します。NotifyIcon.Text プロパティのテキストの最大長が増加しています。
+description: .NET 6 での破壊的変更について学習します。NotifyIcon.Text プロパティのテキストの最大長が増加しています。
 ms.date: 01/19/2021
-ms.openlocfilehash: 0029556f3ec2795fb079575b329e7fbd187d486f
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: f87b98dd852ce202689ae9360bee9b6cfbf01794
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98617977"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255777"
 ---
 # <a name="notifyicontext-maximum-text-length-increased"></a>NotifyIcon。テキストの最大文字数の増加
 
@@ -15,7 +15,7 @@ ms.locfileid: "98617977"
 
 ## <a name="change-description"></a>変更の説明
 
-以前のバージョンの .NET では、<xref:System.Windows.Forms.NotifyIcon.Text?displayProperty=nameWithType> プロパティに許可されるテキストの最大長は 63 文字です。 .NET 6.0 以降では、許可されるテキストの最大長は 127 文字です。 いずれのバージョンでも、制限を超える値を設定しようとすると <xref:System.ArgumentException> がスローされます。
+以前のバージョンの .NET では、<xref:System.Windows.Forms.NotifyIcon.Text?displayProperty=nameWithType> プロパティに許可されるテキストの最大長は 63 文字です。 .NET 6 以降では、許可されるテキストの最大長は 127 文字です。 いずれのバージョンでも、制限を超える値を設定しようとすると <xref:System.ArgumentException> がスローされます。
 
 ## <a name="reason-for-change"></a>変更理由
 
@@ -23,7 +23,7 @@ ms.locfileid: "98617977"
 
 ## <a name="version-introduced"></a>導入されたバージョン
 
-.NET 6.0 Preview 1
+.NET 6 Preview 1
 
 ## <a name="recommended-action"></a>推奨アクション
 

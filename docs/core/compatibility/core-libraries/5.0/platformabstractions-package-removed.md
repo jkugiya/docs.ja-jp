@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:Microsoft.DotNet.PlatformAbstractions パッケージの削除
-description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。Microsoft.DotNet.PlatformAbstractions パッケージが削除されました。
+description: Microsoft.DotNet.PlatformAbstractions パッケージが削除されたという、Core .NET ライブラリに含まれる .NET 5 の破壊的変更について説明します。
 ms.date: 11/01/2020
-ms.openlocfilehash: 38ffe5e592d01c3bae14fc41becb594283b975a3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aff7be816815b016e3ce694c4e9a97410538c08d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759782"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257246"
 ---
 # <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft.DotNet.PlatformAbstractions パッケージの削除
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759782"
 
 <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> ライブラリは、System.\* 名前空間に既に確立されている API と重複します。 また、一部の <xref:Microsoft.DotNet.PlatformAbstractions> API は、System.\*API の他の部分と同じレベルの監視と長期的なサポートを考慮して設計されていませんでした。 たとえば、<xref:Microsoft.DotNet.PlatformAbstractions> では、`Platform` 列挙型を使用して、現在のオペレーティング システムのプラットフォームを記述します。 この列挙型の設計は、新しいプラットフォームおよび今後の柔軟性に対応できるように、<xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)?displayProperty=nameWithType> API が設計されたときに明示的に拒否されました。
 
-<xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> ライブラリで有効にされたシナリオは、それがなくても実現できるようになりました。 既存のバージョンは、.NET 5.0 以降でも引き続き動作し、以前のバージョンの .NET Core と共にサービスが提供されます。 しかし、新機能はライブラリに追加されなくなります。 代わりに、他のライブラリと API に新機能が追加されるようになります。
+<xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> ライブラリで有効にされたシナリオは、それがなくても実現できるようになりました。 既存のバージョンは、.NET 5 以降でも引き続き動作し、以前のバージョンの .NET Core と共にサービスが提供されます。 しかし、新機能はライブラリに追加されなくなります。 代わりに、他のライブラリと API に新機能が追加されるようになります。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 

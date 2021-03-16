@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:Blazor WebAssembly で System.Security.Cryptography API がサポートされない
-description: .NET 5.0 の破壊的変更について学習します。この変更後、暗号化 API は、ブラウザーで実行されると例外をスローするようになりました。
+description: .NET 5 の破壊的変更について学習します。この変更後、暗号化 API は、ブラウザーで実行されると例外をスローするようになりました。
 ms.date: 09/16/2020
-ms.openlocfilehash: ec10fa777e91f641b5582378830536a0cfa8dd72
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecbdda4c04642af6b1737e888491eb6565ba7479
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759355"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256882"
 ---
 # <a name="systemsecuritycryptography-apis-not-supported-on-blazor-webassembly"></a>Blazor WebAssembly で System.Security.Cryptography API がサポートされない
 
@@ -15,10 +15,10 @@ ms.locfileid: "95759355"
 
 ## <a name="change-description"></a>変更内容
 
-以前のバージョンの .NET では、ほとんどの <xref:System.Security.Cryptography> API が Blazor WebAssembly で使用できません。 .NET 5.0 以降、Blazor WebAssembly アプリでは .NET 5 API の全アクセス領域が対象になりますが、ブラウザー サンドボックスの制約によりすべての .NET 5 API がサポートされているわけではありません。 .NET 5.0 以降のバージョンでは、サポートされていない <xref:System.Security.Cryptography> API を WebAssembly で実行すると <xref:System.PlatformNotSupportedException> がスローされます。
+以前のバージョンの .NET では、ほとんどの <xref:System.Security.Cryptography> API が Blazor WebAssembly で使用できません。 .NET 5 以降、Blazor WebAssembly アプリでは .NET 5 API の全アクセス領域が対象になりますが、ブラウザー サンドボックスの制約によりすべての .NET 5 API がサポートされているわけではありません。 .NET 5 以降のバージョンでは、サポートされていない <xref:System.Security.Cryptography> API を WebAssembly で実行すると <xref:System.PlatformNotSupportedException> がスローされます。
 
 > [!TIP]
-> ブラウザー プラットフォームをサポートするプロジェクトをビルドすると、[プラットフォーム互換性アナライザー](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)によって、影響を受ける API の呼び出しにフラグが設定されます。 このアナライザーは、.NET 5.0 以降のアプリでは既定で実行されます。
+> ブラウザー プラットフォームをサポートするプロジェクトをビルドすると、[プラットフォーム互換性アナライザー](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)によって、影響を受ける API の呼び出しにフラグが設定されます。 このアナライザーは、.NET 5 以降のアプリでは既定で実行されます。
 
 ## <a name="reason-for-change"></a>変更理由
 

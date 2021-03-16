@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:DataGridView 関連の API が InvalidOperationException をスローする
-description: .NET 5.0 での破壊的変更について学習します。オブジェクトの DataGridViewCellAccessibleObject.Owner 値が null の場合に、DataGridView に関連する一部の API で例外がスローされます。
+description: .NET 5 での破壊的変更について学習します。オブジェクトの DataGridViewCellAccessibleObject.Owner 値が null の場合に、DataGridView に関連する一部の API で例外がスローされます。
 ms.date: 09/18/2020
-ms.openlocfilehash: 927b1c9160700159a45aa1472b8d96f1a9ecfe25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e49ce0ebecb5a9ab4ed7f0e0d70d994ab751bc58
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759909"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256115"
 ---
 # <a name="datagridview-related-apis-now-throw-invalidoperationexception"></a>DataGridView 関連の API が InvalidOperationException をスローするようになった
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759909"
 
 ## <a name="change-description"></a>変更内容
 
-以前のバージョンの .NET では、影響を受ける API からは、呼び出し時、<xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 値が <xref:System.NullReferenceException> であれば、`null` がスローされます。 .NET 5.0 以降、これらの API では、呼び出し時、<xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 値が `null` の場合、<xref:System.NullReferenceException> ではなく <xref:System.InvalidOperationException> がスローされます。
+以前のバージョンの .NET では、影響を受ける API からは、呼び出し時、<xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 値が <xref:System.NullReferenceException> であれば、`null` がスローされます。 .NET 5 以降、これらの API では、呼び出し時、<xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 値が `null` の場合、<xref:System.NullReferenceException> ではなく <xref:System.InvalidOperationException> がスローされます。
 
 <xref:System.InvalidOperationException> をスローすることは、.NET ランタイムの動作に準拠しています。 また、無効なプロパティが明確に伝えられることでデバッグ作業が快適になります。
 

@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: WinForms メソッドで ArgumentException がスローされるようになった'
-description: .NET 5.0 での破壊的変更について学習します。一部の Windows フォーム メソッドで、無効な引数に対する ArgumentException がスローされるようになりました。
+description: .NET 5 での破壊的変更について学習します。一部の Windows フォーム メソッドで、無効な引数に対する ArgumentException がスローされるようになりました。
 ms.date: 07/18/2020
-ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 9823e9162a562081cdd64346a502ca136b51fa75
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570217"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256140"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms メソッドで ArgumentException がスローされるようになった
 
@@ -15,7 +15,7 @@ ms.locfileid: "98570217"
 
 ## <a name="change-description"></a>変更の説明
 
-以前は、予期しない型または不適切な型の引数を特定の Windows フォーム メソッドに渡すと、不確定な状態になりました。 .NET 5.0 以降では、そのようなメソッドに無効な引数を渡すと、<xref:System.ArgumentException> がスローされるようになりました。
+以前は、予期しない型または不適切な型の引数を特定の Windows フォーム メソッドに渡すと、不確定な状態になりました。 .NET 5 以降では、そのようなメソッドに無効な引数を渡すと、<xref:System.ArgumentException> がスローされるようになりました。
 
 <xref:System.ArgumentException> をスローすることは、.NET ランタイムの動作に準拠しています。 また、どの引数が無効であるのかが明確に伝えられることで、デバッグ エクスペリエンスも向上します。
 

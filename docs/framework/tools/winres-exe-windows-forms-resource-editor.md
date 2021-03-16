@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543226"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258664"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
 Windows Resource Localization Editor (Winres.exe) は、ビジュアル レイアウト ツールです。ローカリゼーションの専門家は、このツールにより、フォームで使用される Windows フォームのユーザー インターフェイス (UI) リソースのローカライズが楽になります。 Winres.exe への入力として使用される .resx ファイルおよび .resources ファイルは、Microsoft Visual Studio などのビジュアル デザイン環境を使用して作成できます。 .NET Framework アプリケーションにおけるリソースの配置については、「[デスクトップ アプリケーションのリソース](../resources/index.md)」を参照してください。
 
-Winres.exe が Visual Studio と共にインストールされます。 ツールを実行するには、Visual Studio 用の開発者コマンド プロンプトを使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+Winres.exe が Visual Studio と共にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -56,7 +56,7 @@ Windows フォーム プロジェクトのフォームの UI 要素の状態は�
 
 Winres.exe では、対応する .resources ファイルに .resx ファイルを変換できません。この場合は Resgen.exe ツールを使用してください。 Resgen.exe について詳しくは、「[Resgen.exe (リソース ファイル ジェネレーター)](resgen-exe-resource-file-generator.md)」を参照してください。
 
-Winres.exe はグラフィカル アプリケーションであり、ソース コードにアクセスすることなく、リソース ファイルだけを使用して、Windows フォームのデザイン時バージョンを再作成できます。 Winres.exe では、Visual Studio の **Windows フォーム デザイナー**および **[プロパティ]** ウィンドウがホストされます。 この機能を使用すると、Windows フォームが含まれている .resources ファイルや .resx ファイルをビジュアル編集できます。 通常、ローカライズ ツールでは Winres.exe を使用して、コントロールのラベルが編集されると共に、ターゲット カルチャのラベルが納まるようにコントロールの位置とサイズが調整されます。
+Winres.exe はグラフィカル アプリケーションであり、ソース コードにアクセスすることなく、リソース ファイルだけを使用して、Windows フォームのデザイン時バージョンを再作成できます。 Winres.exe では、Visual Studio の **Windows フォーム デザイナー** および **[プロパティ]** ウィンドウがホストされます。 この機能を使用すると、Windows フォームが含まれている .resources ファイルや .resx ファイルをビジュアル編集できます。 通常、ローカライズ ツールでは Winres.exe を使用して、コントロールのラベルが編集されると共に、ターゲット カルチャのラベルが納まるようにコントロールの位置とサイズが調整されます。
 
 Winres.exe がコントロールの型を解決できない場合、ローカライズされた .resx ファイルまたは .resources ファイルには、プレースホルダー コントロールが作成されます。 このプレースホルダー コントロールは、Windows フォーム上にハッチ ウィンドウとして表示されます。 このハッチ ウィンドウのサイズおよび位置は、実際のコントロールのサイズおよび位置と一致します。 プレースホルダー コントロールのプロパティでローカライズできるプロパティはすべて、 **[プロパティ]** ウィンドウに表示されます。 プレースホルダー コントロールに対して行ったすべての変更内容が、実際のコントロールに保存されます。
 
@@ -70,7 +70,7 @@ Visual Studio には、開発およびローカリゼーション用の統合環
 
 ## <a name="using-winresexe"></a>Winres.exe の使用
 
-Winres.exe を使用してローカライズを行う場合は、まず、Visual Studio 内の **Windows フォーム デザイナー** などのビジュアル デザイナーを使用してアプリケーションを開発する必要があります。 開発が完了したら、フォームの <xref:System.ComponentModel.LocalizableAttribute> (**プロパティ エディター**内の **Localizable** プロパティ) を `true` に設定し、既定のカルチャの .resx ファイルを、サードパーティのローカライズ ツールに渡します。 この .resx ファイルには、Winres.exe が元のフォームのデザイン時バージョンを再作成するために使用する補足情報が含まれています。
+Winres.exe を使用してローカライズを行う場合は、まず、Visual Studio 内の **Windows フォーム デザイナー** などのビジュアル デザイナーを使用してアプリケーションを開発する必要があります。 開発が完了したら、フォームの <xref:System.ComponentModel.LocalizableAttribute> (**プロパティ エディター** 内の **Localizable** プロパティ) を `true` に設定し、既定のカルチャの .resx ファイルを、サードパーティのローカライズ ツールに渡します。 この .resx ファイルには、Winres.exe が元のフォームのデザイン時バージョンを再作成するために使用する補足情報が含まれています。
 
 > [!NOTE]
 > Winres.exe で既定のリソース ファイルを編集することはできません。 Winres.exe では、変更されたすべてのプロパティがローカライズされたプロパティと解釈され、ターゲット カルチャ リソース ファイルに保存されます。

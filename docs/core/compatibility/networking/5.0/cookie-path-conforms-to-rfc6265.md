@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:現在、Cookie パスの処理は、RFC 6265 に準拠している
-description: .NET 5.0 での破壊的変更について学習します。Cookie と CookieContainer クラスについて、RFC 6265 に定義されているパス処理アルゴリズムが実装されました。
+description: .NET 5 での破壊的変更について学習します。Cookie と CookieContainer クラスについて、RFC 6265 に定義されているパス処理アルゴリズムが実装されました。
 ms.date: 08/18/2020
-ms.openlocfilehash: 4aea06f434c4bbbef7d94b4b39ff647dd954745e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ee1bccc79a5ac271904dd3223b58cc168f18cfa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759396"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256466"
 ---
 # <a name="cookie-path-handling-now-conforms-to-rfc-6265"></a>現在、Cookie パスの処理は、RFC 6265 に準拠している
 

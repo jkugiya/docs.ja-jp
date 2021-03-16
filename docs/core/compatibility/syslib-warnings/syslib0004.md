@@ -3,12 +3,12 @@ title: SYSLIB0004 警告
 description: コンパイル時の警告 SYSLIB0004 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 03be8bb54f71f74ed94ee2c3f8489397ae1e99b5
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 76726e233e2900c82dce1b0872533e5356e91c8c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596304"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256369"
 ---
 # <a name="syslib0004-the-constrained-execution-region-cer-feature-is-not-supported"></a>SYSLIB0004: 制約された実行領域 (CER) 機能はサポートされていません
 
@@ -28,7 +28,7 @@ ms.locfileid: "97596304"
 
 ## <a name="workarounds"></a>回避策
 
-- CER 属性をメソッドに適用している場合、その属性を削除します。 そのような属性は、.NET 5.0 以降のバージョンで効果がありません。
+- CER 属性をメソッドに適用している場合、その属性を削除します。 そのような属性は、.NET 5 以降のバージョンで効果がありません。
 
   ```csharp
   // REMOVE the attribute below.
@@ -44,7 +44,7 @@ ms.locfileid: "97596304"
   }
   ```
 
-- `RuntimeHelpers.ProbeForSufficientStack` または `RuntimeHelpers.PrepareContractedDelegate` を呼び出している場合、呼び出しを削除します。 そのような呼び出しは、.NET 5.0 以降のバージョンで効果がありません。
+- `RuntimeHelpers.ProbeForSufficientStack` または `RuntimeHelpers.PrepareContractedDelegate` を呼び出している場合、呼び出しを削除します。 そのような呼び出しは、.NET 5 以降のバージョンで効果がありません。
 
   ```csharp
   public void DoSomething()
@@ -56,7 +56,7 @@ ms.locfileid: "97596304"
   }
   ```
 
-- `RuntimeHelpers.PrepareConstrainedRegions` を呼び出している場合、呼び出しを削除します。 この呼び出しは、.NET 5.0 以降のバージョンで効果がありません。
+- `RuntimeHelpers.PrepareConstrainedRegions` を呼び出している場合、呼び出しを削除します。 この呼び出しは、.NET 5 以降のバージョンで効果がありません。
 
   ```csharp
   public void DoSomething_Old()

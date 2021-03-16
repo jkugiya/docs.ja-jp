@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:TextInfo.ListSeparator 値の変更
-description: .NET 5.0 の破壊的変更について説明します。これにより、バージョン 5.0 と 5.0.1 間で TextInfo.ListSeparator の既定値が変更されました。
+description: .NET 5 の破壊的変更について説明します。これにより、バージョン 5.0 と 5.0.1 間で TextInfo.ListSeparator の既定値が変更されました。
 ms.date: 12/10/2020
-ms.openlocfilehash: 720d46c1908bcd70812f575a90f580470dbc7f32
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9a319da8ea8e3cbf62cbf4730e553b03f5bfdc89
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596393"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256726"
 ---
 # <a name="textinfolistseparator-values-changed"></a>TextInfo.ListSeparator 値の変更
 
@@ -21,7 +21,7 @@ ms.locfileid: "97596393"
 
 次の表は、<xref:System.Globalization.TextInfo.ListSeparator?displayProperty=nameWithType> 値の変更をまとめたものです。
 
-| | .NET Framework<br/>.NET Core 1.0 から 3.1 | .NET 5.0 | .NET 5.0.1 |
+| | .NET Framework<br/>.NET Core 1.0 から 3.1 | .NET 5 | .NET 5.0.1 |
 -|-|-|-
 | **Windows** | NLS から取得されます | ICU の小数点区切り。<br/>NLS に戻すことができます。 | NLS と同じです |
 | **Linux と macOS** | ICU の小数点区切り | ICU の小数点区切り | NLS と同じです |

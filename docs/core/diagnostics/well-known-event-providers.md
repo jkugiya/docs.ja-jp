@@ -3,12 +3,12 @@ title: .NET の既知のイベント プロバイダー
 description: .NET ランタイムおよびライブラリによって公開されているプロバイダーとイベントを確認します。
 ms.topic: reference
 ms.date: 12/21/2020
-ms.openlocfilehash: 03d505f33e300b094958676bb768fb542d828aeb
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: 37aa9551397bb3e3e8858a1289ddc3921327b722
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97738188"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105168"
 ---
 # <a name="well-known-event-providers-in-net"></a>.NET の既知のイベント プロバイダー
 
@@ -113,3 +113,9 @@ ms.locfileid: "97738188"
 ASP.NET Core には、ASP.NET Core スタックでの問題の診断に役立ついくつかのイベントも用意されています。
 
 ASP.NET Core のイベントとそれらを消費する方法の詳細については、「[.NET Core および ASP.NET Core でのログ記録](/aspnet/core/fundamentals/logging/)」を参照してください。
+
+## <a name="entity-framework-core"></a>Entity Framework コア
+
+EF Core からは、EF Core で問題診断を支援するイベントも提供されます。
+
+EF Core でのイベントとそれを使用する方法については、「[EF Core での .NET イベント](/ef/core/logging-events-diagnostics/events)」を参照してください。

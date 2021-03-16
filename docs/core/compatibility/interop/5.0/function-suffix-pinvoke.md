@@ -1,13 +1,13 @@
 ---
 title: '破壊的変更: Windows 以外のプラットフォームでは A/W サフィックスのプローブは行われません'
-description: .NET 5.0 での相互運用に関する破壊的変更について学習します。この変更により、Windows 以外のプラットフォームでの P/Invokes のプローブ中に、サフィックスは関数エクスポート名に追加されなくなりました。
+description: .NET 5 での相互運用に関する破壊的変更について学習します。この変更により、Windows 以外のプラットフォームでの P/Invokes のプローブ中に、サフィックスは関数エクスポート名に追加されなくなりました。
 ms.date: 08/13/2020
-ms.openlocfilehash: a4c612a81796faf80fa257df21232a54f7b95431
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 924cbcb6c432e2f7c52c7218d48a938b61306c9c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759819"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256622"
 ---
 # <a name="no-aw-suffix-probing-on-non-windows-platforms"></a>Windows 以外のプラットフォームでは A/W サフィックスのプローブは行われません
 
@@ -23,7 +23,7 @@ ms.locfileid: "95759819"
 
 以前のバージョンの .NET では、CoreCLR と Mono の両方のランタイムによって、"*すべてのプラットフォームでの*" P/Invoke のエクスポートの検出時に、エクスポート名に `A` または `W` サフィックスが追加されます。
 
-.NET 5.0 以降のバージョンでは、"*Windows のみでの*" エクスポートの検出時に `A` または `W` サフィックスがエクスポート名に追加されます。 Unix プラットフォームでは、サフィックスは追加されません。 Windows プラットフォーム上の両方のランタイムのセマンティクスは変更されません。
+.NET 5 以降のバージョンでは、"*Windows のみでの*" エクスポートの検出時に `A` または `W` サフィックスがエクスポート名に追加されます。 Unix プラットフォームでは、サフィックスは追加されません。 Windows プラットフォーム上の両方のランタイムのセマンティクスは変更されません。
 
 ## <a name="reason-for-change"></a>変更理由
 

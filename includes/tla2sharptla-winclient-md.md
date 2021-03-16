@@ -6,4 +6,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65671661"
 ---
-<span data-ttu-id="cc7f7-101">WPF</span><span class="sxs-lookup"><span data-stu-id="cc7f7-101">WPF</span></span>
+<span data-ttu-id="d6362-101">WPF</span><span class="sxs-lookup"><span data-stu-id="d6362-101">WPF</span></span>

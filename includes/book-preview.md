@@ -7,6 +7,6 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "71696780"
 ---
 > [!IMPORTANT]
-> <span data-ttu-id="3cfc5-101">**プレビュー版**</span><span class="sxs-lookup"><span data-stu-id="3cfc5-101">**PREVIEW EDITION**</span></span>
+> <span data-ttu-id="5836a-101">**プレビュー版**</span><span class="sxs-lookup"><span data-stu-id="5836a-101">**PREVIEW EDITION**</span></span>
 >
-> <span data-ttu-id="3cfc5-102">この記事では、現在作成中の書籍の初期コンテンツを提供しています。</span><span class="sxs-lookup"><span data-stu-id="3cfc5-102">This article provides early content from a book that is currently under construction.</span></span> <span data-ttu-id="3cfc5-103">フィードバックがある場合は、<https://aka.ms/ebookfeedback> から送信してください。</span><span class="sxs-lookup"><span data-stu-id="3cfc5-103">If you have any feedback, submit it at <https://aka.ms/ebookfeedback>.</span></span>
+> <span data-ttu-id="5836a-102">この記事では、現在作成中の書籍の初期コンテンツを提供しています。</span><span class="sxs-lookup"><span data-stu-id="5836a-102">This article provides early content from a book that is currently under construction.</span></span> <span data-ttu-id="5836a-103">フィードバックがある場合は、<https://aka.ms/ebookfeedback> から送信してください。</span><span class="sxs-lookup"><span data-stu-id="5836a-103">If you have any feedback, submit it at <https://aka.ms/ebookfeedback>.</span></span>

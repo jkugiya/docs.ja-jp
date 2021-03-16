@@ -1,0 +1,93 @@
+### YamlMime:Landing
+title: .NET の IoT ライブラリのドキュメント
+summary: ".NET \U0001F49C モノのインターネット"
+metadata:
+  title: .NET の IoT ライブラリのドキュメント
+  description: .NET を使用して、IoT のデバイスとシナリオ向けのアプリケーションを作成する方法について説明します。
+  ms.prod: dotnet
+  ms.topic: landing-page
+  ms.collection: collection
+  author: camsoper
+  ms.author: casoper
+  ms.date: 03/09/2021
+  ms.openlocfilehash: 76653c1a3b37d823f54f72e8436bf4c70fade77f
+  ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/11/2021
+  ms.locfileid: "103235234"
+landingContent:
+- title: 5 分で作業を開始する
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Sense HAT のクイックスタート
+      url: quickstarts/sensehat.md
+- title: 学習する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET の IoT ライブラリの概要
+      url: intro.md
+  - linkListType: get-started
+    links:
+    - text: .NET の IoT の Q&A
+      url: /answers/topics/dotnet-iot.html
+  - linkListType: deploy
+    links:
+    - text: Raspberry Pi に .NET アプリを展開する
+      url: deployment.md
+  - linkListType: concept
+    links:
+    - text: Raspberry Pi で .NET アプリをデバッグする
+      url: debugging.md
+  - linkListType: reference
+    links:
+    - text: API リファレンス
+      url: ../../api/index.md?view=iot-dotnet-1.1
+- title: デバイスに接続する
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: LED を点滅させる
+      url: tutorials/blink-led.md
+    - text: センサーから環境条件を読み取る
+      url: tutorials/temp-sensor.md
+    - text: LCD にテキストを表示する
+      url: tutorials/lcd-display.md
+    - text: アナログ デジタル コンバーターから値を読み取る
+      url: tutorials/adc.md
+- title: パッケージとソース コード
+  linkLists:
+  - linkListType: download
+    links:
+    - text: NuGet での System.Device.Gpio
+      url: https://www.nuget.org/packages/System.Device.Gpio/
+    - text: NuGet での Iot.Device.Bindings
+      url: https://www.nuget.org/packages/Iot.Device.Bindings/
+    - text: GitHub の .NET IoT ライブラリ ソース
+      url: https://github.com/dotnet/iot
+    - text: GitHub のサンプルを使用したデバイスのバインド
+      url: https://github.com/dotnet/iot/blob/master/src/devices
+- title: ビデオ ラーニング
+  linkLists:
+  - linkListType: video
+    links:
+    - text: .NET の IoT 101 (シリーズ)
+      url: https://aka.ms/IoTNet101
+    - text: BBQ、ボット、および .NET Core
+      url: https://channel9.msdn.com/Shows/On-NET/BBQ-Bots-and-NET-Core
+- title: リソース
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Raspberry Pi のドキュメント
+      url: https://www.raspberrypi.org/documentation/
+  - linkListType: how-to-guide
+    links:
+    - text: パスワードレスの SSH アクセス
+      url: https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
+    - text: Raspberry Pi のヘッドレス セットアップ
+      url: https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+    - text: 起動時に .NET アプリを自動的に実行する
+      url: https://github.com/dotnet/iot/blob/master/Documentation/How-to-start-your-app-automatically-on-boot.md

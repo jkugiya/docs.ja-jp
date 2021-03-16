@@ -1,0 +1,95 @@
+### YamlMime:Landing
+title: .NET ドキュメント - 新着記事
+summary: .NET ドキュメントの新着記事へようこそ。このページでは、最新の変更をすばやく見つけることができます。
+metadata:
+  title: .NET ドキュメントの新着記事
+  description: .NET ドキュメントの新しいコンテンツと更新されたコンテンツについて説明します。
+  ms.date: 03/03/2021
+  ms.topic: landing-page
+  ms.openlocfilehash: e42a6c4a12bfb9a5a4b5ab5dabdfebb280383efa
+  ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/11/2021
+  ms.locfileid: "103235233"
+landingContent:
+- title: .NET の更新プログラムを検索する
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 2021 年 2 月
+      url: 2021-02.md
+    - text: 2021 年 1 月
+      url: 2021-01.md
+    - text: 2020 年 12 月
+      url: 2020-12.md
+    - text: 2020 年 11 月
+      url: 2020-11.md
+    - text: 2020 年 10 月
+      url: 2020-10.md
+    - text: 2020 年 9 月
+      url: 2020-09.md
+- title: 言語の更新プログラムを検索する
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: C# 9 の新機能
+      url: ../csharp/whats-new/csharp-9.md
+    - text: F# 5.0 の新機能
+      url: ../fsharp/whats-new/fsharp-50.md
+    - text: Visual Basic の新機能
+      url: ../visual-basic/whats-new/index.md
+- title: 参加しましょう - 投稿する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET ドキュメントのリポジトリ
+      url: https://github.com/dotnet/docs/blob/main/README.md
+    - text: プロジェクト構造と、イシューとプル要求のラベル
+      url: /contribute/dotnet/labels-projects
+    - text: .NET Foundation
+      url: https://dotnetfoundation.org/
+  - linkListType: concept
+    links:
+    - text: Microsoft ドキュメント共同作成者ガイド
+      url: /contribute
+    - text: .NET ドキュメント共同作成者ガイド
+      url: /contribute/dotnet/dotnet-contribute
+- title: .NET 開発者
+  linkLists:
+  - linkListType: download
+    links:
+    - text: .NET SDK をダウンロードする
+      url: https://dotnet.microsoft.com/download
+  - linkListType: sample
+    links:
+    - text: .NET サンプル ブラウザー
+      url: /samples/browse/?products=dotnet
+  - linkListType: get-started
+    links:
+    - text: .NET の Q&A
+      url: /answers/products/dotnet
+  - linkListType: whats-new
+    links:
+    - text: コミュニティ
+      url: https://dotnet.microsoft.com/platform/community
+- title: 関連する新機能のページ
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: ASP.NET Core ドキュメントの更新内容
+      url: /aspnet/core/whats-new/
+    - text: Xamarin ドキュメントの更新内容
+      url: /xamarin/whats-new/
+    - text: .NET Core リリース ノート
+      url: https://github.com/dotnet/core/blob/master/release-notes/README.md
+    - text: ASP.NET Core リリース ノート
+      url: /aspnet/core/release-notes/aspnetcore-3.1
+    - text: C# コンパイラ (Roslyn) リリース ノート
+      url: https://github.com/dotnet/roslyn/tree/master/docs/ide
+    - text: Visual Studio リリース ノート
+      url: /visualstudio/releases/2019/release-notes
+    - text: Visual Studio for Mac リリース ノート
+      url: /visualstudio/releasenotes/vs2019-mac-relnotes
+    - text: Visual Studio Code リリース ノート
+      url: https://code.visualstudio.com/updates

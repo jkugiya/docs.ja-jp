@@ -1,6 +1,6 @@
 ---
-title: コードスタイルの書式規則
-description: インデント、スペース、および改行を書式設定するためのコードスタイル規則について説明します。
+title: コード スタイルの書式設定規則
+description: インデント、スペース、および改行を書式設定するためのコード スタイル規則について説明します。
 ms.date: 09/25/2020
 ms.topic: reference
 author: gewarren
@@ -16,41 +16,41 @@ helpviewer_keywords:
 - formatting code style rules [EditorConfig]
 - formatting rules
 - EditorConfig formatting conventions
-ms.openlocfilehash: 61e6f6a6afdc6aaf9710eef3143af8ae700ef612
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
-ms.translationtype: MT
+ms.openlocfilehash: 866949692341f65a5b78c7dd5b8eec918873d3b7
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96591727"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511802"
 ---
 # <a name="formatting-rules"></a>書式設定規則
 
-書式設定規則は、.NET プログラミング言語の構造に合わせてインデント、スペース、および改行を揃える方法に影響します。 規則は次のカテゴリに分類されます。
+書式設定規則は、.NET プログラミング言語の構造に合わせてインデント、スペース、および改行を揃える方法に影響を与えます。 この規則は次のカテゴリに分けられます。
 
-- [.Net 書式設定規則](#net-formatting-rules): C# と Visual Basic の両方に適用される規則。 これらの規則の EditorConfig オプション名は、 `dotnet_` prefix で始まります。
-- [C# の書式規則](#c-formatting-rules): c# 言語に固有の規則。 これらの規則の EditorConfig オプション名は、 `csharp_` prefix で始まります。
+- [.NET 書式設定規則](#net-formatting-rules): C# と Visual Basic の両方に適用される規則。 これらの規則の EditorConfig オプション名は `dotnet_` プレフィックスで始まります。
+- [C# 書式設定規則](#c-formatting-rules): C# 言語のみに固有の規則。 これらの規則の EditorConfig オプション名は `csharp_` プレフィックスで始まります。
 
-## <a name="rule-id-ide0055-fix-formatting"></a>ルール ID: "IDE0055" (書式設定の修正)
+## <a name="rule-id-ide0055-fix-formatting"></a>規則 ID: "IDE0055" (書式設定の修正)
 
-すべての書式設定オプションには、ルール ID `IDE0055` とタイトルがあり `Fix formatting` ます。 次の構成行を使用して、EditorConfig ファイルの形式違反の重大度を設定します。
+書式設定オプションはすべて、規則 ID が `IDE0055`、タイトルが `Fix formatting` になります。 EditorConfig ファイルで次の構成行を使用して、書式設定違反の重大度を設定します。
 
 ```ini
 dotnet_diagnostic.IDE0055.severity = <severity value>
 ```
 
-重大度値は、 `warning` `error` [ビルドで適用](../overview.md#code-style-analysis)される必要があります。 可能なすべての重要度の値については、「 [重大度レベル](../configuration-options.md#severity-level)」を参照してください。
+[ビルド時に適用](../overview.md#code-style-analysis)するには、重大度の値を `warning` または `error` にする必要があります。 使用できるすべての重大度の値については、「[重大度レベル](../configuration-options.md#severity-level)」を参照してください。
 
-## <a name="option-format"></a>オプションの形式
+## <a name="option-format"></a>オプションの書式
 
-書式設定規則のオプションは、EditorConfig ファイルで次の形式で指定できます。
+書式設定規則のオプションは、EditorConfig ファイルで、次の形式で指定できます。
 
 `rule_name = value`
 
 多くのルールでは、`value` に対して `true` (このスタイルを優先する) または `false` (このスタイルを優先しない) を指定します。 他のルールでは、`flush_left` や `before_and_after` のような値を指定して、ルールを適用する状況と場所を記述します。 重要度は指定しません。
 
-## <a name="net-formatting-rules"></a>.NET の書式規則
+## <a name="net-formatting-rules"></a>.NET 書式設定規則
 
-このセクションの書式ルールは、C# と Visual Basic の両方に適用されます。
+このセクションの書式設定規則は、C# と Visual Basic の両方に適用されます。
 
 - [using の整理](#organize-using-directives)
   - dotnet_sort_system_directives_first
@@ -76,7 +76,7 @@ dotnet_separate_import_directive_groups = true
 | **オプション名** | dotnet_sort_system_directives_first |
 | **該当言語** | C# および Visual Basic |
 | **導入されたバージョン** | Visual Studio 2017 バージョン 15.3 |
-| **オプションの値** | `true` - `System.*` `using` ディレクティブをアルファベット順に並べ替え、他の using ディレクティブの前に配置します。<br /><br />`false` - `System.*` `using` ディレクティブを他のディレクティブの前に配置しないで `using` ください。 |
+| **オプションの値** | `true` - `System.*` `using` ディレクティブをアルファベット順に並べ替え、他の using ディレクティブの前に配置します。<br /><br />`false` - `System.*` `using` ディレクティブを他の `using` ディレクティブの前に配置しません。 |
 
 コード例:
 
@@ -116,7 +116,7 @@ using System.Threading.Tasks;
 using Octokit;
 ```
 
-## <a name="c-formatting-rules"></a>C# の書式規則
+## <a name="c-formatting-rules"></a>C# 書式設定規則
 
 このセクションの書式ルールは、C# コードにのみ適用されます。
 
@@ -1040,7 +1040,7 @@ for (int i = 0; i < x.Length; i++)
 for (int i = 0;i < x.Length;i++)
 ```
 
-##### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
+#### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
 
 |プロパティ|値|
 |-|-|
@@ -1229,4 +1229,4 @@ namespace Conventions
 
 - [言語規則](language-rules.md)
 - [名前付け規則](naming-rules.md)
-- [.NET コードスタイル規則のリファレンス](index.md)
+- [.NET コード スタイルの規則のリファレンス](index.md)

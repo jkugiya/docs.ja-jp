@@ -17,7 +17,7 @@ ms.locfileid: "73127420"
 
 API には次の関数が含まれています。
 
-| Function | [説明] |
+| 機能 | 説明 |
 |---------|---------|
 | [BeginEnumeration 関数](beginenumeration.md) | 列挙子が WMI オブジェクト プロパティの列挙型の先頭にリセットされます。 |
 | [BeginMethodEnumeration 関数](beginmethodenumeration.md) |  オブジェクトで使用可能なメソッドの列挙型が開始されます。 |
@@ -71,6 +71,6 @@ API には次の関数が含まれています。
 | [VerifyClient 関数](verifyclientkey.md) | クライアント キーに適切なセキュリティが確実に含められます。 |
 | [WritePropertyValue 関数](writepropertyvalue.md) | 指定したバイト数が、プロパティ ハンドルによって識別されるプロパティに書き込まれます。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [アンマネージド API リファレンス](../index.md)

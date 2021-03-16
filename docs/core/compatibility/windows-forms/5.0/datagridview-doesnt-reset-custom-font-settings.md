@@ -1,13 +1,13 @@
 ---
 title: 破壊的変更:カスタマイズされたセル スタイルのフォントが DataGridView によってリセットされなくなった
-description: セル スタイル フォントがカスタマイズされている場合、アンビエント フォントと一致させるために既定のセルスタイル フォントが DataGridView によってリセットされなくなったという、.NET 5.0 の破壊的変更について学習します。
+description: セル スタイル フォントがカスタマイズされている場合、アンビエント フォントと一致させるために既定のセルスタイル フォントが DataGridView によってリセットされなくなったという、.NET 5 の破壊的変更について学習します。
 ms.date: 10/18/2020
-ms.openlocfilehash: 708b12ba1305681f5c38eb605861d02e3b2c8eb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd28fb5a0b508157289dde1b720522ed49163e31
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760070"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256129"
 ---
 # <a name="datagridview-no-longer-resets-fonts-for-customized-cell-styles"></a>カスタマイズされたセル スタイルのフォントが DataGridView によってリセットされなくなった
 
@@ -17,7 +17,7 @@ ms.locfileid: "95760070"
 
 以前のバージョンの .NET では、アンビエント フォントが変更されると、<xref:System.Windows.Forms.DataGridView.DefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle>、および <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> の各プロパティのユーザー定義フォントが <xref:System.Windows.Forms.DataGridViewElement.DataGridView> によってリセットされ、オーバーライドされます。
 
-.NET 5.0 以降では、<xref:System.Windows.Forms.DataGridView.DefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> のいずれかのプロパティでフォント設定を構成すると、アンビエント フォントが変更された場合でも、これらの設定が保持されます。 フォントをカスタマイズしないこれらのプロパティのフォントは、いずれもアンビエント フォントの設定に合わせて変更されます。
+.NET 5 以降では、<xref:System.Windows.Forms.DataGridView.DefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> のいずれかのプロパティでフォント設定を構成すると、アンビエント フォントが変更された場合でも、これらの設定が保持されます。 フォントをカスタマイズしないこれらのプロパティのフォントは、いずれもアンビエント フォントの設定に合わせて変更されます。
 
 ## <a name="reason-for-change"></a>変更理由
 

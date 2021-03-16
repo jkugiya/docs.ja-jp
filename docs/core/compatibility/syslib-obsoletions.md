@@ -1,17 +1,17 @@
 ---
 title: .NET 5 以降の古い機能
-description: SYSLIB コンパイラの警告を発生させる、.NET 5.0 以降のバージョンで古いものとしてマークされた API について説明します。
+description: SYSLIB コンパイラの警告を発生させる、.NET 5 以降のバージョンで古いものとしてマークされた API について説明します。
 ms.date: 10/20/2020
-ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: d6563f21624456d74801242268ecf72652fc4f88
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593306"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256284"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 の古い機能
 
-.NET 5.0 以降、新たに、古いものとしてマークされた一部の API によって、<xref:System.ObsoleteAttribute> の 2 つの新しいプロパティが使用されます。
+.NET 5 以降、新たに、古いものとしてマークされた一部の API によって、<xref:System.ObsoleteAttribute> の 2 つの新しいプロパティが使用されます。
 
 - <xref:System.ObsoleteAttribute.DiagnosticId?displayProperty=nameWithType> プロパティは、カスタム診断 ID を使用してビルド警告を生成するようにコンパイラに指示します。 カスタム ID を使用すると、旧型式であるという警告を明確に個別に分けて非表示にすることができます。 .NET 5 以降の旧型式の場合、カスタム診断 ID の形式は `SYSLIBxxxx` です。
 

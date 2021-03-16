@@ -6,4 +6,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65670724"
 ---
-<span data-ttu-id="d67b0-101">4 以降で使用可能</span><span class="sxs-lookup"><span data-stu-id="d67b0-101">Available since 4</span></span>
+<span data-ttu-id="d1e38-101">4 以降で使用可能</span><span class="sxs-lookup"><span data-stu-id="d1e38-101">Available since 4</span></span>

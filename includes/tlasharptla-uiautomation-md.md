@@ -6,4 +6,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65670309"
 ---
-<span data-ttu-id="cffa6-101">Microsoft UI オートメーション</span><span class="sxs-lookup"><span data-stu-id="cffa6-101">Microsoft UI Automation</span></span>
+<span data-ttu-id="defde-101">Microsoft UI オートメーション</span><span class="sxs-lookup"><span data-stu-id="defde-101">Microsoft UI Automation</span></span>

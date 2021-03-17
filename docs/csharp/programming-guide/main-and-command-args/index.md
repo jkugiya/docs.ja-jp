@@ -1,7 +1,7 @@
 ---
 title: Main() とコマンドライン引数 - C# プログラミング ガイド
 description: Main() とコマンドライン引数について説明します。 ' Main ' メソッドは、実行可能プログラムのエントリポイントです。
-ms.date: 08/02/2017
+ms.date: 03/08/2021
 f1_keywords:
 - main_CSharpKeyword
 - Main
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 611b0c8818f8f800cf1cf5c0f6b2789882939b7b
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957539"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190204"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() とコマンドライン引数 (C# プログラミング ガイド)
 
@@ -26,6 +26,12 @@ ms.locfileid: "88957539"
 C# プログラムのエントリ ポイントは 1 つのみです。 `Main` メソッドを持つクラスが 2 つ以上ある場合、プログラムをコンパイルする際に `-main` コンパイラ オプションを使用して、どの `Main` メソッドをエントリ ポイントとして使用するかを指定する必要があります。 詳細については、「[-main (C# コンパイラ オプション)](../../language-reference/compiler-options/main-compiler-option.md)」を参照してください。
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
+
+C# 9 以降では、次の例のように `Main` メソッドを省略し、`Main` メソッド内にあるかのように C# ステートメントを記述することができます。
+
+:::code language="csharp" source="snippets/top-level-statements-1/Program.cs":::
+
+暗黙的なエントリ ポイント メソッドを使用してアプリケーション コードを記述する方法の詳細については、「[最上位レベルのステートメント](top-level-statements.md)」を参照してください。
 
 ## <a name="overview"></a>概要
 

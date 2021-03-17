@@ -2,20 +2,20 @@
 title: Windows フォーム アプリを .NET 5 にアップグレードする
 description: .NET アップグレード アシスタントを使用して、既存の .NET Framework Windows フォーム アプリを .NET 5 にアップグレードします。 .NET アップグレード アシスタントは、.NET Framework から .NET 5 にアプリを移行するときに役立つ CLI ツールです。
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 376b74ae52b12056e7799278933eda0f39781f78
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 1ba80964c52cb9b6960efdebbd8d4e8ef33d63e6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108229"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604828"
 ---
 # <a name="upgrade-a-windows-forms-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET アップグレード アシスタントを使用して Windows フォーム アプリを .NET 5 にアップグレードする
 
 [.NET アップグレード アシスタント](upgrade-assistant-overview.md)は、.NET Framework Windows フォーム (WinForms) アプリを .NET 5 にアップグレードするときに役立つコマンドライン ツールです。 この記事では、次について説明します。
 
-* .NET Framework Windows フォーム アプリに対してツールを実行する方法のデモ
-* トラブルシューティングのヒント
+- .NET Framework Windows フォーム アプリに対してツールを実行する方法のデモ
+- トラブルシューティングのヒント
 
 ## <a name="upgrade-net-framework-windows-forms-apps"></a>.NET Framework Windows フォーム アプリをアップグレードする
 
@@ -59,7 +59,7 @@ upgrade-assistant .\WinformsTest.csproj
 
 プロジェクトの形式が更新されたら、次のステップは、プロジェクトの TFM を更新することです。
 
-:::image type="content" source="media/upgrade-assistant-winforms-framework/update-tfm.png" alt-text=".NET アップグレード アシスタントによるプロジェクトの SDK スタイルへの変換":::
+:::image type="content" source="media/upgrade-assistant-winforms-framework/update-tfm.png" alt-text=".NET アップグレード アシスタントによる TFM の更新":::
 
 次に、ツールによってプロジェクトの NuGet パッケージが更新されます。
 

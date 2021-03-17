@@ -2,20 +2,20 @@
 title: .NET アップグレード アシスタントの概要
 description: .NET Framework からの移行と .NET 5 へのプロジェクトのアップグレードに役立つ .NET アップグレード アシスタント ツールについて紹介します。
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: bd1c904586d170d93b76ae058914adb334289f89
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: c667cfce40d4f740bc23606826eb2a058643b7be
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108219"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604776"
 ---
 # <a name="overview-of-the-net-upgrade-assistant"></a>.NET アップグレード アシスタントの概要
 
 お客様は、現在 .NET Framework 上で実行されているアプリを .NET 5 に移植することに関心があるとします。 .NET アップグレード アシスタント ツールを使用すれば、このプロセスを容易に行うことができます。 この記事では、次について説明します。
 
-* .NET アップグレード アシスタントの概要。
-* .NET アップグレード アシスタントをインストールする方法。
+- .NET アップグレード アシスタントの概要。
+- .NET アップグレード アシスタントをインストールする方法。
 
 ## <a name="what-is-the-net-upgrade-assistant"></a>.NET アップグレード アシスタントとは
 
@@ -35,7 +35,7 @@ ms.locfileid: "102108219"
 
 .NET アップグレード アシスタントをインストールして使用する方法については、[入門チュートリアル](https://aka.ms/dotnet-upgrade-assistant-install)に関するページを参照してください。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>[前提条件]
 
 1. このツールでは、プロジェクト ファイルの操作に MSBuild が使用されます。 最新バージョンの MSBuild がインストールされていることをご確認ください。 [Visual Studio 2019 をインストール](https://visualstudio.microsoft.com/downloads/)すれば、それを簡単に行うことができます。
 1. このツールは [try-convert](https://github.com/dotnet/try-convert) に依存しています。 このツールを正しく動作させるには、プロジェクト ファイルを新しい SDK スタイルに変換するための try-convert ツールをインストールする必要があります。 **try-convert** が既にインストールされている場合は、代わりにそれを更新することが必要になることがあります (**upgrade-assistant** がバージョン _0.7.212201_ 以降に依存しているためです)
@@ -44,9 +44,17 @@ ms.locfileid: "102108219"
 
 ### <a name="installation-steps"></a>インストール手順
 
-このツールは、次を実行することで .NET CLI ツールとしてインストールできます: `dotnet tool install -g upgrade-assistant --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json`
+このツールは、次を実行することで .NET CLI ツールとしてインストールできます:
 
-同様に、.NET アップグレード アシスタントは .NET CLI ツールとしてインストールされるため、次を実行することで簡単に更新できます: `https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json`
+```dotnet
+dotnet tool install -g upgrade-assistant
+```
+
+同様に、.NET アップグレード アシスタントは .NET CLI ツールとしてインストールされるため、次を実行することで簡単に更新できます:
+
+```dotnet
+dotnet tool update -g upgrade-assistant
+```
 
 インストールの手順の詳細については、プロジェクトの [README](https://github.com/dotnet/upgrade-assistant) を参照してください。
 

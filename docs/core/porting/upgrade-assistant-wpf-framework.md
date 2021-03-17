@@ -2,20 +2,20 @@
 title: WPF アプリを .NET 5 にアップグレードする
 description: .NET アップグレード アシスタントを使用して、既存の .NET Framework WPF アプリを .NET 5 にアップグレードします。 .NET アップグレード アシスタントは、.NET Framework から .NET 5 にアプリを移行するときに役立つ CLI ツールです。
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: e71cdc0ef5b72fcb7ae3985a26672e23ed0c1f12
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: b0c9baa25be6da4e7849f28c875a1d8f5f5a5d07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108222"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604841"
 ---
 # <a name="upgrade-a-wpf-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET アップグレード アシスタントを使用して WPF アプリを .NET 5 にアップグレードする
 
 [.NET アップグレード アシスタント](upgrade-assistant-overview.md)は、.NET Framework WPF アプリを .NET 5 にアップグレードするときに役立つコマンドライン ツールです。 この記事では、次について説明します。
 
-* .NET Framework WPF アプリに対してツールを実行する方法のデモ
-* トラブルシューティングのヒント
+- .NET Framework WPF アプリに対してツールを実行する方法のデモ
+- トラブルシューティングのヒント
 
 ## <a name="upgrade-net-framework-wpf-apps"></a>.NET Framework WPF アプリをアップグレードする
 
@@ -59,7 +59,7 @@ upgrade-assistant .\WpfTest.csproj
 
 プロジェクトの形式が更新されたら、次のステップは、プロジェクトの TFM を更新することです。
 
-:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text=".NET アップグレード アシスタントによるプロジェクトの SDK スタイルへの変換":::
+:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text=".NET アップグレード アシスタントによる TFM の更新":::
 
 次に、ツールによってプロジェクトの NuGet パッケージが更新されます。
 

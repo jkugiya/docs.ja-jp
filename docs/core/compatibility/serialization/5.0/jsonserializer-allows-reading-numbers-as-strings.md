@@ -2,12 +2,12 @@
 title: 破壊的変更:ASP.NET Core アプリで、引用符で囲まれた数値を逆シリアル化できる
 description: .NET 5 の破壊的変更について学習します。この変更後、例外がスローされるのではなく、JSON 文字列として表される数値が ASP.NET Core アプリによって正常に逆シリアル化されるようになります。
 ms.date: 10/21/2020
-ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: bc1531bb9b159bfd9e80eafacafb50aa509973cc
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256310"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624150"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core アプリで、引用符で囲まれた数値を逆シリアル化できる
 
@@ -41,7 +41,7 @@ ASP.NET Core MVC および Web API アプリの場合は、次のコードを使
 
 ```csharp
 services.AddControllers()
-   .AddJsonOptions(options.NumberHandling = JsonNumberHandling.Strict);
+   .AddJsonOptions(options => options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict);
 ```
 
 ## <a name="affected-apis"></a>影響を受ける API

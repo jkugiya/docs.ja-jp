@@ -17,7 +17,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 7976e79a5484fa467d7ac887a4e1a7fa324abf69
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99678628"

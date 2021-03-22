@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 606ead6010ddfd223e4ed38e0271642d36079bcc
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258778"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654093"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 
@@ -23,7 +23,7 @@ ms.locfileid: "102258778"
 
 アセンブリ キャッシュ ビューアー (*Shfusion.dll*) を除き、これらのツールはすべてコマンド ラインから実行できます。 エクスプローラーから *Shfusion.dll* にアクセスする必要があります。
   
-コマンド ライン ツールの最適な実行方法は、Visual Studio によってインストールされる開発者シェルの 1 つを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)に関するページを参照してください。
+コマンド ライン ツールの最適な実行方法は、Visual Studio によってインストールされる開発者シェルの 1 つを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、「[開発者コマンド プロンプトと開発者 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)」を参照してください。
 
 > [!NOTE]
 > ツールの中には、32 ビット コンピューターまたは 64 ビット コンピューターに固有のものもあります。 該当するコンピューターに適切なバージョンのツールを実行します。

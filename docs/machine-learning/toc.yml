@@ -25,6 +25,8 @@
           href: tutorials/sentiment-analysis-model-builder.md
         - name: 正常性違反の分類 (モデル ビルダー & 多クラス分類)
           href: tutorials/health-violation-classification-model-builder.md
+        - name: トラフィック署名の検出 (モデル ビルダー & オブジェクト検出)
+          href: tutorials/object-detection-model-builder.md
     - name: API
       items:
         - name: 概要
@@ -115,6 +117,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
             - name: Azure Machine Learning ONNX モデルを使用する
               href: /azure/machine-learning/how-to-use-automl-onnx-model-dotnet?toc=/dotnet/machine-learning/how-to-guides/toc.json&bc=/dotnet/machine-learning/how-to-guides/toc.json
+            - name: .NET for Apache Spark を使用してバッチ予測を行う
+              href: ../spark/tutorials/ml-sentiment-analysis.md
 - name: リファレンス
   items:
     - name: ML.NET API リファレンス

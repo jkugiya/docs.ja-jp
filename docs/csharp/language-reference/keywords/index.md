@@ -1,7 +1,7 @@
 ---
 description: C# のキーワード
 title: C# のキーワード
-ms.date: 03/07/2017
+ms.date: 03/17/2021
 f1_keywords:
 - cs.keywords
 helpviewer_keywords:
@@ -10,13 +10,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.custom: updateeachrelease
-ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: dcc009567f5bf957ec7bb4465a6d32c0a229d596
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 9c539574f7a1af15bb0d775ec85a2fd8b2327b95
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258378"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759626"
 ---
 # <a name="c-keywords"></a>C# のキーワード
 
@@ -58,13 +57,14 @@ ms.locfileid: "102258378"
 |[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
 |[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[let](let-clause.md)|[nameof](../operators/nameof.md)|[notnull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|
-|[on](on.md)|[orderby](orderby-clause.md)|[partial (型)](partial-type.md)|
-|[partial (メソッド)](partial-method.md)|[remove](remove.md)|[select](select-clause.md)|
-|[set](set.md)|[unmanaged (ジェネリック型制約)](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)|[value](value.md)|
-|[var](var.md)|[when (フィルター条件)](when.md)|[where (ジェネリック型制約)](where-generic-type-constraint.md)|
-|[where (クエリ句)](where-clause.md)|[ある場合](../operators/with-expression.md)|[yield](yield.md)|
-  
+|[let](let-clause.md)|[nameof](../operators/nameof.md)|[nint](../builtin-types/nint-nuint.md)|
+|[notnull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|[nuint](../builtin-types/nint-nuint.md)|[on](on.md)|
+|[orderby](orderby-clause.md)|[partial (型)](partial-type.md)|[partial (メソッド)](partial-method.md)|
+|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
+|[unmanaged (ジェネリック型制約)](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)|[value](value.md)|[var](var.md)|
+|[when (フィルター条件)](when.md)|[where (ジェネリック型制約)](where-generic-type-constraint.md)|[where (クエリ句)](where-clause.md)|
+|[ある場合](../operators/with-expression.md)|[yield](yield.md)||
+
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)

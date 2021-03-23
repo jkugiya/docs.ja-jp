@@ -4,42 +4,42 @@ description: ASP.NET Core 6.0 における null 許容参照型の注釈の変�
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d289ee68a10ee6a237e553a9e0ade153add8f608
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257890"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874343"
 ---
-# <a name="nullable-reference-type-annotations-changed"></a><span data-ttu-id="e6acf-103">null 許容参照型の注釈の変更</span><span class="sxs-lookup"><span data-stu-id="e6acf-103">Nullable reference type annotations changed</span></span>
+# <a name="nullable-reference-type-annotations-changed"></a><span data-ttu-id="2a588-103">null 許容参照型の注釈の変更</span><span class="sxs-lookup"><span data-stu-id="2a588-103">Nullable reference type annotations changed</span></span>
 
-<span data-ttu-id="e6acf-104">_**この問題は、進行中の作業を表します。ASP.NET Core 6.0 全体を通して、null 値の許容の注釈に関するすべての破壊的変更は、この問題にまとめられます。**_</span><span class="sxs-lookup"><span data-stu-id="e6acf-104">_**This issue represents a work-in-progress. All breaking changes to nullability annotations will be aggregated into this issue throughout the course of ASP.NET Core 6.0.**_</span></span>
+<span data-ttu-id="2a588-104">_**この問題は、進行中の作業を表します。ASP.NET Core 6.0 全体を通して、null 値の許容の注釈に関するすべての破壊的変更は、この問題にまとめられます。**_</span><span class="sxs-lookup"><span data-stu-id="2a588-104">_**This issue represents a work-in-progress. All breaking changes to nullability annotations will be aggregated into this issue throughout the course of ASP.NET Core 6.0.**_</span></span>
 
-<span data-ttu-id="e6acf-105">ASP.NET Core 5.0 以降、null 値の許容の注釈がコードの一部に適用されています。</span><span class="sxs-lookup"><span data-stu-id="e6acf-105">Starting in ASP.NET Core 5.0, nullability annotations have been applied to parts of the code.</span></span> <span data-ttu-id="e6acf-106">この作業に着手して以降、これらの注釈には[誤りがあることが予想されており](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance)、修正を行う必要がありました。</span><span class="sxs-lookup"><span data-stu-id="e6acf-106">From the outset of this effort, [mistakes were expected](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) in these annotations and fixes would need to be made.</span></span> <span data-ttu-id="e6acf-107">ASP.NET Core 6.0 では、以前に適用されたいくつかの注釈が更新されています。</span><span class="sxs-lookup"><span data-stu-id="e6acf-107">In ASP.NET Core 6.0, some previously applied annotations are being updated.</span></span> <span data-ttu-id="e6acf-108">これらの変更の一部は、ソースの破壊的変更と見なされます。</span><span class="sxs-lookup"><span data-stu-id="e6acf-108">Some of these changes are considered source breaking changes.</span></span> <span data-ttu-id="e6acf-109">変更により、API は互換性を持たなくなるか、より限定的になります。</span><span class="sxs-lookup"><span data-stu-id="e6acf-109">The changes lead to the APIs being incompatible or more restrictive.</span></span> <span data-ttu-id="e6acf-110">更新された API を、null 許容参照型が有効になっているプロジェクトで使用すると、ビルド時の警告が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e6acf-110">The updated APIs may result in build-time warnings when used in projects that have nullable reference types enabled.</span></span>
+<span data-ttu-id="2a588-105">ASP.NET Core 5.0 以降、null 値の許容の注釈がコードの一部に適用されています。</span><span class="sxs-lookup"><span data-stu-id="2a588-105">Starting in ASP.NET Core 5.0, nullability annotations have been applied to parts of the code.</span></span> <span data-ttu-id="2a588-106">この作業に着手して以降、これらの注釈には[誤りがあることが予想されており](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance)、修正を行う必要がありました。</span><span class="sxs-lookup"><span data-stu-id="2a588-106">From the outset of this effort, [mistakes were expected](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) in these annotations and fixes would need to be made.</span></span> <span data-ttu-id="2a588-107">ASP.NET Core 6.0 では、以前に適用されたいくつかの注釈が更新されています。</span><span class="sxs-lookup"><span data-stu-id="2a588-107">In ASP.NET Core 6.0, some previously applied annotations are being updated.</span></span> <span data-ttu-id="2a588-108">これらの変更の一部は、ソースの破壊的変更と見なされます。</span><span class="sxs-lookup"><span data-stu-id="2a588-108">Some of these changes are considered source breaking changes.</span></span> <span data-ttu-id="2a588-109">変更により、API は互換性を持たなくなるか、より限定的になります。</span><span class="sxs-lookup"><span data-stu-id="2a588-109">The changes lead to the APIs being incompatible or more restrictive.</span></span> <span data-ttu-id="2a588-110">更新された API を、null 許容参照型が有効になっているプロジェクトで使用すると、ビルド時の警告が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2a588-110">The updated APIs may result in build-time warnings when used in projects that have nullable reference types enabled.</span></span>
 
-<span data-ttu-id="e6acf-111">ディスカッションについては、GitHub のイシュー [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6acf-111">For discussion, see GitHub issue [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564).</span></span>
+<span data-ttu-id="2a588-111">ディスカッションについては、GitHub のイシュー [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2a588-111">For discussion, see GitHub issue [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564).</span></span>
 
-## <a name="version-introduced"></a><span data-ttu-id="e6acf-112">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="e6acf-112">Version introduced</span></span>
+## <a name="version-introduced"></a><span data-ttu-id="2a588-112">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="2a588-112">Version introduced</span></span>
 
-<span data-ttu-id="e6acf-113">6.0</span><span class="sxs-lookup"><span data-stu-id="e6acf-113">6.0</span></span>
+<span data-ttu-id="2a588-113">6.0</span><span class="sxs-lookup"><span data-stu-id="2a588-113">6.0</span></span>
 
-## <a name="old-behavior"></a><span data-ttu-id="e6acf-114">以前の動作</span><span class="sxs-lookup"><span data-stu-id="e6acf-114">Old behavior</span></span>
+## <a name="old-behavior"></a><span data-ttu-id="2a588-114">以前の動作</span><span class="sxs-lookup"><span data-stu-id="2a588-114">Old behavior</span></span>
 
-<span data-ttu-id="e6acf-115">影響を受ける API の null 許容参照型に関する注釈は正しくありません。</span><span class="sxs-lookup"><span data-stu-id="e6acf-115">The affected APIs have incorrect nullable reference type annotations.</span></span> <span data-ttu-id="e6acf-116">ビルドの警告がないか、正しくありません。</span><span class="sxs-lookup"><span data-stu-id="e6acf-116">Build warnings are either absent or incorrect.</span></span>
+<span data-ttu-id="2a588-115">影響を受ける API の null 許容参照型に関する注釈は正しくありません。</span><span class="sxs-lookup"><span data-stu-id="2a588-115">The affected APIs have incorrect nullable reference type annotations.</span></span> <span data-ttu-id="2a588-116">ビルドの警告がないか、正しくありません。</span><span class="sxs-lookup"><span data-stu-id="2a588-116">Build warnings are either absent or incorrect.</span></span>
 
-## <a name="new-behavior"></a><span data-ttu-id="e6acf-117">新しい動作</span><span class="sxs-lookup"><span data-stu-id="e6acf-117">New behavior</span></span>
+## <a name="new-behavior"></a><span data-ttu-id="2a588-117">新しい動作</span><span class="sxs-lookup"><span data-stu-id="2a588-117">New behavior</span></span>
 
-<span data-ttu-id="e6acf-118">新しいビルドの警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e6acf-118">New build warnings are produced.</span></span> <span data-ttu-id="e6acf-119">影響を受ける API に対して正しくないビルドの警告が生成されることはなくなります。</span><span class="sxs-lookup"><span data-stu-id="e6acf-119">Incorrect build warnings are no longer produced for the affected APIs.</span></span>
+<span data-ttu-id="2a588-118">新しいビルドの警告が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2a588-118">New build warnings are produced.</span></span> <span data-ttu-id="2a588-119">影響を受ける API に対して正しくないビルドの警告が生成されることはなくなります。</span><span class="sxs-lookup"><span data-stu-id="2a588-119">Incorrect build warnings are no longer produced for the affected APIs.</span></span>
 
-## <a name="reason-for-change"></a><span data-ttu-id="e6acf-120">変更理由</span><span class="sxs-lookup"><span data-stu-id="e6acf-120">Reason for change</span></span>
+## <a name="reason-for-change"></a><span data-ttu-id="2a588-120">変更理由</span><span class="sxs-lookup"><span data-stu-id="2a588-120">Reason for change</span></span>
 
-<span data-ttu-id="e6acf-121">フィードバックとさらなるテストから、影響を受ける API での null 値が許容される注釈は不正確であると判断されました。</span><span class="sxs-lookup"><span data-stu-id="e6acf-121">Through feedback and further testing, the nullable annotations for the affected APIs were determined to be inaccurate.</span></span> <span data-ttu-id="e6acf-122">更新された注釈では、API に対して null 値の許容のコントラクトが正しく表現されています。</span><span class="sxs-lookup"><span data-stu-id="e6acf-122">The updated annotations now correctly represent the nullability contracts for the APIs.</span></span>
+<span data-ttu-id="2a588-121">フィードバックとさらなるテストから、影響を受ける API での null 値が許容される注釈は不正確であると判断されました。</span><span class="sxs-lookup"><span data-stu-id="2a588-121">Through feedback and further testing, the nullable annotations for the affected APIs were determined to be inaccurate.</span></span> <span data-ttu-id="2a588-122">更新された注釈では、API に対して null 値の許容のコントラクトが正しく表現されています。</span><span class="sxs-lookup"><span data-stu-id="2a588-122">The updated annotations now correctly represent the nullability contracts for the APIs.</span></span>
 
-## <a name="recommended-action"></a><span data-ttu-id="e6acf-123">推奨される操作</span><span class="sxs-lookup"><span data-stu-id="e6acf-123">Recommended action</span></span>
+## <a name="recommended-action"></a><span data-ttu-id="2a588-123">推奨される操作</span><span class="sxs-lookup"><span data-stu-id="2a588-123">Recommended action</span></span>
 
-<span data-ttu-id="e6acf-124">これらの API を呼び出しているコードを更新し、修正された null 値の許容のコントラクトを反映してください。</span><span class="sxs-lookup"><span data-stu-id="e6acf-124">Update code calling these APIs to reflect the revised nullability contracts.</span></span>
+<span data-ttu-id="2a588-124">これらの API を呼び出しているコードを更新し、修正された null 値の許容のコントラクトを反映してください。</span><span class="sxs-lookup"><span data-stu-id="2a588-124">Update code calling these APIs to reflect the revised nullability contracts.</span></span>
 
-## <a name="affected-apis"></a><span data-ttu-id="e6acf-125">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="e6acf-125">Affected APIs</span></span>
+## <a name="affected-apis"></a><span data-ttu-id="2a588-125">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="2a588-125">Affected APIs</span></span>
 
 * <xref:Microsoft.AspNetCore.Components.ParameterView.FromDictionary%2A?displayProperty=nameWithType>
 * <xref:Microsoft.AspNetCore.Components.RenderTree.Renderer.DispatchEventAsync%2A?displayProperty=nameWithType>
@@ -135,9 +135,9 @@ ms.locfileid: "102257890"
 * <xref:Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseNullableQuery(System.String)?displayProperty=nameWithType>
 * <xref:Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(System.String)?displayProperty=nameWithType>
 
-## <a name="see-also"></a><span data-ttu-id="e6acf-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6acf-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a588-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="2a588-126">See also</span></span>
 
-- [<span data-ttu-id="e6acf-127">Core .NET ライブラリでの null 許容参照型の注釈の変更</span><span class="sxs-lookup"><span data-stu-id="e6acf-127">Nullable reference type annotation changes in core .NET libraries</span></span>](../../core-libraries/6.0/nullable-ref-type-annotation-changes.md)
+- [<span data-ttu-id="2a588-127">Core .NET ライブラリでの null 許容参照型の注釈の変更</span><span class="sxs-lookup"><span data-stu-id="2a588-127">Nullable reference type annotation changes in core .NET libraries</span></span>](../../core-libraries/6.0/nullable-ref-type-annotation-changes.md)
 
 <!--
 

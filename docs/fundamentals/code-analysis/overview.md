@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 9fbeee7475b49a5b6514d4983142ae3be5a2f026
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 1a0b31f7aca6415510ed0fcd08e9f9a0f8f39bf5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605296"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876605"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
@@ -53,7 +53,7 @@ ms.locfileid: "102605296"
 
 これらのルールの重要度を変更して、無効にするか、エラーに昇格させることができます。 [追加のルールを有効にする](#enable-additional-rules)こともできます。
 
-- 各 .NET SDK バージョンに含まれるルールの一覧については、[アナライザーのリリース](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)に関するページを参照してください。
+- 各 .NET SDK バージョンに含まれるルールの一覧については、[アナライザーのリリース](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)に関するページを参照してください。
 - すべてのコード品質ルールの一覧については、「[コード品質ルール](quality-rules/index.md)」を参照してください。
 
 ### <a name="enable-additional-rules"></a>追加のルールを有効にする
@@ -66,7 +66,7 @@ ms.locfileid: "102605296"
 | `AllEnabledByDefault` | これは、最もアグレッシブなモードです。 すべてのルールがビルド警告として有効になっています。 個々のルールを選択的に[オプトアウト](configuration-options.md)して無効にすることができます。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
 | `Default` | 既定のモード。この場合、いくつかのルールは警告として有効になっており、一部のルールは対応するコード修正の Visual Studio IDE 修正候補としてのみ有効になっており、残りは完全に無効になっています。 個々のルールを選択的に[オプトインまたはオプトアウト](configuration-options.md)して無効にすることができます。<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-使用可能な各ルールの既定の重要度と、既定の分析モードでルールが有効になっているかどうかを確認するには、[ルールの完全な一覧](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)を参照してください。
+使用可能な各ルールの既定の重要度と、既定の分析モードでルールが有効になっているかどうかを確認するには、[ルールの完全な一覧](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)を参照してください。
 
 ### <a name="treat-warnings-as-errors"></a>警告をエラーとして扱う
 
@@ -122,7 +122,7 @@ ms.locfileid: "102605296"
 
 1. MSBuild プロパティ [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) を `true` に設定します。
 
-1. *.editorconfig* ファイルで、ビルド時に実行する各 "IDE" コード スタイル ルールを警告またはエラーとして[構成](configuration-options.md)します。 次に例を示します。
+1. *.editorconfig* ファイルで、ビルド時に実行する各 "IDE" コード スタイル ルールを警告またはエラーとして [構成](configuration-options.md)します。 次に例を示します。
 
    ```ini
    [*.{cs,vb}]

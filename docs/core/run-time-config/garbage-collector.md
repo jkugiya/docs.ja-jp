@@ -3,12 +3,12 @@ title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 91d155b638c7e69b3d2c0216266a7c0c0410db4c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c4f55124d9f50146ceac1eea52ce60b0dd77ad1d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915991"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875045"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -472,7 +472,7 @@ ms.locfileid: "87915991"
 ## <a name="standalone-gc"></a>スタンドアロン GC
 
 - ランタイムで読み込む対象となる、ガベージ コレクターを含むライブラリへのパスを指定します。
-- 詳細については、「[スタンドアロン GC ローダーの設計](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md)」を参照してください。
+- 詳細については、「[スタンドアロン GC ローダーの設計](https://github.com/dotnet/runtime/blob/main/docs/design/features/standalone-gc-loading.md)」を参照してください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |

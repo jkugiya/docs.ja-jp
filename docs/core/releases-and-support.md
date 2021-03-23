@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7b207811e0dab8c613b0e43a30301a0fb07f632a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104185"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875084"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core および .NET 5 のリリースとサポート
 
@@ -105,7 +105,7 @@ LTS および現在のリリースは交互に行われるため、以前のリ�
 
 オペレーティング システムのバージョンがサポート対象外になった場合、そのバージョンのテストおよびそのバージョンのサポートの提供が停止されます。 サポートを受けるには、ユーザーはサポート対象のオペレーティング システムのバージョンに移行する必要があります。
 
-詳細については、[.NET OS のライフサイクル ポリシー](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)に関するページを参照してください。
+詳細については、[.NET OS のライフサイクル ポリシー](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md)に関するページを参照してください。
 
 ## <a name="get-support"></a>サポートを受ける
 

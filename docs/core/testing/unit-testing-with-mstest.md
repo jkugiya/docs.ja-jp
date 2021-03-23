@@ -4,22 +4,22 @@ description: dotnet テストおよび MSTest を使用したサンプル ソリ
 author: ncarandini
 ms.author: wiwagn
 ms.date: 10/21/2020
-ms.openlocfilehash: c6132251ecc4f453189937f93cf8024dcb8b91f5
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: e2c3326778d7fc1a492062cff4f2d2ad4a61ac18
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471610"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874889"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
-このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="create-the-source-project"></a>ソース プロジェクトを作成する
 
-シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-using-mstest* というディレクトリを作成します。 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。 次に、 *PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のアウトラインのようになっています。
+シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-using-mstest* というディレクトリを作成します。 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。 次に、*PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のアウトラインのようになっています。
 
 ```console
 /unit-testing-using-mstest
@@ -27,7 +27,7 @@ ms.locfileid: "92471610"
     /PrimeService
 ```
 
-*PrimeService* を現在のディレクトリにし、 [`dotnet new classlib`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。 *Class1.cs* の名前を *PrimeService.cs* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
+*PrimeService* を現在のディレクトリにし、[`dotnet new classlib`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。 *Class1.cs* の名前を *PrimeService.cs* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
 
 ```csharp
 using System;
@@ -48,7 +48,7 @@ namespace Prime.Services
 
 ## <a name="create-the-test-project"></a>テスト プロジェクトの作成
 
-次に、 *PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
+次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
 ```console
 /unit-testing-using-mstest
@@ -59,7 +59,7 @@ namespace Prime.Services
     /PrimeService.Tests
 ```
 
-*PrimeService.Tests* ディレクトリを現在のディレクトリにし、 [`dotnet new mstest`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 dotnet new コマンドによって、テスト ライブラリとして MSTest を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、 *PrimeServiceTests.csproj* ファイルのテスト ランナーが構成されます。
+*PrimeService.Tests* ディレクトリを現在のディレクトリにし、[`dotnet new mstest`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 dotnet new コマンドによって、テスト ライブラリとして MSTest を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、*PrimeServiceTests.csproj* ファイルのテスト ランナーが構成されます。
 
 ```xml
 <ItemGroup>
@@ -75,7 +75,7 @@ namespace Prime.Services
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-全体のファイルは GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService.Tests.csproj)で確認できます。
+全体のファイルは GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService.Tests.csproj)で確認できます。
 
 ソリューションの最終的なレイアウトは次のアウトラインのようになります。
 
@@ -94,7 +94,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ## <a name="create-the-first-test"></a>最初のテストを作成する
 
-失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests* ディレクトリから *UnitTest1.cs* を削除し、 *PrimeService_IsPrimeShould.cs* という名前の新しい C# ファイルを作成します。コンテンツは次のようになります。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests* ディレクトリから *UnitTest1.cs* を削除し、*PrimeService_IsPrimeShould.cs* という名前の新しい C# ファイルを作成します。コンテンツは次のようになります。
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -138,7 +138,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="add-more-features"></a>その他の機能を追加する
 
-テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります(0、-1)。 [TestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  [DataTestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 [DataRow 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)を使用して、そのような入力の値を指定することができます。
+テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 [TestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  [DataTestMethod 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 [DataRow 属性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)を使用して、そのような入力の値を指定することができます。
 
 新しいテストを作成するのではなく、この 2 つの属性を適用することで 1 つのデータ駆動テストを作成できます。 そのデータ駆動テストとは、複数の 2 未満の値を調べて、最も小さい素数を特定するという手法です。
 
@@ -150,7 +150,7 @@ public bool IsPrime(int candidate)
 if (candidate < 2)
 ```
 
-他のテスト、理論、コードをメイン ライブラリに追加して、反復を続けます。 [テストの最終版](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs)ができ、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService/PrimeService.cs)が完了しました。
+他のテスト、理論、コードをメイン ライブラリに追加して、反復を続けます。 [テストの最終版](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs)ができ、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-mstest/PrimeService/PrimeService.cs)が完了しました。
 
 これで、小さなライブラリとそのライブラリの単体テストのセットが構築されました。 ソリューションを構築したことで、新しいパッケージとテストの追加が通常のワークフローに組み込まれました。 アプリケーションの目標を達成することに時間と労力の多くを割き、集中して取り組みました。
 

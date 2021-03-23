@@ -3,16 +3,16 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 0c427563701bd3bff87178022feab19f4dcfc519
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100456420"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877060"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
-この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
+この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/main/docs/Language%20Feature%20Status.md)で見つけられます。
 
 > [!IMPORTANT]
 > C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。

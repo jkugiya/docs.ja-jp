@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 13898bdbd9522730c8f0cd19bd13d4e6f3a6a10e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224185"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874070"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>.NET for Apache Spark でユーザー定義関数 (UDF) を作成する
 
@@ -27,7 +27,7 @@ Func<Column, Column> udf = Udf<string, string>(
     str => $"{s1} {str}");
 ```
 
-UDF では、[Dataframe](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24) の [Column](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Column.cs#L14) の形式で入力として `string` を受け取り、入力の前に `hello` が追加された `string` を返します。
+UDF では、[Dataframe](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24) の [Column](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Column.cs#L14) の形式で入力として `string` を受け取り、入力の前に `hello` が追加された `string` を返します。
 
 次の DataFrame `df` には、名前の一覧が含まれています。
 
@@ -59,11 +59,11 @@ DataFrame udfResult = df.Select(udf(df["name"]));
 +-------------+
 ```
 
-UDF を実装する方法について理解を深めるために、GitHub の [UDF ヘルパー関数](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616)と[例](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49)を参照してください。
+UDF を実装する方法について理解を深めるために、GitHub の [UDF ヘルパー関数](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616)と[例](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49)を参照してください。
 
 ## <a name="udf-serialization"></a>UDF のシリアル化
 
-UDF は worker で実行する必要がある関数であるため、シリアル化し、ドライバーからのペイロードの一部として worker に送信する必要があります。 現在のデリゲートでインスタンス メソッドを呼び出すクラス インスタンスである、その[ターゲット](xref:System.Delegate.Target%2A)だけでなく、メソッドへの参照である、[デリゲート](../../csharp/programming-guide/delegates/index.md)もシリアル化する必要があります。 この [GitHub のコード例](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149)を確認し、UDF のシリアル化がどのように行われるかについて理解を深めてください。
+UDF は worker で実行する必要がある関数であるため、シリアル化し、ドライバーからのペイロードの一部として worker に送信する必要があります。 現在のデリゲートでインスタンス メソッドを呼び出すクラス インスタンスである、その[ターゲット](xref:System.Delegate.Target%2A)だけでなく、メソッドへの参照である、[デリゲート](../../csharp/programming-guide/delegates/index.md)もシリアル化する必要があります。 この [GitHub のコード例](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149)を確認し、UDF のシリアル化がどのように行われるかについて理解を深めてください。
 
 .NET for Apache Spark では、デリゲートのシリアル化がサポートされていない .NET Core が使用されます。 代わりに、リフレクションを使用して、デリゲートが定義されているターゲットをシリアル化します。 共通のスコープで複数のデリゲートが定義されている場合、シリアル化に対するリフレクションのターゲットとなる共有クロージャがあります。
 

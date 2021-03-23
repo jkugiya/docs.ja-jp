@@ -3,18 +3,18 @@ title: 自己署名証明書の生成の概要
 description: .NET Core および ASP.NET Core プロジェクトの機能を追加する Microsoft dotnet dev-certs ツール、および自己署名証明書を使用するためのその他のオプションの概要。
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 738af3fc091e415399a53015a40748ad6116a2b4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189142"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873017"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>.NET CLI を使用して自己署名証明書を生成する
 
 自己署名証明書を使用する場合、それらを作成し、開発やテストのシナリオに使用するには、さまざまな方法があります。  このガイドでは、`dotnet dev-certs`、および `PowerShell` や `OpenSSL` などのその他のオプションでの自己署名証明書の使用について説明します。
 
-次に、コンテナーでホストされている [ ASP.NET Core アプリ](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md)などの例を使用して、証明書が読み込まれることを検証できます。
+次に、コンテナーでホストされている [ ASP.NET Core アプリ](https://github.com/dotnet/dotnet-docker/blob/main/samples/run-aspnetcore-https-development.md)などの例を使用して、証明書が読み込まれることを検証できます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -46,7 +46,7 @@ git clone https://github.com/dotnet/dotnet-docker/
 
 > [!NOTE]
 > dotnet publish パラメーターを使用して展開を "*トリミング*" する場合は、SSL 証明書をサポートするために適した依存関係が含まれていることを確認する必要があります。
-[dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) を更新して、適切なアセンブリがコンテナーに確実に含まれるようにします。 参考のために、自己完結型の展開にトリミングを使用する場合に [SSL 証明書をサポートする](../deploying/trim-self-contained.md#support-for-ssl-certificates)ための .csproj ファイルの更新方法を確認してください。
+[dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) を更新して、適切なアセンブリがコンテナーに確実に含まれるようにします。 参考のために、自己完結型の展開にトリミングを使用する場合に [SSL 証明書をサポートする](../deploying/trim-self-contained.md#support-for-ssl-certificates)ための .csproj ファイルの更新方法を確認してください。
 
 `aspnetapp.csproj` に適切なターゲット フレームワークが含まれていることを確認します。
 
@@ -101,7 +101,7 @@ docker build -t aspnetapp:my-sample -f Dockerfile .
 
 このガイドでは、[サンプルの aspnetapp](https://hub.docker.com/_/microsoft-dotnet-samples) で、.NET 5 を確認する必要があります。
 
-サンプル アプリ [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) で .NET 5 が使用されていることを確認します。
+サンプル アプリ [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/Dockerfile) で .NET 5 が使用されていることを確認します。
 
 ホスト OS によっては、ASP.NET ランタイムの更新が必要になる場合があります。 たとえば、Dockerfile で `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` から `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` に変更すると、適切な Windows ランタイムをターゲットにするのに役立ちます。
 
@@ -148,7 +148,7 @@ Linux で証明書をテストする場合は、既存の Dockerfile を使用�
 
 > [!NOTE]
 > `dotnet publish` パラメーターを使用して展開を "*トリミング*" する場合は、SSL 証明書をサポートするために適した依存関係が含まれていることを確認します。
-[dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) を更新して、適切なアセンブリがコンテナーに確実に含まれるようにします。 参考のために、自己完結型の展開にトリミングを使用する場合に [SSL 証明書をサポートする](../deploying/trim-self-contained.md#support-for-ssl-certificates)ための .csproj ファイルの更新方法を確認してください。
+[dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) を更新して、適切なアセンブリがコンテナーに確実に含まれるようにします。 参考のために、自己完結型の展開にトリミングを使用する場合に [SSL 証明書をサポートする](../deploying/trim-self-contained.md#support-for-ssl-certificates)ための .csproj ファイルの更新方法を確認してください。
 
 サンプル アプリを指していることを確認します。
 

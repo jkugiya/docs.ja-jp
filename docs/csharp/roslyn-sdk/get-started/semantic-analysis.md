@@ -3,18 +3,18 @@ title: セマンティック解析の概要
 description: このチュートリアルでは、.NET コンパイラ SDK を使用したセマンティック解析の概要を説明します。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3119363822328c0e5fc67c2a2a4a917a7d37cfd2
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240511"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872562"
 ---
 # <a name="get-started-with-semantic-analysis"></a>セマンティック解析の概要
 
 このチュートリアルでは、構文 API の知識を前提としています。 「[構文解析の概要](syntax-analysis.md)」という記事が入門編になっています。
 
-このチュートリアルでは、**シンボル API** と**バインドの API** について学習します。 これらの API は、プログラムの_意味論的意味_に関する情報を提供します。 プログラムのシンボルが表す型について質問したり、回答したりできます。
+このチュートリアルでは、**シンボル API** と **バインドの API** について学習します。 これらの API は、プログラムの _意味論的意味_ に関する情報を提供します。 プログラムのシンボルが表す型について質問したり、回答したりできます。
 
 **.NET Compiler Platform SDK** をインストールする必要があります。
 
@@ -22,9 +22,9 @@ ms.locfileid: "78240511"
 
 ## <a name="understanding-compilations-and-symbols"></a>コンパイルとシンボルについて
 
-.NET コンパイラ SDK での作業が増えると、構文 API とセマンティック API の違いに詳しくなります。 **構文 API** では、プログラムの_構造_を見ることができます。 ただし、多くの場合、プログラムの意味論または_意味_に関する豊富な情報が必要になります。 Visual Basic または C# の緩いコード ファイルまたはスニペットは分離して構文的に解析できますが、孤立状態では、"この変数の型は何ですか" のような質問を問うことに意味がありません。 型名の意味は、アセンブリ参照、名前空間インポート、その他のコード ファイルに依存することがあります。 このような問いには、**セマンティック API** で、具体的には <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> クラスで答えられます。
+.NET コンパイラ SDK での作業が増えると、構文 API とセマンティック API の違いに詳しくなります。 **構文 API** では、プログラムの _構造_ を見ることができます。 ただし、多くの場合、プログラムの意味論または _意味_ に関する豊富な情報が必要になります。 Visual Basic または C# の緩いコード ファイルまたはスニペットは分離して構文的に解析できますが、孤立状態では、"この変数の型は何ですか" のような質問を問うことに意味がありません。 型名の意味は、アセンブリ参照、名前空間インポート、その他のコード ファイルに依存することがあります。 このような問いには、**セマンティック API** で、具体的には <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> クラスで答えられます。
 
-<xref:Microsoft.CodeAnalysis.Compilation> のインスタンスはコンパイラで見られるように 1 つのプロジェクトに類似し、Visual Basic または C# のプログラムをコンパイルするために必要なすべてを表します。 **コンパイル**には、コンパイルするソース ファイルのセット、アセンブリ参照、コンパイラ オプションが含まれます。 この文脈のその他すべての情報を利用し、コードの意味を推論できます。 <xref:Microsoft.CodeAnalysis.Compilation> では、型、名前空間、メンバー、名前やその他の式が参照する変数などのエンティティである**シンボル**を見つけることができます。 名前や式を**シンボル**と関連付けるプロセスを**バインド**と呼んでいます。
+<xref:Microsoft.CodeAnalysis.Compilation> のインスタンスはコンパイラで見られるように 1 つのプロジェクトに類似し、Visual Basic または C# のプログラムをコンパイルするために必要なすべてを表します。 **コンパイル** には、コンパイルするソース ファイルのセット、アセンブリ参照、コンパイラ オプションが含まれます。 この文脈のその他すべての情報を利用し、コードの意味を推論できます。 <xref:Microsoft.CodeAnalysis.Compilation> では、型、名前空間、メンバー、名前やその他の式が参照する変数などのエンティティである **シンボル** を見つけることができます。 名前や式を **シンボル** と関連付けるプロセスを **バインド** と呼んでいます。
 
 <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> と同様に、<xref:Microsoft.CodeAnalysis.Compilation> は言語固有の派生物を持つ抽象クラスです。 コンパイルのインスタンスを作成するとき、<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation?displayProperty=nameWithType> (または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation?displayProperty=nameWithType>) クラスでファクトリ メソッドを呼び出す必要があります。
 
@@ -32,7 +32,7 @@ ms.locfileid: "78240511"
 
 このチュートリアルでは、"Hello World" プログラムをもう一度見てみます。 今回、プログラムの中のシンボルにクエリを実行し、そのシンボルが表す型を理解します。 名前空間の型について問い、型で利用できるメソッドを確認します。
 
-このサンプルの完成したコードは、[GitHub のリポジトリ](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart)で確認できます。
+このサンプルの完成したコードは、[GitHub のリポジトリ](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SemanticQuickStart)で確認できます。
 
 > [!NOTE]
 > 構文ツリー型では継承を使用して、プログラムのさまざまな場所で有効なさまざまな構文要素を記述します。 これらの API を使用することは、多くの場合、特定の派生型にプロパティまたはコレクション メンバーをキャストすることを意味します。 次の例では、割り当てとキャストは別のステートメントであり、明示的に型指定された変数を使用します。 コードを読み取り、API の戻り値の型と返されるオブジェクトのランタイム型を確認することができます。 実際には、暗黙的に型指定された変数を使用して、API 名に依存して、調べられるオブジェクトの型を記述するのがより一般的です。
@@ -70,7 +70,7 @@ Hello World プログラムのテキストを `Program` クラスの定数とし
 
 [!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-先のコードは、最初の `using` ディレクティブの名前をバインドして、`System` 名前空間の <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> を取得する方法を示しています。 先のコードでは、**構文モデル**を利用してコードの構造を見つけることも確認できます。**セマンティック モデル**を使用し、その意味を理解します。 **構文モデル**は、using ステートメントの文字列 `System` を見つけます。 **セマンティック モデル**には、`System` 名前空間に定義されている型に関するすべての情報があります。
+先のコードは、最初の `using` ディレクティブの名前をバインドして、`System` 名前空間の <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> を取得する方法を示しています。 先のコードでは、**構文モデル** を利用してコードの構造を見つけることも確認できます。**セマンティック モデル** を使用し、その意味を理解します。 **構文モデル** は、using ステートメントの文字列 `System` を見つけます。 **セマンティック モデル** には、`System` 名前空間に定義されている型に関するすべての情報があります。
 
 <xref:Microsoft.CodeAnalysis.SymbolInfo> オブジェクトから、<xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> プロパティを利用して <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> を取得できます。 このプロパティは、この式が参照するシンボルを返します。 何も参照しない式の場合 (数値リテラルなど)、このプロパティは `null` です。 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> が null ではないとき、<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> はシンボルの型を示します。 この例では、<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> プロパティは <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType> です。 次のコードを `Main` メソッドに追加します。 `System` 名前空間のシンボルを取得し、`System` 名前空間で宣言されているすべての子名前空間を表示します。
 
@@ -103,7 +103,7 @@ Press any key to continue . . .
 
 先のコードでは、名前にバインドしてシンボルを見つける方法を確認できます。 C# プログラムには、バウンドできて名前ではない式が他にあります。 この機能を見るために、単純な文字列リテラルのバインドにアクセスしましょう。
 
-"Hello World" プログラムに <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType> が含まれ、"Hello, World!" 文字列がコンソールに表示されます。
+"Hello World" プログラムに <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType> が含まれ、"Hello, World!"  文字列がコンソールに表示されます。
 
 プログラムの中で 1 つの文字列リテラルを見つけることで、 "Hello, World!" 文字列が見つかります。 構文ノードが見つかったら、セマンティック モデルからそのノードの型情報を取得します。 次のコードを `Main` メソッドに追加します。
 

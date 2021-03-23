@@ -4,12 +4,12 @@ description: .NET Core でアセンブリの読み込み情報を収集する方
 author: elinor-fung
 ms.author: elfung
 ms.date: 11/17/2020
-ms.openlocfilehash: b121982995b440ade6d72190f44f9b9d237c8af6
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 505fc827021fe4d34675b2ef5a7fc5746ada1af6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506505"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872939"
 ---
 # <a name="collect-detailed-assembly-loading-information"></a>アセンブリの読み込みに関する詳細情報の収集
 
@@ -36,7 +36,7 @@ dotnet-trace collect --providers Microsoft-Windows-DotNETRuntime:4 --process-id 
 
 ## <a name="example-on-windows"></a>例 (Windows の場合)
 
-この例では、[アセンブリの読み込み拡張ポイントのサンプル](https://github.com/dotnet/samples/tree/master/core/extensions/AssemblyLoading)を使用します。 このアプリケーションにより、アセンブリ `MyLibrary` (アプリケーションから参照されていないアセンブリ) の読み込みが試行されます。そのため、正常に読み込むには、アセンブリの読み込み拡張ポイントでの処理が必要です。
+この例では、[アセンブリの読み込み拡張ポイントのサンプル](https://docs.microsoft.com/samples/dotnet/samples/assembly-loading-extension-points/)を使用します。 このアプリケーションにより、アセンブリ `MyLibrary` (アプリケーションから参照されていないアセンブリ) の読み込みが試行されます。そのため、正常に読み込むには、アセンブリの読み込み拡張ポイントでの処理が必要です。
 
 ### <a name="collect-the-trace"></a>トレースを収集する
 

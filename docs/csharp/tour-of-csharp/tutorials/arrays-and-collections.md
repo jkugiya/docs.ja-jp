@@ -2,12 +2,12 @@
 title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 02/05/2021
-ms.openlocfilehash: 7a04a983622a6ae36ec5b12d279aa29e52c52a4f
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 0043372aed65fbc720a022a3d8c69abd25ceca0c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626654"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876101"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
@@ -207,7 +207,7 @@ foreach (var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>課題完了
 
-[GitHub にある完成したサンプル コードを表示すること](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L8-L16)で、ソリューションの例を確認できます。
+[GitHub にある完成したサンプル コードを表示すること](https://github.com/dotnet/samples/tree/main/csharp/list-quickstart/Program.cs#L8-L16)で、ソリューションの例を確認できます。
 
 ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - record keyword [C#]
 - record type [C#]
-ms.openlocfilehash: 10fe7bcc1f3239b7a6bde0abcac41b177467cf0a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 57474caf0f1106380e52da7fcb7608b62a0f23e5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102260030"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872653"
 ---
 # <a name="records-c-reference"></a>レコード (C# リファレンス)
 
@@ -128,7 +128,7 @@ C#9 以降では、`record` キーワードを使用して、データをカプ�
 参照型の場合、プロパティ値ではなく、プロパティから参照されるオブジェクトの型名が表示されます。 次の例では、配列は参照型であるため、実際の配列要素値ではなく `System.String[]` が表示されます。
 
 ```
-Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] } 
+Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] }
 ```
 
 この機能を実装するために、コンパイラにより、仮想 `PrintMembers` メソッドと <xref:System.Object.ToString%2A> のオーバーライドが合成されます。

@@ -3,12 +3,12 @@ title: メモリ リークのデバッグ チュートリアル
 description: .NET Core でメモリ リークをデバッグする方法について説明します。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 09777b6c9f80c28e1eec28983d605f2a2e261c92
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255673"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872744"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core でメモリ リークをデバッグする
 
@@ -238,7 +238,7 @@ Found 2 roots.
 - [dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する
 - [dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する
 - [dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する
-- [dotnet/診断](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/診断](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 - [Visual Studio を使用してメモリ リークをデバッグする](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>次の手順

@@ -4,12 +4,12 @@ description: Windows で .NET for Apache Spark アプリケーションをビル
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d9e1721fbb13d963c3a690ded3e26885f268bc72
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e3ab62ea8bc493c7e652b66f0e9c7adce7decb56
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106853"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876956"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows で .NET for Apache Spark アプリケーションをビルドする方法を学習する
 
@@ -99,7 +99,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>.NET for Apache Spark の Scala 拡張機能レイヤーをビルドする
 
-.NET アプリケーションを送信したとき、.NET for Apache Spark には、要求の処理方法を Apache Spark に伝える、Scala で記述された必要なロジックが含まれています (たとえば、新しい Spark セッションを作成する要求や、.NET 側から JVM 側にデータを転送する要求など)。 このロジックは、[.NET for Spark の Scala ソース コード](https://github.com/dotnet/spark/tree/master/src/scala)に含まれています。
+.NET アプリケーションを送信したとき、.NET for Apache Spark には、要求の処理方法を Apache Spark に伝える、Scala で記述された必要なロジックが含まれています (たとえば、新しい Spark セッションを作成する要求や、.NET 側から JVM 側にデータを転送する要求など)。 このロジックは、[.NET for Spark の Scala ソース コード](https://github.com/dotnet/spark/tree/main/src/scala)に含まれています。
 
 .NET Framework、.NET Core のどちらを使用しているかにかかわらず、.NET for Apache Spark の Scala 拡張機能レイヤーをビルドする必要があります。
 
@@ -116,7 +116,7 @@ mvn clean package
 
 ### <a name="build-the-net-for-spark-sample-applications"></a>.NET for Spark のサンプル アプリケーションをビルドする
 
-このセクションでは、.NET for Apache Spark の[サンプル アプリケーション](https://github.com/dotnet/spark/tree/master/examples)をビルドする方法について説明します。 これらの手順は、あらゆる .NET for Spark アプリケーションのビルド プロセス全体を理解するのに役立ちます。
+このセクションでは、.NET for Apache Spark の[サンプル アプリケーション](https://github.com/dotnet/spark/tree/main/examples)をビルドする方法について説明します。 これらの手順は、あらゆる .NET for Spark アプリケーションのビルド プロセス全体を理解するのに役立ちます。
 
 #### <a name="using-visual-studio-for-net-framework"></a>.NET Framework 用に Visual Studio を使用する
 
@@ -238,7 +238,7 @@ mvn clean package
 
      実行できるいくつかの例を次に示します。
 
-     - **[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
+     - **[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
 
          ```powershell
          spark-submit.cmd `
@@ -248,7 +248,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Batch.Basic %SPARK_HOME%\examples\src\main\resources\people.json
          ```
 
-     - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
+     - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
 
          ```powershell
          spark-submit.cmd `
@@ -258,7 +258,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkWordCount localhost 9999
          ```
 
-     - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (Maven アクセス可能)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+     - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (Maven アクセス可能)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
          spark-submit.cmd `
@@ -269,7 +269,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
          ```
 
-     - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jar 提供)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+     - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jar 提供)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
          spark-submit.cmd

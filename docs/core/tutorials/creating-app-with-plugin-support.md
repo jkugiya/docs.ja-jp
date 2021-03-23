@@ -4,12 +4,12 @@ description: プラグインをサポートする .NET Core アプリケーシ�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: aef91231bd4a32937d6e3cd2cb7204777c6efe96
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187900"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873381"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>プラグインがある .NET Core アプリケーションを作成する
 
@@ -272,7 +272,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="other-examples-in-the-sample"></a>サンプル内のその他の例
 
-このチュートリアルの完全なソース コードは [dotnet/samples リポジトリ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)で確認できます。 完全なサンプルには、他のいくつかの `AssemblyDependencyResolver` の動作例が含まれています。 たとえば、`AssemblyDependencyResolver` オブジェクトも、NuGet パッケージに含まれているローカライズされたサテライト アセンブリと同じようにネイティブ ライブラリを解決できます。 サンプル リポジトリの `UVPlugin` と `FrenchPlugin` で、これらのシナリオが示されています。
+このチュートリアルの完全なソース コードは [dotnet/samples リポジトリ](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin)で確認できます。 完全なサンプルには、他のいくつかの `AssemblyDependencyResolver` の動作例が含まれています。 たとえば、`AssemblyDependencyResolver` オブジェクトも、NuGet パッケージに含まれているローカライズされたサテライト アセンブリと同じようにネイティブ ライブラリを解決できます。 サンプル リポジトリの `UVPlugin` と `FrenchPlugin` で、これらのシナリオが示されています。
 
 ## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>NuGet パッケージからプラグイン インターフェイスを参照する
 

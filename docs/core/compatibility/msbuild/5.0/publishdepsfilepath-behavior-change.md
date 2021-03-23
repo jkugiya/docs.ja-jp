@@ -2,12 +2,12 @@
 title: 破壊的変更:PublishDepsFilePath の動作の変更
 description: PublishDepsFilePath MSBuild プロパティがシングルファイル アプリケーションに対して空になるという、.NET 5 の破壊的変更について学習します。
 ms.date: 09/17/2020
-ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 845073e73ec6bdf820f28ace487d9ae4d04d0790
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256505"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872926"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>PublishDepsFilePath の動作の変更
 
@@ -27,7 +27,7 @@ ms.locfileid: "102256505"
 
 この変更は、次の 2 つの理由で行われました。
 
-- .NET 5 で[機能強化された単一ファイル アプリ](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)をサポートするための発行ロジックのリファクタリングに起因します。
+- .NET 5 で[機能強化された単一ファイル アプリ](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md)をサポートするための発行ロジックのリファクタリングに起因します。
 
 - 単一ファイル アプリでは、*deps.json* がバンドルされた後に *deps.json* ファイルの書き換えを試行するターゲットに対する保護を支援するためです。これにより、アプリは、通知なしで影響を受けることがありません。 このため、単一ファイル アプリケーションの場合、`PublishDepsFilePath` が空になります。
 

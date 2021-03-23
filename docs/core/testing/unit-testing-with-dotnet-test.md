@@ -4,16 +4,16 @@ description: dotnet テストおよび xUnit を使用したサンプル ソリ�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/21/2020
-ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: fb4434fc4eebc009fa0bbe075d4d2290bff3b0bf
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471538"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873472"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
-このチュートリアルでは、単体テスト プロジェクトとソース コード プロジェクトが含まれるソリューションを構築する方法を示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、[サンプル コードを表示またはダウンロードしてください](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/)。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+このチュートリアルでは、単体テスト プロジェクトとソース コード プロジェクトが含まれるソリューションを構築する方法を示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、[サンプル コードを表示またはダウンロードしてください](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test/)。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ## <a name="create-the-solution"></a>ソリューションを作成する
 
@@ -47,7 +47,7 @@ ms.locfileid: "92471538"
   dotnet new classlib -o PrimeService
   ```
 
-   [`dotnet new classlib`](../tools/dotnet-new.md) コマンドによって、 *PrimeService* フォルダーに新しいクラス ライブラリ プロジェクトが作成されます。 この新しいクラス ライブラリに、テスト対象のコードが含まれることになります。
+   [`dotnet new classlib`](../tools/dotnet-new.md) コマンドによって、*PrimeService* フォルダーに新しいクラス ライブラリ プロジェクトが作成されます。 この新しいクラス ライブラリに、テスト対象のコードが含まれることになります。
 * *Class1.cs* の名前を *PrimeService.cs* に変更します。
 * *PrimeService.cs* のコードを、次のコードに置き換えます。
   
@@ -78,7 +78,7 @@ ms.locfileid: "92471538"
   dotnet sln add ./PrimeService/PrimeService.csproj
   ```
 
-* 次のコマンドを実行して、 *PrimeService.Tests* プロジェクトを作成します。
+* 次のコマンドを実行して、*PrimeService.Tests* プロジェクトを作成します。
 
   ```dotnetcli
   dotnet new xunit -o PrimeService.Tests
@@ -122,9 +122,9 @@ dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeServi
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
-前のセクションの「 *PrimeService.cs* 内のコードを次のコードに置き換える」の指示に従います。
+前のセクションの「*PrimeService.cs* 内のコードを次のコードに置き換える」の指示に従います。
 
-## <a name="create-a-test"></a>テストを作成する
+## <a name="create-a-test"></a>テストの作成
 
 テスト駆動開発 (TDD) の一般的なアプローチは、ターゲット コードを実装する前にテストを記述することです。 このチュートリアルでは、この TDD アプローチを使用します。 `IsPrime` メソッドは呼び出し可能ですが、実装されていません。 `IsPrime` のテスト呼び出しは失敗します。 TDD では、失敗することがわかっているテストを記述します。 テストに合格するように、ターゲット コードを更新します。 このアプローチを繰り返して、失敗するテストを記述した後、テストに合格するようにターゲット コードを更新します。
 
@@ -169,7 +169,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-`dotnet test` を実行します。 テストは成功します。
+`dotnet test` を実行します。 テストに合格します。
 
 ### <a name="add-more-tests"></a>さらにテストを追加する
 
@@ -200,7 +200,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-を、以下のコードに置き換えます。
+次のコードに置き換えます。
 
 [!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
@@ -219,11 +219,11 @@ public bool IsPrime(int candidate)
 }
 ```
 
-TDD アプローチに従って、失敗するテストをさらに追加した後、ターゲット コードを更新します。 [テストの最終版](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)と、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)を参照してください。
+TDD アプローチに従って、失敗するテストをさらに追加した後、ターゲット コードを更新します。 [テストの最終版](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)と、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)を参照してください。
 
 完成した `IsPrime` メソッドは、素数性をテストするための効率的なアルゴリズムではありません。
 
-### <a name="additional-resources"></a>その他のリソース
+### <a name="additional-resources"></a>その他の技術情報
 
 - [xUnit.net の公式サイト](https://xunit.net)
 - [ASP.NET Core のコントローラー ロジックをテストする](/aspnet/core/mvc/controllers/testing)

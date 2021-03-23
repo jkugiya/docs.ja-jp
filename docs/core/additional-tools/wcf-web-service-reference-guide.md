@@ -4,16 +4,16 @@ description: .NET Framework プロジェクトのサービス参照の追加と�
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fcb7695c904e80d3fcb5ea68cba7ea198b3905f3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400605"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872978"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider ツールを使用する
 
-長年にわたり、多くの Visual Studio 開発者は、.NET Framework プロジェクトが Web サービスにアクセスする必要があるときに、 [**サービス参照の追加**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)ツールが提供する生産性を利用してきました。  **WCF Web Service Reference** ツールは、.NET Core および ASP.NET Core プロジェクトのサービス参照の追加機能のようなエクスペリエンスを提供する、Visual Studio に接続されたサービス拡張機能です。 このツールは現在のソリューションの Web サービスから、ネットワーク上の場所で、あるいは WSDL ファイルからメタデータを取得し、Web サービスのアクセスに使用できる Windows Communication Foundation (WCF) クライアント プロキシ コードを含む、.NET Core 互換ソース ファイルを生成します。
+長年にわたり、多くの Visual Studio 開発者は、.NET Framework プロジェクトが Web サービスにアクセスする必要があるときに、[**サービス参照の追加**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)ツールが提供する生産性を利用してきました。  **WCF Web Service Reference** ツールは、.NET Core および ASP.NET Core プロジェクトのサービス参照の追加機能のようなエクスペリエンスを提供する、Visual Studio に接続されたサービス拡張機能です。 このツールは現在のソリューションの Web サービスから、ネットワーク上の場所で、あるいは WSDL ファイルからメタデータを取得し、Web サービスのアクセスに使用できる Windows Communication Foundation (WCF) クライアント プロキシ コードを含む、.NET Core 互換ソース ファイルを生成します。
 
 > [!IMPORTANT]
 > 信頼できるソースのサービスのみを参照してください。 信頼できないソースの参照を追加すると、セキュリティが損なわれる可能性があります。
@@ -31,7 +31,7 @@ ms.locfileid: "93400605"
 > - **Visual C#**  >  **.NET Standard**
 > - **Visual C#**  > **Web** > **ASP.NET Core Web Application**
 
-この記事では、 **ASP.NET Core Web Application** プロジェクト テンプレートを例として、WCF サービス参照をプロジェクトに追加する手順について説明します。
+この記事では、**ASP.NET Core Web Application** プロジェクト テンプレートを例として、WCF サービス参照をプロジェクトに追加する手順について説明します。
 
 1. ソリューション エクスプローラーで、プロジェクトの **[接続済みサービス]** ノードをダブルクリックします (.NET Core または .NET Standard プロジェクトの場合、ソリューション エクスプローラーでプロジェクトの **[依存関係]** ノードを右クリックすると、このオプションを使用できます)。
 
@@ -80,7 +80,7 @@ ms.locfileid: "93400605"
 
 - [Windows Communication Foundation アプリケーション入門](../../framework/wcf/getting-started-tutorial.md)
 - [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
-- [WCF supported features on .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md) (.NET Core でサポートされる WCF の機能)
+- [WCF supported features on .NET Core](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md) (.NET Core でサポートされる WCF の機能)
 
 ## <a name="feedback--questions"></a>フィードバックと質問
 
@@ -88,4 +88,4 @@ ms.locfileid: "93400605"
 
 ## <a name="release-notes"></a>リリース ノート
 
-- 既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)のページを参照してください。
+- 既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/main/release-notes/WCF-Web-Service-Reference-notes.md)のページを参照してください。

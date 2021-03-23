@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d17fd5002d47dcde804cb43fc27edb2c2c9be595
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: e751953937279a5f9f78f777bac8a5ca510a2f87
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688151"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876969"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -112,11 +112,11 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 2. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。
 
-   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。
+   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/main/deployment/install-worker.sh)を貼り付けます。
 
 3. *db-init.sh* は、依存関係を Databricks Spark クラスターにインストールするスクリプトです。
 
-   ご使用のローカル コンピューターで、**db-init.sh** という名前の新しいファイルを作成し、GitHub 上にある [db-init.sh のコンテンツ](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)を貼り付けます。
+   ご使用のローカル コンピューターで、**db-init.sh** という名前の新しいファイルを作成し、GitHub 上にある [db-init.sh のコンテンツ](https://github.com/dotnet/spark/blob/main/deployment/db-init.sh)を貼り付けます。
 
    先ほど作成したファイルで、`DOTNET_SPARK_RELEASE` 変数を `https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz` に設定します。 *db-init.sh* ファイルの残りの部分はそのままにしておきます。
 

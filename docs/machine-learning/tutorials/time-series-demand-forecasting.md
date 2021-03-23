@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: aea264036ab4766696699980f464cca3d8229499
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679391"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875591"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>チュートリアル: 時系列解析と ML.NET を使用して自転車レンタル サービスの需要を予測する
 
@@ -33,7 +33,7 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 
 ## <a name="time-series-forecasting-sample-overview"></a>時系列予測のサンプルの概要
 
-このサンプルは、特異スペクトル解析 (Singular Spectrum Analysis) と呼ばれる一変量時系列解析アルゴリズムを使用して、自転車のレンタルの需要を予測する、**C# .NET Core コンソール アプリケーション**です。 このサンプルのコードについては、GitHub の [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) リポジトリで見つけることができます。
+このサンプルは、特異スペクトル解析 (Singular Spectrum Analysis) と呼ばれる一変量時系列解析アルゴリズムを使用して、自転車のレンタルの需要を予測する、**C# .NET Core コンソール アプリケーション** です。 このサンプルのコードについては、GitHub の [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand) リポジトリで見つけることができます。
 
 ## <a name="understand-the-problem"></a>問題を把握する
 
@@ -45,7 +45,7 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 
 ## <a name="create-console-application"></a>コンソール アプリケーションを作成する
 
-1. "BikeDemandForecasting" という名前の新しい **C# .NET Core コンソール アプリケーション**を作成します。
+1. "BikeDemandForecasting" という名前の新しい **C# .NET Core コンソール アプリケーション** を作成します。
 1. **Microsoft.ML** バージョン NuGet パッケージをインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
@@ -60,7 +60,7 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 ### <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
 1. *Data* というディレクトリを作成します。
-1. [*DailyDemand.mdf* データベース ファイル](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)をダウンロードし、*Data* ディレクトリに保存します。
+1. [*DailyDemand.mdf* データベース ファイル](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)をダウンロードし、*Data* ディレクトリに保存します。
 
 > [!NOTE]
 > このチュートリアルで使用されているデータは、[UCI Bike Sharing Dataset](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset) から取得したものです。 Fanaee-T, Hadi, and Gama, Joao, 'Event labeling combining ensemble detectors and background knowledge', Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [Web リンク](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
@@ -285,7 +285,7 @@ CREATE TABLE [Rentals] (
 
 おめでとうございます! これで、自転車のレンタル需要を予測するための時系列の機械学習モデルが正常に作成されました。
 
-このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) リポジトリにあります。
+このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand) リポジトリにあります。
 
 ## <a name="next-steps"></a>次の手順
 

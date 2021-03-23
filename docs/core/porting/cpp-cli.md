@@ -3,12 +3,12 @@ title: C++/CLI プロジェクトの .NET Core への移行
 description: C++/CLI プロジェクトの .NET Core への移植について説明します。
 author: mjrousos
 ms.date: 01/10/2020
-ms.openlocfilehash: eb03f2a5ff42e8279fd3ebd6ee6fb6d955f6798d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1194e1ce03e5b86052d7e2584aa5c15acd01874b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75964861"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873693"
 ---
 # <a name="how-to-port-a-ccli-project-to-net-core"></a>C++/CLI プロジェクトを .NET Core に移植する方法
 
@@ -65,18 +65,18 @@ Windows フォーム API と WPF API の両方を使用するには、次の参�
 
 MSBuild を使用せずに C++/CLI プロジェクトをビルドすることもできます。 次の手順に従って、*cl.exe* と *link.exe* を使用して、.NET Core 向けの C++/CLI プロジェクトを直接ビルドします。
 
-1. コンパイル時に、*cl.exe*に `-clr:netcore` を渡します。
+1. コンパイル時に、*cl.exe* に `-clr:netcore` を渡します。
 2. 必要な .NET Core 参照アセンブリを参照します。
 3. リンクするときに、.NET Core アプリのホスト ディレクトリを `LibPath` として指定します (*ijwhost.lib* が検出されるようにします)。
 4. *ijwhost.dll* を (.NET Core アプリのホスト ディレクトリから) プロジェクトの出力ディレクトリにコピーします。
-5. マネージド コードを実行するアプリケーションの最初のコンポーネント用に [runtimeconfig. json](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) ファイルが存在することを確認します。 アプリケーションにマネージド エントリ ポイントがある場合は、`runtime.config` ファイルが自動的に作成されてコピーされます。 ただし、アプリケーションにネイティブ エントリ ポイントがある場合は、NET Core ランタイムを使用するために最初の C++/CLI ライブラリ用に `runtimeconfig.json` ファイルを作成する必要があります。
+5. マネージド コードを実行するアプリケーションの最初のコンポーネント用に [runtimeconfig. json](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md) ファイルが存在することを確認します。 アプリケーションにマネージド エントリ ポイントがある場合は、`runtime.config` ファイルが自動的に作成されてコピーされます。 ただし、アプリケーションにネイティブ エントリ ポイントがある場合は、NET Core ランタイムを使用するために最初の C++/CLI ライブラリ用に `runtimeconfig.json` ファイルを作成する必要があります。
 
 ## <a name="known-issues"></a>既知の問題
 
 .NET Core をターゲットとする C++/CLI プロジェクトを使用する場合は、注意すべき既知の問題がいくつかあります。
 
 * .NET Core C++/CLI プロジェクトの WPF フレームワーク参照では、現在、シンボルをインポートできないという無関係な警告がいくつか発生しています。 これらの警告は無視してかまいません。まもなく修正されるはずです。
-* アプリケーションにネイティブ エントリ ポイントがある場合、最初にマネージド コードを実行する C++/CLI ライブラリには [runtimeconfig.json](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) ファイルが必要です。 この構成ファイルは、.NET Core ランタイムの起動時に使用されます。 C++/CLI プロジェクトでは、ビルド時に `runtimeconfig.json` ファイルが自動的に作成されないため、このファイルを手動で生成する必要があります。 C++/CLI ライブラリがマネージド エントリ ポイントから呼び出された場合、その C++/CLI ライブラリには `runtimeconfig.json` ファイルは必要ありません (ランタイムの起動時に使用されるものがエントリ ポイント アセンブリに含まれているため)。 簡単なサンプルの `runtimeconfig.json` ファイルを次に示します。 詳しくは、[GitHub で仕様](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)を参照してください。
+* アプリケーションにネイティブ エントリ ポイントがある場合、最初にマネージド コードを実行する C++/CLI ライブラリには [runtimeconfig.json](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md) ファイルが必要です。 この構成ファイルは、.NET Core ランタイムの起動時に使用されます。 C++/CLI プロジェクトでは、ビルド時に `runtimeconfig.json` ファイルが自動的に作成されないため、このファイルを手動で生成する必要があります。 C++/CLI ライブラリがマネージド エントリ ポイントから呼び出された場合、その C++/CLI ライブラリには `runtimeconfig.json` ファイルは必要ありません (ランタイムの起動時に使用されるものがエントリ ポイント アセンブリに含まれているため)。 簡単なサンプルの `runtimeconfig.json` ファイルを次に示します。 詳しくは、[GitHub で仕様](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)を参照してください。
 
     ```json
     {

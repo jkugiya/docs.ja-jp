@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 24b9fdfcef6fe042204217323bb09c047c58296c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702226"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872536"
 ---
 # <a name="with-expression-c-reference"></a>with 式 (C# リファレンス)
 
-C# 9.0 以降で使用可能な `with` 式は、指定されたプロパティと変更されたフィールドにより、[レコード](../../whats-new/csharp-9.md#record-types) オペランドのコピーを生成します。
+C# 9.0 以降で使用可能な `with` 式は、指定されたプロパティと変更されたフィールドにより、[レコード](../builtin-types/record.md) オペランドのコピーを生成します。
 
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
@@ -45,3 +45,4 @@ C# 9.0 以降で使用可能な `with` 式は、指定されたプロパティ�
 
 - [C# リファレンス](../index.md)
 - [C# の演算子と式](index.md)
+- [レコード](../builtin-types/record.md)

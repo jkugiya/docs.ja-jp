@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bab14ec385ca6e4d71919ddaebd6d49ee8d002e0
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: f401af3ec7f1fc729e6f3af005acbde2ad61f586
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104992"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875838"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -31,8 +31,8 @@ C# 8.0 もこのリリースの一部であり、[null 許容参照型](../../cs
 
 C# 8.0 の言語機能に関連するチュートリアル:
 
-- [チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す](../../csharp/tutorials/nullable-reference-types.md)
-- [チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す](../../csharp/whats-new/tutorials/nullable-reference-types.md)
+- [チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md)
 - [チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する](../../csharp/tutorials/pattern-matching.md)
 
 次のような API 機能をサポートするために、言語の機能強化が追加されました。これらについては、以下で詳細に説明します。
@@ -114,7 +114,7 @@ appHost を使用しない場合、ユーザーが[フレームワークに依�
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)を参照してください。
+単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md)を参照してください。
 
 ### <a name="assembly-linking"></a>アセンブリのリンク
 
@@ -146,7 +146,7 @@ IL リンカー ツールについて詳しくは、[ドキュメント](../depl
 
 ### <a name="tiered-compilation"></a>階層型コンパイル
 
-.NET Core 3.0 では、[階層型コンパイル](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC) が既定で有効になりました。 この機能により、ランタイムが状況に応じて Just-In-Time (JIT) コンパイラを使用してパフォーマンスを向上できるようになりました。
+.NET Core 3.0 では、[階層型コンパイル](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md) (TC) が既定で有効になりました。 この機能により、ランタイムが状況に応じて Just-In-Time (JIT) コンパイラを使用してパフォーマンスを向上できるようになりました。
 
 階層型コンパイルの主な利点は、2 とおりの JIT メソッドを与えることです。低品質で高速の階層と高品質で低速の階層です。 品質とは、メソッドの最適化の程度を指します。 TC は、起動から安定した状態まで、さまざまな実行段階を経るときに、アプリケーションのパフォーマンスを向上するために役立ちます。 階層型コンパイルが無効になっていると、すべてのメソッドが起動より安定した状態に偏る 1 つの方法でコンパイルされます。
 
@@ -329,11 +329,11 @@ Windows 上で、COM 呼び出し可能なマネージ コンポーネントを�
 
 COM サーバーとして *mscoree.dll* が使用されていた .NET Framework とは異なり、COM コンポーネントを構築すると、.NET Core によって *bin* ディレクトリにネイティブ ランチャー DLL が追加されます。
 
-COM コンポーネントを作成して使用する方法の例については、[COM のデモ](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)に関する記事を参照してください。
+COM コンポーネントを作成して使用する方法の例については、[COM のデモ](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo)に関する記事を参照してください。
 
 ### <a name="windows-native-interop"></a>Windows のネイティブ相互運用機能
 
-Windows では、フラット C API、COM、および WinRT の形式で、質の高いネイティブ API を提供しています。 .NET Core は **P/Invoke** をサポートしますが、.NET Core 3.0 では **COM API の CoCreate** と **WinRT API のアクティブ化** を行う機能が追加されました。 コード例については、[Excel のデモ](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)を参照してください。
+Windows では、フラット C API、COM、および WinRT の形式で、質の高いネイティブ API を提供しています。 .NET Core は **P/Invoke** をサポートしますが、.NET Core 3.0 では **COM API の CoCreate** と **WinRT API のアクティブ化** を行う機能が追加されました。 コード例については、[Excel のデモ](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo)を参照してください。
 
 ### <a name="msix-deployment"></a>MSIX のデプロイ
 
@@ -372,7 +372,7 @@ GPIO プログラミングに使用できる 2 つのパッケージが NuGet �
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPIO パッケージには、*GPIO*、*SPI*、*I2C*、および *PWM* デバイス用の API が含まれています。 IoT バインディング パッケージにはデバイス バインディングが含まれています。 詳細については、[デバイス GitHub リポジトリ](https://github.com/dotnet/iot/blob/master/src/devices/)を参照してください。
+GPIO パッケージには、*GPIO*、*SPI*、*I2C*、および *PWM* デバイス用の API が含まれています。 IoT バインディング パッケージにはデバイス バインディングが含まれています。 詳細については、[デバイス GitHub リポジトリ](https://github.com/dotnet/iot/blob/main/src/devices/)を参照してください。
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux のサポート
 
@@ -455,7 +455,7 @@ Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-詳細については、[範囲とインデックスのチュートリアル](../../csharp/tutorials/ranges-indexes.md)を参照してください。
+詳細については、[範囲とインデックスのチュートリアル](../../csharp/whats-new/tutorials/ranges-indexes.md)を参照してください。
 
 ### <a name="async-streams"></a>非同期ストリーム
 
@@ -475,7 +475,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 `await foreach` を実行できるだけでなく、非同期反復子を作成することもできます。たとえば、`await` と`yield` の両方を行うことができる `IAsyncEnumerable/IAsyncEnumerator` を返す反復子です。 破棄する必要があるオブジェクトの場合は、`Stream` や `Timer` など、さまざまな BCL 型が実装する `IAsyncDisposable` を使用できます。
 
-詳細については、[非同期ストリームのチュートリアル](../../csharp/tutorials/generate-consume-asynchronous-stream.md)を参照してください。
+詳細については、[非同期ストリームのチュートリアル](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md)を参照してください。
 
 ### <a name="ieee-floating-point"></a>IEEE 浮動小数点数
 
@@ -516,7 +516,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 .NET ライブラリでは、必要に応じて、パフォーマンスを向上するためにこれらの命令が使用されるようになりました。
 
-詳細については、「[.NET プラットフォーム依存性](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)」を参照してください。
+詳細については、「[.NET プラットフォーム依存性](https://github.com/dotnet/designs/blob/main/accepted/2018/platform-intrinsics.md)」を参照してください。
 
 ### <a name="improved-net-core-version-apis"></a>強化された .NET Core バージョン API
 

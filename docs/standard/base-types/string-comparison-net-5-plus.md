@@ -3,12 +3,12 @@ title: .NET 5 以降で文字列を比較するときの動作の変更
 description: Windows の .NET 5 以降のバージョンでの文字列比較の動作の変更について説明します。
 ms.topic: conceptual
 ms.date: 12/07/2020
-ms.openlocfilehash: 0db8477ce4e8c3a7167c719e2a29a32e5346a8e7
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: 40b5094cdc098d4772b413c28daaec309abdb265
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692696"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876761"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5 以降で文字列を比較するときの動作の変更
 
@@ -241,7 +241,7 @@ Console.WriteLine("endz".EndsWith("z")); // Prints 'True'
 > - 動作: 言語対応およびカルチャ対応の比較子は、ときどき動作の調整が行われる場合があります。 ICU と古い Windows NLS 機能はどちらも、世界的な言語の変化を考慮して更新されます。 詳細については、ブログ記事「[ロケール (カルチャ) データの変動](/archive/blogs/shawnste/locale-culture-data-churn)」を参照してください。 "*序数*" 比較子の動作は、完全にビットごとの検索と比較が実行されるため、変更されることはありません。 ただし、*OrdinalIgnoreCase* 比較子の動作は、Unicode の拡大によって含まれる文字セットが増え、既存の大文字小文字データの不備が修正されると、変更される可能性があります。
 > - 使用方法: 比較子 `StringComparison.InvariantCulture` と `StringComparison.InvariantCultureIgnoreCase` は、カルチャ対応ではない言語比較子です。 つまり、これらの比較子では、é のようなアクセント付き文字には複数の可能な基になる表現があり、そのようなすべての表現を等しいと見なす必要がある、といった概念が理解されます。 しかし、非カルチャ対応の言語比較子には、上記のような \<d\> や \<z\> とは異なる \<dz\> の特殊な処理は含まれません。 また、ドイツ語の Eszett (ß) のような特殊なケースの文字もありません。
 
-.NET には、"*インバリアント グローバリゼーション モード*" も用意されています。 このオプトイン モードを使用すると、言語検索および比較ルーチンを処理するコード パスが無効になります。 このモードでは、呼び出し元が提供する `CultureInfo` または `StringComparison` の引数に関係なく、すべての操作で *Ordinal* または *OrdinalIgnoreCase* の動作が使用されます。 詳細については、「[グローバリゼーションのランタイム構成オプション](../../core/run-time-config/globalization.md)」および「[.NET Core のグローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」を参照してください。
+.NET には、"*インバリアント グローバリゼーション モード*" も用意されています。 このオプトイン モードを使用すると、言語検索および比較ルーチンを処理するコード パスが無効になります。 このモードでは、呼び出し元が提供する `CultureInfo` または `StringComparison` の引数に関係なく、すべての操作で *Ordinal* または *OrdinalIgnoreCase* の動作が使用されます。 詳細については、「[グローバリゼーションのランタイム構成オプション](../../core/run-time-config/globalization.md)」および「[.NET Core のグローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)」を参照してください。
 
 詳細については、「[.NET での文字列の比較に関するベスト プラクティス](best-practices-strings.md)」を参照してください。
 

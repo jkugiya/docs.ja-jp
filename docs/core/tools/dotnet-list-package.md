@@ -2,12 +2,12 @@
 title: dotnet list package コマンド
 description: "\"dotnet list package\" コマンドでは、プロジェクトまたはソリューションのパッケージ参照を列挙する便利なオプションが提供されています。"
 ms.date: 11/11/2020
-ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b51ef5deb8b6418938787003b409803a3c814b08
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189897"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873433"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -31,7 +31,7 @@ dotnet list package -h|--help
 
 ## <a name="description"></a>説明
 
-`dotnet list package` コマンドでは、特定のプロジェクトまたはソリューションのすべての NuGet パッケージ参照を列挙する便利なオプションが提供されています。 このコマンドで処理するために必要なアセットを用意するには、最初にプロジェクトをビルドする必要があります。 次の例では、[SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) プロジェクトに対する `dotnet list package` コマンドの出力を示します。
+`dotnet list package` コマンドでは、特定のプロジェクトまたはソリューションのすべての NuGet パッケージ参照を列挙する便利なオプションが提供されています。 このコマンドで処理するために必要なアセットを用意するには、最初にプロジェクトをビルドする必要があります。 次の例では、[SentimentAnalysis](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) プロジェクトに対する `dotnet list package` コマンドの出力を示します。
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -58,7 +58,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-プロジェクトに推移的依存関係があるかどうかを確認する必要がある場合は、`--include-transitive` オプションを使用します。 推移的依存関係は、プロジェクトに追加したパッケージがさらに別のパッケージに依存している場合に発生します。 次の例では、[HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) プロジェクトに対して `dotnet list package --include-transitive` コマンドを実行した出力を示します、最上位のパッケージと、それらが依存しているパッケージが表示されています。
+プロジェクトに推移的依存関係があるかどうかを確認する必要がある場合は、`--include-transitive` オプションを使用します。 推移的依存関係は、プロジェクトに追加したパッケージがさらに別のパッケージに依存している場合に発生します。 次の例では、[HelloPlugin](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin/HelloPlugin) プロジェクトに対して `dotnet list package --include-transitive` コマンドを実行した出力を示します、最上位のパッケージと、それらが依存しているパッケージが表示されています。
 
 ```output
 Project 'HelloPlugin' has the following package references

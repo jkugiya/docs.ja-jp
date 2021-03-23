@@ -6,14 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: f6e95ce58e055f0c745b781c664309e4ef91ffc6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c91483587c8976e40584474ced2f5474ab89f4
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554014"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805767"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 このトピックでは、WCF Data Services を使用して、Northwind サンプル データベースに基づく Open Data Protocol (OData) フィードを公開するサンプル データ サービスを作成します。 この作業に必要な基本手順は次のとおりです。
 
@@ -37,23 +39,23 @@ ms.locfileid: "90554014"
 
 1. (省略可能) Web アプリケーションに対して特定のポート番号を指定します。 注: この一連のクイックスタート トピックでは、ポート番号 `12345` が使用されています。
 
-    1. **ソリューション エクスプローラー**で、作成した ASP.NET プロジェクトを右クリックし、 **[プロパティ]** を選択します。
+    1. **ソリューション エクスプローラー** で、作成した ASP.NET プロジェクトを右クリックし、 **[プロパティ]** を選択します。
 
     2. **[Web]** タブを選択し、 **[ポートを指定する]** ボックスの値を `12345` に設定します。
 
 ## <a name="define-the-data-model"></a>データ モデルを定義する
 
-1. **ソリューション エクスプローラー**で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
+1. **ソリューション エクスプローラー** で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
 
 2. **[新しい項目の追加]** ダイアログ ボックスで **[データ]** カテゴリを選択し、 **[ADO.NET Entity Data Model]** を選択します。
 
 3. データ モデルの名前として「`Northwind.edmx`」と入力します。
 
-4. **Entity Data Model ウィザード**で **[データベースの EF デザイナー]** を選択し、 **[次へ]** をクリックします。
+4. **Entity Data Model ウィザード** で **[データベースの EF デザイナー]** を選択し、 **[次へ]** をクリックします。
 
 5. 次のいずれかの手順を実行してデータ モデルをデータベースに接続してから **[次へ]** をクリックします。
 
-    - データベース接続がまだ構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「[方法:SQL Server データベースへの接続を作成する](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - データベース接続がまだ構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、[SQL Server データベースへの接続を作成する](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または
 
@@ -65,7 +67,7 @@ ms.locfileid: "90554014"
 
 ## <a name="create-the-wcf-data-service"></a>WCF データ サービスを作成する
 
-1. **ソリューション エクスプローラー**で、ASP.NET プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー** で、ASP.NET プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
 2. **[新しい項目の追加]** ダイアログ ボックスで、 **[Web]** カテゴリの **[WCF Data Service]** 項目テンプレートを選択します。
 
@@ -76,7 +78,7 @@ ms.locfileid: "90554014"
 
 3. サービスの名前として、「`Northwind`」と入力します。
 
-     Visual Studio で新しいサービスの XML マークアップおよびコード ファイルが作成されます。 既定では、コード エディターのウィンドウが開きます。 **ソリューション エクスプローラー**では、このサービスに Northwind という名前が付き、拡張子は *.svc.cs* または *.svc.vb* になります。
+     Visual Studio で新しいサービスの XML マークアップおよびコード ファイルが作成されます。 既定では、コード エディターのウィンドウが開きます。 **ソリューション エクスプローラー** では、このサービスに Northwind という名前が付き、拡張子は *.svc.cs* または *.svc.vb* になります。
 
 4. データ サービスのコードで、データ サービスを定義するクラスの定義にあるコメント `/* TODO: put your data source class name here */` をデータ モデルのエンティティ コンテナーである型 (この場合は `NorthwindEntities`) で置き換えます。 クラス定義は次のようになります。
 

@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Amazon EMR Spark 
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dd1cfdf12266b55d9dbc0210479b89ba68c59a38
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a0904b5b692e1c32ba12a685f2c3a3f7d86c2c58
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688073"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874057"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>.NET for Apache Spark アプリケーションを Amazon EMR Spark にデプロイする
 
@@ -32,7 +32,7 @@ ms.locfileid: "94688073"
 開始する前に、以下を行います。
 
 * [AWS CLI](https://aws.amazon.com/cli/) をダウンロードします。
-* [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
+* [install-worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
 
 ## <a name="prepare-worker-dependencies"></a>ワーカーの依存関係を準備する
 
@@ -42,7 +42,7 @@ ms.locfileid: "94688073"
 
    たとえば、`netcoreapp3.1` を使用する `.NET for Apache Spark v1.0.0` が必要な場合は、[Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz) をダウンロードします。
 
-2. クラスターからアクセスできる分散ファイル システム (S3 など) に、`Microsoft.Spark.Worker.<release>.tar.gz` と [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をアップロードします。
+2. クラスターからアクセスできる分散ファイル システム (S3 など) に、`Microsoft.Spark.Worker.<release>.tar.gz` と [install-worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) をアップロードします。
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>.NET for Apache Spark アプリを準備する
 
@@ -135,4 +135,4 @@ aws emr add-steps \
 このチュートリアルでは、.NET for Apache Spark アプリケーションを Amazon EMR Spark にデプロイしました。 .NET for Apache Spark のプロジェクト例については、GitHub に進んでください。
 
 > [!div class="nextstepaction"]
-> [.NET for Apache Spark サンプル](https://github.com/dotnet/spark/tree/master/examples)
+> [.NET for Apache Spark サンプル](https://github.com/dotnet/spark/tree/main/examples)

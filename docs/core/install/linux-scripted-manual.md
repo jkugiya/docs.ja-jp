@@ -4,12 +4,12 @@ description: Linux でパッケージ マネージャーを使用せずに .NET 
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 414246e472c3d58a6768311bd7a4635100f3b618
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6840814627be0124d7b3855f08a433eab76eac4a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105181"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873914"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>手動で .NET SDK または .NET ランタイムをインストールする
 
@@ -45,7 +45,7 @@ Snap を使用して .NET をインストールすることもできます。 �
 - [SLES](linux-sles.md#dependencies)
 - [Ubuntu](linux-ubuntu.md#dependencies)
 
-依存関係に関する一般的な情報については、「[自己完結型 Linux アプリケーション](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」を参照してください。
+依存関係に関する一般的な情報については、「[自己完結型 Linux アプリケーション](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md)」を参照してください。
 
 ### <a name="rpm-dependencies"></a>RPM の依存関係
 

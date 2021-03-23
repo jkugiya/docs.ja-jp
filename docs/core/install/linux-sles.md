@@ -4,12 +4,12 @@ description: SLES に .NET SDK と .NET ランタイムをインストールす�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: db8773c82417eda0deac04f95cfe8199621d04c4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970786"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875266"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>SLES に .NET SDK または .NET ランタイムをインストールする
 
@@ -90,7 +90,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 ターゲット ランタイム環境の OpenSSL バージョンが 1.1 以降である場合は、**compat-openssl10** をインストールする必要があります。
 
-依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
+依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
 
 *System.Drawing.Common* アセンブリを使用する .NET アプリの場合は、次の依存関係も必要です。
 

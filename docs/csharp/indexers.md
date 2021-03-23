@@ -4,12 +4,12 @@ description: C# のインデクサーとインデックス付きプロパティ�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 1369740404c500d8b44b4706959bf4640c26aa2d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 2efd8735587c35be8e89dba7499a0a661796067d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656112"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875786"
 ---
 # <a name="indexers"></a>インデクサー
 
@@ -46,7 +46,7 @@ public int this[string key]
 型の API がコレクションをモデル化していて、そのコレクションへの引数が定義されている場合に、型に "*インデクサー*" を定義します。 インデクサーは、.NET Core Framework に含まれているコレクション型に直接マップされることもあれば、されないこともあります。 型は、コレクションのモデル化だけでなく、他の役割がある場合もあります。
 インデクサーを使用すると、型の抽象化に適した API を提供することができ、抽象化された値の格納や計算の方法の内部の詳細を公開しなくて済みます。
 
-"*インデクサー*" を使用する一般的なシナリオをいくつか見ていきましょう。 [インデクサーのサンプル フォルダー](https://github.com/dotnet/samples/tree/master/csharp/indexers)にアクセスできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+"*インデクサー*" を使用する一般的なシナリオをいくつか見ていきましょう。 [インデクサーのサンプル フォルダー](https://github.com/dotnet/samples/tree/main/csharp/indexers)にアクセスできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ### <a name="arrays-and-vectors"></a>配列とベクター
 

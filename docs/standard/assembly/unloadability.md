@@ -4,12 +4,12 @@ description: マネージド アセンブリのロードとアンロードに収
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: fd91bdb6f8f2da6cdcae6039778d2406ffc2cdb6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865347"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876189"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
 
@@ -26,7 +26,7 @@ ms.locfileid: "86865347"
 
 ## <a name="use-collectible-assemblyloadcontext"></a>収集可能な AssemblyLoadContext の使用
 
-このセクションは、収集可能な `AssemblyLoadContext` に NET Core アプリケーションをロードして、そのエントリ ポイントを実行した後、NET Core アプリケーションをアンロードするための簡単な方法を詳細に説明したステップバイステップのチュートリアルです。 完全なサンプルについては、[https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading) を参照してください。
+このセクションは、収集可能な `AssemblyLoadContext` に NET Core アプリケーションをロードして、そのエントリ ポイントを実行した後、NET Core アプリケーションをアンロードするための簡単な方法を詳細に説明したステップバイステップのチュートリアルです。 完全なサンプルについては、[https://github.com/dotnet/samples/tree/main/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/main/core/tutorials/Unloading) を参照してください。
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>収集可能な AssemblyLoadContext を作成する
 

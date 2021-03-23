@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: c29c3a9f6269a342d1051d6d979a4e3adb42da02
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441077"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875552"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>.NET for Apache Spark 対話型環境で UDF を記述して呼び出す
 
@@ -69,8 +69,8 @@ ms.locfileid: "94441077"
 
     ![ブロードキャスト変数の失敗](./media/dotnet-interactive/broadcast-fails.png)
 
-    前のセクションで推奨されているように、UDF とそれが参照するオブジェクト (この場合はブロードキャスト変数) の両方を同じセルに定義しても、`Microsoft.Spark.Sql.Session` がシリアル化可能としてマークされていないことを示す `SerializationException` エラーが引き続き表示されます。 これは、コンパイラによってブロードキャスト変数オブジェクト `bv` のシリアル化が試行されたときに、その名前に [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) オブジェクト `spark` が追加されることが認識され、これをシリアル化可能としてマークする必要があるためです。 このことは、このセル送信のデコンパイル アセンブリを参照することで、より簡単に示すことができます。
+    前のセクションで推奨されているように、UDF とそれが参照するオブジェクト (この場合はブロードキャスト変数) の両方を同じセルに定義しても、`Microsoft.Spark.Sql.Session` がシリアル化可能としてマークされていないことを示す `SerializationException` エラーが引き続き表示されます。 これは、コンパイラによってブロードキャスト変数オブジェクト `bv` のシリアル化が試行されたときに、その名前に [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) オブジェクト `spark` が追加されることが認識され、これをシリアル化可能としてマークする必要があるためです。 このことは、このセル送信のデコンパイル アセンブリを参照することで、より簡単に示すことができます。
 
     ![デコンパイル アセンブリ コード](./media/dotnet-interactive/decompiledAssembly.png)
 
-    [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) クラスを `[Serializable]` としてマークすると機能するようになりますが、これは理想的な解決策ではありません。SparkSession オブジェクトのシリアル化をユーザーに許可すると、望ましくない不可解な動作が生じる可能性があるためです。 これは[既知の問題](https://github.com/dotnet/spark/issues/619)であり、今後のバージョンで解決される予定です。
+    [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) クラスを `[Serializable]` としてマークすると機能するようになりますが、これは理想的な解決策ではありません。SparkSession オブジェクトのシリアル化をユーザーに許可すると、望ましくない不可解な動作が生じる可能性があるためです。 これは[既知の問題](https://github.com/dotnet/spark/issues/619)であり、今後のバージョンで解決される予定です。

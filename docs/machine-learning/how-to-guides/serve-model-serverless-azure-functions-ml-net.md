@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 74a7a5b941596ba9fffc62ef87a01763937d88c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90b52aa295e224eb3744d2576b9a146e4e90dced
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91608778"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875890"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions にモデルをデプロイする
 
@@ -24,11 +24,11 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 - ".NET Core クロスプラットフォーム開発" および "Azure の開発" ワークロードがインストールされた [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降または Visual Studio 2017 バージョン 15.6 以降。
 - [Azure Functions ツール](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
-- 事前トレーニング済みのモデル。 [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
+- 事前トレーニング済みのモデル。 [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/main/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
 
 ## <a name="azure-functions-sample-overview"></a>Azure Functions サンプルの概要
 
-このサンプルは、事前トレーニング済みの二項分類モデルを使用してテキストのセンチメントを正または負として分類する、**C# HTTP トリガー Azure Functions アプリケーション** です。 Azure Functions では、クラウド内の管理されたサーバーレス環境で小規模なコードを大規模に実行する簡単な方法を提供します。 このサンプルのコードについては、GitHub の [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) リポジトリで見つけることができます。
+このサンプルは、事前トレーニング済みの二項分類モデルを使用してテキストのセンチメントを正または負として分類する、**C# HTTP トリガー Azure Functions アプリケーション** です。 Azure Functions では、クラウド内の管理されたサーバーレス環境で小規模なコードを大規模に実行する簡単な方法を提供します。 このサンプルのコードについては、GitHub の [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) リポジトリで見つけることができます。
 
 ## <a name="create-azure-functions-project"></a>Azure Functions プロジェクトを作成する
 
@@ -161,7 +161,7 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
+>       uri:"https://github.com/dotnet/samples/raw/main/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 

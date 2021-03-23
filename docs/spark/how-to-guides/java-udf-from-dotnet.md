@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: f85ed5585c8daef0ca9a21275b8de71b2eead360
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688268"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875487"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションから Java UDF を呼び出す
 
@@ -45,7 +45,7 @@ ms.locfileid: "94688268"
 ## <a name="register-and-call-java-udfs-in-net-for-apache-spark"></a>.NET for Apache Spark に Java UDF を登録して呼び出す
 
 1. [`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424) API を使用して、Java UDF を Spark SQL に登録します。
-2. [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) 関数を使用して、UDF を SQL テーブルとして呼び出す `DataFrame` を登録します。
+2. [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) 関数を使用して、UDF を SQL テーブルとして呼び出す `DataFrame` を登録します。
 3. `SparkSession.Sql` を使用し、Spark SQL を使用してテーブル ビューで UDF を呼び出します。
 上記の手順を説明するための基本的な例を次に示します。
 

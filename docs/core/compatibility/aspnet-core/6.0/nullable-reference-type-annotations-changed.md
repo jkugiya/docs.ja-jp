@@ -4,18 +4,18 @@ description: ASP.NET Core 6.0 における null 許容参照型の注釈の変�
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d289ee68a10ee6a237e553a9e0ade153add8f608
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257890"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874343"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>null 許容参照型の注釈の変更
 
 _**この問題は、進行中の作業を表します。ASP.NET Core 6.0 全体を通して、null 値の許容の注釈に関するすべての破壊的変更は、この問題にまとめられます。**_
 
-ASP.NET Core 5.0 以降、null 値の許容の注釈がコードの一部に適用されています。 この作業に着手して以降、これらの注釈には[誤りがあることが予想されており](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance)、修正を行う必要がありました。 ASP.NET Core 6.0 では、以前に適用されたいくつかの注釈が更新されています。 これらの変更の一部は、ソースの破壊的変更と見なされます。 変更により、API は互換性を持たなくなるか、より限定的になります。 更新された API を、null 許容参照型が有効になっているプロジェクトで使用すると、ビルド時の警告が発生する可能性があります。
+ASP.NET Core 5.0 以降、null 値の許容の注釈がコードの一部に適用されています。 この作業に着手して以降、これらの注釈には[誤りがあることが予想されており](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance)、修正を行う必要がありました。 ASP.NET Core 6.0 では、以前に適用されたいくつかの注釈が更新されています。 これらの変更の一部は、ソースの破壊的変更と見なされます。 変更により、API は互換性を持たなくなるか、より限定的になります。 更新された API を、null 許容参照型が有効になっているプロジェクトで使用すると、ビルド時の警告が発生する可能性があります。
 
 ディスカッションについては、GitHub のイシュー [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564) を参照してください。
 

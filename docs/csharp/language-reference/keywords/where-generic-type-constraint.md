@@ -10,18 +10,18 @@ f1_keywords:
 - enumconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: ff2d50b2148ea62e5bef5eceda547a976e4abf02
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 83fb5b562d9e1e4caaef179ca2911adb60fc01fa
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687312"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872627"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 
 ジェネリック定義の `where` 句では、型の制約を指定します。この型は、ジェネリック型、メソッド、デリゲート、またはローカル関数における型パラメーターの引数として使用されます。 制約では、インターフェイス (基底クラス) を指定したり、参照、値、またはアンマネージド型となるジェネリック型を要求したりすることができます。 それらにより型引数が処理する必要がある機能が宣言されえます。
 
-たとえば、型パラメーター `T` が <xref:System.IComparable%601> インターフェイスを実装するように、次のように `MyGenericClass` ジェネリック クラスを宣言できます。
+たとえば、型パラメーター `T` が <xref:System.IComparable%601> インターフェイスを実装するように、次のように `AGenericClass` ジェネリック クラスを宣言できます。
 
 [!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#1)]
 

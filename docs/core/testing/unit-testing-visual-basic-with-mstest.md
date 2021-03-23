@@ -4,16 +4,16 @@ description: MSTest を使用した Visual Basic ソリューションのサン�
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: 9654d05754b83033bcaef6d8b8f24e3ba1d8bb2f
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9ab85b2e688f5f31d0981fbee618212ac6ea5a19
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656450"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873498"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MSTest を使用した .NET Core ライブラリでの単体テスト Visual Basic
 
-このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-vb-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -72,7 +72,7 @@ End Namespace
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-全体のファイルは GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj)で確認できます。
+全体のファイルは GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj)で確認できます。
 
 ソリューションの最終的なレイアウトは次のようになります。
 
@@ -129,7 +129,7 @@ End Function
 
 ## <a name="adding-more-features"></a>他の機能の追加
 
-テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります(0、-1)。 `<TestMethod>` 属性を使用すると、これらの例を新しいテストとして追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `<DataTestMethod>` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `<DataRow>` 属性を使用して、そのような入力の値を指定することができます。
+テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 `<TestMethod>` 属性を使用すると、これらの例を新しいテストとして追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `<DataTestMethod>` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `<DataRow>` 属性を使用して、そのような入力の値を指定することができます。
 
 新しいテストを作成するのではなく、この 2 つの属性を適用することで 1 つの理論を作成できます。 その理論とは、複数の 2 未満の値を調べて、もっとも小さい素数を特定するという手法です。
 
@@ -141,6 +141,6 @@ End Function
 if candidate < 2
 ```
 
-他のテスト、理論、コードをメイン ライブラリに追加して、反復を続けます。 [テストの最終版](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb)ができ、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb)が完了しました。
+他のテスト、理論、コードをメイン ライブラリに追加して、反復を続けます。 [テストの最終版](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb)ができ、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb)が完了しました。
 
 これで、小さなライブラリとそのライブラリの単体テストのセットが構築されました。 ソリューションを構築したことで、新しいパッケージとテストの追加が通常のワークフローに組み込まれました。 アプリケーションの目標を達成することに時間と労力の多くを割き、集中して取り組みました。

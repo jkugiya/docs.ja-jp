@@ -3,16 +3,16 @@ title: .NET Framework および .NET Core のプロジェクトを整理する
 description: プロジェクト所有者が横並びの .NET Framework と .NET Core に対してソリューションをコンパイルするときに役立ちます。
 author: conniey
 ms.date: 12/07/2018
-ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d495ce7b21b45d3fabe444f117667e5908ac81a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75777330"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873667"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework と .NET Core の両方をサポートするようにプロジェクトを整理する
 
-.NET Framework と .NET Core 両方のコンパイルに同時に対応するソリューションを作成できます。 この記事では、この目標を達成するために役立つ、いくつかのプロジェクトの整理のオプションについて説明します。 ここでは、.NET Core でプロジェクト レイアウトを設定する方法について決定するときに考慮する典型的なシナリオを紹介します。 この一覧はプロジェクトのニーズに基づいて選択されており、すべてを網羅しているわけではありません。
+.NET Framework と .NET Core 両方のコンパイルに同時に対応するソリューションを作成できます。 この記事では、この目標を達成するために役立つ、いくつかのプロジェクトの整理のオプションについて説明します。 ここでは、.NET Core でプロジェクト レイアウトを設定する方法について決定するときに考慮する典型的なシナリオを紹介します。 この一覧はプロジェクトのニーズに基づいて選択されており、すべてを網羅しるわけではりません。
 
 - [**既存のプロジェクトと .NET Core プロジェクトを結合し、シングル プロジェクトを作成する**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
@@ -37,7 +37,7 @@ ms.locfileid: "75777330"
 
 ![既存のプロジェクト](./media/project-structure/existing-project-structure.png)
 
-[**ソース コード**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
+[**ソース コード**](https://github.com/dotnet/samples/tree/main/framework/libraries/migrate-library/)
 
 下に説明する既存のプロジェクトの制約や複雑性にもよりますが、このリポジトリのために .NET Core のサポートを追加する方法がいくつかあります。
 
@@ -47,11 +47,11 @@ ms.locfileid: "75777330"
 
 ![複数のフレームワークをターゲットにする csproj の作成](./media/project-structure/multi-targeted-project.png)
 
-[**ソース コード**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
+[**ソース コード**](https://github.com/dotnet/samples/tree/main/framework/libraries/migrate-library-csproj/)
 
 注目するべき変更点:
 
-- *packages.config* と *\*.csproj* が新しい [.NET Core *\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) に置き換わりました。 NuGet パッケージが `<PackageReference> ItemGroup` で指定されています。
+- *packages.config* と *\*.csproj* が新しい [.NET Core *\*.csproj*](https://github.com/dotnet/samples/tree/main/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) に置き換わりました。 NuGet パッケージが `<PackageReference> ItemGroup` で指定されています。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>既存のプロジェクトを保持し、.NET Core プロジェクトを作成する
 
@@ -59,10 +59,10 @@ ms.locfileid: "75777330"
 
 ![別のフォルダーに既存のプロジェクトがある .NET Core プロジェクト](./media/project-structure/separate-projects-same-source.png)
 
-[**ソース コード**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
+[**ソース コード**](https://github.com/dotnet/samples/tree/main/framework/libraries/migrate-library-csproj-keep-existing/)
 
 .NET Core と既存のプロジェクトを別々のフォルダーに保存します。 プロジェクトを別々のフォルダーに保存すれば、Visual Studio 2017 以降のバージョンを所有する必要がありません。 古いプロジェクトだけを開く別個のソリューションを作成できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Core の移植に関するドキュメント](index.md)

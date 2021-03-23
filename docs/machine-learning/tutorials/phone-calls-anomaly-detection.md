@@ -4,12 +4,12 @@ description: 時系列データの異常検出アプリケーションを構築�
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 52ce0a60c91ef7a82f7ef1a0709701302b9e11d9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259825"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874772"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>チュートリアル: ML.NET で時系列の異常を検出する
 
@@ -22,13 +22,13 @@ ms.locfileid: "102259825"
 > * 時系列の期間を検出する
 > * 定期的な時系列の異常を検出する
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection) リポジトリで確認できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 * [Visual Studio 2019 バージョン 16.7.8 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラットフォーム開発" ワークロードと共にインストールされている。
 
-* [phone-calls.csv データセット](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)。
+* [phone-calls.csv データセット](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)。
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションの作成
 
@@ -50,7 +50,7 @@ ms.locfileid: "102259825"
 
 1. データセットをダウンロードし、以前に作成した *Data* フォルダーに保存します。
 
-    [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) を右クリックし、[名前を付けてリンク (または対象) を保存] を選択します
+    [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) を右クリックし、[名前を付けてリンク (または対象) を保存] を選択します
 
      \*.csv ファイルを *Data* フォルダーに保存したことを確認します。または他の場所に保存した後に、\*.csv ファイルを *Data* フォルダーに移動します。
 
@@ -249,7 +249,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 
 おめでとうございます! これで、定期的な系列の期間と異常を検出するための機械学習モデルが正常に構築されました。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection) リポジトリで確認できます。
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
@@ -262,4 +262,4 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 
 Machine Learning サンプルの GitHub リポジトリを確認し、Power Consumption Anomaly Detection サンプルを調べてください。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

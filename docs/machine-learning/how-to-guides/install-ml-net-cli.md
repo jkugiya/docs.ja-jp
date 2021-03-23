@@ -3,12 +3,12 @@ title: ML.NET コマンドライン インターフェイス (CLI) ツールを�
 description: ML.NET コマンド ライン インターフェイス (CLI) ツールをインストール、アップグレード、ダウングレード、およびアンインストールする方法を説明します。
 ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: a99ffa30dcbacba3341125fd0e37e617e0f4cd1e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: a2fdaa06c1602a2c3986b2f034cd1840e39d16a3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103947"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876774"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 
@@ -108,9 +108,9 @@ ML.NET CLI は `System.CommandLine` に基づいているので、タブ補完�
 
 2. 適切な shim スクリプトをシェル プロファイルに追加します。 必要に応じてシェル プロファイル ファイルを作成します。 shim スクリプトによって、シェルからの完了要求が `dotnet-suggest` ツールに転送され、適切な `System.CommandLine` ベースのアプリに委任されます。
 
-    - bash の場合、[dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) の内容を `~/.bash_profile` に追加します。
+    - bash の場合、[dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/main/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) の内容を `~/.bash_profile` に追加します。
 
-    - PowerShell の場合は、[dotnet-recommend-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) の内容を PowerShell プロファイルに追加します。 コンソールで次のコマンドを実行して、PowerShell プロファイルへの予想されるパスを見つけることができます。
+    - PowerShell の場合は、[dotnet-recommend-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/main/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) の内容を PowerShell プロファイルに追加します。 コンソールで次のコマンドを実行して、PowerShell プロファイルへの予想されるパスを見つけることができます。
 
     ```console
     echo $profile

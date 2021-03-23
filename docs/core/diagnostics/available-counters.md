@@ -3,12 +3,12 @@ title: .NET の既知の EventCounter
 description: .NET ランタイムとライブラリによって公開されている EventCounter を確認します。
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: db7417993786eae18c9d7b6cc3bb79284d543dd3
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: aad4fa8b33ebf0dcb7803c77b11fb99a6b6d7b83
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189944"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872835"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET の既知の EventCounter
 
@@ -46,7 +46,7 @@ ms.locfileid: "103189944"
 
 ## <a name="microsoftaspnetcorehosting-counters"></a>"Microsoft.AspNetCore.Hosting" カウンター
 
-次のカウンターは、[ASP.NET Core](/aspnet/core) の一部として公開され、[`HostingEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Hosting/Hosting/src/Internal/HostingEventSource.cs) に保持されます。
+次のカウンターは、[ASP.NET Core](/aspnet/core) の一部として公開され、[`HostingEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/main/src/Hosting/Hosting/src/Internal/HostingEventSource.cs) に保持されます。
 
 | カウンター | 説明 |
 |--|--|
@@ -57,7 +57,7 @@ ms.locfileid: "103189944"
 
 ## <a name="microsoftaspnetcorehttpconnections-counters"></a>"Microsoft.AspNetCore.Http.Connections" カウンター
 
-次のカウンターは、[ASP.NET Core SignalR](/aspnet/core/signalr/introduction) の一部として公開され、[`HttpConnectionsEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/SignalR/common/Http.Connections/src/Internal/HttpConnectionsEventSource.cs) に保持されます。
+次のカウンターは、[ASP.NET Core SignalR](/aspnet/core/signalr/introduction) の一部として公開され、[`HttpConnectionsEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/main/src/SignalR/common/Http.Connections/src/Internal/HttpConnectionsEventSource.cs) に保持されます。
 
 | カウンター | 説明 |
 |--|--|
@@ -69,7 +69,7 @@ ms.locfileid: "103189944"
 
 ## <a name="microsoft-aspnetcore-server-kestrel-counters"></a>"Microsoft-AspNetCore-Server-Kestrel" カウンター
 
-次のカウンターは、[ASP.NET Core Kestrel Web サーバー](/aspnet/core/fundamentals/servers/kestrel)の一部として公開され、[`KestrelEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Servers/Kestrel/Core/src/Internal/Infrastructure/KestrelEventSource.cs) に保持されます。
+次のカウンターは、[ASP.NET Core Kestrel Web サーバー](/aspnet/core/fundamentals/servers/kestrel)の一部として公開され、[`KestrelEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/main/src/Servers/Kestrel/Core/src/Internal/Infrastructure/KestrelEventSource.cs) に保持されます。
 
 | カウンター | 説明 |
 |--|--|

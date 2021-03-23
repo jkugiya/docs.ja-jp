@@ -2,12 +2,12 @@
 title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 11/16/2020
-ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 009ab0266a4479dfd8a37cb3261ca6fae7c78b8e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438194"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873186"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -92,7 +92,7 @@ CLR によって、メモリの割り当てと管理が処理されます。 CLR
 
 [CLR](#clr) とは異なり、CoreRT は仮想マシンではありません。つまり、[JIT](#jit) が含まれないため、実行時にコードを生成して実行する機能はありません。 ただし、[GC](#gc) およびランタイム型識別 (RTTI) とリフレクションの機能は備えています。 ただ、CoreRT の型システムはリフレクション用のメタデータが必要ないように設計されています。 メタデータが必要ないと、[AOT](#aot) ツール チェーンで余分なメタデータのリンクを削除し、(さらに重要なこととして) アプリが使っていないコードを特定することができます。 CoreRT は開発中です。
 
-[.NET Native と CoreRT の概要](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)をご覧ください。
+[.NET Native と CoreRT の概要](https://github.com/dotnet/corert/blob/main/Documentation/intro-to-corert.md)をご覧ください。
 
 ## <a name="cross-platform"></a>クロスプラットフォーム
 
@@ -219,7 +219,7 @@ Just-In-Time ([JIT](#jit)) ではなく、Ahead Of Time ([AOT](#aot)) でネイ�
 
 UWP は、.NET Native によってサポートされる最初のアプリケーション フレームワークでした。 現在では、Windows、macOS、Linux 用のネイティブ コンソール アプリの構築がサポートされています。
 
-「[Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)」(.NET Native と CoreRT の概要) をご覧ください。
+「[Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/main/Documentation/intro-to-corert.md)」(.NET Native と CoreRT の概要) をご覧ください。
 
 ## <a name="net-sdk"></a>.NET SDK
 

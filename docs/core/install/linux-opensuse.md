@@ -4,12 +4,12 @@ description: openSUSE に .NET SDK と .NET ランタイムをインストール
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: d238054a217a7295594db856d5497982572af377
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970812"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873953"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>openSUSE に .NET SDK または .NET ランタイムをインストールする
 
@@ -81,7 +81,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 ターゲット ランタイム環境の OpenSSL バージョンが 1.1 以降である場合は、**compat-openssl10** をインストールする必要があります。
 
-依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
+依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
 
 *System.Drawing.Common* アセンブリを使用する .NET アプリの場合は、次の依存関係も必要です。
 

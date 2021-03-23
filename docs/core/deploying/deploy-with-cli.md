@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 65c9c4929d9ed8ab4005677fbcb0a3745ed14190
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255693"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874304"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>.NET CLI を使用した .NET アプリの発行
 
@@ -149,11 +149,11 @@ FDE を公開すると、アプリが実行されるシステムで使用でき�
 [アプリの例](#sample-app)を使用する場合は、`dotnet publish -f net5.0 -r win10-x64 --self-contained false` を実行します。 このコマンドでは、実行可能ファイル `./bin/Debug/net5.0/win10-x64/publish/apptest1.exe` が作成されます
 
 > [!NOTE]
-> **グローバリゼーション インバリアント モード** を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード** の詳細と、それを有効にする方法については、[.NET のグローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)に関するページを参照してください。
+> **グローバリゼーション インバリアント モード** を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード** の詳細と、それを有効にする方法については、[.NET のグローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)に関するページを参照してください。
 
 ## <a name="self-contained-deployment"></a>自己完結型の展開
 
-自己完結型の展開 (SCD) を公開すると、.NET SDK によってプラットフォーム固有の実行可能ファイルが作成されます。 SCD の公開には、アプリの実行に必要なすべての .NET ファイルが含まれますが、[.NET のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれません。 これらの依存関係は、アプリを実行する前に、システムに存在している必要があります。
+自己完結型の展開 (SCD) を公開すると、.NET SDK によってプラットフォーム固有の実行可能ファイルが作成されます。 SCD の公開には、アプリの実行に必要なすべての .NET ファイルが含まれますが、[.NET のネイティブの依存関係](https://github.com/dotnet/core/blob/main/Documentation/prereqs.md)は含まれません。 これらの依存関係は、アプリを実行する前に、システムに存在している必要があります。
 
 SCD の公開で作成されるアプリでは、使用可能な最新の .NET セキュリティ更新プログラムへのロールフォワードは行われません。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET のバージョンを選択する](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)」を参照してください。
 
@@ -170,7 +170,7 @@ SCD の公開で作成されるアプリでは、使用可能な最新の .NET �
 |                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained true`  |
 
 > [!NOTE]
-> **グローバリゼーション インバリアント モード** を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード** の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
+> **グローバリゼーション インバリアント モード** を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード** の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 02/09/2021
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8397a12d179569c2836c43ab3946a2edba3bdba8
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 71d44ca3248d497b3f46d1d93c6505adcfc42021
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100469774"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873303"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>チュートリアル: 転移学習と ML.NET Image Classification API を利用した自動ビジュアル検査
 
@@ -116,7 +116,7 @@ SDNET2018 は、ひび割れあり/ひび割れなしのコンクリート構造
 
 このチュートリアルでは、橋床の画像のみ使用します。
 
-1. [データセット](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip)をダウンロードし、解凍します。
+1. [データセット](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip)をダウンロードし、解凍します。
 1. データ セット ファイルを保存するために、プロジェクトに "assets" という名前のディレクトリを作成します。
 1. 先ほど解凍したディレクトリから *assets* ディレクトリに *CD* サブディレクトリと *UD* サブディレクトリをコピーします。
 

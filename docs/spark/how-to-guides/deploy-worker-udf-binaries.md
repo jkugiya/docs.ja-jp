@@ -4,12 +4,12 @@ description: .NET for Apache Spark ワーカーとユーザー定義関数のバ
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: c777fdb26045c62317b49259fdde974f43ba5c0d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d3e86d22a308c7124812f2c11742c2e18803b13d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293768"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875539"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>.NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する
 
@@ -27,7 +27,7 @@ ms.locfileid: "96293768"
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code> バイナリが生成されるパス。</br>これは Spark ドライバーによって使用され、Spark Executor に渡されます。 この変数を設定しないと、Spark Executor は <code>PATH</code> 環境変数から指定したパスを検索します。</br>_例:"C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code> がアセンブリを読み込むコンマ区切りのパス。</br>パスが "." で始まる場合、作業ディレクトリが先頭に追加されます。 **yarn モード** の場合、"." はコンテナーの作業ディレクトリを表します。</br>_例:"C:\Users\\&lt;ユーザー名&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet バージョン&gt;"_
-| DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF をデバッグしたい</a>場合、<code>spark-submit</code> の実行前にこの環境変数を <code>1</code> に設定します。
+| DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/main/docs/developer-guide.md#debugging-user-defined-function-udf">UDF をデバッグしたい</a>場合、<code>spark-submit</code> の実行前にこの環境変数を <code>1</code> に設定します。
 
 ### <a name="parameter-options"></a>パラメーター オプション
 

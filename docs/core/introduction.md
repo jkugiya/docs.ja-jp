@@ -4,12 +4,12 @@ description: さまざまな種類のアプリをビルドするための無料�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 78713ee08fadd7a947ee26997b8abe6373ab98d8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105090"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875136"
 ---
 # <a name="introduction-to-net"></a>.NET の概要
 
@@ -54,13 +54,13 @@ ms.locfileid: "102105090"
 
 .NET の場合、オペレーティング システム API などのプラットフォーム固有の機能を使用することができます。 例として、Windows 上の Windows フォームと WPF、および Xamarin からの各モバイル プラットフォームへのネイティブ バインドがあります。
 
-詳細については、[サポートされている OS ライフサイクル ポリシー](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)と [.NET RID カタログ](rid-catalog.md)に関するページを参照してください。
+詳細については、[サポートされている OS ライフサイクル ポリシー](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md)と [.NET RID カタログ](rid-catalog.md)に関するページを参照してください。
 
 ## <a name="open-source"></a>オープン ソース
 
-.NET はオープン ソースであり、[MIT および Apache 2 ライセンス](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)を使用します。 .NET は [.NET Foundation](https://dotnetfoundation.org/) のプロジェクトです。
+.NET はオープン ソースであり、[MIT および Apache 2 ライセンス](https://github.com/dotnet/runtime/blob/main/LICENSE.TXT)を使用します。 .NET は [.NET Foundation](https://dotnetfoundation.org/) のプロジェクトです。
 
-詳細については、[GitHub.com のプロジェクト リポジトリの一覧](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md)を参照してください。
+詳細については、[GitHub.com のプロジェクト リポジトリの一覧](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md)を参照してください。
 
 ## <a name="support"></a>サポート
 
@@ -283,7 +283,7 @@ GC は、"*メモリの安全性*" の確保に役立つ CLR サービスの 1 �
 * <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> や <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> などの[シリアル化](../standard/serialization/index.md) ユーティリティ型。
 * <xref:System.Span%601?displayProperty=nameWithType>、<xref:System.Numerics.Vector?displayProperty=nameWithType>、[Pipelines](../standard/io/pipelines.md) などの高パフォーマンス型。
 
-詳細については、「[ランタイム ライブラリの概要](../standard/runtime-libraries-overview.md)」を参照してください。 ライブラリのソース コードは [GitHub の dotnet/runtime リポジトリ](https://github.com/dotnet/runtime/tree/master/src/libraries)にあります。
+詳細については、「[ランタイム ライブラリの概要](../standard/runtime-libraries-overview.md)」を参照してください。 ライブラリのソース コードは [GitHub の dotnet/runtime リポジトリ](https://github.com/dotnet/runtime/tree/main/src/libraries)にあります。
 
 ### <a name="extensions-to-the-runtime-libraries"></a>ランタイム ライブラリの拡張機能
 

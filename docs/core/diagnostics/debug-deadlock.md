@@ -3,12 +3,12 @@ title: デッドロックのデバッグ - .NET Core
 description: .NET Core でのロックに関する問題のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: a268884740ff38d7975303a5a5e5f2c24f16778d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105585"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874273"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core でデッドロックをデバッグする
 
@@ -267,7 +267,7 @@ OS Thread Id: 0x5634 (28)
 - [dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する
 - [dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する
 - [dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する
-- [dotnet/診断](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/診断](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 
 ## <a name="next-steps"></a>次の手順
 

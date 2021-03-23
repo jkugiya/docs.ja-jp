@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7a3b0c0d972d5cb6dbc6eea818fe794c5060eae
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0c2b7522e0e6790ded418413ef0f128aae1e0884
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687911"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875344"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>チュートリアル: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -130,7 +130,7 @@ ms.locfileid: "94687911"
 
 3. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。
 
-   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。 次に、*install-worker.sh* を BLOB コンテナーにアップロードします。
+   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/main/deployment/install-worker.sh)を貼り付けます。 次に、*install-worker.sh* を BLOB コンテナーにアップロードします。
 
 4. ご利用のクラスターには、アプリの発行済みファイルが格納されている *publish.zip* ファイルが必要です。 発行済みフォルダー **mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64** に移動し、**publish.zip** を見つけます。 次に、BLOB コンテナーに *publish.zip* をアップロードします。
 

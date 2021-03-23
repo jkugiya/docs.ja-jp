@@ -3,12 +3,12 @@ title: .NET CLI を使用したプロジェクトの整理とテスト
 description: このチュートリアルでは、コマンド ラインから .NET プロジェクトを整理してテストする方法について説明します。
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 263eaf15beac008de8bb353a385b8f3588a7fefc
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: c668cff48a2418cc1bc34aef78ea26c863d9de6a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633638"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872679"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-cli"></a>.NET CLI を使用したプロジェクトの整理とテスト
 
@@ -49,7 +49,7 @@ ms.locfileid: "97633638"
 
 ### <a name="building-the-sample"></a>サンプルのビルド
 
-以下の手順では、[NewTypes ペット サンプル](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild)に従うことも、独自のファイルとフォルダーを作成することもできます。 タイプは、後でタイプをさらに追加することができるフォルダー構造に論理的に整理されます。また、テストも、後でテストをさらに追加できるフォルダーに論理的に配置されます。
+以下の手順では、[NewTypes ペット サンプル](https://github.com/dotnet/samples/tree/main/core/console-apps/NewTypesMsBuild)に従うことも、独自のファイルとフォルダーを作成することもできます。 タイプは、後でタイプをさらに追加することができるフォルダー構造に論理的に整理されます。また、テストも、後でテストをさらに追加できるフォルダーに論理的に配置されます。
 
 サンプルには `Dog` と `Cat` という 2 つのタイプが含まれています。このサンプルでは `IPet` という共通インターフェイスを実装します。 `NewTypes` プロジェクトの目標は、*Pets* フォルダーにペット関連のタイプを整理することです。 別のタイプ セット (*WildAnimals* など) が後で追加された場合、それらは *Pets* フォルダーと同じ場所にある *NewTypes* フォルダーに配置されます。 *WildAnimals* フォルダーには、`Squirrel` や `Rabbit` タイプなど、ペットではない動物のタイプを含めることができます。 このようにタイプを追加すれば、プロジェクトはよく構成された状態に保たれます。
 

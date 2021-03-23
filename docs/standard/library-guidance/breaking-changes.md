@@ -2,12 +2,12 @@
 title: 破壊的変更と .NET ライブラリ
 description: .NET ライブラリを作成するとき、破壊的変更を進行させるためのベストプラクティス推奨事項。
 ms.date: 10/02/2018
-ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 673a14e69b166fff81e8af9e9c5bf477fdb36871
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223332"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873979"
 ---
 # <a name="breaking-changes"></a>重大な変更
 
@@ -17,11 +17,11 @@ ms.locfileid: "92223332"
 
 .NET コミュニティによるライブラリの使用方法によって、破壊的変更がエンドユーザー開発者に与える影響が変わります。
 
-- シリアライザー、HTML パーサー、データベース オブジェクトリレーショナル マッパー、Web フレームワークなど、 **低レベル/中レベルのライブラリ** が破壊的変更の影響を最も大きく受けます。
+- シリアライザー、HTML パーサー、データベース オブジェクトリレーショナル マッパー、Web フレームワークなど、**低レベル/中レベルのライブラリ** が破壊的変更の影響を最も大きく受けます。
 
   ビルディング ブロック パッケージは、アプリケーションを構築する目的でエンドユーザー開発者が使用します。また、NuGet 依存関係として他のライブラリによって使用されます。 たとえば、アプリケーションを構築しているとき、オープン ソースのクライアントを使用して Web サービスを呼び出すとします。 クライアントで使用される依存関係に対する破壊的更新は自分で修正できるものではありません。 変更しなければならないのはオープンソースのクライアントであり、それに対しては何の権限もありません。 互換性のあるライブラリ バージョンを探すか、クライアント ライブラリの修正案を提出し、新しいバージョンが出るのを待つ必要があります。 最悪なケースは、使用する 2 つのライブラリが依存する 3 つ目のライブラリのバージョン間で互換性がない場合です。
 
-- UI コントロール スイートなど、 **高レベルのライブラリ** の場合、破壊的変更の影響が小さくなります。
+- UI コントロール スイートなど、**高レベルのライブラリ** の場合、破壊的変更の影響が小さくなります。
 
   エンドユーザー アプリケーションでは、高レベルのライブラリは直接参照されます。 破壊的変更が行われた場合、開発者は最新版への更新を選択するか、破壊的変更に合わせてアプリケーションを変更できます。
 
@@ -100,7 +100,7 @@ public class Document
 
 - [C# 開発者向けのバージョンと更新に関する考慮事項](../../csharp/whats-new/version-update-considerations.md)
 - [API の決定版ガイド - .NET の破壊的変更](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [.NET 破壊的変更ルール](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [.NET 破壊的変更ルール](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[[戻る]](versioning.md)

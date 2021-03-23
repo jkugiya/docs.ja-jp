@@ -13,12 +13,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 1d87edde97e77011b678662f61500c7acd8293b0
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 68a927d97716ad6ee04602aa8968ca01629697ac
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162714"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874005"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>厳密な名前付きアセンブリの作成と使用
 
@@ -30,7 +30,7 @@ ms.locfileid: "92162714"
 厳密な名前のアセンブリは、他の厳密な名前のアセンブリでのタイプだけを使用できます。 それ以外の場合は、厳密な名前のアセンブリの整合性が損なわれます。
 
 > [!NOTE]
-> .NET Core では厳密な名前のアセンブリがサポートされており、.NET Core ライブラリ内のすべてのアセンブリは署名されていますが、ほとんどのサードパーティ アセンブリには厳密な名前は必要ありません。 詳細については、GitHub の「[厳密な名前の署名](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)」を参照してください。
+> .NET Core では厳密な名前のアセンブリがサポートされており、.NET Core ライブラリ内のすべてのアセンブリは署名されていますが、ほとんどのサードパーティ アセンブリには厳密な名前は必要ありません。 詳細については、GitHub の「[厳密な名前の署名](https://github.com/dotnet/runtime/blob/main/docs/project/strong-name-signing.md)」を参照してください。
 
 ## <a name="strong-name-scenario"></a>厳密な名前のシナリオ
 

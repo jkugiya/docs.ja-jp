@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 8ee8b177dc9cc89c4f54956b8c0a274b1d093ece
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 9240f365c6721baae03d8537e5e71153abf0f172
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282087"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875604"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>チュートリアル: ML.NET でクラスタリングを使用してあやめの花を分類する
 
@@ -45,19 +45,19 @@ ms.locfileid: "86282087"
 
 1. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットとモデルのファイルを保存します。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
+    **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
 
 1. **Microsoft.ML** NuGet パッケージをインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+    **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
 ## <a name="prepare-the-data"></a>データを準備する
 
-1. [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) データ セットをダウンロードし、前の手順で作成した *Data* フォルダーに保存します。 あやめのデータ セットについて詳しくは、Wikipedia の「[Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set)」(あやめのデータ セット) のページと、データ セットのソースである「[Iris Data Set](http://archive.ics.uci.edu/ml/datasets/Iris)」(あやめのデータ セット) のページをご覧ください。
+1. [iris.data](https://github.com/dotnet/machinelearning/blob/main/test/data/iris.data) データ セットをダウンロードし、前の手順で作成した *Data* フォルダーに保存します。 あやめのデータ セットについて詳しくは、Wikipedia の「[Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set)」(あやめのデータ セット) のページと、データ セットのソースである「[Iris Data Set](http://archive.ics.uci.edu/ml/datasets/Iris)」(あやめのデータ セット) のページをご覧ください。
 
-1. **ソリューション エクスプローラー**で、*iris.data* ファイルを右クリックして、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+1. **ソリューション エクスプローラー** で、*iris.data* ファイルを右クリックして、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
 *Iris.data* ファイルには、次の値を表す 5 つの列が含まれます。
 
@@ -73,7 +73,7 @@ ms.locfileid: "86282087"
 
 入力データと予測のためのクラスを作成します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*IrisData.cs*」に変更します。 次に **[追加]** を選択します。
 1. 以下の `using` ディレクティブを新しいファイルに追加します。
 
@@ -166,7 +166,7 @@ ms.locfileid: "86282087"
 
 テスト データのインスタンスを格納するための `TestIrisData` クラスを作成します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*TestIrisData.cs*」に変更します。 次に **[追加]** を選択します。
 1. 次の例に示すように、静的になるようにクラスを変更します。
 
@@ -187,7 +187,7 @@ Cluster: 2
 Distances: 11.69127 0.02159119 25.59896
 ```
 
-おめでとうございます! これで、アヤメのクラスタリングの機械学習モデルを作成し、それを使用して予測を行うことができました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) GitHub リポジトリで確認できます。
+おめでとうございます! これで、アヤメのクラスタリングの機械学習モデルを作成し、それを使用して予測を行うことができました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/IrisFlowerClustering) GitHub リポジトリで確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

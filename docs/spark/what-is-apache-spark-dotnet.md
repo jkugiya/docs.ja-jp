@@ -4,12 +4,12 @@ description: .NET for Apache Spark について説明します。これは、.NE
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 1fa3ae16334176f0e3e888087078d5b98de9d869
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688034"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873199"
 ---
 # <a name="what-is-net-for-apache-spark"></a>.NET for Apache Spark とは
 
@@ -41,11 +41,11 @@ Spark 言語拡張機能の相互運用のサポートについては[提案](ht
 
 [TPC-H ベンチマーク](http://www.tpc.org/tpch/)を使用して Python および Scala と比較した場合、.NET for Apache Spark はほとんどの場合で優れた成績を収め、ユーザー定義関数のパフォーマンスが重要な場合は Python よりも 2 倍高速に実行されます。 パフォーマンスを改善してベンチマークを行うための継続的な取り組みがなされています。
 
-独自のベンチマークを実行するには、[.NET for Apache Spark GitHub](https://github.com/dotnet/spark/tree/master/benchmark) で利用可能なベンチマークを参照してください。
+独自のベンチマークを実行するには、[.NET for Apache Spark GitHub](https://github.com/dotnet/spark/tree/main/benchmark) で利用可能なベンチマークを参照してください。
 
 ## <a name="net-for-apache-spark-roadmap"></a>.NET for Apache Spark のロードマップ
 
-正規の [.NET for Apache Spark のロードマップ](https://github.com/dotnet/spark/blob/master/ROADMAP.md)から短期および長期の計画について説明します。
+正規の [.NET for Apache Spark のロードマップ](https://github.com/dotnet/spark/blob/main/ROADMAP.md)から短期および長期の計画について説明します。
 
 ## <a name="net-foundation"></a>.NET Foundation
 

@@ -4,12 +4,12 @@ description: 式ツリーを構築するためのテクニックについて説�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c153ca2c75738571c81057364390f489d2decb05
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: f6752879dc01080e056221b00ca5377a6abc20db
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656151"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875812"
 ---
 # <a name="building-expression-trees"></a>式ツリーの構築
 
@@ -164,7 +164,7 @@ BlockExpression body = Expression.Block(
 
 階乗関数の式ツリーを構築するコードは、かなり長く複雑になります。また、通常のコーディング作業では避けたいラベルや break ステートメントなどの要素が多くなってしまいます。
 
-このセクションでは、この式ツリーのすべてのノードにアクセスするビジター コードも更新し、このサンプルで作成したノードに関する情報を書き出しました。 GitHub の dotnet/docs レポジトリで、[サンプル コードを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)することができます。 自分でサンプルをビルドし、実行してみてください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+このセクションでは、この式ツリーのすべてのノードにアクセスするビジター コードも更新し、このサンプルで作成したノードに関する情報を書き出しました。 GitHub の dotnet/docs レポジトリで、[サンプル コードを表示またはダウンロード](https://github.com/dotnet/samples/tree/main/csharp/expression-trees)することができます。 自分でサンプルをビルドし、実行してみてください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ## <a name="examining-the-apis"></a>API の確認
 

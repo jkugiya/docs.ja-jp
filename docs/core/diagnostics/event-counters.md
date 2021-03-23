@@ -2,12 +2,12 @@
 title: .NET Core の EventCounters
 description: この記事では、EventCounters の概要とその実装方法および使用方法について学習します。
 ms.date: 08/07/2020
-ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: 8efa3134e83ba6fdc7563e97ef6422cb5f2099b6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065065"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872783"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core の EventCounters
 
@@ -127,7 +127,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 > [!NOTE]
 > <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> は [dotnet-counters](dotnet-counters.md) によって使用 "_されません_"。また、それを使用するためにイベント リスナーは必要ありません。
 
-[.NET ランタイム](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) リポジトリで参照として使用するカウンター実装は他にもあります。
+[.NET ランタイム](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) リポジトリで参照として使用するカウンター実装は他にもあります。
 
 ## <a name="concurrency"></a>コンカレンシー
 
@@ -159,7 +159,7 @@ _requestRateCounter = new IncrementingPollingCounter("request-rate", this, () =>
 EventCounters を使用する場合、インプロセスとアウトプロセスという 2 つの主な方法があります。 EventCounters の使用は、さまざまな使用テクノロジの 3 つの層に分類できます。
 
 - ETW または EventPipe を介した生のストリームでのイベントの転送:
-  - ETW API は Windows OS に付属しています。EventPipe には [.NET API](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console)、または診断 [IPC プロトコル](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md)としてアクセスできます。
+  - ETW API は Windows OS に付属しています。EventPipe には [.NET API](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console)、または診断 [IPC プロトコル](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/ipc-protocol.md)としてアクセスできます。
 - バイナリ イベント ストリームのイベントへのデコード:
   - [TraceEvent ライブラリ](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent)により、ETW と EventPipe の両方のストリーム形式が処理されます。
 - コマンド ラインと GUI ツール:

@@ -2,12 +2,12 @@
 title: ソース リンクと .NET ライブラリ
 description: ソース リンクを使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
 ms.date: 01/15/2019
-ms.openlocfilehash: 5dee2a6b1f77daa641351e02c1dd3e0a38f66550
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 83257704f86c43c9ddbd6b3c97e268b1d02cba22
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201984"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876462"
 ---
 # <a name="source-link"></a>ソース リンク
 
@@ -20,7 +20,7 @@ ms.locfileid: "84201984"
 
 ## <a name="using-source-link"></a>ソース リンクを使用する
 
-ソース リンクの使用方法は、[dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub リポジトリにあります。
+ソース リンクの使用方法は、[dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/main/README.md) GitHub リポジトリにあります。
 
 [NuGet パッケージ エクスプローラー](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)を使用すれば、ソース リンク メタデータがパッケージに正常に埋め込まれたことを確認できます。 `Repository` メタデータがコミット ID と共に存在すること、各ターゲットの .dll と共に .pdb ファイルが見つかることを確認します。
 

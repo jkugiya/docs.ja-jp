@@ -3,12 +3,12 @@ title: 実行時の状態に基づくクエリの実行 (Visual Basic)
 description: LINQ メソッドの呼び出し、またはこれらのメソッドに渡される式ツリーを変更することにより、コードで実行時の状態に応じて動的にクエリを実行するために使用できるさまざまな手法について説明します。
 ms.date: 02/14/2021
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: c9f57950b2c26c0cca798ab632da90bf9f6c519a
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: fe59fc8287e67247884cfdcf1bacc6ed2a447e5a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584844"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875877"
 ---
 # <a name="querying-based-on-runtime-state-visual-basic"></a>実行時の状態に基づくクエリの実行 (Visual Basic)
 
@@ -48,7 +48,7 @@ LINQ プロバイダーでサポートされていると仮定した場合にク
 
 ## <a name="call-additional-linq-methods"></a>追加の LINQ メソッドを呼び出す
 
-一般に、<xref:System.Linq.Queryable> の[組み込みの LINQ メソッド](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs)では、次の 2 つの手順を行います。
+一般に、<xref:System.Linq.Queryable> の[組み込みの LINQ メソッド](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs)では、次の 2 つの手順を行います。
 
 * メソッド呼び出しを表す <xref:System.Linq.Expressions.MethodCallExpression> で現在の式ツリーをラップする。
 * ラップされた式ツリーをプロバイダーに戻し、プロバイダーの <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> メソッドを使用して値を返すか、<xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> メソッドを使用して変換されたクエリ オブジェクトを返す。

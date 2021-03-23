@@ -4,12 +4,12 @@ description: 製品売上データの異常検出アプリケーションを構�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 2262f2c5e8e389a13c583073bb2002fcd5da91ee
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97594177"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874655"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>チュートリアル: ML.NET で製品売上の異常を検出する
 
@@ -24,13 +24,13 @@ ms.locfileid: "97594177"
 > * 変化点の異常検出のために変換を作成する
 > * 変換を使用して変化点の異常を検出する
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/ProductSalesAnomalyDetection) リポジトリで確認できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 * [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラットフォーム開発" ワークロードと共にインストールされている。
 
-* [product-sales.csv データセット](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
+* [product-sales.csv データセット](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
 >[!NOTE]
 > `product-sales.csv` のデータ形式は、DataMarket が出典であるデータセット "Shampoo Sales Over a Three Year Period" (過去 3 年間のシャンプーの売上) に基づいており、Rob Hyndman が作成した Time Series Data Library (TSDL) で提供されています。
@@ -56,7 +56,7 @@ ms.locfileid: "97594177"
 
 1. データセットをダウンロードし、以前に作成した *Data* フォルダーに保存します。
 
-   * [*product-sales.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) を右クリックし、[名前を付けてリンクを保存 (またはターゲット)] を選択します。
+   * [*product-sales.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) を右クリックし、[名前を付けてリンクを保存 (またはターゲット)] を選択します。
 
      \*.csv ファイルを *Data* フォルダーに保存したことを確認します。または他の場所に保存した後に、\*.csv ファイルを *Data* フォルダーに移動します。
 
@@ -371,7 +371,7 @@ Alert   Score   P-Value Martingale value
 
 おめでとうございます! これで、売上データのスパイクや変化点の異常を検出するための機械学習モデルを適切に構築できました。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/ProductSalesAnomalyDetection) リポジトリで確認できます。
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
@@ -386,4 +386,4 @@ Alert   Score   P-Value Martingale value
 
 Machine Learning サンプルの GitHub リポジトリを確認し、季節性データの異常検出サンプルを調べてください。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)
+> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)

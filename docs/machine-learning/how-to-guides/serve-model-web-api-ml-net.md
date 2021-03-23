@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f588d4681ee277ad15b50d5553473b1c9e84d578
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1d05bc0ac6a874d539794d81fd742d973724dbef
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608765"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874135"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API でのモデルのデプロイ
 
@@ -20,7 +20,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
 - ".NET Core クロスプラットフォーム開発" ワークロードがインストールされた [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降または Visual Studio 2017 バージョン 15.6 以降。
 - PowerShell。
-- 事前トレーニング済みのモデル。 [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
+- 事前トレーニング済みのモデル。 [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/main/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API プロジェクトを作成する
 
@@ -32,11 +32,11 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
     ソリューション エクスプローラーで、プロジェクトを右クリックし、[追加] &gt; [新しいフォルダー] の順に選択します。 「MLModels」と入力し、Enter キーを押します。
 
-1. **Microsoft.ML NuGet パッケージ**をインストールします。
+1. **Microsoft.ML NuGet パッケージ** をインストールします。
 
     ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。[参照] タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、[インストール] を選択します。 **[変更のプレビュー]** ダイアログで **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、[ライセンスの同意] ダイアログの **[同意する]** を選択します。
 
-1. **Microsoft.Extensions.ML NuGet パッケージ**をインストールします。
+1. **Microsoft.Extensions.ML NuGet パッケージ** をインストールします。
 
     ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 パッケージ ソースとして "nuget.org" を選択します。[参照] タブを選択し、「**Microsoft.Extensions.ML**」を検索します。一覧からそのパッケージを選択して、[インストール] ボタンを選択します。 **[変更のプレビュー]** ダイアログで **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、[ライセンスの同意] ダイアログの **[同意する]** を選択します。
 
@@ -138,7 +138,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 >services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
+>       uri:"https://github.com/dotnet/samples/raw/main/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -148,7 +148,7 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
 
 1. ソリューション エクスプローラーで、*Controllers* ディレクトリを右クリックし、 **[追加] > [コントローラー]** の順に選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[空の API コントローラー]** を選択し、 **[追加]** を選択します。
-1. プロンプトで、 **[コントローラー名]** フィールドを*PredictController.cs* に変更します。 次に、[追加] を選択します。 コードエディターで *PredictController.cs* ファイルが開きます。 *PredictController.cs* の先頭に次の using ステートメントを追加します。
+1. プロンプトで、 **[コントローラー名]** フィールドを *PredictController.cs* に変更します。 次に、[追加] を選択します。 コードエディターで *PredictController.cs* ファイルが開きます。 *PredictController.cs* の先頭に次の using ステートメントを追加します。
 
     ```csharp
     using System;

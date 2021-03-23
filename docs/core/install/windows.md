@@ -4,12 +4,12 @@ description: .NET をインストールできる Windows のバージョンに�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9b0c5c2ea26546a142029b730dfd38923231bae4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105103"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873745"
 ---
 # <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
@@ -102,7 +102,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 | Windows サーバー コア | 2012 R2+      | x64、x86        |
 | Nano Server         | バージョン 1809+ | X64             |
 
-.NET 5.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET 5.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)」 (.NET 5.0 でサポートされている OS バージョン) を参照してください。
+.NET 5.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET 5.0 Supported OS Versions](https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md)」 (.NET 5.0 でサポートされている OS バージョン) を参照してください。
 
 # <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
@@ -118,7 +118,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | バージョン 1803+                  | x64、ARM32      |
 
-.NET Core 3.1 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)」(.NET Core 3.1 でサポートされている OS バージョン) を参照してください。
+.NET Core 3.1 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.1 Supported OS Versions](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md)」(.NET Core 3.1 でサポートされている OS バージョン) を参照してください。
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -136,7 +136,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | バージョン 1803+                  | x64、ARM32      |
 
-.NET Core 3.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)」(.NET Core 3.0 でサポートされている OS バージョン) を参照してください。
+.NET Core 3.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md)」(.NET Core 3.0 でサポートされている OS バージョン) を参照してください。
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -154,7 +154,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 | Windows Server                | 2008 R2 SP1+                   | x64、x86        |
 | Nano Server                   | バージョン 1803+                   | x64、ARM32      |
 
-.NET Core 2.2 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)」(.NET Core 2.2 でサポートされている OS バージョン) を参照してください。
+.NET Core 2.2 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md)」(.NET Core 2.2 でサポートされている OS バージョン) を参照してください。
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -170,7 +170,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 | Windows Server                | 2008 R2 SP1+                   | x64、x86        |
 | Nano Server                   | バージョン 1803+                  | x64、            |
 
-.NET Core 2.1 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)」(.NET Core 2.1 でサポートされている OS バージョン) を参照してください。
+.NET Core 2.1 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md)」(.NET Core 2.1 でサポートされている OS バージョン) を参照してください。
 
 ### <a name="offline-install-for-windows-7"></a>Windows 7 用のオフライン インストール
 
@@ -329,7 +329,7 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 Microsoft は、特定のシナリオに対応したイメージを用意しています。 たとえば、[ASP.NET Core リポジトリ](https://hub.docker.com/_/microsoft-dotnet-aspnet)には、運用環境での ASP.NET Core アプリの実行用にビルドされたイメージが用意されています。
 
-Docker コンテナー内で .NET を使用する方法の詳細については、「[.NET および Docker の概要](../docker/introduction.md)」と[サンプル](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)ページを参照してください。
+Docker コンテナー内で .NET を使用する方法の詳細については、「[.NET および Docker の概要](../docker/introduction.md)」と[サンプル](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md)ページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

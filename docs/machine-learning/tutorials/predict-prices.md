@@ -4,12 +4,12 @@ description: このチュートリアルでは、ML.NET を使用して、料金
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f8f7146241368edaca31afd970af54a098d1aafa
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309717"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874642"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>チュートリアル: ML.NET で回帰を使用して価格を予測する
 
@@ -31,7 +31,7 @@ ms.locfileid: "86309717"
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. "TaxiFarePrediction" という名前の **.NET Core コンソール アプリケーション**を作成します。
+1. "TaxiFarePrediction" という名前の **.NET Core コンソール アプリケーション** を作成します。
 
 1. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットとモデルのファイルを保存します。
 
@@ -39,15 +39,15 @@ ms.locfileid: "86309717"
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.FastTree** NuGet パッケージに対して同じことを行います。
+    **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.FastTree** NuGet パッケージに対して同じことを行います。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
-1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) データ セットと [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) データ セットをダウンロードして、前の手順で作成済みの *Data* フォルダーに保存します。 これらのデータ セットを使用して、機械学習モデルをトレーニングし、モデルの正確度を評価します。 これらのデータ セットは、[NYC TLC Taxi Trip データ セット](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)から取得したものです。
+1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/main/test/data/taxi-fare-train.csv) データ セットと [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/main/test/data/taxi-fare-test.csv) データ セットをダウンロードして、前の手順で作成済みの *Data* フォルダーに保存します。 これらのデータ セットを使用して、機械学習モデルをトレーニングし、モデルの正確度を評価します。 これらのデータ セットは、[NYC TLC Taxi Trip データ セット](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)から取得したものです。
 
-1. **ソリューション エクスプローラー**で、各 \*.csv ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+1. **ソリューション エクスプローラー** で、各 \*.csv ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
-1. **taxi-fare-train.csv** データ セットを開き、最初の行の列ヘッダーを確認します。 各列を確認してください。 データについて把握し、どの列が**特徴**で、どの列が**ラベル**であるかを確認します。
+1. **taxi-fare-train.csv** データ セットを開き、最初の行の列ヘッダーを確認します。 各列を確認してください。 データについて把握し、どの列が **特徴** で、どの列が **ラベル** であるかを確認します。
 
 `label` は予測する列です。 識別された `Features` は、`Label` を予測するためにモデルを指定する入力です。
 
@@ -65,7 +65,7 @@ ms.locfileid: "86309717"
 
 入力データと予測のためのクラスを作成します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *TaxiTrip.cs* に変更します。 次に **[追加]** を選択します。
 1. 以下の `using` ディレクティブを新しいファイルに追加します。
 
@@ -136,7 +136,7 @@ ML.NET では、数値またはテキストの表形式データを記述する�
 
 [!code-csharp[CopyColumnsEstimator](./snippets/predict-prices/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-モデルをトレーニングするアルゴリズムには、**数値**の特徴が必要であるため、カテゴリ データ (`VendorId`、`RateCode`、および `PaymentType`) の値を数値 (`VendorIdEncoded`、`RateCodeEncoded`、および`PaymentTypeEncoded`) に変換する必要があります。 それを行うには、異なる数値キーの値を各列内の異なる値に割り当てる [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 変換クラスを使用し、次のコードを追加します。
+モデルをトレーニングするアルゴリズムには、**数値** の特徴が必要であるため、カテゴリ データ (`VendorId`、`RateCode`、および `PaymentType`) の値を数値 (`VendorIdEncoded`、`RateCodeEncoded`、および`PaymentTypeEncoded`) に変換する必要があります。 それを行うには、異なる数値キーの値を各列内の異なる値に割り当てる [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 変換クラスを使用し、次のコードを追加します。
 
 [!code-csharp[OneHotEncodingEstimator](./snippets/predict-prices/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
@@ -268,7 +268,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 プログラムを実行し、テスト ケースに対して予測されたタクシー運賃を確認します。
 
-おめでとうございます! これで、タクシー旅行運賃を予測する機械学習モデルが正常に構築され、その正確度が評価され、このモデルを使用した予測が行われました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub リポジトリで確認できます。
+おめでとうございます! これで、タクシー旅行運賃を予測する機械学習モデルが正常に構築され、その正確度が評価され、このモデルを使用した予測が行われました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TaxiFarePrediction) GitHub リポジトリで確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -3,12 +3,12 @@ title: VS Code 拡張機能作成者用の .NET インストール ツール
 description: 拡張機能の作成者用の .NET インストール ツールの概要 (.NET ランタイムをインストールするための Visual Studio Code 拡張機能)。
 author: sfoslund
 ms.date: 11/18/2020
-ms.openlocfilehash: 4be931a254e4ce969f9eaf2efde7939cb54e1d5f
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: a372d0cc728956920d013dac9bc0da1bcd3edc0b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605153"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872991"
 ---
 # <a name="net-install-tool-for-extension-authors"></a>拡張機能作成者用の .NET インストール ツール
 
@@ -21,9 +21,9 @@ ms.locfileid: "102605153"
 > [!NOTE]
 > このツールは .NET ランタイムをインストールするためにのみ使用できます。現時点では、.NET SDK をインストールすることはできません。
 
-拡張機能作成者用の .NET インストール ツールがお客様のニーズに適していることを確認したら、[拡張機能マニフェスト](https://code.visualstudio.com/api/references/extension-manifest)でそれに対する依存関係を設定し、[VS Code API](https://code.visualstudio.com/api/extension-guides/command#programmatically-executing-a-command) で公開されているコマンドの使用を開始できます。 この拡張機能によって公開されているコマンドの一覧については、Microsoft の [GitHub](https://github.com/dotnet/vscode-dotnet-runtime/blob/master/Documentation/commands.md) を参照してください。
+拡張機能作成者用の .NET インストール ツールがお客様のニーズに適していることを確認したら、[拡張機能マニフェスト](https://code.visualstudio.com/api/references/extension-manifest)でそれに対する依存関係を設定し、[VS Code API](https://code.visualstudio.com/api/extension-guides/command#programmatically-executing-a-command) で公開されているコマンドの使用を開始できます。 この拡張機能によって公開されているコマンドの一覧については、Microsoft の [GitHub](https://github.com/dotnet/vscode-dotnet-runtime/blob/main/Documentation/commands.md) を参照してください。
 
-これらの手順を実際に確認するには、こちらの[サンプル拡張機能](https://github.com/dotnet/vscode-dotnet-runtime/tree/master/sample)を参照してください。
+これらの手順を実際に確認するには、こちらの[サンプル拡張機能](https://github.com/dotnet/vscode-dotnet-runtime/tree/main/sample)を参照してください。
 
 その他の例については、現在このツールが利用されている次のオープンソースの拡張機能を確認してください。
 
@@ -33,4 +33,4 @@ ms.locfileid: "102605153"
 
 ## <a name="getting-started-end-users"></a>はじめに: エンド ユーザー
 
-一般に、エンド ユーザーは、拡張機能作成者用の .NET インストール ツールを操作する必要はありません。 拡張機能に関する問題が発生した場合は、Microsoft の[トラブルシューティング ページ](https://github.com/dotnet/vscode-dotnet-runtime/blob/master/Documentation/troubleshooting-runtime.md)を確認するか、[GitHub](https://github.com/dotnet/vscode-dotnet-runtime/issues) でイシューを報告してください。
+一般に、エンド ユーザーは、拡張機能作成者用の .NET インストール ツールを操作する必要はありません。 拡張機能に関する問題が発生した場合は、Microsoft の[トラブルシューティング ページ](https://github.com/dotnet/vscode-dotnet-runtime/blob/main/Documentation/troubleshooting-runtime.md)を確認するか、[GitHub](https://github.com/dotnet/vscode-dotnet-runtime/issues) でイシューを報告してください。

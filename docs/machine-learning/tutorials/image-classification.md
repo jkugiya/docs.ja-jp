@@ -4,12 +4,12 @@ description: 既存の TensorFlow モデルから新しい ML.NET 画像分類�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: a4c671816dce1fe2abdf77f81da0f27236136536
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b3e5617979d1635248f87db6008d3e234bb3ffc5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282113"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877034"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>チュートリアル: 事前トレーニング済みの TensorFlow モデルから ML.NET 画像分類モデルを生成する
 
@@ -27,7 +27,7 @@ TensorFlow モデルは、画像を 1,000 個のカテゴリに分類するた�
 > * ML.NET モデルのトレーニングと評価
 > * テスト画像を分類する
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。 既定では、このチュートリアルの .NET プロジェクトの構成は .NET Core 2.2 を対象としています。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。 既定では、このチュートリアルの .NET プロジェクトの構成は .NET Core 2.2 を対象としています。
 
 ## <a name="what-is-transfer-learning"></a>転移学習とは何か
 
@@ -38,7 +38,7 @@ TensorFlow モデルは、画像を 1,000 個のカテゴリに分類するた�
 ## <a name="prerequisites"></a>必須コンポーネント
 
 * ".NET Core クロスプラットフォーム開発" ワークロードがインストールされた [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降または Visual Studio 2017 バージョン 15.6 以降。
-* [チュートリアル資産ディレクトリの .ZIP ファイル](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
+* [チュートリアル資産ディレクトリの .ZIP ファイル](https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [InceptionV1 機械学習モデル](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>適切な機械学習タスクを選択する
@@ -118,9 +118,9 @@ toaster2.png    appliance
 
 ### <a name="create-a-project"></a>プロジェクトを作成する
 
-1. "TransferLearningTF" という **.NET Core Console アプリケーション**を作成します。
+1. "TransferLearningTF" という **.NET Core Console アプリケーション** を作成します。
 
-1. **Microsoft.ML NuGet パッケージ**をインストールします。
+1. **Microsoft.ML NuGet パッケージ** をインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -133,7 +133,7 @@ toaster2.png    appliance
 
 ### <a name="download-assets"></a>資産をダウンロードする
 
-1. [プロジェクト資産ディレクトリの zip ファイル](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)をダウンロードし、展開します。
+1. [プロジェクト資産ディレクトリの zip ファイル](https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)をダウンロードし、展開します。
 
 1. `assets` ディレクトリを *TransferLearningTF* プロジェクト ディレクトリにコピーします。 このディレクトリとそのサブディレクトリには、このチュートリアルに必要なデータ ファイルとサポート ファイル (次の手順でダウンロードして追加する Inception モデルを除く) が含まれています。
 
@@ -278,7 +278,7 @@ ML.NET モデルのパイプラインは推定器のチェーンです。 パイ
 
     [!code-csharp[ScoreTensorFlowModel](./snippets/image-classification/csharp/Program.cs#ScoreTensorFlowModel)]
 
-    パイプラインのこのステージでは、TensorFlow モデルをメモリに読み込み、次に TensorFlow モデル ネットワークを介してピクセル値のベクターを処理します。 ディープ ラーニング モデルに入力を適用し、モデルを使用して出力を生成することは、**スコアリング**と呼ばれます。 モデル全体を使用する場合、スコアリングによって推論または予測が行われます。
+    パイプラインのこのステージでは、TensorFlow モデルをメモリに読み込み、次に TensorFlow モデル ネットワークを介してピクセル値のベクターを処理します。 ディープ ラーニング モデルに入力を適用し、モデルを使用して出力を生成することは、**スコアリング** と呼ばれます。 モデル全体を使用する場合、スコアリングによって推論または予測が行われます。
 
     この場合、最後のレイヤー (推論を行うレイヤー) を除き、すべての TensorFlow モデルを使用します。 最後から 2 番目のレイヤーの出力には、`softmax_2_preactivation` というラベルが付けられます。 このレイヤーの出力は、実質的に、元の入力画像を特徴付ける特徴のベクターです。
 
@@ -338,7 +338,7 @@ ML.NET モデルのパイプラインは推定器のチェーンです。 パイ
     画像分類では、次のメトリックが評価されます。
 
     * `Log-loss` - 「[対数損失](../resources/glossary.md#log-loss)」を参照してください。 対数損失は可能な限り 1 に近づけます。
-    * `Per class Log-loss`。 クラスごとの対数損失は可能な限り 1 に近づけます。
+    * `Per class Log-loss`. クラスごとの対数損失は可能な限り 1 に近づけます。
 
 1. 次の行としてトレーニング済みモデルを返すように次のコードを追加します。
 
@@ -370,7 +370,7 @@ ML.NET モデルのパイプラインは推定器のチェーンです。 パイ
 
 おめでとうございます! これで、ML.NET で `TensorFlow` モデルに転移学習を適用して、画像分類の機械学習モデルを構築できました。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]

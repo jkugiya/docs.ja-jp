@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET CLI の汎用ドライバー) とその使用方法について説明します。
 ms.date: 11/11/2020
-ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 33c5f9d22166b818f5c860c4f4632d359f686919
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634026"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874538"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -118,7 +118,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--additional-deps <PATH>`**
 
-  追加の *.deps.json* ファイルへのパス。 *deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
+  追加の *.deps.json* ファイルへのパス。 *deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
@@ -345,5 +345,5 @@ dotnet myapp.dll
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム構成ファイル](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [ランタイム構成ファイル](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)
 - [.NET ランタイム構成設定](../run-time-config/index.md)

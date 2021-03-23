@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 28674c583466bb4873581c9d233b9a508019b045
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688229"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876943"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用してバッチ処理を実行する
 
@@ -32,7 +32,7 @@ ms.locfileid: "94688229"
 
 ## <a name="download-the-sample-data"></a>サンプル データをダウンロードする
 
-[GHTorrent](http://ghtorrent.org/) は、プロジェクト、コミット、およびウォッチャーに関する情報などのすべてのパブリック GitHub イベントを監視し、イベントとその構造をデータベースに格納します。 さまざまな期間にわたって収集されたデータは、ダウンロード可能なアーカイブとして入手できます。 ダンプ ファイルは非常に大きいため、このガイドでは、GitHub からダウンロードできる、[ダンプ ファイルの切り詰められたバージョン](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv)を使用します。
+[GHTorrent](http://ghtorrent.org/) は、プロジェクト、コミット、およびウォッチャーに関する情報などのすべてのパブリック GitHub イベントを監視し、イベントとその構造をデータベースに格納します。 さまざまな期間にわたって収集されたデータは、ダウンロード可能なアーカイブとして入手できます。 ダンプ ファイルは非常に大きいため、このガイドでは、GitHub からダウンロードできる、[ダンプ ファイルの切り詰められたバージョン](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv)を使用します。
 
 > [!NOTE]
 > GHTorrent データセットは、デュアル ライセンス スキーム ([Creative Commons +](https://wiki.creativecommons.org/wiki/CCPlus)) で配布されます。 商用以外の用途 (教育、研究、個人的使用などを含みますが、これらに限定されません) では、データセットは [CC-BY-SA ライセンス](https://creativecommons.org/licenses/by-sa/4.0/)に基づいて配布されます。
@@ -163,7 +163,7 @@ Spark SQL を使用すると、データに対して SQL 呼び出しを行う�
 
 ## <a name="get-the-code"></a>コードを取得する
 
-[完全なソリューション](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/GitHubProjects.cs)は、GitHub で確認できます。
+[完全なソリューション](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/GitHubProjects.cs)は、GitHub で確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

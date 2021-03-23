@@ -4,12 +4,12 @@ description: このチュートリアルでは、Web サイトのコメントか
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: da972d793570a8dd6b906762640bd6bfe5531a5b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3dbcb3cbd4eea2d01638bedc7123f570ff9d64d1
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557165"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874591"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
@@ -26,7 +26,7 @@ ms.locfileid: "87557165"
 > - モデルを使用して予測する
 > - 結果を見る
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -36,11 +36,11 @@ ms.locfileid: "87557165"
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. "SentimentAnalysis" という名前の **.NET Core コンソール アプリケーション**を作成します。
+1. "SentimentAnalysis" という名前の **.NET Core コンソール アプリケーション** を作成します。
 
 2. データ セット ファイルを保存するために、プロジェクトに *Data* という名前のディレクトリを作成します。
 
-3. **Microsoft.ML NuGet パッケージ**をインストールします。
+3. **Microsoft.ML NuGet パッケージ** をインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "87557165"
 
 1. 次に、入力データと予測のためにクラスを作成します。 プロジェクトに新しいクラスを追加します。
 
-    - **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+    - **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
     - **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。 次に **[追加]** を選択します。
 
@@ -380,7 +380,7 @@ Press any key to continue . . .
 
 優れたモデルの構築は、反復的なプロセスです。 このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。 このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なる[ハイパーパラメーター](../resources/glossary.md#hyperparameter)を選択してモデルの改良を試すことができます。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のいくつかの機能を説明します。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 4d36cdafd232de9bbd0fac12e894f905b4808419
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98024978"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876150"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -25,7 +25,7 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 
 このチュートリアルには、多くの機能が含まれています。 それらを 1 つずつビルドしてみましょう。
 
-この記事の[最終的なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)も参照したい方は、ダウンロードできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+この記事の[最終的なサンプル](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)も参照したい方は、ダウンロードできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -304,7 +304,7 @@ public DateTime LastPush => LastPushUtc.ToLocalTime();
 Console.WriteLine(repo.LastPush);
 ```
 
-以上で、作成してきたバージョンは[最終的なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)と同じになるはずです。
+以上で、作成してきたバージョンは[最終的なサンプル](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)と同じになるはずです。
 
 ## <a name="conclusion"></a>まとめ
 

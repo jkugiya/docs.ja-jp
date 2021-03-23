@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 494e73bd32ac6793d355b6828408b61bb09ca880
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009665"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873121"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -303,7 +303,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 また、ASP.NET Core MVC はビューを配置する場合にも規則を使います。 これをカスタム規則でオーバーライドして、ビューが独自の機能フォルダーに配置されるようにすることができます (上の FeatureConvention によって提供される機能名を使用)。 この方法について詳しくは、MSDN Magazine の記事「[ASP.NET Core MVC 向け機能スライス](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)」をご覧ください。実際に動くサンプルをダウンロードすることもできます。
 
-### <a name="apis-and-no-locblazor-applications"></a>API と Blazor アプリケーション
+### <a name="apis-and-blazor-applications"></a>API と Blazor アプリケーション
 
 セキュリティ保護が必要な一連の Web API がアプリケーションに含まれている場合、これらの API をビューまたは Razor Pages アプリケーションとは別のプロジェクトとして構成するのが理想的です。 API (特にパブリック API) をサーバー側の Web アプリケーションから分離すると、多くの利点があります。 多くの場合、これらのアプリケーションには、固有のデプロイと負荷特性があります。 また、さまざまなセキュリティ メカニズムを採用する可能性も非常に高く、標準のフォームベースのアプリケーションによって、Cookie ベースの認証と、トークンベースの認証を使用する可能性が最も高い API が利用されます。
 
@@ -495,7 +495,7 @@ services.AddAuthentication(config =>
 
 1 つのプロジェクト内に複数の異なる認証スキームを構成できますが、1 つの既定のスキームを構成する方がはるかに簡単です。 このため、特に、eShopOnWeb 参照アプリケーションでは、アプリケーションのビューと Razor Pages を含むメインの `Web` プロジェクトとは別個の独自のプロジェクト `PublicApi` に API を分離します。
 
-#### <a name="authentication-in-no-locblazor-apps"></a>Blazor アプリでの認証
+#### <a name="authentication-in-blazor-apps"></a>Blazor アプリでの認証
 
 Blazor サーバー アプリケーションでは、他の ASP.NET Core アプリケーションと同じ認証機能を利用できます。 ただし、Blazor WebAssembly アプリケーションはブラウザーで実行されるため、組み込みの ID および認証プロバイダーを使用できません。 Blazor WebAssembly アプリケーションによって、ユーザーの認証状態がローカルに保存し、要求にアクセスされ、ユーザーが実行する必要があるアクションが決定されます。 ただし、ユーザーは簡単にアプリをバイパスして API と直接やりとりすることができるため、Blazor WebAssembly アプリ内に実装されているロジックに関係なく、すべての認証および承認のチェックをサーバーで実行する必要があります。
 
@@ -654,7 +654,7 @@ public class Program
 > ### <a name="references--client-communication"></a>参照 – クライアントの通信
 >
 > - **ASP.NET Core SignalR**\
->   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/main/src/SignalR>
 > - **WebSocket マネージャー**\
 >   <https://github.com/radu-matei/websocket-manager>
 

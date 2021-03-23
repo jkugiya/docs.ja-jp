@@ -4,12 +4,12 @@ description: このチュートリアルでは、事前トレーニング済み�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a2e7f72d59e31cfd7db5b89bfad55bccb063cea
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 0c2cfd46375406726913a83d67c45ff922a1085b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281408"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877008"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>チュートリアル: ML.NET で事前トレーニング済みの TensorFlow モデルを使用して映画レビューのセンチメントを分析する
 
@@ -24,7 +24,7 @@ ms.locfileid: "86281408"
 > * Web サイトのコメント テキストをモデルに適したフィーチャーに変換する
 > * モデルを使用して予測する
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF) リポジトリで確認できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -34,11 +34,11 @@ ms.locfileid: "86281408"
 
 ### <a name="create-the-application"></a>アプリケーションを作成する
 
-1. "TextClassificationTF" という名前の **.NET Core コンソール アプリケーション**を作成します。
+1. "TextClassificationTF" という名前の **.NET Core コンソール アプリケーション** を作成します。
 
 2. データ セット ファイルを保存するために、プロジェクトに *Data* という名前のディレクトリを作成します。
 
-3. **Microsoft.ML NuGet パッケージ**をインストールします。
+3. **Microsoft.ML NuGet パッケージ** をインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -47,9 +47,9 @@ ms.locfileid: "86281408"
 ### <a name="add-the-tensorflow-model-to-the-project"></a>TensorFlow モデルをプロジェクトに追加する
 
 > [!NOTE]
-> このチュートリアルのモデルは、[dotnet/machinelearning-testdata](https://github.com/dotnet/machinelearning-testdata/tree/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model) GitHub リポジトリにあります。 このモデルは TensorFlow SavedModel 形式です。
+> このチュートリアルのモデルは、[dotnet/machinelearning-testdata](https://github.com/dotnet/machinelearning-testdata/tree/main/Microsoft.ML.TensorFlow.TestModels/sentiment_model) GitHub リポジトリにあります。 このモデルは TensorFlow SavedModel 形式です。
 
-1. [sentiment_model ZIP ファイル](https://github.com/dotnet/samples/blob/master/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true)をダウンロードして解凍します。
+1. [sentiment_model ZIP ファイル](https://github.com/dotnet/samples/blob/main/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true)をダウンロードして解凍します。
 
     ZIP ファイルには次のものが含まれています。
 
@@ -81,14 +81,14 @@ ms.locfileid: "86281408"
 
 最初にテキストを別々の単語に分割し、指定されたマッピング ファイルを使用して各単語を整数のエンコードにマップします。 この変換の結果、文章内の単語数に応じた長さの可変長の整数配列になります。
 
-|プロパティ| [値]|種類|
+|プロパティ| 値|種類|
 |-------------|-----------------------|------|
 |ReviewText|この映画は本当に良い|string|
 |VariableLengthFeatures|14、22、9、66、78、... |int[]|
 
 可変長フィーチャーの配列は、固定長が 600 に変更されます。 これは、TensorFlow モデルで想定される長さです。
 
-|プロパティ| [値]|種類|
+|プロパティ| 値|種類|
 |-------------|-----------------------|------|
 |ReviewText|この映画は本当に良い|string|
 |VariableLengthFeatures|14、22、9、66、78、... |int[]|
@@ -106,13 +106,13 @@ ms.locfileid: "86281408"
 
     `VariableLengthFeatures` プロパティには、ベクターとして指定する [VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) 属性が含まれます。  ベクター要素はすべて同じ型である必要があります。 列が多いデータ セットでは、複数の列を 1 つのベクターとして読み込むことで、データ変換を適用するときのデータ パスの数が減少します。
 
-    このクラスは、`ResizeFeatures` アクションで使用されます。 プロパティの名前 (この場合は 1 つのみ) を使用して、カスタム マッピング アクションへの_入力_として使用できる DataView 内の列を示します。
+    このクラスは、`ResizeFeatures` アクションで使用されます。 プロパティの名前 (この場合は 1 つのみ) を使用して、カスタム マッピング アクションへの _入力_ として使用できる DataView 内の列を示します。
 
 1. 次の `Main` メソッドの後に、固定長フィーチャー用のクラスを作成します。
 
     [!code-csharp[FixedLengthFeatures](./snippets/text-classification-tf/csharp/Program.cs#FixedLengthFeatures)]
 
-    このクラスは、`ResizeFeatures` アクションで使用されます。 プロパティの名前 (この場合は 1 つのみ) を使用して、カスタム マッピング アクションへの_出力_として使用できる DataView 内の列を示します。
+    このクラスは、`ResizeFeatures` アクションで使用されます。 プロパティの名前 (この場合は 1 つのみ) を使用して、カスタム マッピング アクションへの _出力_ として使用できる DataView 内の列を示します。
 
     プロパティ `Features` の名前は、TensorFlow モデルによって決定されることに注意してください。 このプロパティ名は変更できません。
 
@@ -226,7 +226,7 @@ ms.locfileid: "86281408"
 
 1. [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 関数では、データの単一行に対して予測を行います。
 
-    |プロパティ| [値]|種類|
+    |プロパティ| 値|種類|
     |-------------|-----------------------|------|
     |予測|[0.5459937, 0.454006255]|float[]|
 
@@ -251,7 +251,7 @@ Is sentiment/review positive ? Yes
 
 おめでとうございます! これで、ML.NET で事前トレーニング済みの `TensorFlow` モデルを再利用することにより、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF) リポジトリで確認できます。
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]

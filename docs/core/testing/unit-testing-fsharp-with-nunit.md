@@ -5,20 +5,20 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: 9a1b4bb7e5e705cf1c71cd44827d4a2e0a3f8cf6
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 54513d3063ea0a3be8da73bcbd55962e839c6e2c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656476"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875058"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 
-このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-with-fsharp-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
@@ -88,13 +88,13 @@ dotnet new nunit -lang "F#"
 </ItemGroup>
 ```
 
-テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` では、NUnit と NUnit のテスト アダプターを追加しました。 ここで、プロジェクトに別の依存関係として `MathService` クラス ライブラリを追加します。 次の `dotnet add reference` コマンドを使用します。
+テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` では、NUnit と NUnit のテスト アダプターを追加しました。 ここで、プロジェクトに別の依存関係として `MathService` クラス ライブラリを追加します。 `dotnet add reference` コマンドを使用する。
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-全体のファイルは GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)で確認できます。
+全体のファイルは GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)で確認できます。
 
 ソリューションの最終的なレイアウトは次のようになります。
 
@@ -210,7 +210,7 @@ let squaresOfOdds xs =
 
 これで、小さなライブラリとそのライブラリの単体テストのセットが構築されました。 ソリューションを構築したことで、新しいパッケージとテストの追加が通常のワークフローに組み込まれました。 アプリケーションの目標を達成することに時間と労力の多くを割き、集中して取り組みました。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [dotnet add reference](../tools/dotnet-add-reference.md)
 - [dotnet test](../tools/dotnet-test.md)

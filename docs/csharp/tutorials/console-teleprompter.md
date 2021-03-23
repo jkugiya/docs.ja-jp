@@ -4,12 +4,12 @@ description: このチュートリアルでは、.NET Core と C# 言語のさ�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: fc5e8a929dfe0b7a3f55174e38e596331900edc7
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 38b4660a6809ebbfbb079b1c00ad9e9a53341645
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231382"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876137"
 ---
 # <a name="console-app"></a>コンソール アプリ
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>ファイルの読み取りとエコー
 
-最初に追加する機能は、テキスト ファイルを読み取り、そのテキストすべてをコンソールに表示する機能です。 まず、テキスト ファイルを追加しましょう。 この[サンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)の GitHub リポジトリから、[sampleQuotes.txt](https://github.com/dotnet/samples/raw/main/csharp/getting-started/console-teleprompter/sampleQuotes.txt) ファイルをプロジェクト ディレクトリにコピーします。 これがアプリケーションのスクリプトとして機能します。 このトピックのサンプル アプリをダウンロードする方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」をご覧ください。
+最初に追加する機能は、テキスト ファイルを読み取り、そのテキストすべてをコンソールに表示する機能です。 まず、テキスト ファイルを追加しましょう。 この[サンプル](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-teleprompter)の GitHub リポジトリから、[sampleQuotes.txt](https://github.com/dotnet/samples/raw/main/csharp/getting-started/console-teleprompter/sampleQuotes.txt) ファイルをプロジェクト ディレクトリにコピーします。 これがアプリケーションのスクリプトとして機能します。 このトピックのサンプル アプリをダウンロードする方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」をご覧ください。
 
 次に、以下のメソッドを `Program` クラス (`Main` メソッドの真下) に追加します。
 

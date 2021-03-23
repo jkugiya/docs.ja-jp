@@ -2,12 +2,12 @@
 title: コンテナーでの診断の収集
 description: この記事では、.NET Core 診断ツールを Docker コンテナーで使用する方法について説明します。
 ms.date: 09/01/2020
-ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1d0c9eadca348dad5c4fc0a395c8b371e3821262
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916210"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872757"
 ---
 # <a name="collect-diagnostics-in-containers"></a>コンテナーでの診断の収集
 
@@ -68,7 +68,7 @@ COPY --from=build /tools .
 
 **このツールの適用対象: ✔️** .NET Core 2.1 以降のバージョン
 
-`dotnet-dump` の代わりに、[`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) を使用して、ネイティブ情報とマネージド情報の両方が含まれるコア ダンプを Linux 上に作成することができます。 `createdump` ツールは .NET Core ランタイムと共にインストールされ、libcoreclr.so の隣にあります(通常は、"/usr/share/dotnet/shared/Microsoft.NETCore.App/[バージョン]" 内)。 このツールは、コンテナー内でもコンテナー化されていない Linux 環境と同じように動作しますが、1 つだけ例外があります。それは、ツールには [`SYS_PTRACE` 機能](https://man7.org/linux/man-pages/man7/capabilities.7.html)が必要であるため、Docker コンテナーを[開始するときにその機能を有効にしておく](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)必要があるということです。
+`dotnet-dump` の代わりに、[`createdump`](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) を使用して、ネイティブ情報とマネージド情報の両方が含まれるコア ダンプを Linux 上に作成することができます。 `createdump` ツールは .NET Core ランタイムと共にインストールされ、libcoreclr.so の隣にあります(通常は、"/usr/share/dotnet/shared/Microsoft.NETCore.App/[バージョン]" 内)。 このツールは、コンテナー内でもコンテナー化されていない Linux 環境と同じように動作しますが、1 つだけ例外があります。それは、ツールには [`SYS_PTRACE` 機能](https://man7.org/linux/man-pages/man7/capabilities.7.html)が必要であるため、Docker コンテナーを[開始するときにその機能を有効にしておく](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)必要があるということです。
 
 ### <a name="using-createdump-in-a-sidecar-container"></a>サイドカー コンテナーでの `createdump` の使用
 

@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 04/07/2020
-ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 7e2e484b4eacf8fdbef61a600409fa561dd34cb3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434804"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876072"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -36,9 +36,9 @@ C# 8.0 は **.NET Core 3.x** と **.NET Standard 2.1** でサポートされて�
 
 この記事の以降では、これらの機能について簡単に説明します。 詳細な記事がある場合は、それらのチュートリアルと概要へのリンクが提供されています。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
 
-1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
+1. [dotnet try](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md) グローバル ツールをインストールします。
 1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
-1. 現在のディレクトリを、 *try-samples* リポジトリの *csharp8* サブディレクトリに設定します。
+1. 現在のディレクトリを、*try-samples* リポジトリの *csharp8* サブディレクトリに設定します。
 1. `dotnet try` を実行します。
 
 ## <a name="readonly-members"></a>読み取り専用メンバー
@@ -96,7 +96,7 @@ public readonly void Translate(int xOffset, int yOffset)
 
 ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が *継承* されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メソッドでは、"traits" 言語機能のようなシナリオも可能になります。
 
-既定のインターフェイス メソッドにより、多くのシナリオと言語要素が影響を受けます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-methods-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
+既定のインターフェイス メソッドにより、多くのシナリオと言語要素が影響を受けます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](./tutorials/default-interface-methods-versions.md)について取り上げています。
 
 ## <a name="more-patterns-in-more-places"></a>より多くの場所でより多くのパターン
 
@@ -194,7 +194,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>タプル パターン
 
-いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン** を使うと、 [タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  " *rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
+いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン** を使うと、[タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -214,7 +214,7 @@ public static string RockPaperScissors(string first, string second)
 
 ### <a name="positional-patterns"></a>位置指定パターン
 
-一部の型には、そのプロパティを個別の変数に分解する `Deconstruct` メソッドが含まれています。 `Deconstruct` メソッドにアクセスできる場合、 **位置指定パターン** を使ってオブジェクトのプロパティを検査し、パターン用にそれらのプロパティを使うことができます。  `X` と `Y` の個別の変数を作成する `Deconstruct` メソッドを含む `Point` クラスの例を次に示します。
+一部の型には、そのプロパティを個別の変数に分解する `Deconstruct` メソッドが含まれています。 `Deconstruct` メソッドにアクセスできる場合、**位置指定パターン** を使ってオブジェクトのプロパティを検査し、パターン用にそれらのプロパティを使うことができます。  `X` と `Y` の個別の変数を作成する `Deconstruct` メソッドを含む `Point` クラスの例を次に示します。
 
 ```csharp
 public class Point
@@ -244,7 +244,7 @@ public enum Quadrant
 }
 ```
 
-次のメソッドでは、 **位置指定パターン** を使用して、`x` と `y` の値を抽出しています。 その後、`when` 句を使用して、点の `Quadrant` を決定します。
+次のメソッドでは、**位置指定パターン** を使用して、`x` と `y` の値を抽出しています。 その後、`when` 句を使用して、点の `Quadrant` を決定します。
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -353,13 +353,13 @@ int M()
 
 ## <a name="nullable-reference-types"></a>null 許容参照型
 
-null 許容注釈コンテキスト内では、参照型のすべての変数は、 **null 非許容参照型** と見なされます。 変数が null 許容であることを示したい場合は、型名に `?` を追加し、 **null 許容参照型** として変数を宣言する必要があります。
+null 許容注釈コンテキスト内では、参照型のすべての変数は、**null 非許容参照型** と見なされます。 変数が null 許容であることを示したい場合は、型名に `?` を追加し、**null 許容参照型** として変数を宣言する必要があります。
 
 null 非許容参照型の場合は、コンパイラでフロー分析を使用して、ローカル変数が宣言時に null 以外の値に初期化されることが確認されます。 フィールドは、構築時に初期化される必要があります。 変数が使用可能ないずれかのコンストラクターの呼び出しまたは初期化子によって設定されていない場合、コンパイラで警告が生成されます。 さらに、null 非許容参照型に、null になる可能性がある値を割り当てることはできません。
 
 null 許容参照型の場合は、null に割り当てられたり初期化されたりしないことは確認されません。 ただし、null 許容参照型の変数が null 非許容参照型にアクセスしたり割り当てられたりするときは、その前に、コンパイラでフロー分析を使用して、null 値のチェックが行われます。
 
-詳しくは、「[null 許容参照型](../nullable-references.md)」の概要をご覧ください。 この [null 許容参照型チュートリアル](../tutorials/nullable-reference-types.md)の新しいアプリケーションを使って、自分で試してみてください。 既存のコードベースを null 許容参照型を使用するように移行する手順について詳しくは、[null 許容参照型を使用するようにアプリケーションを移行する方法についてのチュートリアル](../tutorials/upgrade-to-nullable-references.md)に関する記事をご覧ください。
+詳しくは、「[null 許容参照型](../nullable-references.md)」の概要をご覧ください。 この [null 許容参照型チュートリアル](tutorials/nullable-reference-types.md)の新しいアプリケーションを使って、自分で試してみてください。 既存のコードベースを null 許容参照型を使用するように移行する手順について詳しくは、[null 許容参照型を使用するようにアプリケーションを移行する方法についてのチュートリアル](tutorials/upgrade-to-nullable-references.md)に関する記事をご覧ください。
 
 ## <a name="asynchronous-streams"></a>非同期ストリーム
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-[非同期ストリームの作成と使用](../tutorials/generate-consume-asynchronous-stream.md)に関するチュートリアルを使用して、自分で非同期ストリームを試すことができます。 既定では、ストリーム要素はキャプチャされたコンテキストで処理されます。 コンテキストのキャプチャを無効にする場合は、<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 拡張メソッドを使用します。 同期コンテキストについて、および現在のコンテキストのキャプチャについての詳細は、「[タスク ベースの非同期パターンの利用](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)」を参照してください。
+[非同期ストリームの作成と使用](tutorials/generate-consume-asynchronous-stream.md)に関するチュートリアルを使用して、自分で非同期ストリームを試すことができます。 既定では、ストリーム要素はキャプチャされたコンテキストで処理されます。 コンテキストのキャプチャを無効にする場合は、<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 拡張メソッドを使用します。 同期コンテキストについて、および現在のコンテキストのキャプチャについての詳細は、「[タスク ベースの非同期パターンの利用](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)」を参照してください。
 
 ## <a name="asynchronous-disposable"></a>非同期の破棄可能
 
@@ -410,7 +410,7 @@ C# 8.0 以降、この言語では <xref:System.IAsyncDisposable?displayProperty
 
 インデックスのルールから始めましょう。 配列 `sequence` を考えます。 `0` インデックスは `sequence[0]` と同じです。 `^0` インデックスは `sequence[sequence.Length]` と同じです。 `sequence[sequence.Length]` と同様に、`sequence[^0]` は例外をスローすることに注意してください。 任意の数値 `n` の場合、インデックス `^n` は `sequence.Length - n` と同じです。
 
-範囲は、範囲の *先頭* と *末尾* を指定します。 範囲の先頭は包含ですが、範囲の末尾は排他です。つまり、" *先頭* " は範囲に含まれますが、" *末尾* " は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
+範囲は、範囲の *先頭* と *末尾* を指定します。 範囲の先頭は包含ですが、範囲の末尾は排他です。つまり、"*先頭*" は範囲に含まれますが、"*末尾*" は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
 
 いくつか例を見てみましょう。 先頭および末尾からのインデックスの注釈が付けられた、次のような配列について考えます。
 
@@ -469,9 +469,9 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-配列でインデックスと範囲がサポートされるだけではありません。 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> と共にインデックスと範囲を使用することもできます。 詳細については、「[インデックスと範囲の型のサポート](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)」を参照してください。
+配列でインデックスと範囲がサポートされるだけではありません。 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> と共にインデックスと範囲を使用することもできます。 詳細については、「[インデックスと範囲の型のサポート](tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)」を参照してください。
 
-チュートリアルでのインデックスと範囲について詳しくは、「[Indices and ranges (インデックスと範囲)](../tutorials/ranges-indexes.md)」で調べることができます。
+チュートリアルでのインデックスと範囲について詳しくは、「[Indices and ranges (インデックスと範囲)](tutorials/ranges-indexes.md)」で調べることができます。
 
 ## <a name="null-coalescing-assignment"></a>null 合体割り当て
 

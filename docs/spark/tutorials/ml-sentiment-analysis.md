@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a21b92f910d82cbddd2976adeb292cea5f7bc78b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688242"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876865"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>チュートリアル: .NET for Apache Spark と ML.NET での感情分析
 
@@ -33,11 +33,11 @@ ms.locfileid: "94688242"
 
 * ML.NET モデル ビルダー (プレビュー) を[ダウンロードしてインストール](https://marketplace.visualstudio.com/items?itemName=MLNET.07)します。
 
-* Yelp レビュー データセットの [yelptest.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) と [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) をダウンロードします。
+* Yelp レビュー データセットの [yelptest.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) と [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) をダウンロードします。
 
 ## <a name="review-the-data"></a>データを確認する
 
-Yelp レビュー データセットには、さまざまなサービスに関するオンライン Yelp レビューが含まれています。 [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) を開き、データの構造を確認します。 1 番目の列にはレビュー テキストが含まれ、2 番目の列にはセンチメントのスコアが含まれます。 センチメント スコアが 1 の場合、レビューは肯定的になり、センチメント スコアが 0 の場合、レビューは否定的になります。
+Yelp レビュー データセットには、さまざまなサービスに関するオンライン Yelp レビューが含まれています。 [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) を開き、データの構造を確認します。 1 番目の列にはレビュー テキストが含まれ、2 番目の列にはセンチメントのスコアが含まれます。 センチメント スコアが 1 の場合、レビューは肯定的になり、センチメント スコアが 0 の場合、レビューは否定的になります。
 
 サンプル データを次の表に示します。
 
@@ -203,7 +203,7 @@ dotnet publish
 
 ## <a name="get-the-code"></a>コードを取得する
 
-このチュートリアルは、「[ビッグ データでの感情分析](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment)」の例のコードに似ています。
+このチュートリアルは、「[ビッグ データでの感情分析](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment)」の例のコードに似ています。
 
 ## <a name="next-steps"></a>次の手順
 

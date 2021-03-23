@@ -2,12 +2,12 @@
 title: 'チュートリアル: C# を使用してオブジェクトを永続化する'
 description: この例では、C# で基本的な Loan オブジェクトを作成し、そのデータをファイルに永続化してから、そのファイルのデータを使用して新しいオブジェクトを作成します。
 ms.date: 04/26/2018
-ms.openlocfilehash: 9f165addc5b9b0d056936458e8529ec1912c417b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0fc733982b7800653a3c8c283bd0af8384d72168
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302764"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876449"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C\# を使用してオブジェクトを永続化する
 
@@ -32,7 +32,7 @@ ms.locfileid: "87302764"
 
 - この例では C# 7.3 が必要です。 「[C# 言語のバージョンの選択](../../../language-reference/configure-language-version.md)」を参照してください
 
-オンラインで [.NET サンプルの GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/serialization)にアクセスしてサンプル コードを確認することができます。
+オンラインで [.NET サンプルの GitHub リポジトリ](https://github.com/dotnet/samples/tree/main/csharp/serialization)にアクセスしてサンプル コードを確認することができます。
 
 ## <a name="creating-the-loan-object"></a>loan オブジェクトを作成する
 

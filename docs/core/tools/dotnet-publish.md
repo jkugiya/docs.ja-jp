@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET プロジェクトまたはソリューションがディレクトリに発行されます。
 ms.date: 02/03/2021
-ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 64f300c415d8810badca99878e4243b37f32d86d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585677"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873420"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -155,7 +155,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   アプリを、プラットフォームごとに単一の実行可能ファイルにパッケージ化します。 この実行可能ファイルは自己展開型であり、アプリの実行に必要なすべての依存関係 (ネイティブを含む) を含んでいます。 アプリを初めて実行すると、アプリ名とビルド ID に基づいてアプリケーションがディレクトリに抽出されます。 アプリケーションを再実行すると、起動は速くなります。 新しいバージョンが使用されない限り、アプリケーションは自身を 2 回抽出する必要がありません。 .NET Core 3.0 SDK 以降で使用できます。
 
-  単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)を参照してください。
+  単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md)を参照してください。
 
   このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
 

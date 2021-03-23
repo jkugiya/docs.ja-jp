@@ -4,12 +4,12 @@ description: .NET をインストールできる macOS のバージョンにつ�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe42a1593d4e8249252d2bd964dbfd52cdcd81a9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9961d3e3ddb5f38be1c9c13c01af2e41815f50c9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105194"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875253"
 ---
 # <a name="install-net-on-macos"></a>macOS に .NET をインストールする
 
@@ -77,11 +77,11 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 | .NET Core のバージョン | macOS                 | アーキテクチャ | 詳細情報    |
 | ----------------- | --------------------- | --------------| --- |
-| 5.0               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
-| 3.1               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra (10.12+)       | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra (10.12+)       | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 5.0               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md) |
+| 3.1               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md) |
+| 3.0               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra (10.12+)       | X64 | [詳細情報](https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra (10.12+)       | X64 | [詳細情報](https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md) |
 
 macOS Catalina (バージョン 10.15) 以降では、2019 年 6 月 1 日より後に作成され、Developer ID と共に配布されたすべてのソフトウェアは公証される必要があります。 この要件は、.NET ランタイム、.NET SDK、および .NET を使用して作成されたソフトウェアに適用されます。
 
@@ -194,7 +194,7 @@ Visual Studio Code には、Visual Studio のような自動化された .NET �
 
 Microsoft は、特定のシナリオに対応したイメージを用意しています。 たとえば、[ASP.NET Core リポジトリ](https://hub.docker.com/_/microsoft-dotnet-aspnet)には、運用環境での ASP.NET Core アプリの実行用にビルドされたイメージが用意されています。
 
-Docker コンテナー内で .NET Core を使用する方法の詳細については、「[.NET および Docker の概要](../docker/introduction.md)」と[サンプル](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)に関するページを参照してください。
+Docker コンテナー内で .NET Core を使用する方法の詳細については、「[.NET および Docker の概要](../docker/introduction.md)」と[サンプル](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -204,9 +204,9 @@ Docker コンテナー内で .NET Core を使用する方法の詳細につい�
 - [チュートリアル: Visual Studio Code を使用して新しいアプリを作成する](../tutorials/with-visual-studio-code.md)。
 - [チュートリアル: NET Core アプリをコンテナー化する](../docker/build-container.md)。
 
-[release-notes-21]: https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md
-[release-notes-31]: https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md
-[release-notes-50]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
-[release-notes-20]: https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md
-[release-notes-22]: https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md
-[release-notes-30]: https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md
+[release-notes-21]: https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md
+[release-notes-31]: https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md
+[release-notes-50]: https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md
+[release-notes-20]: https://github.com/dotnet/core/blob/main/release-notes/2.0/2.0-supported-os.md
+[release-notes-22]: https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md
+[release-notes-30]: https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md

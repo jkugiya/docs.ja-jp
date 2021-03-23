@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3ba56c7485d27d2692a589e2a8e5b330ea0de85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691241"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873901"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -182,7 +182,7 @@ if (handler != null)
 
 前の例で示すように、式 `^e` は <xref:System.Index?displayProperty=nameWithType> 型です。 式 `^e`で、`e` の結果は `int` に暗黙に変換される必要があります。
 
-さらに、`^` 演算子を[範囲演算子 ](#range-operator-) と組み合わせて使用してインデックスの範囲を作成することもできます。 詳細については、「[インデックスと範囲](../../tutorials/ranges-indexes.md)」を参照してください。
+さらに、`^` 演算子を[範囲演算子 ](#range-operator-) と組み合わせて使用してインデックスの範囲を作成することもできます。 詳細については、「[インデックスと範囲](../../whats-new/tutorials/ranges-indexes.md)」を参照してください。
 
 ## <a name="range-operator-"></a>範囲演算子 .
 
@@ -200,7 +200,7 @@ if (handler != null)
 
 [!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 
-詳細については、「[インデックスと範囲](../../tutorials/ranges-indexes.md)」を参照してください。
+詳細については、「[インデックスと範囲](../../whats-new/tutorials/ranges-indexes.md)」を参照してください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 

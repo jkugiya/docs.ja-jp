@@ -2,12 +2,12 @@
 title: Docker コンテナー用 .NET Framework を選択するタイミング
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .NET Framework を選択するタイミング'
 ms.date: 01/13/2021
-ms.openlocfilehash: 476f891a70a220172f84d8168c8492416b8e56bd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fa644753c3a39f285052aba7a8524ea96442c842
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188116"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873134"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Framework を選択するタイミング
 
@@ -39,7 +39,7 @@ ms.locfileid: "98188116"
 
 - ワークフロー関連サービス。 Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: ADO.NET Data Services) は、NET Framework でのみ使用できます。 現在、これらを .NET 5 に含める予定はありません。
 
-公式の [.NET ロードマップ](https://github.com/dotnet/core/blob/master/roadmap.md)に一覧表示されているテクノロジに加え、他の機能が新しい[統合 .NET プラットフォーム](https://devblogs.microsoft.com/dotnet/introducing-net-5/)に移植される可能性があります。 GitHub でのディスカッションに参加して意見を述べることを検討してください。 また、何か足りないと感じた場合は、[dotnet/runtime](https://github.com/dotnet/runtime/issues/new) GitHub リポジトリで新しい案件を作成してください。
+公式の [.NET ロードマップ](https://github.com/dotnet/core/blob/main/roadmap.md)に一覧表示されているテクノロジに加え、他の機能が新しい[統合 .NET プラットフォーム](https://devblogs.microsoft.com/dotnet/introducing-net-5/)に移植される可能性があります。 GitHub でのディスカッションに参加して意見を述べることを検討してください。 また、何か足りないと感じた場合は、[dotnet/runtime](https://github.com/dotnet/runtime/issues/new) GitHub リポジトリで新しい案件を作成してください。
 
 ## <a name="using-a-platform-or-api-that-doesnt-support-net-5"></a>.NET 5 をサポートしていないプラットフォームまたは API の使用
 

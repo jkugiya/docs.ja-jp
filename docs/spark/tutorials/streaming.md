@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 29f90c43ece1f2655a15f759b473f723e712bda8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688021"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873173"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用した構造化ストリーミング
 
@@ -24,7 +24,7 @@ ms.locfileid: "94688021"
 > * netcat を使用してデータ ストリームを作成する
 > * ユーザー定義関数と SparkSQL を使用してストリーミング データを分析する
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 これが初めての .NET for Apache Spark アプリケーションである場合は、基本について理解を深めるために、[概要のチュートリアル](get-started.md)に関する記事から始めてください。
 
@@ -158,15 +158,15 @@ spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local 
 > [!NOTE]
 > 必ず上記のコマンドを実際の Microsoft Spark jar ファイルへのパスに更新してください。 上記のコマンドでは、netcat サーバーが localhost ポート 9999 で実行されていることも前提としています。
 
-## <a name="get-the-code"></a>コードを取得する
+## <a name="get-the-code"></a>コードの入手
 
-このチュートリアルでは [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) の例を使用していますが、GitHub には、他に次の 3 つの完全なストリームの処理例があります。
+このチュートリアルでは [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) の例を使用していますが、GitHub には、他に次の 3 つの完全なストリームの処理例があります。
 
-* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs): 任意のソースからストリーミングされたデータのワード カウント
-* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): ウィンドウ ロジックを使用したデータのワード カウント
-* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): Kafka からストリーミングされたデータのワード カウント
+* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs): 任意のソースからストリーミングされたデータのワード カウント
+* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): ウィンドウ ロジックを使用したデータのワード カウント
+* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): Kafka からストリーミングされたデータのワード カウント
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の記事に進んで、.NET for Apache Spark アプリケーションを Databricks にデプロイする方法を確認してください。
 > [!div class="nextstepaction"]

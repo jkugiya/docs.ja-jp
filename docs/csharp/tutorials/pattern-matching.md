@@ -4,12 +4,12 @@ description: この高度なチュートリアルでは、パターン マッチ
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: b0ee4ee905c130876cf201cb3a1a441d54226c52
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: c081e6a75b3ea834641b050bc2450fed1e45c60c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582782"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874512"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する
 
@@ -43,7 +43,7 @@ C# 7 で、基本的なパターン マッチング機能が導入されまし�
 
 [!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
-GitHub の [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) リポジトリから、スタート コードをダウンロードすることができます。 さまざまなシステムからの車両クラスがあり、異なる名前空間に存在していることがわかります。 `System.Object` を除いて、利用できる共通基底クラスはありません。
+GitHub の [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/start) リポジトリから、スタート コードをダウンロードすることができます。 さまざまなシステムからの車両クラスがあり、異なる名前空間に存在していることがわかります。 `System.Object` を除いて、利用できる共通基底クラスはありません。
 
 ## <a name="pattern-matching-designs"></a>パターン マッチング設計
 
@@ -390,4 +390,4 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 ## <a name="next-steps"></a>次のステップ
 
-GitHub リポジトリの [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/finished) から、完成したコードをダウンロードできます。 自分のパターンを調査し、通常のコーディング アクティビティにこの手法を追加してください。 これらの手法を習得することで、別の方法で問題にアプローチし、新しい機能を作成できます。
+GitHub リポジトリの [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/finished) から、完成したコードをダウンロードできます。 自分のパターンを調査し、通常のコーディング アクティビティにこの手法を追加してください。 これらの手法を習得することで、別の方法で問題にアプローチし、新しい機能を作成できます。

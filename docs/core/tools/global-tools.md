@@ -4,12 +4,12 @@ description: .NET ツールをインストール、使用、更新、および�
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: d4fca6b52b1444cf73efc49a6c50294cc5f6015b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633885"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874824"
 ---
 # <a name="how-to-manage-net-tools"></a>.NET ツールの管理方法
 
@@ -40,7 +40,7 @@ ms.locfileid: "97633885"
 
 * NuGet.org に発行されているツールを検索するには、[dotnet tool search](dotnet-tool-search.md) コマンドを使用します。
 * ".NET ツール" パッケージの種類のフィルターを使用して [NuGet](https://www.nuget.org) の Web サイトを検索します。 詳細については、「[パッケージの検索と選択](/nuget/consume-packages/finding-and-choosing-packages)」を参照してください。
-* ASP.NET Core チームが作成したツールのソース コードについては、[dotnet/aspnetcore GitHub リポジトリの Tools ディレクトリ](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)を参照してください。
+* ASP.NET Core チームが作成したツールのソース コードについては、[dotnet/aspnetcore GitHub リポジトリの Tools ディレクトリ](https://github.com/dotnet/aspnetcore/tree/main/src/Tools)を参照してください。
 * 診断ツールについては、[.NET 診断ツール](../diagnostics/index.md#net-core-diagnostic-global-tools)に関するページを参照してください。
 
 ## <a name="check-the-author-and-statistics"></a>作成者と統計情報の確認

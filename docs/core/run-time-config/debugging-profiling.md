@@ -3,12 +3,12 @@ title: デバッグとプロファイルの構成設定
 description: .NET Core アプリのデバッグとプロファイルを構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: dd96862582f13adc19df7572b1865800b18d9954
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761994"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875019"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>デバッグとプロファイルのランタイム構成オプション
 
@@ -45,7 +45,7 @@ ms.locfileid: "83761994"
 
 - 現在実行中のプロセス (32 ビット プロセスまたは 64 ビット プロセス) に読み込むプロファイラー DLL へのパスを指定します。
 - 複数の変数が設定されている場合、ビット固有の変数が優先されます。 これらは、ロードするプロファイラーのビットを指定します。
-- 詳細については、「[プロファイラー ライブラリを検索する](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md)」を参照してください。
+- 詳細については、「[プロファイラー ライブラリを検索する](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/profiling/Profiler%20Loading.md)」を参照してください。
 
 | | 設定の名前 | 値 |
 | - | - | - |

@@ -4,12 +4,12 @@ description: C# 言語に対する最新の機能強化により、以前はア�
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4728ff279d0a14adf239c1e177f7f840ea208e6e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106619"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872484"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>安全で効率的な C# コードを記述する
 
@@ -229,7 +229,7 @@ public struct Point3D
 
 null 許容値の型を `in` 引数として渡すことはできません。 <xref:System.Nullable%601> 型は、読み取り専用の構造体として宣言されていません。 つまり、コンパイラは、パラメータ―宣言上で `in` 修飾子を使用してメソッドに渡される null 許容値型の任意の引数に対して、防御用のコピーを生成する必要があります。
 
-GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)の [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) を使用して、パフォーマンスの違いを示すサンプル プログラムを確認できます。 変更可能な構造体の値渡しと参照渡し、および変更不可の構造体の値渡しと参照渡しが比較されています。 変更不可の構造体で参照渡しを使用したときが、最も高速です。
+GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/tree/main/csharp/safe-efficient-code/benchmark)の [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) を使用して、パフォーマンスの違いを示すサンプル プログラムを確認できます。 変更可能な構造体の値渡しと参照渡し、および変更不可の構造体の値渡しと参照渡しが比較されています。 変更不可の構造体で参照渡しを使用したときが、最も高速です。
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>単一のスタック フレームでブロックまたはメモリを操作するために `ref struct` 型を使用する
 

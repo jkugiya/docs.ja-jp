@@ -2,12 +2,12 @@
 title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 02/05/2021
-ms.openlocfilehash: cc1c5457738ca0f7d4756811adec4a7bd57cb009
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: ae57b370022bfc86200ca20a913d44f64e46d68d
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872497"
+ms.locfileid: "104881121"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
@@ -278,7 +278,7 @@ C# 言語における `if` ステートメントとループ構造を見てき�
 - `if` ステートメントは、数を合計に入れるべきかどうか確認する条件を作ります。
 - `for` ループは、1 から 20 までのすべての数を 1 つずつ確認する一連の手順を繰り返すのに役立ちます。
 
-ご自身で試してみてください。 そして自分がとった方法を確認してください。 答えは 63 になるはずです。 [GitHub で完成版のコードを表示する](https://github.com/dotnet/samples/tree/main/csharp/branches-quickstart/Program.cs#L46-L54)と、考えられる答えの 1 つを確認できます。
+ご自身で試してみてください。 そして自分がとった方法を確認してください。 答えは 63 になるはずです。 [GitHub で完成版のコードを表示する](https://github.com/dotnet/samples/blob/main/csharp/branches-quickstart/Program.cs#L87-L95)と、考えられる答えの 1 つを確認できます。
 
 これで "分岐とループ" に関するチュートリアルは終了です。
 

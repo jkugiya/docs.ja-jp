@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: df96ce4cc2348637b262b7380832dde1e2ee3afb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605283"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876341"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -51,7 +51,7 @@ ms.locfileid: "102605283"
 
 インターフェイスは、次の特性を持ちます。
 
-- 通常、インターフェイスは抽象メンバーのみを含む抽象基底クラスに似ています。 インターフェイスを実装するすべてのクラスまたは構造体では、そのすべてのメンバーを実装する必要があります。 必要に応じて、そのメンバーの一部またはすべての既定の実装をインターフェイスで定義できます。 詳細については、[既定のインターフェイス メソッド](../../tutorials/default-interface-methods-versions.md)に関する記事をご覧ください。
+- 通常、インターフェイスは抽象メンバーのみを含む抽象基底クラスに似ています。 インターフェイスを実装するすべてのクラスまたは構造体では、そのすべてのメンバーを実装する必要があります。 必要に応じて、そのメンバーの一部またはすべての既定の実装をインターフェイスで定義できます。 詳細については、[既定のインターフェイス メソッド](../../whats-new/tutorials/default-interface-methods-versions.md)に関する記事をご覧ください。
 - インターフェイスを直接インスタンス化することはできません。 そのメンバーは、インターフェイスを実装する任意のクラスまたは構造体によって実装されます。
 - クラスまたは構造体は、複数のインターフェイスを実装できます。 クラスは、基本クラスを継承する一方で、1 つまたは複数のインターフェイスを実装できます。
 

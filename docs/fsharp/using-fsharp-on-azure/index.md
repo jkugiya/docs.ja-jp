@@ -4,12 +4,12 @@ description: F# での Azure サービスの使用に関するガイド
 author: sylvanc
 ms.date: 07/29/2020
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 16599aa48776acee05edf8201cdd148a87507cdb
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 406de0cdef67631ddaaa13f686c9b2093ba5d2ff
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899412"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873265"
 ---
 # <a name="using-f-on-azure"></a>Azure での F# の使用
 
@@ -60,7 +60,7 @@ Azure Storage は、明示的な API 呼び出しではなく、宣言型の構�
 
 [Apache Spark for Azure HDInsight](/azure/hdinsight/spark/apache-spark-overview) は、大規模なデータ分析アプリケーションを実行するオープン ソースの処理のフレームワークです。 [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks) は、Microsoft Azure クラウド サービス プラットフォーム用に最適化された Apache Spark ベースの分析プラットフォームです。 Azure では、Apache Spark は簡単かつ低コストで展開できます。 Apache Spark に対する .Net の一連のバインドである [.NET for Apache Spark](../../spark/what-is-apache-spark-dotnet.md) を使用して、ご自分の Spark アプリケーションを F# で開発できます。
 
-* [.NET for Apache Spark の F# のサンプル](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
+* [.NET for Apache Spark の F# のサンプル](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.FSharp.Examples)
 * [Azure HDInsight に .NET Interactive Jupyter ノートブックをインストールする](../../spark/how-to-guides/hdinsight-notebook-installation.md)
 * [Azure HDInsight に Apache Spark ジョブの送信する](../../spark/how-to-guides/hdinsight-deploy-methods.md)
 * [Azure Databricks に Apache Spark ジョブの送信する](../../spark/how-to-guides/databricks-deploy-methods.md)

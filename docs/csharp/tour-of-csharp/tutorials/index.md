@@ -3,12 +3,12 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3b5da67458d665946b42bf49ceb3799473354567
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629674"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872419"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
@@ -50,6 +50,6 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 このチュートリアルは、上に挙げたレッスンを修了していることが前提条件となります。
 
-## <a name="101-linq-samples"></a>[101 個の LINQ サンプル](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+## <a name="101-linq-samples"></a>[101 個の LINQ サンプル](https://github.com/dotnet/try-samples/tree/main/101-linq-samples)
 
 このサンプルには [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup) グローバルツールが必要です。 ツールをインストールし、[try-samples](https://github.com/dotnet/try-samples) リポジトリを複製すると、対話形式で実行できる一連の 101 個のサンプルを通じて、統合言語クエリ (LINQ) を学習できます。 さまざまな方法でデータ シーケンスのクエリ、探索、および変換を行うことができます。

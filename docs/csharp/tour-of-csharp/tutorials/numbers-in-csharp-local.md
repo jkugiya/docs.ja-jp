@@ -2,12 +2,12 @@
 title: C# における数値 - C# の概要に関するチュートリアル
 description: 数値型とその用途、プロパティ、メソッドを詳しく見ていくことで C# について学習します。
 ms.date: 02/05/2021
-ms.openlocfilehash: e4271d5e7811dcfecf00899b7bb9e750211ddc5b
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: d6546fc8ac2609066a4f9b829749a4091fce7ce6
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/23/2021
-ms.locfileid: "104873329"
+ms.locfileid: "104881108"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# で整数と浮動小数点数を操作する
 
@@ -308,7 +308,7 @@ decimal 型を使用した演算では、小数点の右側の桁数がより多
 
 さまざまな数値型を確認したので、次は半径が 2.50 センチメートルの円の面積を計算するコードを記述してみます。 円の面積は、半径の 2 乗 x 円周率です。 ヒント: .NET には <xref:System.Math.PI?displayProperty=nameWithType> という円周率の定数があり、その値を使用できます。 <xref:System.Math.PI?displayProperty=nameWithType> は、`System.Math` 名前空間で宣言されているすべての定数と同様に、`double` 値です。 そのため、この課題では `decimal` 値の代わりに `double` を使用してください。
 
-答えは 19 と 20 の間になるはずです。 [GitHub にある完成版のサンプル コード](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L104-L106)で答えを確認できます。
+答えは 19 と 20 の間になるはずです。 [GitHub にある完成版のサンプル コード](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L9-L11)で答えを確認できます。
 
 お好みで他の数式を試してみてください。
 

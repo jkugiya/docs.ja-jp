@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: 35cc5e74e764148b072438eea994905df778c835
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3ddc83fe0478b2b6bf8db3faf13a1a8edc156aa3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103570"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875565"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -21,7 +21,7 @@ ms.locfileid: "102103570"
 
 **[dotnet テストを使用した .NET Core での単体テスト](../core/testing/unit-testing-with-dotnet-test.md)**
 
-このガイドでは、ASP.NET Core の Web アプリと、関連する単体テストの作成方法について説明します。 最初に単純な Web サービス アプリを作成し、それからテストを追加します。 さらに多くのテストを作成し、新機能実装を指導します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test)は、GitHub の dotnet/samples リポジトリにあります。
+このガイドでは、ASP.NET Core の Web アプリと、関連する単体テストの作成方法について説明します。 最初に単純な Web サービス アプリを作成し、それからテストを追加します。 さらに多くのテストを作成し、新機能実装を指導します。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test)は、GitHub の dotnet/samples リポジトリにあります。
 
 ### <a name="tutorials"></a>チュートリアル
 
@@ -45,45 +45,45 @@ ms.locfileid: "102103570"
 
 **[反復子](../csharp/iterators.md)**
 
-このサンプルは、C# 反復子の作成と使用のための構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/iterators)は、GitHub の dotnet/samples リポジトリにあります。
+このサンプルは、C# 反復子の作成と使用のための構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/iterators)は、GitHub の dotnet/samples リポジトリにあります。
 
 **[インデクサー](../csharp/indexers.md)**
 
-このサンプルは、C# インデクサーの構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/indexers)は、GitHub の dotnet/samples リポジトリにあります。
+このサンプルは、C# インデクサーの構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/indexers)は、GitHub の dotnet/samples リポジトリにあります。
 
 **[デリゲートとイベント](../csharp/delegates-overview.md)**
 
-このサンプルは、C# デリゲートとイベントの構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)は、GitHub の dotnet/samples リポジトリにあります。 イベントに重点を置いた [2 つ目のサンプル](https://github.com/dotnet/samples/tree/master/csharp/events)も、同じリポジトリにあります。
+このサンプルは、C# デリゲートとイベントの構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/delegates-and-events)は、GitHub の dotnet/samples リポジトリにあります。 イベントに重点を置いた [2 つ目のサンプル](https://github.com/dotnet/samples/tree/main/csharp/events)も、同じリポジトリにあります。
 
 **[式ツリー](../csharp/expression-trees.md)**
 
-このサンプルは、式ツリーを使用して解決できる問題の多くを示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)は、GitHub の dotnet/samples リポジトリにあります。
+このサンプルは、式ツリーを使用して解決できる問題の多くを示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/expression-trees)は、GitHub の dotnet/samples リポジトリにあります。
 
 **LINQ のサンプル**
 
-この一連のサンプルは、統合言語クエリ (LINQ) の多くの機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/linq/csharp)は、GitHub の dotnet/samples リポジトリにあります。
+この一連のサンプルは、統合言語クエリ (LINQ) の多くの機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/core/linq/csharp)は、GitHub の dotnet/samples リポジトリにあります。
 
 **マネージド COM サーバーのサンプル**
 
-[COM サーバー](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)のサンプルは、マネージド COM サーバーの作成と、それをグローバルに登録するか、RegFree COM を介して使用する方法を示しています。
+[COM サーバー](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo)のサンプルは、マネージド COM サーバーの作成と、それをグローバルに登録するか、RegFree COM を介して使用する方法を示しています。
 
 **Microsoft Office PIA サンプル**
 
-[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) サンプルは、.NET Core の [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) の使用を示しています。
+[ExcelDemo](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo) サンプルは、.NET Core の [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) の使用を示しています。
 
 ### <a name="tutorials"></a>チュートリアル
 
 **[コンソール アプリケーション](../csharp/tutorials/console-teleprompter.md)**
 
-このチュートリアルでは、コンソール I/O、コンソール アプリの構造、タスクベースの非同期プログラミング モデルの基礎について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、コンソール I/O、コンソール アプリの構造、タスクベースの非同期プログラミング モデルの基礎について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-teleprompter)は、GitHub の dotnet/samples リポジトリにあります。
 
 **[REST クライアント](../csharp/tutorials/console-webapiclient.md)**
 
-このチュートリアルでは、Web 通信、JSON シリアル化、C# 言語でのオブジェクト指向の機能について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、Web 通信、JSON シリアル化、C# 言語でのオブジェクト指向の機能について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)は、GitHub の dotnet/samples リポジトリにあります。
 
 **[LINQ の使用](../csharp/tutorials/working-with-linq.md)**
 
-このチュートリアルでは、LINQ の多くの機能と、それをサポートする言語要素について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、LINQ の多くの機能と、それをサポートする言語要素について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-linq)は、GitHub の dotnet/samples リポジトリにあります。
 
 **[チュートリアル: Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-mac.md)**
 
@@ -95,7 +95,7 @@ ms.locfileid: "102103570"
 
 **[プラグインをサポートする .NET Core アプリケーションの作成](../core/tutorials/creating-app-with-plugin-support.md)**
 
-このチュートリアルでは、プラグイン アーキテクチャをサポートする単純なアプリケーションを .NET Core で構築する方法を示します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、プラグイン アーキテクチャをサポートする単純なアプリケーションを .NET Core で構築する方法を示します。 [完全なサンプル](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin)は、GitHub の dotnet/samples リポジトリにあります。
 
 ## <a name="deploy-to-containers"></a>コンテナーをデプロイする
 
@@ -109,7 +109,7 @@ ms.locfileid: "102103570"
 
 1. 次の手順のいずれかを実行して、サンプル コードを含むリポジトリをダウンロードします。
    * リポジトリの ZIP ファイルをローカル システムにダウンロードします。 圧縮アーカイブを解凍します。
-   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
+   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/dotnet/AspNetCore.Docs/blob/main/CONTRIBUTING.md)」をご覧ください。
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。

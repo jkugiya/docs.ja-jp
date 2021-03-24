@@ -2,12 +2,12 @@
 title: アプリケーションの発行
 description: .NET アプリケーションを発行する方法について説明します。 .NET では、プラットフォーム固有の、またはクロスプラットフォームのアプリを発行できます。 アプリは、自己完結型として、またはフレームワーク依存として発行できます。 各モードは、お客様のアプリをユーザーが実行する方法に影響を与えます。
 ms.date: 02/05/2021
-ms.openlocfilehash: 3f10aae139626bd2b09f71b32eaf2d680890e100
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca0fa4ff5e17a3fa4c636604ae81b63ffbbc99f6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99699780"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874291"
 ---
 # <a name="net-application-publishing-overview"></a>.NET アプリケーションの発行の概要
 
@@ -129,7 +129,7 @@ dotnet publish -r linux-x64 --self-contained false
 アプリには .NET ランタイムとアプリのすべての依存関係が含まれているため、必要とされるダウンロード サイズとハード ドライブの容量は[フレームワーク依存](#publish-framework-dependent)のバージョンよりも大きくなります。
 
   > [!TIP]
-  > .NET の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 これにより、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のようなすべてのカルチャがアプリによって処理されるようになります。
+  > .NET の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 これにより、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のようなすべてのカルチャがアプリによって処理されるようになります。
 
   > [!TIP]
   > デプロイのサイズをさらに縮小することができる[プレビュー Trim 機能](trim-self-contained.md)があります。

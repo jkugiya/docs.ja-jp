@@ -3,12 +3,12 @@ description: '詳細情報: Authenticode (アンマネージ API リファレン
 title: Authenticode (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: d7a1684fde900bfc01161193d0747b156c6856a8
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0a4a9b4ba3cc9a5818896508c80bc31073f514e7
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99772836"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027845"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (アンマネージ API リファレンス)
 
@@ -42,6 +42,10 @@ Authenticode XrML ライセンスの作成および検証モジュールをサ�
   
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体](axl-authenticode-timestamper-info-structure.md)  
  Authenticode のタイム スタンパー情報を定義します。  
+
+## <a name="requirements"></a>必要条件
+
+**ライブラリ**: clr.dll
   
 ## <a name="see-also"></a>関連項目
 

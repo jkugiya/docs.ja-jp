@@ -1,15 +1,15 @@
 ---
 title: Docker を使用してアプリをコンテナー化するチュートリアル
 description: このチュートリアルでは、Docker を使って .NET Core アプリケーションをコンテナー化する方法を学習します。
-ms.date: 04/27/2020
+ms.date: 03/22/2021
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c92f5823f56f74941afdd28638d30e759b2c51c9
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0a64743046d31badb10b5240a172b6e47c76d3cc
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99740757"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027893"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>チュートリアル: NET Core アプリのコンテナー化
 
@@ -239,6 +239,13 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 `WORKDIR` コマンドでは、コンテナー内の **現在のディレクトリ** が、"*App*" に変更されます。
 
 次のコマンド `ENTRYPOINT` は、実行可能ファイルとして実行するためにコンテナーを構成するよう Docker に指示します。 コンテナーの起動時に、`ENTRYPOINT` コマンドが実行されます。 このコマンドが終了すると、コンテナーは自動的に停止します。
+
+> [!TIP]
+> セキュリティを強化するために、診断パイプラインをオプトアウトすることができます。 この機能をオプトアウトすると、コンテナーは読み取り専用として実行されます。 これを行うには、`0` (`ENTRYPOINT` 手順の直前に) として `COMPlus_EnableDiagnostics` 環境変数を指定します。
+>
+> ```dockerfile
+> ENV COMPlus_EnableDiagnostics=0
+> ```
 
 端末から `docker build -t counter-image -f Dockerfile .` を実行し、そのコマンドが終了したら `docker images` を実行します。
 

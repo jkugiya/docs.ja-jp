@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: ce3724271663163f26a34b6710b28503f7b0c52e
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: df329d121009e519d2e9efd77dc4d2fbc37d198e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259929"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654012"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (マニフェストの生成および編集ツール)
 
@@ -19,7 +19,7 @@ ms.locfileid: "102259929"
 
 *Mage.exe* の代わりに、グラフィカルなアプリケーションである *MageUI.exe* を使用することもできます。 詳細については、「 [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)」を参照してください。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 Visual Studio には、2 つのバージョンの *Mage.exe* および *MageUI.exe* が含まれています。 バージョン情報を確認するには、*MageUI.exe* を実行し、 **[ヘルプ]** をクリックして、 **[バージョン情報]** をクリックします。 このドキュメントでは、バージョン 4.0.x.x の *Mage.exe* および *MageUI.exe* について説明します。
 

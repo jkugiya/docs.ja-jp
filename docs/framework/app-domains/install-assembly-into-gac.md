@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 581736d27d8b90430838fc78aa192a3efa21cbb5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0034c6d7a7184e8fc3a6384c829f6bf13aad6cdd
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258300"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653466"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>方法: アセンブリをグローバル アセンブリ キャッシュにインストールする
 
@@ -46,7 +46,7 @@ gacutil -i <assembly name>
 
 このコマンドで *\<assembly name>* は、グローバル アセンブリ キャッシュにインストールされるアセンブリの名前です。
 
-*gacutil.exe* がシステム パスにない場合は、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+システム パスに *gacutil.exe* がない場合は、[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 ファイル名 *hello.dll* のアセンブリをグローバル アセンブリ キャッシュにインストールする例を次に示します。
 

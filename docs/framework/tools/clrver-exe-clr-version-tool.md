@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: 8205b92f3997f6abacc566e2e6f2b37604fbda07
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0787cdf09d55a8464db7f5495b5aeed52c22f5d4
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255250"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654181"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR バージョン ツール)
 
 CLR バージョン ツール (Clrver.exe) は、コンピューターにインストールされている共通言語ランタイム (CLR: Common Language Runtime) のすべてのバージョンを報告します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。  
   
  コマンド プロンプトで、次のコマンドを入力します:  
   

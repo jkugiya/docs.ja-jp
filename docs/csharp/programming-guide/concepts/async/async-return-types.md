@@ -3,12 +3,12 @@ title: 非同期の戻り値の型 (C#)
 description: 各型およびその他のリソースのコード例と共に非同期メソッドが C# で持つことのできる戻り値の型について説明します。
 ms.date: 08/19/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 71e560ed8ee0cae14da396e5ea2f3ab29611ebab
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 53eb3bedebb99cd829101eee4c2e190c0fb952bf
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811497"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653453"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 
@@ -38,12 +38,7 @@ ms.locfileid: "88811497"
 
 :::code language="csharp" source="snippets/async-return-types/async-returns2.cs" id="TaskReturn":::
 
-`WaitAndApologizeAsync` を待機するには、void を返す同期メソッドを呼び出す場合と同様に、await 式でなく、await ステートメントを使用します。 この場合、await 演算子の適用によって値は生成されません。 ステートメントと式という用語を明確にするには、次の表を参照してください。
-
-| await の種類 | 例                                      | Type                                   |
-|------------|----------------------------------------------|----------------------------------------|
-| ステートメント  | `await SomeTaskMethodAsync()`                | <xref:System.Threading.Tasks.Task>     |
-| Expression | `T result = await SomeTaskMethodAsync<T>();` | <xref:System.Threading.Tasks.Task%601> |
+`WaitAndApologizeAsync` を待機するには、void を返す同期メソッドを呼び出す場合と同様に、await 式でなく、await ステートメントを使用します。 この場合、await 演算子の適用によって値は生成されません。 `await` の右オペランドが <xref:System.Threading.Tasks.Task%601> の場合、`await` 式によって、`T` の結果が生成されます。 `await` の右オペランドが、<xref:System.Threading.Tasks.Task> の場合、`await` とそのオペランドはステートメントです。
 
 次のコードを見るとわかるように、`WaitAndApologizeAsync` の呼び出しを await 演算子の適用から分離することができます。 ただし `Task` は `Result` プロパティを持たないこと、また await 演算子が `Task` に適用されるときに値は生成されないことに注意します。
 
@@ -84,17 +79,19 @@ void を返す非同期メソッドの呼び出し元は、メソッドからス
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>一般化された async の戻り値の型と ValueTask\<TResult\>
 
-C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` メソッドを持つ任意の型を返すことができます。
+C# 7.0 以降、非同期メソッドでは、*awaiter 型* のインスタンスを返すアクセス可能な `GetAwaiter` メソッドがある任意の型を返すことができます。 さらに、`GetAwaiter` メソッドから返される型には <xref:System.Runtime.CompilerServices.AsyncMethodBuilderAttribute?displayProperty=nameWithType> 属性が必要です。 詳細については、[task に似た戻り値の型](../../../../../_csharplang/proposals/csharp-7.0/task-types.md)の機能仕様を参照してください。
 
-<xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> は参照型であるため、特に厳密なループ処理で割り当てが発生すると、パフォーマンスが重要なパスのメモリ割り当てが、パフォーマンスに悪影響を及ぼすことがあります。 一般化された戻り値の型のサポートにより、参照型ではなく、軽量な値の型を返すことができ、追加のメモリ割り当てを回避することが可能です。
+この機能は、`await` のオペランドの要件を記述する[待機可能な式](../../../../../_csharplang/spec/expressions.md#awaitable-expressions)を補完するものです。 一般化された非同期の戻り値の型により、コンパイラではさまざまな型を返す `async` メソッドを生成できます。 一般化された非同期の戻り値の型により、.NET ライブラリのパフォーマンスの向上が可能になりました。 <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> は参照型であるため、特に厳密なループ処理で割り当てが発生すると、パフォーマンスが重要なパスのメモリ割り当てが、パフォーマンスに悪影響を及ぼすことがあります。 一般化された戻り値の型のサポートにより、参照型ではなく、軽量な値の型を返すことができ、追加のメモリ割り当てを回避することが可能です。
 
 .NET には、一般化されたタスク戻り値の軽量な実装として、<xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 構造が用意されています。 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 型を使用するには、`System.Threading.Tasks.Extensions` NuGet パッケージをプロジェクトに追加する必要があります。 次の例では、<xref:System.Threading.Tasks.ValueTask%601> 構造を使用して、2 つのさいころを転がしたときの値を取得します。
 
 :::code language="csharp" source="snippets/async-return-types/async-valuetask.cs":::
 
+一般化された非同期の戻り値の型を記述することは高度なシナリオであり、きわめて特殊な環境での使用を対象としています。 代わりに、非同期コードのほとんどのシナリオに対応する `Task`、`Task<T>`、`ValueTask<T>` 型の使用を検討してください。
+
 ## <a name="async-streams-with-iasyncenumerablet"></a>IAsyncEnumerable\<T\> を使用する非同期ストリーム
 
-C# 8.0 以降は、非同期メソッドから <xref:System.Collections.Generic.IAsyncEnumerable%601> で表される*非同期ストリーム*が返される場合があります。 非同期ストリームを使用すると、非同期呼び出しが繰り返される要素がチャンクで生成されるときに、ストリームから読み取られた項目を列挙できます。 次の例は、非同期ストリームを生成する非同期メソッドを示しています。
+C# 8.0 以降は、非同期メソッドから <xref:System.Collections.Generic.IAsyncEnumerable%601> で表される *非同期ストリーム* が返される場合があります。 非同期ストリームを使用すると、非同期呼び出しが繰り返される要素がチャンクで生成されるときに、ストリームから読み取られた項目を列挙できます。 次の例は、非同期ストリームを生成する非同期メソッドを示しています。
 
 :::code language="csharp" source="snippets/async-return-types/AsyncStreams.cs" id="GenerateAsyncStream":::
 

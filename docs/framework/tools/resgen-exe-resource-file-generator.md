@@ -16,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 61ae4503876718e63993af5a180dead34540afde
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: f1ed2fd327511b84ea2751e82c23bf02e283324d
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259112"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653869"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
 
@@ -55,7 +55,7 @@ resgen /?
   
  Resgen.exe を使用してバイナリ .resources ファイルを生成する場合は、言語コンパイラを使用して実行可能アセンブリにバイナリ ファイルを埋め込むか、[アセンブリ リンカー (Al.exe)](al-exe-assembly-linker.md) を使用してサテライト アセンブリにコンパイルできます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。  
   
  コマンド プロンプトに次のように入力します。  
   

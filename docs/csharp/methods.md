@@ -2,14 +2,14 @@
 title: メソッド - C# ガイド
 description: メソッド、メソッド パラメーター、メソッド戻り値の概要
 ms.technology: csharp-fundamentals
-ms.date: 05/21/2018
+ms.date: 03/16/2021
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5d7f654ca268deff4a0c8e69b76e4d636d2f495e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031677"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652933"
 ---
 # <a name="methods-in-c"></a>(C#) のメソッド
 
@@ -246,7 +246,7 @@ Console.WriteLine($"{person.FName} {person.LName}: age = {person.Age}");
 > [!NOTE]
 > 非同期メソッドは、まだ完了していない待機中の最初のオブジェクトに達するか、または非同期メソッドの最後に達すると、呼び出し元に戻ります。
 
-非同期メソッドの戻り値の型としては、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、`void` を指定できます。 戻り値の型 `void` は主として、戻り値の型 `void` が必要なイベント ハンドラーの定義に使用されます。 `void` を返す非同期メソッドは待機できません。void を返すメソッドの呼び出し元は、このメソッドがスローする例外をキャッチできません。 C# 7.0 以降、非同期メソッドは[タスクと同様の戻り値の型](./whats-new/csharp-7.md#generalized-async-return-types)を持つことができます。
+非同期メソッドの戻り値の型は一般に、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、<xref:System.Collections.Generic.IAsyncEnumerable%601>、または `void` になります。 戻り値の型 `void` は主として、戻り値の型 `void` が必要なイベント ハンドラーの定義に使用されます。 `void` を返す非同期メソッドは待機できません。void を返すメソッドの呼び出し元は、このメソッドがスローする例外をキャッチできません。 C# 7.0 以降、非同期メソッドは[タスクと同様の戻り値の型](./whats-new/csharp-7.md#generalized-async-return-types)を持つことができます。
 
 次の例では、`DelayAsync` は、整数を返す return ステートメントのある非同期メソッドです。 非同期メソッドであるため、そのメソッド宣言で戻り値の型 `Task<int>` を指定する必要があります。 戻り値の型が `Task<int>`であるため、次のステートメント `int result = await delayTask` に示すように、`DoSomethingAsync` 内の `await` 式を評価すると整数が生成されます。
 

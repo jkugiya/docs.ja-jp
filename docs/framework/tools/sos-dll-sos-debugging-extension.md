@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-ms.openlocfilehash: 6a145b7de157269cc83ff1375386cff7f2fb30a1
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 33f75003e18abce95778ddea8e3163211e3bfa5c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258830"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653635"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS デバッガー拡張)
 

@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド'
+description: '詳細情報: ICorProfilerInfo9::GetNativeCodeStartAddresses メソッド'
 title: ICorProfilerInfo9::GetNativeCodeStartAddresses
 ms.date: 08/06/2019
 dev_langs:
@@ -12,16 +12,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1ca686cef4a45ebb9e05190fa790ed5300c0d816
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.openlocfilehash: 062aebf6d5bed208ea71b215bd9f857b82483673
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646492"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759048"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses メソッド
 
-指定された functionId と rejitId は、現在存在する、このコードのすべての just-in-time バージョンのネイティブコードの開始アドレスを列挙します。
+functionId と rejitId を指定すると、現在存在するこのコードのすべての just-in-time バージョンのネイティブ コード開始アドレスが列挙されます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,39 +35,29 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 ## <a name="parameters"></a>パラメーター
 
-- `functionId`
+`functionId` [in] ネイティブコード開始アドレスを返す必要がある関数の ID。
 
-  \[in] ネイティブコードの開始アドレスを返す関数の ID。
+`reJitId` [in] JIT 再コンパイルされた関数のID。
 
-- `reJitId`
+`cCodeStartAddresses` [in] `codeStartAddresses` 配列の最大サイズ。
 
-  \[in) JIT 再コンパイルされた関数の id。
+`pcCodeStartAddresses` [out] 使用可能なアドレスの数。
 
-- `cCodeStartAddresses`
-
-  \[in] 配列の最大サイズ `codeStartAddresses` 。
-
-- `pcCodeStartAddresses`
-
-  \[out] 使用可能なアドレスの数。
-
-- `codeStartAddresses`
-
-  \[out] の配列 `UINT_PTR` 。各は、指定された関数のネイティブ本体の開始アドレスです。
+`codeStartAddresses` [out] `UINT_PTR` の配列。それぞれが指定された関数のネイティブ本体の開始アドレスです。
 
 ## <a name="remarks"></a>解説
 
-階層化コンパイルが有効になっている場合、関数は複数のネイティブコード本体を持つことができます。
+階層化コンパイルが有効にされている場合、関数には複数のネイティブ コード本体を指定できます。
 
 ## <a name="requirements"></a>要件
 
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
+**プラットフォーム:** [.NET Core がサポートされているオペレーティング システム](../../../core/install/windows.md?pivots=os-windows)に関するページを参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET のバージョン:** [!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

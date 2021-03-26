@@ -11,18 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: b51b01e639719df7ecfde53819e3137813f7c46f
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ba8b4cd7f398eee9129d24d25d8fdb754c89a3ee
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259247"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653297"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify ツール)
 
 PEVerify ツールは、Microsoft Intermediate Language (MSIL) を生成する開発者 (コンパイラの作成者やスクリプト エンジンの開発者など) が、生成する MSIL コードと関連メタデータがタイプ セーフ要件を満たしているかどうかを確認する場合に役立ちます。 一部のコンパイラでは、特定の言語構成を使用しなかった場合にだけ、検査可能でタイプ セーフなコードが生成されます。 このようなコンパイラを使用している場合、コードのタイプ セーフ性が損なわれていないかを確認することが推奨されます。 ファイルに対して PEVerify ツールを実行し、MSIL とメタデータを検査できます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
   
 ## <a name="syntax"></a>構文  
   

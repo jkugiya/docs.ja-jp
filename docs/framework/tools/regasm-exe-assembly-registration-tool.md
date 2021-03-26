@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 14dbaf0e100204718e78292b038bf016b5607bc8
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 81d835d280a3a55efc7644b2a081d033afe73349
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259191"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653323"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (アセンブリ登録ツール)
 
 アセンブリ登録ツールは、1 つのアセンブリに含まれるメタデータを読み込み、必要なエントリをレジストリに追加します。これにより、COM クライアントによって .NET Framework クラスが自動的に作成されます。 クラスが登録されると、どの COM クライアントでも、そのクラスを COM クラスであるかのように使用できます。 クラスの登録は、アセンブリのインストール時に 1 回だけ行われます。 実際に登録されるまでは、アセンブリに含まれるクラスのインスタンスを COM から作成することはできません。
 
-ツールを実行するには、[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 コマンド プロンプトに次のように入力します。
 

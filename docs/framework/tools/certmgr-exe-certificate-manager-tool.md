@@ -14,23 +14,21 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: a5666645c674bbbe77b988fc7a1ff0db935920aa
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: eba8253a52f9dc533848fc7cbb76566c726495a2
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258235"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654194"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
   
- 証明書マネージャーは Visual Studio と共に自動的にインストールされます。 ツールを起動するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
+ 証明書マネージャーは Visual Studio と共に自動的にインストールされます。 ツールを起動するには、[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。  
   
 > [!NOTE]
-> 証明書マネージャー ツール (Certmgr.exe) はコマンド ライン ユーティリティですが、証明書 (Certmgr.msc) は Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインです。 通常、Certmgr.msc は Windows のシステム ディレクトリにあるので、コマンド ラインで「`certmgr`」と入力すると、Visual Studio 用開発者コマンド プロンプトを開いていた場合でも証明書 MMC スナップインが読み込まれることがあります。 これは、PATH 環境変数で、スナップインのパスが証明書マネージャー ツールのパスよりも前に指定されているためです。 この問題が発生した場合は、実行可能ファイルのパスを指定して Certmgr.exe コマンドを実行できます。  
-  
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
+> 証明書マネージャー ツール (Certmgr.exe) はコマンド ライン ユーティリティですが、証明書 (Certmgr.msc) は Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインです。 通常、Certmgr.msc は Windows のシステム ディレクトリにあるので、コマンド ラインで「`certmgr`」と入力すると、Visual Studio 用開発者コマンド プロンプトを開いていた場合でも証明書 MMC スナップインが読み込まれることがあります。 これは、PATH 環境変数で、スナップインのパスが証明書マネージャー ツールのパスよりも前に指定されているためです。 この問題が発生した場合は、実行可能ファイルのパスを指定して Certmgr.exe コマンドを実行できます。
   
  X.509 証明書の概要については、「[証明書の使用](../wcf/feature-details/working-with-certificates.md)」を参照してください。  
   

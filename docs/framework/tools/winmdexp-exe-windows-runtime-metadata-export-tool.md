@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 450ecf041d2be0ccc9f8b5ab4f1cb848bb4705c2
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477538"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652881"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 
@@ -19,7 +19,7 @@ Windows ランタイム メタデータ エクスポート ツール (Winmdexp.e
   
  Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア** にある **Windows ランタイム コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 Windows ランタイム コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
   
  コマンド プロンプトに次のように入力します。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ca985d808da4f048376774f413cb779b967f3c2c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259048"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653778"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 
@@ -27,7 +27,7 @@ ms.locfileid: "102259048"
 
  厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」 と「[方法: 厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)」 を参照してください。  
   
- 厳密名ツールは Visual Studio と共に自動的にインストールされます。 ツールを起動するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。  
+ 厳密名ツールは Visual Studio と共に自動的にインストールされます。 ツールを起動するには、[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。  
 
 > [!NOTE]
 > 64 ビット コンピューターでは、Visual Studio 用開発者コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: d9c028507c19ef8599e58b38dcdf15af2ede1dee
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 6d6482edd3b8c78ad230cfc34ed84bd5db712fde
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259279"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654155"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)
 
@@ -24,7 +24,7 @@ ms.locfileid: "102259279"
 > [!IMPORTANT]
 > fuslogvw.exe は、管理者特権で実行する必要があります。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、管理者の資格情報を使用して[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、管理者資格情報で、[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 コマンド プロンプトで、次のコマンドを入力します:
 

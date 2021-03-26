@@ -2,12 +2,12 @@
 title: C# の予約済み属性:Null 許容のスタティック分析
 ms.date: 02/02/2021
 description: これらの属性は、null 許容および null 非許容参照型に対するより適切な静的分析を提供するために、コンパイラによって解釈されます。
-ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 50fb987ed5c8200e5418d2ea0211b32626538176
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432570"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652686"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>予約済み属性はコンパイラの null 状態の静的分析に寄与する
 
@@ -36,12 +36,12 @@ bool TryGetMessage(string key, out string message)
 
 API の規則は、`TryGetValue` API シナリオで見たとおり、より複雑になる可能性があります。 多くの API には、変数を `null` にできる場合やできない場合のより複雑な規則があります。 このような場合は、次の属性のいずれかを使用して、これらの規則を表します。
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute):null 非許容の入力引数は null にすることができます。
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute):null 許容の入力引数を null にすることはできません。
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null 非許容の引数は null にすることができます。
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 許容引数は null にすることはできません。
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute):null 非許容の戻り値は null である可能性があります。
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute):null 許容の戻り値が null になることはありません。
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 非許容の入力引数は null である可能性があります。
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 許容の入力引数は null にはなりません。
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): メソッドから指定された `bool` 値が返された場合、null 非許容の引数は null である可能性があります。
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): メソッドから指定された `bool` 値が返された場合、null 許容引数は null にはなりません。
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの引数が null でない場合、戻り値は null ではありません。
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute):メソッドから制御が返されることはありません。 つまり、常に例外がスローされます。
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute):関連付けられた `bool` パラメーターに指定された値がある場合、このメソッドから制御が返されることはありません。
@@ -77,16 +77,16 @@ public string ScreenName
 private string _screenName = GenerateRandomScreenName();
 ```
 
-これと、この記事で説明されている他の属性を使用するには、<xref:System.Diagnostics.CodeAnalysis> の `using` ディレクティブを追加する必要がある場合があります。 属性は、`set` アクセサーではなく、プロパティに適用されます。 `AllowNull` 属性では "*事前条件*" を指定し、入力にのみ適用されます。 `get` アクセサーには戻り値がありますが、入力引数はありません。 したがって、`AllowNull` 属性は `set` アクセサーにのみ適用されます。
+これと、この記事で説明されている他の属性を使用するには、<xref:System.Diagnostics.CodeAnalysis> の `using` ディレクティブを追加する必要がある場合があります。 属性は、`set` アクセサーではなく、プロパティに適用されます。 `AllowNull` 属性では *事前条件* を指定し、引数にのみ適用されます。 `get` アクセサーには戻り値がありますが、パラメーターはありません。 したがって、`AllowNull` 属性は `set` アクセサーにのみ適用されます。
 
 前の例では、引数に `AllowNull` 属性を追加する場合の検索方法が示されています。
 
 1. その変数の一般的なコントラクトは、`null` にできないため、null 非許容参照型が必要であるというものです。
-1. 入力変数を `null` にするシナリオはありますが、それらは最も一般的な使用方法ではありません。
+1. パラメーターを `null` にするシナリオはありますが、それらは最も一般的な使用方法ではありません。
 
 ほとんどの場合、プロパティ、または `in`、`out`、および `ref` 引数にこの属性が必要になります。 `AllowNull` 属性は、通常は変数が null 以外だが、`null` を事前条件として許可する必要がある場合に最適です。
 
-`DisallowNull` を使用するシナリオと比較してください。この属性を使用して、null 許容参照型の入力変数を `null` にできないことを指定します。 `null` は既定値であるが、クライアントでは null 以外の値にしか設定できないというプロパティについて考えてみます。 次のコードがあるとします。
+`DisallowNull` を使用するシナリオと比較してください。この属性を使用して、null 許容参照型の引数を `null` にできないことを指定します。 `null` は既定値であるが、クライアントでは null 以外の値にしか設定できないというプロパティについて考えてみます。 次のコードがあるとします。
 
 ```csharp
 public string ReviewComment
@@ -118,8 +118,8 @@ null 許容コンテキストでは、`ReviewComment` `get` アクセサーか�
 
 `AllowNull` および `DisallowNull` 属性を使用すると、変数の事前条件が、これらの変数の null 許容注釈と一致しない可能性があることを指定できます。 これにより、API の特性の詳細が提供されます。 この追加情報は、呼び出し元で API を正しく使用するのに役立ちます。 次の属性を使用して、事前条件を指定することを忘れないでください。
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute):null 非許容の入力引数を null にすることができます。
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute):null 許容の入力引数を null にすることはできません。
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null 非許容の引数は null にすることができます。
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 許容引数は null にすることはできません。
 
 ## <a name="specify-post-conditions-maybenull-and-notnull"></a>事後条件を指定する: `MaybeNull` と `NotNull`
 
@@ -146,7 +146,7 @@ public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 
 前のコードでは、コントラクトは null 非許容型を意味するが、戻り値は実際には null である "*可能性がある*" ことを呼び出し元に通知します。  API は null 非許容型で、通常はジェネリック型パラメーターである必要はあるが、`null` が返されるインスタンスが存在する可能性がある場合は、`MaybeNull` 属性を使用します。
 
-型が null 許容参照型である場合でも、戻り値あるいは `out` または `ref` 引数が null でないことを指定することもできます。 配列が、多数の要素を保持するのに十分な大きさであることを保証するメソッドについて考えてみます。 入力引数に容量がない場合、ルーチンで新しい配列を割り当てて、そこに既存のすべての要素をコピーします。 入力引数が `null` である場合は、ルーチンで新しいストレージを割り当てます。 十分な容量がある場合、ルーチンでは何も行いません。
+型が null 許容参照型である場合でも、戻り値あるいは `out` または `ref` 引数が null でないことを指定することもできます。 配列が、多数の要素を保持するのに十分な大きさであることを保証するメソッドについて考えてみます。 引数に容量がない場合、ルーチンで新しい配列を割り当てて、そこに既存のすべての要素をコピーします。 引数が `null` である場合は、ルーチンで新しいストレージを割り当てます。 十分な容量がある場合、ルーチンでは何も行いません。
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
@@ -182,7 +182,7 @@ public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
-これにより、戻り値が `false` であるコードでは、null チェックを行う必要がないことがコンパイラに通知されます。 属性を追加すると、`IsNullOrEmpty` で必要な null チェックが実行されることがコンパイラの静的分析に通知されます。`false` が返された場合、入力引数は `null` ではありません。
+これにより、戻り値が `false` であるコードでは、null チェックを行う必要がないことがコンパイラに通知されます。 属性を追加すると、`IsNullOrEmpty` で必要な null チェックが実行されることがコンパイラの静的分析に通知されます。`false` が返された場合、引数は `null` ではありません。
 
 ```csharp
 string? userInput = GetUserInput();
@@ -211,19 +211,19 @@ bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 
 前述の例では、`TryGetMessage` から `true` が返された場合、`message` の値は null ではないと認識されます。 同じように、コードベースで同様のメソッドに注釈を付ける必要があります。引数は `null` である可能性があり、メソッドから `true` が返された場合は null ではないと認識されます。
 
-最後にもう 1 つ属性があります。これも必要になる可能性があります。 戻り値の null 状態は、1 つまたは複数の入力引数の null 状態に依存する場合があります。 特定の入力引数が `null` でない場合は常に、これらのメソッドから null 以外の値が返されます。 これらのメソッドに正しく注釈を付けるには、`NotNullIfNotNull` 属性を使用します。 次のメソッドがあるとします。
+最後にもう 1 つ属性があります。これも必要になる可能性があります。 戻り値の null 状態は、1 つまたは複数の引数の null 状態に依存する場合があります。 特定の引数が `null` でない場合は常に、これらのメソッドから null 以外の値が返されます。 これらのメソッドに正しく注釈を付けるには、`NotNullIfNotNull` 属性を使用します。 次のメソッドがあるとします。
 
 ```csharp
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-`url` 引数が null でない場合、出力は `null` ではありません。 null 許容参照を有効にすると、API で null 入力が受け入れられることがない場合、そのシグネチャは正常に機能します。 しかし、入力が null である可能性がある場合は、戻り値も null である可能性があります。 シグネチャを次のコードに変更できます。
+`url` 引数が null でない場合、出力は `null` ではありません。 null 許容参照を有効にすると、API で null 引数が受け入れられることがない場合、そのシグネチャは正常に機能します。 しかし、引数が null である可能性がある場合は、戻り値も null である可能性があります。 シグネチャを次のコードに変更できます。
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-これも機能しますが、多くの場合、呼び出し元での追加の `null` チェックの実装が強制されます。 コントラクトは、入力引数 `url` が `null` である場合にのみ、戻り値が `null` になるというものです。 このコントラクトを表すには、次のコードに示すように、このメソッドに注釈を付けます。
+これも機能しますが、多くの場合、呼び出し元での追加の `null` チェックの実装が強制されます。 コントラクトは、引数 `url` が `null` である場合にのみ、戻り値が `null` になるというものです。 このコントラクトを表すには、次のコードに示すように、このメソッドに注釈を付けます。
 
 ```csharp
 [return: NotNullIfNotNull("url")]
@@ -234,9 +234,9 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 
 条件付きの事後条件は、これらの属性を使用して指定します。
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 非許容の入力引数は null である可能性があります。
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 許容の入力引数は null にはなりません。
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの入力引数が null でない場合、戻り値は null ではありません。
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): メソッドから指定された `bool` 値が返された場合、null 非許容の引数は null である可能性があります。
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): メソッドから指定された `bool` 値が返された場合、null 許容引数は null にはなりません。
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの引数が null でない場合、戻り値は null ではありません。
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>コンストラクターのヘルパー メソッド: `MemberNotNull` と `MemberNotNullWhen`
 
@@ -299,14 +299,14 @@ public void SetState(object containedField)
 
 null 許容参照型を追加すると、`null` である可能性のある変数に関する API の予測を記述するための、最初のボキャブラリが提供されます。 属性には、変数の null 状態を事前条件および事後条件として記述するために、より豊富なボキャブラリが用意されています。 これらの属性では、予測をより明確に記述し、API を使用して開発者により優れたエクスペリエンスを提供します。
 
-null 許容コンテキストのライブラリを更新する際には、API のユーザーに正しい使用方法を示すために、これらの属性を追加します。 これらの属性は、入力引数と戻り値の null 状態を完全に記述するのに役立ちます。
+null 許容コンテキストのライブラリを更新する際には、API のユーザーに正しい使用方法を示すために、これらの属性を追加します。 これらの属性は、引数と戻り値の null 状態を完全に記述するのに役立ちます。
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute):null 非許容の入力引数を null にすることができます。
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute):null 許容の入力引数を null にすることはできません。
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null 非許容の引数は null にすることができます。
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 許容引数は null にすることはできません。
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute):null 非許容の戻り値は null である可能性があります。
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute):null 許容の戻り値が null になることはありません。
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 非許容の入力引数は null である可能性があります。
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 許容の入力引数は null にはなりません。
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの入力引数が null でない場合、戻り値は null ではありません。
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): メソッドから指定された `bool` 値が返された場合、null 非許容の引数は null である可能性があります。
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): メソッドから指定された `bool` 値が返された場合、null 許容引数は null にはなりません。
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの引数が null でない場合、戻り値は null ではありません。
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute):メソッドから制御が返されることはありません。 つまり、常に例外がスローされます。
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute):関連付けられた `bool` パラメーターに指定された値がある場合、このメソッドから制御が返されることはありません。

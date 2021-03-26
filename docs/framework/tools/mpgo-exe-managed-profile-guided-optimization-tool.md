@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0336c3a98fb93a3b3d3689048e5c313b811630d9
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259383"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653908"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -24,7 +24,7 @@ ms.locfileid: "102259383"
 
 中間言語 (IL) アセンブリの起動時間および作業セット サイズでパフォーマンスの問題が見つかった場合、Just-In-Time (JIT) コンパイルのコストを回避し、コード共有を容易にするために、最初に Ngen.exe を使用することをお勧めします。 さらなる向上が必要な場合は、アプリケーションを最適化するために Mpgo.exe を使用できます。 パフォーマンスの向上を評価するためのベースラインとして、最適化されていないネイティブ イメージ アセンブリからのパフォーマンス データを使用できます。 Mpgo.exe を使用することにより、コールド スタートの時間を短縮し、作業セットのサイズを縮小できます。 Mpgo.exe は、最適化されたネイティブ イメージ アセンブリを作成するために Ngen.exe で使用される IL アセンブリに情報を追加します。 詳しくは、.NET ブログ エントリの「[Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)」 (デスクトップ アプリケーションの起動時のパフォーマンスの向上) をご覧ください。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、管理者の資格情報を使用して[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者資格情報で [開発者コマンド プロンプトまたは Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 コマンド プロンプトに次のコマンドを入力します。
 

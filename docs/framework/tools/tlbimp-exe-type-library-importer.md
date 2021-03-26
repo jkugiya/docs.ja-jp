@@ -11,18 +11,18 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: fa835b95d0dab1c5139fe9b1dfbf81d1c4400a82
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: b9b17d916373441f207363a9e8d7fe1aa2181dc3
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258677"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652946"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (タイプ ライブラリ インポーター)
 
 タイプ ライブラリ インポーターは、COM タイプ ライブラリにある型定義を共通言語ランタイム アセンブリで等価な定義に変換します。 Tlbimp.exe の出力は、元のタイプ ライブラリで定義された型のランタイム メタデータを格納するバイナリ ファイル (アセンブリ) です。 このファイルは [ildasm.exe](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
   
  コマンド プロンプトに次のように入力します。  
   

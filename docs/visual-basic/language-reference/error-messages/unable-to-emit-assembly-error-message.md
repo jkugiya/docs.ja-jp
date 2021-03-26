@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: fc3b61c80cfd3b40d802c517cdca4085bc274197
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 2ba476b39b6aa441d8778ee0618dcc3dcf3f7ac8
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259435"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653283"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145:アセンブリを作成できません : \<error message>
 
@@ -37,7 +37,7 @@ Visual Basic コンパイラは、マニフェストを伴うアセンブリを�
 
 2. エラーが発生している COM 参照をプロジェクトから削除します。
 
-3. [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を開きます。
+3. [Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を開きます。
 
 4. アセンブリ ラッパーを格納するディレクトリに、ディレクトリを変更します。
 

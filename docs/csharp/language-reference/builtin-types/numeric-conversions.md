@@ -1,7 +1,7 @@
 ---
 description: C# の組み込みの数値型間での暗黙的および明示的な変換について
 title: 組み込みの数値変換 - C# リファレンス
-ms.date: 10/22/2019
+ms.date: 03/17/2021
 helpviewer_keywords:
 - implicit numeric conversions [C#]
 - explicit numeric conversion [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: ee5def3b5e0e067919a8c8335db701dbb6dd4d88
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5ff0289f5365a7d3d334dd0130b3b0efcdf34c60
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142246"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759691"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>組み込みの数値変換 (C# リファレンス)
 
@@ -26,18 +26,20 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 
 |From|終了|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|
-|[byte](integral-numeric-types.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|
-|[short](integral-numeric-types.md)|`int`、`long`、`float`、`double`、または `decimal`|
-|[ushort](integral-numeric-types.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|
-|[int](integral-numeric-types.md)|`long`、`float`、`double`、または `decimal`|
-|[uint](integral-numeric-types.md)|`long`、`ulong`、`float`、`double`、または `decimal`|
+|[sbyte](integral-numeric-types.md)|`short`、`int`、`long`、`float`、`double`、`decimal`、または `nint`|
+|[byte](integral-numeric-types.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、`decimal`、`nint`、または `nuint`|
+|[short](integral-numeric-types.md)|`int`、`long`、`float`、`double`、または `decimal`、または `nint`|
+|[ushort](integral-numeric-types.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`、`nint`、または `nuint`|
+|[int](integral-numeric-types.md)|`long`、`float`、`double`、または `decimal`、`nint`|
+|[uint](integral-numeric-types.md)|`long`、`ulong`、`float`、`double`、または `decimal`、または `nuint`|
 |[long](integral-numeric-types.md)|`float`、 `double`、または `decimal`|
 |[ulong](integral-numeric-types.md)|`float`、 `double`、または `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
+|[nint](nint-nuint.md)|`long`、`float`、`double`、または `decimal`|
+|[nuint](nint-nuint.md)|`ulong`、`float`、`double`、または `decimal`|
 
 > [!NOTE]
-> `int`、`uint`、`long`、または `ulong` から `float` および `long` または `ulong` から `double` への暗黙的な変換では、精度が失われる可能性がありますが、桁違いの損失は発生しません。 その他の暗黙的な数値変換では、情報が失われることはありません。
+> `int`、`uint`、`long`、`ulong`、`nint`、または `nuint` から `float` へ、および `long`、`ulong`、`nint`、または `nuint` から `double` への暗黙的な変換では、精度が失われる可能性がありますが、桁違いに大きな損失が発生することはありません。 その他の暗黙的な数値変換では、情報が失われることはありません。
 
 次の点にも注意してください。
 
@@ -47,7 +49,7 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 
 - `decimal` 型と `float` 型または `double` 型の間に暗黙的な変換はありません。
 
-- 型 `int` の定数式の値 (整数リテラルで表される値など) は、それが変換先の型の範囲内にある場合、`sbyte`、`byte`、`short`、`ushort`、`uint`、または `ulong` に暗黙的に変換できます。
+- 型 `int` の定数式の値 (整数リテラルで表される値など) は、それが変換先の型の範囲内にある場合、`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、`nint`、または `nuint` に暗黙的に変換できます。
 
   ```csharp
   byte a = 13;
@@ -62,17 +64,19 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 
 |From|終了|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`byte`、`ushort`、`uint`、または `ulong`|
+|[sbyte](integral-numeric-types.md)|`byte`、`ushort`、`uint`、または `ulong`、または `nuint`|
 |[byte](integral-numeric-types.md)|`sbyte`|
-|[short](integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint`、または `ulong`|
+|[short](integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong`、または `nuint`|
 |[ushort](integral-numeric-types.md)|`sbyte`、 `byte`、または `short`|
-|[int](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、または `ulong`|
+|[int](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、または `nuint`|
 |[uint](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、または `int`|
-|[long](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、または `ulong`|
-|[ulong](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、または `long`|
-|[float](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、または `decimal`|
-|[double](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、または `decimal`|
-|[decimal](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、または `double`|
+|[long](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong`、`nint`、または `nuint`|
+|[ulong](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`nint`、または `nuint`|
+|[float](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`decimal`、`nint`、または `nuint`|
+|[double](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`decimal`、`nint`、または `nuint`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、`nint`、または `nuint`|
+|[nint](nint-nuint.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong`、または `nuint`|
+|[nuint](nint-nuint.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、または `nint`|
 
 > [!NOTE]
 > 明示的な数値変換によって、データが失われたり、例外がスローされたりすることがあります (通常は <xref:System.OverflowException>)。

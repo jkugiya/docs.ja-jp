@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 402f9e2c4ca378af4b6ed0cc0c8c39e2d337876d
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258281"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652894"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 
@@ -33,7 +33,7 @@ ms.locfileid: "102258281"
 > [!NOTE]
 > 64 ビット コンピューターには、64 ビット バージョンと 32 ビット バージョンの両方のセキュリティ ポリシーが含まれます。 32 ビット アプリケーションと 64 ビット アプリケーションの両方にポリシーの変更を適用するには、Caspol.exe の 32 ビット バージョンと 64 ビット バージョンの両方を実行します。  
   
- コード アクセス セキュリティ ポリシー ツールは、.NET Framework および Visual Studio と共に自動的にインストールされます。 Caspol.exe は、32 ビット システムでは %windir%\Microsoft.NET\Framework\\*version* に、64 ビット システムでは %windir%\Microsoft.NET\Framework64\\*version* にあります。 (たとえば、場所は、64 ビット システムの .NET Framework 4 では %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe)。コンピューターで複数のバージョンの .NET Framework を side-by-side で実行している場合は、複数のバージョンのツールがインストールされると考えられます。 インストール ディレクトリからツールを実行できます。 ただし、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用することをお勧めします。これにより、インストール フォルダーに移動する必要がなくなります。  
+ コード アクセス セキュリティ ポリシー ツールは、.NET Framework および Visual Studio と共に自動的にインストールされます。 Caspol.exe は、32 ビット システムでは %windir%\Microsoft.NET\Framework\\*version* に、64 ビット システムでは %windir%\Microsoft.NET\Framework64\\*version* にあります。 (たとえば、場所は、64 ビット システムの .NET Framework 4 では %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe)。コンピューターで複数のバージョンの .NET Framework を side-by-side で実行している場合は、複数のバージョンのツールがインストールされると考えられます。 インストール ディレクトリからツールを実行できます。 ただし、[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用することが推奨されます。この場合、インストール フォルダーに移動する必要はありません。  
   
  コマンド プロンプトに次のように入力します。  
   

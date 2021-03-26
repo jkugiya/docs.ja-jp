@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 2d66fd0d395f9d03b34c09304ce01d9c859da532
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258664"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653349"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
 Windows Resource Localization Editor (Winres.exe) は、ビジュアル レイアウト ツールです。ローカリゼーションの専門家は、このツールにより、フォームで使用される Windows フォームのユーザー インターフェイス (UI) リソースのローカライズが楽になります。 Winres.exe への入力として使用される .resx ファイルおよび .resources ファイルは、Microsoft Visual Studio などのビジュアル デザイン環境を使用して作成できます。 .NET Framework アプリケーションにおけるリソースの配置については、「[デスクトップ アプリケーションのリソース](../resources/index.md)」を参照してください。
 
-Winres.exe が Visual Studio と共にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+Winres.exe が Visual Studio と共にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 ## <a name="syntax"></a>構文
 

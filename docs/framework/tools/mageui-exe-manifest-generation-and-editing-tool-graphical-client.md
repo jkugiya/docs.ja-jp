@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f08c1d8aabae3e698dbf2fcd0a52511136ba899
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: c3901145e00f1a58f87e5a8925078278f847668e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259916"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653999"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)
 
 MageUI.exe でサポートされている機能は、コマンド ライン ツール Mage.exe の機能と同じですが、MageUI.exe には、Windows ベースのユーザー インターフェイス (UI) があります。 このツールを使用すると、配置マニフェストおよびアプリケーション マニフェストを作成および編集でき、これらのマニフェストに署名することができます。 MageUI.exe で作成される新しいマニフェストでは、.NET Framework 4 Client Profile がターゲットになります。 以前のバージョンの .NET Framework を対象にするには、以前のバージョンの MageUI.exe を使用する必要があります。 マニフェストに対してアセンブリの追加または削除を行っても、既存のマニフェストに再署名しても、MageUI.exe によって .NET Framework 4 Client Profile をターゲットにするようにマニフェストが更新されることはありません。 詳しくは、「[Mage.exe (マニフェストの生成および編集ツール)](mage-exe-manifest-generation-and-editing-tool.md)」をご覧ください。
 
- このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+ このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
  Visual Studio には、2 つのバージョンの Mage.exe および MageUI.exe がコンポーネントとして含まれています。 バージョン情報を確認するには、MageUI.exe を実行し、 **[ヘルプ]** をクリックして、 **[バージョン情報]** をクリックします。 このドキュメントでは、バージョン 4.0.x.x の Mage.exe および MageUI.exe について説明します。
 

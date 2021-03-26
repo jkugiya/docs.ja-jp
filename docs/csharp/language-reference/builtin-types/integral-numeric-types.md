@@ -1,24 +1,16 @@
 ---
 title: 整数数値型 - C# リファレンス
 description: 各整数数値型の範囲、ストレージ サイズ、および使用方法について説明します。
-ms.date: 10/22/2019
+ms.date: 03/17/2021
 f1_keywords:
-- byte
 - byte_CSharpKeyword
 - sbyte_CSharpKeyword
-- sbyte
-- short
 - short_CSharpKeyword
-- ushort
 - ushort_CSharpKeyword
 - int_CSharpKeyword
-- int
-- uint
 - uint_CSharpKeyword
 - long_CSharpKeyword
-- long
 - ulong_CSharpKeyword
-- ulong
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
@@ -32,12 +24,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 51ea64065ea8422e5885022105545780bc916f06
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 02b1451dc3aa22dfe27181b0e9160d198349107c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739005"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760172"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整数数値型 (C# リファレンス)
 
@@ -57,15 +49,21 @@ C# では、次の定義済みの整数型がサポートされています。
 |`uint`|0 ～ 4,294,967,295|符号なし 32 ビット整数|<xref:System.UInt32?displayProperty=nameWithType>|
 |`long`|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|符号付き 64 ビット整数|<xref:System.Int64?displayProperty=nameWithType>|
 |`ulong`|0 ～ 18,446,744,073,709,551,615|符号なし 64 ビット整数|<xref:System.UInt64?displayProperty=nameWithType>|
+|`nint`|プラットフォームによって異なる|符号付き 32 ビットまたは 64 ビット整数|<xref:System.IntPtr?displayProperty=nameWithType>|
+|`nuint`|プラットフォームによって異なる|符号なし 32 ビットまたは 64 ビット整数|<xref:System.UIntPtr?displayProperty=nameWithType>|
 
-上の表で、左端の列にある各 C# 型のキーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では同じ型の変数が宣言されています。
+最後の 2 つを除くすべてのテーブル行で、左端の列の各 C# 型キーワードは、対応する .NET 型の別名です。 キーワードと .NET 型の名前は交換可能です。 たとえば、次の宣言では、同じ型の変数が宣言されています。
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-各整数型の既定値はゼロ (`0`) です。 各整数型には、その型の最小値と最大値を指定する `MinValue` および `MaxValue` 定数があります。
+テーブルの最後の 2 行の `nint` 型と `nuint` 型は、ネイティブサイズの整数です。 これらは、指定された .NET 型によって内部で表現されますが、いずれの場合もキーワードと .NET 型は交換できません。 コンパイラによって、`nint` と `nuint` に対して、整数型としての演算と変換が提供されます。ポインター型 `System.IntPtr` と `System.UIntPtr` に対しては提供されません。 詳細については、[`nint` 型と `nuint` 型](nint-nuint.md)に関するページを参照してください。
+
+ネイティブサイズの整数型の詳細については、[`nint` と `nuint`](nint-nuint.md) に関するページを参照してください。
+
+各整数型の既定値はゼロ (`0`) です。 ネイティブサイズの型を除く各整数型には、その型の最小値と最大値を指定する `MinValue` および `MaxValue` 定数があります。
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 構造体を使用して、上限や下限のない符号付き整数を表します。
 
@@ -100,7 +98,7 @@ var binaryLiteral = 0b_0010_1010;
 
 整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。
 
-整数リテラルの決定された型が `int` で、リテラルで表される値が変換先の型の範囲内にある場合、値を暗黙的に `sbyte`、`byte`、`short`、`ushort`、`uint`、または `ulong` に変換できます。
+整数リテラルの決定された型が `int` で、リテラルで表される値が変換先の型の範囲内にある場合、値を暗黙的に `sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、`nint`、または `nuint` に変換できます。
 
 ```csharp
 byte a = 17;

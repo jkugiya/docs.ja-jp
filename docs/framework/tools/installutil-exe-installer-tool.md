@@ -14,18 +14,18 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: 0e03a2a7033d3e210727e2eb080140ad87240dba
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 31420f21cdcbac65f5fc565dbf6db7a8d892fb9e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259942"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654051"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (インストーラー ツール)
 
 インストーラー ツールは、指定したアセンブリ内のインストーラー コンポーネントを実行することによってサーバー リソースのインストールとアンインストールを実行できるコマンド ライン ユーティリティです。 このツールは、<xref:System.Configuration.Install> 名前空間のクラスと組み合わせることによって動作します。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 コマンド プロンプトに次のように入力します。
 

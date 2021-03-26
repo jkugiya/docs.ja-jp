@@ -1,7 +1,7 @@
 items:
   - name: .NET のドキュメント
     href: index.yml
-  - name: 開始
+  - name: はじめに
     items:
       - name: Hello World
         href: ../core/get-started.md
@@ -1372,6 +1372,11 @@ items:
             href: ../core/docker/build-container.md
           - name: Visual Studio のコンテナー ツール
             href: /visualstudio/containers/overview
+  - name: DevOps
+    items:
+      - name: .NET を使用して GitHub アクションを作成する
+        href: ../devops/create-dotnet-github-action.md
+        displayName: 'continuous integration, continuous deployment, ci, cd, ci/cd, github, github action, github actions, lifecycle'
   - name: 基本的なコーディング コンポーネント
     items:
       - name: 基本データ型の概要

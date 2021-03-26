@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorProfilerInfo9:: GetILToNativeMapping3 メソッド'
+description: '詳細情報: ICorProfilerInfo9::GetILToNativeMapping3 メソッド'
 title: ICorProfilerInfo9::GetILToNativeMapping3
 ms.date: 08/06/2019
 dev_langs:
@@ -12,16 +12,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 867375d57f9d166ed08bf68ada81fb5cdbb8afe3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.openlocfilehash: 865545e2352209447b3942da3a62f3733c165b35
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646518"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759327"
 ---
-# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9:: GetILToNativeMapping3 メソッド
+# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9::GetILToNativeMapping3 メソッド
 
-ネイティブコードの開始アドレスが指定されている場合、この just-in-time バージョンのコードのネイティブから IL へのマッピング情報を返します。
+ネイティブ コードの開始アドレスを指定すると、この just-in-time バージョンのコードのネイティブから IL へのマッピング情報が返されます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,35 +34,27 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="parameters"></a>パラメーター
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` [in] ネイティブ関数の開始へのポインター。
 
-  \[) ネイティブ関数の先頭へのポインター。
+`cMap` [in] `map` 配列の最大サイズ。
 
-- `cMap`
+`pcMap` [out] 使用できる COR_DEBUG_IL_TO_NATIVE_MAP 構造体の総数。
 
-  \[in] 配列の最大サイズ `map` 。
-
-- `pcMap`
-
-  \[out] 使用可能な COR_DEBUG_IL_TO_NATIVE_MAP 構造の合計数。
-
-- `map`
-
-  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 構造体の配列。それぞれがオフセットを指定します。 `GetILToNativeMapping3` メソッドから制御が戻ると、`COR_DEBUG_IL_TO_NATIVE_MAP` 構造体の一部または全部が `map` に格納されます。
+`map` [out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 構造体の配列。各構造体はオフセットを指定します。 `GetILToNativeMapping3` メソッドから制御が戻ると、`COR_DEBUG_IL_TO_NATIVE_MAP` 構造体の一部または全部が `map` に格納されます。
 
 ## <a name="remarks"></a>解説
 
-階層化コンパイルが有効になっている場合、メソッドは複数のネイティブコード本体を持つことができます。 [ICorProfilerInfo9:: GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md) は、すべてのネイティブコード本体の開始アドレスを返します。
+階層化コンパイルが有効にされている場合、メソッドには複数のネイティブ コード本体を指定できます。 [ICorProfilerInfo9:: GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md) によって、すべてのネイティブ コード本体の開始アドレスが返されます。
 
 ## <a name="requirements"></a>要件
 
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
+**プラットフォーム:** [.NET Core がサポートされているオペレーティング システム](../../../core/install/windows.md?pivots=os-windows)に関するページを参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Framework のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Framework のバージョン:** [!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

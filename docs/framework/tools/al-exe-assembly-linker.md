@@ -8,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 112e3880e76d4e81ab42cece592fcfd0f4dff312
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: dff7ab7ccc6543b1c13cb2b49cbdf712eba301ae
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480802"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652959"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
@@ -22,7 +22,7 @@ ms.locfileid: "103480802"
 > [!NOTE]
 > Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[-win32manifest (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/resources.md#win32manifest)」を参照してください。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 コマンド プロンプトに次のように入力します。
 

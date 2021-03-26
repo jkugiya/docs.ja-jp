@@ -2,12 +2,12 @@
 title: .NET でのシンボル
 description: .NET でのシンボルとポータブル PDB の概要
 ms.date: 02/08/2021
-ms.openlocfilehash: da59a07166cd1f73160da8d9ac53b5823bf13e7b
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 8f217bf8b62ff12a6ea1dc6a5b14b34d8037dd2d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108270"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759899"
 ---
 # <a name="symbols"></a>Symbols
 
@@ -39,7 +39,7 @@ PDB ファイルは、コンパイラによって生成される補助ファイ�
 
 * 古いバージョンのプロファイラーで、ポータブル PDB がサポートされていない場合があります。
 
-ポータブル PDB をサポートしていないツールでそれを使用するには、ポータブル PDB と Windows PDB を変換する Pdb2Pdb[https://github.com/dotnet/symreader-converter#pdb2pdb ] を使用してみることができます。
+ポータブル PDB をサポートしていないツールでそれらを使用するには、ポータブル PDB と Windows PDB 間で変換する [Pdb2Pdb](https://github.com/dotnet/symreader-converter#pdb2pdb) を使用してみることができます。
 
 ### <a name="support-for-windows-pdbs"></a>Windows PDB のサポート
 

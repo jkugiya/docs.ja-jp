@@ -18,18 +18,18 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 3cdc9e2b07ad176f2a46aa419920d5fa3f47f6e7
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 68a85b74333e978adc0b9953d408b36d5e91738f
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259248"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654142"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
 
 グローバル アセンブリ キャッシュ ツールを使用すると、グローバル アセンブリ キャッシュとダウンロード キャッシュの内容を表示および操作できます。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[開発者向けのコマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を使用します。
+このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、[、Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用します。
 
 コマンド プロンプトに次のように入力します。
 

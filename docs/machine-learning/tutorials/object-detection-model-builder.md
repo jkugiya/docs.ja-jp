@@ -6,12 +6,12 @@ ms.author: brachtma
 ms.date: 03/12/2021
 ms.topic: tutorial
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 21b672b84c7f55578a76459fa9f02aca3455d719
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 470849257f2a75bec9e708d8c17905f69c4d0aa7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104658386"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875396"
 ---
 # <a name="tutorial-detect-stop-signs-in-images-with-model-builder"></a>チュートリアル: Model Builder で画像内の一時停止標識を検出する
 
@@ -51,7 +51,7 @@ ML.NET Model Builder と Azure ML を使用して、物体検出モデルを構�
 - オブジェクトのカウント
 - アクティビティ認識
 
-このサンプルでは、Model Builder で構築された機械学習モデルを使用して、画像内の一時停止標識を検出する C# .NET Core コンソール アプリケーションを作成します。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/ObjectDetection_StopSigns) GitHub リポジトリにあります。
+このサンプルでは、Model Builder で構築された機械学習モデルを使用して、画像内の一時停止標識を検出する C# .NET Core コンソール アプリケーションを作成します。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub リポジトリにあります。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
@@ -257,7 +257,7 @@ Visual Studio で **[Azure portal で現在の実行を監視する]** リンク
     Top: 89.453415, Left: 481.95343, Right: 724.8073, Bottom: 388.32385, Label: Stop-Sign, Score: 0.99539465
     ```
 
-お疲れさまでした。 Model Builder を使用して、画像内の一時停止標識を検出する機械学習モデルを正常に構築しました。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/ObjectDetection_StopSigns) GitHub リポジトリにあります。
+おめでとうございます。 Model Builder を使用して、画像内の一時停止標識を検出する機械学習モデルを正常に構築しました。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub リポジトリにあります。
 
 ## <a name="additional-resources"></a>その他のリソース
 

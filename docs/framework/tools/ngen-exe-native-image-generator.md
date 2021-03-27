@@ -19,19 +19,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: dcf22b1840be5dd91b8ad2224871b8a22efb1183
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 05b77df39645b85872b07b43bcf6e8c852d6f664
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104653882"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874369"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 
 ネイティブ イメージ ジェネレーター (Ngen.exe) は、マネージド アプリケーションのパフォーマンスを向上するツールです。 Ngen.exe は、コンパイルされたプロセッサ固有のマシン コードを含むファイルであるネイティブ イメージを作成してローカル コンピューターのネイティブ イメージ キャッシュにインストールします。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。
 
 > [!NOTE]
-> Ngen.exe によって、.NET Framework のみをターゲットとするアセンブリのネイティブ イメージがコンパイルされます。 .Net Core 用の同等のネイティブ イメージ ジェネレーターは、[CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md) です。
+> Ngen.exe によって、.NET Framework のみをターゲットとするアセンブリのネイティブ イメージがコンパイルされます。 .Net Core 用の同等のネイティブ イメージ ジェネレーターは、[CrossGen](https://github.com/dotnet/runtime/blob/main/docs/workflow/building/coreclr/crossgen.md) です。
 
 .NET Framework 4 では、次の変更が Ngen.exe に加えられました。
 

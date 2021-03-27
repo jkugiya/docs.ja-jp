@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: d7568c377e09b95fbc863610ec6bdc444f924976
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: a05e1e1d09f1f988ad8354f98521681e3f6cbea8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652712"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875851"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -27,24 +27,24 @@ ms.locfileid: "104652712"
 
 ## <a name="hosting-apis"></a>ホスト API
 
-.NET Core をホストするために使用できる API が 2 種類あります。 この記事 (とそれに関連する[サンプル](https://github.com/dotnet/samples/tree/master/core/hosting)) では、これら 2 つのオプションについて説明します。
+.NET Core をホストするために使用できる API が 2 種類あります。 この記事 (とそれに関連する[サンプル](https://github.com/dotnet/samples/tree/main/core/hosting)) では、これら 2 つのオプションについて説明します。
 
 * .NET Core 3.0 以降の .NET Core ランタイムをホストする推奨される方法は、`nethost` および `hostfxr` ライブラリの API を使うことです。 これらのエントリ ポイントは、初期化のためにランタイムを検索して設定する複雑な処理が行われ、マネージド アプリケーションの起動と静的マネージド メソッドの呼び出しの両方が可能です。
-* .NET Core 3.0 より前の .NET Core ランタイムをホストする推奨される方法は、[`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API を使うことです。 この API では、ランタイムを簡単に開始および停止し、(マネージド exe を起動するか、静的マネージド メソッドを呼び出すことで) マネージド コードを呼び出すために関数が公開されます。
+* .NET Core 3.0 より前の .NET Core ランタイムをホストする推奨される方法は、[`coreclrhost.h`](https://github.com/dotnet/runtime/blob/main/src/coreclr/hosts/inc/coreclrhost.h) API を使うことです。 この API では、ランタイムを簡単に開始および停止し、(マネージド exe を起動するか、静的マネージド メソッドを呼び出すことで) マネージド コードを呼び出すために関数が公開されます。
 
 ## <a name="sample-hosts"></a>サンプル ホスト
 
-dotnet/samples GitHub リポジトリには、以下のチュートリアルで説明する手順を実演する[サンプル ホスト](https://github.com/dotnet/samples/tree/master/core/hosting)があります。 サンプルのコメントを見れば、これらのチュートリアルで番号が付けられている手順がサンプルのどこで実行されるかわかります。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
+dotnet/samples GitHub リポジトリには、以下のチュートリアルで説明する手順を実演する[サンプル ホスト](https://github.com/dotnet/samples/tree/main/core/hosting)があります。 サンプルのコメントを見れば、これらのチュートリアルで番号が付けられている手順がサンプルのどこで実行されるかわかります。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 サンプル ホストは学習目的のために利用されるものです。エラーのチェック時に軽くなっており、効率性より読みやすさを重視して設計されています。
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>`nethost.h` と `hostfxr.h` を使用してホストを作成する
 
-以下は、`nethost` および `hostfxr` ライブラリを使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 [サンプル](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)では、.NET SDK でインストールされる `nethost` ヘッダーとライブラリ、および [dotnet/runtime](https://github.com/dotnet/runtime) リポジトリからの [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/coreclr_delegates.h) および [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) ファイルのコピーが使用されます。
+以下は、`nethost` および `hostfxr` ライブラリを使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 [サンプル](https://github.com/dotnet/samples/tree/main/core/hosting/HostWithHostFxr)では、.NET SDK でインストールされる `nethost` ヘッダーとライブラリ、および [dotnet/runtime](https://github.com/dotnet/runtime) リポジトリからの [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/coreclr_delegates.h) および [`hostfxr.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/hostfxr.h) ファイルのコピーが使用されます。
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>ステップ 1 - `hostfxr` を読み込んで、エクスポートされたホスティング関数を取得する
 
-`nethost` ライブラリでは、`hostfxr` ライブラリを検索するための `get_hostfxr_path` 関数が提供されています。 `hostfxr` ライブラリでは、.NET Core ランタイムをホストするための関数が公開されています。 関数の完全な一覧については、[`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) および[ネイティブ ホスティング デザインのドキュメント](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md)をご覧ください。 サンプルとこのチュートリアルでは以下を使います。
+`nethost` ライブラリでは、`hostfxr` ライブラリを検索するための `get_hostfxr_path` 関数が提供されています。 `hostfxr` ライブラリでは、.NET Core ランタイムをホストするための関数が公開されています。 関数の完全な一覧については、[`hostfxr.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/hostfxr.h) および[ネイティブ ホスティング デザインのドキュメント](https://github.com/dotnet/runtime/blob/main/docs/design/features/native-hosting.md)をご覧ください。 サンプルとこのチュートリアルでは以下を使います。
 
 * `hostfxr_initialize_for_runtime_config`:ホスト コンテキストを初期化し、指定されたランタイム構成を使って .NET Core ランタイムの初期化を準備します。
 * `hostfxr_get_runtime_delegate`:ランタイム機能に対するデリゲートを取得します。
@@ -82,7 +82,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 ## <a name="create-a-host-using-coreclrhosth"></a>`coreclrhost.h` を使用してホストを作成する
 
-以下は、`coreclrhost.h` API を使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 このドキュメントのコード スニペットでは Windows 固有の API が使用されてますが、[こちら](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)にある完全版サンプル ホストでは、Windows コード パスと Linux コード パスの両方を確認できます。
+以下は、`coreclrhost.h` API を使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 このドキュメントのコード スニペットでは Windows 固有の API が使用されてますが、[こちら](https://github.com/dotnet/samples/tree/main/core/hosting/HostWithCoreClrHost)にある完全版サンプル ホストでは、Windows コード パスと Linux コード パスの両方を確認できます。
 
 [corerun ホスト](https://github.com/dotnet/runtime/tree/main/src/coreclr/hosts/corerun)では、`coreclrhost.h` を使ったホスティングの、より複雑で現実的なクロスプラットフォームの例が示されています。
 

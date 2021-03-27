@@ -426,7 +426,15 @@ items:
               - name: 既知のイベント プロバイダー
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: 分散トレース
-                href: ../core/diagnostics/distributed-tracing.md
+                items:
+                  - name: 概要
+                    href: ../core/diagnostics/distributed-tracing.md
+                  - name: 概念
+                    href: ../core/diagnostics/distributed-tracing-concepts.md
+                  - name: インストルメンテーション
+                    href: ../core/diagnostics/distributed-tracing-instrumentation-walkthroughs.md
+                  - name: コレクション
+                    href: ../core/diagnostics/distributed-tracing-collection-walkthroughs.md
           - name: Symbols
             href: ../core/diagnostics/symbols.md
           - name: ランタイム イベント

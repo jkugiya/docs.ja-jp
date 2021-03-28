@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e0dff24bb581a27f55b047d5f6351993ba58cdb
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104064"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637495"
 ---
 # <a name="c-reference"></a>C# リファレンス
 
@@ -34,7 +34,7 @@ ms.locfileid: "102104064"
  [C# 特殊文字](./tokens/index.md)  
  C# のコンテキスト特殊文字とその使用方法に関する情報へのリンクを提供します。  
 
- [C# プリプロセッサ ディレクティブ](./preprocessor-directives/index.md)  
+ [C# プリプロセッサ ディレクティブ](preprocessor-directives.md)  
  C# ソース コード内に埋め込むためのコンパイラ コマンドに関する情報へのリンクを提供します。  
   
  [C# コンパイラ オプション](./compiler-options/index.md)  

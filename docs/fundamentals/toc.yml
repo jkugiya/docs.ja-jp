@@ -208,7 +208,7 @@ items:
           - name: 概要
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: リファレンス
+          - name: 関連項目
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -340,7 +340,7 @@ items:
             items:
               - name: 概要
                 href: ../core/project-sdk/overview.md
-              - name: リファレンス
+              - name: 関連項目
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -2316,8 +2316,6 @@ items:
       - name: 重大な変更
         displayName: app compatibility
         href: ../core/compatibility/
-      - name: プロジェクトの AssemblyInfo 属性をプロパティにマップする
-        href: ../core/migration/assembly-info.md
       - name: サード パーティの依存関係を分析する
         href: ../core/porting/third-party-deps.md
       - name: ライブラリを移植する

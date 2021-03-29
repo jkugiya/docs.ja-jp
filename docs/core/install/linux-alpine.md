@@ -4,12 +4,12 @@ description: Alpine に .NET SDK と .NET ランタイムをインストール�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 19cae3c6237dc9f1a23087ec654e8f24ca13cd66
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: ece9a253cc11195c67e79c89747efe462a71632d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104653440"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873758"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>Alpine に .NET SDK または .NET ランタイムをインストールする
 
@@ -35,6 +35,7 @@ Alpine Linux 用に使用できるインストーラーはありません。 次
 
 | Alpine  | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |-------- |---------------|---------------|----------------|
+| ✔️ 3.13 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 | ✔️ 3.12 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 | ✔️ 3.11 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 | ✔️ 3.10 | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
@@ -74,7 +75,7 @@ apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
 apk add libgdiplus --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [.NET CLI のタブ補完を有効にする方法](../tools/enable-tab-autocomplete.md)
 - [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

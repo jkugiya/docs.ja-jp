@@ -1,0 +1,45 @@
+### YamlMime:Yaml
+ms.openlocfilehash: f1ead2ebefd1b34ef5833834859440dc436cbea5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879552"
+name: GitHub アクションのタイトル
+description: GitHub アクションの説明
+branding:
+  icon: activity
+  color: orange
+inputs:
+  owner:
+    description: 'リポジトリの所有者。 github.repository_owner から割り当てます。 例: "dotnet"。'
+    required: true
+  name:
+    description: 'リポジトリの名前。 例: "samples"。'
+    required: true
+  branch:
+    description: '分岐名。 github.ref から割り当てます。例: "refs/heads/main"。'
+    required: true
+  dir:
+    description: '作業を開始するルート ディレクトリ。 例: "path/to/code"。'
+    required: false
+    default: /github/workspace
+outputs:
+  summary-title:
+    description: コード メトリック アクションのタイトル。
+  summary-details:
+    description: フラグが設定されたすべてのプロジェクトの詳細な概要。
+  updated-metrics:
+    description: アクションによってメトリックが更新されたかどうかを示すブール値。
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - -o
+  - ${{ inputs.owner }}
+  - -n
+  - ${{ inputs.name }}
+  - -b
+  - ${{ inputs.branch }}
+  - -d
+  - ${{ inputs.dir }}

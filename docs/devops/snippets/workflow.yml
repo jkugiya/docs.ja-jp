@@ -1,0 +1,47 @@
+### YamlMime:Yaml
+ms.openlocfilehash: fd017a5f56e578368840891b8a5502acfe0a6ecf
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879554"
+name: .NET のコード メトリック
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - github-actions/DotNet.GitHubAction/**
+    - '!github-actions/DotNet.GitHubAction/CODE_METRICS.md'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: ワークフローを実行する理由
+        required: true
+        default: Manual run
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: 手動実行の理由を印刷する
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: >
+        echo 'Reason: ${{ github.event.inputs.reason }}'
+    - name: .NET のコード メトリック
+      id: dotnet-code-metrics
+      uses: dotnet/samples/github-actions/DotNet.GitHubAction@main
+      env:
+        GREETINGS: Hello, .NET developers!
+      with:
+        owner: ${{ github.repository_owner }}
+        name: ${{ github.repository }}
+        branch: ${{ github.ref }}
+        dir: ${{ './github-actions/DotNet.GitHubAction' }}
+    - name: pull request を作成する
+      uses: peter-evans/create-pull-request@v3.4.1
+      if: ${{ steps.dotnet-code-metrics.outputs.updated-metrics }} == 'true'
+      with:
+        title: ${{ steps.dotnet-code-metrics.outputs.summary-title }}
+        body: ${{ steps.dotnet-code-metrics.outputs.summary-details }}
+        commit-message: .NET code metrics, automated pull request.

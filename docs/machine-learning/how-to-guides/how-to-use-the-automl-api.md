@@ -3,16 +3,16 @@ title: ML.NET の自動 ML API を使用する方法
 description: ML.NET の自動 ML API によって、モデル構築プロセスが自動化され、展開できる状態のモデルが生成されます。 自動機械学習タスクの構成に使用できるオプションについて説明します。
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b1ef526301e01e1e75e71e0646f4d11e68215d69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 31204610d471f13aca177f0d599c1eba5cd7a624
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540733"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876338"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET の自動機械学習 API を使用する方法
 
-自動機械学習 (AutoML) によって、機械学習をデータに適用するプロセスが自動化されます。 データセットがある場合、さまざまなデータの特徴付け、機械学習アルゴリズム、およびハイパーパラメーターを反復処理する AutoML の**実験**を実行することで、最適なモデルを選択できます。
+自動機械学習 (AutoML) によって、機械学習をデータに適用するプロセスが自動化されます。 データセットがある場合、さまざまなデータの特徴付け、機械学習アルゴリズム、およびハイパーパラメーターを反復処理する AutoML の **実験** を実行することで、最適なモデルを選択できます。
 
 > [!NOTE]
 > このトピックは、現在プレビュー段階の ML.NET 用の自動機械学習 API について述べています。 内容は変更される場合があります。
@@ -72,7 +72,7 @@ using Microsoft.ML.AutoML;
 
 実験は高度な構成が可能です。 構成設定の詳細な一覧については、[AutoML API ドキュメント](/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)を参照してください。
 
-次に、それらの例の一部を示します。
+次に例をいくつか示します。
 
 1. 実験を実行できる最長時間を指定します。
 
@@ -121,11 +121,11 @@ ML タスクごとにサポートされるトレーナーの一覧は、以下�
 
 ## <a name="optimizing-metric"></a>最適化メトリック
 
-上の例に示すように、最適化メトリックによって、モデルのトレーニング中に最適化されるメトリックが決まります。 選択できる最適化メトリックは、選択したタスクの種類によって決まります。 利用できるメトリックの一覧を次に示します。
+上の例に示すように、最適化メトリックによって、モデルのトレーニング中に最適化されるメトリックが決まります。 選択できる最適化メトリックは、選択したタスクの種類によって決まります。 使用できるメトリックの一覧を次に示します。
 
 |[二項分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多クラス分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回帰とレコメンデーション](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|正確度| LogLoss | RSquared
+|精度| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
 |AreaUnderRocCurve | MacroAccuracy | MeanSquaredError
 |F1Score | MicroAccuracy | RootMeanSquaredError
@@ -143,17 +143,17 @@ ML タスクごとにサポートされるトレーナーの一覧は、以下�
 
 1. 有用な情報がない特徴を削除する
 
-    トレーニングおよび検証セットから有用な情報がない特徴を削除します。 これには、すべての値が欠落している、すべての行の値が同じである、またはカーディナリティが非常に高い (ハッシュ、ID、GUID など) 特徴が含まれます。
+    トレーニングおよび検証セットから、有用な情報のない特徴を削除します。 これには、まったく値が存在しない特徴、すべての行の値が同じである特徴、非常に高いカーディナリティ (ハッシュ、ID、GUID など) の特徴が含まれます。
 
 1. 欠落値の表示と補完
 
     欠落値のセルにそのデータ型の既定値を入力します。 入力列と同じ数のスロットを持つインジケーター特徴を追加します。 追加されるインジケーター特徴の値は、入力列の値が欠落している場合は `1`、それ以外の場合は `0` です。
 
-1. 追加の特徴を生成する
+1. その他の特徴の生成
 
-    テキスト特徴の場合:ユニグラムとトライキャラクターグラムを使用する bag-of-word 特徴。
+    テキスト特徴の場合: ユニグラムとトライキャラクターグラムを使用する bag-of-word 特徴。
 
-    カテゴリ別特徴の場合:カーディナリティの低い特徴向きのワンホット エンコードと、カーディナリティの高いカテゴリ別特徴向きのワンホットハッシュ エンコード。
+    カテゴリ別特徴の場合: カーディナリティの低い特徴向きのワンホット エンコードと、カーディナリティの高いカテゴリ別特徴向きのワンホットハッシュ エンコード。
 
 1. 変換とエンコード
 
@@ -174,7 +174,7 @@ ML タスクごとにサポートされるトレーナーの一覧は、以下�
     experimentSettings.CancellationToken = cts.Token;
     ```
 
-## <a name="create-an-experiment"></a>実験を作成する
+## <a name="create-an-experiment"></a>実験の作成
 
 実験設定を構成したら、実験を作成する準備は完了です。
 
@@ -211,7 +211,7 @@ experiment.Execute(trainDataView);
 experiment.Execute(trainDataView, validationDataView);
 ```
 
-## <a name="explore-model-metrics"></a>モデルのメトリックを調べる
+## <a name="explore-model-metrics"></a>モデル メトリックを探索する
 
 ML 実験の各反復処理の後に、そのタスクに関するメトリックは保存されます。
 
@@ -231,4 +231,4 @@ ML タスクごとに利用できるすべてのメトリックを次に示し�
 
 ## <a name="see-also"></a>関連項目
 
-すべてのコード サンプルについては、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub リポジトリを参照してください。
+すべてのコード サンプルについては、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main#automate-mlnet-models-generation-preview-state) GitHub リポジトリを参照してください。

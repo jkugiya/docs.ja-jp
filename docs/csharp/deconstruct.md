@@ -2,14 +2,13 @@
 title: タプルとその他の型の分解
 description: タプルとその他の型を分解する方法について説明します。
 ms.technology: csharp-fundamentals
-ms.date: 11/23/2017
-ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 5aaf7157b87de4f67f6e4beba18794a6dd13b6d0
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.date: 03/22/2021
+ms.openlocfilehash: acacfb6a9401a3a888f9b8226798c95578f9fa45
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585352"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875825"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>タプルとその他の型の分解
 
@@ -65,7 +64,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ## <a name="deconstructing-user-defined-types"></a>ユーザー定義型の分解
 
-C# には、非タプル型を分解するためのサポートが組み込まれていません。 ただし、クラス、構造体、またはインターフェイスの作成者であれば、1 つまたは複数の `Deconstruct` メソッドを実装することで、型のインスタンスを分解することができます。 このメソッドからは void が返され、分解される各値はメソッド シグネチャの [out](language-reference/keywords/out-parameter-modifier.md) パラメーターで示されます。 たとえば、`Person` クラスの次の `Deconstruct` メソッドは、名、ミドル ネーム、姓を返します。
+C# では、[`record`](#deconstructing-a-record-type) および [DictionaryEntry](xref:System.Collections.DictionaryEntry.Deconstruct%2A) 型以外の非タプル型を分解するための組み込みサポートは提供されていません。 ただし、クラス、構造体、またはインターフェイスの作成者であれば、1 つまたは複数の `Deconstruct` メソッドを実装することで、型のインスタンスを分解することができます。 このメソッドからは void が返され、分解される各値はメソッド シグネチャの [out](language-reference/keywords/out-parameter-modifier.md) パラメーターで示されます。 たとえば、`Person` クラスの次の `Deconstruct` メソッドは、名、ミドル ネーム、姓を返します。
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
@@ -98,6 +97,10 @@ C# には、非タプル型を分解するためのサポートが組み込ま�
 <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> クラスの `Deconstruct` 拡張メソッドを 2 つ定義する例を次に示します。 1 つ目の拡張メソッドは、型、静的かインスタンスか、読み取り専用かどうか、インデックスが作成されているかどうかなど、プロパティの特徴を示す値のセットを返します。 2 つ目の拡張メソッドは、プロパティのアクセシビリティを示します。 get アクセサーと set アクセサーのアクセシビリティは異なる可能性があるため、ブール値は、プロパティの get アクセサーと set アクセサーが異なるかどうか、また異なる場合はアクセシビリティが同じかどうかを示します。 アクセサーが 1 つのみの場合、または get アクセサーと set アクセサーのアクセシビリティが同じ場合、`access` 変数は、全体としてそのアクセシビリティのプロパティを示します。 それ以外の場合、get アクセサーと set アクセサーのアクセシビリティは `getAccess` 変数と `setAccess` 変数で示されます。
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
+
+## <a name="deconstructing-a-record-type"></a>`record` 型の分解
+
+2 つ以上の位置指定パラメーターを使用して [record](language-reference/builtin-types/record.md) 型を宣言すると、コンパイラでは、`record` 宣言内の位置指定パラメーターごとに `out` パラメーターを使用する `Deconstruct` メソッドを作成します。 詳細については、「[プロパティ定義の位置指定構文](language-reference/builtin-types/record.md#positional-syntax-for-property-definition)」および「[派生レコードのデコンストラクターの動作](language-reference/builtin-types/record.md#deconstructor-behavior-in-derived-records)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

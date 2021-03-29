@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/01/2020
-ms.openlocfilehash: f4079e0409c1675e8f8a3e494303683daeef29c1
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: bab860b73f029687873949f1cafed02cfcea7220
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851413"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873069"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
@@ -34,7 +34,7 @@ ms.locfileid: "96851413"
 
 ### <a name="dependency-inversion"></a>依存関係の逆転
 
-アプリケーション内の依存関係の方向は、実装の詳細の方向ではなく、抽象化の方向とする必要があります。 大部分のアプリケーションは、コンパイル時の依存関係のフローがランタイム実行の方向になるように記述され、直接的な依存関係グラフが生成されます。 つまり、図 4-1 に示すように、モジュール A がモジュール B 内の関数を呼び出し、モジュール B がモジュール C 内の関数を呼び出す場合、コンパイル時に A は B に依存し、B は C に依存します。
+アプリケーション内の依存関係の方向は、実装の詳細の方向ではなく、抽象化の方向とする必要があります。 大部分のアプリケーションは、コンパイル時の依存関係のフローがランタイム実行の方向になるように記述され、直接的な依存関係グラフが生成されます。 つまり、クラス A がクラス B のメソッドを呼び出し、クラス B がクラス C のメソッドを呼び出す場合は、図 4-1 に示すように、コンパイル時にクラス A はクラス B に依存し、クラス B はクラス C に依存します。
 
 ![直接的な依存関係グラフ](./media/image4-1.png)
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc, mlnet-tooling
-ms.openlocfilehash: 750738f8e3c65363e9996667feeccd1b84391f9f
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: c34586014b5617f7712a4b708cb2e4a4814da684
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438244"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874759"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>チュートリアル: モデル ビルダーで回帰を使用して価格を予測する
 
@@ -36,9 +36,9 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 前提条件の一覧とインストール手順は、[モデル ビルダーのインストール ガイド](../how-to-guides/install-model-builder.md)を参照してください。
 
-## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
+## <a name="create-a-console-application"></a>コンソール アプリケーションの作成
 
-1. "TaxiFarePrediction" という名前の **C# .NET Core コンソール アプリケーション**を作成します。 **[ソリューションとプロジェクトを同じディレクトリに配置する]** を**オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を**オン**にします (VS 2017)。
+1. "TaxiFarePrediction" という名前の **C# .NET Core コンソール アプリケーション** を作成します。 **[ソリューションとプロジェクトを同じディレクトリに配置する]** を **オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を **オン** にします (VS 2017)。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
@@ -46,13 +46,13 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 1. 機械学習モデルのトレーニングと評価に使用するデータ セットは、NYC TLC Taxi Trip データ セットから取得したものです。
 
-    1. このデータ セットをダウンロードするには、[taxi-fare-train.csv のダウンロード リンク](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)に移動します。
+    1. このデータ セットをダウンロードするには、[taxi-fare-train.csv のダウンロード リンク](https://raw.githubusercontent.com/dotnet/machinelearning/main/test/data/taxi-fare-train.csv)に移動します。
 
-    1. ページが読み込まれたら、ページ上の任意の場所を右クリックして、 **[名前を付けて保存]** を選択します。
+    1. ページが読み込まれたら、ページ上の任意の場所を右クリックして、**[名前を付けて保存]** を選択します。
 
-    1. **[名前を付けて保存] ダイアログ**を使って、前の手順で作成した *Data* フォルダーにファイルを保存します。
+    1. **[名前を付けて保存] ダイアログ** を使って、前の手順で作成した *Data* フォルダーにファイルを保存します。
 
-1. **ソリューション エクスプローラー**で、 *[taxi-fare-train.csv]* ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+1. **ソリューション エクスプローラー** で、*[taxi-fare-train.csv]* ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
 `taxi-fare-train.csv` データ セットの各行に、タクシーの移動の詳細が含まれています。
 
@@ -74,8 +74,8 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 モデルをトレーニングするには、モデル ビルダーによって提供される機械学習シナリオの一覧から選択する必要があります。 この場合、シナリオは `Price Prediction` です。
 
-1. **ソリューション エクスプローラー**で、 *[TaxiFarePrediction]* プロジェクトを右クリックし、 **[追加]**  >  **[機械学習]** を選択します。
-1. モデル ビルダー ツールのシナリオの手順で、*価格の予測*のシナリオを選択します。
+1. **ソリューション エクスプローラー** で、*[TaxiFarePrediction]* プロジェクトを右クリックし、**[追加]** > **[機械学習]** を選択します。
+1. モデル ビルダー ツールのシナリオの手順で、*価格の予測* のシナリオを選択します。
 
 ## <a name="load-the-data"></a>データを読み込む
 
@@ -84,7 +84,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 1. モデル ビルダー ツールのデータの手順で、データ ソースのドロップダウンから *[ファイル]* を選択します。
 1. *[ファイルの選択]* テキスト ボックスの横にあるボタンを選択し、ファイル エクスプローラーを使用して *Data* ディレクトリにある *[taxi-fare-test.csv]* を参照し、選択します
 1. *[Column to Predict (Label)]\(予測する列 (ラベル)\)* ドロップダウンで *[fare_amount]* を選択します。
-1. *[Input Columns (Features)]\(入力列 (特徴)\)* ドロップダウンを展開し、 *[trip_time_in_secs]* 列をオフにして、トレーニング時の特徴から除外します。  Model Builder ツールのトレーニング ステップに移動します。
+1. *[Input Columns (Features)]\(入力列 (特徴)\)* ドロップダウンを展開し、*[trip_time_in_secs]* 列をオフにして、トレーニング時の特徴から除外します。  Model Builder ツールのトレーニング ステップに移動します。
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 
@@ -92,7 +92,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 モデルのトレーニングに必要な時間は、データの量に比例します。 モデル ビルダーにより、 **[Time to train (seconds)]\(トレーニング時間 (秒)\)** の既定値が、データ ソースのサイズに基づいて自動的に選択されます。
 
-1. より長い時間トレーニングする場合を除き、 *[Time to train (seconds)]\(トレーニング時間 (秒)\)* は既定値のままとします。
+1. より長い時間トレーニングする場合を除き、*[Time to train (seconds)]\(トレーニング時間 (秒)\)* は既定値のままとします。
 2. *[Start Training]\(トレーニング開始\)* を選択します。
 
 トレーニング プロセスを通して、進捗データがトレーニングの手順の `Progress` セクションに表示されます。
@@ -106,7 +106,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 ## <a name="evaluate-the-model"></a>モデルを評価する
 
-トレーニングの手順の結果が、最良のパフォーマンスだった 1 つのモデルになります。 モデル ビルダー ツールの評価の手順の出力セクションには、 *[Best Model]\(最良のモデル\)* エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、 *[Best Model Quality (RSquared)]\(最良のモデル品質 (RSquared)\)* のメトリックが含まれます。 また、概要テーブルには上位 5 つのモデルとそのメトリックが含まれています。
+トレーニングの手順の結果が、最良のパフォーマンスだった 1 つのモデルになります。 モデル ビルダー ツールの評価の手順の出力セクションには、*[Best Model]\(最良のモデル\)* エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、*[Best Model Quality (RSquared)]\(最良のモデル品質 (RSquared)\)* のメトリックが含まれます。 また、概要テーブルには上位 5 つのモデルとそのメトリックが含まれています。
 
 精度のメトリックに不満がある場合、モデルのトレーニング時間を増やすか、さらに多くのデータを使用すると、モデルの精度を簡単に高めることができます。 そうでない場合は、コードの手順に移動します。
 
@@ -114,8 +114,8 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 トレーニング プロセスの結果として 2 つのプロジェクトが作成されます。
 
-- TaxiFarePredictionML.ConsoleApp: モデルのトレーニングとサンプルの使用に関するコードが含まれる .NET Core コンソール アプリケーション。
-- TaxiFarePredictionML.Model: 入力および出力モデル データのスキーマを定義するデータ モデル、トレーニング時にパフォーマンスが最高のモデルの保存バージョン、および予測を行う `ConsumeModel` というヘルパー クラスを含む .NET Standard クラス ライブラリ。
+- TaxiFarePredictionML.ConsoleApp: モデルのトレーニングとサンプルの使用に関するコードが含まれている .NET Core コンソール アプリケーション。
+- TaxiFarePredictionML.Model: 入力および出力モデル データのスキーマを定義するデータ モデル、トレーニング中に最も高速であったモデルの保存されたバージョン、予測を行うために `ConsumeModel` を呼び出したヘルパー クラスが含まれている .NET Standard クラス ライブラリ。
 
 1. モデル ビルダー ツールのコードの手順で、 **[プロジェクトの追加]** を選択して、自動生成されたプロジェクトをソリューションに追加します。
 1. *[TaxiFarePrediction]* プロジェクトの *[Program.cs]* ファイルを開きます。
@@ -163,7 +163,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、次の作業を行う方法を学びました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 >
 > - データを準備して理解する
@@ -178,6 +178,6 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 
 - [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenario)
-- [回帰](../resources/glossary.md#regression)
+- [Regression](../resources/glossary.md#regression) (回帰)
 - [回帰モデルのメトリック](../resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)
 - [NYC TLC Taxi Trip データ セット](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

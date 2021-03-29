@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: モデル ビルダーを使用した保健衛生違反の分類'
+title: 'チュートリアル: モデル ビルダーを使用して保健衛生違反を分類する'
 description: このチュートリアルでは、サンフランシスコでのレストランの保健衛生違反の重大度を分類するために、ML.NET モデル ビルダーを使用して多クラス分類モデルを構築する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 468d09510cb55971d25877e40b7c54aae479ac84
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438184"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875617"
 ---
-# <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>チュートリアル: モデル ビルダーを使用してレストランの保健衛生の重大度を分類する
+# <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>チュートリアル: モデル ビルダーを使用してレストランの保健衛生違反の重大度を分類する
 
 保健衛生検査中に検出されたレストラン違反のリスク レベルを分類するために、モデル ビルダーを使用して多クラス分類モデルを構築する方法について説明します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "80438184"
 >
 > - データを準備して理解する
 > - シナリオを選択する
-> - データベースからのデータの読み込み
+> - データベースからデータを読み込む
 > - モデルをトレーニングする
 > - モデルを評価する
 > - モデルを使用して予測を行う
@@ -31,17 +31,17 @@ ms.locfileid: "80438184"
 > [!NOTE]
 > モデル ビルダーは現在のところ、プレビュー段階です。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 前提条件の一覧とインストール手順は、[モデル ビルダーのインストール ガイド](../how-to-guides/install-model-builder.md)を参照してください。
 
 ## <a name="model-builder-multiclass-classification-overview"></a>モデル ビルダー多クラス分類の概要
 
-このサンプルでは、モデル ビルダーでビルドされた機械学習モデルを使用して、保健衛生違反のリスクを分類する C# .NET Core コンソール アプリケーションを作成します。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub リポジトリにあります。
+このサンプルでは、モデル ビルダーでビルドされた機械学習モデルを使用して、保健衛生違反のリスクを分類する C# .NET Core コンソール アプリケーションを作成します。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub リポジトリにあります。
 
-## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
+## <a name="create-a-console-application"></a>コンソール アプリケーションの作成
 
-1. "RestaurantViolations" という名前の **C# .NET Core コンソール アプリケーション** を作成します。 **[ソリューションとプロジェクトを同じディレクトリに配置する]** を**オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を**オン**にします (VS 2017)。
+1. "RestaurantViolations" という名前の **C# .NET Core コンソール アプリケーション** を作成します。 **[ソリューションとプロジェクトを同じディレクトリに配置する]** を **オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を **オン** にします (VS 2017)。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
@@ -69,8 +69,8 @@ ms.locfileid: "80438184"
 
 モデルをトレーニングするには、モデル ビルダーによって提供される機械学習シナリオの一覧から選択します。 この場合、シナリオは "*問題の分類*" です。
 
-1. **ソリューション エクスプローラー**で、 *[RestaurantViolations]* プロジェクトを右クリックし、 **[追加]**  >  **[機械学習]** の順に選択します。
-1. このサンプルでは、シナリオは多クラス分類です。 モデル ビルダーの "*シナリオ*" の手順で、 **[問題の分類]** シナリオを選択します。
+1. **ソリューション エクスプローラー** で、*[RestaurantViolations]* プロジェクトを右クリックし、**[追加]** > **[機械学習]** の順に選択します。
+1. このサンプルでは、シナリオは多クラス分類です。 モデル ビルダーの "*シナリオ*" の手順で、**[問題の分類]** シナリオを選択します。
 
 ## <a name="load-the-data"></a>データを読み込む
 
@@ -78,13 +78,13 @@ ms.locfileid: "80438184"
 
 1. モデル ビルダー ツールのデータの手順で、データ ソースのドロップダウンから **[SQL Server]** を選択します。
 1. **[SQL Server データベースに接続]** テキスト ボックスの横にあるボタンを選択します。
-    1. **[データの選択]** ダイアログで、 **[Microsoft SQL Server データベース ファイル]** を選択します。
+    1. **[データの選択]** ダイアログで、**[Microsoft SQL Server データベース ファイル]** を選択します。
     1. **[常にこれを選択する]** チェックボックスをオフにして、 **[続行]** を選択します。
-    1. **[接続プロパティ]** ダイアログで、 **[参照]** を選択し、ダウンロードした *RestaurantScores.mdf* ファイルを選択します。
+    1. **[接続プロパティ]** ダイアログで、**[参照]** を選択し、ダウンロードした *RestaurantScores.mdf* ファイルを選択します。
     1. **[OK]** を選択します。
 1. **[テーブル名]** ドロップダウンから **[違反]** を選択します。
 1. **[予測する列 (ラベル)]** ドロップダウンで **[RiskCategory]** を選択します。
-1. **[入力列 (機能)]** ドロップダウンで選択されている既定の列の選択 ( **[InspectionType]** および **[ViolationDescription]** ) をそのまま使用します。
+1. **[入力列 (機能)]** ドロップダウンで選択されている既定の列の選択 (**[InspectionType]** および **[ViolationDescription]**) をそのまま使用します。
 1. **[トレーニング]** リンクを選択して、モデル ビルダーの次の手順に進みます。
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
@@ -107,18 +107,18 @@ ms.locfileid: "80438184"
 
 ## <a name="evaluate-the-model"></a>モデルを評価する
 
-トレーニングの手順の結果は、最良のパフォーマンスを示した 1 つのモデルになります。 モデル ビルダーの評価の手順の出力セクションには、 **[Best Model]\(最良のモデル\)** エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、 **[Best Model Accuracy]\(最良のモデル精度\)** のメトリックが含まれます。 さらに、探索された最大 5 つのモデルとそのメトリックが含まれている概要テーブルが表示されます。
+トレーニングの手順の結果は、最良のパフォーマンスを示した 1 つのモデルになります。 モデル ビルダーの評価の手順の出力セクションには、**[Best Model]\(最良のモデル\)** エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、**[Best Model Accuracy]\(最良のモデル精度\)** のメトリックが含まれます。 さらに、探索された最大 5 つのモデルとそのメトリックが含まれている概要テーブルが表示されます。
 
-精度のメトリックに不満がある場合、モデルのトレーニング時間を増やすか、さらに多くのデータを使用すると、モデルの精度を簡単に高めることができます。 それ以外の場合、 **[コード]** リンクを選択して、モデル ビルダーの最後の手順に進みます。
+精度のメトリックに不満がある場合、モデルのトレーニング時間を増やすか、さらに多くのデータを使用すると、モデルの精度を簡単に高めることができます。 それ以外の場合、**[コード]** リンクを選択して、モデル ビルダーの最後の手順に進みます。
 
 ## <a name="add-the-code-to-make-predictions"></a>予測を行うコードを追加する
 
 トレーニング プロセスの結果として 2 つのプロジェクトが作成されます。
 
-- RestaurantViolationsML.ConsoleApp: モデルのトレーニングとサンプルの使用に関するコードが含まれる C# .NET Core コンソール アプリケーション。
-- RestaurantViolationsML.Model: 入力および出力モデル データのスキーマを定義するデータ モデル、トレーニング時にパフォーマンスが最高のモデルの保存バージョン、および予測を行う `ConsumeModel` というヘルパー クラスを含む .NET Standard クラス ライブラリ。
+- RestaurantViolationsML.ConsoleApp: モデルのトレーニングとサンプルの使用に関するコードが含まれている C# .NET Core コンソール アプリケーション。
+- RestaurantViolationsML.Model: 入力および出力モデル データのスキーマを定義するデータ モデル、トレーニング中に最も高速であったモデルの保存されたバージョン、予測を行うために `ConsumeModel` を呼び出したヘルパー クラスが含まれている .NET Standard クラス ライブラリ。
 
-1. モデル ビルダーのコードの手順で、 **[プロジェクトの追加]** を選択して、自動生成されたプロジェクトをソリューションに追加します。
+1. モデル ビルダーのコードの手順で、**[プロジェクトの追加]** を選択して、自動生成されたプロジェクトをソリューションに追加します。
 1. *RestaurantViolations* プロジェクトで *Program.cs* ファイルを開きます。
 1. *RestaurantViolationsML.Model* プロジェクトを参照する次の using ステートメントを追加します。
 
@@ -144,9 +144,9 @@ ms.locfileid: "80438184"
 
 別のソリューション内で後で生成されたプロジェクトを参照する必要がある場合は、`C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` ディレクトリを検索することができます。
 
-おめでとうございます! これで、モデル ビルダーを使用して保健衛生違反のリスクを分類するための機械学習モデルを正常に作成できました。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub リポジトリにあります。
+おめでとうございます。 これで、モデル ビルダーを使用して保健衛生違反のリスクを分類するための機械学習モデルを正常に作成できました。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub リポジトリにあります。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 

@@ -2,12 +2,12 @@
 title: Docker アプリケーションの外側のループ DevOps ワークフローの手順
 description: DevOps の "外部ループ" ワークフローの手順について学習する
 ms.date: 01/06/2021
-ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 8bca36d5aa0fef95d684a96a5c6017ec15956358
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970298"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881095"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順
 
@@ -77,7 +77,7 @@ Visual Studio の Azure DevOps Services にはビルドとリリース テンプ
 
 これらの Visual Studio Team Services タスク、Azure でプロビジョニングされたビルド Linux-Docker ホスト/VM、および任意の Docker レジストリ (Azure Container Registry、Docker Hub、プライベート Docker DTR、またはその他の Docker レジストリ) では、非常に一貫した方法で Docker CI パイプラインをアセンブルすることができます。
 
-**_必要条件:_*
+***要件:***
 
 - Azure DevOps Services。オンプレミス インストールの場合は、Team Foundation Server 2015 Update 3 以降。
 
@@ -85,7 +85,8 @@ Visual Studio の Azure DevOps Services にはビルドとリリース テンプ
 
   これらのエージェントのいずれかを作成する簡単な方法は、Docker を使用し、Azure DevOps Services エージェントの Docker イメージに基づいてコンテナーを実行することです。
 
-> [!情報] Azure DevOps Services Docker CI パイプラインのアセンブルの詳細を確認し、チュートリアルを表示する場合は、これらのサイトにアクセスしてください。
+> [!TIP]
+> Azure DevOps Services Docker CI パイプラインのアセンブルの詳細を確認し、そのチュートリアルを表示するには、次のサイトにアクセスしてください。
 >
 > - Docker コンテナーとしての Visual Studio Team Services (現在の Azure DevOps Services) エージェントの実行: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
@@ -126,7 +127,7 @@ SCC リポジトリ (Git など) に格納されているアプリケーショ�
 
 ![カスタム イメージをコンテナー レジストリにプッシュする方法を示す図。](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-_*図 5-4**。 カスタム イメージの Docker レジストリへの公開
+**図 5-4** カスタム イメージの Docker レジストリへの公開
 
 ビルド、統合およびテスト (CI) に関する手順 3 では、結果の Docker イメージをプライベートまたはパブリック レジストリに公開する場合があります。 Azure Container Registry、Amazon Web Services Container Registry、Google Container Registry、Quay レジストリなど、クラウド ベンダーからの Docker レジストリには複数のオファリングがあります。
 
@@ -136,7 +137,8 @@ _*図 5-4**。 カスタム イメージの Docker レジストリへの公開
 
 **図 5-5** Azure DevOps Services を使用する Docker レジストリへのカスタム イメージの公開
 
-> [!情報] Azure Container Registry の詳細については、<https://aka.ms/azurecontainerregistry> を参照してください。
+> [!TIP]
+> Azure Container Registry の詳細については、<https://aka.ms/azurecontainerregistry> を参照してください。
 
 ## <a name="step-4-cd-deploy"></a>手順 4: CD、デプロイ
 
@@ -196,7 +198,8 @@ CLI ツールまたは Web UI からこれらのクラスターに手動でコ�
 
 **図 5-11** ACS DC/OS にデプロイする、Docker デプロイ タスクの定義
 
-> [!情報] Azure DevOps Services と Docker を使用する CD パイプラインの詳細については、<https://azure.microsoft.com/services/devops/pipelines> を参照してください
+> [!TIP]
+> Azure DevOps Services と Docker を使用する CD パイプラインの詳細については、<https://azure.microsoft.com/services/devops/pipelines> にアクセスしてください。
 
 ## <a name="step-5-run-and-manage"></a>手順 5: 実行と管理
 

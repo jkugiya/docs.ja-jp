@@ -2,12 +2,12 @@
 title: dotnet restore コマンド
 description: dotnet restore コマンドを使用して、依存関係とプロジェクト固有のツールを復元する方法について説明します。
 ms.date: 02/27/2020
-ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 14bcf65bb78e6d1d96604c8a10a3ba94fab80db8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634404"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874837"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -79,7 +79,7 @@ dotnet restore -h|--help
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
-  この設定は、信頼できるパッケージの[クロスプラットフォーム検証が NuGet でまだサポートされていない](https://github.com/NuGet/Home/issues/7939)ため、適用されません。
+  .NET 5.0.100 SDK では、クロスプラットフォーム パッケージの署名の検証のサポートが追加されました。
 
 ## <a name="arguments"></a>引数
 

@@ -2,12 +2,12 @@
 title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 02/05/2021
-ms.openlocfilehash: 0043372aed65fbc720a022a3d8c69abd25ceca0c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 0bc2b84964e8fc270fe7e9d635c4c18aa1abb390
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876101"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111141"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
@@ -211,6 +211,6 @@ foreach (var item in fibonacciNumbers)
 
 ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
 
-おつかれさまでした。リストについてのチュートリアルはこれで終了です。 [追加](../../tutorials/index.md)のチュートリアルを、ご自分の開発環境で続けて行うことができます。
+おつかれさまでした。リストについてのチュートリアルはこれで終了です。 [追加](../../tutorials/intro-to-csharp/introduction-to-classes.md)のチュートリアルを、ご自分の開発環境で続けて行うことができます。
 
 `List` 型の使用方法の詳細については、[コレクション](../../../standard/collections/index.md)に関する .NET 基礎の記事を参照してください。 その他の多くのコレクション型についても学習できます。

@@ -3,12 +3,12 @@ title: null 許容参照型を使用するようにコードベースを更新�
 description: null 許容参照型を使用するようにコードベースをアップグレードするための最適な方法を選択します。
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ab0970247c7e3f3c20d7fdb40ef035c4ba1d8b01
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: fff9ce4d053cc2543b0148d70435bdc793ecccd7
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "97866822"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637161"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>null 許容参照型を使用するようにライブラリを更新し、null 許容規則を呼び出し元に伝える
 
@@ -69,7 +69,7 @@ null 許容参照用にライブラリを更新すると、一部の変数や型
 > 1. ファイル名を *TemporaryGeneratedFile_* で開始します
 > 1. ファイル名の末尾を *.designer.cs*、 *.generated.cs*、 *.g.cs*、または *.g.i.cs* にします。
 >
-> ジェネレーターは、[`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md) プリプロセッサ ディレクティブを使用してオプトインできます。
+> ジェネレーターは、[`#nullable`](language-reference/preprocessor-directives.md#nullable-context) プリプロセッサ ディレクティブを使用してオプトインできます。
 
 ## <a name="should-nullable-warnings-introduce-breaking-changes"></a>null 許容の警告によって破壊的変更が発生するか
 
@@ -216,5 +216,5 @@ public string? VehicleRegistration { get; set; }
 
 ## <a name="see-also"></a>関連項目
 
-- [既存のコードベースを null 許容参照に移行する](tutorials/upgrade-to-nullable-references.md)
+- [既存のコードベースを null 許容参照に移行する](whats-new/tutorials/upgrade-to-nullable-references.md)
 - [EF Core での null 許容参照型の使用](/ef/core/miscellaneous/nullable-reference-types)

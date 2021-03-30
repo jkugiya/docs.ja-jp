@@ -1,5 +1,5 @@
 ---
-title: コード分析の警告を表示しない
+title: コード分析の警告を抑制する
 description: .NET コード分析の違反を抑制するためのさまざまな方法について説明します。
 ms.date: 01/28/2021
 dev_langs:
@@ -8,34 +8,34 @@ dev_langs:
 helpviewer_keywords:
 - code analysis, suppress warnings
 - suppress code analysis warnings
-ms.openlocfilehash: b08e93089975a59fabfeb0daaf6a2a6454b2c7e8
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
-ms.translationtype: MT
+ms.openlocfilehash: a8fdfbddd2393f9c6c8cd882a63a9ecc6cb1dc95
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99217263"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637040"
 ---
-# <a name="how-to-suppress-code-analysis-warnings"></a>コード分析の警告を非表示にする方法
+# <a name="how-to-suppress-code-analysis-warnings"></a>コード分析の警告を抑制する方法
 
 この記事では、.NET アプリのビルド時にコード分析からの警告を抑制するためのさまざまな方法について説明します。
 
 > [!TIP]
-> 開発環境として Visual Studio を使用している場合、 *電球* メニューには、警告を非表示にするコードを生成するオプションが用意されています。 詳細については、「 [違反の抑制](/visualstudio/code-quality/use-roslyn-analyzers?#suppress-violations)」を参照してください。
+> 開発環境として Visual Studio を使用している場合、"*電球*" メニューに、警告を非表示にするコードを生成するオプションが用意されています。 詳細については、「[違反を抑制する](/visualstudio/code-quality/use-roslyn-analyzers?#suppress-violations)」を参照してください。
 
-## <a name="disable-the-rule"></a>ルールを無効にする
+## <a name="disable-the-rule"></a>規則を無効にする
 
-警告の原因となっているコード分析規則を無効にすると、ファイルまたはプロジェクト全体の規則が無効になります (使用する [構成ファイル](configuration-files.md) のスコープによって異なります)。 ルールを無効にするには、構成ファイルで重要度をに設定し `none` ます。
+警告の原因となっているコード分析規則を無効にすると、ファイルまたはプロジェクト全体に対して規則が無効になります (使用する[構成ファイル](configuration-files.md)のスコープによって異なります)。 規則を無効にするには、構成ファイルでその重大度を `none` に設定します。
 
 ```ini
 [*.{cs,vb}]
 dotnet_diagnostic.<rule-ID>.severity = none
 ```
 
-規則の重大度の詳細については、「 [規則の重要度の構成](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level)」を参照してください。
+規則の重大度の詳細については、[規則の重大度の構成](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level)に関するセクションを参照してください。
 
-## <a name="use-a-preprocessor-directive"></a>プリプロセッサディレクティブを使用する
+## <a name="use-a-preprocessor-directive"></a>プリプロセッサ ディレクティブを使用する
 
-[#Pragma warning (C#)](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)または[Disable (Visual Basic)](../../visual-basic/language-reference/directives/disable-enable.md)ディレクティブを使用して、特定のコード行についてのみ警告を非表示にします。
+[#pragma warning (C#)](../../csharp/language-reference/preprocessor-directives.md#pragma-warning) または [Disable (Visual Basic)](../../visual-basic/language-reference/directives/disable-enable.md) ディレクティブを使用して、特定のコード行に対してのみ警告を抑制にします。
 
 ```csharp
     try { ... }
@@ -59,9 +59,9 @@ dotnet_diagnostic.<rule-ID>.severity = none
 
 ## <a name="use-the-suppressmessageattribute"></a>SuppressMessageAttribute を使用する
 
-を使用すると、 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> ソースファイルまたはプロジェクトのグローバル抑制ファイル (*GlobalSuppressions.cs* または *globalsuppressions*) のいずれかで警告を非表示にすることができます。 この属性は、プロジェクトまたはファイルの特定の部分のみで警告を非表示にする方法を提供します。
+<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> を使用すると、ソース ファイルまたはプロジェクトのグローバル抑制ファイル (*GlobalSuppressions.cs* または *GlobalSuppressions.vb*) のいずれかで警告を抑制することができます。 この属性は、プロジェクトまたはファイルの特定の部分でのみ警告を抑制する方法を提供します。
 
-属性の2つの必須の位置指定パラメーター <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> は、ルールの *カテゴリ* と *ルール ID* です。 次のコードスニペットは `"Usage"` 、 `"CA2200:Rethrow to preserve stack details"` これらのパラメーターにとを渡します。
+<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性の 2 つの必須の位置指定パラメーターは、規則の *category* と *rule ID* です。 次のコード スニペットは、これらのパラメーターに `"Usage"` と `"CA2200:Rethrow to preserve stack details"` を渡します。
 
 ```csharp
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CA2200:Rethrow to preserve stack details", Justification = "Not production code.")]
@@ -78,13 +78,13 @@ private static void IngorableCharacters()
 }
 ```
 
-グローバル抑制ファイルに属性を追加する場合は、抑制の範囲を目的のレベルに [限定](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope) します。たとえば、のようにし `"member"` ます。 警告を抑制する API は、プロパティを使用して指定し <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target> ます。
+グローバル抑制ファイルに属性を追加する場合は、抑制の[スコープ](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope)を `"member"` などの目的のレベルに設定します。 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target> プロパティを使用して、警告を抑制すべき API を指定します。
 
 ```csharp
 [assembly: SuppressMessage("Usage", "CA2200:Rethrow to preserve stack details", Justification = "Not production code.", Scope = "member", Target = "~M:MyApp.Program.IngorableCharacters")]
 ```
 
-明示的に指定されたユーザーソースにマップされない、コンパイラによって生成されるコードの警告を抑制するには、抑制属性をグローバル抑制ファイルに配置する必要があります。 たとえば、次のコードは、コンパイラによって生成されたコンストラクターに対する違反を抑制します。
+明示的に指定されたユーザー ソースにマップされない、コンパイラによって生成されるコードの警告を抑制するには、抑制属性をグローバル抑制ファイル内に配置する必要があります。 たとえば、次のコードは、コンパイラによって出力されたコンストラクターに対する違反を抑制します。
 
 ```csharp
 [module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="MyTools.Type..ctor()")]

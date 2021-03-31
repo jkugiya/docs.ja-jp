@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: .NET でのバッファーの使用'
 title: System.Buffers - .NET
 ms.date: 12/05/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: afcd6976e6220349fbec370c47b11596a35a81a2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 988ac5cae192b815ccac74f1bf15055538244bda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782430"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET でのバッファーの使用
 

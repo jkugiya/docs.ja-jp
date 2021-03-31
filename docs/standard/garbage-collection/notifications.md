@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ガベージ コレクションの通知'
 title: ガベージ コレクションの通知
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bbdb3cecde6a7e91b79992be9424ecffebfdaa15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782456"
 ---
 # <a name="garbage-collection-notifications"></a>ガベージ コレクションの通知
 

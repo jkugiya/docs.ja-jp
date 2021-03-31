@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML とリレーショナル データおよび ADO.NET との統合'
 title: XML とリレーショナル データおよび ADO.NET との統合
 ms.date: 03/30/2017
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 34dbd0723c1167ef699589d1750144cb26eb60b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 324142861de0b2018199f15ad5de7d3fe3654768
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782742"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML とリレーショナル データおよび ADO.NET との統合
 

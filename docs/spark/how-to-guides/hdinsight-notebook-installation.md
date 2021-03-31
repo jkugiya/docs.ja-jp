@@ -4,12 +4,12 @@ description: Azure HDInsight の Jupyter Notebook に .NET for Apache Spark を�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: b84d61c29d2b2aa7a9fee20a8af9f3eee23f7e8b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599656"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605478"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark クラスター上の Jupyter Notebook に .NET for Apache Spark をインストールする
 
@@ -38,20 +38,20 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
 1. ポータルで **[概要]** を選択した後、 **[Ambari ホーム]** を選択します。 入力を求められたら、クラスターのログイン資格情報を入力します。
 
-   ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/select-ambari.png)
+   ![クラスター ダッシュボードで [Ambari ホーム] を選択する](./media/hdinsight-notebook-installation/select-ambari.png)
 
 2. 左側のナビゲーション メニューから **[Spark2]** を選択し、 **[LIVY FOR SPARK2 SERVER]\(Spark2 の Livy サーバー\)** を選択します。
 
-   ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/select-livyserver.png)
+   ![[LIVY FOR SPARK2 SERVER] を選択する](./media/hdinsight-notebook-installation/select-livyserver.png)
 
 3. **hn0 で始まるホスト** を選択します。
 
-   ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/select-host.png)
+   !["hno..." が示されているホストが選択されている](./media/hdinsight-notebook-installation/select-host.png)
 
 4. **[Livy for Spark2 Server]\(Spark2 の Livy サーバー\)** の横にある省略記号を選択し、 **[停止]** を選択します。 メッセージが表示されたら、 **[OK]** を選択して続行します。
 
    Spark2 の Livy サーバーを停止します。
-   ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/stop-server.png)
+   ![省略記号、[停止] の順に選択する](./media/hdinsight-notebook-installation/stop-server.png)
 
 5. **hn1 で始まるホスト** に対して前の手順を繰り返します。
 
@@ -87,9 +87,9 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
 2. **[Spark2]** 、 **[CONFIGS]\(構成\)** の順に選択します。 次に、 **[Custom spark2-defaults]\(カスタム Spark2 既定値\)** を選択します。
 
-   ![構成の設定](./media/hdinsight-notebook-installation/spark-configs.png)
+   ![Ambari の [構成] タブ](./media/hdinsight-notebook-installation/spark-configs.png)
 
-3. **[プロパティの追加...]** を選択して、Spark の既定の設定を追加します。
+3. **[プロパティの追加]** を選択して、Spark の既定の設定を追加します。
 
    ![プロパティの追加](./media/hdinsight-notebook-installation/add-property.png)
 
@@ -109,7 +109,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
    たとえば、次の画像は、プロパティ 1 を追加するための設定をキャプチャしたものです。
 
-   ![構成の設定](./media/hdinsight-notebook-installation/add-sparkconfig.png)
+   ![Text プロパティの追加](./media/hdinsight-notebook-installation/add-sparkconfig.png)
 
    3 つのプロパティを追加したら、 **[保存]** を選択します。 構成の推奨事項に関する警告画面が表示された場合は、 **[PROCEED ANYWAY]\(警告を無視して続行\)** を選択します。
 
@@ -117,7 +117,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
    新しいプロパティを追加したら、その変更の影響を受けたコンポーネントを再起動する必要があります。 上部にある **[再起動]** を選択して、ドロップダウンから **[影響を受けるものをすべて再起動する]** を選択します。
 
-   ![構成の設定](./media/hdinsight-notebook-installation/restart-affected.png)
+   ![[再起動] > [影響を受けるものをすべて再起動する] が強調表示された [構成] タブ](./media/hdinsight-notebook-installation/restart-affected.png)
 
    メッセージが表示されたら、 **[CONFIRM RESTART ALL]\(すべて再起動\)** を選択して続行し、 **[OK]** をクリックして完了します。
 
@@ -142,7 +142,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
    df.Show();
    ```
 
-   ![Spark ジョブを送信する](./media/hdinsight-notebook-installation/create-df.png)
+   ![コマンドの実行を示すデータフレームを作成する](./media/hdinsight-notebook-installation/create-df.png)
 
    次のコード スニペットを使用して、ユーザー定義関数 (UDF) を登録し、データフレームを指定してその UDF を使用します。
 
@@ -151,7 +151,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
    df.Select(myawesomeudf(df["id"])).Show();
    ```
 
-   ![Spark ジョブを送信する](./media/hdinsight-notebook-installation/run-udf.png)
+   ![UDF を登録して使用する](./media/hdinsight-notebook-installation/run-udf.png)
 
 ## <a name="next-steps"></a>次の手順
 

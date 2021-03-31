@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XPathNavigator を使用した XML データの挿入'
 title: XPathNavigator による XML データの挿入
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-ms.openlocfilehash: 50e5b363a35eb3f11d7eb26bb34c53910a59201b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 586f1e3dfb85e5d0f704d502676a0d590e954402
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732112"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの挿入
 

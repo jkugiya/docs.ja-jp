@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 外部の XSLT スタイル シートとドキュメントの解決'
 title: 外部の XSLT スタイル シートとドキュメントの解決
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f95714b918429d48b88cfca7f49bef611a1efebd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783054"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>外部の XSLT スタイル シートとドキュメントの解決
 

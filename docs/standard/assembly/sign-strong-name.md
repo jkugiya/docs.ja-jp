@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f66b21c7b912cdf1b5e77a91cecd38580e495a51
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687660"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259656"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法: 厳密な名前でアセンブリに署名する
 
@@ -51,7 +51,7 @@ ms.locfileid: "92687660"
   
 ### <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>アセンブリ リンカーを使用してアセンブリを作成し、厳密な名前でそのアセンブリに署名する  
   
-[Visual Studio 用開発者コマンド プロンプト](../../framework/tools/developer-command-prompt-for-vs.md)で次のコマンドを入力します。  
+[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を開き、次のコマンドを入力します。  
 
 **al** **/out:** \<*assemblyName*> *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
@@ -80,7 +80,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
    > [!NOTE]
    > C# および Visual Basic コンパイラは、ソース コードで <xref:System.Reflection.AssemblyKeyFileAttribute> または <xref:System.Reflection.AssemblyKeyNameAttribute> 属性が見つかった場合、コンパイラ警告を発行します (CS1699 と BC41008)。 この警告は無視してかまいません。  
 
-次の例は、 *keyfile.snk* という名前のキー ファイルを指定して、<xref:System.Reflection.AssemblyKeyFileAttribute> 属性を使用します。このキー ファイルは、アセンブリがコンパイルされるディレクトリにあります。  
+次の例は、*keyfile.snk* という名前のキー ファイルを指定して、<xref:System.Reflection.AssemblyKeyFileAttribute> 属性を使用します。このキー ファイルは、アセンブリがコンパイルされるディレクトリにあります。  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];

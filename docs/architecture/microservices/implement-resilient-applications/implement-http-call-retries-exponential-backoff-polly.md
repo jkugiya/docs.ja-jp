@@ -2,12 +2,12 @@
 title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
 description: HTTP エラーを Polly と IHttpClientFactory で処理する方法について説明します
 ms.date: 01/13/2021
-ms.openlocfilehash: 8cffc644d73eaec5019e00c6a83de8635b569cde
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: c2831f73ed38b48fd32fa241f8fe1792b9adf3d4
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189051"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511789"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>IHttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -17,9 +17,9 @@ Polly とは、回復機能と一時的な障害処理の機能を提供する .
 
 次の手順では、前のセクションで説明した、`IHttpClientFactory` に統合された Polly で HTTP 再試行を使用する方法を示します。
 
-**ASP.NET Core 3.1 パッケージを参照する**
+**.NET 5 パッケージの参照**
 
-`IHttpClientFactory` は .NET Core 2.1 以降で使用できますが、最新の ASP.NET Core 3.1 パッケージを NuGet から入手し、プロジェクトで使用することをお勧めします。 また、通常は `Microsoft.Extensions.Http.Polly` 拡張機能パッケージを参照する必要もあります。
+`IHttpClientFactory` は .NET Core 2.1 以降で使用できますが、最新の .NET 5 パッケージを NuGet から入手し、プロジェクトで使用することをお勧めします。 また、通常は `Microsoft.Extensions.Http.Polly` 拡張機能パッケージを参照する必要もあります。
 
 **Startup で、Polly の再試行ポリシーでクライアントを構成する**
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 文字列を .NET データ型に変換する'
 title: 文字列から .NET データ型への変換
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2960657dc4d4a31eed85a9b8af04976692a4dc9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701472"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713937"
 ---
 # <a name="convert-strings-to-net-data-types"></a>文字列を .NET データ型に変換する
 
@@ -49,7 +50,7 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
   
  **出力**  
   
- `<Date>2001-08-04T00:00:00</Date>`。  
+ `<Date>2001-08-04T00:00:00</Date>`.  
   
  整数を文字列に変換するコードを次に示します。  
   

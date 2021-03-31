@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 外部リソースの解決'
 title: 外部リソースの解決
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8dcd508c2bc811601c6ae8fdbef40209ae520dcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686606"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783067"
 ---
 # <a name="resolving-external-resources"></a>外部リソースの解決
 

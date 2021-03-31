@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アンマネージド コードでの相互運用例外の処理'
 title: 例外の相互運用性
 ms.date: 01/16/2020
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - exceptions, unmanaged code
 - interop, exceptions
 - exceptions, interop
-ms.openlocfilehash: db7c9943c298607aa91a4bd08ddc12bbafc872be
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3062aea2632771605c5a3c942c8471309e043f60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713196"
 ---
 # <a name="working-with-interop-exceptions-in-unmanaged-code"></a>アンマネージド コードでの相互運用例外の処理
 

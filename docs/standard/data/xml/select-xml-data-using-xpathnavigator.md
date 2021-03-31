@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XPathNavigator を使用した XML データの選択'
 title: XPathNavigator を使用した XML データの選択
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 9b12e60fcfac8c8fc4c2f2c80aac7400dfc8d6f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6a5e80ef751838e02e10a0bcec53749fdf7d3ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673463"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782963"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator を使用した XML データの選択
 

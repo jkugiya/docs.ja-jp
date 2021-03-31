@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XslTransform クラスによる XSLT プロセッサの実装'
 title: XslTransform クラスによる XSLT プロセッサの実装
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: 57632321edf086b644da7ea4fca893edb589834f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 16173b0fe9261643dd497284a2e4d3dc583adee0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702809"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform クラスによる XSLT プロセッサの実装
 

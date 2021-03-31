@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: グレゴリオ暦以外の暦の日付を表示する方法'
 title: '方法: グレゴリオ暦以外の暦の日付を表示する'
 ms.date: 03/30/2017
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - calendars [.NET], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 9e8d628f3e15b080b4a5509726ece9da26523269
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 246878bb22adc722d69b1196c480e2989c24beee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629800"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>方法: グレゴリオ暦以外の暦の日付を表示する
 

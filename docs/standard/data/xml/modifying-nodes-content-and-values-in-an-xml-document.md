@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML ドキュメントのノード、コンテンツ、値の変更'
 title: XML ドキュメントのノード、コンテンツ、値の変更
 ms.date: 03/30/2017
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: c3f3f4a279f3bcb967e018abafbd2e1f7a0af473
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8bf67eb699605ccffdf8a4d2fb7120efa04576a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714472"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713495"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML ドキュメントのノード、コンテンツ、値の変更
 

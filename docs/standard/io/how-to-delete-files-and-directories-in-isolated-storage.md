@@ -1,5 +1,6 @@
 ---
-title: '方法 : 分離ストレージでファイルおよびディレクトリを削除する'
+description: '詳細情報: 分離ストレージでファイルおよびディレクトリを削除する方法'
+title: 方法:分離ストレージでファイルおよびディレクトリを削除する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-ms.openlocfilehash: ea1d7a460a8867f069aa4b4d915e03d6948e23b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9ea8ea16b4329989f8c2453153ef3d803a4cc598
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775683"
 ---
-# <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>方法 : 分離ストレージでファイルおよびディレクトリを削除する
+# <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>方法:分離ストレージでファイルおよびディレクトリを削除する
 
 分離ストレージ ファイル内のディレクトリとファイルを削除することができます。 ストア内では、ファイル名とディレクトリ名はオペレーティング システムに依存し、仮想ファイル システムのルートに対して相対的に指定されます。 Windows オペレーティング システムでは大文字小文字は区別されません。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "95688511"
  [!code-csharp[Conceptual.IsolatedStorage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source4.cs#4)]
  [!code-vb[Conceptual.IsolatedStorage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>
 - [分離ストレージ](isolated-storage.md)

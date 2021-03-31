@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML データ型から CLR 型へのマッピング'
 title: XML データ型から CLR 型へのマッピング
 ms.date: 03/30/2017
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: 1a79d178a4e027973591061634cfb5904dd3e0cc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7838eb94ff55e4f0e5ac9e0c92b0cbb64e70ab1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732073"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML データ型から CLR 型へのマッピング
 

@@ -1,5 +1,6 @@
 ---
-title: 'チュートリアル: カスタム データフロー ブロックの型の作成'
+description: '詳細情報: カスタム データフロー ブロックの型の作成に関するチュートリアル'
+title: チュートリアル:カスタム データ フロー ブロックの型の作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-ms.openlocfilehash: f7bbc967c609645e1c965112db7987e637c2eb5b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6888c7410bc0a337a466a699deb2c8f663058b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731527"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>チュートリアル: カスタム データフロー ブロックの型の作成
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>チュートリアル:カスタム データ フロー ブロックの型の作成
 
 TPL データ フロー ライブラリには、さまざまな機能が有効になるいくつかのデータフロー ブロックの種類が用意されていますが、カスタム ブロックの種類を作成することもできます。 このドキュメントでは、カスタム動作を実装するデータフロー ブロックの種類を作成する方法について説明します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
 
  [データフロー](dataflow-task-parallel-library.md)に関するページを読んでからこのドキュメントをお読みください。  
 
@@ -55,6 +56,6 @@ TPL データ フロー ライブラリには、さまざまな機能が有効�
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データフロー](dataflow-task-parallel-library.md)

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: .NET 型から文字列への変換'
 title: .NET 型から文字列への変換
 ms.date: 03/30/2017
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
-ms.openlocfilehash: 9744224b4346b865a112b0eb6957f12553e1ec5f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5a3e391eb0e6dc21ae800ede43247d24199efd0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830988"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642527"
 ---
 # <a name="convert-net-types-to-strings"></a>.NET 型を文字列に変換する
 

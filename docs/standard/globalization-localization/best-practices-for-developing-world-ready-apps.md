@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 推奨される国際対応アプリケーション開発手順'
 title: 推奨される国際対応アプリケーション開発手順
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET], best practices
 - international applications [.NET], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: 3705fece48c136f73c4e31cd025e76dc570a142b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b82b926217fd0ed5054f85201fbc877f818170d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702302"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>推奨される国際対応アプリケーション開発手順
 

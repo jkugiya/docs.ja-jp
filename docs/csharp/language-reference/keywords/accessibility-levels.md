@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 6e1a5bddc0d40b0b62c7b07dbc6b4134a3447a95
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 509902e9998af421c0afd31070b1be36d64df0f8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91168791"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604594"
 ---
 # <a name="accessibility-levels-c-reference"></a>アクセシビリティ レベル (C# リファレンス)
 
@@ -40,10 +40,12 @@ ms.locfileid: "91168791"
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|なし|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|なし|  
+|`interface`|`public`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`\*<br /><br /> `protected internal` <br /><br />`private protected`|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
-  
- 入れ子にされた型のアクセシビリティは、その型の[アクセシビリティ ドメイン](./accessibility-domain.md)によって決まります。このアクセシビリティ ドメインは、そのメンバーに対して宣言されているアクセシビリティと、そのメンバーの直接のコンテナーである型のアクセシビリティ ドメインの両方によって決定されます。 ただし、入れ子にされた型のアクセシビリティ ドメインが、その型を含んでいる型のアクセシビリティ ドメインを上回ることはできません。  
+
+\* `private` アクセシビリティを持つ `interface` メンバーには、既定の実装が必要です。
+
+入れ子にされた型のアクセシビリティは、その型の[アクセシビリティ ドメイン](./accessibility-domain.md)によって決まります。このアクセシビリティ ドメインは、そのメンバーに対して宣言されているアクセシビリティと、そのメンバーの直接のコンテナーである型のアクセシビリティ ドメインの両方によって決定されます。 ただし、入れ子にされた型のアクセシビリティ ドメインが、その型を含んでいる型のアクセシビリティ ドメインを上回ることはできません。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 

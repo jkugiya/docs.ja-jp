@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 日付形式の変更に関する正規表現の例'
 title: '正規表現の例: 日付形式の変更'
 ms.date: 06/30/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 9e23a11bd6eac0a77ef04d95cfab8db5d5e26807
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4617188e958042dce9709f8baf32f5b4e2930789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702939"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>正規表現の例: 日付形式の変更
 
@@ -39,7 +40,7 @@ ms.locfileid: "95733569"
 
  この正規表現パターン `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` の解釈を次の表に示します。  
   
-|パターン|[説明]|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`(?<month>\d{1,2})`|1 桁または 2 桁の 10 進数と一致します。 これは、`month` キャプチャ グループです。|  
@@ -51,7 +52,7 @@ ms.locfileid: "95733569"
   
  パターン `${day}-${month}-${year}` は、次の表に示すように置換文字列を定義します。  
   
-|パターン|[説明]|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`$(day)`|`day` キャプチャ グループによってキャプチャされた文字列を追加します。|  
 |`-`|ハイフンを追加します。|  
@@ -59,6 +60,6 @@ ms.locfileid: "95733569"
 |`-`|ハイフンを追加します。|  
 |`$(year)`|`year` キャプチャ グループによってキャプチャされた文字列を追加します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET の正規表現](regular-expressions.md)

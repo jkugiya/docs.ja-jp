@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SpinLock のスレッド追跡モードを有効にする方法'
 title: '方法: SpinLock のスレッド追跡モードを有効にする'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-ms.openlocfilehash: c33978226a02f65fdc495762af9286ba2daf9454
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 376582c7ccde999bd010753819159f6f8da92bf3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666902"
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>方法: SpinLock のスレッド追跡モードを有効にする
 
@@ -29,6 +30,6 @@ ms.locfileid: "95723741"
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SpinLock](spinlock.md)

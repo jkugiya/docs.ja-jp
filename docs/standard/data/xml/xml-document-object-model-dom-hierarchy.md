@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML ドキュメント オブジェクト モデル (DOM) の階層構造'
 title: XML ドキュメント オブジェクト モデル (DOM) の階層構造
 ms.date: 03/30/2017
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-ms.openlocfilehash: 24ef51a18392fe3034e64bd585d879941fca4b95
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 66251169be0e386d3a0323c7d744804225ad6200
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782768"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML ドキュメント オブジェクト モデル (DOM) の階層構造
 

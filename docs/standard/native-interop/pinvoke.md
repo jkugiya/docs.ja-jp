@@ -2,12 +2,12 @@
 title: プラットフォーム呼び出し (P/Invoke)
 description: .NET で P/Invoke を介してネイティブ関数を呼び出す方法について説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: fa8b43edfba50fbc620f257c4e7caf1673f83235
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cde52d9d0a4e3b84fec632b615b635e7b7df3924
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706306"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678270"
 ---
 # <a name="platform-invoke-pinvoke"></a>プラットフォーム呼び出し (P/Invoke)
 
@@ -19,9 +19,9 @@ P/Invoke は、アンマネージド ライブラリ内の構造体、コール�
 
 上の例は単純ですが、マネージド コードからアンマネージド 関数を呼び出すために必要なことを示しています。 この例の手順を説明します。
 
-- 1 行目は、必要なすべての項目を保持する名前空間 `System.Runtime.InteropServices` のステートメントの使用を示しています。
-- 7 行目で `DllImport` 属性を導入しています。 この属性は、ランタイムにアンマネージ DLL を読み込むように伝えるため、きわめて重要です。 渡された文字列は、ターゲット関数が入っている DLL です。 さらに、文字列のマーシャリングに使用する[文字セット](./charset.md)を指定します。 最後に、この関数が [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) を呼び出し、ランタイムでそのエラー コードをキャプチャしてユーザーが <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> を介して取得できるように指定します。
-- 8 行目は、P/Invoke 作業の最も重要な箇所です。 ここでは、アンマネージドと**正確に同じシグネチャ**を持つマネージド メソッドを定義しています。 宣言には新しいキーワード `extern` があることがわかります。これはランタイムに、これが外部メソッドであり、それを呼び出したときに、ランタイムが `DllImport` 属性に指定された DLL からそれを見つける必要があることを伝えます。
+- 2 行目は、必要なすべての項目を保持する名前空間 `System.Runtime.InteropServices` のステートメントの使用を示しています。
+- 8 行目で、`DllImport` 属性を導入しています。 この属性は、ランタイムにアンマネージ DLL を読み込むように伝えるため、きわめて重要です。 渡された文字列は、ターゲット関数が入っている DLL です。 さらに、文字列のマーシャリングに使用する[文字セット](./charset.md)を指定します。 最後に、この関数が [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) を呼び出し、ランタイムでそのエラー コードをキャプチャしてユーザーが <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> を介して取得できるように指定します。
+- 9 行目は、P/Invoke 作業の最も重要な箇所です。 ここでは、アンマネージドと **正確に同じシグネチャ** を持つマネージド メソッドを定義しています。 宣言には新しいキーワード `extern` があることがわかります。これはランタイムに、これが外部メソッドであり、それを呼び出したときに、ランタイムが `DllImport` 属性に指定された DLL からそれを見つける必要があることを伝えます。
 
 例の残りの部分は、その他のマネージド メソッドと同じように、メソッドを呼び出しているだけです。
 
@@ -35,7 +35,7 @@ P/Invoke は、アンマネージド ライブラリ内の構造体、コール�
 
 ## <a name="invoking-managed-code-from-unmanaged-code"></a>アンマネージド コードからのマネージド コードの呼び出し
 
-ランタイムは通信が双方向にフローする通信を許可しているため、関数ポインターを使用して、ネイティブ関数からマネージド コードをコール バックすることができます。 マネージド コードで、関数ポインターに最も近いものが、**デリゲート**であるため、これをネイティブ コードからマネージド コードへのコールバックを許可するために使います。
+ランタイムは通信が双方向にフローする通信を許可しているため、関数ポインターを使用して、ネイティブ関数からマネージド コードをコール バックすることができます。 マネージド コードで、関数ポインターに最も近いものが、**デリゲート** であるため、これをネイティブ コードからマネージド コードへのコールバックを許可するために使います。
 
 この機能を使用する方法は、前述のマネージドからネイティブへのプロセスに似ています。 指定されたコールバックに対し、ユーザーがシグネチャと一致するデリゲートを定義し、それを外部メソッドに渡します。 ランタイムは、他のすべてのことを処理します。
 

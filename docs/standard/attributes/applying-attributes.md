@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 属性を適用する'
 title: 属性の適用
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET], attributes
 - attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 83cfb1d5b5aa3ebc8651406850a758146fd329d4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 18825d3b4d6fc20b23755f58f355c783c0734041
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829103"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732164"
 ---
 # <a name="apply-attributes"></a>属性を適用する
 

@@ -1,5 +1,6 @@
 ---
-title: '方法: カスタムの PLINQ 集約関数を記述する'
+description: '詳細情報: カスタムの PLINQ 集約関数を記述する方法'
+title: 方法:カスタムの PLINQ 集約関数を記述する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: dc03802c960c0926380d7b7fa44fdf436b8fea89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a16b211ee735b51ed56dd7af3a8602e0f8cd3f28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734258"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701613"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>方法: カスタムの PLINQ 集約関数を記述する
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>方法:カスタムの PLINQ 集約関数を記述する
 
 この例は、<xref:System.Linq.ParallelEnumerable.Aggregate%2A> メソッドを使用して、カスタム集計関数をソース シーケンスに適用する方法を示しています。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "95734258"
   
  ラムダ式の本体が単一の式で構成されている場合、<xref:System.Func%602?displayProperty=nameWithType> デリゲートの戻り値は式の値になることに注意してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

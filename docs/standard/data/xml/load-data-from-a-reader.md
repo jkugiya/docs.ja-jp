@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: リーダーからのデータの読み込み'
 title: リーダーからのデータの読み込み
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7f21ff96dd616fa9919d02d3a7edfd4ac8d0678
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732086"
 ---
 # <a name="load-data-from-a-reader"></a>リーダーからのデータの読み込み
 

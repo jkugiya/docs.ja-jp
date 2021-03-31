@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データフロー ブロックとの間でメッセージの読み取りと書き込みを行う方法'
 title: '方法: データフロー ブロックとの間でメッセージの読み取りと書き込みを行う'
 ms.date: 09/10/2020
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-ms.openlocfilehash: be0e78989105cc59bd041ceb8c6f31073a702f83
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7571ac7acf3dad6dedb1e16546197c5f0e72a9a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820788"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798057"
 ---
 # <a name="how-to-write-and-read-messages-from-a-dataflow-block"></a>方法: データフロー ブロックとの間でメッセージの読み取りと書き込みを行う
 

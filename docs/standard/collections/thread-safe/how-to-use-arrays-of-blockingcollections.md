@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: パイプラインでブロッキング コレクションの配列を使用する方法'
 title: '方法: パイプラインでブロッキング コレクションの配列を使用する'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking collections in pipeline
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
-ms.openlocfilehash: 55dc3e9934efa153c61322f63b7dde8077442fd9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8d0da612a7e742c85b1133908b8d54a4f9b0fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676054"
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>方法: パイプラインでブロッキング コレクションの配列を使用する
 
@@ -25,7 +26,7 @@ ms.locfileid: "95733465"
  [!code-csharp[CDS_BlockingCollection#07](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example07.cs#07)]
  [!code-vb[CDS_BlockingCollection#07](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/bcpipeline.vb#07)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [スレッドセーフなコレクション](index.md)

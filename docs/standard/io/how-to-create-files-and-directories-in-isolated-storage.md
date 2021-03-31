@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 分離ストレージでファイルおよびディレクトリを作成する方法'
 title: '方法: 分離ストレージでファイルおよびディレクトリを作成する'
 ms.date: 03/30/2017
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: 1f6e8e1a048fcf7f8fd278eaac4988fa0e35791d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dd258c38c1a02771fdd677448854c34c9014a530
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775696"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>方法: 分離ストレージでファイルおよびディレクトリを作成する
 

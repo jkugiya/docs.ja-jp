@@ -5,12 +5,12 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 39c4aeef0b02a6bf47d78e6bf53cd42b4f592946
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 2df774110d3355bf75a14e211555984a12cf7fa4
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282100"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231395"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>チュートリアル: ML.NET でマトリックス因子分解を使用して映画レコメンダーをビルドする
 
@@ -52,13 +52,13 @@ ms.locfileid: "86282100"
 
 2. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットを保存します。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
+    **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
 
 3. **Microsoft.ML** と **Microsoft.ML.Recommender** NuGet パッケージをインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.Recommender** に対してこれらの手順を繰り返します。
+    **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.Recommender** に対してこれらの手順を繰り返します。
 
 4. *Program.cs* の先頭に次の `using` ステートメントを追加します。
 
@@ -117,7 +117,7 @@ ML.NET プロセスの最初の手順では、モデルのトレーニングと�
 
 プロジェクトに新しいクラスを追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[追加]、[新しいアイテム]** の順に選びます。
+1. **ソリューション エクスプローラー** で、プロジェクトを右クリックして、 **[追加]、[新しいアイテム]** の順に選びます。
 
 2. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*MovieRatingData.cs*」に変更します。 次に **[追加]** を選択します。
 
@@ -169,20 +169,6 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
 ## <a name="build-and-train-your-model"></a>モデルを構築してトレーニングする
 
-ML.NET には、次の 3 つの主要な概念があります。[データ](../resources/glossary.md#data)、[トランスフォーマー](../resources/glossary.md#transformer)、および[エスティメーター](../resources/glossary.md#estimator)です。
-
-機械学習のトレーニング アルゴリズムには、特定の形式のデータが必要です。 `Transformers` は表形式のデータを互換性のある形式に変換 (トランスフォーム) するために使用されます。
-
-![トランスフォーマー データフローの図。](./media/movie-recommendation/data-transformer-transformed.png)
-
-`Estimators` を作成して、ML.NET で `Transformers` を作成します。 `Estimators` はデータを取得して `Transformers` を返します。
-
-![エスティメーター データフローの図。](./media/movie-recommendation/data-estimator-transformer.png)
-
-モデルのトレーニングに使用するレコメンデーション トレーニング アルゴリズムは、`Estimator` の一例です。
-
-次の手順に従って `Estimator` を構築します。
-
 `LoadData()` メソッドの直後に、次のコードを使用して `BuildAndTrainModel()` メソッドを作成します。
 
 ```csharp
@@ -229,6 +215,8 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 [!code-csharp[FitModel](./snippets/movie-recommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) メソッドは、指定されたトレーニング データセットを使用してモデルをトレーニングします。 正確には、データを変換してトレーニングを適用することで、`Estimator` 定義を実行し、トレーニング済みモデル (`Transformer`) を返します。
+
+ML.NET のモデル トレーニング ワークフローに関する詳細については、「[ML.NET の概要とそのしくみ](../how-does-mldotnet-work.md#code-workflow)」を参照してください。
 
 `Main()` メソッドの次のコード行として以下を追加して、`BuildAndTrainModel()` メソッドを呼び出し、トレーニング済みモデルを返します。
 

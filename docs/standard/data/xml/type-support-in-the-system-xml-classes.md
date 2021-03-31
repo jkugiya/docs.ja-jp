@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: System.Xml クラスでの型のサポート'
 title: System.Xml クラスでの型のサポート
 ms.date: 03/30/2017
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: 6fe55c64bc9bd17d5416eebf77060f2be27b81bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0cc30a0f3da3aba4533f81ec3360a1f660f1f127
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782898"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml クラスでの型のサポート
 

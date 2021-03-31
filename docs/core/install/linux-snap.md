@@ -4,12 +4,12 @@ description: Snap を使用して Linux に .NET SDK または .NET ランタイ
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 741933b5ca6f01d73b388675fe7f8a43c4efb0f9
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 0d91f5049c92df240e2c3e26bc67952abe17fedc
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970928"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190100"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-with-snap"></a>Snap を使用して .NET SDK または .NET ランタイムをインストールする
 
@@ -87,6 +87,25 @@ sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
 コマンドの形式は次のとおりです: `sudo snap alias {package}.{command} {alias}`。 `{alias}` の名前は自由に選択できます。 たとえば、snap によってインストールされた特定のバージョンにちなんでコマンドの名前を指定できます: `sudo snap alias dotnet-runtime-50.dotnet dotnet50`。 コマンド `dotnet50` を使用すると、特定のバージョンの .NET が呼び出されます。 ただし、異なるエイリアスの選択は、ほとんどのチュートリアルや例と互換性がありません。それらでは、`dotnet` コマンドを使用できることが想定されているためです。
+
+## <a name="export-the-install-location"></a>インストール場所をエクスポートする
+
+`DOTNET_ROOT` 環境変数は、.NET がインストールされている場所を判断するためにツールによって使用されることがよくあります。 スナップを使用して .NET をインストールすると、この環境変数は構成されません。 プロファイルで *DOTNET_ROOT* 環境変数を構成する必要があります。 スナップへのパスは、`/snap/{package}/current` の形式を使用します。 たとえば、`dotnet-sdk` スナップをインストールした場合は、次のコマンドを使用して、.NET が配置されている場所に環境変数を設定します。
+
+```bash
+export DOTNET_ROOT=/snap/dotnet-sdk/current
+```
+
+> [!TIP]
+> 上記の `export` コマンドは、コマンドを実行したターミナル セッションの環境変数のみを設定します。
+>
+> シェル プロファイルを編集して、コマンドを永続的に追加することができます。 Linux ではさまざまなシェルを使用でき、それぞれに異なるプロファイルがあります。 次に例を示します。
+>
+> - **Bash シェル**: *~/.bash_profile*、 *~/.bashrc*
+> - **Korn シェル**: *~/.kshrc* または *.profile*
+> - **Z シェル**: *~/.zshrc* または *.zprofile*
+>
+> シェルの適切なソース ファイルを編集し、`export DOTNET_ROOT=/snap/dotnet-sdk/current` を追加します。
 
 ## <a name="tlsssl-certificate-errors"></a>TLS/SSL 証明書のエラー
 

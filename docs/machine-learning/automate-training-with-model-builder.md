@@ -3,12 +3,12 @@ title: モデル ビルダーの概要としくみ
 description: ML.NET モデル ビルダーを使用し、機械学習モデルを自動的にトレーニングする方法
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161141"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231421"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>モデル ビルダーの概要としくみ
 
@@ -34,6 +34,21 @@ ML.NET モデル ビルダーは、直観的なグラフィックスでカスタ
 - 銀行取引が詐欺かどうかを検出する
 - 顧客がフィードバックした問題を社内の該当チームに送信する
 
+各シナリオは、次を含む、異なる Machine Learning タスクにマッピングされます。
+
+- 二項分類
+- 多クラス分類
+- 回帰
+- クラスタリング
+- 異常検出
+- 順位付け
+- 推奨
+- 予測
+
+たとえば、センチメントをポジティブまたはネガティブとして分類するシナリオは、二項分類タスクに該当します。
+
+ML.NET でサポートされているさまざまな ML タスクに関する詳細については、「[ML.NET での機械学習のタスク](resources/tasks.md)」を参照してください。
+
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>自分に最適な機械学習シナリオとは?
 
 モデル ビルダーでは、シナリオを選択する必要があります。 シナリオの種類は、行おうとしている予測の種類によって異なります。
@@ -48,7 +63,7 @@ ML.NET モデル ビルダーは、直観的なグラフィックスでカスタ
 
 #### <a name="value-prediction"></a>値の予測
 
-回帰は、数値を予測する目的で利用されます。
+回帰タスクに属する値の予測は、数字の予測に使用されます。
 
 ![価格予測、売上予測、予測メンテナンスなどの回帰の例を示す図](media/regression-examples.png)
 

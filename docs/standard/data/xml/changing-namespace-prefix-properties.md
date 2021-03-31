@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 名前空間プレフィックス プロパティの変更'
 title: 名前空間プレフィックス プロパティの変更
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: a4ba378620d0c5ec01aaa5d87020c33fdbffcf01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f6ca7d1c732f357a2c3ff8ba847d65314da81083
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714002"
 ---
 # <a name="changing-namespace-prefix-properties"></a>名前空間プレフィックス プロパティの変更
 

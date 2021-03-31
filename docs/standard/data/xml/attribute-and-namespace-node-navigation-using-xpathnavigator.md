@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XPathNavigator を使用する属性と名前空間のナビゲーション'
 title: XPathNavigator を使用する属性と名前空間のナビゲーション
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0924f7177485a87376e97501effa28e494be90b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714106"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator を使用する属性と名前空間のナビゲーション
 
@@ -92,7 +93,7 @@ ms.locfileid: "95725392"
   
 - <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、および `xmlns="http://www.contoso.com"`。  
   
-- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`。  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
 > <xref:System.Xml.XPath.XPathNavigator> クラスは、ドキュメントの逆順で名前空間ノードを返します。 したがって、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> は原則的に、現在のスコープ内の最後の名前空間ノードに移動します。  

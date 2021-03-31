@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML スキーマ オブジェクト モデル (SOM)'
 title: XML スキーマ オブジェクト モデル (SOM)
 ms.date: 03/30/2017
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: b2af024f9821401b1380347580cc0dc5aeb21c3c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7829c42bf5a2daef2d1245703c04b956cae9540d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782703"
 ---
 # <a name="xml-schema-object-model-som"></a>XML スキーマ オブジェクト モデル (SOM)
 

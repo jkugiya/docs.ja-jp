@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XSLT エラーの解決'
 title: XSLT エラーの解決
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5e31059554d36efd4c8738da7720e0ddf04999c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783158"
 ---
 # <a name="recoverable-xslt-errors"></a>XSLT エラーの解決
 

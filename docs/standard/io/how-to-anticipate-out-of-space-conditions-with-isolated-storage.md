@@ -1,5 +1,6 @@
 ---
-title: '方法: 分離ストレージの領域不足状態に備える'
+description: '詳細情報: 分離ストレージの領域不足状態に備える方法'
+title: 方法:分離ストレージの領域不足状態に備える
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: c8052030cdc385fc54852bb8ec48c783f2ee5bc4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 782fcf66a8cf3f609153c897fb9248f53a764150
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775800"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>方法: 分離ストレージの領域不足状態に備える
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>方法:分離ストレージの領域不足状態に備える
 
 分離ストレージを使用するコードは、分離ストレージ ファイルとディレクトリが存在するデータ コンパートメントの最大サイズを規定する[クォータ](isolated-storage.md#quotas)の制約を受けます。 クォータはセキュリティ ポリシーによって定義され、管理者が構成できます。 データの書き込み時に許容される最大サイズを超えると、<xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外がスローされ、操作は失敗します。 データ ストレージを容量不足にしてアプリケーションの要求拒否を引き起こす可能性がある悪意のあるサービス拒否攻撃を、この方法で防ぐことができます。
 
@@ -44,7 +45,7 @@ ms.locfileid: "94830845"
 [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
 [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [分離ストレージ](isolated-storage.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML スキーマの作成'
 title: XML スキーマの作成
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a748560b128ff16ea3cceb9be37e427396ec9dfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725379"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642618"
 ---
 # <a name="building-xml-schemas"></a>XML スキーマの作成
 

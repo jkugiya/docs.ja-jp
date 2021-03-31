@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 6079fc5d2611ed1111d39d3f39e4c91817db528f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863943"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189879"
 ---
 # <a name="properties-c-programming-guide"></a>プロパティ (C# プログラミング ガイド)
 
-プロパティは、プライベート フィールドの値の読み取り、書き込み、または計算を行う、柔軟な機構が用意されたメンバーです。 プロパティは、パブリック データのメンバーと同様に使用できますが、実際は*アクセサー*という特殊なメソッドです。 メソッドの安全性と柔軟性を高めながら、簡単にデータにアクセスできます。  
+プロパティは、プライベート フィールドの値の読み取り、書き込み、または計算を行う、柔軟な機構が用意されたメンバーです。 プロパティは、パブリック データのメンバーと同様に使用できますが、実際は *アクセサー* という特殊なメソッドです。 メソッドの安全性と柔軟性を高めながら、簡単にデータにアクセスできます。  
 
 ## <a name="properties-overview"></a>プロパティの概要  
   
 - プロパティを使えば、実装や検査コードを隠したままで、値の取得と設定についてパブリックな方法をクラスが公開できます。  
   
-- [get](../../language-reference/keywords/get.md) プロパティ アクセサーはプロパティ値を取得するために使用し、[set](../../language-reference/keywords/set.md) プロパティ アクセサーは新しい値を割り当てるために使用します。 これらのアクセサーには異なるアクセス レベルを指定できます。 詳細については、「[アクセサーのアクセシビリティの制限](./restricting-accessor-accessibility.md)」を参照してください。  
+- [get](../../language-reference/keywords/get.md) プロパティ アクセサーはプロパティ値を取得するために使用し、[set](../../language-reference/keywords/set.md) プロパティ アクセサーは新しい値を割り当てるために使用します。 C# 9 以降では、オブジェクトの構築時にのみ、[init](../../language-reference/keywords/init.md) プロパティ アクセサーを使用して新しい値が割り当てられます。 これらのアクセサーには異なるアクセス レベルを指定できます。 詳細については、「[アクセサーのアクセシビリティの制限](./restricting-accessor-accessibility.md)」を参照してください。  
   
-- `set` アクセサーで割り当てる値は [value](../../language-reference/keywords/value.md) キーワードを使用して定義します。  
+- `set` または `init` アクセサーで割り当てる値は [value](../../language-reference/keywords/value.md) キーワードを使用して定義します。  
 - プロパティの種類には、*読み取り/書き込み* (`get` アクセサーと `set` アクセサーの両方を備える)、*読み取り専用* (`get` アクセサーのみで `set` アクセサーはない)、*書き込み専用* (`set` アクセサーのみで `get` アクセサーはない) があります。 書き込み専用のプロパティの使用頻度は低く、ほとんどの場合、機密データへのアクセスを制限するために使用されます。
 
 - カスタムのアクセサー コードを必要としない単純なプロパティは、式本体の定義として、または[自動実装プロパティ](./auto-implemented-properties.md)として実装できます。
@@ -54,7 +54,7 @@ ms.locfileid: "86863943"
 
 ロジックを追加しなくても、プロパティの `get` アクセサーと `set` アクセサーはバッキング フィールドに値を割り当てたりバッキング フィールドから取得したりすることができます。 この自動実装プロパティを使用すると、C# コンパイラによってバッキング フィールドが透過的に提供されるため、コードを簡略化できます。
 
-プロパティが `get` アクセサーと `set` アクセサーの両方を備えている場合は、両方を自動実装する必要があります。 自動実装プロパティを定義するには、実装を省略して `get` キーワードと `set` キーワードを使用します。 次の例は前の例と似ていますが、`Name` と `Price` が自動実装プロパティである点が異なります。 この例では、パラメーター化されたコンストラクターも削除されているため、`SaleItem` オブジェクトがパラメーターなしのコンストラクターの呼び出しと[オブジェクト初期化子](object-and-collection-initializers.md)を使用して初期化されています。
+プロパティに `get` と `set` (または `get` と `init`) の両方のアクセサーがある場合は、どちらも自動実装する必要があります。 自動実装プロパティを定義するには、実装を省略して `get` キーワードと `set` キーワードを使用します。 次の例は前の例と似ていますが、`Name` と `Price` が自動実装プロパティである点が異なります。 この例では、パラメーター化されたコンストラクターも削除されているため、`SaleItem` オブジェクトがパラメーターなしのコンストラクターの呼び出しと[オブジェクト初期化子](object-and-collection-initializers.md)を使用して初期化されています。
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

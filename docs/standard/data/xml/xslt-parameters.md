@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XSLT パラメーター'
 title: XSLT パラメーター
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: 64a62840594773270a658738120812c59b4896cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d6d3b239d3c442e01e71fc943dedde9292cc344
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782521"
 ---
 # <a name="xslt-parameters"></a>XSLT パラメーター
 

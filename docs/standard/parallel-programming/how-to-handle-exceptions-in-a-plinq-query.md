@@ -1,5 +1,6 @@
 ---
-title: '方法: PLINQ クエリの例外を処理する'
+description: '詳細情報: PLINQ クエリの例外を処理する方法'
+title: 方法:PLINQ クエリの例外を処理する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: aa583d8c31381d23e22f271db3d42d35e1fa14b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3699a913f227ac931dd40a29bfc28e7161b0db0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702016"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>方法: PLINQ クエリの例外を処理する
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>方法:PLINQ クエリの例外を処理する
 
 このトピックの最初の例では、PLINQ クエリの実行時にスローされる <xref:System.AggregateException?displayProperty=nameWithType> の処理方法を示します。 2 番目の例では、デリゲート内で例外がスローされる場所のできるだけ近くに try-catch ブロックを配置する方法を示します。 こうすると、発生の直後に例外をキャッチしてクエリの実行を続行できる可能性があります。 連結しているスレッドへ例外が上方向へ通知されると、例外が発生した後も、クエリによって一部の項目の処理が続行される可能性があります。
 
@@ -49,7 +50,7 @@ ms.locfileid: "94826945"
 
 プログラムの状態を破損しないようにするため、処理方法がわからない場合は、例外をキャッチしないでください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

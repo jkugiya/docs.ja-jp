@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: LINQ to XML を使用した XML データの処理'
 title: LINQ to XML を使用した XML データの処理
 ms.date: 03/30/2017
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
-ms.openlocfilehash: 782a14303a9ec35750530d2506a046dd53d37fc0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9aad2e8b8981cef72952f393a4b9d4d49f503377
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686996"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783249"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>LINQ to XML を使用した XML データの処理
 

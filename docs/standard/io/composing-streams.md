@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ストリームの作成'
 title: ストリームの作成
 ms.date: 01/21/2019
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: d848a989378ed40df794554f3a0a9a7f135fbd4e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 55c3bd8b5f951397463d9f5c9c97efb6a1ef44b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732191"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782404"
 ---
 # <a name="compose-streams"></a>ストリームの作成
 
@@ -32,14 +33,14 @@ ms.locfileid: "95732191"
 >[!IMPORTANT]
 >サンプルでは、*MyFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
 
-## <a name="example-use-streamreader"></a>例:StreamReader を使用する
+## <a name="example-use-streamreader"></a>例: StreamReader を使用する
 
 次の例では、**FileStream** から文字を読み取る <xref:System.IO.StreamReader> が作成されます。これはコンストラクター引数として **StreamReader** に渡されます。 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> は、<xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> によって文字が検出されなくなるまで読み取りを行います。  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
-## <a name="example-use-binaryreader"></a>例:BinaryReader を使用する
+## <a name="example-use-binaryreader"></a>例: BinaryReader を使用する
 
 次の例では、**FileStream** からバイト数を読み取る <xref:System.IO.BinaryReader> が作成されます。これはコンストラクター引数として **BinaryReader** に渡されます。 <xref:System.IO.BinaryReader.ReadByte%2A> は、<xref:System.IO.BinaryReader.PeekChar%2A> によってバイトが検出されなくなるまで読み取りを行います。  
   

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: スキーマをコンパイルするための XmlSchemaSet'
 title: スキーマをコンパイルするための XmlSchemaSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 4501f3dde8d402bd318332dfe9b2209b3febea71
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1c053c4db6e9c018e6186e6015aedc9c1b36b4e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723364"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782625"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>スキーマをコンパイルするための XmlSchemaSet
 

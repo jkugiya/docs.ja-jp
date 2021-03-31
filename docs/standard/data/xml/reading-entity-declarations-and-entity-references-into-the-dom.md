@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: エンティティ宣言とエンティティ参照の DOM への読み込み'
 title: エンティティ宣言とエンティティ参照の DOM への読み込み
 ms.date: 03/30/2017
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-ms.openlocfilehash: 8af9e4c1aedc588bcbf3b4f43e9e562fda2f3ce3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 312fd215076f4b0eee280767b8c367d34ffe6bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783223"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>エンティティ宣言とエンティティ参照の DOM への読み込み
 

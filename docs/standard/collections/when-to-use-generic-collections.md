@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ジェネリック コレクションを使用する状況'
 title: ジェネリック コレクションを使用する状況
 ms.date: 04/30/2020
 helpviewer_keywords:
 - collections [.NET], generic
 - generic collections [.NET]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 7b8b7b458a1667a1d3239ef378c729929678e8aa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aea85606044e50c788eee9da4aaf7a4f5934cfc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675989"
 ---
 # <a name="when-to-use-generic-collections"></a>ジェネリック コレクションを使用する状況
 

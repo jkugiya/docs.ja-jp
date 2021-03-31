@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET コンソール アプリケーションを作成する
 description: Visual Studio Code と .NET CLI を使用して .NET コンソール アプリケーションを作成する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 51e5a897985af7576de03659efdd8520cb8e58e6
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915870"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511867"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET コンソール アプリケーションを作成する
 
@@ -93,7 +93,7 @@ dotnet run
 
    このコードによりコンソール ウィンドウにプロンプトが表示され、ユーザーが文字列を入力して <kbd>Enter</kbd> キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 これらの値がコンソール ウィンドウに表示されます。 最後に、コンソール ウィンドウにプロンプトを表示し、<xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> メソッドを呼び出してユーザーによる入力を待ちます。
 
-   `\n` は、改行文字を表します。
+   <xref:System.Environment.NewLine> は、プラットフォームに依存せず、言語に依存せずに、改行を表す方法です。 代替手段は、C# では `\n`、Visual Basic では `vbCrLf` です。
 
    文字列の前にドル記号 (`$`) を付けると、変数名などの式を文字列で中かっこで囲むことができます。 式の値が、式の代わりに文字列に挿入されます。 この構文は、[補間された文字列](../../csharp/language-reference/tokens/interpolated.md)と呼ばれます。
 

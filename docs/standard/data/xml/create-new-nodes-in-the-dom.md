@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DOM への新しいノードの作成'
 title: DOM への新しいノードの作成
 ms.date: 03/30/2017
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: dea7add100fbdbb9e761fe39d0d824d27975757f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdc2eb20a71450285e47a5f8b6766ba77151a7f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704748"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783418"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM への新しいノードの作成
 

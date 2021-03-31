@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Exception クラスとプロパティ'
 title: Exception クラスとプロパティ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-ms.openlocfilehash: 459dc15f136c98d4b889a420dbd863b16aca747c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d45cc50dadf8f48be5cb0017065ea989ae7ae535
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641656"
 ---
 # <a name="exception-class-and-properties"></a>Exception クラスとプロパティ
 
@@ -23,7 +24,7 @@ ms.locfileid: "94828206"
 
 <xref:System.Exception> クラスには、簡単に例外を理解することに役立つ次のプロパティがあります。
 
-| プロパティ名 | [説明] |
+| プロパティ名 | 説明 |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | キーと値のペアの任意のデータを保持する <xref:System.Collections.IDictionary> です。 |
 | <xref:System.Exception.HelpLink> | 例外の原因に関する詳細情報を提供するヘルプ ファイルには、URL (または URN) を保持できます。 |
@@ -36,6 +37,6 @@ ms.locfileid: "94828206"
 
 <xref:System.Exception> から派生したオブジェクトのみをスローし、キャッチすることをお勧めしますが、<xref:System.Object> クラスから派生したオブジェクトはすべて例外としてスローできます。 <xref:System.Exception> から派生していないオブジェクトのスローとキャッチは、すべての言語ではサポートされていないことに注意してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [例外](index.md)

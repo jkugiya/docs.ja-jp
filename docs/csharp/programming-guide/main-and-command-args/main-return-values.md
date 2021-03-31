@@ -1,28 +1,40 @@
 ---
 title: Main() の戻り値 - C# プログラミング ガイド
 description: Main() の戻り値について説明します。 コード例とコンパイラにより生成されたコードを参照し、使用可能なその他のリソースを確認してください。
-ms.date: 08/02/2017
+ms.date: 03/11/2021
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6f4001ecd490d5627d3a1ec74ecf7d593451e104
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104038"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190360"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
-`Main` メソッドは `void` を返すことができます。
+次のいずれかの方法でメソッドを定義することで、`Main` メソッドから `int` を返すことができます。
 
- [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+| `Main` メソッド コード             | `Main` シグネチャ                             |
+|--------------------------------|----------------------------------------------|
+| `args` と `await` は使用しない    | `static int Main()`                          |
+| `args` を使用し、`await` を使用しない | `static int Main(string[] args)`             |
+| `args` を使用せず、`await` を使用する | `static async Task<int> Main()`              |
+| `args` と `await` を使用する        | `static async Task<int> Main(string[] args)` |
 
-`int` を返すこともできます。
+`Main` からの戻り値を使用しない場合、`void` か `Task` を返すと少し簡単なコードにすることができます。
 
- [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+| `Main` メソッド コード             | `Main` シグネチャ                        |
+|--------------------------------|-----------------------------------------|
+| `args` と `await` は使用しない    | `static void Main()`                    |
+| `args` を使用し、`await` を使用しない | `static void Main(string[] args)`       |
+| `args` を使用せず、`await` を使用する | `static async Task Main()`              |
+| `args` と `await` を使用する        | `static async Task Main(string[] args)` |
 
-`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 `void` が `Main` から返された場合、終了コードは暗黙的に `0` になります。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
+ただし、`int` か `Task<int>` を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。
+
+次の例からは、プロセスの終了コードにアクセスする方法がわかります。
 
 ## <a name="example"></a>例
 

@@ -1,6 +1,8 @@
 ---
+description: '詳細情報: .NET の型変換の表'
 title: .NET の型変換の表
 ms.date: 03/30/2017
+ms.topic: reference
 helpviewer_keywords:
 - widening conversions
 - narrowing conversions
@@ -11,12 +13,12 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: dc98a326155273805e3157d99755de2e97f83a46
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3c6414c9222a3e2cdf50ca1d9ba6986636d465f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676223"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET の型変換の表
 
@@ -26,22 +28,22 @@ ms.locfileid: "95730215"
 
  次の表は、情報を失うことなく実行できる拡大変換を示しています。  
   
-|[種類]|データ損失なしに次の型に変換可能|  
+|種類|データ損失なしに次の型に変換可能|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.SByte>|<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.Single>、<xref:System.Double>、<xref:System.Decimal>|  
+|<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int16>|<xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.UInt16>|<xref:System.UInt32>､<xref:System.Int32>、<xref:System.UInt64>、<xref:System.Int64>、<xref:System.Single>、<xref:System.Double>、<xref:System.Decimal>|  
+|<xref:System.UInt16>|<xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Char>|<xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.Int32>|<xref:System.Int64>、 <xref:System.Double>、 <xref:System.Decimal>|  
-|<xref:System.UInt32>|<xref:System.Int64>、<xref:System.UInt64>、<xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.Int32>|<xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int64>|<xref:System.Decimal>|  
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
  一部の <xref:System.Single> または <xref:System.Double> への拡大変換では、精度が損なわれる可能性があります。 次の表は、情報が失われる可能性のある拡大変換を示しています。  
   
-|[種類]|次の型に変換可能|  
+|種類|次の型に変換可能|  
 |----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
@@ -57,21 +59,21 @@ ms.locfileid: "95730215"
   
  次の表は、<xref:System.Convert?displayProperty=nameWithType> を使用して <xref:System.OverflowException> をスローする変換、または、変換される型の値が結果の型の定義済みの範囲外にあるかどうかのチェックを行うすべての変換を示しています。  
   
-|[種類]|次の型に変換可能|  
+|種類|次の型に変換可能|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
-|<xref:System.SByte>|<xref:System.Byte>、<xref:System.UInt16>、<xref:System.UInt32>, <xref:System.UInt64>|  
-|<xref:System.Int16>|<xref:System.Byte>、 <xref:System.SByte>、 <xref:System.UInt16>|  
-|<xref:System.UInt16>|<xref:System.Byte>、 <xref:System.SByte>、 <xref:System.Int16>|  
+|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
+|<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
+|<xref:System.UInt16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>|  
 |<xref:System.Int32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32>|  
 |<xref:System.UInt32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>|  
 |<xref:System.Int64>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>,<xref:System.UInt32>,<xref:System.UInt64>|  
-|<xref:System.UInt64>|<xref:System.Byte>､<xref:System.SByte>、<xref:System.Int16>、<xref:System.UInt16>、<xref:System.Int32>、<xref:System.UInt32>、<xref:System.Int64>|  
+|<xref:System.UInt64>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>|  
 |<xref:System.Decimal>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - [.NET での型変換](type-conversion.md)

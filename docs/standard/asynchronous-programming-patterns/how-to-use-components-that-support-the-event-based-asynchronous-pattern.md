@@ -1,5 +1,6 @@
 ---
-title: '方法 : イベントベースの非同期パターンをサポートするコンポーネントを使用する'
+description: '詳細情報: イベントベースの非同期パターンをサポートするコンポーネントを使用する方法'
+title: '方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 36fe8015187833e03c4cc3fc1609ec647daf7278
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 78c5df143e687333689e7805dfc89b4cf0f5e98a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702965"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを使用する
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する
 
 多くのコンポーネントでは、非同期的に作業を実行するオプションが提供されます。 たとえば、<xref:System.Media.SoundPlayer> と <xref:System.Windows.Forms.PictureBox> コンポーネントでは、メイン スレッドが中断されることなく、実行され続ける間に、"バックグラウンドで" 音声とイメージを読み込むことができます。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "95678000"
   
      イメージのダウンロードを進めるときに、フォームを自由に移動したり、最小化や最大化を行ったりすることができます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [方法: バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [イベントベースの非同期パターンの概要](event-based-asynchronous-pattern-overview.md)

@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET クラス ライブラリをテストする
 description: Visual Studio Code と .NET CLI を使用して、.NET クラス ライブラリの単体テスト プロジェクトを作成および実行する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: bc8741e11504f94e54ccc45a5ad93408a3fe9309
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915857"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511815"
 ---
 # <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET クラス ライブラリをテストする
 

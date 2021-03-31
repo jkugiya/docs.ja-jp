@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XslTransform への XPathDocument の入力'
 title: XslTransform への XPathDocument の入力
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-ms.openlocfilehash: 29bb345c2654baec8fbd2adce3788a4b4f2d582d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5778a359cd4bfa748318533c9be6a1def97b5be3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782586"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform への XPathDocument の入力
 

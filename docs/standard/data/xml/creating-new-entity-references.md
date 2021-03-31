@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 新しいエンティティ参照の作成'
 title: 新しいエンティティ参照の作成
 ms.date: 03/30/2017
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-ms.openlocfilehash: 06052938a4595f45b65eaabf14f1348baf6ee9f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68252aac8c86b95d060da13dc23f048cf6651a73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687412"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783392"
 ---
 # <a name="creating-new-entity-references"></a>新しいエンティティ参照の作成
 

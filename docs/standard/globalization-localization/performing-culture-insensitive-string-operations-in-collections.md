@@ -1,5 +1,6 @@
 ---
-title: カルチャの影響を受けないコレクションの操作の実行
+description: '詳細情報: カルチャを認識しないコレクションの操作の実行'
+title: カルチャを認識しないコレクションの操作の実行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: f0d932dcbb07253e3ea52238a81b416af148cf98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 38628474a20359be84780c2d90ac2470a9a66730
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675703"
 ---
-# <a name="performing-culture-insensitive-string-operations-in-collections"></a>カルチャの影響を受けないコレクションの操作の実行
+# <a name="performing-culture-insensitive-string-operations-in-collections"></a>カルチャを認識しないコレクションの操作の実行
 
 既定ではカルチャを認識する動作を提供するクラスとメンバーは <xref:System.Collections> 名前空間にあります。 <xref:System.Collections.CaseInsensitiveComparer> クラスおよび <xref:System.Collections.CaseInsensitiveHashCodeProvider> クラスのパラメーターなしのコンストラクターは、<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用して新しいインスタンスを初期化します。 <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> メソッドのすべてのオーバーロードは、既定で `Thread.CurrentCulture` プロパティを使用して、<xref:System.Collections.Hashtable> クラスの新しいインスタンスを作成します。 <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> メソッドのオーバーロードは、`Thread.CurrentCulture` を使用して既定でカルチャを認識した並べ替えを実行します。 <xref:System.Collections.SortedList> での並べ替えと検索は、文字列がキーとして使用されるときに、`Thread.CurrentCulture` によって影響を受けることがあります。 このセクションで説明する推奨使用方法に従うと、`Collections` 名前空間のこれらのクラスとメソッドでカルチャを認識しない結果が得られます。
 

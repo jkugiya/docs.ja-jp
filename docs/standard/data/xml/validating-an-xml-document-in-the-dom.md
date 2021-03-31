@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DOM における XML ドキュメントの検証'
 title: DOM における XML ドキュメントの検証
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-ms.openlocfilehash: db3748d1d0e1a5687219d5b07d1261639a4ef670
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a3afe48aecfa50c572f43678ee2501fdb7644bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782833"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証
 

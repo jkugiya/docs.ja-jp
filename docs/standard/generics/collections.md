@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: .NET の汎用コレクション'
 title: .NET の汎用コレクション
 ms.date: 02/15/2018
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: 256fddd6c35cb78e8e22562960580929e1230c34
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 129d86e5a710c3570056c83e1cb225053aee72ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782417"
 ---
 # <a name="generic-collections-in-net"></a>.NET の汎用コレクション
 

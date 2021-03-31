@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う方法 (Windows のみ)'
 title: '方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う (Windows のみ)'
 ms.date: 01/14/2019
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc79af9debb721ddb136d525fab0845ea03f8618
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726965"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775761"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う (Windows のみ)
 

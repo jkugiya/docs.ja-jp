@@ -1,5 +1,6 @@
 ---
-title: 'チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上'
+description: '詳細情報: チュートリアル:BatchBlock および BatchedJoinBlock を使用した効率の向上に関するチュートリアル'
+title: チュートリアル:BatchBlock および BatchedJoinBlock を使用した効率の向上
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,27 +9,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: d9c4b2d5cfab28f10be82724f46660e4b42ce410
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b87e80bc378c3279bbe58a3847cffcc831a17de0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798018"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル:BatchBlock および BatchedJoinBlock を使用した効率の向上
 
 TPL データ フロー ライブラリが提供する <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> クラスを使って、1 つ以上のソースからデータを受信してバッファーに格納し、それを 1 つのコレクションとして反映することができます。 このバッチ メカニズムは、1 つ以上のソースからデータを収集し、複数のデータ要素をバッチとして処理する場合に便利です。 例として、データフローを使ってレコードをデータベースに挿入するアプリケーションについて考えてみましょう。 この操作は、1 つずつ順番にではなく、複数の項目が同時に挿入される場合により効率的となります。 このドキュメントでは、<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> クラスを使用して、そのようなデータベースの挿入操作を効率的に行う方法について説明します。 また、<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> クラスを使用して、プログラムでデータベースを読み取る場合に、その結果と発生する例外の両方をキャプチャする方法について説明します。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 1. このチュートリアルを開始する前に、ドキュメント「[データフロー](dataflow-task-parallel-library.md)」の結合ブロックのセクションを参照してください。
 
 2. コンピューターに Northwind データベース (Northwind.sdf) のコピーがあることを確認します。 このファイルは通常、%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ フォルダーに置かれています。
 
     > [!IMPORTANT]
-    > Windows のバージョンによっては、Visual Studio が管理者以外のモードで実行されている場合には、Northwind.sdf に接続できません。 Northwind.sdf に接続するには、 **[管理者として実行]** モードで、Visual Studio または Visual Studio 用開発者コマンド プロンプトを開始します。
+    > Windows のバージョンによっては、Visual Studio が管理者以外のモードで実行されている場合には、Northwind.sdf に接続できません。 Northwind.sdf に接続するには、**[管理者として実行]** モードで、Visual Studio または Visual Studio 用開発者コマンド プロンプトを開始します。
 
 このチュートリアルは、次のセクションで構成されています。
 
@@ -44,7 +45,7 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
 
 - [バッファリングされた結合を使用した従業員データのデータベースからの読み込み](#bufferedJoin)
 
-- [コード例全体](#complete)
+- [完全な例](#complete)
 
 <a name="creating"></a>
 
@@ -128,6 +129,6 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データフロー](dataflow-task-parallel-library.md)

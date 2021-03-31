@@ -3,12 +3,12 @@ title: PerfCollect を使用した .NET アプリケーションのトレース�
 description: .NET で PerfCollect を使用してトレースを収集する手順について説明するチュートリアル。
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593221"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189931"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect を使用して .NET アプリケーションをトレースする
 
@@ -158,6 +158,9 @@ PerfView により、トレース ファイルに含まれるデータに基づ�
 - 必要な情報のビューがない場合は、生のイベント ビューでイベントを検索してみることができます。  **[Events]\(イベント\)** を選択します。
 
 PerfView でのビューの解釈方法の詳細については、ビュー自体のヘルプ リンクを参照するか、PerfView のメイン ウィンドウで **[Help]\(ヘルプ\) > [Users Guide]\(ユーザー ガイド\)** を選択してください。
+
+> [!NOTE]
+> <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType> API を使用して書き込まれたイベント (フレームワークからのイベントを含む) は、プロバイダー名の下に表示されません。 代わりに、`Microsoft-Windows-DotNETRuntime` プロバイダーの下に `EventSourceEvent` イベントとして書き込まれ、そのペイロードは JSON でシリアル化されます。
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>TraceCompass を使用してトレース ファイルを開く
 

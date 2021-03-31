@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XSLT のセキュリティに関する考慮事項'
 title: XSLT のセキュリティに関する考慮事項
 ms.date: 03/30/2017
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: a8d077cf35da56795cc0b0c22e9bab26ce99f3a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d233447bd9d616c72e7f6663934f44721e3f393
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685202"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782508"
 ---
 # <a name="xslt-security-considerations"></a>XSLT のセキュリティに関する考慮事項
 

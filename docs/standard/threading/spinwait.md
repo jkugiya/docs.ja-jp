@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SpinWait'
 title: SpinWait
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-ms.openlocfilehash: 2031ebc30d0789181786053d401e69da782a619f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 929db1b35d7d526585641ef1c1b213f4e000585b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797992"
 ---
 # <a name="spinwait"></a>SpinWait
 

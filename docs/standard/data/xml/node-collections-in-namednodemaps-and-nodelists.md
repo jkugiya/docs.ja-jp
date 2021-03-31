@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: NamedNodeMaps と NodeLists のノード コレクション'
 title: NamedNodeMaps と NodeLists のノード コレクション
 ms.date: 03/30/2017
 ms.assetid: 025954b8-7aa8-47c5-a1c1-f81064fb4d65
-ms.openlocfilehash: 7db70e6d81ca829cfb38ab9a01069782d8bfd69c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae015d714eb57043b49416642f3850d49f9782b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713423"
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>NamedNodeMaps と NodeLists のノード コレクション
 

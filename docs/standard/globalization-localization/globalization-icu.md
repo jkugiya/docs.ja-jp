@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: .NET グローバリゼーションと ICU'
 title: グローバリゼーションと ICU
 ms.date: 05/21/2020
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: d0361ba41b3a10d6a316341fcdacb869e7a35d26
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9ff6219a06cb05c743089e56b379de1f98bbc42c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827114"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702263"
 ---
 # <a name="net-globalization-and-icu"></a>.NET グローバリゼーションと ICU
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XPathNavigator による XML データの変更'
 title: XpathNavigator による XML データの変更
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 10de24d97d15ed4b6de3effa21410fb22054ec68
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 609957cfad0ea6c9f14acd4b43b241f76167fae0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714459"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713612"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XpathNavigator による XML データの変更
 

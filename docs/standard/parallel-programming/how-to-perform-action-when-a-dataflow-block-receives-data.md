@@ -1,5 +1,6 @@
 ---
-title: '方法: データフロー ブロックでデータを受信したときにアクションを実行する'
+description: '詳細情報: データフロー ブロックでデータを受信したときにアクションを実行する方法'
+title: 方法:データフロー ブロックでデータを受信したときにアクションを実行する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-ms.openlocfilehash: c0fe9d1aa0e907ab28cf53cc97488a15e6434cda
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c2d4fd337c154236d20241eb06cb83df0d079851
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701821"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>方法: データフロー ブロックでデータを受信したときにアクションを実行する
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>方法:データフロー ブロックでデータを受信したときにアクションを実行する
 
 "*実行データフロー ブロック*" の型は、データを受信したときに、ユーザーが指定したデリゲートを呼び出します。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> クラスは、実行データフロー ブロックの種類です。 実行データフロー ブロックに処理関数を提供するときに、`delegate` キーワード (Visual Basic では `Sub`)、<xref:System.Action%601>、<xref:System.Func%602>、またはラムダ式を使用することができます。 このドキュメントでは、<xref:System.Func%602> とラムダ式を使用して、実行ブロックでアクションを実行する方法について説明します。  
 
@@ -44,6 +45,6 @@ ms.locfileid: "95674841"
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データフロー](dataflow-task-parallel-library.md)

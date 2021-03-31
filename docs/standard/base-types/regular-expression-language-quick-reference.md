@@ -1,7 +1,8 @@
 ---
 title: 正規表現言語 - クイック リファレンス
 description: このクイック リファレンスでは、正規表現パターンを使用して入力テキストを照合する方法について説明します。 パターンには、1 個以上の文字リテラル、演算子、またはコンストラクトが含まれます。
-ms.date: 03/30/2017
+ms.date: 02/03/2021
+ms.topic: reference
 f1_keywords:
 - VS.RegularExpressionBuilder
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 1b261211997837e8664ea60e9210a7f0517f7a9f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6228fc6fa2f21406c151378b50856ec72a6756e9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818805"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258919"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
 
@@ -93,15 +94,28 @@ ms.locfileid: "94818805"
 |グループ化構成体|説明|パターン|一致件数|
 |------------------------|-----------------|-------------|-------------|
 |`(` *subexpression* `)`|一致した部分式をキャプチャして、1 から始まる序数を代入します。|`(\w)\1`|『`"deep"`』の「`"ee"`」|
-|`(?<` *name* `>` *subexpression* `)`<br /> または <br />`(?'` *name* `'` *subexpression* `)`|一致した部分式を名前付きグループにキャプチャします。|`(?<double>\w)\k<double>`|『`"deep"`』の「`"ee"`」|
-|`(?<` *name1* `-` *name2* `>` *subexpression* `)` <br /> または <br /> `(?'` *name1* `-` *name2* `'` *subexpression* `)`|グループ定義の均等化を定義します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」の「グループ定義の均等化」を参照してください。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|『`"3+2^((1-3)*(3-1))"`』の「`"((1-3)*(3-1))"`」|
+|`(?<` *name* `>` *subexpression* `)`<br /> or <br />`(?'` *name* `'` *subexpression* `)`|一致した部分式を名前付きグループにキャプチャします。|`(?<double>\w)\k<double>`|『`"deep"`』の「`"ee"`」|
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)` <br /> or <br /> `(?'` *name1* `-` *name2* `'` *subexpression* `)`|グループ定義の均等化を定義します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」の「グループ定義の均等化」を参照してください。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|『`"3+2^((1-3)*(3-1))"`』の「`"((1-3)*(3-1))"`」|
 |`(?:` *subexpression* `)`|非キャプチャ グループを定義します。|`Write(?:Line)?`|『`"Console.WriteLine()"`』の「`"WriteLine"`」<br /><br /> 『`"Console.Write(value)"`』の「`"Write"`」|
 |`(?imnsx-imnsx:` *subexpression* `)`|指定したオプションを *subexpression* に適用するか、または無効にします。 詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。|`A\d{2}(?i:\w+)\b`|『`"A12xl A12XL a12xl"`』の「`"A12xl"`」、「`"A12XL"`」|
-|`(?=` *subexpression* `)`|ゼロ幅の肯定先読みアサーションです。|`\w+(?=\.)`|『`"He is. The dog ran. The sun is out."`』の「`"is"`」、「`"ran"`」、および「`"out"`」|
-|`(?!` *subexpression* `)`|ゼロ幅の否定先読みアサーションです。|`\b(?!un)\w+\b`|『`"unsure sure unity used"`』の「`"sure"`」、「`"used"`」|
-|`(?<=` *subexpression* `)`|ゼロ幅の正の後読みアサーションです。|`(?<=19)\d{2}\b`|『`"1851 1999 1950 1905 2003"`』の「`"99"`」、「`"50"`」、「`"05"`」|
-|`(?<!` *subexpression* `)`|ゼロ幅の負の後読みアサーションです。|`(?<!19)\d{2}\b`|『`"1851 1999 1950 1905 2003"`』の「`"51"`」、「`"03"`」|
-|`(?>` *subexpression* `)`|アトミック グループ。|`[13579](?>A+B+)`|『`"1ABB 3ABBC 5AB 5AC"`』の「`"1ABB"`」、「`"3ABB"`」、および「`"5AB"`」|
+|`(?=` *subexpression* `)`|ゼロ幅の肯定先読みアサーションです。|`\b\w+\b(?=.+and.+)`|`"cats"`, `"dogs"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?!` *subexpression* `)`|ゼロ幅の否定先読みアサーションです。|`\b\w+\b(?!.+and.+)`|`"and"`, `"some"`, `"mice"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?<=` *subexpression* `)`|ゼロ幅の正の後読みアサーションです。|`\b\w+\b(?<=.+and.+)`<br/><br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/><br/>`\b\w+\b(?<=.+and.*)`|`"some"`, `"mice"`<br/>in<br/>`"cats, dogs and some mice."`<br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/>`"and"`, `"some"`, `"mice"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?<!` *subexpression* `)`|ゼロ幅の負の後読みアサーションです。|`\b\w+\b(?<!.+and.+)`<br/><br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/><br/>`\b\w+\b(?<!.+and.*)`|`"cats"`, `"dogs"`, `"and"`<br/>in<br/>`"cats, dogs and some mice."`<br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/>`"cats"`, `"dogs"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?>` *subexpression* `)`|アトミック グループ。|`(?>a\|ab)c`|`"ac"` の `"ac"`<br/><br/>`"abc"` には "_なし_"|
+
+### <a name="lookarounds-at-a-glance"></a>Lookaround の概要
+
+正規表現エンジンは、**lookaround 式** にヒットすると、現在位置から元の文字列の開始 (後読み) または終了 (先読み) に達する部分文字列を取得し、lookaround パターンを使用してその部分文字列で <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> を実行します。 この部分式の結果の成功は、それが肯定または否定のどちらのアサーションであるかによって決まります。
+
+| Lookaround | 名前 | 機能 |
+| - | - | - |
+`(?=check)` | 肯定先読み | 文字列内の現在位置の直後にあるものが "check" であることをアサートします
+`(?<=check)` | 肯定後読み | 文字列内の現在位置の直前にあるものが "check" であることをアサートします
+`(?!check)` | 否定先読み  | 文字列内の現在位置の直後にあるものが "check" ではないことをアサートします
+`(?<!check)` | 否定後読み | 文字列内の現在位置の直前にあるものが "check" ではないことをアサートします
+
+一致すると、パターンの残りの部分で一致によるエラーが発生しても、**アトミック グループ** は再評価されません。 これにより、アトミック グループ内またはパターンの残りの部分で量指定子が発生した場合に、パフォーマンスを大幅に向上させることができます。
 
 ## <a name="quantifiers"></a>量指定子
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スキーマのコンパイル後の情報セット'
 title: スキーマのコンパイル後の情報セット
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 79ffea3831d5f56d73c6974fdf7265c9b00ab8ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c574728b564c69de9574aba551bfb6967cf8488
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691267"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783262"
 ---
 # <a name="post-schema-compilation-infoset"></a>スキーマのコンパイル後の情報セット
 
@@ -27,7 +28,7 @@ W3C 勧告『[XML Schema](https://www.w3.org/XML/Schema)』では、スキーマ
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaExternal>|<xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup.AnyAttribute%2A>|  
-|<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>、<xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
+|<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>, <xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaComplexType>|<xref:System.Xml.Schema.XmlSchemaComplexType.AnyAttribute%2A>|  
   
  たとえば、<xref:System.Xml.Schema.XmlSchemaElement> クラスと <xref:System.Xml.Schema.XmlSchemaComplexType> クラスには `BlockResolved` プロパティと `FinalResolved` プロパティがあります。 これらのプロパティは、スキーマがコンパイルおよび検証された後に、`Block` プロパティと `Final` プロパティの値を格納するために使用されます。 `BlockResolved` プロパティと `FinalResolved` プロパティは、スキーマ コンパイル後の情報セットの一部であり、読み取り専用のプロパティです。  

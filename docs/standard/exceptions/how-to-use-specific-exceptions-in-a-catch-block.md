@@ -1,5 +1,6 @@
 ---
-title: '方法 : catch ブロックで特定の例外を使用する'
+description: '詳細情報: catch ブロックで特定の例外を使用する方法'
+title: '方法: catch ブロックで特定の例外を使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
-ms.openlocfilehash: bf4813e950b034cb807abebfe016c1e34487d594
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5eb2a753af05c10b722cc7e41b5bb13f45fdef9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775865"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>catch ブロックで特定の例外を使用する方法
 
@@ -29,6 +30,6 @@ ms.locfileid: "94828024"
 [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
 [!code-vb[CatchException#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception1.vb#2)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [例外](index.md)

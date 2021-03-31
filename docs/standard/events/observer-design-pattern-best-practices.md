@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: オブザーバー デザイン パターンのベスト プラクティス'
 title: オブサーバー デザイン パターンのベスト プラクティス
 ms.date: 03/30/2017
 helpviewer_keywords:
 - observer design pattern [.NET], best practices
 - best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: d88b092e681258566da685e3bb130b3d6131be08
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0c7e739081516776efbabb77ef88dbc3598d7fb9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641723"
 ---
 # <a name="observer-design-pattern-best-practices"></a>オブサーバー デザイン パターンのベスト プラクティス
 

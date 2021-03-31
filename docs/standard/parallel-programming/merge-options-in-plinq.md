@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: PLINQ のマージ オプション'
 title: PLINQ のマージ オプション
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c58b0134ef6c469b5f13a1d6c43a850bb586d360
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730618"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731462"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ のマージ オプション
 
@@ -56,9 +57,9 @@ ms.locfileid: "95730618"
 |<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|配列またはリスト ソースのみがある順序付けされていないクエリ。|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|なし|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|なし|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|なし|  
 |<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
   
  他のすべての PLINQ クエリ演算子では、ユーザー指定のマージ オプションが無視される場合があります。 一部のクエリ演算子 (<xref:System.Linq.ParallelEnumerable.Reverse%2A> や <xref:System.Linq.ParallelEnumerable.OrderBy%2A> など) では、すべて生成されて並べ替えられるまで要素を譲渡できません。 したがって、<xref:System.Linq.ParallelEnumerable.Reverse%2A> などの演算子も含むクエリで <xref:System.Linq.ParallelMergeOptions> を使用すると、演算子でその結果が生成されるまでクエリではマージ動作が適用されません。  

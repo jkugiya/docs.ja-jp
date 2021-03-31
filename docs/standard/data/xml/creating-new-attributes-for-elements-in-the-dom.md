@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DOM の要素に対する新しい属性の作成'
 title: DOM の要素に対する新しい属性の作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-ms.openlocfilehash: 1cb37e47bedf955ea2c6f9faad628df2175fb703
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b5d9075fd2a8621252bdbfb595525a4dd8c17991
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783405"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM の要素に対する新しい属性の作成
 

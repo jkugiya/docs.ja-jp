@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ドキュメントの保存と書き込み'
 title: ドキュメントの保存と書き込み
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c5d91a2ec057272db87d7d3fd8146be34ec2b76e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783002"
 ---
 # <a name="saving-and-writing-a-document"></a>ドキュメントの保存と書き込み
 

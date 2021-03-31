@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML スキーマのインクルードまたはインポート'
 title: XML スキーマのインクルードまたはインポート
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a55c518f4e7f772451652b352ff7bcf86b4de703
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713742"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML スキーマのインクルードまたはインポート
 

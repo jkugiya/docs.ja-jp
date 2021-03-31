@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XmlNodeChangedEventArgs による XML ドキュメントのイベント処理'
 title: XmlNodeChangedEventArgs による XML ドキュメントのイベント処理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 78984c74b6e7eedf4214506dec36509ece7ae48d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d7a263e0931b8de58a3e7e4ec10e29f6c723b1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676687"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783327"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs による XML ドキュメントのイベント処理
 

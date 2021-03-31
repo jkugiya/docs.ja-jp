@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ドキュメント間での既存のノードのコピー'
 title: ドキュメント間での既存のノードのコピー
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e4640e1a20ca25d6bd7266209192cb5e9af7a998
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722207"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702861"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>ドキュメント間での既存のノードのコピー
 

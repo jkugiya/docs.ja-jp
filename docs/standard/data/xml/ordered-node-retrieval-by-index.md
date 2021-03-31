@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: インデックスによる順序付けされたノードの取得'
 title: インデックスによる順序付けられたノードの取得
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 37d350231e03e8a435977328a288abff2f336a4b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6bf7491b4e237a0dcd21c1a75a90160425db922
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731164"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783288"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>インデックスによる順序付けられたノードの取得
 

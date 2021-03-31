@@ -1,22 +1,23 @@
 ---
+description: '詳細情報: スレッド処理オブジェクトと機能'
 title: スレッド処理オブジェクトと機能
 ms.date: 10/01/2018
 helpviewer_keywords:
 - threading [.NET], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-ms.openlocfilehash: 8a66904a6db3fa45d8a42dec4e1e42883c1c3e98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7e8167c42780ccc70c37a10bbb3a65483efabb24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826171"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675417"
 ---
 # <a name="threading-objects-and-features"></a>スレッド処理オブジェクトと機能
 
 .NET では、<xref:System.Threading.Thread?displayProperty=nameWithType> クラスの他に、マルチ スレッド アプリケーションを開発するのに役立つ複数のクラスが提供されます。 次の記事では、それらのクラスの概要を説明します。
 
-|タイトル|[説明]|  
+|タイトル|説明|  
 |-----------|-----------------|  
 |[マネージド スレッド プール](the-managed-thread-pool.md)|.NET によって管理されるワーカー スレッドのプールを提供する <xref:System.Threading.ThreadPool?displayProperty=nameWithType> について説明します。|  
 |[タイマー](timers.md)|マルチスレッド環境で使用できる .NET タイマーについて説明します。|
@@ -29,7 +30,7 @@ ms.locfileid: "94826171"
 |[SpinLock](spinlock.md)|特定の下位レベルのシナリオで <xref:System.Threading.Monitor?displayProperty=nameWithType> ロックの代わりに軽量クラスとして使用できる <xref:System.Threading.SpinLock?displayProperty=nameWithType> 構造体について説明します。|
 |[SpinWait](spinwait.md)|スピンベースの待機のサポートを提供する <xref:System.Threading.SpinWait?displayProperty=nameWithType> 構造体について説明します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.WaitHandle?displayProperty=nameWithType>

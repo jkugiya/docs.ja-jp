@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XslTransform クラスの随意動作の実装'
 title: XslTransform クラスの随意動作の実装
 ms.date: 03/30/2017
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-ms.openlocfilehash: 7617970ead6c2d75b7ca9749578ba66efec311bc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 56936183f635a002d2226bd8e91a6539308259e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829415"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713755"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform クラスの随意動作の実装
 

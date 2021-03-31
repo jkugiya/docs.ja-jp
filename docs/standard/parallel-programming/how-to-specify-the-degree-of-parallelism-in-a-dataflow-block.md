@@ -1,5 +1,6 @@
 ---
-title: '方法: データフロー ブロックで並列処理の範囲を指定する'
+description: '詳細情報: データフロー ブロックで並列処理の範囲を指定する方法'
+title: 方法:データ フロー ブロックで並列処理の範囲を指定する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, specifying parallelism
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
-ms.openlocfilehash: 76ab17750edb6aac72a6c74da67ecbc14a4edcdc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7d2a6d93e4f167975f3ec55a7472f7e81d2f6697
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722454"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641630"
 ---
-# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>方法: データフロー ブロックで並列処理の範囲を指定する
+# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>方法:データ フロー ブロックで並列処理の範囲を指定する
 
 このドキュメントでは、<xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> プロパティを設定して、実行データフロー ブロックが一度に複数のメッセージを処理できるようにする方法について説明します。 実行時間の長い計算を実行し、並行してメッセージの処理からメリットを得るデータ フロー ブロックがある場合は、これを行うと役立ちます。 この例では、<xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> クラスを使用して、同時に複数のデータフローの操作を実行しますが、TPL データフロー ライブラリが提供する定義済みの実行ブロック <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> のいずれかで並列処理の最大範囲を指定することができます。
 
@@ -35,6 +36,6 @@ ms.locfileid: "95722454"
   
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> プロパティは並列処理の最大範囲を表すため、データ フロー ブロックは、指定より低い並列化の度合いで実行される場合があります。 機能要件を満たすため、または使用可能なシステム リソースの不足が原因で、データフロー ブロックは、より小さい並列処理の範囲を使う場合があります。 データフロー ブロックが、指定より大きな並列処理の範囲を選択することはありません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データフロー](dataflow-task-parallel-library.md)

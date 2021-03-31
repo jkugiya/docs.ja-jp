@@ -6,25 +6,25 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 11/30/2020
+ms.date: 12/14/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 217e45f0479f432d0cc3fb919fed752b497ce7a6
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009899"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231447"
 ---
-# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
 この記事では、[Newtonsoft.Json](https://www.newtonsoft.com/json) から <xref:System.Text.Json> に移行する方法を示します。
 
-`System.Text.Json` 名前空間は、JavaScript Object Notation (JSON) との間でのシリアル化と逆シリアル化の機能を提供します。 `System.Text.Json` ライブラリは、[.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) 以降のバージョン用のランタイムに含まれています。 その他のターゲット フレームワークの場合は、[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 このパッケージで以下がサポートされます。
+`System.Text.Json` 名前空間は、JavaScript Object Notation (JSON) との間でのシリアル化と逆シリアル化の機能を提供します。 `System.Text.Json` ライブラリは、[.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1) 以降のバージョン用のランタイムに含まれています。 その他のターゲット フレームワークの場合は、[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 このパッケージで以下がサポートされます。
 
 * .NET Standard 2.0 以降のバージョン
 * .NET Framework 4.7.2 以降のバージョン
@@ -34,7 +34,9 @@ ms.locfileid: "97009899"
 
 この記事のほとんどの内容は、<xref:System.Text.Json.JsonSerializer> API の使用方法に関するものですが、<xref:System.Text.Json.JsonDocument> (ドキュメント オブジェクト モデル: DOM を表します)、<xref:System.Text.Json.Utf8JsonReader>、<xref:System.Text.Json.Utf8JsonWriter> の型の使用方法に関するガイダンスも含まれています。
 
-## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>Newtonsoft.Json と System.Text.Json の相違点の表
+Visual Basic では <xref:System.Text.Json.Utf8JsonReader> を使用できません。すなわち、カスタム コンバーターも記述できません。 ここで提示する回避策の多くでは、カスタム コンバーターを記述する必要があります。 C# でカスタム コンバーターを記述し、それを Visual Basic プロジェクトに登録できます。 詳細については、「[Visual Basic のサポート](system-text-json-how-to.md#visual-basic-support)」をご覧ください。
+
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Newtonsoft.Json と System.Text.Json の相違点の表
 
 次の表は、`Newtonsoft.Json` の機能と、それと同等の `System.Text.Json` の機能を一覧にしたものです。 同等機能は次のカテゴリに分けられます。
 
@@ -43,6 +45,7 @@ ms.locfileid: "97009899"
 * サポートされていません。回避策は実用的でないか不可能です。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行を可能にするには大幅な変更が必要です。
 
 ::: zone pivot="dotnet-5-0"
+
 | Newtonsoft.Json の機能                               | System.Text.Json での同等機能 |
 |-------------------------------------------------------|-----------------------------|
 | 既定での大文字と小文字の区別のない逆シリアル化           | ✔️ [PropertyNameCaseInsensitive グローバル設定](#case-insensitive-deserialization) |
@@ -81,9 +84,11 @@ ms.locfileid: "97009899"
 | 引用符なしのプロパティ名を許可する                   | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
 | 文字列値を囲む単一引用符を許可する              | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
 | 文字列のプロパティに対して文字列ではない JSON 値を許可する    | ❌ [サポートされていない](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` グローバル設定                 | ❌ [サポートされていない](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
+
 | Newtonsoft.Json の機能                               | System.Text.Json での同等機能 |
 |-------------------------------------------------------|-----------------------------|
 | 既定での大文字と小文字の区別のない逆シリアル化           | ✔️ [PropertyNameCaseInsensitive グローバル設定](#case-insensitive-deserialization) |
@@ -122,11 +127,12 @@ ms.locfileid: "97009899"
 | 引用符なしのプロパティ名を許可する                   | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
 | 文字列値を囲む単一引用符を許可する              | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
 | 文字列のプロパティに対して文字列ではない JSON 値を許可する    | ❌ [サポートされていない](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` グローバル設定                 | ❌ [サポートされていない](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 これは `Newtonsoft.Json` 機能の包括的なリストではありません。 この一覧には、[GitHub の問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)または [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) の投稿でリクエストされたシナリオの多くが含まれています。 ここに一覧表示されたシナリオのうち、現在サンプル コードがないシナリオの 1 つに回避策を実装する場合、およびご自分の解決策を共有する場合は、このページの下部にある **[フィードバック]** セクションで **[このページ]** を選択してください。 これにより、問題がこのドキュメントの GitHub リポジトリに作成され、このページの **[フィードバック]** セクションにも記載されます。
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>Newtonsoft.Json と比較した既定の JsonSerializer の動作の相違点
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Newtonsoft.Json と比較した既定の JsonSerializer の動作の相違点
 
 既定では <xref:System.Text.Json> は厳格であり、確定的な動作を重視して、呼び出し元のために推測や解釈は行われません。 このライブラリは、パフォーマンスとセキュリティを確保するために意図的にこのように設計されています。 `Newtonsoft.Json` は既定で柔軟性を持っています。 設計上のこの基本的な違いが、既定の動作における次のような固有の相違点の多くで、その背景にあります。
 
@@ -368,7 +374,11 @@ Newtonsoft.Json の [ReferenceResolver](https://www.newtonsoft.com/json/help/htm
 ### <a name="dictionary-with-non-string-key"></a>文字列以外のキーを含むディクショナリ
 
 ::: zone pivot="dotnet-5-0"
-`Newtonsoft.Json` と `System.Text.Json` のどちらでも、`Dictionary<TKey, TValue>` 型のコレクションがサポートされています。
+`Newtonsoft.Json` と `System.Text.Json` のどちらでも、`Dictionary<TKey, TValue>` 型のコレクションがサポートされています。 ただし、`System.Text.Json` では、`TKey` はカスタムの型ではなく、プリミティブ型にする必要があります。 詳細については、[サポートされているキーの型](system-text-json-supported-collection-types.md#supported-key-types)に関するページをご覧ください。
+
+> [!CAUTION]
+> `TKey` が `string` 以外のものとして型指定される `Dictionary<TKey, TValue>` に逆シリアル化すると、それを使用するアプリケーションでセキュリティに脆弱性が生じるおそれがあります。 詳細については、「[dotnet/runtime#4761](https://github.com/dotnet/runtime/issues/4761)」を参照してください。
+
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -382,7 +392,12 @@ Newtonsoft.Json の [ReferenceResolver](https://www.newtonsoft.com/json/help/htm
 <xref:System.Text.Json> には、次の型に対する組み込みサポートはありません。
 
 * <xref:System.Data.DataTable> および関連する型
+::: zone pivot="dotnet-5-0"
+* F# の型。[判別共用体](../../fsharp/language-reference/discriminated-unions.md)など。 [レコードの型](../../fsharp/language-reference/records.md)と[匿名レコードの型](../../fsharp/language-reference/anonymous-records.md)は変更できない POCO として扱われ、サポートされます。
+::: zone-end
+::: zone pivot="dotnet-core-3-1"
 * F# の型 ([判別共用体](../../fsharp/language-reference/discriminated-unions.md)、[レコード型](../../fsharp/language-reference/records.md)、[匿名レコード型](../../fsharp/language-reference/anonymous-records.md)など)。
+::: zone-end
 * <xref:System.Dynamic.ExpandoObject>
 * <xref:System.TimeZoneInfo>
 * <xref:System.Numerics.BigInteger>
@@ -803,6 +818,10 @@ doc.WriteTo(writer);
 
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
+
+## <a name="typenamehandlingall-not-supported"></a>TypeNameHandling.All はサポートされていません。
+
+`System.Text.Json` から `TypeNameHandling.All`-equivalent 機能を除外するという決定は意図的なものでした。 独自の型情報を指定することを JSON ペイロードに許可することは、Web アプリケーションにおいて、よくある脆弱性の原因です。 特に、`TypeNameHandling.All` で `Newtonsoft.Json` を構成すると、JSON ペイロード自体の中に実行可能アプリケーション全体を埋め込むことがリモート クライアントに許可されます。逆シリアル化の場合、組み込まれたコードが Web アプリケーションによって抽出され、実行されます。 詳細については、「[Friday the 13th JSON attacks PowerPoint](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf)」 (13 日の金曜日の JSON 攻撃)(PowerPoint 資料から) と「[Friday the 13th JSON attacks details](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf)」 (13 日の金曜日の JSON 攻撃の詳細) を参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 異なるストアでの XSLT 変換'
 title: 異なるストアでの XSLT 変換
 ms.date: 03/30/2017
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-ms.openlocfilehash: 15fcf7f3dcf3165b7b88ad01d63aa27873bf5d8d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88463015758a89a31c7d647fa804fe33064f01e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731878"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>異なるストアでの XSLT 変換
 

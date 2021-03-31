@@ -1,5 +1,6 @@
 ---
-title: '方法 : 分離ストレージでストアを取得する'
+description: '詳細情報: 分離ストレージでストアを取得する方法'
+title: 方法:分離ストレージでストアを取得する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-ms.openlocfilehash: ac53432374b546a46417e9d3b9de342a7ea2ef81
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4d65eb23d4e6935b72dd32926c097f7cf0ab6b85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775592"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>方法 : 分離ストレージでストアを取得する
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>方法:分離ストレージでストアを取得する
 
 分離ストアでは、データ コンパートメント内の仮想ファイル システムを公開します。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> クラスでは、分離ストアと対話するためのいくつかのメソッドが提供されます。 ストアを作成して取得するために、<xref:System.IO.IsolatedStorage.IsolatedStorageFile> では次の 3 つの静的メソッドが提供されます。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "95734622"
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>

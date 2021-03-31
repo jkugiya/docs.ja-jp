@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アクセス制御リスト エントリを追加または削除する方法 (.NET Framework のみ)'
 title: '方法: アクセス制御リスト エントリを追加または削除する (.NET Framework のみ)'
 ms.date: 01/14/2019
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], access control list entries
 - access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-ms.openlocfilehash: 53daa88b761f46dab26b1c12c73741e880512d8d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a880b26dcfb328be4a788bc52596c2dee442511
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775826"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>方法: アクセス制御リスト エントリを追加または削除する (.NET Framework のみ)
 

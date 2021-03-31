@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432703"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604763"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -409,6 +409,9 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
+
+> [!NOTE]
+> このプロパティは、特に、.NET 5+ SDK の組み込みアナライザーに適用されます。 これは NuGet コード分析パッケージをインストールするときには使用しないでください。
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

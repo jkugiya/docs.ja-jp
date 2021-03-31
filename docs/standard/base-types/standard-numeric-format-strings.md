@@ -1,7 +1,8 @@
 ---
 title: 標準の数値書式指定文字列
 description: この記事では、.NET で、標準の数値書式指定文字列を使用して、一般的な数値型をテキスト表現に書式設定する方法について説明します。
-ms.date: 06/10/2018
+ms.date: 02/26/2021
+ms.topic: reference
 dev_langs:
 - csharp
 - vb
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dbe646ccd0d3aea1f3dcc16ea079c5547f99d8b6
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818766"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106437"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
-一般的な数値型を書式設定するには、標準の数値書式指定文字列を使用します。 標準の数値書式指定文字列の形式は `Axx` です。
+一般的な数値型を書式設定するには、標準の数値書式指定文字列を使用します。 標準の数値書式指定文字列の形式は *`[format specifier][precision specifier]`* です。
 
-- `A` は *書式指定子* です。これは 1 文字の英文字です。 空白を含む複数の英文字で構成される数値書式指定文字列は、カスタム数値書式指定文字列として解釈されます。 詳細については、「[カスタム数値形式文字列](custom-numeric-format-strings.md)」をご覧ください。
+- "*書式指定子*"は、数値書式の種類 (通貨やパーセントなど) を指定する単一の英文字です。 空白を含む複数の英文字で構成される数値書式指定文字列は、カスタム数値書式指定文字列として解釈されます。 詳細については、「[カスタム数値形式文字列](custom-numeric-format-strings.md)」をご覧ください。
 
-- `xx` は *精度指定子* です。これは省略可能な整数値です。 精度指定子は 0 ～ 99 の範囲で指定され、結果の桁数に影響します。 精度指定子は、文字列形式の数値の桁数を制御することに注意してください。 精度指定子では、数値を丸めません。 丸め操作を実行するには、<xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType>、または <xref:System.Math.Round%2A?displayProperty=nameWithType> の各メソッドを使用します。
+- "*精度指定子*" は、結果の文字列の桁数に影響する、省略可能な整数です。 .NET 6 以降のバージョンでは、有効桁数の最大値は <xref:System.Int32.MaxValue?displayProperty=nameWithType> です。 以前のバージョンの .NET では、有効桁数は 0 - 99 の範囲で指定できます。 精度指定子は、数値の文字列表現の桁数を制御します。 精度指定子では、数値を丸めません。 丸め操作を実行するには、<xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType>、または <xref:System.Math.Round%2A?displayProperty=nameWithType> の各メソッドを使用します。
 
   *精度指定子* によって結果文字列内の小数部の桁数を制御する場合、結果文字列では無限に正確な結果に最も近い表現可能な結果に丸められた数値が反映されます。 同じように近い表現可能な結果が 2 つある場合は、次のようになります。
   - **.NET Framework および .NET Core 2.0 までの .NET Core の場合**、ランタイムにより最下位の数字が大きい方の結果が選択されます (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> が使用されます)。
@@ -42,6 +43,8 @@ ms.locfileid: "94818766"
 
 - 全数値型の `ToString` メソッドの一部のオーバーロード。 たとえば、<xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> メソッドおよび <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドに数値書式指定文字列を指定できます。
 
+- すべての数値型の `TryFormat` メソッド。たとえば、<xref:System.Int32.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)?displayProperty=nameWithType> および <xref:System.Single.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)?displayProperty=nameWithType>。
+
 - .NET の[複合書式指定機能](composite-formatting.md)でもサポートされています。この機能を使用するメソッドには、<xref:System.Console> クラスおよび <xref:System.IO.StreamWriter> クラスの一部の `Write` メソッドと `WriteLine` メソッド、<xref:System.String.Format%2A?displayProperty=nameWithType> メソッド、<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> メソッドがあります。 複合書式指定機能により、複数のデータ項目の文字列表現を 1 つの文字列にまとめ、フィールド幅を指定し、フィールドの数値の位置を揃えることができます。 詳細については、「[複合書式指定](composite-formatting.md)」をご覧ください。
 
 - C# と Visual Basic の[補間文字列](../../csharp/language-reference/tokens/interpolated.md)。複合書式指定文字列と比較すると、構文は単純です。
@@ -49,30 +52,30 @@ ms.locfileid: "94818766"
 > [!TIP]
 > **書式指定ユーティリティ** である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
 
-<a name="table"></a>次の表に、標準数値書式指定子の説明および書式指定子ごとのサンプル出力を示します。 標準の数値書式指定文字列の使用方法については、「[メモ](#NotesStandardFormatting)」をご覧ください。それらを使用する包括的な例については、「[例](#example)」をご覧ください。
+## <a name="standard-format-specifiers"></a>標準書式指定子
+
+次の表に、標準数値書式指定子の説明および書式指定子ごとのサンプル出力を示します。 標準の数値書式指定文字列の使用方法については、「[メモ](#notes)」をご覧ください。それらを使用する包括的な例については、「[コード例](#code-example)」をご覧ください。
 
 |書式指定子|名前|説明|使用例|
 |----------------------|----------|-----------------|--------------|
-|"C" または "c"|通貨|結果: 通貨値。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[通貨 ("C") 書式指定子](#CFormatString)。|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 &euro;<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 &euro;<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
-|"D" または "d"|Decimal (10 進数型)|結果: 必要に応じて負の符号が付く整数。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:最小桁数。<br /><br /> 既定の精度指定子:必要な最小桁数。<br /><br /> 詳細情報:[10 進数 ("D") 書式指定子](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
-|"E" または "e"|指数|結果: 指数表記。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:6.<br /><br /> 詳細情報:[指数 ("E") 書式指定子](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
-|"F" または "f"|固定小数点|結果: 必要に応じて負の符号が付く整数と小数。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[固定小数点 ("F") 書式指定子](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
-|"G" または "g"|全般|結果: 固定小数点表記または指数表記のいずれかのより簡潔な形式。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:有効桁数。<br /><br /> 既定の精度指定子:数値型によって異なります。<br /><br /> 詳細情報:[一般 ("G") 書式指定子](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
-|"N" または "n"|数値|結果: 必要に応じて負の符号が付く整数と小数、桁区切り記号、および小数点記号。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[数値 ("N") 書式指定子](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
-|"P" または "p"|パーセント|結果: 数値に 100 を掛けて、パーセント記号を付けて表示します。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[パーセント ("P") 書式指定子](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
-|"R" または "r"|ラウンドトリップ|結果: 同じ数値にラウンドトリップできる文字列。<br /><br /> サポート: <xref:System.Single>、<xref:System.Double>、および <xref:System.Numerics.BigInteger>。<br /><br /> メモ:<xref:System.Numerics.BigInteger> 型にのみお勧めします。 <xref:System.Double> 型の場合は "G17"、<xref:System.Single> 型の場合は "G9" を使用します。 <br> 精度指定子:無視されます。<br /><br /> 詳細情報:[ラウンドトリップ ("R") 書式指定子](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
-|"X" または "x"|16 進数|結果: 16 進数文字列。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:結果文字列の桁数。<br /><br /> 詳細情報:[16 進数 ("X") 書式指定子](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
+|"C" または "c"|通貨|結果: 通貨値。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[通貨 ("C") 書式指定子](#CFormatString)。|123.456 ("C", en-US)<br />-> \\$123.46<br /><br /> 123.456 ("C", fr-FR)<br />-> 123,46 &euro;<br /><br /> 123.456 ("C", ja-JP)<br />-> ¥123<br /><br /> -123.456 ("C3", en-US)<br />-> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR)<br />-> -123,456 &euro;<br /><br /> -123.456 ("C3", ja-JP)<br />-> -¥123.456|
+|"D" または "d"|Decimal (10 進数型)|結果: 必要に応じて負の符号が付く整数。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:最小桁数。<br /><br /> 既定の精度指定子:必要な最小桁数。<br /><br /> 詳細情報:[10 進数 ("D") 書式指定子](#DFormatString)。|1234 ("D")<br />-> 1234<br /><br /> -1234 ("D6")<br />-> -001234|
+|"E" または "e"|指数|結果: 指数表記。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:6.<br /><br /> 詳細情報:[指数 ("E") 書式指定子](#EFormatString)。|1052.0329112756 ("E", en-US)<br />-> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR)<br />-> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US)<br />-> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR)<br />-> -1,05E+003|
+|"F" または "f"|固定小数点|結果: 必要に応じて負の符号が付く整数と小数。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[固定小数点 ("F") 書式指定子](#FFormatString)。|1234.567 ("F", en-US)<br />-> 1234.57<br /><br /> 1234.567 ("F", de-DE)<br />-> 1234,57<br /><br /> 1234 ("F1", en-US)<br />-> 1234.0<br /><br /> 1234 ("F1", de-DE)<br />-> 1234,0<br /><br /> -1234.56 ("F4", en-US)<br />-> -1234.5600<br /><br /> -1234.56 ("F4", de-DE)<br />-> -1234,5600|
+|"G" または "g"|全般|結果: 固定小数点表記または指数表記のいずれかのより簡潔な形式。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:有効桁数。<br /><br /> 既定の精度指定子:数値型によって異なります。<br /><br /> 詳細情報:[一般 ("G") 書式指定子](#GFormatString)。|-123.456 ("G", en-US)<br />-> -123.456<br /><br /> -123.456 ("G", sv-SE)<br />-> -123,456<br /><br /> 123.4546 ("G4", en-US)<br />-> 123.5<br /><br /> 123.4546 ("G4", sv-SE)<br />-> 123,5<br /><br /> -1.234567890e-25 ("G", en-US)<br />-> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE)<br />-> -1,23456789E-25|
+|"N" または "n"|数値|結果: 必要に応じて負の符号が付く整数と小数、桁区切り記号、および小数点記号。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[数値 ("N") 書式指定子](#NFormatString)。|1234.567 ("N", en-US)<br />-> 1,234.57<br /><br /> 1234.567 ("N", ru-RU)<br />-> 1 234,57<br /><br /> 1234 ("N1", en-US)<br />-> 1,234.0<br /><br /> 1234 ("N1", ru-RU)<br />-> 1 234,0<br /><br /> -1234.56 ("N3", en-US)<br />-> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU)<br />-> -1 234,560|
+|"P" または "p"|パーセント|結果: 数値に 100 を掛けて、パーセント記号を付けて表示します。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[パーセント ("P") 書式指定子](#PFormatString)。|1 ("P", en-US)<br />-> 100.00%<br /><br /> 1 ("P", fr-FR)<br />-> 100,00%<br /><br /> -0.39678 ("P1", en-US)<br />-> -39.7%<br /><br /> -0.39678 ("P1", fr-FR)<br />-> -39,7%|
+|"R" または "r"|ラウンドトリップ|結果: 同じ数値にラウンドトリップできる文字列。<br /><br /> サポート: <xref:System.Single>、<xref:System.Double>、および <xref:System.Numerics.BigInteger>。<br /><br /> メモ:<xref:System.Numerics.BigInteger> 型にのみお勧めします。 <xref:System.Double> 型の場合は "G17"、<xref:System.Single> 型の場合は "G9" を使用します。 <br> 精度指定子:無視されます。<br /><br /> 詳細情報:[ラウンドトリップ ("R") 書式指定子](#RFormatString)。|123456789.12345678 ("R")<br />-> 123456789.12345678<br /><br /> -1234567890.12345678 ("R")<br />-> -1234567890.1234567|
+|"X" または "x"|16 進数|結果: 16 進数文字列。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:結果文字列の桁数。<br /><br /> 詳細情報:[16 進数 ("X") 書式指定子](#XFormatString)。|255 ("X")<br />-> FF<br /><br /> -1 ("x")<br />-> ff<br /><br /> 255 ("x4")<br />-> 00ff<br /><br /> -1 ("X4")<br />-> 00FF|
 |その他の 1 文字|未定義の指定子|結果: 実行時に <xref:System.FormatException> をスローします。||
 
-<a name="Using"></a>
-
-## <a name="using-standard-numeric-format-strings"></a>標準の数値書式指定文字列の使用
+## <a name="use-standard-numeric-format-strings"></a>標準の数値形式文字列を使用する
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 標準の数値書式指定文字列を使用すると、次のいずれかの方法で数値の書式を定義できます。
 
-- `ToString` パラメーターを持つ `format` メソッドのオーバーロードに渡す。 次の例では、数値の書式を現在のカルチャ (ここでは en-US カルチャ) の通貨文字列に設定しています。
+- これは `TryFormat` メソッドに渡すことも、`format` パラメーターを持つ `ToString` メソッドのオーバーロードに渡すこともできます。 次の例では、数値の書式を現在のカルチャ (ここでは en-US カルチャ) の通貨文字列に設定しています。
 
   [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
@@ -90,13 +93,13 @@ ms.locfileid: "94818766"
   [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
   [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]
 
-- これは補間文字列の挿入式項目内で `formatString` 引数として指定できます。 詳細については、C# リファレンスの[文字列補間](../../csharp/language-reference/tokens/interpolated.md)または Visual Basic リファレンスの[補間文字列](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)に関するトピックを参照してください。
+- これは補間文字列の挿入式項目内で `formatString` 引数として指定できます。 詳細については、C# リファレンスの[文字列補間](../../csharp/language-reference/tokens/interpolated.md)または Visual Basic リファレンスの[補間文字列](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)に関する記事を参照してください。
 
 以降では、それぞれの標準の数値書式指定文字列について詳しく説明します。
 
 <a name="CFormatString"></a>
 
-## <a name="the-currency-c-format-specifier"></a>通貨 ("C") 書式指定子
+## <a name="currency-format-specifier-c"></a>通貨書式指定子 (C)
 
 "C" (通貨) 書式指定子は、金額を表す文字列に数値を変換します。 精度指定子は、結果文字列の小数部の桁数を示します。 精度指定子を省略すると、<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> プロパティによって既定の桁数が定義されます。
 
@@ -121,11 +124,9 @@ ms.locfileid: "94818766"
 [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
-[表のトップへ](#table)
-
 <a name="DFormatString"></a>
 
-## <a name="the-decimal-d-format-specifier"></a>10 進数 ("D") 書式指定子
+## <a name="decimal-format-specifier-d"></a>10 進数書式指定子 (D)
 
 "D" (10 進数) 書式指定子は、0 ～ 9 の数字から成る文字列に数値を変換します。負の数値の場合は、文字列の先頭にマイナス記号が挿入されます。 この書式指定は整数型でだけサポートされています。
 
@@ -143,11 +144,9 @@ ms.locfileid: "94818766"
 [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
 [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]
 
-[表のトップへ](#table)
-
 <a name="EFormatString"></a>
 
-## <a name="the-exponential-e-format-specifier"></a>指数 ("E") 書式指定子
+## <a name="exponential-format-specifier-e"></a>指数書式指定子 (E)
 
 指数 ("E") 書式指定子は、"-d.ddd…E+ddd" または "-d.ddd…e+ddd" という形式の文字列に数値を変換します。この "d" は 0 ～ 9 の 1 桁の数字を示します。 負の数値の場合、変換後の文字列の先頭にマイナス記号が挿入されます。 小数点の前には 1 桁の数字が必ず示されます。
 
@@ -169,11 +168,9 @@ ms.locfileid: "94818766"
 [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
-[表のトップへ](#table)
-
 <a name="FFormatString"></a>
 
-## <a name="the-fixed-point-f-format-specifier"></a>固定小数点 ("F") 書式指定子
+## <a name="fixed-point-format-specifier-f"></a>固定小数点書式指定子 (F)
 
 固定小数点 ("F) 書式指定子は、"-ddd.ddd…" という形式の文字列に数値を変換します。この "d" は 0 から 9 の 1 桁の数字を示します。 負の数値の場合、変換後の文字列の先頭にマイナス記号が挿入されます。
 
@@ -193,11 +190,9 @@ ms.locfileid: "94818766"
 [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
-[表のトップへ](#table)
-
 <a name="GFormatString"></a>
 
-## <a name="the-general-g-format-specifier"></a>一般 ("G") 書式指定子
+## <a name="general-format-specifier-g"></a>一般書式指定子 (G)
 
 一般 ("G") 書式指定子は、数値の型や、精度指定子が指定されているかどうかに応じて、固定小数点表記または指数表記のいずれかのより簡潔な形式に数値を変換します。 精度指定子は、結果文字列の有効桁数の最大値を定義します。 精度指定子が省略されている場合や、0 である場合は、次の表に示すように、数値の型によって既定の精度が決定されます。
 
@@ -240,11 +235,9 @@ ms.locfileid: "94818766"
 [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
-[表のトップへ](#table)
-
 <a name="NFormatString"></a>
 
-## <a name="the-numeric-n-format-specifier"></a>数値 ("N") 書式指定子
+## <a name="numeric-format-specifier-n"></a>数値書式指定子 (N)
 
 "N" (Numeric: 数値) は、数値を "-d,ddd,ddd.ddd…" という形式の文字列に変換する書式指定子です。"-" は負数記号を示し (必要な場合)、"d" は数字 (0 ～ 9) を示し、"," は桁区切り記号を示し、"." は小数点記号を示します。 精度指定子は、小数部の桁数を示します。 精度指定子を省略すると、現在の <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> プロパティによって小数部の桁数が定義されます。
 
@@ -265,11 +258,9 @@ ms.locfileid: "94818766"
 [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
-[表のトップへ](#table)
-
 <a name="PFormatString"></a>
 
-## <a name="the-percent-p-format-specifier"></a>パーセント ("P") 書式指定子
+## <a name="percent-format-specifier-p"></a>パーセント書式指定子 (P)
 
 パーセント ("P") 書式指定子は、数値に 100 を掛けて、パーセントを表す文字列に変換します。 精度指定子は、小数部の桁数を示します。 精度指定子を省略すると、現在の <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> プロパティによって指定される既定の桁数が使用されます。
 
@@ -292,11 +283,9 @@ ms.locfileid: "94818766"
 [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
-[表のトップへ](#table)
-
 <a name="RFormatString"></a>
 
-## <a name="the-round-trip-r-format-specifier"></a>ラウンドトリップ ("R") 書式指定子
+## <a name="round-trip-format-specifier-r"></a>ラウンドトリップ書式指定子 (R)
 
 ラウンド トリップ ("R") 書式指定子は、文字列に変換された数値が解析され、同じ数値に戻るように試行します。 この書式指定は、<xref:System.Single> 型、<xref:System.Double> 型、および <xref:System.Numerics.BigInteger> 型でだけサポートされています。
 
@@ -327,11 +316,9 @@ ms.locfileid: "94818766"
 [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
-[表のトップへ](#table)
-
 <a name="XFormatString"></a>
 
-## <a name="the-hexadecimal-x-format-specifier"></a>16 進数 ("X") 書式指定子
+## <a name="hexadecimal-format-specifier-x"></a>16 進書式指定子 (X)
 
 16 進数 ("X") 書式指定子は、16 進数文字列に数値を変換します。 書式指定子の大文字と小文字によって、9 よりも大きい 16 進数値を示すアルファベット文字が大文字と小文字のどちらで表示されるかが決まります。 たとえば、"X" を指定すると "ABCDEF" となり、"x" を指定すると "abcdef" となります。 この書式指定は整数型でだけサポートされています。
 
@@ -345,11 +332,9 @@ ms.locfileid: "94818766"
 [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
 [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]
 
-[表のトップへ](#table)
-
-<a name="NotesStandardFormatting"></a>
-
 ## <a name="notes"></a>メモ
+
+このセクションには、標準の数値書式指定文字列の使用に関する追加情報が含まれています。
 
 ### <a name="control-panel-settings"></a>コントロール パネルの設定
 
@@ -368,13 +353,11 @@ ms.locfileid: "94818766"
 
 標準の数値書式指定子の記述で、整数数値型または浮動小数点数値型が参照されている場合があります。 整数数値型には、<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、および <xref:System.Numerics.BigInteger> があります。 浮動小数点数値型には、<xref:System.Decimal>、<xref:System.Single>、および <xref:System.Double> があります。
 
-### <a name="floating-point-infinities-and-nan"></a>浮動小数点の無限大値と NaN (非数) 値
+### <a name="floating-point-infinities-and-nan"></a>浮動小数点の無限大値と NAN (非数) 値
 
 <xref:System.Single> の浮動小数点型または <xref:System.Double> の浮動小数点型が正の無限大、負の無限大、または NaN (非数) である場合は、書式指定文字列とは関係なく、現在適用可能な <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> オブジェクトによって指定される <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A>、または <xref:System.Globalization.NumberFormatInfo> の各プロパティの値は、書式設定された文字列となります。
 
-## <a name="example"></a>例
-
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-partial-note.md)]
+## <a name="code-example"></a>コードの例
 
 次の例では、en-US カルチャおよびすべての標準数値書式指定子を使用して、整数値と浮動小数点数値を書式設定します。 この例では 2 つの特定の数値型 (<xref:System.Double> および <xref:System.Int32>) を使用していますが、他の数値基本型 (<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64><xref:System.Numerics.BigInteger>、<xref:System.Decimal>、および <xref:System.Single>) でも類似した結果が得られます。
 

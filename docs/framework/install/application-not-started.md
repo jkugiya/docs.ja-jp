@@ -2,12 +2,12 @@
 title: "\"このアプリケーションを開始できませんでした\" のトラブルシューティング"
 description: "\"このアプリケーションを開始できませんでした\" のダイアログ ボックスが表示された場合の対処方法を説明します。"
 ms.date: 09/05/2019
-ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92055bf40500eba4f7c892d11af12d8e675ddd5d
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965907"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605244"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>"このアプリケーションを開始できませんでした" のエラー メッセージのトラブルシューティング
 
@@ -15,7 +15,7 @@ ms.locfileid: "76965907"
 
 ![このアプリケーションを開始できませんでした。](media/application-not-started/app-could-not-be-started.png)
 
-通常、これは次のいずれかの条件を示します。
+通常、このエラーは次のいずれかの状態を示します。
 
 - システムにインストールされている .NET Framework が破損しています。
 
@@ -25,15 +25,15 @@ ms.locfileid: "76965907"
 
 1. [.NET Framework 修復ツール (NetFxRepairTool.exe)](https://www.microsoft.com/download/details.aspx?id=30135) をダウンロードします。 ダウンロードが完了すると、ツールが自動的に実行されます。
 
-1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、 **[次へ]** を選択します。
+1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、**[次へ]** を選択します。
 
-   ![推奨される変更](media/application-not-started/repair-tool-recommended-changes.png)
+   ![修復ツールの推奨される変更](media/application-not-started/repair-tool-recommended-changes.png)
 
 1. 次の図に示すように、変更が完了したことを示すダイアログ ボックスが .NET Framework 修復ツールに表示されます。 アプリケーションを再実行するときは、このダイアログ ボックスを開いたままにしておきます。 .NET Framework 修復ツールによって破損した .NET Framework インストールが特定され、修正された場合は成功です。
 
-   ![推奨される変更](media/application-not-started/repair-tool-changes-complete.png)
+   ![修復ツールの変更の完了](media/application-not-started/repair-tool-changes-complete.png)
 
-1. アプリケーションが正常に実行された場合は、 **[完了]** ボタンを選択します。 それ以外の場合は、 **[次へ]** ボタンを選択します。
+1. アプリケーションが正常に実行された場合は、**[完了]** ボタンを選択します。 それ以外の場合は、**[次へ]** ボタンを選択します。
 
 1. **[次へ]** ボタンを選択した場合、.NET Framework 修復ツールでは次のようなダイアログ ボックスが表示されます。 **[完了]** ボタンを選択して、診断情報を Microsoft に送信します。
 
@@ -57,10 +57,10 @@ ms.locfileid: "76965907"
 
 1. 場合によっては、次のようなダイアログ ボックスが表示され、.NET Framework 3.5 をインストールするように求められます。 **[この機能をダウンロードしてインストールする]** を選択して .NET Framework 3.5 をインストールし、アプリケーションをもう一度起動します。
 
-   ![問題を解決できない](media/application-not-started/install-3-5.png)
+   ![.NET Framework 3.5 をインストールすることを提案している [Windows の機能] ダイアログ ボックス](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Framework のシステム要件](../get-started/system-requirements.md)
-- [.NET Framework のインストール ガイド](index.md)
+- [.NET framework のインストール ガイド](index.md)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)

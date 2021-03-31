@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: オブジェクト階層の XML データへのマップ'
 title: オブジェクト階層の XML データへのマップ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 9c4fbba63428e04b7b29a803061f288ca6ee5031
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1be34c43bc9656288e886c309e665b15cb332524
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732099"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>オブジェクト階層の XML データへのマップ
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML スキーマ オブジェクト モデルの概要'
 title: XML スキーマ オブジェクト モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-ms.openlocfilehash: 62560b641c43f2210b052e9880f2d945dbae0c6f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c780cf2a1b23c39b8c1051dbebcbb9d96fec22d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782729"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML スキーマ オブジェクト モデルの概要
 

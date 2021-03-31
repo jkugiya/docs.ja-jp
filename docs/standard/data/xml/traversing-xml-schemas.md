@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML スキーマの走査'
 title: XML スキーマの走査
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: 6371d7e16af45eebf09f95bce2864be3bf44321e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d860235fb8d4414a465a931438701ace5ed1e08c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782911"
 ---
 # <a name="traversing-xml-schemas"></a>XML スキーマの走査
 
@@ -30,7 +31,7 @@ ms.locfileid: "94824676"
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>、<xref:System.Xml.Schema.XmlSchemaInclude>、<xref:System.Xml.Schema.XmlSchemaImport>、または <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (グローバル レベルのすべての要素、属性、および型にアクセスできる)|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>、<xref:System.Xml.Schema.XmlSchemaSimpleType>、<xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (スキーマの名前空間に属さない属性にアクセスできる)|
 
 > [!NOTE]

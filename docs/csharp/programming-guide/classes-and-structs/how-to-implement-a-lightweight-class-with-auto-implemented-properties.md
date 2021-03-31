@@ -8,23 +8,26 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4b28ee17f4be2b933373cce0d3670cbfa9a12895
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 1d80cb2391a94c21360117c8217ecc4514fd666e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513043"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190269"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>自動実装するプロパティを使用して簡易クラスを実装する方法 (C# プログラミング ガイド)
 
 この例では、一連の自動実装プロパティのカプセル化のみを行う、変更できない簡易クラスの作成方法を示します。 参照型のセマンティクスを使用する必要がある場合は、構造体ではなく次のようなコンストラクトを使用します。
 
-変更できないプロパティの作成方法は 2 つあります。
+次の方法で、変更できないプロパティを作成できます。
 
-- [set](../../language-reference/keywords/set.md) アクセサーは、[private](../../language-reference/keywords/private.md) として宣言することができます。  プロパティは型の中のみで設定可能で、コンシューマーは変更できません。
+- [get](../../language-reference/keywords/get.md) アクセサーのみを宣言し、その型のコンストラクターを除くすべての場所でプロパティを変更できないようにします。
+
+- `set` アクセサーではなく [init](../../language-reference/keywords/init.md) アクセサーを宣言します。これにより、コンストラクターでのみ、または[オブジェクト初期化子](object-and-collection-initializers.md)を使用してプロパティを設定可能にすることができます。
+
+- [set](../../language-reference/keywords/set.md) アクセサーは、[private](../../language-reference/keywords/private.md) として宣言します。  プロパティは型の中で設定可能で、コンシューマーは変更できません。
 
   `set` アクセサーを private で宣言した場合、オブジェクト初期化子を使用してプロパティを初期化することはできません。 コンストラクターまたはファクトリ メソッドを使用する必要があります。
-- [get](../../language-reference/keywords/get.md) アクセサーのみを宣言し、その型のコンストラクターを除くすべての場所でプロパティを変更できないようにすることができます。
 
 次の例では、get アクセサーのみを持つプロパティが、get と private set を持つプロパティとどのように異なるかを示しています。
 

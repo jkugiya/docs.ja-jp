@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 単純な PLINQ クエリを作成して実行する方法'
 title: '方法: 単純な PLINQ クエリを作成して実行する'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-ms.openlocfilehash: 228a94323c42d7c7a5ecbd295a0db5d73f4f1f49
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f9147dce03bceb07085e84ed5bc9967ce08c17c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702055"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>方法: 単純な PLINQ クエリを作成して実行する
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アタッチされた子タスクとデタッチされた子タスク'
 title: アタッチされた子タスクとデタッチされた子タスク
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: 3b9bc2a854dfdee724c2059b3298b67da799284b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1ee69e1ed8314d976d0d17d7db15f9bcd994970a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731540"
 ---
 # <a name="attached-and-detached-child-tasks"></a>アタッチされた子タスクとデタッチされた子タスク
 
@@ -60,7 +61,7 @@ ms.locfileid: "95734297"
   
 ## <a name="cancellation-and-child-tasks"></a>キャンセルと子タスク  
 
- タスクの取り消し処理は他の処理と連携して行われます。 つまり、キャンセル可能であるためには、すべてのアタッチされた子タスク、またはデタッチされた子タスクが、キャンセル トークンの状態を監視する必要があります。 1 つのキャンセル要求を使用して親とその子をすべて取り消す場合は、同じトークンをすべてのタスクに引数として渡し、各タスクの要求に応答するためのロジックを各タスクに提供します。 詳細については、「[タスクのキャンセル](task-cancellation.md)」および「[方法: タスクとその子を取り消す](how-to-cancel-a-task-and-its-children.md)」を参照してください。  
+ タスクの取り消し処理は他の処理と連携して行われます。 つまり、キャンセル可能であるためには、すべてのアタッチされた子タスク、またはデタッチされた子タスクが、キャンセル トークンの状態を監視する必要があります。 1 つのキャンセル要求を使用して親とその子をすべて取り消す場合は、同じトークンをすべてのタスクに引数として渡し、各タスクの要求に応答するためのロジックを各タスクに提供します。 詳細については、「[タスクのキャンセル](task-cancellation.md)」と「[方法:タスクとその子を取り消す](how-to-cancel-a-task-and-its-children.md)」を参照してください。  
   
 ### <a name="when-the-parent-cancels"></a>親が取り消された場合  
 
@@ -84,7 +85,7 @@ ms.locfileid: "95734297"
   
  子タスクが適時に完了しない場合には、子タスクがその親にアタッチしないようにすることをお勧めします。 親タスクは、すべての子タスクが終了するまで完了しないため、長時間実行される子タスクによって、アプリケーション全体のパフォーマンスの低下を生じる場合があります。 タスクがその親タスクにアタッチしないようにすることにより、アプリケーションのパフォーマンスを向上させる方法の例については、「[方法: 子タスクがその親にアタッチしないようにする](how-to-prevent-a-child-task-from-attaching-to-its-parent.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [並列プログラミング](index.md)
 - [データの並列化](data-parallelism-task-parallel-library.md)

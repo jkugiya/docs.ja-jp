@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XPath クエリで認識されるノード型'
 title: XPath クエリで認識されるノード型
 ms.date: 03/30/2017
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-ms.openlocfilehash: bfc94958dbe54f05773a3adfcdfa9bf1c7ee8037
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fb310a7c2b353ecce14bb2f1a3ac8032fdde4d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734084"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675885"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>XPath クエリで認識されるノード型
 

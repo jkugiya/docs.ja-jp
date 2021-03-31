@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Sorted コレクション型'
 title: Sorted コレクション型
 ms.date: 04/30/2020
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: 62e0ffde31d91ea2b0bbe3b5c37cddb87349b5a3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b57d767457b5de8d38100db104dde3e7ad2e540a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823824"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676132"
 ---
 # <a name="sorted-collection-types"></a>Sorted コレクション型
 

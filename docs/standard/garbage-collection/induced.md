@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 発生したコレクション'
 title: 発生したコレクション
 ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 25e94221355569931a31b566a53434cbed9ea93f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c9f1929b40ed7cdb38832afebd6d0c67910ccfb7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775852"
 ---
 # <a name="induced-collections"></a>発生したコレクション
 
@@ -21,7 +22,7 @@ ms.locfileid: "95714238"
 
  <xref:System.GC.Collect%2A?displayProperty=nameWithType> 値を含む <xref:System.GCCollectionMode> メソッド オーバーロードの 1 つを使用して、強制的コレクションの動作を次のように指定できます。  
   
-|`GCCollectionMode` の値|[説明]|  
+|`GCCollectionMode` 値|説明|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|実行中のバージョンの .NET の既定のガベージ コレクション設定を使用します。|  
 |<xref:System.GCCollectionMode.Forced>|直ちにガベージ コレクションを強制的に実行します。 これは、<xref:System.GC.Collect?displayProperty=nameWithType> オーバーロードを呼び出すのと同じです。 結果として、すべてのジェネレーションのフル ブロッキング コレクションになります。<br /><br /> また、直ちにフル ブロッキング ガベージ コレクションを強制的に実行する前に、<xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> プロパティを <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> に設定して、大きなオブジェクト ヒープを圧縮することもできます。|  
@@ -36,7 +37,7 @@ ms.locfileid: "95714238"
 |<xref:System.GCCollectionMode.Forced> または <xref:System.GCCollectionMode.Default>|ブロッキング コレクションはできるだけ早く実行されます。 バックグラウンド コレクションが実行中でジェネレーションが 0 または 1 の場合、<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> メソッドは直ちにブロッキング コレクションをトリガーし、コレクションが終了すると制御を戻します。 バックグラウンド コレクションが実行中で `generation` パラメーターが 2 の場合、メソッドはバックグラウンド コレクションの終了を待機し、ジェネレーション 2 のブロッキング コレクションをトリガーして、制御を戻します。|コレクションはできるだけ早く実行されます。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> メソッドはバックグラウンド コレクションを要求しますが、それは保証されず、状況によってはブロッキング コレクションが実行される場合もあります。 バックグラウンド コレクションが既に実行中の場合、メソッドはすぐに制御を返します。|  
 |<xref:System.GCCollectionMode.Optimized>|ガベージ コレクターおよび `generation` パラメーターの状態によっては、ブロッキング コレクションが実行される場合があります。 ガベージ コレクターは最適なパフォーマンスを提供しようとします。|ガベージ コレクターの状態によっては、コレクションが実行される場合があります。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> メソッドはバックグラウンド コレクションを要求しますが、それは保証されず、状況によってはブロッキング コレクションが実行される場合もあります。 ガベージ コレクターは最適なパフォーマンスを提供しようとします。 バックグラウンド コレクションが既に実行中の場合、メソッドはすぐに制御を返します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [待機モード](latency.md)
 - [ガベージ コレクション](index.md)

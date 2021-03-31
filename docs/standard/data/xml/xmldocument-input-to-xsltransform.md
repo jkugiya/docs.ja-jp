@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XslTransform への XmlDocument の入力'
 title: XslTransform への XmlDocument の入力
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: 1c7aa1a9d5c02aaac5a78603bd2397f012d4640d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97deba4702a82fe0b1424d0a11aa754c7fbc0f3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782651"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XslTransform への XmlDocument の入力
 

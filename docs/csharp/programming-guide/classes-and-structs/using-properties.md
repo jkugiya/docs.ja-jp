@@ -7,16 +7,16 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 16ff0f02db9640ad8cfe41fce9ce954cb75b4e08
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864658"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190334"
 ---
 # <a name="using-properties-c-programming-guide"></a>プロパティの使用 (C# プログラミング ガイド)
 
-プロパティは、フィールドとメソッドの両方の側面を結合します。 オブジェクトのユーザーにとってプロパティは、プロパティへのアクセスに同じ構文を必要とするフィールドのように見えます。 クラスの実装者にとってプロパティは、[get](../../language-reference/keywords/get.md) アクセサーと [set](../../language-reference/keywords/set.md) アクセサーの両方またはいずれかを表す 1 つまたは 2 つのコード ブロックです。 `get` アクセサーのコード ブロックはプロパティが読み取られる時に実行され、`set` アクセサーのコード ブロックはプロパティに新しい値が割り当てられるときに実行されます。 `set` アクセサーのないプロパティは読み取り専用と見なされます。 `get` アクセサーのないプロパティは書き込み専用と見なされます。 両方のアクセサーを持つプロパティは、読み取り/書き込みです。
+プロパティは、フィールドとメソッドの両方の側面を結合します。 オブジェクトのユーザーにとってプロパティは、プロパティへのアクセスに同じ構文を必要とするフィールドのように見えます。 クラスの実装者にとってプロパティは、[get](../../language-reference/keywords/get.md) アクセサーと [set](../../language-reference/keywords/set.md) アクセサーの両方またはいずれかを表す 1 つまたは 2 つのコード ブロックです。 `get` アクセサーのコード ブロックはプロパティが読み取られる時に実行され、`set` アクセサーのコード ブロックはプロパティに新しい値が割り当てられるときに実行されます。 `set` アクセサーのないプロパティは読み取り専用と見なされます。 `get` アクセサーのないプロパティは書き込み専用と見なされます。 両方のアクセサーを持つプロパティは、読み取り/書き込みです。 C# 9 以降では、`init` アクセサーを `set` アクセサーの代わりに使用し、プロパティを読み取り専用にできます。
 
 フィールドとは異なり、プロパティは変数には分類されません。 そのため、プロパティを [ref](../../language-reference/keywords/ref.md) または [out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターとして渡すことはできません。
 
@@ -64,7 +64,11 @@ ms.locfileid: "86864658"
 
 `set` アクセサーでローカル変数の宣言に暗黙のパラメーター名 `value` を使用すると、エラーになります。
 
-## <a name="remarks"></a>Remarks
+## <a name="the-init-accessor"></a>init アクセサー
+
+`init` アクセサーを作成するコードは、`set` の代わりに `init` キーワードを使用するという点を除き、`set` アクセサーを作成するコードと同じです。 `init` アクセサーはコンストラクター内で使用するか、[オブジェクト初期化子](object-and-collection-initializers.md)で使用するしかないというところが違います。
+
+## <a name="remarks"></a>解説
 
 プロパティは `public`、`private`、`protected`、`internal`、`protected internal`、`private protected` のいずれかでマークできます。 これらのアクセス修飾子により、クラスのユーザーがプロパティにアクセスできる方法が定義されます。 同じプロパティの `get` と `set` アクセサーは、異なるアクセス修飾子を持つことができます。 たとえば、`get` を `public` にして、型の外部からの読み取り専用アクセスを許可して、`set` を `private` または `protected` にすることができます。 詳細については、「[アクセス修飾子](./access-modifiers.md)」を参照してください。
 
@@ -77,13 +81,13 @@ ms.locfileid: "86864658"
 > [!NOTE]
 > [静的](../../language-reference/keywords/static.md)プロパティのアクセサーで[virtual](../../language-reference/keywords/virtual.md)、[abstract](../../language-reference/keywords/abstract.md)、または [override](../../language-reference/keywords/override.md) 修飾子を使用すると、エラーになります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 この例では、インスタンス、静的、および読み取り専用のプロパティを示します。 キーボードから従業員の名前を受け取り、`NumberOfEmployees` を 1 だけインクリメントし、従業員の名前と番号を表示します。
 
 [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]
 
-## <a name="example"></a>例
+## <a name="hidden-property-example"></a>プロパティ非表示の例
 
 この例では、派生クラスで同じ名前を持つ別のプロパティによって非表示にされている基底クラスのプロパティにアクセスする方法を示します。
 
@@ -101,7 +105,7 @@ ms.locfileid: "86864658"
 
      メンバーを非表示にする詳細については、「[new 修飾子](../../language-reference/keywords/new-modifier.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="override-property-example"></a>プロパティ オーバーライドの例
 
 この例では、`Cube` と `Square` の 2 つのクラスが抽象クラス `Shape` を実装し、その抽象 `Area` プロパティをオーバーライドします。 プロパティでの [override](../../language-reference/keywords/override.md) 修飾子の使用に注意してください。 プログラムは、入力として辺を受け入れ、四角形と立方体の面積を計算します。 プログラムはまた、入力として面積を受け入れ、四角形と立方体の対応する辺を計算します。
 

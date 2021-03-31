@@ -1,21 +1,23 @@
 ---
 title: メソッド - C# プログラミング ガイド
 description: C# のメソッドは、一連のステートメントが含まれているコード ブロックです。 メソッドを呼び出して引数を指定すると、プログラムによってステートメントが実行されます。
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: e8fad125167774d69344ebb9045a4ead84706bfb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899452"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189969"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 
-メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。 `Main` メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。
+メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。
+
+`Main` メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。 [最上位レベルのステートメント](../main-and-command-args/top-level-statements.md)を使用するアプリケーションでは、`Main` メソッドはコンパイラによって生成され、すべての最上位レベルのステートメントが含まれます。
 
 > [!NOTE]
 > この記事では、名前付きメソッドについて説明します。 匿名関数については、「[匿名関数](../statements-expressions-operators/anonymous-functions.md)」を参照してください。

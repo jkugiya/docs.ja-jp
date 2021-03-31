@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Hashtable コレクション型と Dictionary コレクション型'
 title: Hashtable コレクション型と Dictionary コレクション型
 ms.date: 03/30/2017
 '\helpviewer_keywords':
@@ -9,12 +10,12 @@ ms.date: 03/30/2017
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: 56e8ceff05f8f9777af370301a96cd17d0286f44
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ba4952ad8f820984a735685571eb76236cb0dae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676197"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable コレクション型と Dictionary コレクション型
 
@@ -34,7 +35,7 @@ ms.locfileid: "95733530"
   
  <xref:System.Collections.Generic.Dictionary%602> および <xref:System.Collections.Concurrent.ConcurrentDictionary%602> クラスには、<xref:System.Collections.Hashtable> クラスと同じ機能があります。 特定の型 (<xref:System.Object> を除く) の<xref:System.Collections.Generic.Dictionary%602> は、値型の <xref:System.Collections.Hashtable> よりも優れたパフォーマンスを実現します。 これは、<xref:System.Collections.Hashtable> の要素の型が <xref:System.Object> であるため、値型を格納したり取得したりすると、ボックス化とボックス化解除が通常発生するためです。 複数のスレッドが同時にコレクションにアクセスするときには、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> クラスを使用する必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>

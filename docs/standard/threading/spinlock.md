@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: SpinLock'
 title: SpinLock
 ms.date: 03/30/2017
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: adb80ffb1917ea725c458dbe3c37f3d364276fb6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44285f27b387d411b1cdd511b7d191aa2a2166b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792350"
 ---
 # <a name="spinlock"></a>SpinLock
 
@@ -23,6 +24,6 @@ ms.locfileid: "95674295"
   
  <xref:System.Threading.SpinLock> では *スレッド*-*追跡* モードがサポートされ、開発フェーズ中に使用することができ、特定の時間にロックを保持しているスレッドの追跡に役立ちます。 スレッド追跡モードはデバッグに非常に役立ちますが、パフォーマンスが低下する可能性があるため、リリース バージョンのプログラムでは無効にすることをお勧めします。 詳細については、「[方法: SpinLock のスレッド追跡モードを有効にする](how-to-enable-thread-tracking-mode-in-spinlock.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [スレッド処理オブジェクトと機能](threading-objects-and-features.md)

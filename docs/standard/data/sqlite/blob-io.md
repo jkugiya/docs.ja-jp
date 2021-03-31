@@ -1,15 +1,18 @@
 ---
 title: BLOB の I/O
-ms.date: 12/13/2019
+ms.date: 12/08/2020
 description: SQLite の BLOB I/O 機能の使用方法について説明します。
-ms.openlocfilehash: 0c133deacdc19684eca3a6724fb398dc01fda558
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8b305669f3155d2366215e9a05beb5ed51533d81
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110046"
 ---
 # <a name="blob-io"></a>BLOB の I/O
+
+> [!NOTE]
+> SqliteBlob クラスは、バージョン 3.0 で追加されました。
 
 データベースとの間でデータをストリーミングして、ラージ オブジェクトの読み取りと書き込み中のメモリ使用量を削減できます。 これは、データを解析または変換するときに特に有用です。
 

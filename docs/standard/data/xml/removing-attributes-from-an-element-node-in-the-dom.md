@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DOM の要素ノードからの属性の削除'
 title: DOM の要素ノードからの属性の削除
 ms.date: 03/30/2017
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-ms.openlocfilehash: 53922c55295e852a1aa62d847313fbd657a42541
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1e15f8358db6723d99194975cad2d121f6d48c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686762"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783132"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM の要素ノードからの属性の削除
 

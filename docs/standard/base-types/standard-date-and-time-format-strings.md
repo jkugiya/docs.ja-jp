@@ -1,7 +1,7 @@
 ---
 title: 標準の日時書式指定文字列
 description: .NET で、標準の日時書式指定文字列を使用して、日付と時刻の値のテキスト表現を定義する方法について説明します。
-ms.date: 12/07/2020
+ms.date: 01/25/2021
 dev_langs:
 - csharp
 - vb
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.topic: reference
-ms.custom: contperfq2
-ms.openlocfilehash: 688aaf7a1814e132f3bffa48394873653bf314e8
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.custom: contperf-fy21q2
+ms.openlocfilehash: f445ee92345fa692e11fc60c658020fc92e55a2e
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851133"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794754"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 
@@ -86,7 +86,7 @@ ms.locfileid: "96851133"
 
 |標準書式指定文字列|DateTimeFormatInfo.InvariantInfo プロパティによる定義|カスタム書式指定文字列|
 |----------------------------|----------------------------------------------------------|--------------------------|
-|"O" または "o"|None|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
+|"O" または "o"|None|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK|
 |"R" または "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML ドキュメントへのノードの挿入'
 title: XML ドキュメントへのノードの挿入
 ms.date: 03/30/2017
 ms.assetid: 891e54f5-54f6-4bb4-b624-9d1b6a1f1216
-ms.openlocfilehash: 2d3712efe0f50e42318f541d53fa54668b5b119c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dfeaddc1a06af4742ccde9a29806bd8f6248e864
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720192"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732125"
 ---
 # <a name="inserting-nodes-into-an-xml-document"></a>XML ドキュメントへのノードの挿入
 

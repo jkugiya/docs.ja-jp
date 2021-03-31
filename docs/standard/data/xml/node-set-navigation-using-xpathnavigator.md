@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XPathNavigator を使用するノード セットのナビゲーション'
 title: XPathNavigator を使用するノード セットのナビゲーション
 ms.date: 03/30/2017
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: 592acfb5e4065d707f4dda09f349e8b783656148
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d4e902cbe8cf93fe753c9cbdd01d6a369152c092
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675963"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator を使用するノード セットのナビゲーション
 

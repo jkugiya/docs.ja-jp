@@ -3,12 +3,12 @@ title: Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べ
 description: Syntax Visualizer は、.NET Compiler Platform SDK がコード用に生成したモデルを調べるためのビジュアル ツールを提供します。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: a911a99e78ad5a5f4c6771b91a3c541b1812d67c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 43c69bce93db490fccc3500784623f5736ed935d
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167575"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605426"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 
@@ -42,11 +42,11 @@ ms.locfileid: "91167575"
 
 ---
 
-前出の画像のように、Visualizer ツール ウィンドウでは、上部に構文ツリーが表示され、下部にプロパティ グリッドが表示されます。 プロパティ グリッドには、ツリーで現在選択されている項目のプロパティが表示されます。これには、項目の .NET *型*と*種類* (SyntaxKind) が含まれます。
+前出の画像のように、Visualizer ツール ウィンドウでは、上部に構文ツリーが表示され、下部にプロパティ グリッドが表示されます。 プロパティ グリッドには、ツリーで現在選択されている項目のプロパティが表示されます。これには、項目の .NET *型* と *種類* (SyntaxKind) が含まれます。
 
-構文ツリーは、*ノード*、*トークン*、および*トリビア*の 3 つの項目の型で構成されています。 これらの型については、[構文の使用](work-with-syntax.md) の記事で詳しく説明されています。 項目は型ごとに異なる色を使用して表されています。 使用されている色の概要については、[凡例] ボタンをクリックします。
+構文ツリーは、*ノード*、*トークン*、および *トリビア* の 3 つの項目の型で構成されています。 これらの型については、[構文の使用](work-with-syntax.md) の記事で詳しく説明されています。 項目は型ごとに異なる色を使用して表されています。 使用されている色の概要については、[凡例] ボタンをクリックします。
 
-ツリー内の各項目には、独自の**スパン**も表示されています。 **スパン**は、テキスト ファイル内のそのノードのインデックス (開始位置と終了位置) です。  前出の C# の例では、選択されている "UsingKeyword [0..5)" トークンには、5 文字の幅の**スパン** [0..5) があります。 "[..)" の表記は、開始インデックスはスパンの一部ですが、終了インデックスはそうではないことを意味します。
+ツリー内の各項目には、独自の **スパン** も表示されています。 **スパン** は、テキスト ファイル内のそのノードのインデックス (開始位置と終了位置) です。  前出の C# の例では、選択されている "UsingKeyword [0..5)" トークンには、5 文字の幅の **スパン** [0..5) があります。 "[..)" の表記は、開始インデックスはスパンの一部ですが、終了インデックスはそうではないことを意味します。
 
 ツリーを移動するには、次の 2 つの方法があります。
 
@@ -93,7 +93,7 @@ Syntax Visualizer を使用すると、シンボルとセマンティクス情�
 
 ビジュアライザー内のプロパティ グリッドが、次の図のように更新されます。式のシンボルは、**SynthesizedIntrinsicOperatorSymbol** と **Kind = Method** です。
 
-![シンボル プロパティ](media/syntax-visualizer/symbol-properties.png)
+![Syntax Visualizer のシンボル プロパティ](media/syntax-visualizer/symbol-properties.png)
 
 同じ **AddExpression** ノードに対し、 **[View TypeSymbol (if any)]\(TypeSymbol の表示 (ある場合)\)** を試してみます。 Visualizer のプロパティ グリッドが、次の図に示すように更新され、選択された式の型が `Int32` であることを示します。
 
@@ -123,7 +123,7 @@ End Module
 
 このコードは、ファイルの上部にある型 `System.Console` にマップする `C` という名前の別名を導入し、この別名を `Main()` の内部で使用します。 `Main()` メソッド内部で、この別名の使用を選択します (`C.WriteLine()` の `C`)。 Visualizer で、対応する **IdentifierName** ノードが選択されます。 このノードを右クリックし、 **[View Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックします。 プロパティ グリッドには、次の図に示すように、この識別子が型 `System.Console` にバインドされていることが示されます。
 
-![シンボル プロパティ](media/syntax-visualizer/symbol-visual-basic.png)
+![Syntax Visualizer のシンボル `C` のプロパティ](media/syntax-visualizer/symbol-visual-basic.png)
 
 同じ **IdentifierName** ノードに対して、 **[View AliasSymbol (if any)]\(AliasSymbol の表示 (ある場合)\)** を試してみます。 プロパティ グリッドには、識別子が `System.Console` ターゲットにバインドされている `C` という名前の別名であることが示されます。 つまり、プロパティ グリッドでは、識別子 `C` に対応する **AliasSymbol** に関する情報が提供されます。
 

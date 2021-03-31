@@ -1,0 +1,37 @@
+---
+title: 関数型変換の適用範囲 - LINQ to XML
+description: 関数型変換を使用できるタイミングについて学習します。
+ms.date: 07/20/2015
+ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
+ms.openlocfilehash: cfba2a32887891cd4b735c76e940ff2400e55bef
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "103412192"
+---
+# <a name="applicability-of-functional-transformation-linq-to-xml"></a><span data-ttu-id="ff76a-103">関数型変換の適用範囲 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ff76a-103">Applicability of functional transformation (LINQ to XML)</span></span>
+
+<span data-ttu-id="ff76a-104">純粋関数型変換は、さまざまな状況で適用できます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-104">Pure functional transformations are applicable in a wide variety of situations.</span></span>
+
+<span data-ttu-id="ff76a-105">関数型変換の方法は、構造化されたデータのクエリと操作に適しているため、LINQ テクノロジに適切に対応できます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-105">The functional transformation approach is ideally suited for querying and manipulating structured data; therefore it fits well with LINQ technologies.</span></span> <span data-ttu-id="ff76a-106">ただし、関数型変換の適用範囲は、LINQ で使用する場合に比べてはるかに広範です。</span><span class="sxs-lookup"><span data-stu-id="ff76a-106">However, functional transformation has a much wider applicability than use with LINQ.</span></span> <span data-ttu-id="ff76a-107">データ形式の変換を中心とする処理はすべて、関数型変換の適用対象と考えることができます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-107">Any process where the main focus is on transforming data from one form to another should probably be considered as a candidate for functional transformation.</span></span>
+
+<span data-ttu-id="ff76a-108">この方法は、一見して適用対象とは思われない数多くの問題に適用できます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-108">This approach is applicable to many problems that might not appear at first glance to be a candidate.</span></span> <span data-ttu-id="ff76a-109">次に示す適用対象では、関数型変換を LINQ と組み合わせて、または切り離して使用することを検討する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ff76a-109">Used in conjunction with or separately from LINQ, functional transformation should be considered for the following areas:</span></span>
+
+- <span data-ttu-id="ff76a-110">XML ベースのドキュメント。</span><span class="sxs-lookup"><span data-stu-id="ff76a-110">XML-based documents.</span></span> <span data-ttu-id="ff76a-111">XML 言語の整形式データは、関数型変換を通じて容易に操作できます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-111">Well-formed data of any XML dialect can be easily manipulated through functional transformation.</span></span> <span data-ttu-id="ff76a-112">詳細については、「[XML の関数型変換](functional-transformation-xml.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ff76a-112">For more information, see [Functional transformation of XML](functional-transformation-xml.md).</span></span>
+- <span data-ttu-id="ff76a-113">その他の構造化されたファイル形式。</span><span class="sxs-lookup"><span data-stu-id="ff76a-113">Other structured file formats.</span></span> <span data-ttu-id="ff76a-114">Windows.ini ファイルからプレーンテキストのドキュメントに至るほとんどのファイルは、分析や変換に適した構造を備えています。</span><span class="sxs-lookup"><span data-stu-id="ff76a-114">From Windows.ini files to plain text documents, most files have some structure that lends itself to analysis and transformation.</span></span>
+- <span data-ttu-id="ff76a-115">データ ストリーミング プロトコル。</span><span class="sxs-lookup"><span data-stu-id="ff76a-115">Data streaming protocols.</span></span> <span data-ttu-id="ff76a-116">通信プロトコルへのデータのエンコードおよび通信プロトコルからのデータのデコードは、単純な関数型変換で表せる場合がほとんどです。</span><span class="sxs-lookup"><span data-stu-id="ff76a-116">Encoding data into and decoding data from communication protocols can often be represented by a simple functional transform.</span></span>
+- <span data-ttu-id="ff76a-117">RDBMS データと OODBMS データ。</span><span class="sxs-lookup"><span data-stu-id="ff76a-117">RDBMS and OODBMS data.</span></span> <span data-ttu-id="ff76a-118">リレーショナル データベースおよびオブジェクト指向データベースは、構造化されたデータ ソースとして XML と同様に広く使用されています。</span><span class="sxs-lookup"><span data-stu-id="ff76a-118">Relational and object-oriented databases, just like XML, are widely-used structured data sources.</span></span>
+- <span data-ttu-id="ff76a-119">数学的、統計的、および科学的なソリューション。</span><span class="sxs-lookup"><span data-stu-id="ff76a-119">Mathematic, statistic, and science solutions.</span></span> <span data-ttu-id="ff76a-120">これらの分野では、視覚化、予測、重要な問題の解決などを支援する際に、大きなデータ セットが操作される傾向があります。</span><span class="sxs-lookup"><span data-stu-id="ff76a-120">These fields tend to manipulate large data sets to assist the user in visualizing, estimating, or actually solving non-trivial problems.</span></span>
+
+<span data-ttu-id="ff76a-121">「[純粋関数へのリファクタリング](refactor-pure-functions.md)」で説明しているように、純粋関数の使用は関数型プログラミングの一例です。</span><span class="sxs-lookup"><span data-stu-id="ff76a-121">As described in [Refactor into pure functions](refactor-pure-functions.md), using pure functions is an example of functional programming.</span></span> <span data-ttu-id="ff76a-122">純粋関数は、その直接的な利点に加えて、関数型変換の観点から問題について考える場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-122">In additional to their immediate benefits, using pure functions provides valuable experience in thinking about problems from a functional transformation perspective.</span></span> <span data-ttu-id="ff76a-123">この方法は、プログラムおよびクラスの設計にも大きな影響を与えます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-123">This approach can also have major impact on program and class design.</span></span> <span data-ttu-id="ff76a-124">上に示したように、問題がデータ変換ソリューションに関連している場合は、特に影響を受けます。</span><span class="sxs-lookup"><span data-stu-id="ff76a-124">This is especially true when a problem lends itself to a data transformation solution as described above.</span></span>
+
+<span data-ttu-id="ff76a-125">このチュートリアルの範囲外ではありますが、関数型変換の観点から影響を受ける設計は、アクターとしてオブジェクトよりもプロセスに重点を置く傾向があり、その結果として得られるソリューションは、個別のオブジェクト状態の変更ではなく、一連の大規模な変換として実装される傾向にあります。</span><span class="sxs-lookup"><span data-stu-id="ff76a-125">Although they're beyond the scope of this tutorial, designs that are influenced by the functional transformation perspective tend to center on processes more than on objects as actors, and the resulting solution tends to be implemented as a series of large-scale transformations, rather than individual object state changes.</span></span>
+
+ <span data-ttu-id="ff76a-126">C# と Visual Basic は命令型の方法と関数型の方法の両方をサポートしているので、両方の要素を組み込むことがアプリケーションにとって最善の設計であることをもう一度思い出してください。</span><span class="sxs-lookup"><span data-stu-id="ff76a-126">Again, remember that C# and Visual Basic support both imperative and functional approaches, so the best design for your application might incorporate elements of both.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ff76a-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff76a-127">See also</span></span>
+
+- [<span data-ttu-id="ff76a-128">純粋関数型変換の概要</span><span class="sxs-lookup"><span data-stu-id="ff76a-128">Introduction to pure functional transformations</span></span>](introduction-pure-functional-transformations.md)
+- [<span data-ttu-id="ff76a-129">XML の関数型変換</span><span class="sxs-lookup"><span data-stu-id="ff76a-129">Functional transformation of XML</span></span>](functional-transformation-xml.md)
+- [<span data-ttu-id="ff76a-130">純粋関数にリファクタリングする</span><span class="sxs-lookup"><span data-stu-id="ff76a-130">Refactor into pure functions</span></span>](refactor-pure-functions.md)

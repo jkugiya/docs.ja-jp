@@ -3,12 +3,12 @@ title: ML.NET CLI を使用してモデルのトレーニングを自動化す�
 description: ML.NET CLI ツールを使用してコマンドラインから最適なモデルを自動的にトレーニングする方法について説明します。
 ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0b230e4a517b6493abdb1ec975776fd286b654e3
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589664"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231408"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI を使用してモデルのトレーニングを自動化する
 
@@ -27,16 +27,16 @@ ML.NET CLI は [.NET Core ツール](../core/tools/global-tools.md)です。 ツ
 
 次の図に示すように、高品質の ML.NET モデル (シリアル化されたモデルの .zip ファイル) と、そのモデルを実行/スコア付けするサンプル C# コードを簡単に生成できます。 さらに、そのモデルを作成/トレーニングする C# コードも生成されるので、その生成された "最適なモデル" に使用されるアルゴリズムと設定を調べ、反復処理することができます。
 
-![イメージ](media/automate-training-with-cli/cli-high-level-process.png "ML.NET CLI 内で動作する AutoML エンジン")
+![ML.NET CLI 内で動作する AutoML エンジン](media/automate-training-with-cli/cli-high-level-process.png)
 
 自力でコーディングすることなく、所有しているデータセットからこうした資産を生成できるので、ML.NET について知っている場合でも生産性が向上します。
 
 現在、ML.NET CLI でサポートされている ML タスクは次のとおりです。
 
-- 分類 (バイナリおよび複数クラス)
+- 分類
 - 回帰
 - 推奨
-- 今後: イメージ分類、順位付け、異常検出、クラスタリングなどの他の機械学習タスク
+- 画像の分類
 
 使用例 (分類シナリオ):
 
@@ -44,7 +44,7 @@ ML.NET CLI は [.NET Core ツール](../core/tools/global-tools.md)です。 ツ
 mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![イメージ](media/automate-training-with-cli/mlnet-classification-powershell.gif)
+![コマンド ラインからの ML.NET 分類](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 *Windows PowerShell*、*macOS/Linux bash*、または *Windows CMD* でも同じ方法で実行できます。 ただし、タブのオートコンプリート (パラメーター候補) は *Windows CMD* では機能しません。
 
@@ -70,9 +70,9 @@ CLI ツールを使用して "最適なモデル" を生成すると、対象の
 
 ### <a name="metrics-for-classification-models"></a>分類モデルのメトリック
 
-CLI によって検出される上位 5 つのモデルの分類メトリックの一覧を次に示します。
+CLI によって検出される上位 5 つのモデルの分類メトリックの一覧を次の画像に示します。
 
-![イメージ](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![上位 5 つのモデルの分類メトリック](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
  正確度は分類問題の一般的なメトリックですが、以下のリファレンスで説明されているように、最適なモデルを選択する場合に正確度が常に最適なメトリックとは限りません。 必要に応じて追加のメトリックを使用してモデルの品質を評価する場合があります。
 
@@ -82,9 +82,9 @@ CLI によって出力されるメトリックを調べて理解するには、[
 
 観測値とモデルの予測値の差が小さく偏りがない場合、回帰モデルがデータに適しています。 回帰は特定のメトリックを使用して評価できます。
 
-CLI によって検出される上位 5 つの高品質モデルの同様のメトリック一覧が表示されます。 回帰 ML タスクに関連するこの特定のケースでは、次のようになります。
+CLI で見つかる上位 5 つの品質モデルには、同様のメトリック リストが表示されます。ただしこの場合、上位 5 つは回帰 ML タスクに関連しています。
 
-![イメージ](media/automate-training-with-cli/cli-regression-metrics.png)
+![上位 5 つのモデルの回帰メトリック](media/automate-training-with-cli/cli-regression-metrics.png)
 
 CLI によって出力されるメトリックを調べて理解するには、[回帰の評価メトリック](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)に関するトピックをご覧ください。
 

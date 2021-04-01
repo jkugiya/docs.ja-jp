@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 待機モード'
 title: 待機モード
 ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: 2e7b30a50e2513c567abf2116ab5495e717a8e22
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f709fa023870939dc6bfd7f2bf6145ee7f7d8e40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831196"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713248"
 ---
 # <a name="latency-modes"></a>待機モード
 
@@ -38,7 +39,7 @@ ms.locfileid: "94831196"
 
 次の表に、<xref:System.Runtime.GCLatencyMode> の各値を使用するアプリケーション シナリオを示します。
 
-|待機時間モード|アプリケーション シナリオ|
+|待機時間モード|アプリケーションのシナリオ|
 |------------------|---------------------------|
 |<xref:System.Runtime.GCLatencyMode.Batch>|ユーザー インターフェイス (UI) 操作のないアプリケーションの場合、またはサーバー側の操作の場合に使用します。<br /><br />バックグラウンドのガベージ コレクションが無効にされている場合、これがワークステーションとサーバーのガベージ コレクションの既定のモードとなります。 また、<xref:System.Runtime.GCLatencyMode.Batch> モードにより [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 設定がオーバーライドされます。つまり、バックグラウンドまたは同時実行コレクションが阻止されます。|
 |<xref:System.Runtime.GCLatencyMode.Interactive>|UI を持つほとんどのアプリケーションの場合に使用します。<br /><br />これは、ワークステーションとサーバーのガベージ コレクションの既定のモードです。 ただし、アプリがホストされている場合は、ホスト プロセスのガベージ コレクター設定が優先されます。|
@@ -61,7 +62,7 @@ ms.locfileid: "94831196"
 
 - 待機時間を短くする期間中でも、<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> メソッドを呼び出せばジェネレーション 2 のガベージ コレクションを強制できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [発生したコレクション](induced.md)

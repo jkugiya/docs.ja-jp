@@ -3,12 +3,12 @@ title: Windows 互換機能パックを使用してコードを移植する
 description: Windows 互換機能パックについて、およびそれを使用して既存の .NET Framework コードを .NET 5 および .NET Core 3.1 に移植する方法について説明します。
 author: terrajobst
 ms.date: 03/04/2021
-ms.openlocfilehash: c90cc960cd9ff3707877afc023f95e0e03716aab
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 655657e38f564d84ea3e56b5374debc04b405eeb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604815"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873641"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-5"></a>Windows 互換機能パックを使用してコードを .NET 5+ に移植する
 
@@ -29,7 +29,7 @@ Windows 専用 API やプラットフォーム非依存 API など、約 20,000 
 - 描画
 - ODBC
 - アクセス許可
-- ポート
+- Port
 - Windows アクセス制御リスト (ACL)
 - Windows Communication Foundation (WCF)
 - Windows 暗号化
@@ -40,7 +40,7 @@ Windows 専用 API やプラットフォーム非依存 API など、約 20,000 
 - Windows ランタイム キャッシュ
 - Windows サービス
 
-詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md)に関するページを参照してください。
+詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/main/accepted/2018/compat-pack/compat-pack.md)に関するページを参照してください。
 
 ## <a name="get-started"></a>はじめに
 

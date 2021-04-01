@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XmlNameTable を使用したオブジェクトの比較'
 title: XmlNameTable によるオブジェクトの比較
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 5e0f5de6fd956bcaaf30b592e04c432a5f824c52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7be93741b9eeb353e4e3a2135f975f9031557d6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783314"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>XmlNameTable によるオブジェクトの比較
 

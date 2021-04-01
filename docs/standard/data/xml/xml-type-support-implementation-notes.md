@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML 型サポートの実装に関するメモ'
 title: XML 型サポートの実装に関するメモ
 ms.date: 03/30/2017
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-ms.openlocfilehash: 29535efcbc7ecaaef0c5d1620ac05464a9a6a69a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52a014f0056b1f78b297ec9289e9748ec7dd392e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731918"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782677"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型サポートの実装に関するメモ
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DOM からのノードの削除'
 title: DOM からのノードの削除
 ms.date: 03/30/2017
 ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
-ms.openlocfilehash: 5b1a6dfb2da4556e0332441a8e56679aee37a091
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b5e85157c194b034289a46140a44d2a9d1109061
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686658"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783093"
 ---
 # <a name="removing-nodes-from-the-dom"></a>DOM からのノードの削除
 

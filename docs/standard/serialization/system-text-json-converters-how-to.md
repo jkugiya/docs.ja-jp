@@ -1,7 +1,7 @@
 ---
 title: JSON シリアル化のためのカスタム コンバーターを作成する方法 - .NET
 description: System.Text.Json 名前空間で提供される JSON シリアル化クラス用のカスタム コンバーターを作成する方法について説明します。
-ms.date: 12/09/2020
+ms.date: 02/25/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 86f99e1156b8f077a7050cb6c0028a561f247df9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008865"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206727"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のためのカスタム コンバーターを作成する方法
 
@@ -46,6 +46,8 @@ ms.locfileid: "97008865"
 ::: zone-end
 
 カスタム コンバーター用に作成したコードでは、新しい <xref:System.Text.Json.JsonSerializerOptions> インスタンスを使用することによってパフォーマンスが大幅に低下することに注意してください。 詳細については、[JsonSerializerOptions インスタンスの再利用](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)に関する説明を参照してください。
+
+Visual Basic を使用してカスタム コンバーターを作成することはできませんが、C# ライブラリに実装されているコンバーターを呼び出すことができます。 詳細については、「[Visual Basic のサポート](system-text-json-how-to.md#visual-basic-support)」をご覧ください。
 
 ## <a name="custom-converter-patterns"></a>カスタム コンバーターのパターン
 
@@ -84,7 +86,7 @@ ms.locfileid: "97008865"
 次の手順では、基本パターンに従ってコンバーターを作成する方法について説明します。
 
 * <xref:System.Text.Json.Serialization.JsonConverter%601> から派生するクラスを作成します。`T` は、シリアル化および逆シリアル化される型です。
-* 受信した JSON を逆シリアル化して `T` 型に変換するように、`Read` メソッドをオーバーライドします。 JSON を読み取るには、メソッドに渡される <xref:System.Text.Json.Utf8JsonReader> を使用します。
+* 受信した JSON を逆シリアル化して `T` 型に変換するように、`Read` メソッドをオーバーライドします。 JSON を読み取るには、メソッドに渡される <xref:System.Text.Json.Utf8JsonReader> を使用します。 シリアライザーによって現在の JSON スコープのすべてのデータが渡されるため、部分的なデータの処理について心配する必要はありません。 したがって、<xref:System.Text.Json.Utf8JsonReader.Skip%2A> または <xref:System.Text.Json.Utf8JsonReader.TrySkip%2A> を呼び出したり、<xref:System.Text.Json.Utf8JsonReader.Read%2A> が `true` を返すことを検証したりする必要はありません。
 * 受信した `T` 型のオブジェクトをシリアル化するように、`Write` メソッドをオーバーライドします。 JSON を書き込むには、メソッドに渡される <xref:System.Text.Json.Utf8JsonWriter> を使用します。
 * `CanConvert` メソッドは、必要な場合にのみオーバーライドします。 変換する型が `T` 型である場合、既定の実装では `true` が返されます。 したがって、`T` 型だけをサポートするコンバーターでは、このメソッドをオーバーライドする必要はありません。 このメソッドをオーバーライドする必要があるコンバーターの例については、後の「[ポリモーフィックな逆シリアル化をサポートする](#support-polymorphic-deserialization)」を参照してください。
 
@@ -147,7 +149,7 @@ JSON ペイロードに、逆シリアル化される型に無効なトークン
 
 ## <a name="registration-sample---converters-collection"></a>登録の例 - Converters コレクション
 
-<xref:System.ComponentModel.DateTimeOffsetConverter> を <xref:System.DateTimeOffset> 型のプロパティの既定値にする例を次に示します。
+[DateTimeOffsetJsonConverter](#sample-basic-converter) を <xref:System.DateTimeOffset> 型のプロパティの既定値にする例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Serialize":::
 
@@ -243,6 +245,18 @@ JSON ペイロードに、逆シリアル化される型に無効なトークン
 * 文字列は `string` に
 * それ以外はすべて `JsonElement` に
 
+::: zone pivot="dotnet-5-0"
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterInferredTypesToObject.cs":::
+
+この例は、コンバーター コードと、`object` プロパティを持つ `WeatherForecast` クラスを示しています。 `Main` メソッドは、最初はコンバーターを使用せずに、次にコンバーターを使用して、JSON 文字列を `WeatherForecast` インスタンスに逆シリアル化します。 コンソール出力には、コンバーターを使用しない場合、`Date` プロパティのランタイム型は `JsonElement` になり、コンバーターを使用した場合のランタイム型は `DateTime` になることが示されています。
+
+`System.Text.Json.Serialization` 名前空間の[単体テスト フォルダー](https://github.com/dotnet/runtime/tree/c72b54243ade2e1118ab24476220a2eba6057466/src/libraries/System.Text.Json/tests/Serialization/)には、`object` プロパティへの逆シリアル化を処理するカスタム コンバーターの例がさらにあります。
+
+:::zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs":::
 
 次のコードではコンバーターが登録されます。
@@ -266,6 +280,8 @@ JSON ペイロードに、逆シリアル化される型に無効なトークン
 カスタム コンバーターを使用しないと、逆シリアル化によって各プロパティに `JsonElement` が挿入されます。
 
 `System.Text.Json.Serialization` 名前空間の[単体テスト フォルダー](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)には、`object` プロパティへの逆シリアル化を処理するカスタム コンバーターの例がさらにあります。
+
+:::zone-end
 
 ::: zone pivot="dotnet-core-3-1"
 
@@ -377,7 +393,45 @@ JSON 文字列を <xref:System.Collections.Generic.Stack%601> オブジェクト
 ::: zone pivot="dotnet-5-0"
 カスタム コンバーターで参照型または値型の `null` を処理できるようにするには、次の例で示すように、<xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> をオーバーライドして `true` を返します。
 
-:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="18":::
+::: zone-end
+
+## <a name="preserve-references"></a>参照を保持する
+
+::: zone pivot="dotnet-5-0"
+
+既定では、参照データは <xref:System.Text.Json.JsonSerializer.Serialize%2A> または <xref:System.Text.Json.JsonSerializer.Deserialize%2A> への呼び出しごとにキャッシュされます。 ある `Serialize`/`Deserialize` 呼び出しから別の呼び出しへの参照を保持するには、`Serialize`/`Deserialize` の呼び出しサイトで <xref:System.Text.Json.Serialization.ReferenceResolver> インスタンスをルート化します。 このスクリプトの例を次のコードに示します。
+
+* `Company` 型のカスタム コンバーターを記述する。
+* `Employee` である `Supervisor` プロパティを手動でシリアル化せずに済むようにしたい。 これをシリアライザーに委任し、既に保存されている参照も保持したい。
+
+`Employee` と `Company` のクラスを次に示します。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="EmployeeAndCompany":::
+
+コンバーターは次のようになります。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="CompanyConverter":::
+
+<xref:System.Text.Json.Serialization.ReferenceResolver> から派生するクラスは、参照をディクショナリに格納します。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="MyReferenceResolver":::
+
+<xref:System.Text.Json.Serialization.ReferenceHandler> から派生するクラスは、`MyReferenceResolver` のインスタンスを保持し、必要な場合にのみ新しいインスタンスを作成します (この例では `Reset` という名前のメソッド)。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="MyReferenceHandler":::
+
+このサンプル コードは、シリアライザーを呼び出すときに、<xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler> プロパティが `MyReferenceHandler` のインスタンスに設定されている <xref:System.Text.Json.JsonSerializerOptions> インスタンスを使用します。 このパターンに従う場合は、シリアル化が終了したときに必ず `ReferenceResolver` ディクショナリをリセットして、継続的に拡大しないようにしてください。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="CallSerializer" highlight = "4-5,12":::
+
+前の例ではシリアル化のみが行われますが、逆シリアル化にも同様のアプローチを採用できます。
+
+::: zone-end
+::: zone pivot="dotnet-core-3-1"
+
+参照を保持する方法の詳細については、[このページの .NET 5.0 バージョン](system-text-json-converters-how-to.md?pivots=dotnet-5-0#preserve-references)を参照してください。
+
 ::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>他のカスタム コンバーターのサンプル

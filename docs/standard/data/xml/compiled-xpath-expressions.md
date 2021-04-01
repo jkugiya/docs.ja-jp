@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コンパイルされた XPath 式'
 title: コンパイルされた XPath 式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77df46fd63a3337ced81c2910acd95d17c5c0f45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642592"
 ---
 # <a name="compiled-xpath-expressions"></a>コンパイルされた XPath 式
 

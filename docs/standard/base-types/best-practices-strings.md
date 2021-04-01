@@ -2,6 +2,7 @@
 title: .NET での文字列の比較に関するベスト プラクティス
 description: .NET アプリケーションで文字列を効果的に比較する方法について説明します。
 ms.date: 05/01/2019
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 7e495edbf3cdfe5886a2dfbf06eee04d4f6a7567
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009820"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693112"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>.NET での文字列の比較に関するベスト プラクティス
 
@@ -234,7 +235,7 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 
 既定の解釈: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>
 
-これらのメソッドを使用するときには注意が必要です。というのも、文字列を大文字や小文字に強制的に変換する操作は、文字列を大文字と小文字の区別に関係なく比較するための小規模の正規化としてよく使用されるからです。 その場合は、大文字と小文字を区別しない比較を使用することを検討してください。
+<xref:System.String.ToUpper?displayProperty=nameWithType> メソッドと <xref:System.String.ToLower?displayProperty=nameWithType> メソッドを使用するときは注意が必要です。文字列を大文字や小文字に強制的に変換する操作は、大文字と小文字の区別に関係なく文字列を比較するための小規模の正規化として使用される場合が多いからです。 その場合は、大文字と小文字を区別しない比較を使用することを検討してください。
 
 <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> メソッドと <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> メソッドを使用することもできます。 <xref:System.String.ToUpperInvariant%2A> は、大文字と小文字を正規化するための標準的な方法です。 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> を使用して行われる比較は、動作の内容を見ると、両方の文字列引数に対して <xref:System.String.ToUpperInvariant%2A> を呼び出し、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> を使用して比較を行うという、2 つの呼び出しの組み合わせです。
 
@@ -244,7 +245,7 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 
 既定の解釈: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>
 
-これらのメソッドの動作は、上で説明した <xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドおよび <xref:System.String.ToLower%2A?displayProperty=nameWithType> メソッドと同様です。
+<xref:System.Char.ToUpper(System.Char)?displayProperty=nameWithType> と <xref:System.Char.ToLower(System.Char)?displayProperty=nameWithType> メソッドは、前のセクションで説明した <xref:System.String.ToUpper?displayProperty=nameWithType> と <xref:System.String.ToLower?displayProperty=nameWithType> メソッドと同様に機能します。
 
 ### <a name="stringstartswith-and-stringendswith"></a>String.StartsWith と String.EndsWith
 

@@ -1,5 +1,6 @@
 ---
-title: '方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する'
+description: '詳細情報: イベントベースの非同期パターンをサポートするコンポーネントを実装する方法'
+title: '方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: ef7363cd1c5161217fa4cf74dbfae9dee86fa76f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ca25370bda7a1dd451ff9333fee546d4106914c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714119"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する
 
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
   
@@ -84,7 +85,7 @@ ms.locfileid: "95697741"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
-## <a name="checkpoint"></a>チェックポイント  
+## <a name="checkpoint"></a>Checkpoint  
 
  この段階で、コンポーネントをビルドすることができます。  
   
@@ -103,7 +104,7 @@ ms.locfileid: "95697741"
   
 ## <a name="defining-private-delegates"></a>プライベート デリゲートの定義  
 
- `PrimeNumberCalculator` コンポーネントの非同期の側面は、<xref:System.Threading.SendOrPostCallback> と呼ばれる特別なデリゲートを使って内部的に実装されます。 <xref:System.Threading.SendOrPostCallback> は、<xref:System.Threading.ThreadPool> スレッドで実行するコールバック メソッドを表します。 コールバック メソッドは、<xref:System.Object> 型のパラメーターを 1 つ受け取るシグネチャを持つ必要があります。つまり、ラッパー クラスでデリゲートに状態を渡す必要があります。 詳細については、<xref:System.Threading.SendOrPostCallback> を参照してください。  
+ `PrimeNumberCalculator` コンポーネントの非同期の側面は、<xref:System.Threading.SendOrPostCallback> と呼ばれる特別なデリゲートを使って内部的に実装されます。 <xref:System.Threading.SendOrPostCallback> は、<xref:System.Threading.ThreadPool> スレッドで実行するコールバック メソッドを表します。 コールバック メソッドは、<xref:System.Object> 型のパラメーターを 1 つ受け取るシグネチャを持つ必要があります。つまり、ラッパー クラスでデリゲートに状態を渡す必要があります。 詳細については、「<xref:System.Threading.SendOrPostCallback>」を参照してください。  
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>コンポーネントの内部非同期動作を実装するには:  
   
@@ -159,7 +160,7 @@ ms.locfileid: "95697741"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
-## <a name="checkpoint"></a>チェックポイント  
+## <a name="checkpoint"></a>Checkpoint  
 
  この段階で、コンポーネントをビルドすることができます。  
   
@@ -215,7 +216,7 @@ ms.locfileid: "95697741"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
-## <a name="checkpoint"></a>チェックポイント  
+## <a name="checkpoint"></a>Checkpoint  
 
  この段階で、コンポーネントをビルドすることができます。  
   
@@ -243,7 +244,7 @@ ms.locfileid: "95697741"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
-## <a name="checkpoint"></a>チェックポイント  
+## <a name="checkpoint"></a>Checkpoint  
 
  この段階で、コンポーネントをビルドすることができます。  
   
@@ -263,7 +264,7 @@ ms.locfileid: "95697741"
   
  2、3、5 などの自明の約数をテストすることにより、この例を改良することもできます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [方法: バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [イベントベースの非同期パターンの概要](event-based-asynchronous-pattern-overview.md)

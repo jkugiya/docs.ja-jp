@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: バリア'
 title: バリア
 ms.date: 09/14/2018
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-ms.openlocfilehash: 4eab74ef07ac56a4d3ff65e67bb9fbd45dbfc9bc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7fca89e12ffe4575029e62ce042875dac286c81d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675508"
 ---
 # <a name="barrier"></a>バリア
 
@@ -51,7 +52,7 @@ ms.locfileid: "94819943"
   
  詳細については、「[継続タスクを使用したタスクの連結](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [スレッド処理オブジェクトと機能](threading-objects-and-features.md)
 - [方法: バリアを使用して同時実行操作を同期する](how-to-synchronize-concurrent-operations-with-a-barrier.md)

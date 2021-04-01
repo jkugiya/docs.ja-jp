@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 並列プログラミング向けのデータ構造'
 title: 並列プログラミング向けのデータ構造
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ab1f551c18f093ee007a38b7186921468d70be3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675612"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
 

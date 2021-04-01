@@ -1,23 +1,26 @@
 ---
 title: System.Text.Json でプロパティの名前と値をカスタマイズする方法
 description: .NET で System.Text.Json を使用してシリアル化するときに、プロパティの名前と値をカスタマイズする方法について説明します。
-ms.date: 11/30/2020
+ms.date: 02/01/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4b88509313e719ea993e00d889bc6145f4976a2d
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: e99ab6e8652b51535a3c991d89f8c57019e08b18
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008904"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100585250"
 ---
-# <a name="how-to-customize-property-names-and-values-with-no-locsystemtextjson"></a>System.Text.Json でプロパティの名前と値をカスタマイズする方法
+# <a name="how-to-customize-property-names-and-values-with-systemtextjson"></a>System.Text.Json でプロパティの名前と値をカスタマイズする方法
 
 既定では、プロパティ名とディクショナリ キーは、大文字と小文字の区別を含め、JSON の出力では変更されません。 列挙型の値は数値として表されます。 この記事では、次の方法について学習します。
 
@@ -39,6 +42,7 @@ JSON プロパティの名前と値の特別な処理を必要とするその他
 シリアル化する型と、結果として得られる JSON の例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPropertyNameAttribute":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithPropertyNameAttribute":::
 
 ```json
 {
@@ -53,16 +57,19 @@ JSON プロパティの名前と値の特別な処理を必要とするその他
 
 * シリアル化と逆シリアル化の両方の方向に適用されます。
 * プロパティの名前付けポリシーよりも優先されます。
+* [パラメーター化されたコンストラクターのパラメーター名の一致には影響しません](system-text-json-immutability.md#immutable-types-and-records)。
 
 ## <a name="use-camel-case-for-all-json-property-names"></a>すべての JSON プロパティ名にキャメル ケースを使用する
 
 すべての JSON プロパティ名にキャメル ケースを使用するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> を `JsonNamingPolicy.CamelCase` に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundTripCamelCasePropertyNames.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundTripCamelCasePropertyNames.vb" id="Serialize":::
 
 シリアル化するクラスと JSON 出力の例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPropertyNameAttribute":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithPropertyNameAttribute":::
 
 ```json
 {
@@ -83,14 +90,17 @@ JSON プロパティの名前と値の特別な処理を必要とするその他
 カスタム JSON プロパティの名前付けポリシーを使用するには、次の例に示すように、<xref:System.Text.Json.JsonNamingPolicy> から派生するクラスを作成し、<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> メソッドをオーバーライドします。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/UpperCaseNamingPolicy.cs":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/UpperCaseNamingPolicy.vb":::
 
 次に、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> プロパティを名前付けポリシー クラスのインスタンスに設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripPropertyNamingPolicy.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripPropertyNamingPolicy.vb" id="Serialize":::
 
 シリアル化するクラスと JSON 出力の例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPropertyNameAttribute":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithPropertyNameAttribute":::
 
 ```json
 {
@@ -111,6 +121,7 @@ JSON プロパティの名前付けポリシーは:
 シリアル化するオブジェクトのプロパティが `Dictionary<string,TValue>` 型である場合は、`string` キーをキャメル ケースに変換できます。 これを行うには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> を `JsonNamingPolicy.CamelCase` に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/SerializeCamelCaseDictionaryKeys.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/SerializeCamelCaseDictionaryKeys.vb" id="Serialize":::
 
 キーと値のペア `"ColdMinTemp", 20` および `"HotMinTemp", 40` を持つ `TemperatureRanges` という名前のディクショナリを使用してオブジェクトをシリアル化すると、次の例のような JSON 出力が生成されます。
 
@@ -135,6 +146,7 @@ JSON プロパティの名前付けポリシーは:
 たとえば、列挙型を持つ次のクラスをシリアル化する必要があるとします。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithEnum":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithEnum":::
 
 Summary が `Hot` の場合、既定では、シリアル化された JSON には数値 3 があります。
 
@@ -149,6 +161,7 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 次のサンプル コードでは、数値ではなく列挙型名をシリアル化し、名前をキャメル ケースに変換します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripEnumAsString.vb" id="Serialize":::
 
 結果として生成される JSON は、次の例のようになります。
 
@@ -163,6 +176,7 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 列挙型の文字列名も、次の例に示すように逆シリアル化できます。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripEnumAsString.vb" id="Deserialize":::
 
 ## <a name="see-also"></a>関連項目
 

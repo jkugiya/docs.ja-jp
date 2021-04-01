@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 変換におけるノード セット'
 title: 変換におけるノード セット
 ms.date: 03/30/2017
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 2ace103d9721b2adecb08a25ab89cf9b0f05bb93
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a19445548109cd2c649b975974d5233818d0d02
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675911"
 ---
 # <a name="node-sets-in-transformations"></a>変換におけるノード セット
 
@@ -56,7 +57,7 @@ ms.locfileid: "95734115"
 </bookstore>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
   
 ```output  
 ******  

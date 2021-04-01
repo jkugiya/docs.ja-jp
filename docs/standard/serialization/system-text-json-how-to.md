@@ -1,23 +1,26 @@
 ---
 title: C# を使用して JSON をシリアル化および逆シリアル化する方法 - .NET
 description: System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について学習します。 サンプル コードが含まれています。
-ms.date: 12/02/2020
-ms.custom: contperfq2
+ms.date: 01/19/2021
+ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: fb0866dfad67bfe14a7f1388ec2f52a8dc970233
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008839"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583213"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
@@ -25,11 +28,21 @@ ms.locfileid: "97008839"
 
 指示とサンプル コードでは、ライブラリを [ASP.NET Core](/aspnet/core/) などのフレームワーク経由ではなく直接使用します。
 
-シリアル化のサンプル コードの大部分では、JSON を "整形" するために <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true` に設定します (人間が読みやすいようにインデントと空白文字が使用されます)。 実稼働環境で使用する場合、通常、この設定には既定値の `false` をそのまま使用します。
+シリアル化のサンプル コードの大部分では、JSON を "整形" するために <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true` に設定します (人間が読みやすいようにインデントと空白文字が使用されます)。 運用環境で使用する場合は、通常、この設定の既定値である `false` をそのまま使用します。不要な空白を追加すると、パフォーマンスや帯域幅の使用率が著しく低下するおそれがあるためです。
 
 コード例では、次のクラスとそのバリアントを参照しています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
+
+## <a name="visual-basic-support"></a>Visual Basic のサポート
+
+System.Text.Json の一部で、Visual Basic でサポートされていない [ref 構造体](../../csharp/language-reference/builtin-types/struct.md#ref-struct)が使用されています。 Visual Basic で System.Text.Json ref 構造 API を使用しようとすると、BC40000 コンパイラ エラーが発生します。 このエラー メッセージは、問題が古い API であることを示していますが、実際の問題は、コンパイラでの ref 構造体のサポートの欠如です。 System.Text.Json の次の部分は、Visual Basic では使用できません。
+
+* <xref:System.Text.Json.Utf8JsonReader> クラスです。 <xref:System.Text.Json.Serialization.JsonConverter%601.Read%2A?displayProperty=nameWithType> メソッドは `Utf8JsonReader` パラメーターを受け取るため、この制限は、Visual Basic を使用してカスタム コンバーターを記述することはできないことを意味します。 これを回避するには、C# ライブラリ アセンブリにカスタム コンバーターを実装し、VB プロジェクトからそのアセンブリを参照します。 これは、Visual Basic で行うのが、コンバーターをシリアライザーに登録するだけであることを前提としています。 Visual Basic コードからコンバーターの `Read` メソッドを呼び出すことはできません。
+* <xref:System.ReadOnlySpan%601> 型を含む他の API のオーバーロード。 ほとんどのメソッドには、`ReadOnlySpan` の代わりに `String` を使用するオーバーロードが含まれています。
+
+これらの制限が適用されるのは、"データを通過させる" だけの場合でも、言語サポートなしでは ref 構造体を安全に使用できないからです。 このエラーを無効にすると、メモリを破損するおそれのある Visual Basic コードが生成されるため、実行しないでください。
 
 ## <a name="namespaces"></a>名前空間
 
@@ -38,6 +51,11 @@ ms.locfileid: "97008839"
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
+```
+
+```vb
+Imports System.Text.Json
+Imports System.Text.Json.Serialization
 ```
 
 > [!IMPORTANT]
@@ -50,24 +68,29 @@ JSON を文字列またはファイルに書き込むには、<xref:System.Text.
 次の例では、JSON を文字列として作成します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="Serialize":::
 
 次の例では、同期コードを使用して JSON ファイルを作成します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFile.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFile.vb" id="Serialize":::
 
 次の例では、非同期コードを使用して JSON ファイルを作成します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFileAsync.vb" id="Serialize":::
 
 前の例では、シリアル化する型に型の推定を使用しています。 `Serialize()` のオーバーロードでは、ジェネリック型パラメーターを受け取ります。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="SerializeWithGenericParameter":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="SerializeWithGenericParameter":::
 
 ### <a name="serialization-example"></a>シリアル化の例
 
 コレクション型のプロパティとユーザー定義型を含むクラスの例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPOCOs":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithPOCOs":::
 
 > [!TIP]
 > "POCO" は、[Plain Old CLR Object (単純な従来の CLR オブジェクト)](https://en.wikipedia.org/wiki/Plain_old_CLR_object) を表します。 POCO は、継承や属性からなど、フレームワーク固有の型に依存しない .NET 型です。
@@ -112,6 +135,7 @@ JSON を文字列またはファイルに書き込むには、<xref:System.Text.
 UTF-8 にシリアル化するには、<xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToUtf8.vb" id="Serialize":::
 
 <xref:System.Text.Json.Utf8JsonWriter> を受け取る <xref:System.Text.Json.JsonSerializer.Serialize%2A> オーバーロードも使用できます。
 
@@ -180,22 +204,36 @@ ASP.NET Core アプリで System.Text.Json を間接的に使用する場合、�
 次の例では、文字列から JSON を読み取り、前に[シリアル化の例](#serialization-example)で示した `WeatherForecastWithPOCOs` クラスのインスタンスを作成します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="Deserialize":::
 
 同期コードを使用してファイルから逆シリアル化するには、次の例に示すように、ファイルを文字列に読み取ります。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFile.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFile.vb" id="Deserialize":::
 
 非同期コードを使用してファイルから逆シリアル化するには、<xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> メソッドを呼び出します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFileAsync.vb" id="Deserialize":::
+
+> [!TIP]
+> 逆シリアル化する JSON があり、それを逆シリアル化するクラスがない場合は、Visual Studio 2019 によって必要なクラスを自動的に生成することができます。
+>
+> 1. 逆シリアル化する必要がある JSON をコピーします。
+> 1. クラス ファイルを作成し、テンプレート コードを削除します。
+> 1. **[編集]**  >  **[形式を選択して貼り付け]**  >  **[JSON をクラスとして貼り付ける]** を選択します。
+>
+> 結果は、逆シリアル化ターゲットに使用できるクラスになります。
 
 ## <a name="deserialize-from-utf-8"></a>UTF-8 からの逆シリアル化
 
 UTF-8 から逆シリアル化するには、次の例に示すように、`ReadOnlySpan<byte>` または `Utf8JsonReader` を受け取る <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> オーバーロードを呼び出します。 この例では、JSON が jsonUtf8Bytes という名前のバイト配列内にあることを想定しています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs" id="Deserialize1":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToUtf8.vb" id="Deserialize1":::
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs" id="Deserialize2":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToUtf8.vb" id="Deserialize2":::
 
 ## <a name="deserialization-behavior"></a>逆シリアル化の動作
 
@@ -236,10 +274,12 @@ ASP.NET Core アプリで System.Text.Json を間接的に使用する場合、�
 JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true` に設定します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="SerializePrettyPrint":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="SerializePrettyPrint":::
 
 シリアル化され、整形された JSON 出力の型の例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
 ```json
 {
@@ -257,6 +297,7 @@ JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.
 次の例で示されているように、シリアル化または逆シリアル化のときにフィールドを含めるには、<xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType> グローバル設定または [[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 属性を使用します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Fields.cs" highlight="16,18,20,32-35":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/Fields.vb" :::
 
 読み取り専用フィールドを無視するには、<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> グローバル設定を使用します。
 ::: zone-end
@@ -274,6 +315,7 @@ JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.
 次の例では、<xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType> と <xref:System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync%2A?displayProperty=nameWithType> の使用方法を示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/HttpClientExtensionMethods.cs" highlight="26,33":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/HttpClientExtensionMethods.vb" :::
 
 [HttpContent](xref:System.Net.Http.Json.HttpContentJsonExtensions) には System.Text.Json 用の拡張メソッドもあります。
 ::: zone-end
@@ -299,5 +341,6 @@ JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.
 * [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
 * [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
 * [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
+* [System.Text.Json でサポートされているコレクション型](system-text-json-supported-collection-types.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
 * [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

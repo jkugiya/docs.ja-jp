@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XslTransform コードを移行する方法'
 title: '方法: XslTransform コードを移行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
-ms.openlocfilehash: d1e13d2bcc7525f261df90c36aa4214f318cf3c0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d8a05f98df70009750f59c53a760f9da698dd38e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722714"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713885"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>方法: XslTransform コードを移行する
 

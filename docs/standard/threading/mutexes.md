@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ミューテックス'
 title: ミューテックス
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: aa5a13b5b1cfcd7305df39c1ff5005deb45eb4ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a65e03dee69f33f7abc433e91ab4951a4d808347
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672176"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666616"
 ---
 # <a name="mutexes"></a>ミューテックス
 

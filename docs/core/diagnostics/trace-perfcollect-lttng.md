@@ -3,12 +3,12 @@ title: PerfCollect を使用した .NET アプリケーションのトレース�
 description: .NET で PerfCollect を使用してトレースを収集する手順について説明するチュートリアル。
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: d6ee77fea5c419e00e684e8b1472278f752544b0
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189931"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874187"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect を使用して .NET アプリケーションをトレースする
 
@@ -225,7 +225,7 @@ export COMPlus_ZapDisable=1
 
 ほとんどの場合、関心があるのは独自のコードであり、それは `perfcollect` によって既定で解決されます。 場合によっては、NET DLL の内部で起こっていること (最後のセクションの内容) を確認すると役に立つことがありますが、ネイティブ ランタイム dll (通常は libcoreclr.so) で何が起こっているかは興味深いものです。  `perfcollect` によってデータの変換時にこれらに対するシンボルが解決されますが、これらのネイティブ DLL のシンボルが存在する場合 (および、それらが対象のライブラリの隣にある場合) に限られます。
 
-これを行う [dotnet-symbol](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) という名前のグローバル コマンドがあります。 dotnet-symbol を使用してネイティブ ランタイム シンボルを取得するには:
+これを行う [dotnet-symbol](https://github.com/dotnet/symstore/blob/main/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) という名前のグローバル コマンドがあります。 dotnet-symbol を使用してネイティブ ランタイム シンボルを取得するには:
 
 1. `dotnet-symbol` をインストールします。
 

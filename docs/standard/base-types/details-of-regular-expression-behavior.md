@@ -1,6 +1,8 @@
 ---
+description: '詳細情報: 正規表現の動作の詳細'
 title: 正規表現の動作
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 1e5d2d40f52220a8fff40eb19a24d8b2efd3cab5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a06d66da92ae711abfbcbb477fd08e1da036f439
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829701"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629826"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 

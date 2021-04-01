@@ -1,5 +1,6 @@
 ---
-title: '方法: データフロー ブロックのリンクを解除する'
+description: '詳細情報: データ フロー ブロックのリンクを解除する方法'
+title: 方法:データ フロー ブロックのリンクを解除する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: e981d1b9b3adc638a84de1c119ad849ec533d16e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3bea3887553397c902345e9dcc39ca0cdfe68d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722412"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629501"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>方法: データフロー ブロックのリンクを解除する
+# <a name="how-to-unlink-dataflow-blocks"></a>方法:データ フロー ブロックのリンクを解除する
 
 このドキュメントでは、ソースからターゲット データフロー ブロックのリンクを解除する方法について説明します。
 
@@ -33,6 +34,6 @@ ms.locfileid: "95722412"
   
  いずれかで値を計算した後に、`TrySolution` への残りの呼び出しを終了できるようにするには、`TrySolution` メソッドは `ReceiveFromAny(T)` への呼び出しが返された後にキャンセルされる、<xref:System.Threading.CancellationToken> オブジェクトを取得します。 <xref:System.Threading.SpinWait.SpinUntil%2A> メソッドは、この <xref:System.Threading.CancellationToken> オブジェクトがキャンセルされたときに返されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データフロー](dataflow-task-parallel-library.md)

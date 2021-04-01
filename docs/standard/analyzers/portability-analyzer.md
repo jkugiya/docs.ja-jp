@@ -3,12 +3,12 @@ title: .NET Portability Analyzer - .NET
 description: .NET Portability Analyzer ツールを使って、さまざまな .NET の実装 (.NET Core、.NET Standard、UWP、Xamarin など) の間でのコードの移植性を評価する方法について説明します。
 ms.date: 09/13/2019
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 048ff916d309f4159fe78177e093a58d731c2e11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c53560176c66f1b69a5e3d7208e91fd4c4ec7dbd
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734284"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584383"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -54,9 +54,25 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 
 [ApiPort コンソール アプリ](https://aka.ms/apiportdownload)を使うこともできます。
 
-- 現在のディレクトリを分析するには、次のコマンドを入力します。`ApiPort.exe analyze -f .`
-- 特定の .dll ファイルの一覧を分析するには、次のコマンドを入力します。`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-- 詳細なヘルプを表示するには `ApiPort.exe -?` を実行します
+現在のディレクトリを分析するには、次のコマンドを入力します。
+
+```console
+ApiPort.exe analyze -f .
+```
+
+特定の .dll ファイルの一覧を分析するには、次のコマンドを入力します。
+
+```console
+ApiPort.exe analyze -f first.dll -f second.dll -f third.dll
+```
+
+特定のバージョンをターゲットにするには、`-t` パラメーターを使用します。
+
+```console
+ApiPort.exe analyze -t ".NET, Version=5.0" -f .
+```
+
+詳細なヘルプを表示するには `ApiPort.exe -?` を実行します。
 
 自分が所有していて移植したいすべての関連する exe と dll ファイルを含め、アプリが依存しているけれども自分で所有しているのではなく移植できないファイルを除外することをお勧めします。 これにより、最も関連のある移植性レポートが得られます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: キャンセル要求のコールバックの登録'
 title: キャンセル要求のコールバックを登録する
 ms.date: 08/14/2020
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-ms.openlocfilehash: f551055fc6e5e4565329201e9e0be6e4a83487a1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a791338fc7c39e3d259f90bc4c4723079eac4236
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826405"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666772"
 ---
 # <a name="register-callbacks-for-cancellation-requests"></a>キャンセル要求のコールバックを登録する
 

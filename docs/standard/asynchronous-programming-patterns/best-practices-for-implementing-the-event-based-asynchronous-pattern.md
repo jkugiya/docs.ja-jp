@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: イベントベースの非同期パターンを実装するための推奨される手順'
 title: イベントベースの非同期パターンを実装するための推奨される手順
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8c34133664b9fae25ca2d9ef5e906a75c4603d58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99751938"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 
@@ -28,7 +29,7 @@ ms.locfileid: "94830494"
 
  イベントベースの非同期パターンを実装する場合は、クラスが適切に動作し、クラスのクライアントがそのような動作に依存できるようにするため、多数の保証を提供する必要があります。  
   
-### <a name="completion"></a>完了
+### <a name="completion"></a>Completion
 
  正常完了、エラー、またはキャンセルの場合に常に <em>MethodName</em>**Completed** イベント ハンドラーを呼び出します。 アプリケーションがアイドルになり完了しない状態が発生してはなりません。 この規則の唯一の例外として、非同期操作自体は完了することがないように設計されている場合があります。  
   
@@ -76,7 +77,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - クラスで複数の同時呼び出しがサポートされている場合は、開発者が各呼び出しを個別に追跡できるようにするため、`userSuppliedState` というオブジェクト値状態パラメーター、またはタスク ID を受け取る <em>MethodName</em>**Async** オーバーライドを定義します。 このパラメーターは、常に <em>MethodName</em>**Async** メソッドのシグネチャの最終パラメーターにする必要があります。  
   
-- オブジェクト値状態パラメーターまたはタスク ID を受け取る <em>MethodName</em>**Async** オーバーロードがクラスによって定義される場合は、そのタスク ID の操作の有効期間を追跡し、完了ハンドラーに戻す必要があります。 役に立つヘルパー クラスがあります。 コンカレンシー管理の詳細については、「[方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
+- オブジェクト値状態パラメーターまたはタスク ID を受け取る <em>MethodName</em>**Async** オーバーロードがクラスによって定義される場合は、そのタスク ID の操作の有効期間を追跡し、完了ハンドラーに戻す必要があります。 役に立つヘルパー クラスがあります。 コンカレンシー管理について詳しくは、「[方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 - クラスによって、状態パラメーターなしで <em>MethodName</em>**Async** メソッドが定義され、このクラスで複数の同時呼び出しがサポートされていない場合、直前の <em>MethodName</em>**Async** 呼び出しが完了する前に <em>MethodName</em>**Async** を呼び出そうとすると、<xref:System.InvalidOperationException> が発生するようにします。  
   
@@ -88,7 +89,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 結果にアクセスしようとすると、操作がキャンセルされたことを示す <xref:System.InvalidOperationException> が発生するようにしてください。 この検証を行うには、<xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType> メソッドを使用します。  
   
-### <a name="progress-reporting"></a>進行状況のレポート  
+### <a name="progress-reporting"></a>進行状況レポート  
   
 - 可能であれば、進行状況レポートをサポートします。 これにより、開発者はクラスを使用する際に、より優れたアプリケーション ユーザー エクスペリエンスを提供できます。  
   
@@ -116,7 +117,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 操作がキャンセルされた場合は、<em>MethodName</em>**Completed** イベントを発生させます。  
   
-### <a name="errors-and-exceptions"></a>エラーおよび例外  
+### <a name="errors-and-exceptions"></a>エラーと例外  
   
 - 非同期操作で発生した例外をすべてキャッチし、その例外の <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> プロパティの値を設定します。  
   
@@ -131,7 +132,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 > アプリケーション モデルのポリシーに対し明示的に準拠しないものの、イベント ベースの非同期パターンを使用する他のメリットを利用したい場合は、これらの規則を回避できます。 たとえば、Windows Forms でのクラス操作をフリー スレッド化するとします。 開発者がフリー スレッド化クラスの暗黙的な制限を理解している場合は、フリースレッド化クラスを作成できます。 コンソール アプリケーションは <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しの実行を同期しません。 これが原因で、`ProgressChanged` イベントが正しくない順序で発生することがあります。 <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しを順次実行するには、<xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> クラスを実装およびインストールします。  
   
- <xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> を使用して非同期操作を使用可能にする方法の詳細については、「[方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
+ <xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> を使用した非同期操作について詳しくは、「[方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 ## <a name="guidelines"></a>ガイドライン  
   

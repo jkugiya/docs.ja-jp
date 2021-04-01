@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ジェネリック インターフェイス'
 title: ジェネリック インターフェイス
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - generics [.NET], interfaces
 - ordering comparisons [.NET]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: f8cdd7ea71e68f73871a606c6f9b754d675ca7eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18822ec29ac0905d1f177c5888cac6121ac36a95
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722636"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702406"
 ---
 # <a name="generic-interfaces"></a>ジェネリック インターフェイス
 

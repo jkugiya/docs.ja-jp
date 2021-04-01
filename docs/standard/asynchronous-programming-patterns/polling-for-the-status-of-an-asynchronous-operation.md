@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 非同期操作のステータスのポーリング'
 title: 非同期操作のステータスのポーリング
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-ms.openlocfilehash: 8676568a1493c5c404e6b3019f37dd672c2ed8d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bf8ae29393ef2b32113d7b76de1ef3503758750f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702900"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>非同期操作のステータスのポーリング
 
@@ -31,7 +32,7 @@ ms.locfileid: "95726692"
  [!code-csharp[AsyncDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_Poll.cs#3)]
  [!code-vb[AsyncDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_Poll.vb#3)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)
 - [イベントベースの非同期パターンの概要](event-based-asynchronous-pattern-overview.md)

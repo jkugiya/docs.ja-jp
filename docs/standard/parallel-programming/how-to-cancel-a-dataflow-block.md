@@ -1,5 +1,6 @@
 ---
-title: '方法: データフロー ブロックをキャンセルする'
+description: '詳細情報: データフロー ブロックをキャンセルする方法'
+title: 方法:データフロー ブロックをキャンセルする
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3760ba81dcb5156e8ac8fe920133d12ce449631
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702159"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>方法: データフロー ブロックをキャンセルする
+# <a name="how-to-cancel-a-dataflow-block"></a>方法:データフロー ブロックをキャンセルする
 
 このドキュメントでは、アプリケーションでキャンセルを有効にする方法を示します。 この例では、Windows フォームを使用して、データフロー パイプラインで作業項目がアクティブである場所と、キャンセルの影響を示します。  
 
@@ -97,6 +98,6 @@ ms.locfileid: "95713354"
   
  ![Windows フォーム アプリケーション](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データフロー](dataflow-task-parallel-library.md)

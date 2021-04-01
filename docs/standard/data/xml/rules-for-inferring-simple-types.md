@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 単純型を推論するときの規則'
 title: 単純型を推論するときの規則
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b7c212f262d3c24a3bd4e677ee04bd169c6dd3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686541"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783015"
 ---
 # <a name="rules-for-inferring-simple-types"></a>単純型を推論するときの規則
 

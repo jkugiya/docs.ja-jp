@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML ドキュメントからのスキーマの推論'
 title: XML ドキュメントからのスキーマの推論
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 4540e1706cbd3dad9490f100d7e8fa58e80a9206
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8a064e0612293ee2990ec8acc3cc4b5f0b32054
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733439"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713651"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML ドキュメントからのスキーマの推論
 

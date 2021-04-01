@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <msxsl:script> を使用した XSLT スタイルシートのスクリプト'
 title: <msxsl:script> を使用した XSLT スタイルシートのスクリプト
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ed2caf5b31fb5a6494c294b2619535699e09905
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685111"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731982"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
 

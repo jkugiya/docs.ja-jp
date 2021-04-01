@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 他の非同期パターンと型との相互運用'
 title: 他の非同期パターンと型との相互運用
 ms.date: 03/30/2017
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: 2ae1c514185152dd709fe06018df513fb54b874b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52b3628f3a6371ef1a4a132723e81b8c83d7fa3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726718"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702926"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>他の非同期パターンと型との相互運用
 

@@ -3,12 +3,12 @@ title: プラットフォーム互換性アナライザー
 description: クロスプラットフォームのアプリとライブラリにおいてプラットフォームの互換性に関する問題を検出するのに役立つ Roslyn アナライザーです。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ce916a771f3fd885b37690183de74919aa01d6fb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819488"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874044"
 ---
 # <a name="platform-compatibility-analyzer"></a>プラットフォーム互換性アナライザー
 
@@ -26,7 +26,7 @@ ms.locfileid: "94819488"
 
 ## <a name="prerequisites"></a>[前提条件]
 
-プラットフォーム互換性アナライザーは、Roslyn コード品質アナライザーの 1 つです。 .NET 5.0 以降、これらのアナライザーは [.NET SDK に含まれる](../../fundamentals/code-analysis/overview.md)ようになりました。 プラットフォーム互換性アナライザーは、`net5.0` 以降のバージョンをターゲットとするプロジェクトに対してのみ既定で有効になります。 ただし、他のフレームワークをターゲットとするプロジェクトに対しても[有効にする](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability)ことができます。
+プラットフォーム互換性アナライザーは、Roslyn コード品質アナライザーの 1 つです。 .NET 5.0 以降、これらのアナライザーは [.NET SDK に含まれる](../../fundamentals/code-analysis/overview.md)ようになりました。 プラットフォーム互換性アナライザーは、`net5.0` 以降のバージョンをターゲットとするプロジェクトに対してのみ既定で有効になります。 ただし、他のフレームワークをターゲットとするプロジェクトに対しても[有効にする](../../fundamentals/code-analysis/quality-rules/ca1416.md#configure-code-to-analyze)ことができます。
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>アナライザーによってプラットフォームの依存関係が判断されるしくみ
 
@@ -35,7 +35,7 @@ ms.locfileid: "94819488"
   - この属性を複数回適用して、**複数プラットフォームのサポート** (`[SupportedOSPlatform("windows"), SupportedOSPlatform("Android6.0")]`) を示すことができます。
   - 適切な **プラットフォーム コンテキスト** を使用せずにプラットフォーム固有の API が参照されている場合は、アナライザーによって **警告** が生成されます。
     - プロジェクトがサポート対象プラットフォームをターゲットとしていない場合 (たとえば、Windows 固有の API 呼び出しでプロジェクトが `<TargetFramework>net5.0-ios14.0</TargetFramework>` をターゲットとしている場合)、**警告が表示されます**。
-    - プロジェクトに複数のターゲットがある場合 (`<TargetFramework>net5.0</TargetFramework>`)、**警告が表示されます**。
+    - プロジェクトに複数のターゲットがある場合 (`<TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>` など)、**警告が表示されます**。
     - プラットフォーム固有の API が、**指定されたプラットフォーム** のいずれかをターゲットとしているプロジェクト内で参照される場合、**警告は表示されません** (たとえば、Windows 固有の API 呼び出しでプロジェクトが `<TargetFramework>net5.0-windows</TargetFramework>` をターゲットとしている場合)。
     - プラットフォーム固有の API 呼び出しが、対応するプラットフォーム チェック メソッド (例: `if(OperatingSystem.IsWindows())`) によって保護されている場合、**警告は表示されません**。
     - プラットフォーム固有の API が、同じプラットフォーム固有のコンテキストから参照されている場合 (**呼び出しサイトにも属性 `[SupportedOSPlatform("platform")` が設定されている場合**)、**警告は表示されません**。
@@ -43,7 +43,7 @@ ms.locfileid: "94819488"
   - この属性は、異なるプラットフォームで複数回適用できます (例: `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]`)。
   - アナライザーによって **警告** が生成されるのは、`platform` が呼び出しサイトに対して有効である場合のみです。
     - サポート対象外の属性が設定されているプラットフォームをプロジェクトがターゲットとしている場合、**警告が表示されます** (たとえば、API に属性 `[UnsupportedOSPlatform("windows")]` が設定されていて、呼び出しサイトが `<TargetFramework>net5.0-windows</TargetFramework>` をターゲットとしている場合)。
-    - プロジェクトに複数のターゲットがあり、`platform` が既定の [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) 項目グループに含まれている場合、または `platform` が手動で `MSBuild` \<SupportedPlatform> 項目グループ内に含まれている場合、**警告が表示されます**。
+    - プロジェクトに複数のターゲットがあり、`platform` が既定の [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/main/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) 項目グループに含まれている場合、または `platform` が手動で `MSBuild` \<SupportedPlatform> 項目グループ内に含まれている場合、**警告が表示されます**。
 
       ```XML
       <ItemGroup>
@@ -51,7 +51,7 @@ ms.locfileid: "94819488"
       </ItemGroup>
       ```
 
-    - サポート対象外のプラットフォームをターゲットとしていないアプリをビルドする場合、またはビルドするアプリに複数のターゲットがあり、platform が既定の [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) 項目グループに含まれていない場合、**警告は表示されません**。
+    - サポート対象外のプラットフォームをターゲットとしていないアプリをビルドする場合、またはビルドするアプリに複数のターゲットがあり、platform が既定の [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/main/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) 項目グループに含まれていない場合、**警告は表示されません**。
 - どちらの属性も、プラットフォーム名の一部としてバージョン番号を含めても、含めなくてもインスタンス化できます。
   - バージョン番号は `major.minor[.build[.revision]]` の形式です。`major.minor` は必須であり、`build` と `revision` の部分は省略可能です。 たとえば、"Windows7.0" は Windows バージョン 7.0 を示しますが、"Windows" は Windows 0.0 として解釈されます。
 
@@ -178,7 +178,10 @@ ms.locfileid: "94819488"
 
 - **コードを削除する**。 通常は望ましい方法ではありません。Windows ユーザーがコードを使用する場合に忠実性が失われることを意味するためです。 クロスプラットフォームの代替手段が存在する場合は、プラットフォーム固有の API よりもそちらを使用した方がよい可能性があります。
 
-- **警告を抑制する**。 EditorConfig エントリまたは `#pragma warning disable ca1416` を使用して、単に警告を抑制することもできます。 ただし、プラットフォーム固有の API を使用する場合、このオプションは最後の手段にするべきです。
+- **警告を抑制する**。 [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) エントリまたは `#pragma warning disable CA1416` を使用して、単に警告を抑制することもできます。 ただし、プラットフォーム固有の API を使用する場合、このオプションは最後の手段にするべきです。
+
+  > [!TIP]
+  > `#pragma` プリコンパイラ ディレクティブを使用して警告を無効にすると、ターゲットとする識別子の大文字と小文字が区別されます。 たとえば、`ca1416` は、実際には警告 CA1416 を無効にしません。
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>保護メソッドを使用してプラットフォーム固有の API を保護する
 
@@ -379,8 +382,8 @@ ms.locfileid: "94819488"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET 5 でのターゲット フレームワーク名](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
-- [プラットフォーム固有の API に注釈を付け、その使用を検出する](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
-- [特定のプラットフォームでサポートされていない API に注釈を付ける](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
+- [.NET 5 でのターゲット フレームワーク名](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)
+- [プラットフォーム固有の API に注釈を付け、その使用を検出する](https://github.com/dotnet/designs/blob/main/accepted/2020/platform-checks/platform-checks.md)
+- [特定のプラットフォームでサポートされていない API に注釈を付ける](https://github.com/dotnet/designs/blob/main/accepted/2020/platform-exclusion/platform-exclusion.md)
 - [CA1416 プラットフォーム互換性アナライザー](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [.NET API アナライザー](../../standard/analyzers/api-analyzer.md)

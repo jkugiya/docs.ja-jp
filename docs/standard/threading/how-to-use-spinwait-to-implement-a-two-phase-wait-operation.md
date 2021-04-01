@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SpinWait を使用して 2 フェーズ待機操作を実装する方法'
 title: '方法: SpinWait を使用して 2 フェーズ待機操作を実装する'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-ms.openlocfilehash: e5d58067f70706294308952b9f7cfbf69fa89a58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 95ff74d328bcfa9f76d2cac017e5520b6d1375b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728486"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666694"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>方法: SpinWait を使用して 2 フェーズ待機操作を実装する
 
@@ -29,7 +30,7 @@ ms.locfileid: "95728486"
   
  ログ出力には、<xref:System.Threading.ManualResetEvent> を使用せずにロックを取得することで、ラッチでパフォーマンスを向上させることができた頻度が示されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SpinWait](spinwait.md)
 - [スレッド処理オブジェクトと機能](threading-objects-and-features.md)

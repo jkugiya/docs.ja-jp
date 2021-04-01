@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML スキーマの推論'
 title: XML スキーマの推論
 ms.date: 03/30/2017
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-ms.openlocfilehash: 9d3c3bd15637dbd875db5736aa01f3f4dd00f605
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cba23e15ce6ce5440fbb4339c161ed775e076df3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733452"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713690"
 ---
 # <a name="inferring-an-xml-schema"></a>XML スキーマの推論
 

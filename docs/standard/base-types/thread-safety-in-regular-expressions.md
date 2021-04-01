@@ -1,6 +1,8 @@
 ---
+description: '詳細情報: 正規表現におけるスレッド セーフ'
 title: 正規表現におけるスレッド セーフ
 ms.date: 03/30/2017
+ms.topic: conceptual
 helpviewer_keywords:
 - .NET regular expressions, threads
 - regular expressions, threads
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: a10b5d01d308af3c808404608e6be1d77e6be8e0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 93aaed60179c043e414ac0d296722bc397b7e771
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734167"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702887"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>正規表現におけるスレッド セーフ
 
@@ -25,6 +27,6 @@ ms.locfileid: "95734167"
   
  列挙子は唯一の例外です。 アプリケーションはコレクション列挙子に対する呼び出しをシリアル化する必要があります。 複数のスレッドでコレクションを同時に列挙できる場合、列挙子によってスキャンされるコレクションのルート オブジェクト上の列挙子メソッドを同期する必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET の正規表現](regular-expressions.md)

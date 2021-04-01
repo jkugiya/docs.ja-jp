@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DOM における名前空間のサポート'
 title: DOM における名前空間のサポート
 ms.date: 03/30/2017
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: b3214d77b069b672e8772ec78db51c9d8ee1bf50
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb645be971cb8f9d8a3750360ca0d6bf68046d3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713469"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM における名前空間のサポート
 

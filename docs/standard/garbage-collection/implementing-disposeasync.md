@@ -3,18 +3,18 @@ title: DisposeAsync メソッドの実装
 description: DisposeAsync メソッドと DisposeAsyncCore メソッドを実装し、非同期リソース クリーンアップを実行する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 12/09/2020
+ms.date: 03/17/2021
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: f04ac6695864b96cdcb7efeb6eb8e1d9551e1d14
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a177e80c5204a79a372cb79609f458bf6fa3bde1
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009691"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652660"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync メソッドの実装
 
@@ -107,7 +107,7 @@ public async ValueTask DisposeAsync()
 
 :::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
 
-前の例では、各非同期クリーンアップ操作は、`await using` ブロックの下で明示的にスコープ設定されています。 外側のスコープは、`objOne` が `objTwo` を囲む中かっこを設定する方法によって定義されます。そのため、最初に `objTwo` が、その後に `objOne` が破棄されます。 どちらの `IAsyncDisposable` インスタンスの <xref:System.IAsyncDisposable.DisposeAsync> メソッドも待機状態になっているので、非同期のクリーンアップ操作が実行されます。 呼び出しは、積み重ねではなく、入れ子になっています。
+前の例では、各非同期クリーンアップ操作は、`await using` ブロックの下で明示的にスコープ設定されています。 外側のスコープは、`objOne` が `objTwo` を囲む中かっこを設定する方法によって定義されます。そのため、最初に `objTwo` が、その後に `objOne` が破棄されます。 どちらの `IAsyncDisposable` インスタンスでも <xref:System.IAsyncDisposable.DisposeAsync> メソッドを待機させているため、各インスタンスによって非同期のクリーンアップ操作が実行されます。 呼び出しは、積み重ねではなく、入れ子になっています。
 
 ### <a name="acceptable-pattern-two"></a>使用可能なパターン 2
 
@@ -123,9 +123,9 @@ public async ValueTask DisposeAsync()
 
 ### <a name="unacceptable-pattern"></a>許容できないパターン
 
-`AnotherAsyncDisposable` コンストラクターから例外がスローされた場合、`objOne` は正しく破棄されません。
+次のコードの強調表示されている行は、"using の積み重ね" を持つことの意味を示しています。 `AnotherAsyncDisposable` コンストラクターから例外がスローされた場合、`objOne` は正しく破棄されません。
 
-:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs" highlight="9-10":::
 
 > [!TIP]
 > 予期しない動作につながるおそれがあるため、このパターンは避けてください。

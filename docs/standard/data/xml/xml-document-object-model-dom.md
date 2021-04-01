@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML ドキュメント オブジェクト モデル (DOM)'
 title: XML ドキュメント オブジェクト モデル (DOM)
 ms.date: 03/30/2017
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-ms.openlocfilehash: 5e7c4e62b7bb19b1ddab61f78b360fed0b6752ef
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 21b4f049e936b36f72053a9eb6a2fece1ea70168
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782755"
 ---
 # <a name="xml-document-object-model-dom"></a>XML ドキュメント オブジェクト モデル (DOM)
 

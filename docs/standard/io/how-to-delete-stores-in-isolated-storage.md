@@ -1,5 +1,6 @@
 ---
-title: '方法 : 分離ストレージでストアを削除する'
+description: '詳細情報: 分離ストレージでストアを削除する方法'
+title: 方法:分離ストレージでストアを削除する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-ms.openlocfilehash: 88cb0b9c8a09e7eaf11a3e7b830dfbc8d595937b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e454492c6a6e24feb57acf20afe1073d7ffbb4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731125"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775644"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>方法 : 分離ストレージでストアを削除する
+# <a name="how-to-delete-stores-in-isolated-storage"></a>方法:分離ストレージでストアを削除する
 
 分離ストレージ ファイルを削除するため、 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> クラスは 2 つのメソッドを提供します。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "95731125"
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [分離ストレージ](isolated-storage.md)

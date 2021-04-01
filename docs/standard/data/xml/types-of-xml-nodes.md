@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML ノードの種類'
 title: XML ノードの種類
 ms.date: 03/30/2017
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: edf47246782e86cf134ea88d41381bed9ff16f69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a43d9259bc1798be962ec0c599299a2a663a0d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782885"
 ---
 # <a name="types-of-xml-nodes"></a>XML ノードの種類
 

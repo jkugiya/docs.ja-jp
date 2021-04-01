@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DOM モデルを使用した XML データの処理'
 title: DOM モデルを使用した XML データの処理
 ms.date: 03/30/2017
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: b0e24527e0edafee16511ea03a229e049b31126c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 587bc61f38489e8eab34248e57244c30c75b2e16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783236"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM モデルを使用した XML データの処理
 

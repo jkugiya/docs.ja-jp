@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XslTransform からの出力'
 title: XslTransform からの出力
 ms.date: 03/30/2017
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: ebe276a9627a36f1248f0043af6c82e76fe7fd78
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 103334274daafc7de2e7cadab7191bc5b90a34d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783275"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform からの出力
 

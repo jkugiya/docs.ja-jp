@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DOM の拡張'
 title: DOM の拡張
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 173d36f534f951cfafefd3bd69b7ab245d575747
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 46b721e093b2cf0247ddd7cf145381cdaec75773
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829506"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732151"
 ---
 # <a name="extending-the-dom"></a>DOM の拡張
 

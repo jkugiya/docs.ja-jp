@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-ms.openlocfilehash: 3bc97cce2a063e7d5286ad886401cb6ae2ce3026
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 94948d66ce2cb618c7501e55ba69745b44c7b793
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826932"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255263"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>方法:プロデューサー/コンシューマーのデータフロー パターンを実装する
 

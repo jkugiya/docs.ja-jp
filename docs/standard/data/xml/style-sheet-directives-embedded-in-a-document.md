@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ドキュメントに埋め込まれたスタイル シート ディレクティブ'
 title: ドキュメントに埋め込まれたスタイル シート ディレクティブ
 ms.date: 03/30/2017
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-ms.openlocfilehash: 25946fd14a82428ae4367cd33511df68e9929203
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3585cc2f9e7d931a89c1f81283282712195720f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818571"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782937"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>ドキュメントに埋め込まれたスタイル シート ディレクティブ
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XPathNavigator による XML データへのアクセス'
 title: XPathNavigator による XML データへのアクセス
 ms.date: 03/30/2017
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: f87e2e12b7ebc740809dc8db902f2ece92e8f127
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 849afd866f19df54e2715fab57ca0f81863278d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725405"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642631"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データへのアクセス
 

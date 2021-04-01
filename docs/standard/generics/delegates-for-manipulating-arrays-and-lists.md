@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 配列とリストの操作に使用する汎用デリゲート'
 title: 配列とリストの操作に使用する汎用デリゲート
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b87296162a5dfea6253003c5daa6999abde4d08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728512"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629579"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>配列とリストの操作に使用する汎用デリゲート
 

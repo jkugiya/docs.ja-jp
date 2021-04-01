@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 28f2b78de2533c659ea0fcf9d4990694dbfd411c
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009886"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584855"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET での JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) - 概要
 
@@ -24,6 +24,8 @@ ms.locfileid: "97009886"
 ライブラリの設計では、ハイ パフォーマンスと、高度な豊富なセットに対する少ないメモリ割り当てが強調されています。 組み込みの UTF-8 サポートによって、UTF-8 としてエンコードされた JSON テキストの読み取りと書き込みのプロセスが最適化されます。これは、web 上のデータおよびディスク上のファイルのための最も一般的なエンコードです。
 
 ライブラリには、メモリ内のドキュメント オブジェクト モデル (DOM) を操作するためのクラスも用意されています。 この機能により、JSON ファイルまたは文字列内の要素に対する読み取り専用のランダムアクセスが可能になります。
+
+Visual Basic コードから使用できるライブラリの部分には、いくつかの制限があります。 詳細については、「[Visual Basic のサポート](system-text-json-how-to.md#visual-basic-support)」をご覧ください。
 
 ## <a name="how-to-get-the-library"></a>ライブラリの入手方法
 
@@ -51,5 +53,6 @@ ms.locfileid: "97009886"
 * [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
 * [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
 * [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
+* [System.Text.Json でサポートされているコレクション型](system-text-json-supported-collection-types.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
 * [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

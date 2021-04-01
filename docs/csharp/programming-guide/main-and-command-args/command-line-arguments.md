@@ -1,24 +1,36 @@
 ---
 title: コマンド ライン引数 - C# プログラミング ガイド
 description: コマンド ライン引数について説明します。 コンソール アプリケーションでコマンド ライン引数を使用する例をご覧ください。
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381919"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190412"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>コマンド ライン引数 (C# プログラミング ガイド)
 
 `Main` メソッドに引数を渡すには、次のいずれかの方法でメソッドを定義します。
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| `Main` メソッド コード                 | `Main` シグネチャ                             |
+|------------------------------------|----------------------------------------------|
+| 戻り値がなく、`await` を使用しない | `static void Main(string[] args)`            |
+| 戻り値があり、`await` を使用しない    | `static int Main(string[] args)`             |
+| 戻り値がなく、`await` を使用する      | `static async Task Main(string[] args)`      |
+| 戻り値があり、`await` を使用する         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+引数が使用されない場合、メソッド シグネチャから `args` を省略し、少しばかり簡単なコードにすることができます。
+
+| `Main` メソッド コード                 | `Main` シグネチャ                |
+|------------------------------------|---------------------------------|
+| 戻り値がなく、`await` を使用しない | `static void Main()`            |
+| 戻り値があり、`await` を使用しない    | `static int Main()`             |
+| 戻り値がなく、`await` を使用する      | `static async Task Main()`      |
+| 戻り値があり、`await` を使用する         | `static async Task<int> Main()` |
 
 > [!NOTE]
 > Windows フォーム アプリケーションの `Main` メソッドでコマンド ライン引数を有効にするには、*program.cs* の `Main` のシグネチャを手動で変更する必要があります。 Windows フォーム デザイナーが生成するコードは、入力パラメーターなしの `Main` を作成します。 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> または <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> を使用して、コンソールまたは Windows アプリケーション内の任意の場所からコマンド ライン引数にアクセスすることもできます。

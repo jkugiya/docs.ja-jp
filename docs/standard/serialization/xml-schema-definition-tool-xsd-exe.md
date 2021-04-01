@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML シリアライザー ジェネレーター ツールは、指定されたアセンブリ内の型の XML シリアル化アセンブリを生成します。これにより、XmlSerializer の起動パフォーマンスが向上します。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d849bec988c093cfe22cb9ce65ce23cbb1ce78d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676609"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259877"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -236,7 +236,7 @@ xsd myAssembly.dll
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
 - [ツール](../../framework/tools/index.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../framework/tools/developer-command-prompt-for-vs.md)
+- [開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)
 - [LINQ to DataSet の概要](../../framework/data/adonet/linq-to-dataset-overview.md)
 - [型指定された DataSet のクエリ](../../framework/data/adonet/querying-typed-datasets.md)
 - [統合言語クエリ (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: msxsl:node-set() 関数のサポート'
 title: msxsl:node-set() 関数のサポート
 ms.date: 03/30/2017
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 6c84e3789916e8d842e51e8417cb27505cb5cba6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd9f02dbfdd400b182c95453de5f49e43ee0b2aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782924"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() 関数のサポート
 

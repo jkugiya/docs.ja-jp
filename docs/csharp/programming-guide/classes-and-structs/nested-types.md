@@ -5,16 +5,16 @@ ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 0741ae88103b16ce34fd5a38b789beaf428e734a
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 853138beed6ad9ddffa789f0080ca1fd2ba9d700
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918581"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511919"
 ---
 # <a name="nested-types-c-programming-guide"></a>入れ子にされた型 (C# プログラミング ガイド)
 
-[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/builtin-types/struct.md)、[デリゲート](../../language-reference/builtin-types/reference-types.md#the-delegate-type)または[インターフェイス](../../language-reference/keywords/interface.md)の中で定義された型は、入れ子にされた型と呼ばれます。 次に例を示します。
+[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/builtin-types/struct.md)、[インターフェイス](../../language-reference/keywords/interface.md)の中で定義された型は、入れ子にされた型と呼ばれます。 次に例を示します。
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
@@ -25,7 +25,9 @@ ms.locfileid: "96918581"
 - **クラス** の入れ子にされた型は、[public](../../language-reference/keywords/public.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md)、[private](../../language-reference/keywords/private.md)、[private protected](../../language-reference/keywords/private-protected.md) になります。
 
    ただし、[シール クラス](../../language-reference/keywords/sealed.md)内で `protected`、`protected internal`、`private protected` の入れ子にされたクラスを定義すると、コンパイラの警告 [CS0628](../../misc/cs0628.md)、"新規のプロテクト メンバーがシール クラスで宣言されました" が生成されます。
-  
+
+   また、入れ子になった型を外部から参照できるようにすることは、コード品質ルール [CA1034](../../../fundamentals/code-analysis/quality-rules/ca1034.md) の "入れ子にされた型を参照可能にすることはできません" に違反することにもご注意ください。
+
 - **構造体** の入れ子にされた型は、は、[public](../../language-reference/keywords/public.md)、[internal](../../language-reference/keywords/internal.md)、または [private](../../language-reference/keywords/private.md) のいずれかが可能です。
 
 次の例では、`Nested` クラスを public にします。
@@ -48,3 +50,4 @@ ms.locfileid: "96918581"
 - [クラスと構造体](./index.md)
 - [アクセス修飾子](./access-modifiers.md)
 - [コンストラクター](./constructors.md)
+- [CA1034 ルール](../../../fundamentals/code-analysis/quality-rules/ca1034.md)

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XPath 名前空間のナビゲーション'
 title: XPath 名前空間のナビゲーション
 ms.date: 03/30/2017
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: d5350f0c8f73c5efb0f7d9e4c492a841b4978c36
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a45f17b4b234f00788c117478ca30c07eee49f4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782599"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 名前空間のナビゲーション
 

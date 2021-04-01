@@ -1,6 +1,8 @@
 ---
+description: '詳細情報: 正規表現でのその他の構成体'
 title: 正規表現でのその他の構成体
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -9,12 +11,12 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68e17e406ea22a52cd7b121c60595667cf054290
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642759"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正規表現でのその他の構成体
 
@@ -48,7 +50,7 @@ ms.locfileid: "95683798"
   
  この例では、2 つの正規表現を定義しています。 最初の `\b(D\w+)\s(d\w+)\b` は、大文字の "D" と小文字の "d" で始まる 2 つの連続した単語に一致します。 2 つ目の正規表現 `\b(D\w+)(?ixn) \s (d\w+) \b` は、次の表に示すように、インライン オプションを使用して、このパターンを変更します。 結果の比較で、`(?ixn)` コンストラクトの効果を確認します。  
   
-|パターン|説明|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から開始します。|  
 |`(D\w+)`|大文字 "D" の後に 1 つ以上の単語の文字が続くパターンに一致します。 これが最初のキャプチャ グループです。|  
@@ -63,14 +65,14 @@ ms.locfileid: "95683798"
   
  次の例では、前のセクションの例の最初の正規表現パターンを繰り返しています。 比較で大文字小文字を区別するかどうかを示す 2 つのインライン コメントを正規表現に追加しています。 正規表現パターン `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` は、次のように定義されます。  
   
-|パターン|説明|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から開始します。|  
-|`(?# case-sensitive comparison)`|コメント。 これは、パターンマッチング動作に影響を与えません。|  
+|`(?# case-sensitive comparison)`|コメントです。 これは、パターンマッチング動作に影響を与えません。|  
 |`(D\w+)`|大文字 "D" の後に 1 つ以上の単語の文字が続くパターンに一致します。 これが最初のキャプチャ グループです。|  
 |`\s`|空白文字と一致します。|  
 |`(?ixn)`|この時点から、大文字と小文字を区別しない比較を行い、明示的なキャプチャのみを行って、正規表現パターン内の空白を無視します。|  
-|`(?#case-insensitive comparison)`|コメント。 これは、パターンマッチング動作に影響を与えません。|  
+|`(?#case-insensitive comparison)`|コメントです。 これは、パターンマッチング動作に影響を与えません。|  
 |`(d\w+)`|大文字または小文字 "d" の後に 1 つ以上の単語の文字が続くパターンに一致します。 これが 2 番目のキャプチャ グループです。|  
 |`\b`|ワード境界に一致します。|  
   
@@ -85,7 +87,7 @@ ms.locfileid: "95683798"
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|パターン|説明|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`\{`|左中かっこと一致します。|  
 |`\d+`|1 個以上の 10 進数と一致します。|  

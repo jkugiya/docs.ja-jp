@@ -3,12 +3,12 @@ title: モデル ビルダーの概要としくみ
 description: ML.NET モデル ビルダーを使用し、機械学習モデルを自動的にトレーニングする方法
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 1e40b0da2c17db1c981bc9f796b4e3cb0c87f69e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231421"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877021"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>モデル ビルダーの概要としくみ
 
@@ -132,11 +132,11 @@ Azure トレーニングは、イメージ分類とオブジェクト検出で�
 
 |シナリオ|例|データ|ラベル|フィーチャー|
 |-|-|-|-|-|
-|分類|売上の異常を予測する|[製品の売上データ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|製品の売上|月|
-||Web サイトのコメントのセンチメントを予測する|[Web サイトのコメント データ](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|ラベル (否定的なセンチメントのときは 0、肯定的なセンチメントのときは 1)|コメント、年度|
-||クレジット カード取引の詐欺を予測する|[クレジット カードのデータ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|クラス (詐欺の場合は 1、それ以外の場合 0)|金額、V1-V28 (匿名化された特徴)|
-||GitHub リポジトリでのイシューの種類を予測する|[GitHub 問題のデータ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|区分|タイトル、説明|
-|値の予測|タクシー料金を予測する|[タクシーの料金データ](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|料金|乗車時間、距離|
+|分類|売上の異常を予測する|[製品の売上データ](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|製品の売上|月|
+||Web サイトのコメントのセンチメントを予測する|[Web サイトのコメント データ](https://raw.githubusercontent.com/dotnet/machinelearning/main/test/data/wikipedia-detox-250-line-data.tsv)|ラベル (否定的なセンチメントのときは 0、肯定的なセンチメントのときは 1)|コメント、年度|
+||クレジット カード取引の詐欺を予測する|[クレジット カードのデータ](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|クラス (詐欺の場合は 1、それ以外の場合 0)|金額、V1-V28 (匿名化された特徴)|
+||GitHub リポジトリでのイシューの種類を予測する|[GitHub 問題のデータ](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|区分|タイトル、説明|
+|値の予測|タクシー料金を予測する|[タクシーの料金データ](https://github.com/dotnet/machinelearning-samples/blob/main/datasets/taxi-fare-train.csv)|料金|乗車時間、距離|
 |イメージ分類|花の種類を予測する |[花の画像](http://download.tensorflow.org/example_images/flower_photos.tgz)|花の種類: デイジー、タンポポ、バラ、ヒマワリ、チューリップ|イメージ データ自体|
 |推奨事項|好きな映画を予測する|[映画の評価](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|ユーザー、映画|評価|
 

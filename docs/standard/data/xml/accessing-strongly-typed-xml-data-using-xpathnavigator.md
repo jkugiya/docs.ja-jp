@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 厳密に型指定された XML データへの XPathNavigator を使用したアクセス'
 title: 厳密に型指定された XML データへの XPathNavigator を使用したアクセス
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: 7051aeb8cdc25518f99fe093045e7e769ae7f6f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 16c2d83f490b41a6e5789dc59588921e21acbbae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725418"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714093"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>厳密に型指定された XML データへの XPathNavigator を使用したアクセス
 

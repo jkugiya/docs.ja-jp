@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 保持されるエンティティ参照'
 title: 保持されるエンティティ参照
 ms.date: 03/30/2017
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-ms.openlocfilehash: 484eb5c874c6de05acae7dcd87a477c186b81482
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 189096d2dd87731a06fdb805ba5f041c041e26b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687269"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629631"
 ---
 # <a name="entity-references-are-preserved"></a>保持されるエンティティ参照
 

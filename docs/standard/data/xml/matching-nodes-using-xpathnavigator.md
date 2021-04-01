@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XPathNavigator によるノードの一致'
 title: XPathNavigator によるノードの一致
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
-ms.openlocfilehash: 2d598a4ddfe84eec7288d111fc156dd0c555a10e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d142490829473d0891c5b2f18b1c3ec9e7ace426
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720127"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732008"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>XPathNavigator によるノードの一致
 

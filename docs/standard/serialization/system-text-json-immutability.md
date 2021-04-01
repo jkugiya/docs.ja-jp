@@ -1,39 +1,54 @@
 ---
 title: System.Text.Json で変更できない型と非パブリック アクセサーを使用する方法
 description: .NET で JSON との間のシリアル化および逆シリアル化を行うときに、変更できない型と非パブリック アクセサーを使用する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 02/08/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ff8ecec0d70c877b7cbbd0297b85f0d9578ab828
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 188ed6a5582f4677eb60963af72036963b5fe821
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008826"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206675"
 ---
-# <a name="how-to-use-immutable-types-and-non-public-accessors-with-no-locsystemtextjson"></a>System.Text.Json で変更できない型と非パブリック アクセサーを使用する方法
+# <a name="how-to-use-immutable-types-and-non-public-accessors-with-systemtextjson"></a>System.Text.Json で変更できない型と非パブリック アクセサーを使用する方法
 
-この記事では、`System.Text.Json` 名前空間を使用して、レコードなどの変更できない型を使用する方法について説明します。
+この記事では、`System.Text.Json` 名前空間で不変の型、パラメーター化されたパブリック コンストラクター、および非パブリック アクセサーを使用する方法について説明します。
 
 ## <a name="immutable-types-and-records"></a>不変の型とレコード
 
 ::: zone pivot="dotnet-5-0"
-`System.Text.Json` ではパラメーター化されたコンストラクターを使用できるので、不変のクラスまたは構造体を逆シリアル化できます。 クラスの場合、パラメーター化されたコンストラクターしかない場合は、そのコンストラクターが使用されます。 構造体または複数のコンストラクターを持つクラスの場合は、[[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute.%23ctor%2A) 属性を適用することにより、使用するコンストラクターを指定します。 その属性を使用しないと、パラメーターなしのパブリック コンストラクターが存在する場合は常にそれが使用されます。 その属性は、パブリック コンストラクターでのみ使用できます。 次の例では、`[JsonConstructor]` 属性が使用されています。
+`System.Text.Json` ではパラメーター化されたパブリック コンストラクターを使用できるので、不変のクラスまたは構造体を逆シリアル化できます。 クラスの場合、パラメーター化されたコンストラクターしかない場合は、そのコンストラクターが使用されます。 構造体または複数のコンストラクターを持つクラスの場合は、[[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 属性を適用することにより、使用するコンストラクターを指定します。 その属性を使用しないと、パラメーターなしのパブリック コンストラクターが存在する場合は常にそれが使用されます。 その属性は、パブリック コンストラクターでのみ使用できます。 次の例では、`[JsonConstructor]` 属性が使用されています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/ImmutableTypes.cs" highlight="13":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/ImmutableTypes.vb" :::
+
+パラメーター化されたコンストラクターのパラメーター名は、プロパティ名と一致している必要があります。 一致では大文字と小文字は区別されません。また、[[JsonPropertyName]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) を使用してプロパティの名前を変更する場合でも、コンストラクター パラメーターは実際のプロパティ名と一致している必要があります。 次の例では、`TemperatureC` プロパティの名前は、JSON では `celsius` に変更されていますが、コンストラクター パラメーターには引き続き `temperatureC` の名前が付けられます。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/ImmutableTypesCtorParms.cs" highlight="10,14-16":::
+
+`[JsonPropertyName]` に加え、次の属性でもパラメーター化されたコンストラクターでの逆シリアル化がサポートされています。
+
+* [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute)
+* [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)
+* [[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute)
+* [[JsonNumberHandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute)
 
 次の例で示されているように、C# 9 のレコードもサポートされています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Records.cs":::
 
-すべてのプロパティ セッターが非パブリックであるために不変の型の場合は、[パブリックでないプロパティ アクセサー](#non-public-property-accessors)に関する次のセクションを参照してください。
+すべてのプロパティ セッターが非パブリックであるために不変の型の場合は、次のセクションを参照してください。
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -46,6 +61,7 @@ ms.locfileid: "97008826"
 パブリックでないプロパティ アクセサーを使用できるようにするには、次の例で示されているように、[[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 属性を使用します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/NonPublicAccessors.cs" highlight="12,15":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/NonPublicAccessors.vb" :::
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"

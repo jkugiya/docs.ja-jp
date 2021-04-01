@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: スキーマのノード型および構造を推論するときの規則'
 title: スキーマのノード型および構造を推論するときの規則
 ms.date: 03/30/2017
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: e49e50dc21951d739b12cdfa60c6a48f67576873
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cbcc60a4c2510fb75aa5194164881f573f1a688f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697598"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783028"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>スキーマのノード型および構造を推論するときの規則
 

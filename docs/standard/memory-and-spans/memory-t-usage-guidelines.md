@@ -1,34 +1,34 @@
 ---
 title: Memory<T> と Span<T> の使用ガイドライン
 description: この記事では、Memory<T> および Span<T> について説明します。これらは、.NET Core の構造化データのバッファーであり、パイプラインで使用できます。
-ms.date: 10/01/2018
+ms.date: 02/05/2021
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b09c2444a4edab0c5f7bdecc64a19aadca37df34
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245597"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103635"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
-.NET Core には、任意の連続したメモリ領域を表す多くの型があります。 .NET Core 2.0 では <xref:System.Span%601> と <xref:System.ReadOnlySpan%601> が導入されました。これらはマネージド メモリまたはアンマネージド メモリでサポートできる軽量のメモリ バッファーです。 このような型はスタック上にのみ格納できるため、非同期メソッドの呼び出しを含む多くのシナリオには適していません。 .NET Core 2.1 では、<xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>、<xref:System.Buffers.MemoryPool%601> など、さらに多くの型が追加されています。 <xref:System.Span%601> と同様に、<xref:System.Memory%601> とそれに関連する型は、マネージド メモリとアンマネージド メモリの両方でサポートできます。 <xref:System.Span%601> とは異なり、<xref:System.Memory%601> はマネージド ヒープ上に格納できます。
+.NET Core には、任意の連続したメモリ領域を表す多くの型があります。 .NET Core 2.0 では <xref:System.Span%601> と <xref:System.ReadOnlySpan%601> が導入されました。これらはマネージド メモリまたはアンマネージド メモリへの参照をラップする軽量のメモリ バッファーです。 このような型はスタック上にのみ格納できるため、非同期メソッドの呼び出しを含む多くのシナリオには適していません。 .NET Core 2.1 では、<xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>、<xref:System.Buffers.MemoryPool%601> など、さらに多くの型が追加されています。 <xref:System.Span%601> と同様に、<xref:System.Memory%601> とそれに関連する型は、マネージド メモリとアンマネージド メモリの両方でサポートできます。 <xref:System.Span%601> とは異なり、<xref:System.Memory%601> はマネージド ヒープ上に格納できます。
 
-<xref:System.Span%601> と <xref:System.Memory%601> は、どちらもパイプラインで使用できる構造化データのバッファーです。 つまり、データの一部または全部をパイプライン内のコンポーネントに効率的に渡すことができるように設計されています。そのため、データを処理し、必要に応じてバッファーを変更できます。 <xref:System.Memory%601> とその関連する型には、複数のコンポーネントまたは複数のスレッドからアクセスできるため、開発者が標準的な使用ガイドラインに従って堅牢なコードを作成することが重要です。
+<xref:System.Span%601> と <xref:System.Memory%601> は、どちらもパイプラインで使用できる構造化データのバッファーのラッパーです。 つまり、データの一部または全部をパイプライン内のコンポーネントに効率的に渡すことができるように設計されています。そのため、データを処理し、必要に応じてバッファーを変更できます。 <xref:System.Memory%601> とその関連する型には、複数のコンポーネントまたは複数のスレッドからアクセスできるため、開発者が標準的な使用ガイドラインに従って堅牢なコードを作成することが重要です。
 
 ## <a name="owners-consumers-and-lifetime-management"></a>所有者、コンシューマー、有効期間管理
 
 バッファーは API 間で渡すことができ、複数のスレッドからバッファーにアクセスされることがあるため、有効期間管理を考慮することが重要です。 次の 3 つの中心的な概念があります。
 
-- **所有権**。 バッファー インスタンスの所有者は、バッファーが使用されなくなったときにバッファーを破棄することを含め、有効期間の管理を担当します。 すべてのバッファーの所有者は 1 つです。 通常、所有者とは、バッファーを作成したコンポーネント、またはファクトリーからバッファーを受け取ったコンポーネントです。 所有権は譲渡することもできます。**コンポーネント A** はバッファーの制御を**コンポーネント B** に譲渡することができます。その時点で**コンポーネント A** はバッファーを使用できなくなり、**コンポーネント B** が、使用されなくなったバッファーの破棄を担当します。
+- **所有権**。 バッファー インスタンスの所有者は、バッファーが使用されなくなったときにバッファーを破棄することを含め、有効期間の管理を担当します。 すべてのバッファーの所有者は 1 つです。 通常、所有者とは、バッファーを作成したコンポーネント、またはファクトリーからバッファーを受け取ったコンポーネントです。 所有権は譲渡することもできます。**コンポーネント A** はバッファーの制御を **コンポーネント B** に譲渡することができます。その時点で **コンポーネント A** はバッファーを使用できなくなり、**コンポーネント B** が、使用されなくなったバッファーの破棄を担当します。
 
 - **消費**。 バッファー インスタンスのコンシューマーは、読み取り、場合によっては書き込みでバッファー インスタンスを使用できます。 何らかの外部の同期メカニズムが提供されていない限り、バッファーは同時に持つことができるコンシューマーは 1 つです。 バッファーのアクティブなコンシューマーは必ずしもバッファーの所有者ではありません。
 
 - **リース**。 リースは、特定のコンポーネントがバッファーの消費者になることができる時間の長さです。
 
-これら 3 つの概念を示す疑似コード例を次に示します。 これには、型 <xref:System.Char> の <xref:System.Memory%601> バッファーをインスタンス化し、`WriteInt32ToBuffer` メソッドを呼び出して整数の文字列表現をバッファーに書き込み、次に `DisplayBufferToConsole` メソッドを呼び出してバッファーの値を表示する `Main` メソッドが含まれます。
+これら 3 つの概念を示す疑似コード例を次に示します。 擬似コード内の `Buffer` は、<xref:System.Char> 型の <xref:System.Memory%601> または<xref:System.Span%601> のバッファーを表します。 `Main` メソッドはバッファーをインスタンス化し、`WriteInt32ToBuffer` メソッドを呼び出して整数の文字列表現をバッファーに書き込み、次に `DisplayBufferToConsole` メソッドを呼び出してバッファーの値を表示します。
 
 ```csharp
 using System;
@@ -59,7 +59,7 @@ class Program
 }
 ```
 
-`Main` メソッドによってバッファー (この場合は <xref:System.Span%601> インスタンス) が作成され、その所有者も作成されます。 そのため、`Main` には使用されなくなったバッファーを破棄する責任があります。 この処理は、バッファーの <xref:System.Span%601.Clear?displayProperty=nameWithType> メソッドを呼び出して実行します (実際には、この <xref:System.Span%601.Clear> メソッドによってバッファーのメモリがクリアされます。<xref:System.Span%601> 構造体には、実際にバッファーを破棄するメソッドはありません)。
+`Main` メソッドによってバッファーが作成され、その所有者も作成されます。 そのため、`Main` には使用されなくなったバッファーを破棄する責任があります。 擬似コードは、バッファーで `Destroy` メソッドを呼び出すことによってこれを示します。 (<xref:System.Memory%601> と <xref:System.Span%601> は、どちらも実際には `Destroy` メソッドを持ちません。 実際のコード例については、この記事で後ほど示します)。
 
 バッファーには `WriteInt32ToBuffer` と `DisplayBufferToConsole` という 2 つのコンシューマーがあります。 同時に存在するコンシューマーは 1 つのみであり (最初は `WriteInt32ToBuffer`、次に `DisplayBufferToConsole`)、どちらのコンシューマーもバッファーを所有していません。 この文脈における "コンシューマー" は、バッファーの読み取り専用ビューを意味していない点にも注意してください。バッファーの読み取り/書き込みビューがある場合、コンシューマーは `WriteInt32ToBuffer` と同様にバッファーの内容を変更できます。
 

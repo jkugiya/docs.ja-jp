@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アプリケーション ドメインのリソース監視'
 title: アプリケーション ドメインのリソース監視
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: c4644defa5a67d9d39c4faa89943a6aa5f763eae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7d6054e439697cefa60a88c07b45984c6fd0c11c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713274"
 ---
 # <a name="application-domain-resource-monitoring"></a>アプリケーション ドメインのリソース監視
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ノード フラグメントを変換する方法'
 title: '方法: ノード フラグメントを変換する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-ms.openlocfilehash: f5eb8e7826dd132fd46f6f476335416e7dd03269
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9373491837fdfb176547aa7e01b8ebf72ae91bef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722688"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713768"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>方法: ノード フラグメントを変換する
 

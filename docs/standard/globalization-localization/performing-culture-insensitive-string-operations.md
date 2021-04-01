@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カルチャを認識しない文字列操作の実行'
 title: カルチャを認識しない文字列操作の実行
 ms.date: 08/22/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77365eae18c91b9e803f184258787d81e690ffc2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732217"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675638"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>カルチャを認識しない文字列操作の実行
 

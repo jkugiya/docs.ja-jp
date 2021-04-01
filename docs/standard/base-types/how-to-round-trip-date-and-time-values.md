@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 日付と時刻の値をラウンドトリップさせる方法'
 title: '方法: 日付と時刻の値をラウンドトリップさせる'
 ms.date: 03/30/2017
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - time [.NET], round-trip values
 - formatting strings [.NET], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 243ed98972f834c207331770f9d0202ddb60d4e6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 66f1ac2e8b51d7117f771a966a3c01cff24b78a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821971"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642748"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>方法: 日付と時刻の値をラウンドトリップさせる
 

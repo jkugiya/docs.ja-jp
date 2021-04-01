@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 名前またはインデックスによる順序付けられていないノードの取得'
 title: 名前またはインデックスによる順序付けられていないノードの取得
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: c3358f6cca27fbe61ba2b59fe6f2eb5df81c91ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 805f61233a27812f032b83fede2dd8db3d196ba5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782872"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>名前またはインデックスによる順序付けられていないノードの取得
 

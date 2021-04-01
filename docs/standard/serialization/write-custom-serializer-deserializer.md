@@ -1,25 +1,28 @@
 ---
 title: System.Text.Json でカスタム シリアライザーと逆シリアライザーを作成する方法
 description: System.Text.Json 名前空間を使用して、JSON のカスタム シリアライザーと逆シリアライザーを作成する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 01/19/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: a01d3c8dd18c114ea1c3aabc402bc841a6025ffe
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 667c959584b553491caa672602b82be5649a79e4
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439804"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584834"
 ---
-# <a name="how-to-write-custom-serializers-and-deserializers-with-no-locsystemtextjson"></a>System.Text.Json でカスタム シリアライザーと逆シリアライザーを作成する方法
+# <a name="how-to-write-custom-serializers-and-deserializers-with-systemtextjson"></a>System.Text.Json でカスタム シリアライザーと逆シリアライザーを作成する方法
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> は、UTF-8 でエンコードされた JSON テキスト用の、ハイパフォーマンス、低割り当て、順方向専用のリーダーです。`ReadOnlySpan<byte>` または `ReadOnlySequence<byte>` から読み取られます。 `Utf8JsonReader` は低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために使用できます。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドでは、内部で `Utf8JsonReader` が使用されます。
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> は、UTF-8 でエンコードされた JSON テキスト用の、ハイパフォーマンス、低割り当て、順方向専用のリーダーです。`ReadOnlySpan<byte>` または `ReadOnlySequence<byte>` から読み取られます。 `Utf8JsonReader` は低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために使用できます。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドでは、内部で `Utf8JsonReader` が使用されます。 `Utf8JsonReader` は Visual Basic コードから直接使用することはできません。 詳細については、「[Visual Basic のサポート](system-text-json-how-to.md#visual-basic-support)」をご覧ください。
 
 <xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> は、`String`、`Int32`、`DateTime` のような一般的な .NET 型から UTF-8 でエンコードされた JSON テキストを書き込むための、ハイパフォーマンスな方法です。 ライターは低レベルの型であり、カスタム シリアライザーを構築するために使用できます。 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドでは、内部で `Utf8JsonWriter` が使用されます。
 
@@ -32,6 +35,7 @@ ms.locfileid: "96439804"
 次の例は、<xref:System.Text.Json.JsonDocument> クラスを使用して JSON 文字列内のデータにランダム アクセスする方法を示しています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/JsonDocumentDataAccess.cs" id="AverageGrades1":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/JsonDocumentDataAccess.vb" id="AverageGrades1":::
 
 上記のコードでは次の操作が行われます。
 
@@ -41,6 +45,7 @@ ms.locfileid: "96439804"
 * 反復するたびに `count` 変数をインクリメントして学生をカウントします。 別の方法として、次の例に示すように <xref:System.Text.Json.JsonElement.GetArrayLength%2A> を呼び出すこともできます。
 
   :::code language="csharp" source="snippets/system-text-json-how-to/csharp/JsonDocumentDataAccess.cs" id="AverageGrades2":::
+  :::code language="vb" source="snippets/system-text-json-how-to/vb/JsonDocumentDataAccess.vb" id="AverageGrades2":::
 
 このコードで処理される JSON の例を次に示します。
 
@@ -51,6 +56,7 @@ ms.locfileid: "96439804"
 次の例では、<xref:System.Text.Json.JsonDocument> から JSON を書き込む方法を示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/JsonDocumentWriteJson.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/JsonDocumentWriteJson.vb" id="Serialize":::
 
 上記のコードでは次の操作が行われます。
 
@@ -71,12 +77,14 @@ ms.locfileid: "96439804"
 <xref:System.Text.Json.Utf8JsonWriter> クラスを使用する方法を示す例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/Utf8WriterToStream.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/Utf8WriterToStream.vb" id="Serialize":::
 
 ## <a name="use-utf8jsonreader"></a>Utf8JsonReader を使用する
 
 <xref:System.Text.Json.Utf8JsonReader> クラスを使用する方法を示す例を次に示します。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/Utf8ReaderFromBytes.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/Utf8ReaderFromBytes.vb" id="Deserialize":::
 
 上記のコードでは、`jsonUtf8` 変数が、UTF-8 としてエンコードされた有効な JSON を含むバイト配列であることを想定しています。
 
@@ -85,6 +93,7 @@ ms.locfileid: "96439804"
 次の例は、同期的にファイルを読み取り、値を検索する方法を示しています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/Utf8ReaderFromFile.cs":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/Utf8ReaderFromFile.vb":::
 
 この例の非同期バージョンについては、[.NET サンプル JSON プロジェクト](https://github.com/dotnet/samples/blob/18e31a5f1abd4f347bf96bfdc3e40e2cfb36e319/core/json/Program.cs)に関するページを参照してください。
 
@@ -119,6 +128,7 @@ ms.locfileid: "96439804"
 このサンプル コードでは、4 KB のバッファーから開始し、サイズが完全な JSON トークンに対応するのに十分な大きさではないことが判明するたびにバッファー サイズを 2 倍にします。これは、リーダーが JSON ペイロードの処理を進めるために必要です。 スニペットに用意されている JSON サンプルでは、非常に小さい初期バッファー サイズ (たとえば、10 バイト) を設定した場合にのみ、バッファー サイズが増加します。 初期バッファー サイズを 10 に設定すると、`Console.WriteLine` ステートメントによって、バッファー サイズの増加の原因と影響が示されます。 4 KB の初期バッファー サイズで、サンプルの JSON 全体が各 `Console.WriteLine` によって表示され、バッファー サイズを増やす必要はありません。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/Utf8ReaderPartialRead.cs":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/Utf8ReaderPartialRead.vb":::
 
 前の例では、バッファーを拡大できる最大の大きさを無制限に設定しています。 トークン サイズが大きすぎる場合、コードは <xref:System.OutOfMemoryException> 例外で失敗する可能性があります。 これは、JSON にサイズが約 1 GB 以上のトークンが含まれている場合に発生する可能性があります。1 GB のサイズを 2 倍にすると、サイズが大きすぎて `int32` バッファーに入り切らないためです。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: PLINQ および TPL 用のカスタム パーティショナー'
 title: PLINQ および TPL 用のカスタム パーティショナー
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 2268df2eb5cae4dcd7adde491b42c86c546aa1fc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4971adfbd514d53dbe761566be021b7d280eab39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731488"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ および TPL 用のカスタム パーティショナー
 
@@ -43,13 +44,13 @@ TPL パーティショナーは、動的な数のパーティションもサポ�
 
 |オーバーロード|負荷分散を使用する|
 |--------------|-------------------------|
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Always (常に)|
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|常時|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|ブール型の引数を true と指定した場合|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|ブール型の引数を true と指定した場合|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Never|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Never|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Never|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Never|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|なし|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|なし|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|なし|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|なし|
 
 ### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Parallel.ForEach 用の静的範囲パーティショナーの構成
 
@@ -124,8 +125,8 @@ TPL パーティショナーは、動的な数のパーティションもサポ�
 
 - どのインデックスも負数以外である必要があります。 この規則に従わないと、PLINQ または TPL が例外をスローする場合があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [並列プログラミング](index.md)
-- [方法: 動的パーティションを実装する](how-to-implement-dynamic-partitions.md)
-- [方法: 静的パーティション分割用にパーティショナーを実装する](how-to-implement-a-partitioner-for-static-partitioning.md)
+- [方法:動的パーティションを実装する](how-to-implement-dynamic-partitions.md)
+- [方法:静的パーティション分割用にパーティショナーを実装する](how-to-implement-a-partitioner-for-static-partitioning.md)

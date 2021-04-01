@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DOM を読み込むときの空白および有意の空白の処理'
 title: DOM を読み込むときの空白および有意の空白の処理
 ms.date: 03/30/2017
 ms.assetid: 1b141a0a-50d8-4ebd-83cd-a84449bb22b2
-ms.openlocfilehash: 6282b47e8a63143e32df39db02e79e7b44d38275
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b863f5921bf3e9e3da9489d02a7bd09d25f38c7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782820"
 ---
 # <a name="white-space-and-significant-white-space-handling-when-loading-the-dom"></a>DOM を読み込むときの空白および有意の空白の処理
 

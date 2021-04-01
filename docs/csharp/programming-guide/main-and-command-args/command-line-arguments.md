@@ -1,87 +1,99 @@
 ---
 title: コマンド ライン引数 - C# プログラミング ガイド
 description: コマンド ライン引数について説明します。 コンソール アプリケーションでコマンド ライン引数を使用する例をご覧ください。
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381919"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190412"
 ---
-# <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="86d06-104">コマンド ライン引数 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="86d06-104">Command-Line Arguments (C# Programming Guide)</span></span>
+# <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="10d7b-104">コマンド ライン引数 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="10d7b-104">Command-Line Arguments (C# Programming Guide)</span></span>
 
-<span data-ttu-id="86d06-105">`Main` メソッドに引数を渡すには、次のいずれかの方法でメソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="86d06-105">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>
+<span data-ttu-id="10d7b-105">`Main` メソッドに引数を渡すには、次のいずれかの方法でメソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-105">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| <span data-ttu-id="10d7b-106">`Main` メソッド コード</span><span class="sxs-lookup"><span data-stu-id="10d7b-106">`Main` method code</span></span>                 | <span data-ttu-id="10d7b-107">`Main` シグネチャ</span><span class="sxs-lookup"><span data-stu-id="10d7b-107">`Main` signature</span></span>                             |
+|------------------------------------|----------------------------------------------|
+| <span data-ttu-id="10d7b-108">戻り値がなく、`await` を使用しない</span><span class="sxs-lookup"><span data-stu-id="10d7b-108">No return value, no use of `await`</span></span> | `static void Main(string[] args)`            |
+| <span data-ttu-id="10d7b-109">戻り値があり、`await` を使用しない</span><span class="sxs-lookup"><span data-stu-id="10d7b-109">Return value, no use of `await`</span></span>    | `static int Main(string[] args)`             |
+| <span data-ttu-id="10d7b-110">戻り値がなく、`await` を使用する</span><span class="sxs-lookup"><span data-stu-id="10d7b-110">No return value, uses `await`</span></span>      | `static async Task Main(string[] args)`      |
+| <span data-ttu-id="10d7b-111">戻り値があり、`await` を使用する</span><span class="sxs-lookup"><span data-stu-id="10d7b-111">Return value, uses `await`</span></span>         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+<span data-ttu-id="10d7b-112">引数が使用されない場合、メソッド シグネチャから `args` を省略し、少しばかり簡単なコードにすることができます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-112">If the arguments are not used, you can omit `args` from the method signature for slightly simpler code:</span></span>
+
+| <span data-ttu-id="10d7b-113">`Main` メソッド コード</span><span class="sxs-lookup"><span data-stu-id="10d7b-113">`Main` method code</span></span>                 | <span data-ttu-id="10d7b-114">`Main` シグネチャ</span><span class="sxs-lookup"><span data-stu-id="10d7b-114">`Main` signature</span></span>                |
+|------------------------------------|---------------------------------|
+| <span data-ttu-id="10d7b-115">戻り値がなく、`await` を使用しない</span><span class="sxs-lookup"><span data-stu-id="10d7b-115">No return value, no use of `await`</span></span> | `static void Main()`            |
+| <span data-ttu-id="10d7b-116">戻り値があり、`await` を使用しない</span><span class="sxs-lookup"><span data-stu-id="10d7b-116">Return value, no use of `await`</span></span>    | `static int Main()`             |
+| <span data-ttu-id="10d7b-117">戻り値がなく、`await` を使用する</span><span class="sxs-lookup"><span data-stu-id="10d7b-117">No return value, uses `await`</span></span>      | `static async Task Main()`      |
+| <span data-ttu-id="10d7b-118">戻り値があり、`await` を使用する</span><span class="sxs-lookup"><span data-stu-id="10d7b-118">Return value, uses `await`</span></span>         | `static async Task<int> Main()` |
 
 > [!NOTE]
-> <span data-ttu-id="86d06-106">Windows フォーム アプリケーションの `Main` メソッドでコマンド ライン引数を有効にするには、*program.cs* の `Main` のシグネチャを手動で変更する必要があります。</span><span class="sxs-lookup"><span data-stu-id="86d06-106">To enable command-line arguments in the `Main` method in a Windows Forms application, you must manually modify the signature of `Main` in *program.cs*.</span></span> <span data-ttu-id="86d06-107">Windows フォーム デザイナーが生成するコードは、入力パラメーターなしの `Main` を作成します。</span><span class="sxs-lookup"><span data-stu-id="86d06-107">The code generated by the Windows Forms designer creates a `Main` without an input parameter.</span></span> <span data-ttu-id="86d06-108"><xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> または <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> を使用して、コンソールまたは Windows アプリケーション内の任意の場所からコマンド ライン引数にアクセスすることもできます。</span><span class="sxs-lookup"><span data-stu-id="86d06-108">You can also use <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> to access the command-line arguments from any point in a console or Windows application.</span></span>
+> <span data-ttu-id="10d7b-119">Windows フォーム アプリケーションの `Main` メソッドでコマンド ライン引数を有効にするには、*program.cs* の `Main` のシグネチャを手動で変更する必要があります。</span><span class="sxs-lookup"><span data-stu-id="10d7b-119">To enable command-line arguments in the `Main` method in a Windows Forms application, you must manually modify the signature of `Main` in *program.cs*.</span></span> <span data-ttu-id="10d7b-120">Windows フォーム デザイナーが生成するコードは、入力パラメーターなしの `Main` を作成します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-120">The code generated by the Windows Forms designer creates a `Main` without an input parameter.</span></span> <span data-ttu-id="10d7b-121"><xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> または <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> を使用して、コンソールまたは Windows アプリケーション内の任意の場所からコマンド ライン引数にアクセスすることもできます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-121">You can also use <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> to access the command-line arguments from any point in a console or Windows application.</span></span>
 
-<span data-ttu-id="86d06-109">`Main` メソッドのパラメーターは <xref:System.String> の配列で、コマンド ライン引数を表しています。</span><span class="sxs-lookup"><span data-stu-id="86d06-109">The parameter of the `Main` method is a <xref:System.String> array that represents the command-line arguments.</span></span> <span data-ttu-id="86d06-110">通常は、`Length` プロパティを調べて引数があるかどうかを確認します。次はその例です。</span><span class="sxs-lookup"><span data-stu-id="86d06-110">Usually you determine whether arguments exist by testing the `Length` property, for example:</span></span>
+<span data-ttu-id="10d7b-122">`Main` メソッドのパラメーターは <xref:System.String> の配列で、コマンド ライン引数を表しています。</span><span class="sxs-lookup"><span data-stu-id="10d7b-122">The parameter of the `Main` method is a <xref:System.String> array that represents the command-line arguments.</span></span> <span data-ttu-id="10d7b-123">通常は、`Length` プロパティを調べて引数があるかどうかを確認します。次はその例です。</span><span class="sxs-lookup"><span data-stu-id="10d7b-123">Usually you determine whether arguments exist by testing the `Length` property, for example:</span></span>
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
 
 > [!TIP]
-> <span data-ttu-id="86d06-111">`args` 配列を null にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="86d06-111">The `args` array cannot be null.</span></span> <span data-ttu-id="86d06-112">そのため、null チェックを行わずに `Length` プロパティに安全にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="86d06-112">So, it's safe to access the `Length` property without null checking.</span></span>
+> <span data-ttu-id="10d7b-124">`args` 配列を null にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="10d7b-124">The `args` array cannot be null.</span></span> <span data-ttu-id="10d7b-125">そのため、null チェックを行わずに `Length` プロパティに安全にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-125">So, it's safe to access the `Length` property without null checking.</span></span>
 
-<span data-ttu-id="86d06-113">また、<xref:System.Convert> クラスまたは `Parse` メソッドを使って、文字列型の引数を数値型に変換できます。</span><span class="sxs-lookup"><span data-stu-id="86d06-113">You can also convert the string arguments to numeric types by using the <xref:System.Convert> class or the `Parse` method.</span></span> <span data-ttu-id="86d06-114">たとえば、次のステートメントでは、`string` メソッドを使用して `long` を <xref:System.Int64.Parse%2A> 値に変換します。</span><span class="sxs-lookup"><span data-stu-id="86d06-114">For example, the following statement converts the `string` to a `long` number by using the <xref:System.Int64.Parse%2A> method:</span></span>
+<span data-ttu-id="10d7b-126">また、<xref:System.Convert> クラスまたは `Parse` メソッドを使って、文字列型の引数を数値型に変換できます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-126">You can also convert the string arguments to numeric types by using the <xref:System.Convert> class or the `Parse` method.</span></span> <span data-ttu-id="10d7b-127">たとえば、次のステートメントでは、`string` メソッドを使用して `long` を <xref:System.Int64.Parse%2A> 値に変換します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-127">For example, the following statement converts the `string` to a `long` number by using the <xref:System.Int64.Parse%2A> method:</span></span>
 
 ```csharp
 long num = Int64.Parse(args[0]);
 ```
 
-<span data-ttu-id="86d06-115">C# の `long` 型を使うこともできます。これは `Int64` のエイリアスです。</span><span class="sxs-lookup"><span data-stu-id="86d06-115">It is also possible to use the C# type `long`, which aliases `Int64`:</span></span>
+<span data-ttu-id="10d7b-128">C# の `long` 型を使うこともできます。これは `Int64` のエイリアスです。</span><span class="sxs-lookup"><span data-stu-id="10d7b-128">It is also possible to use the C# type `long`, which aliases `Int64`:</span></span>
 
 ```csharp
 long num = long.Parse(args[0]);
 ```
 
-<span data-ttu-id="86d06-116">また、同じ変換に `Convert` クラスの `ToInt64` メソッドを使うこともできます。</span><span class="sxs-lookup"><span data-stu-id="86d06-116">You can also use the `Convert` class method `ToInt64` to do the same thing:</span></span>
+<span data-ttu-id="10d7b-129">また、同じ変換に `Convert` クラスの `ToInt64` メソッドを使うこともできます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-129">You can also use the `Convert` class method `ToInt64` to do the same thing:</span></span>
 
 ```csharp
 long num = Convert.ToInt64(s);
 ```
 
-<span data-ttu-id="86d06-117">詳細については、次のトピックを参照してください。 <xref:System.Int64.Parse%2A> および <xref:System.Convert></span><span class="sxs-lookup"><span data-stu-id="86d06-117">For more information, see <xref:System.Int64.Parse%2A> and <xref:System.Convert>.</span></span>
+<span data-ttu-id="10d7b-130">詳細については、次のトピックを参照してください。 <xref:System.Int64.Parse%2A> および <xref:System.Convert></span><span class="sxs-lookup"><span data-stu-id="10d7b-130">For more information, see <xref:System.Int64.Parse%2A> and <xref:System.Convert>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="86d06-118">例</span><span class="sxs-lookup"><span data-stu-id="86d06-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="10d7b-131">例</span><span class="sxs-lookup"><span data-stu-id="10d7b-131">Example</span></span>
 
-<span data-ttu-id="86d06-119">コンソール アプリケーションでコマンド ライン引数を使用する方法の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="86d06-119">The following example shows how to use command-line arguments in a console application.</span></span> <span data-ttu-id="86d06-120">アプリケーションは、実行時に引数を 1 つ受け取り、整数に変換し、その値の階乗を計算しています。</span><span class="sxs-lookup"><span data-stu-id="86d06-120">The application takes one argument at run time, converts the argument to an integer, and calculates the factorial of the number.</span></span> <span data-ttu-id="86d06-121">引数がない場合は、アプリケーションの正しい使用方法を説明するメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="86d06-121">If no arguments are supplied, the application issues a message that explains the correct usage of the program.</span></span>
+<span data-ttu-id="10d7b-132">コンソール アプリケーションでコマンド ライン引数を使用する方法の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-132">The following example shows how to use command-line arguments in a console application.</span></span> <span data-ttu-id="10d7b-133">アプリケーションは、実行時に引数を 1 つ受け取り、整数に変換し、その値の階乗を計算しています。</span><span class="sxs-lookup"><span data-stu-id="10d7b-133">The application takes one argument at run time, converts the argument to an integer, and calculates the factorial of the number.</span></span> <span data-ttu-id="10d7b-134">引数がない場合は、アプリケーションの正しい使用方法を説明するメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-134">If no arguments are supplied, the application issues a message that explains the correct usage of the program.</span></span>
 
-<span data-ttu-id="86d06-122">コマンド プロンプトからアプリケーションをコンパイルして実行するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="86d06-122">To compile and run the application from a command prompt, follow these steps:</span></span>
+<span data-ttu-id="10d7b-135">コマンド プロンプトからアプリケーションをコンパイルして実行するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-135">To compile and run the application from a command prompt, follow these steps:</span></span>
 
-1. <span data-ttu-id="86d06-123">次のコードをテキスト エディターに貼り付け、*Factorial.cs* という名前でテキスト ファイルとして保存します。</span><span class="sxs-lookup"><span data-stu-id="86d06-123">Paste the following code into any text editor, and then save the file as  a text file with the name *Factorial.cs*.</span></span>
+1. <span data-ttu-id="10d7b-136">次のコードをテキスト エディターに貼り付け、*Factorial.cs* という名前でテキスト ファイルとして保存します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-136">Paste the following code into any text editor, and then save the file as  a text file with the name *Factorial.cs*.</span></span>
 
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]
 
-2. <span data-ttu-id="86d06-124">**[スタート]** 画面または **[スタート]** メニューから、Visual Studio の **[開発者コマンド プロンプト]** ウィンドウを開き、先ほど作成したファイルが含まれているフォルダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="86d06-124">From the **Start** screen or **Start** menu, open a Visual Studio **Developer Command Prompt** window, and then navigate to the folder that contains the file that you just created.</span></span>
+2. <span data-ttu-id="10d7b-137">**[スタート]** 画面または **[スタート]** メニューから、Visual Studio の **[開発者コマンド プロンプト]** ウィンドウを開き、先ほど作成したファイルが含まれているフォルダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-137">From the **Start** screen or **Start** menu, open a Visual Studio **Developer Command Prompt** window, and then navigate to the folder that contains the file that you just created.</span></span>
 
-3. <span data-ttu-id="86d06-125">次のコマンドを入力してアプリケーションをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="86d06-125">Enter the following command to compile the application.</span></span>
+3. <span data-ttu-id="10d7b-138">次のコマンドを入力してアプリケーションをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="10d7b-138">Enter the following command to compile the application.</span></span>
   
      `csc Factorial.cs`  
   
-     <span data-ttu-id="86d06-126">アプリケーションにコンパイル エラーがなければ、*Factorial.exe* という名前の実行可能ファイルが作成されます。</span><span class="sxs-lookup"><span data-stu-id="86d06-126">If your application has no compilation errors, an executable file that's named *Factorial.exe* is created.</span></span>
+     <span data-ttu-id="10d7b-139">アプリケーションにコンパイル エラーがなければ、*Factorial.exe* という名前の実行可能ファイルが作成されます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-139">If your application has no compilation errors, an executable file that's named *Factorial.exe* is created.</span></span>
   
-4. <span data-ttu-id="86d06-127">3 の階乗を計算する次のコマンドを入力します。</span><span class="sxs-lookup"><span data-stu-id="86d06-127">Enter the following command to calculate the factorial of 3:</span></span>
+4. <span data-ttu-id="10d7b-140">3 の階乗を計算する次のコマンドを入力します。</span><span class="sxs-lookup"><span data-stu-id="10d7b-140">Enter the following command to calculate the factorial of 3:</span></span>
   
      `Factorial 3`  
   
-5. <span data-ttu-id="86d06-128">次の出力が生成されます: `The factorial of 3 is 6.`</span><span class="sxs-lookup"><span data-stu-id="86d06-128">The command produces this output: `The factorial of 3 is 6.`</span></span>
+5. <span data-ttu-id="10d7b-141">次の出力が生成されます: `The factorial of 3 is 6.`</span><span class="sxs-lookup"><span data-stu-id="10d7b-141">The command produces this output: `The factorial of 3 is 6.`</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="86d06-129">Visual Studio でアプリケーションを実行する場合、「[[デバッグ] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/debug-page-project-designer)」のコマンド ライン引数を指定できます。</span><span class="sxs-lookup"><span data-stu-id="86d06-129">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>
+> <span data-ttu-id="10d7b-142">Visual Studio でアプリケーションを実行する場合、「[[デバッグ] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/debug-page-project-designer)」のコマンド ライン引数を指定できます。</span><span class="sxs-lookup"><span data-stu-id="10d7b-142">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="86d06-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="86d06-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10d7b-143">関連項目</span><span class="sxs-lookup"><span data-stu-id="10d7b-143">See also</span></span>
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [<span data-ttu-id="86d06-131">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="86d06-131">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="86d06-132">Main() とコマンドライン引数</span><span class="sxs-lookup"><span data-stu-id="86d06-132">Main() and Command-Line Arguments</span></span>](index.md)
-- [<span data-ttu-id="86d06-133">コマンド ライン引数を表示する方法</span><span class="sxs-lookup"><span data-stu-id="86d06-133">How to display command line arguments</span></span>](how-to-display-command-line-arguments.md)
-- [<span data-ttu-id="86d06-134">Main() の戻り値</span><span class="sxs-lookup"><span data-stu-id="86d06-134">Main() Return Values</span></span>](main-return-values.md)
-- [<span data-ttu-id="86d06-135">クラス</span><span class="sxs-lookup"><span data-stu-id="86d06-135">Classes</span></span>](../classes-and-structs/classes.md)
+- [<span data-ttu-id="10d7b-144">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="10d7b-144">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="10d7b-145">Main() とコマンドライン引数</span><span class="sxs-lookup"><span data-stu-id="10d7b-145">Main() and Command-Line Arguments</span></span>](index.md)
+- [<span data-ttu-id="10d7b-146">コマンド ライン引数を表示する方法</span><span class="sxs-lookup"><span data-stu-id="10d7b-146">How to display command line arguments</span></span>](how-to-display-command-line-arguments.md)
+- [<span data-ttu-id="10d7b-147">Main() の戻り値</span><span class="sxs-lookup"><span data-stu-id="10d7b-147">Main() Return Values</span></span>](main-return-values.md)
+- [<span data-ttu-id="10d7b-148">クラス</span><span class="sxs-lookup"><span data-stu-id="10d7b-148">Classes</span></span>](../classes-and-structs/classes.md)

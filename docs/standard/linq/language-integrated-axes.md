@@ -1,0 +1,26 @@
+---
+title: Visual Basic の統合言語軸 - LINQ to XML
+description: LINQ to XML では、Visual Basic に統合されている軸を利用し、XML に簡単にアクセスできます
+ms.date: 07/20/2015
+ms.assetid: d450a556-a134-4261-b011-44e399660894
+ms.openlocfilehash: 75c3063806e7e3dc1633e78ca25f1f6afc3e7ae3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "103365999"
+---
+# <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a><span data-ttu-id="5631c-103">Visual Basic の統合言語軸 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5631c-103">Language-integrated axes in Visual Basic (LINQ to XML)</span></span>
+
+<span data-ttu-id="5631c-104">軸の機能が Visual Basic に統合され、XML に簡単にアクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="5631c-104">Axis features are integrated into Visual Basic, making it easy to access XML.</span></span> <span data-ttu-id="5631c-105">LINQ to XML ドキュメントに含まれる多くの例では、これらの機能が使用されます。それらについては、この表にある記事で説明されています。</span><span class="sxs-lookup"><span data-stu-id="5631c-105">Many of the examples in the LINQ to XML documentation use these features, which are described in the articles listed in this table:</span></span>
+
+|<span data-ttu-id="5631c-106">[アーティクル]</span><span class="sxs-lookup"><span data-stu-id="5631c-106">Article</span></span>|<span data-ttu-id="5631c-107">説明</span><span class="sxs-lookup"><span data-stu-id="5631c-107">Description</span></span>|
+|-----------|-----------------|
+|[<span data-ttu-id="5631c-108">XML 子軸プロパティ</span><span class="sxs-lookup"><span data-stu-id="5631c-108">XML Child Axis Property</span></span>](../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|<span data-ttu-id="5631c-109"><xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションのいずれかの子にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="5631c-109">Provides access to the children of one of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="5631c-110">この軸は <xref:System.Xml.Linq.XContainer.Elements%2A> 軸に相当します。</span><span class="sxs-lookup"><span data-stu-id="5631c-110">This axis is equivalent to the <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>|
+|[<span data-ttu-id="5631c-111">XML 子孫軸プロパティ</span><span class="sxs-lookup"><span data-stu-id="5631c-111">XML Descendant Axis Property</span></span>](../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|<span data-ttu-id="5631c-112"><xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、または <xref:System.Xml.Linq.XElement> オブジェクトのコレクションの子孫にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="5631c-112">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, or a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="5631c-113">この軸は <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸に相当します。</span><span class="sxs-lookup"><span data-stu-id="5631c-113">This axis is equivalent to the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>|
+|[<span data-ttu-id="5631c-114">XML 属性軸プロパティ</span><span class="sxs-lookup"><span data-stu-id="5631c-114">XML Attribute Axis Property</span></span>](../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|<span data-ttu-id="5631c-115"><xref:System.Xml.Linq.XElement> オブジェクトの属性にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="5631c-115">Provides access to an attribute of an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="5631c-116">この軸は <xref:System.Xml.Linq.XElement.Attribute%2A> 軸にほぼ相当します。</span><span class="sxs-lookup"><span data-stu-id="5631c-116">This axis is roughly equivalent to the <xref:System.Xml.Linq.XElement.Attribute%2A> axis.</span></span> <span data-ttu-id="5631c-117">この軸は、<xref:System.Xml.Linq.XElement.Attribute%2A> オブジェクトではなく属性の値を返すという点で、<xref:System.Xml.Linq.XAttribute> 軸とは異なります。</span><span class="sxs-lookup"><span data-stu-id="5631c-117">This axis differs from the <xref:System.Xml.Linq.XElement.Attribute%2A> axis in that it returns the value of the attribute, not an <xref:System.Xml.Linq.XAttribute> object.</span></span>|
+|[<span data-ttu-id="5631c-118">拡張インデクサー プロパティ</span><span class="sxs-lookup"><span data-stu-id="5631c-118">Extension Indexer Property</span></span>](../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|<span data-ttu-id="5631c-119">コレクション内の個々の要素にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="5631c-119">Provides access to individual elements in a collection.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="5631c-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="5631c-120">See also</span></span>
+
+- [<span data-ttu-id="5631c-121">LINQ to XML 軸の概要</span><span class="sxs-lookup"><span data-stu-id="5631c-121">LINQ to XML axes overview</span></span>](linq-xml-axes-overview.md)

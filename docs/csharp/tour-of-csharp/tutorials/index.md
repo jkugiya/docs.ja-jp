@@ -3,12 +3,12 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 3a215a3a9bb860601d906f6bdb9d7d1e8fec7e46
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872419"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079467"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
@@ -23,14 +23,14 @@ C# の概要に関するチュートリアルへようこそ。 これらのレ�
 
 - [ブラウザーの docs プラットフォームの場合](hello-world.yml): このエクスペリエンスでは、docs ページに実行可能な C# コードのウィンドウが埋め込まれます。 ブラウザーで C# コードを記述し、実行します。
 - [Microsoft Learn エクスペリエンス](/learn/paths/csharp-first-steps/)。 このラーニングパスには、C# の基本を学習するいくつかのモジュールが含まれています。
-- [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb)。 Binder の Jupyter Notebook で C# コードを試すことができます。
+- [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/main?filepath=hello-csharp%2Fhello-world.ipynb)。 Binder の Jupyter Notebook で C# コードを試すことができます。
 - [ローカル コンピューター](numbers-in-csharp-local.md)。 .NET Core SDK をオンラインで探索した後、お使いのマシンに[ダウンロード](https://dotnet.microsoft.com/download)して、プログラムをビルドすることができます。
 
 Hello World レッスンに続くすべての入門用チュートリアルは、オンライン ブラウザー エクスペリエンスを使用するか[独自のローカル開発環境](local-environment.md)で使用できます。 各チュートリアルの最後に、次のレッスンをオンラインまたは自分のコンピューターのどちらで続行するかを決定します。 環境を設定し、ご利用のコンピューターで次のチュートリアルを続行するためのリンクがあります。
 
 ## <a name="hello-world"></a>[Hello World](hello-world.yml)
 
-「[Hello World](hello-world.yml)」チュートリアルでは、最も基本的な C# プログラムを作成します。 `string` 型とテキストの操作方法について学習します。 [Microsoft Learn](/learn/paths/csharp-first-steps/) または [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) でもパスを使用することができます。
+「[Hello World](hello-world.yml)」チュートリアルでは、最も基本的な C# プログラムを作成します。 `string` 型とテキストの操作方法について学習します。 [Microsoft Learn](/learn/paths/csharp-first-steps/) または [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/main?filepath=hello-csharp%2Fhello-world.ipynb) でもパスを使用することができます。
 
 ## <a name="numbers-in-c"></a>[C# における数値](numbers-in-csharp.yml)
 

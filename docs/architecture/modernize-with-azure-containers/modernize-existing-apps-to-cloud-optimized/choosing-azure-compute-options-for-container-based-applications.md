@@ -2,12 +2,12 @@
 title: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 description: Azure Cloud および Windows コンテナーで既存の .NET アプリケーションを最新化する |コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 ms.date: 02/18/2020
-ms.openlocfilehash: 9246b8dfb4e1d68fbd965d25e2e9d3272563798c
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: fcb9a0e7277f5ce31309f52aff63d579b0bb9a02
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257994"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079610"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 
@@ -38,6 +38,12 @@ ms.locfileid: "102257994"
 
 ![推奨アイコン](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) 推奨 \
 ![可能アイコン](media/choosing-azure-compute-options-for-container-based-applications/possible.png) 可能
+
+### <a name="additional-resources"></a>その他のリソース
+
+- **アプリケーションの Azure コンピューティング サービスを選択する**
+
+    <https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree>
 
 > [!div class="step-by-step"]
 > [前へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

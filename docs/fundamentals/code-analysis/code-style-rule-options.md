@@ -1,28 +1,28 @@
 ---
-title: .NET コードスタイル規則のオプション
-description: .NET のコードスタイルオプションを指定する方法について説明します。
+title: .NET コード スタイル ルール オプション
+description: .NET コード スタイルのオプションを指定する方法について説明します。
 ms.date: 09/25/2020
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 5e4d80ec55f7fbcd01e364bb2b9e2b4f49f820d5
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
-ms.translationtype: MT
+ms.openlocfilehash: dce31e7b8976caecfc7fb1dd50da7f246093b1e4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "96593796"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876683"
 ---
-# <a name="code-style-rule-options"></a>コードスタイルルールのオプション
+# <a name="code-style-rule-options"></a>コード スタイル ルール オプション
 
-コードベースで一貫性のある *コードスタイル* を定義および維持するには、 [editorconfig](/visualstudio/ide/create-portable-custom-editor-options) ファイルで .net コードスタイルルールオプションを定義します。 これらの規則は、コードを編集するときに、Visual Studio などのさまざまな開発 Ide によって表示されます。 .NET プロジェクトの場合は、 [ビルド時に](overview.md#code-style-analysis)これらの規則を適用することもできます。 個々のルールを有効または無効にしたり、各ルールを適用するレベルを重要度レベルで構成したりすることができます。
+.NET コード スタイル ルール オプションを [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) ファイルで定義することにより、一貫性のある "*コード スタイル*" を定義してコードベースで維持することができます。 これらのルールは、コードを編集するときに、Visual Studio などのさまざまな開発 IDE によって表示されます。 .NET プロジェクトの場合は、これらのルールを[ビルド時に適用](overview.md#code-style-analysis)することもできます。 個々のルールを有効または無効にしたり、各ルールを適用するレベルを重大度レベルで構成したりすることができます。
 
 > [!TIP]
 >
-> - EditorConfig ファイルでコードスタイルオプションを定義するときは、コード [スタイルアナライザー](overview.md#code-style-analysis) でコードを分析する方法を構成します。 EditorConfig ファイルは、これらのアナライザーに対する構成ファイルです。
+> - EditorConfig ファイルでコード スタイル オプションを定義すると、[コード スタイル アナライザー](overview.md#code-style-analysis)によるコードの分析方法も構成されます。 EditorConfig ファイルは、これらのアナライザーに対する構成ファイルです。
 >
-> - コードスタイルのオプションは、Visual Studio の [ [テキストエディターのオプション](/visualstudio/ide/code-styles-and-code-cleanup) ] ダイアログで設定することもできます。 これらは、Visual Studio での編集中にのみ適用されるユーザーごとのオプションです。 これらのオプションは、ビルド時または他の Ide によって尊重されることはありません。 さらに、Visual Studio 内で開かれたプロジェクトまたはソリューションに EditorConfig ファイルがある場合は、EditorConfig ファイルのオプションが優先されます。
+> - コード スタイル オプションは、Visual Studio の[テキスト エディターの [オプション]](/visualstudio/ide/code-styles-and-code-cleanup) ダイアログで設定することもできます。 これらは、Visual Studio での編集時にのみ遵守されるユーザーごとのオプションです。 これらのオプションは、ビルド時や他の IDE によって遵守されることはありません。 また、Visual Studio 内で開かれたプロジェクトまたはソリューションに EditorConfig ファイルがある場合は、EditorConfig ファイルのオプションが優先されます。
 
-コードスタイルの規則は、次のサブカテゴリに分類されます。
+コード スタイル ルールは、次のサブカテゴリに分類されます。
 
 - [言語規則](style-rules/language-rules.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "96593796"
 
 - [名前付け規則](style-rules/naming-rules.md)
 
-これらの各サブカテゴリでは、オプションを指定するための独自の構文が定義されています。 これらの規則および対応するオプションの詳細については、「 [コードスタイル規則のリファレンス](style-rules/index.md)」を参照してください。
+これらのサブカテゴリごとに、オプションを指定するための独自の構文が定義されています。 これらのルールおよび対応するオプションの詳細については、[コード スタイル ルールのリファレンス](style-rules/index.md)を参照してください。
 
 ## <a name="example-editorconfig-file"></a>EditorConfig ファイルの例
 
@@ -253,9 +253,9 @@ dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
 ## <a name="see-also"></a>関連項目
 
-- [コードスタイル分析規則のリファレンス](style-rules/index.md)
-- [ビルドにコードスタイルを適用する](overview.md#code-style-analysis)
+- [コード スタイルの分析ルールのリファレンス](style-rules/index.md)
+- [ビルド時にコード スタイルを適用する](overview.md#code-style-analysis)
 - [Visual Studio のクイック アクション](/visualstudio/ide/quick-actions)
-- [Visual Studio でポータブルカスタムエディターオプションを作成する](/visualstudio/ide/create-portable-custom-editor-options)
-- [.NET Compiler Platform "Roslyn" .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
-- [.NET Compiler Platform ランタイム .editorconfig ファイル](https://github.com/dotnet/runtime/blob/master/.editorconfig)
+- [Visual Studio で移植可能なカスタム エディター オプションを作成する](/visualstudio/ide/create-portable-custom-editor-options)
+- [.NET Compiler Platform "Roslyn" .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
+- [.NET ランタイムの .editorconfig ファイル](https://github.com/dotnet/runtime/blob/main/.editorconfig)

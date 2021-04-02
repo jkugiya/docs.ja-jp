@@ -3,12 +3,12 @@ title: .NET API アナライザー
 description: 非推奨の API およびプラットフォームの互換性の問題を検出するのに .NET API アナライザーがどのように役立つかについて説明します。
 author: oliag
 ms.date: 02/20/2020
-ms.openlocfilehash: 47ef2368692aee56ebd3db7803cbde7368d38049
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9eef1908fd6be90d31e6e26cbab65e55a26ce228
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819605"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636910"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -68,7 +68,7 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 ### <a name="suppress-warnings-locally"></a>警告をローカルに抑制する
 
-警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[*診断 ID*\<diagnostic ID> の非表示]**  >  **[ソース内]** の順に選択します。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。![#pragma warning disable が枠で囲まれたコードのスクリーンショット。](media/api-analyzer/suppress-in-source.jpg)
+警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[*診断 ID*\<diagnostic ID> の非表示]**  >  **[ソース内]** の順に選択します。 [#pragma](../../csharp/language-reference/preprocessor-directives.md#pragma-warning) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。![#pragma warning disable が枠で囲まれたコードのスクリーンショット。](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>警告をグローバルに抑制する
 

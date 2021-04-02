@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ff7afb5e3b505ebe2326343063a7884dc4f567b1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 85fb426fdc2d7961603a3ddcc882f9fdce0c70a2
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99769105"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079623"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 
@@ -67,7 +67,7 @@ Next [ element ]
 
 次の例では、`For Each`...`Next` ステートメントは、リスト コレクションのすべての要素を反復処理します。
 
-[!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="init":::
 
 その他の例については、[コレクション](../../../standard/collections/index.md)および[配列](../../programming-guide/language-features/arrays/index.md)に関するページを参照してください。
 
@@ -77,7 +77,7 @@ Next [ element ]
 
 次の例は、入れ子になった `For Each`...`Next` 構造を示しています。
 
-[!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="nested":::
 
 ループを入れ子にする場合、各ループには一意の `element` 変数が必要です。
 
@@ -91,7 +91,7 @@ Next [ element ]
 
 `Continue For` および `Exit For` ステートメントを使用する方法の例を次に示します。
 
-[!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="exitcontinue":::
 
 `For Each` ループには、任意の数の `Exit For` ステートメントを配置できます。 入れ子になった `For Each` ループ内で使用すると、`Exit For` は、実行により最も内側のループを終了し、次に高いレベルの入れ子に制御を移します。
 
@@ -111,7 +111,7 @@ Next [ element ]
 
 次の例は、iterator 関数を使用します。 iterator 関数には、[For…Next](for-next-statement.md) ループ内に `Yield` ステートメントがあります。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本文の各反復で iterator 関数が呼び出され、これが次の `Yield` ステートメントに続行されます。
 
-[!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="iterator":::
 
 詳細については、「[反復子](../../programming-guide/concepts/iterators.md)」、「[Yield ステートメント](yield-statement.md)」、および「[Iterator](../modifiers/iterator.md)」を参照してください。
 
@@ -141,7 +141,7 @@ Next [ element ]
 
 次の例では、`n` の初期値としての `m` の割り当ては、`Option Strict` がオンのときにはコンパイルされません。これは、`Long` から `Integer` への変換が縮小変換であるためです。 ただし、`For Each` ステートメントでは、`number` への割り当てに `Long` から `Integer` への変換が必要な場合でも、コンパイラ エラーは報告されません。 多数の数値が含まれている `For Each` ステートメントでは、<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> が大きい数値に適用されると実行時エラーが発生します。
 
-[!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Program.vb":::
 
 ### <a name="ienumerator-calls"></a>IEnumerator 呼び出し
 
@@ -171,7 +171,7 @@ End Sub
 
 次の例では、<xref:System.IO.DirectoryInfo> クラスを使用して、C:\ ディレクトリにあるすべてのフォルダーを一覧表示します。
 
-[!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="foreachdir":::
 
 ## <a name="example"></a>例
 
@@ -181,7 +181,7 @@ End Sub
 
 `ListCars` のメソッドでは、`cars.Sort()` ステートメントがリストを並べ替えます。 <xref:System.Collections.Generic.List%601.Sort%2A> の <xref:System.Collections.Generic.List%601> メソッドへの呼び出しによって、`CompareTo` メソッドは `Car` 内の `List` オブジェクトに自動的に呼び出されます。
 
-[!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="sort":::
 
 ## <a name="see-also"></a>関連項目
 

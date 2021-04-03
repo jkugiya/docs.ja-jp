@@ -2,12 +2,12 @@
 title: '破壊的変更: WinForms と WPF アプリで Microsoft.NET.Sdk が使用される'
 description: .NET 5 での破壊的変更について学習します。この変更により、Windows フォーム アプリと Windows Presentation Framework (WPF) アプリでは、.NET Core WinForms と WPF SDK ではなく、.NET SDK が使用されるようになりました。
 ms.date: 09/18/2020
-ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ebd4f51d5436cec2f0463558e99a85cb261ae682
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256206"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079493"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms と WPF アプリで Microsoft.NET.Sdk が使用される
 
@@ -58,7 +58,7 @@ Windows フォームと Windows Presentation Framework (WPF) アプリで、.NET
 
 ## <a name="affected-apis"></a>影響を受ける API
 
-API 分析では検出できません。
+なし。
 
 <!--
 

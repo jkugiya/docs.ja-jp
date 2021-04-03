@@ -1,24 +1,24 @@
 ---
-title: 定義済みの構成ファイル (コード分析)
-description: 定義済みの editorconfig ファイルとルールセットファイルを使用して、特定の種類のコード分析を対象にする方法について説明します。
+title: 定義済み構成ファイル (コード分析)
+description: 定義済み editorconfig ファイルとルール セット ファイルを使用して、特定の種類のコード分析をターゲットとする方法について説明します。
 ms.date: 09/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 4937dcab1183fa3f63be4afc71627a7c7c08c6bd
-ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
-ms.translationtype: MT
+ms.openlocfilehash: 748ab8a9ddfcfcadeb33da877769cedac901655a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "96591664"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876592"
 ---
-# <a name="predefined-configuration-files"></a>定義済みの構成ファイル
+# <a name="predefined-configuration-files"></a>定義済み構成ファイル
 
-定義済みの EditorConfig ファイルと [ルールセット](/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules) ファイルを使用して、セキュリティや設計ルールなどのコード品質ルールのカテゴリをすばやく簡単に有効にすることができます。 特定のカテゴリのルールを有効にすることで、対象となる問題と特定の条件を特定できます。 これらの定義済みのファイルにアクセスするには、 [Microsoft CodeAnalysis. netanalyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) NuGet アナライザーパッケージをインストールします。
+定義済み EditorConfig ファイルと[ルール セット](/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules) ファイルを利用して、セキュリティ ルールやデザイン ルールなどのコード品質ルールのカテゴリをすばやく簡単に有効にできます。 特定のカテゴリのルールを有効にすることにより、ターゲットとなる問題や特定の条件を識別できます。 これらの定義済みファイルにアクセスするには、[Microsoft.CodeAnalysis.NetAnalyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) NuGet アナライザー パッケージをインストールします。
 
-[Microsoft CodeAnalysis. netanalyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) には、次のルールカテゴリの定義済みの editorconfig ファイルとルールセットが含まれています。
+[Microsoft.CodeAnalysis.NetAnalyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) には、定義済み EditorConfig ファイルと、次のルール カテゴリのルール セットが含まれています。
 
 - すべてのルール
 - データフロー
-- 設計
+- デザイン
 - ドキュメント
 - グローバリゼーション
 - 相互運用性
@@ -27,28 +27,28 @@ ms.locfileid: "96591664"
 - パフォーマンス
 - FxCop からの移植
 - [信頼性]
-- セキュリティ
-- 使用
+- Security
+- 使用法
 
-これらの規則の各カテゴリには、次のように EditorConfig ファイルまたは規則セットファイルがあります。
+これらのルールの各カテゴリには、次のための EditorConfig ファイルまたはルール セット ファイルがあります。
 
-- カテゴリ内のすべてのルールを有効にします (他のすべてのルールを無効にします)。
-- 各ルールの既定の重要度を使用し、既定の設定で有効にします (他のすべてのルールを無効にします)。
+- カテゴリ内のすべてのルールを有効にする (および他のすべてのルールを無効にする)
+- 各ルールの既定の重要度、および既定の設定で有効になっているものを使用する (および他のすべてのルールを無効にする)
 
 > [!TIP]
-> [すべてのルール] カテゴリには、すべてのルールを無効にするための追加の EditorConfig ファイルまたはルールセットファイルがあります。 このファイルを使用すると、プロジェクト内のアナライザーの警告またはエラーがすぐに除去されます。
+> "すべてのルール" カテゴリには、すべてのルールを無効にするための追加の EditorConfig ファイルまたはルール セット ファイルがあります。 このファイルを使用すると、プロジェクト内のアナライザーの警告やエラーすべてをすぐに除去できます。
 
-## <a name="predefined-editorconfig-files"></a>定義済みの EditorConfig ファイル
+## <a name="predefined-editorconfig-files"></a>定義済み EditorConfig ファイル
 
-Microsoft. CodeAnalysis. NetAnalyzers アナライザーパッケージの定義済み EditorConfig ファイルは、NuGet パッケージがインストールされているの *EditorConfig* サブディレクトリにあります。 たとえば、すべてのセキュリティ規則を有効にする EditorConfig ファイルは、 *editorconfig/Securityrules enabled/editorconfig* にあります。
+Microsoft.CodeAnalysis.NetAnalyzers アナライザー パッケージ用の定義済み EditorConfig ファイルは、NuGet パッケージがインストールされた場所の *editorconfig* サブディレクトリにあります。 たとえば、すべてのセキュリティ ルールを有効にする EditorConfig ファイルは、*editorconfig/SecurityRulesEnabled/.editorconfig* にあります。
 
-選択した *editorconfig* ファイルをプロジェクトのルートディレクトリにコピーします。
+選択した *.editorconfig* ファイルを、プロジェクトのルート ディレクトリにコピーします。
 
 ## <a name="predefined-rule-sets"></a>定義済みの規則セット
 
-Microsoft CodeAnalysis. NetAnalyzers アナライザーパッケージの定義済みの規則セットファイルは、NuGet パッケージがインストールされている *のルールセットサブディレクトリ* にあります。 たとえば、すべてのセキュリティ規則を有効にする規則セットファイルは、ルールセット */securityrules enabled にあります。* 1つまたは複数の規則セットをコピーし、プロジェクトが格納されているディレクトリに貼り付けます。
+Microsoft.CodeAnalysis.NetAnalyzers アナライザー パッケージ用の定義済みルール セット ファイルは、NuGet パッケージがインストールされた場所の *rulesets* サブディレクトリにあります。 たとえば、すべてのセキュリティ ルールを有効にするルール セット ファイルは、*rulesets/SecurityRulesEnabled.ruleset* にあります。 このルール セットの中の 1 つまたは複数をコピーし、プロジェクトが格納されているディレクトリに貼り付けます。
 
 ## <a name="see-also"></a>関連項目
 
-- [アナライザーの構成](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)
-- [EditorConfig の .NET コードスタイル規則オプション](code-style-rule-options.md)
+- [アナライザーの構成](https://github.com/dotnet/roslyn-analyzers/blob/main/docs/Analyzer%20Configuration.md)
+- [EditorConfig 用 .NET コード スタイル ルール オプション](code-style-rule-options.md)

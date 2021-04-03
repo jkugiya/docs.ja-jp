@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 1821cb7daf70a642e3fb35cebae144b097ba115c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 0be0d094739893dc74e1b5c85e686594c766cbcb
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876696"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027873"
 ---
 # <a name="code-quality-rule-configuration-options"></a>コード品質ルールの構成オプション
 
@@ -107,7 +107,7 @@ ms.locfileid: "104876696"
 
 | 説明 | 使用できる値 | 既定値 | 構成可能なルール |
 | - | - | - | - |
-| null チェック検証メソッドの名前。メソッドに渡された引数が null 値でないことを検証します | 許可されるメソッド名の形式 (`|` 区切り):<br/> - メソッド名のみ (包含する型または名前空間に関係なく、その名前が指定されたすべてのメソッドが含まれます)<br/> - そのシンボルの[ドキュメント ID 形式](https://github.com/dotnet/csharplang/blob/main/spec/documentation-comments.md#id-string-format)の完全修飾名 (オプションで `M:` プレフィックスも使用可) | なし | [CA1062](quality-rules/ca1062.md) |
+| null チェック検証メソッドの名前。メソッドに渡された引数が null 値でないことを検証します | 許可されるメソッド名の形式 (`|` 区切り):<br/> - メソッド名のみ (包含する型または名前空間に関係なく、その名前が指定されたすべてのメソッドが含まれます)<br/> - そのシンボルの[ドキュメント ID 形式](/dotnet/csharp/language-reference/language-specification/documentation-comments#id-string-format)の完全修飾名 (オプションで `M:` プレフィックスも使用可) | なし | [CA1062](quality-rules/ca1062.md) |
 
 ### <a name="additional_string_formatting_methods"></a>additional_string_formatting_methods
 

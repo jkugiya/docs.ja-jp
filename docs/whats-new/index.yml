@@ -6,17 +6,19 @@ metadata:
   description: .NET ドキュメントの新しいコンテンツと更新されたコンテンツについて説明します。
   ms.date: 03/03/2021
   ms.topic: landing-page
-  ms.openlocfilehash: e42a6c4a12bfb9a5a4b5ab5dabdfebb280383efa
-  ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+  ms.openlocfilehash: 75106b8897f1a99cfcfb4df732c32c47b21c22fd
+  ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/11/2021
-  ms.locfileid: "103235233"
+  ms.lasthandoff: 04/03/2021
+  ms.locfileid: "106288116"
 landingContent:
 - title: .NET の更新プログラムを検索する
   linkLists:
   - linkListType: whats-new
     links:
+    - text: 2021 年 3 月
+      url: 2021-03.md
     - text: 2021 年 2 月
       url: 2021-02.md
     - text: 2021 年 1 月
@@ -27,8 +29,6 @@ landingContent:
       url: 2020-11.md
     - text: 2020 年 10 月
       url: 2020-10.md
-    - text: 2020 年 9 月
-      url: 2020-09.md
 - title: 言語の更新プログラムを検索する
   linkLists:
   - linkListType: whats-new

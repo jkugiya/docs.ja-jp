@@ -1,17 +1,16 @@
 ---
 title: 明示的なインターフェイスの実装 - C# プログラミング ガイド
 description: C# では、クラスによって、シグネチャが同じメンバーを含むインターフェイスを実装できます。 明示的な実装では、1 つのインターフェイスに固有のクラス メンバーが作成されます。
-ms.date: 01/24/2020
+ms.date: 03/24/2021
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
-ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: a6ec328c08d1da84a11431d9400a094df8c72223
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 2ca7e8a10c009b01b43e0c09d25d2dd99cbee2ec
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303088"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610864"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>明示的なインターフェイスの実装 (C# プログラミング ガイド)
 
@@ -23,7 +22,7 @@ ms.locfileid: "87303088"
 
 [!code-csharp[DefineSimpleTypes](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#CallMethods)]
 
-2 つのインターフェイス メンバーで同じ関数を実行しない場合、一方または両方のインターフェイスが正しく実装されません。 インターフェイス メンバーは明示的に実装できます。そのインターフェイス経由でのみ呼び出され、そのインターフェイスに固有となるクラス メンバーが作成されます。 インターフェイスの名前とピリオドを利用してクラス メンバーに名前を付けます。 次に例を示します。
+ただし、両方のインターフェイスに対して同じ実装を呼び出さないようにすることもできます。 使用中のインターフェイスに応じて異なる実装を呼び出すには、インターフェイス メンバーを明示的に実装します。 明示的なインターフェイスの実装は、指定されたインターフェイスを介してのみ呼び出されるクラス メンバーです。 インターフェイスの名前とピリオドを使ってプレフィックスを付けて、クラス メンバーに名前を付けます。 次に例を示します。
 
 [!code-csharp[DefineExplicitImplementation](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#ExplicitImplementation)]
 
@@ -34,6 +33,8 @@ ms.locfileid: "87303088"
 2 つのインターフェイスで、それぞれが同じ名前の別のメンバー (プロパティやメソッドなど) を宣言するような場合の解決には、明示的な実装も利用されます。 両方のインターフェイスを実装するには、コンパイラ エラーを回避するために、クラスはプロパティ `P`、メソッド `P`、または両方に明示的な実装を利用する必要があります。 次に例を示します。
 
 [!code-csharp[NameCollisions](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#NameCollision)]
+
+明示的なインターフェイスの実装には、定義されている型のメンバーとしてアクセスできないため、アクセス修飾子がありません。 代わりに、インターフェイスのインスタンスを介して呼び出された場合にのみアクセスできます。 明示的なインターフェイスの実装にアクセス修飾子を指定すると、コンパイラ エラー [CS0106](../../language-reference/compiler-messages/cs0106.md) が発生します。 詳細については、「[`interface` (C# リファレンス)](../../language-reference/keywords/interface.md)」を参照してください。
 
 [C# 8.0](../../whats-new/csharp-8.md#default-interface-methods) 以降では、インターフェイスで宣言されたメンバーの実装を定義できます。 クラスでインターフェイスからメソッド実装が継承される場合、そのメソッドにはインターフェイス型の参照を利用する方法でのみアクセスできます。 継承したメンバーは、パブリック インターフェイスの一部として表示されません。 次のサンプルでは、インターフェイス メソッドの既定の実装が定義されます。
 

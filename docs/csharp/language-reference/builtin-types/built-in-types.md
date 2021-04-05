@@ -5,12 +5,12 @@ ms.date: 03/15/2021
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
-ms.openlocfilehash: c2b1c736e17e55913ef1c593813717dd33efd6c3
-ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.openlocfilehash: 4b92add8189c6205408ec78c281eaacf04173047
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104759717"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637066"
 ---
 # <a name="built-in-types-c-reference"></a>組み込み型 (C# リファレンス)
 
@@ -42,7 +42,7 @@ C# の組み込みの[参照](../keywords/reference-types.md)型を次の表に�
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 |[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
-上の表の左の列にある各 C# 型キーワード ([nint と nuint](nint-nuint.md) を除く) は、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では、同じ型の変数が宣言されています。
+上の表の左の列にある各 C# 型キーワード ([nint と nuint](nint-nuint.md) および [dynamic](reference-types.md#the-dynamic-type) を除く) は、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では、同じ型の変数が宣言されています。
 
 ```csharp
 int a = 123;

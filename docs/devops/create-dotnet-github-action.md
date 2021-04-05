@@ -3,20 +3,20 @@ title: 'チュートリアル: .NET を使用して GitHub アクションを作
 description: コンテナー化された .NET アプリを使用して GitHub アクションを作成する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 03/19/2021
+ms.date: 03/23/2021
 ms.topic: tutorial
-ms.openlocfilehash: f0ca75bcc8ee03ff92d8ffd91f7615f956decb61
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 58b4ee07bd3809dd1bb2e1e2d3fc33cecfc3f4d6
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/23/2021
-ms.locfileid: "104879553"
+ms.locfileid: "104881074"
 ---
 # <a name="tutorial-create-a-github-action-with-net"></a>チュートリアル: .NET を使用して GitHub アクションを作成する
 
 GitHub アクションとして使用できる .NET アプリを作成する方法について説明します。 [GitHub Actions](https://github.com/features/actions) により、ワークフローの自動化と構成が可能になります。 GitHub Actions を使用すると、GitHub からソース コードをビルド、テスト、デプロイできます。 さらに、アクションによって、プログラムで問題を操作したり、プル要求を作成したり、コード レビューを実行したり、ブランチを管理したりする機能が公開されます。 GitHub Actions を使用した継続的インテグレーションの詳細については、[.NET のビルドとテスト](https://docs.github.com/actions/guides/building-and-testing-net)に関するページを参照してください。
 
-このチュートリアルでは、以下の内容を学習します。
+このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 >
@@ -134,7 +134,7 @@ GitHub Actions では、アプリ開発として次の 2 つのバリエーシ�
 
 前のワークフロー YAML ファイルでは、次の 3 つのプライマリ ノードを定義します。
 
-- `name`。これは、単純にワークフローの名前です。 この名前はまた、[ワークフロー状態バッジ](https://docs.github.com/actions/managing-workflow-runs/adding-a-workflow-status-badge)を作成するときに使用される名前でもあります。
+- ワークフローの `name`。 この名前はまた、[ワークフロー状態バッジ](https://docs.github.com/actions/managing-workflow-runs/adding-a-workflow-status-badge)を作成するときに使用される名前でもあります。
 - `on` ノードは、アクションがいつ、どのようにトリガーされるかを定義します。
 - `jobs` ノードは、さまざまなジョブと、各ジョブ内のステップの概要を示します。 個々のステップで GitHub Actions を使用します。
 
@@ -152,7 +152,7 @@ GitHub Actions では、アプリ開発として次の 2 つのバリエーシ�
 1. [手動で実行](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch)されると、メッセージがワークフロー ログに出力されます。
 1. `dotnet-code-metrics` として識別されたステップ:
 
-    - `uses: dotnet/samples/github-actions/DotNet.GitHubAction@main`。これは、このチュートリアルのコンテナー化された .NET アプリの場所です。
+    - `uses: dotnet/samples/github-actions/DotNet.GitHubAction@main` は、このチュートリアルのコンテナー化された .NET アプリの場所です。
     - `env` は、このアプリの実行で出力される環境変数 `"GREETING"` を作成します。
     - `with` は、必要な各アクション入力を指定します。
 
@@ -165,7 +165,7 @@ GitHub Actions では、アプリ開発として次の 2 つのバリエーシ�
 
 [dotnet/samples](https://github.com/dotnet/samples) GitHub リポジトリには、このチュートリアルのアプリを含む多数の .NET サンプル ソース コード プロジェクトがあります。
 
-- このアプリは、[サンプル ブラウザー](/samples/browse/create-dotnet-github-action)で入手できます。
+- このアプリは、[サンプル ブラウザー](/samples/dotnet/samples/create-dotnet-github-action)で入手できます。
 - 生成された [*CODE_METRICS.md*](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/CODE_METRICS.md) ファイルはナビゲート可能です。
 
 *CODE_METRICS.md* ファイルは、分析されたプロジェクトの階層を表します。 各プロジェクトには最上位のセクションがあり、絵文字は、入れ子になったオブジェクトの最も高いサイクロマティック複雑度の全体的な状態を表します。 ファイル内を移動すると、各セクションでは、各領域の概要と共にドリル ダウンの機会が提供されます。 マークダウンには、利便性の向上として折りたたみ可能なセクションがあります。
@@ -196,4 +196,4 @@ GitHub Actions では、アプリ開発として次の 2 つのバリエーシ�
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [.NET GitHub アクションのサンプル コード](/samples/browse/create-dotnet-github-action)
+> [.NET GitHub アクションのサンプル コード](/samples/dotnet/samples/create-dotnet-github-action)

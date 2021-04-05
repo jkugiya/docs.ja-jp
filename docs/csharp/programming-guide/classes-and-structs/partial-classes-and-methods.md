@@ -1,18 +1,18 @@
 ---
 title: 部分クラスと部分メソッド - C# プログラミング ガイド
 description: C# の部分クラスと部分メソッドでは、クラス、構造体、インターフェイス、またはメソッドの定義を、2 つ以上のソース ファイルに分割できます。
-ms.date: 07/20/2015
+ms.date: 03/23/2021
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: cfda3b89bfd9dc046274dfa53d62a0789d4d597e
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 2132dd8e729725f0dd9bcb4477a3a604aa7065a0
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899101"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111050"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分クラスと部分メソッド (C# プログラミング ガイド)
 
@@ -133,7 +133,7 @@ abstract と宣言された部分がある場合、型全体が抽象と見な�
 
 ## <a name="partial-methods"></a>部分メソッド
 
-部分クラスまたは構造体には部分メソッドを含めることができます。 クラスのある部分に、メソッドのシグネチャが含まれます。 同じ部分または別の部分に、オプションの実装を定義できます。 実装が指定されていない場合、メソッドとメソッドに対するすべての呼び出しは、コンパイル時に削除されます。
+部分クラスまたは構造体には部分メソッドを含めることができます。 クラスのある部分に、メソッドのシグネチャが含まれます。 実装は、同じ部分でも別の部分でも定義できます。 実装が指定されていない場合、メソッドとメソッドに対するすべての呼び出しは、コンパイル時に削除されます。 メソッド シグネチャによっては、実装が必要になる場合があります。
 
 部分メソッドを使用すると、イベントと同様に、クラスのある部分の実装者がメソッドを定義できます。 クラスの別の部分の実装者は、メソッドを実装するかどうかを決定できます。 メソッドが実装されない場合、コンパイラは、メソッド シグネチャとメソッドに対するすべての呼び出しを削除します。 このメソッドの呼び出しは、呼び出しの引数の評価から発生するすべての結果を含め、実行時に影響を及ぼしません。 そのため、実装が指定されていない場合でも、部分クラス内のすべてのコードで部分メソッドを自由に使用できます。 実装されていないメソッドが呼び出された場合、コンパイル時エラーまたは実行時エラーにはなりません。
 
@@ -143,28 +143,36 @@ abstract と宣言された部分がある場合、型全体が抽象と見な�
 
 ```csharp
 // Definition in file1.cs
-partial void onNameChanged();
+partial void OnNameChanged();
 
 // Implementation in file2.cs
-partial void onNameChanged()
+partial void OnNameChanged()
 {
   // method body
 }
 ```
 
-- 部分メソッドの宣言はコンテキスト キーワード [partial](../../language-reference/keywords/partial-type.md) で始まる必要があり、メソッドは [void](../../language-reference/builtin-types/void.md) を返す必要があります。
+- 部分メソッドの宣言は、コンテキスト キーワード [partial](../../language-reference/keywords/partial-type.md) で始まる必要があります。
 
-- 部分メソッドには、[in](../../language-reference/keywords/in-parameter-modifier.md) や [ref](../../language-reference/keywords/ref.md) パラメーターを使用できますが、[out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターは使用できません。
-
-- 部分メソッドは暗黙的に [private](../../language-reference/keywords/private.md) です。したがって部分メソッドを [virtual](../../language-reference/keywords/virtual.md) にすることはできません。
-
-- 部分メソッドを [extern](../../language-reference/keywords/extern.md) にすることはできません。部分メソッドの定義なのか実装なのかは、本体の存在で決まるためです。
+- 部分型の両方の部分で部分メソッド シグネチャが一致する必要があります。
 
 - 部分メソッドには [static](../../language-reference/keywords/static.md) 修飾子と [unsafe](../../language-reference/keywords/unsafe.md) 修飾子を使用できます。
 
 - 部分メソッドはジェネリックにできます。 制約は部分メソッドの定義宣言に置き、必要に応じて実装宣言で繰り返すことができます。 パラメーター名と型パラメーター名は、定義宣言と実装宣言で同じである必要はありません。
 
 - [delegate](../../language-reference/builtin-types/reference-types.md) は、定義および実装されている部分メソッドには使用できますが、定義されているのみの部分メソッドには使用できません。
+
+次の場合には、部分メソッドを実装する必要はありません。
+
+- アクセシビリティ修飾子 (既定の [private](../../language-reference/keywords/private.md) を含む) はありません。
+
+- [void](../../language-reference/builtin-types/void.md) を返します。
+
+- [out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターはありません。
+
+- [virtual](../../language-reference/keywords/virtual.md)、[override](../../language-reference/keywords/override.md)、[sealed](../../language-reference/keywords/sealed.md)、[new](../../language-reference/keywords/new-modifier.md)、[extern](../../language-reference/keywords/extern.md) のいずれの修飾子もありません。
+
+これらのすべての制限に準拠していないメソッド (`public virtual partial void` メソッドなど) は、実装を提供する必要があります。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

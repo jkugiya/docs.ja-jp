@@ -1,15 +1,15 @@
 ---
-title: C# の予約済み属性:Conditional、Obsolete、AttributeUsage
-ms.date: 04/09/2020
-description: これらの属性はコンパイラによって解釈され、コンパイラによって生成されたコードに影響を与えます
-ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+title: 'C# の予約済み属性: その他'
+ms.date: 03/18/2021
+description: コンパイラによって生成されるコードに影響を与える属性 (Conditional、Obsolete、AttributeUsage、ModuleInitializer、SkipLocalsInit 属性) について説明します。
+ms.openlocfilehash: 6b8cda658ec5b3f81a7f903d8cadae0fe30e8ac2
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "82021769"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111317"
 ---
-# <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>予約済みの属性:ConditionalAttribute、ObsoleteAttribute、AttributeUsageAttribute
+# <a name="reserved-attributes-miscellaneous"></a>予約済み属性: その他
 
 これらの属性は、コード内の要素に適用できます。 それによって、このような要素にセマンティックの意味が追加されます。 コンパイラでは、これらのセマンティックの意味を使用して出力が変更され、コードを使用する開発者による間違いの可能性が報告されます。
 
@@ -95,6 +95,51 @@ C# 7.3 以降、プロパティ、または自動実装バッキング フィー
 :::code language="csharp" source="snippets/NonInheritedAttribute.cs" id="SnippetNonInherited" :::
 
 この例で、`NonInheritedAttribute` は継承によって `DClass` に適用されません。
+
+## <a name="moduleinitializer-attribute"></a>`ModuleInitializer` 属性
+
+C# 9 以降では、`ModuleInitializer` 属性は、アセンブリの読み込み時にランタイムが呼び出すメソッドをマークします。 `ModuleInitializer` は <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> の別名です。
+
+`ModuleInitializer` 属性は、次のメソッドにのみ適用できます。
+
+* 静的。
+* パラメーターなし。
+* `void` を返します。
+* 含まれているモジュール、つまり `internal` または `public` からアクセスできる。
+* ジェネリック メソッドではない。
+* ジェネリック クラスに含まれていない。
+* ローカル関数ではない。
+
+`ModuleInitializer` 属性は、複数のメソッドに適用できます。 その場合、ランタイムが呼び出す順序は決定的ですが、指定されていません。
+
+次の例は、複数のモジュール初期化子メソッドの使用方法を示しています。 `Init1` と `Init2` のメソッドは、`Main` の前に実行されます。各メソッドは `Text` プロパティに文字列を追加します。 そのため `Main` を実行するときには、`Text` プロパティに、両方の初期化子メソッドの文字列が既に含まれています。
+
+:::code language="csharp" source="snippets/ModuleInitializerExampleMain.cs" :::
+
+:::code language="csharp" source="snippets/ModuleInitializerExampleModule.cs" :::
+
+ソース コード ジェネレーターでは、初期化コードの生成が必要になる場合があります。 モジュール初期化子は、そのコードを格納するための標準の場所を提供します。
+
+## <a name="skiplocalsinit-attribute"></a>`SkipLocalsInit` 属性
+
+C# 9 以降では、`SkipLocalsInit` 属性は、メタデータへの出力時にコンパイラによって `.locals init` フラグが設定されないようにします。 `SkipLocalsInit` 属性は、単一使用属性であり、メソッド、プロパティ、クラス、構造体、インターフェイス、またはモジュールに適用できますが、アセンブリには適用できません。 `SkipLocalsInit` は <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> の別名です。
+
+`.locals init` フラグを使用すると、CLR によってメソッドで宣言されたすべてのローカル変数が既定値に初期化されます。 コンパイラでも、値を割り当てる前に変数が使用されないようにするため、`.locals init` は通常は必要ありません。 ただし、[stackalloc](../operators/stackalloc.md) を使用してスタックに配列を割り当てる場合など、一部のシナリオでは、追加のゼロ初期化がパフォーマンスに重大な影響を与える可能性があります。 そのような場合は、`SkipLocalsInit` 属性を追加できます。 属性は、メソッドに直接適用すると、そのメソッドと、ラムダやローカル関数を含むすべての入れ子になった関数に影響します。 型またはモジュールに適用すると、内部で入れ子になっているすべてのメソッドに影響します。 この属性は抽象メソッドには影響しませんが、実装用に生成されたコードには影響します。
+
+この属性には、[AllowUnsafeBlocks](../compiler-options/language.md#allowunsafeblocks) コンパイラ オプションが必要です。 これは、場合によってはコードで未割り当てメモリを表示できる可能性があることを通知するためです (たとえば、初期化されていないスタックに割り当てられたメモリからの読み取りなど)。
+
+次の例は、`stackalloc` を使用するメソッドに対する `SkipLocalsInit` 属性の効果を示しています。 このメソッドは、整数の配列が割り当てられたときに、メモリ内のものをすべて表示します。
+
+:::code language="csharp" source="snippets/SkipLocalsInitExample.cs" id="ReadUninitializedMemory":::
+
+このコードをご自分で試される場合は、 *.csproj* ファイルで `AllowUnsafeBlocks` コンパイラ オプションを設定します。
+
+```xml
+<PropertyGroup>
+  ...
+  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+</PropertyGroup>
+```
 
 ## <a name="see-also"></a>関連項目
 

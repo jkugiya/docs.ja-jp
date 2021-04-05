@@ -2,12 +2,12 @@
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 10/12/2020
-ms.openlocfilehash: 70cff297688270d30b9850d123ffc8bb27ef7fbe
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: dfecdad4518c79b605eb4fbe991af07fcba7db1c
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582964"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111089"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -72,7 +72,7 @@ ms.locfileid: "100582964"
 
 ## <a name="distributed-tracing"></a>分散トレース
 
-[分散トレース](./distributed-tracing.md)は、分散システムでトレース データを発行して監視する方法です。
+[分散トレース](./distributed-tracing.md)は、特に複数のコンピューターやプロセスに分散される可能性があるアプリケーション内のエラーとパフォーマンスの問題を、エンジニアがローカライズするのに役立つ診断手法です。 この手法は、アプリケーションを介して要求を追跡し、さまざまなアプリケーション コンポーネントによって実行される作業を相互に関連付けて、アプリケーションが同時要求に対して実行する可能性がある他の作業から分離します。
 
 ## <a name="ilogger-and-logging-frameworks"></a>ILogger とログ記録フレームワーク
 

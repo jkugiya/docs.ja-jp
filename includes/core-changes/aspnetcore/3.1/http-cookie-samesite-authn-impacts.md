@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b75f9ce8e878c935dcc5fd9dc292369720b895e9
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032445"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105152725"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP:ブラウザー SameSite の変更による認証への影響
 
@@ -26,13 +26,13 @@ Google から、は下位互換性のない新しいドラフト標準が提案�
 
 ASP.NET Core 3.1 は、新しい `SameSite` 動作を実装するように更新されました。 この更新により、`SameSite=None` が出力され、`SameSite` 属性を省略する新しい値 `SameSiteMode.Unspecified` が追加されるように `SameSiteMode.None` の動作が再定義されました。 すべての Cookie API の既定は `Unspecified` になりましたが、Cookie を使用する一部のコンポーネントでは、OpenID Connect の相関関係や nonce Cookie など、シナリオに固有の値を設定します。
 
-この分野の最近の変更については、「[HTTP:SameSite の cookie オプションの既定値が一部、None に変更されました](../../../../docs/core/compatibility/2.2-3.0.md#http-some-cookie-samesite-defaults-changed-to-none)」を参照してください。 ASP.NET Core 3.0 では、ほとんどの既定値が <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> から <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> に変更されました (ただし、以前の標準を使用しています)。
+この分野の最近の変更については、「[HTTP:SameSite の cookie オプションの既定値が一部、None に変更されました](../../../../docs/core/compatibility/3.0.md#http-some-cookie-samesite-defaults-changed-to-none)」を参照してください。 ASP.NET Core 3.0 では、ほとんどの既定値が <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> から <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> に変更されました (ただし、以前の標準を使用しています)。
 
 #### <a name="reason-for-change"></a>変更理由
 
 既に概要を説明したように、ブラウザーと仕様が変わっています。
 
-#### <a name="recommended-action"></a>推奨アクション
+#### <a name="recommended-action"></a>推奨される操作
 
 サードパーティ ログインなどを介してリモート サイトとやり取りするアプリは、以下を行う必要があります。
 

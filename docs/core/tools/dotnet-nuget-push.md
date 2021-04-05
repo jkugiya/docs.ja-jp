@@ -3,12 +3,12 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 92e2593633343bda6990ca51d593455ff13f0df7
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 71bc14fa729945b3d1e1508d014287cc5355f8cc
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103478190"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637560"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -92,7 +92,7 @@ dotnet nuget push -h|--help
 
 - **`-t|--timeout <TIMEOUT>`**
 
-  秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
+  秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 を指定すると、既定値が適用されます。
 
 ## <a name="examples"></a>使用例
 

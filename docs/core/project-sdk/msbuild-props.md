@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: effcb704056f553b2986ee4a61f73c0dc58af599
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604763"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636767"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -19,6 +19,8 @@ ms.locfileid: "102604763"
 > このページの編集は進行中であり、.NET SDK の便利な MSBuild プロパティがすべて記載されている訳ではありません。 一般的な MSBuild プロパティの一覧については、「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
 
 ## <a name="framework-properties"></a>フレームワークのプロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
@@ -65,6 +67,174 @@ ms.locfileid: "102604763"
 </PropertyGroup>
 ```
 
+## <a name="assembly-info-generation-properties"></a>アセンブリ情報生成のプロパティ
+
+- [GenerateAssemblyCompanyAttribute](#generateassemblycompanyattribute)
+- [GenerateAssemblyConfigurationAttribute](#generateassemblyconfigurationattribute)
+- [GenerateAssemblyCopyrightAttribute](#generateassemblycopyrightattribute)
+- [GenerateAssemblyDescriptionAttribute](#generateassemblydescriptionattribute)
+- [GenerateAssemblyFileVersionAttribute](#generateassemblyfileversionattribute)
+- [GenerateAssemblyInfo](#generateassemblyinfo)
+- [GenerateAssemblyInformationalVersionAttribute](#generateassemblyinformationalversionattribute)
+- [GenerateAssemblyProductAttribute](#generateassemblyproductattribute)
+- [GenerateAssemblyTitleAttribute](#generateassemblytitleattribute)
+- [GenerateAssemblyVersionAttribute](#generateassemblyversionattribute)
+- [GeneratedAssemblyInfoFile](#generatedassemblyinfofile)
+- [GenerateNeutralResourcesLanguageAttribute](#generateneutralresourceslanguageattribute)
+
+### <a name="generateassemblycompanyattribute"></a>GenerateAssemblyCompanyAttribute
+
+このプロパティは、`Company` プロパティがアセンブリの <xref:System.Reflection.AssemblyCompanyAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyconfigurationattribute"></a>GenerateAssemblyConfigurationAttribute
+
+このプロパティは、`Configuration` プロパティがアセンブリの <xref:System.Reflection.AssemblyConfigurationAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblycopyrightattribute"></a>GenerateAssemblyCopyrightAttribute
+
+このプロパティは、`Copyright` プロパティがアセンブリの <xref:System.Reflection.AssemblyCopyrightAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblydescriptionattribute"></a>GenerateAssemblyDescriptionAttribute
+
+このプロパティは、`Description` プロパティがアセンブリの <xref:System.Reflection.AssemblyDescriptionAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyfileversionattribute"></a>GenerateAssemblyFileVersionAttribute
+
+このプロパティは、`FileVersion` プロパティがアセンブリの <xref:System.Reflection.AssemblyFileVersionAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
+
+プロジェクトの `AssemblyInfo` 属性の生成を制御します。 既定値は `true` です。 ファイルの生成を無効にするには、`false` を使用します。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+</PropertyGroup>
+```
+
+[GeneratedAssemblyInfoFile](#generatedassemblyinfofile) 設定は、生成されるファイルの名前を制御します。
+
+`GenerateAssemblyInfo` 値が `true` の場合、プロジェクトのプロパティは `AssemblyInfo` 属性に変換されます。 次の表に、属性を生成するプロジェクトのプロパティとその生成を無効にできるプロパティを示します。
+
+| プロパティ               | 属性                                                      | 無効にするプロパティ                                                                               |
+|------------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `Company`              | <xref:System.Reflection.AssemblyCompanyAttribute>              | [`GenerateAssemblyCompanyAttribute`](#generateassemblycompanyattribute)                           |
+| `Configuration`        | <xref:System.Reflection.AssemblyConfigurationAttribute>        | [`GenerateAssemblyConfigurationAttribute`](#generateassemblyconfigurationattribute)               |
+| `Copyright`            | <xref:System.Reflection.AssemblyCopyrightAttribute>            | [`GenerateAssemblyCopyrightAttribute`](#generateassemblycopyrightattribute)                       |
+| `Description`          | <xref:System.Reflection.AssemblyDescriptionAttribute>          | [`GenerateAssemblyDescriptionAttribute`](#generateassemblydescriptionattribute)                   |
+| `FileVersion`          | <xref:System.Reflection.AssemblyFileVersionAttribute>          | [`GenerateAssemblyFileVersionAttribute`](#generateassemblyfileversionattribute)                   |
+| `InformationalVersion` | <xref:System.Reflection.AssemblyInformationalVersionAttribute> | [`GenerateAssemblyInformationalVersionAttribute`](#generateassemblyinformationalversionattribute) |
+| `Product`              | <xref:System.Reflection.AssemblyProductAttribute>              | [`GenerateAssemblyProductAttribute`](#generateassemblyproductattribute)                           |
+| `AssemblyTitle`        | <xref:System.Reflection.AssemblyTitleAttribute>                | [`GenerateAssemblyTitleAttribute`](#generateassemblytitleattribute)                               |
+| `AssemblyVersion`      | <xref:System.Reflection.AssemblyVersionAttribute>              | [`GenerateAssemblyVersionAttribute`](#generateassemblyversionattribute)                           |
+| `NeutralLanguage`      | <xref:System.Resources.NeutralResourcesLanguageAttribute>      | [`GenerateNeutralResourcesLanguageAttribute`](#generateneutralresourceslanguageattribute)         |
+
+これらの設定に関する注意事項:
+
+- `AssemblyVersion` と `FileVersion` の既定値は、サフィックスのない `$(Version)` の値です。 たとえば、`$(Version)` が `1.2.3-beta.4` の場合、値は `1.2.3` です。
+- `InformationalVersion` の既定値は、`$(Version)` の値です。
+- `$(SourceRevisionId)` プロパティが存在する場合は、それが `InformationalVersion` の後に追加されます。 `IncludeSourceRevisionInInformationalVersion` を使用して、この動作を無効にすることができます。
+- NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
+- `Configuration` (既定値は `Debug`) は、すべての MSBuild ターゲットと共有されます。 これは、`dotnet` コマンド ([dotnet pack](../tools/dotnet-pack.md) など) の `--configuration` オプションを使用して設定できます。
+- 一部のプロパティは、NuGet パッケージを作成するときに使用されます。 詳細については、「[パッケージのプロパティ](#package-properties)」を参照してください。
+
+#### <a name="migrating-from-net-framework"></a>.NET Framework からの移行
+
+.NET Framework プロジェクト テンプレートでは、これらのアセンブリ情報属性を設定したコード ファイルを作成します。 通常、このファイルは *.\Properties\AssemblyInfo.cs* または *.\Properties\AssemblyInfo.vb* にあります。 SDK スタイルのプロジェクトでは、プロジェクトの設定に基づいてこのファイルが生成されます。 **両方を持つことはできません。** コードを .NET 5 (および .NET Core 3.1) 以降に移植する場合は、次のいずれかの操作を行います。
+
+- `GenerateAssemblyInfo` を `false` に設定することにより、アセンブリ情報属性を含む一時コード ファイルの生成を無効にします。 これにより、*AssemblyInfo* ファイルを保持することができます。
+- `AssemblyInfo` ファイルの設定をプロジェクト ファイルに移行し、`AssemblyInfo` ファイルを削除します。
+
+### <a name="generateassemblyinformationalversionattribute"></a>GenerateAssemblyInformationalVersionAttribute
+
+このプロパティは、`InformationalVersion` プロパティがアセンブリの <xref:System.Reflection.AssemblyInformationalVersionAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyproductattribute"></a>GenerateAssemblyProductAttribute
+
+このプロパティは、`Product` プロパティがアセンブリの <xref:System.Reflection.AssemblyProductAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblytitleattribute"></a>GenerateAssemblyTitleAttribute
+
+このプロパティは、`AssemblyTitle` プロパティがアセンブリの <xref:System.Reflection.AssemblyTitleAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyversionattribute"></a>GenerateAssemblyVersionAttribute
+
+このプロパティは、`AssemblyVersion` プロパティがアセンブリの <xref:System.Reflection.AssemblyVersionAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
+
+このプロパティは、生成されるアセンブリ情報ファイルの相対パスまたは絶対パスを定義します。 既定値は、`$(IntermediateOutputPath)` (通常は *obj*) ディレクトリ内の *[プロジェクト名].AssemblyInfo.[cs|vb]* という名前のファイルです。
+
+```xml
+<PropertyGroup>
+  <GeneratedAssemblyInfoFile>assemblyinfo.cs</GeneratedAssemblyInfoFile>
+</PropertyGroup>
+```
+
+### <a name="generateneutralresourceslanguageattribute"></a>GenerateNeutralResourcesLanguageAttribute
+
+このプロパティは、`NeutralLanguage` プロパティがアセンブリの <xref:System.Resources.NeutralResourcesLanguageAttribute> を生成するかどうかを制御します。 既定値は `true` です。
+
+```xml
+<PropertyGroup>
+  <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+</PropertyGroup>
+```
+
 ## <a name="package-properties"></a>パッケージのプロパティ
 
 `PackageId`、`PackageVersion`、`PackageIcon`、`Title`、`Description` などのプロパティを指定し、プロジェクトから作成されたパッケージについて説明できます。 以上のプロパティとその他のプロパティの詳細については、「[pack ターゲット](/nuget/reference/msbuild-targets#pack-target)」を参照してください。
@@ -79,45 +249,18 @@ ms.locfileid: "102604763"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-items-and-metadata"></a>プロパティ、項目、メタデータを発行する
+## <a name="publish-related-properties"></a>公開関連のプロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
-- [CopyToPublishDirectory](#copytopublishdirectory)
-- [LinkBase](#linkbase)
 - [PreserveCompilationContext](#preservecompilationcontext)
 - [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
-- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
-
-### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
-
-MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が発行ディレクトリにコピーされるタイミングが制御されます。 使用できる値は、項目が変更された場合にのみコピーする `PreserveNewest`、常に項目をコピーする `Always`、項目をコピーしない `Never` です。 パフォーマンスの観点からは、インクリメンタル ビルドが有効になるので `PreserveNewest` をお勧めします。
-
-```xml
-<ItemGroup>
-  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-</ItemGroup>
-```
-
-### <a name="linkbase"></a>LinkBase
-
-プロジェクト ディレクトリとそのサブディレクトリの外部にある項目の場合、発行先で項目のコピー先を決定するために、項目の [Link メタデータ](/visualstudio/msbuild/common-msbuild-item-metadata)が使用されます。 また、プロジェクト ツリーの外部にある項目が Visual Studio の [ソリューション エクスプローラー] ウィンドウにどのように表示されるかも、`Link` によって決定されます。
-
-プロジェクト コーンの外部にある項目に対して `Link` が指定されていない場合は、既定で `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` になります。 `LinkBase` を使用して、プロジェクト コーンの外部の項目に適切なベース フォルダーを指定できます。 ベース フォルダーの下のフォルダー階層は、`RecursiveDir` によって保持されます。 `LinkBase` を指定しないと、それは `Link` パスから省略されます。
-
-```xml
-<ItemGroup>
-  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
-</ItemGroup>
-```
-
-次の図は、前の項目の `Include` glob によって含められるファイルがソリューション エクスプローラーにどのように表示されるかを示したものです。
-
-:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="LinkBase メタデータが指定された項目が表示されているソリューション エクスプローラー。":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -203,18 +346,6 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 </PropertyGroup>
 ```
 
-### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
-
-`TrimmerRootAssembly` 項目ではアセンブリを "[*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
-
-次の XML では、トリミングから `System.Security` アセンブリが除外されます。
-
-```xml
-<ItemGroup>
-  <TrimmerRootAssembly Include="System.Security" />
-</ItemGroup>
-```
-
 ### <a name="useapphost"></a>UseAppHost
 
 `UseAppHost` プロパティにより、デプロイ用にネイティブ実行可能ファイルを作成するかどうかが制御されます。 自己完結型の配置にはネイティブの実行可能ファイルが必要です。
@@ -229,7 +360,9 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 
 配置の詳細については、[.NET アプリケーションの配置](../deploying/index.md)に関するページを参照してください。
 
-## <a name="compile-properties"></a>コンパイルのプロパティ
+## <a name="compilation-related-properties"></a>コンパイル関連のプロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
@@ -262,6 +395,8 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 詳細については、「[C# 言語のバージョン管理](../../csharp/language-reference/configure-language-version.md#override-a-default)」を参照してください。
 
 ## <a name="default-item-inclusion-properties"></a>既定の項目の包含プロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
 - [DefaultItemExcludes](#defaultitemexcludes)
@@ -335,6 +470,8 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 ```
 
 ## <a name="code-analysis-properties"></a>コード分析のプロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [AnalysisLevel](#analysislevel)
 - [AnalysisMode](#analysismode)
@@ -532,13 +669,12 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 </PropertyGroup>
 ```
 
-## <a name="reference-properties-and-items"></a>プロパティと項目の参照
+## <a name="reference-properties"></a>参照のプロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [AssetTargetFallback](#assettargetfallback)
 - [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
-- [PackageReference](#packagereference)
-- [ProjectReference](#projectreference)
-- [参照](#reference)
 - [復元関連のプロパティ](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
@@ -565,74 +701,6 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 </PropertyGroup>
 ```
 
-### <a name="packagereference"></a>PackageReference
-
-`PackageReference` 項目では、NuGet パッケージへの参照が定義されます。
-
-`Include` 属性は、パッケージ ID を指定します。 `Version` 属性では、バージョンまたはバージョン範囲を指定します。 最小バージョン、最大バージョン、範囲、厳密一致を指定する方法については、「[バージョン範囲](/nuget/concepts/package-versioning#version-ranges)」を参照してください。 また、[アセット属性](#asset-attributes)をパッケージ参照に追加することもできます。
-
-次の例のプロジェクト ファイル スニペットでは、[System.Runtime](https://www.nuget.org/packages/System.Runtime/) パッケージを参照しています。
-
-```xml
-<ItemGroup>
-  <PackageReference Include="System.Runtime" Version="4.3.0" />
-</ItemGroup>
-```
-
-詳細については、[プロジェクト ファイルのパッケージ参照](/nuget/consume-packages/package-references-in-project-files)に関するページを参照してください。
-
-#### <a name="asset-attributes"></a>アセット属性
-
-`IncludeAssets`、`ExcludeAssets`、`PrivateAssets` の各メタデータを、パッケージ参照に追加できます。
-
-| 属性 | 説明 |
-| - | - |
-| `IncludeAssets` | `<PackageReference>` によって指定されているパッケージに属するアセットで、使用する必要があるものを指定します。 既定では、パッケージのすべてのアセットが含まれます。 |
-| `ExcludeAssets`| `<PackageReference>` によって指定されているパッケージに属するアセットで、使用してはならないものを指定します。 |
-| `PrivateAssets` | `<PackageReference>` で指定されているパッケージに属するアセットで、使用する必要はあるが、次のプロジェクトに渡してはならないものを指定します。 この属性が存在しない場合、`Analyzers`、`Build`、`ContentFiles` の各アセットは既定でプライベートになります。 |
-
-これらの属性には以下の項目を 1 つ以上含めることができ、複数ある場合はセミコロン `;` で区切ります。
-
-- `Compile` - コンパイルで使用できる *lib* フォルダーの内容です。
-- `Runtime` - 配布する *runtime* フォルダーの内容です。
-- `ContentFiles` - 使用する *contentfiles* フォルダーの内容です。
-- `Build` - 使用する *build* フォルダーのプロパティ/ターゲットです。
-- `Native` - ランタイムの *output* フォルダーにコピーするネイティブ アセットの内容です。
-- `Analyzers` - アナライザーが使用されます。
-
-代わりに、次の値を属性に含めることもできます。
-
-- `None` - いずれのアセットも使用されません。
-- `All` - すべてのアセットが使用されます。
-
-### <a name="projectreference"></a>ProjectReference
-
-`ProjectReference` 項目では、別のプロジェクトへの参照を定義します。 参照されたプロジェクトは NuGet パッケージ依存関係として追加されます。つまり、`PackageReference` と同じように処理されます。
-
-`Include` 属性は、プロジェクトのパスを指定します。 また、メタデータ `IncludeAssets`、`ExcludeAssets`、`PrivateAssets` をプロジェクト参照に追加できます。
-
-次の例のプロジェクト ファイル スニペットでは、`Project2` という名前のプロジェクトが参照されます。
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\Project2.csproj" />
-</ItemGroup>
-```
-
-### <a name="reference"></a>関連項目
-
-`Reference` 項目では、アセンブリ ファイルへの参照を定義します。
-
-`Include` 属性によってファイルの名前が指定され、`HintPath` メタデータによってアセンブリへのパスが指定されます。
-
-```xml
-<ItemGroup>
-  <Reference Include="MyAssembly">
-    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
-  </Reference>
-</ItemGroup>
-```
-
 ### <a name="restore-related-properties"></a>復元関連のプロパティ
 
 参照されたパッケージを復元すると、その直接的な依存関係と間接的な依存関係がすべてインストールされます。 `RestorePackagesPath` や `RestoreIgnoreFailedSources` など、プロパティを指定することでパッケージ復元をカスタマイズできます。 以上のプロパティとその他のプロパティの詳細については、「[restore ターゲット](/nuget/reference/msbuild-targets#restore-target)」を参照してください。
@@ -643,7 +711,7 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 </PropertyGroup>
 ```
 
-## <a name="run-properties"></a>実行のプロパティ
+## <a name="run-related-properties"></a>実行関連のプロパティ
 
 次のプロパティは、[`dotnet run`](../tools/dotnet-run.md) コマンドを使用してアプリを起動するために使用されます。
 
@@ -673,7 +741,9 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties"></a>ホストのプロパティ
+## <a name="hosting-related-properties"></a>ホスティング関連のプロパティ
+
+このセクションでは、次の MSBuild プロパティについて説明します。
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)
@@ -703,6 +773,86 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
   <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
+
+## <a name="items"></a>アイテム
+
+[MSBuild 項目](/visualstudio/msbuild/msbuild-items)はビルド システムへの入力です。 項目は、要素名である型に従って指定されます。 たとえば、`Compile` と `Reference` は 2 つの[一般的な項目の種類](/visualstudio/msbuild/common-msbuild-project-items)です。 .NET SDK では、次の追加の項目の種類を使用できます。
+
+- [PackageReference](#packagereference)
+- [TrimmerRootAssembly](#trimmerrootassembly)
+
+これらの項目には、標準の[項目属性](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements) (`Include` や `Update` など) を使用できます。 `Include` を使用して新しい項目を追加し、`Update` を使用して既存の項目を変更します。 たとえば、`Update` は、.NET SDK によって暗黙的に追加された項目を変更するためによく使用されます。
+
+### <a name="packagereference"></a>PackageReference
+
+`PackageReference` 項目では、NuGet パッケージへの参照が定義されます。
+
+`Include` 属性は、パッケージ ID を指定します。 `Version` 属性では、バージョンまたはバージョン範囲を指定します。 最小バージョン、最大バージョン、範囲、厳密一致を指定する方法については、「[バージョン範囲](/nuget/concepts/package-versioning#version-ranges)」を参照してください。
+
+次の例のプロジェクト ファイル スニペットでは、[System.Runtime](https://www.nuget.org/packages/System.Runtime/) パッケージを参照しています。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+`PrivateAssets` などのメタデータを使用して[依存関係資産を制御](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets)することもできます。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Contoso.Utility.UsefulStuff" Version="3.6.0">
+    <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+</ItemGroup>
+```
+
+詳細については、[プロジェクト ファイルのパッケージ参照](/nuget/consume-packages/package-references-in-project-files)に関するページを参照してください。
+
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+`TrimmerRootAssembly` 項目ではアセンブリを "[*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
+
+次の XML では、トリミングから `System.Security` アセンブリが除外されます。
+
+```xml
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
+```
+
+## <a name="item-metadata"></a>項目メタデータ
+
+標準の [MSBuild 項目属性](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements)に加えて、次の項目メタデータ タグが .NET SDK によって利用可能になります。
+
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が発行ディレクトリにコピーされるタイミングが制御されます。 使用できる値は、項目が変更された場合にのみコピーする `PreserveNewest`、常に項目をコピーする `Always`、項目をコピーしない `Never` です。 パフォーマンスの観点からは、インクリメンタル ビルドが有効になるので `PreserveNewest` をお勧めします。
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+プロジェクト ディレクトリとそのサブディレクトリの外部にある項目の場合、発行先で項目のコピー先を決定するために、項目の [Link メタデータ](/visualstudio/msbuild/common-msbuild-item-metadata)が使用されます。 また、プロジェクト ツリーの外部にある項目が Visual Studio の [ソリューション エクスプローラー] ウィンドウにどのように表示されるかも、`Link` によって決定されます。
+
+プロジェクト コーンの外部にある項目に対して `Link` が指定されていない場合は、既定で `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` になります。 `LinkBase` を使用して、プロジェクト コーンの外部の項目に適切なベース フォルダーを指定できます。 ベース フォルダーの下のフォルダー階層は、`RecursiveDir` によって保持されます。 `LinkBase` を指定しないと、それは `Link` パスから省略されます。
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+次の図は、前の項目の `Include` glob によって含められるファイルがソリューション エクスプローラーにどのように表示されるかを示したものです。
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="LinkBase メタデータが指定された項目が表示されているソリューション エクスプローラー。":::
 
 ## <a name="see-also"></a>関連項目
 

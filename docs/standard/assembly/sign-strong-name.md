@@ -12,17 +12,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: f66b21c7b912cdf1b5e77a91cecd38580e495a51
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 63a6d350a2c174e3c16e7374e41b551f60f569f9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259656"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875318"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法: 厳密な名前でアセンブリに署名する
 
 > [!NOTE]
-> .NET Core では厳密な名前のアセンブリがサポートされており、.NET Core ライブラリ内のすべてのアセンブリは署名されていますが、ほとんどのサードパーティ アセンブリには厳密な名前は必要ありません。 詳細については、GitHub の「[厳密な名前の署名](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)」を参照してください。
+> .NET Core では厳密な名前のアセンブリがサポートされており、.NET Core ライブラリ内のすべてのアセンブリは署名されていますが、ほとんどのサードパーティ アセンブリには厳密な名前は必要ありません。 詳細については、GitHub の「[厳密な名前の署名](https://github.com/dotnet/runtime/blob/main/docs/project/strong-name-signing.md)」を参照してください。
 
 厳密な名前でアセンブリに署名するには、いくつかの方法があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "102259656"
   
 ### <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>アセンブリ リンカーを使用してアセンブリを作成し、厳密な名前でそのアセンブリに署名する  
   
-[開発者コマンドライン シェル](/visualstudio/ide/reference/command-prompt-powershell)を開き、次のコマンドを入力します。  
+[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を開いて、次のコマンドを入力します。  
 
 **al** **/out:** \<*assemblyName*> *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 

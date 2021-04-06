@@ -6,12 +6,12 @@ ms.author: brachtma
 ms.date: 03/12/2021
 ms.topic: tutorial
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 470849257f2a75bec9e708d8c17905f69c4d0aa7
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 3a773f7364e3fd6c8ad0073eac091fa38716afa6
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104875396"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231272"
 ---
 # <a name="tutorial-detect-stop-signs-in-images-with-model-builder"></a>チュートリアル: Model Builder で画像内の一時停止標識を検出する
 
@@ -253,11 +253,11 @@ Visual Studio で **[Azure portal で現在の実行を監視する]** リンク
 
     ```bash
     Predicted Boxes:
-    
+
     Top: 89.453415, Left: 481.95343, Right: 724.8073, Bottom: 388.32385, Label: Stop-Sign, Score: 0.99539465
     ```
 
-おめでとうございます。 Model Builder を使用して、画像内の一時停止標識を検出する機械学習モデルを正常に構築しました。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub リポジトリにあります。
+お疲れさまでした。 Model Builder を使用して、画像内の一時停止標識を検出する機械学習モデルを正常に構築しました。 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub リポジトリにあります。
 
 ## <a name="additional-resources"></a>その他のリソース
 

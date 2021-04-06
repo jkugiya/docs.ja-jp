@@ -2,12 +2,12 @@
 title: ネイティブ相互運用性のベスト プラクティス - .NET
 description: .NET でネイティブ コンポーネントとやり取りするためのベスト プラクティスについて説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 7730241ba834d9fcafaaf13055da1a03d359aa1b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391222"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479594"
 ---
 # <a name="native-interoperability-best-practices"></a>ネイティブ相互運用性のベスト プラクティス
 
@@ -84,15 +84,21 @@ GUID はシグネチャに直接使用できます。 多くの Windows API は�
 
 ## <a name="blittable-types"></a>blittable 型
 
-blittable 型は、マネージド コードとネイティブ コードで同じビット レベルの表現を持つ型です。 そのため、ネイティブ コードとの間でマーシャリングするために別の形式に変換する必要はなく、これによってパフォーマンスが向上することから、推奨されます。
+blittable 型は、マネージド コードとネイティブ コードで同じビット レベルの表現を持つ型です。 そのため、ネイティブ コードとの間でマーシャリングするために別の形式に変換する必要はなく、これによってパフォーマンスが向上することから、推奨されます。 一部の型は blittable ではありませんが、blittable コンテンツを含んでいることがわかっています。 これらの型は、他の型に含まれていない場合は blittable 型と同様の最適化が行われますが、構造体のフィールド内、または [`UnmanagedCallersOnlyAttribute`](xref:System.Runtime.InteropServices.UnmanagedCallersOnlyAttribute) の目的では blittable 型とは見なされません。
 
 **blittable 型:**
 
-- `byte`、`sbyte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`single`、`double`
-- blittable 型の入れ子になっていない 1 次元配列 (たとえば `int[]`)
-- インスタンス フィールドに対して blittable 値型のみを持つ固定レイアウトの構造体とクラス
+- `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
+- インスタンス フィールドに対して blittable 値型のみを持つ固定レイアウトの構造体
   - 固定レイアウトには `[StructLayout(LayoutKind.Sequential)]` または `[StructLayout(LayoutKind.Explicit)]` が必要です
-  - 構造体は既定で `LayoutKind.Sequential` であり、クラスは `LayoutKind.Auto` です
+  - 構造体は既定で `LayoutKind.Sequential` です
+
+**blittable コンテンツを含む型:**
+
+- blittable プリミティブ型の入れ子になっていない 1 次元配列 (`int[]` など)
+- インスタンス フィールドに対して blittable 値型のみを持つ固定レイアウトのクラス
+  - 固定レイアウトには `[StructLayout(LayoutKind.Sequential)]` または `[StructLayout(LayoutKind.Explicit)]` が必要です
+  - クラスは既定で `LayoutKind.Auto` です
 
 **blittable ではない:**
 
@@ -100,9 +106,13 @@ blittable 型は、マネージド コードとネイティブ コードで同�
 
 **blittable の場合がある:**
 
-- `char`、`string`
+- `char`
 
-blittable 型が参照渡しされると、中間バッファーにコピーされるのではなく、マーシャラーによって単純に固定されます (クラスは本質的に参照渡しされ、構造体は `ref` または `out` と共に使用されるときに参照渡しされます)。
+**場合によっては、blittable コンテンツを含む型:**
+
+- `string`
+
+`in`、`ref`、`out` のいずれかを使用して参照によって blittable 型が渡された場合、または値によって blittable コンテンツを含む型が渡された場合、これらは中間バッファーにコピーされるのではなく、単にマーシャラーによってピン留めされます。
 
 1 次元配列、"**または**" `CharSet = CharSet.Unicode` が指定された `[StructLayout]` で明示的にマークされている型の一部である場合、`char`は blittable です。
 
@@ -114,9 +124,9 @@ public struct UnicodeCharStruct
 }
 ```
 
-別の型に含まれておらず、`[MarshalAs(UnmanagedType.LPWStr)]` でマークされた引数として渡される場合、または `[DllImport]` に `CharSet = CharSet.Unicode` が設定されている場合、`string` は blittable です。
+`string` は、別の型に含まれておらず、`[MarshalAs(UnmanagedType.LPWStr)]` でマークされた引数として渡される場合、または `[DllImport]` に `CharSet = CharSet.Unicode` が設定されている場合、blittable コンテンツが含まれます。
 
-固定された `GCHandle` を作成しようとすることで、型が blittable かどうかを確認できます。 型が文字列ではない場合、または blittable と見なされる場合、`GCHandle.Alloc` は `ArgumentException` をスローします。
+固定された `GCHandle` を作成しようとすると、型が blittable であるか、blittable コンテンツが含まれているかを確認できます。 型が文字列ではない場合、または blittable と見なされる場合、`GCHandle.Alloc` は `ArgumentException` をスローします。
 
 ✔️ 実行: 可能な限り、構造体を blittable にします。
 
@@ -202,6 +212,46 @@ C `void*` である Windows `PVOID` は `IntPtr` または `UIntPtr` のいず�
 [Windows のデータ型](/windows/desktop/WinProg/windows-data-types)
 
 [データ型の範囲](/cpp/cpp/data-type-ranges)
+
+### <a name="formerly-built-in-supported-types"></a>以前の組み込みサポート型
+
+型の組み込みサポートが削除される珍しい場合があります。
+
+[`UnmanagedType.HString`](xref:System.Runtime.InteropServices.UnmanagedType) 組み込みマーシャリング サポートは、.NET 5 リリースで削除されました。 このマーシャリング型を使用した以前のフレームワークを対象とするバイナリは、再コンパイルする必要があります。 この型をマーシャリングすることもできますが、次のコード例に示すように、手動でマーシャリングする必要があります。 このコードは今後も動作し、以前のフレームワークと互換性があります。
+
+```csharp
+static class HSTRING
+{
+    public static IntPtr FromString(string s)
+    {
+        Marshal.ThrowExceptionForHR(WindowsCreateString(s, s.Length, out IntPtr h));
+        return h;
+    }
+
+    public static void Delete(IntPtr s)
+    {
+        Marshal.ThrowExceptionForHR(WindowsDeleteString(s));
+    }
+
+    [DllImport("api-ms-win-core-winrt-string-l1-1-0.dll", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
+    private static extern int WindowsCreateString(
+        [MarshalAs(UnmanagedType.LPWStr)] string sourceString, int length, out IntPtr hstring);
+
+    [DllImport("api-ms-win-core-winrt-string-l1-1-0.dll", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
+    private static extern int WindowsDeleteString(IntPtr hstring);
+}
+
+// Usage example
+IntPtr hstring = HSTRING.FromString("HSTRING from .NET to WinRT API");
+try
+{
+    // Pass hstring to WinRT or Win32 API.
+}
+finally
+{
+    HSTRING.Delete(hstring);
+}
+```
 
 ## <a name="structs"></a>構造体
 

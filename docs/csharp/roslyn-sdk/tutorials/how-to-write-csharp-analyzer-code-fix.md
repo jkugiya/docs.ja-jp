@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 03/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 7bc2b66367af5e764e77d44dde45a379d1aba938
-ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.openlocfilehash: b712cb4df5ab6dae825407212685cb1a08b2d189
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102511953"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637248"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -51,7 +51,7 @@ Visual Studio インストーラーで **.NET Compiler Platform SDK** をイン�
 > [!TIP]
 > アナライザーを実行するときは、Visual Studio の 2 つ目のコピーを開始します。 この 2 つ目のコピーは、別のレジストリ ハイブを使用して設定を保存します。 これにより、Visual Studio の 2 つのコピーのビジュアル設定を区別することができます。 Visual Studio の実験的な実行のために、別のテーマを選択することができます。 また、設定のローミングや、Visual Studio アカウントへのログインには、Visual Studio の実験的な実行が使用されません。 そのため、設定を分けておくことができます。
 
-開始した 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成します (任意のターゲット フレームワークが機能します。アナライザーはソース レベルで動作します)。波線の下線が表示されているトークンにマウス カーソルを移動すると、アナライザーに設定されている警告テキストが表示されます。
+開始した 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成します (任意のターゲット フレームワークが動作し、アナライザーはソース レベルで動作します)。波線の下線が表示されているトークンにマウス カーソルを移動すると、アナライザーに設定されている警告テキストが表示されます。
 
 テンプレートを使用すると、次の図のように、型名が小文字の個々の型宣言に対して警告を報告するアナライザーが作成されます。
 
@@ -259,7 +259,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 単体テスト プロジェクトで *MakeConstUnitTests.cs* ファイルを開きます。 テンプレートによって、アナライザーとコード修正の単体テスト用に 2 つの共通パターンに従う 2 つのテストが作成されています。 `TestMethod1` は、診断を報告すべきではないときに、アナライザーから診断が報告されないようにするテストのパターンを示します。 `TestMethod2` は、診断を報告し、コード修正を実行するためのパターンを示します。
 
-このテンプレートは、単体テストのために、[Microsoft.CodeAnalysis.Testing](https://github.com/dotnet/roslyn-sdk/blob/master/src/Microsoft.CodeAnalysis.Testing/README.md) パッケージを使用します。
+このテンプレートは、単体テストのために、[Microsoft.CodeAnalysis.Testing](https://github.com/dotnet/roslyn-sdk/blob/main/src/Microsoft.CodeAnalysis.Testing/README.md) パッケージを使用します。
 
 > [!TIP]
 > テスト ライブラリでは、次のような特殊なマークアップ構文がサポートされています。
@@ -267,11 +267,11 @@ using Microsoft.CodeAnalysis.Formatting;
 > - `[|text|]`: 診断が `text` に報告されることを示します。 既定では、このフォームは、`DiagnosticAnalyzer.SupportedDiagnostics` によって提供される `DiagnosticDescriptor` が 1 つだけのアナライザーのテストにのみ使用できます。
 > - `{|ExpectedDiagnosticId:text|}`: <xref:Microsoft.CodeAnalysis.Diagnostic.Id> `ExpectedDiagnosticId` を使用した診断が `text` に報告されることを示します。
 
-`MakeConstUnitTest` クラスに次のテスト メソッドを追加します。
+`MakeConstUnitTest` クラスのテンプレート テストを次のテスト メソッドに置き換えます。
 
 [!code-csharp[test method for fix test](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "test method for fix test")]
 
-これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー** を開きます。 その後、 **[すべて実行]** を選択します。
+このテストを実行して、合格したことを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー** を開きます。 その後、 **[すべて実行]** を選択します。
 
 ## <a name="create-tests-for-valid-declarations"></a>有効な宣言のテストを作成する
 
@@ -382,17 +382,17 @@ foreach (VariableDeclaratorSyntax variable in localDeclaration.Declaration.Varia
 
 幸いにも、上記のすべてのバグは、ここで学んだテクニックを使って解決できます。
 
-最初のバグを修正するには、まず *DiagnosticAnalyzer.cs* を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの _直前_ に `context.SemanticModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
+最初のバグを修正するには、まず *MakeConstAnalyzer.cs* を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの _直前_ に `context.SemanticModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
 
-[!code-csharp[Retrieve type information](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableConvertedType "Retrieve type information")]
+[!code-csharp[Retrieve type information](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#VariableConvertedType "Retrieve type information")]
 
 次に、`foreach` ループ内に、各初期化子が変数型に変換できることを確認します。 初期化子が定数であることを確認したら、次の検査を追加します。
 
-[!code-csharp[Ensure non-user-defined conversion](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#BailOutOnUserDefinedConversion "Bail-out on user-defined conversion")]
+[!code-csharp[Ensure non-user-defined conversion](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#BailOutOnUserDefinedConversion "Bail-out on user-defined conversion")]
 
 次の変更は、最後の変更に基づいています。 最初の foreach ループの中かっこの前に、定数が文字列または null の場合にローカル宣言の型を検査する次のコードを追加します。
 
-[!code-csharp[Handle special cases](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#HandleSpecialCases "Handle special cases")]
+[!code-csharp[Handle special cases](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#HandleSpecialCases "Handle special cases")]
 
 `var` キーワードを正しい型名に置き換えるには、コード修正プロバイダーに少しコードを追加する必要があります。 *MakeConstCodeFixProvider.cs* に戻ります。 追加するコードで、次の手順が実行されます。
 
@@ -429,7 +429,7 @@ int k = i + j;
 
 これらの変更の後は、最初の 2 つの変数にのみ赤い波線が表示されます。 `i` と `j` の両方に `const` を追加すると、`const` になる可能性があるので、`k` で新しい警告を受け取ります。
 
-おめでとうございます! ここでは最初の .NET Compiler Platform 拡張機能を作成しました。これは、その場でコード分析を実行し、問題を検出してそれを修正する簡単な修正案を提供する拡張機能です。 この過程で、.NET Compiler Platform SDK (Roslyn API) に含まれる多くのコード API を学びました。 サンプル GitHub リポジトリの[完成したサンプル](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)に対して作業を検査することができます。
+おめでとうございます! ここでは最初の .NET Compiler Platform 拡張機能を作成しました。これは、その場でコード分析を実行し、問題を検出してそれを修正する簡単な修正案を提供する拡張機能です。 この過程で、.NET Compiler Platform SDK (Roslyn API) に含まれる多くのコード API を学びました。 サンプル GitHub リポジトリの[完成したサンプル](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/Tutorials/MakeConst)に対して作業を検査することができます。
 
 ## <a name="other-resources"></a>その他のリソース
 

@@ -5,12 +5,12 @@ ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: f0c8c8a61aec2ee3b527d392e5460b9b77a03f26
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604607"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637197"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK スタイルのプロジェクトでのターゲット フレームワーク
 
@@ -143,7 +143,7 @@ TFM の最後に OS バージョンをオプションで指定することもで
 </Project>
 ```
 
-ライブラリまたはアプリ内で、[プリプロセッサ ディレクティブ](../csharp/language-reference/preprocessor-directives/preprocessor-if.md)を使用して各ターゲット フレームワーク用にコンパイルするための条件付きコードを記述します。
+ライブラリまたはアプリ内で、[プリプロセッサ ディレクティブ](../csharp/language-reference/preprocessor-directives.md#conditional-compilation)を使用して各ターゲット フレームワーク用にコンパイルするための条件付きコードを記述します。
 
 ```csharp
 public class MyClass
@@ -184,7 +184,7 @@ SDK スタイル プロジェクトを使用する場合、ビルド システ�
 
 ## <a name="see-also"></a>参照
 
-- [.NET 5 でのターゲット フレームワーク名](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [.NET 5 でのターゲット フレームワーク名](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)
 - [デスクトップ アプリで Windows ランタイム API を呼び出す](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [クロス プラットフォーム ツールによるライブラリの開発](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)

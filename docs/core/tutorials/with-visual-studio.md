@@ -1,17 +1,17 @@
 ---
 title: Visual Studio を使用して .NET コンソール アプリケーションを作成する
 description: Visual Studio を使用して、C# または Visual Basic で .NET コンソール アプリケーションを作成する方法について学習します。
-ms.date: 06/08/2020
+ms.date: 03/26/2021
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 3986ef4083b964799be33d2876570ac4cf2082b8
-ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.custom: vs-dotnet,contperf-fy21q3
+ms.openlocfilehash: e55927080ab30e7a24c54656b7f11a94a023bd65
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102511854"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636806"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET コンソール アプリケーションを作成する
 
@@ -19,7 +19,7 @@ ms.locfileid: "102511854"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- **.NET Core クロスプラットフォーム開発** ワークロードがインストールされている [Visual Studio 2019 バージョン 16.8 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET 5.0 SDK が自動的にインストールされます。
+- **.NET Core クロスプラットフォーム開発** ワークロードがインストールされている [Visual Studio 2019 バージョン 16.9.2 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET 5.0 SDK が自動的にインストールされます。
 
   詳細については、[Visual Studio を使用した .NET SDK のインストール](../install/windows.md#install-with-visual-studio)に関する記述を参照してください。
 
@@ -28,12 +28,6 @@ ms.locfileid: "102511854"
 "HelloWorld" という名前の .NET コンソール アプリ プロジェクトを作成します。
 
 1. Visual Studio 2019 を起動します。
-
-1. **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** の順に選択してから、 **[[新しいプロジェクト] にすべての .NET Core テンプレートを表示する (再起動が必要)]** を選びます。
-
-   :::image type="content" source="media/with-visual-studio/dotnet-options.png" alt-text="すべての .NET テンプレート オプションを表示する":::
-
-1. Visual Studio を閉じて、開き直します。
 
 1. スタート ページで、 **[新しいプロジェクトの作成]** を選択します。
 
@@ -106,7 +100,7 @@ End Module
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
    :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
-   このコードによりコンソール ウィンドウにプロンプトが表示され、ユーザーが文字列を入力して <kbd>Enter</kbd> キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します (Visual Basic では `currentDate`)。 これらの値がコンソール ウィンドウに表示されます。 最後に、コンソール ウィンドウにプロンプトを表示し、<xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> メソッドを呼び出してユーザーによる入力を待ちます。
+   このコードによりコンソール ウィンドウにプロンプトが表示され、ユーザーが文字列を入力して <kbd>Enter</kbd> キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `currentDate` という変数に代入します。 これらの値がコンソール ウィンドウに表示されます。 最後に、コンソール ウィンドウにプロンプトを表示し、<xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> メソッドを呼び出してユーザーによる入力を待ちます。
 
    <xref:System.Environment.NewLine> は、プラットフォームに依存せず、言語に依存せずに、改行を表す方法です。 代替手段は、C# では `\n`、Visual Basic では `vbCrLf` です。
 

@@ -3,12 +3,12 @@ title: 分散トレースを収集する - .NET
 description: OpenTelemetry、Application Insights、または ActivityListener を使用して .NET アプリケーションの分散トレースを収集するためのチュートリアル
 ms.topic: tutorial
 ms.date: 03/14/2021
-ms.openlocfilehash: f5e2ea6dc09edbc7c51586f4da8d4a6088804cbd
-ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
+ms.openlocfilehash: de10145dcf731e2fe6293461f127463c9dee3cf5
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105111520"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231181"
 ---
 # <a name="collect-a-distributed-trace"></a>分散トレースを収集する
 
@@ -281,7 +281,7 @@ Example work done
                 ActivityStarted = activity => Console.WriteLine("Started: {0,-15} {1,-60}", activity.OperationName, activity.Id),
                 ActivityStopped = activity => Console.WriteLine("Stopped: {0,-15} {1,-60} {2,-15}", activity.OperationName, activity.Id, activity.Duration)
             });
-            
+
             await DoSomeWork();
             Console.WriteLine("Example work done");
         }

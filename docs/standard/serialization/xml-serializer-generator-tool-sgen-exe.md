@@ -3,12 +3,12 @@ title: XML シリアライザー ジェネレーター ツール (Sgen.exe)
 description: XML シリアライザー ジェネレーター ツールは、アセンブリ内の型の XML シリアル化アセンブリを生成します。これにより、XmlSerializer の起動パフォーマンスが向上します。
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: b703f6755a4aab809c28f8009a0b358c2e6962bb
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 259f4cbafbe76d3645940ad425f41afb0b8cd304
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259851"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653817"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML シリアライザー ジェネレーター ツール (Sgen.exe)
 
@@ -23,7 +23,7 @@ sgen [options]
 ```
   
 > [!TIP]
-> .NET Framework ツールが適切に機能するには、 `Path`、`Include`、および `Lib` の各環境変数を正しく設定する必要があります。 これらの環境変数を設定するには、\<SDK>\\\<version>\Bin ディレクトリにある SDKVars.bat を実行します。 SDKVars.bat は、コマンド シェルごとに実行する必要があります。
+> .NET Framework ツールを正常に機能させるには、[Visual Studio 開発者コマンド プロンプトまたは Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell) を使用するか、`Path`、`Include`、`Lib` の各環境変数を正しく設定する必要があります。 これらの環境変数を設定するには、 *\<SDK>\\\<version>\Bin* ディレクトリにある *SDKVars.bat* を実行します。
   
 ## <a name="parameters"></a>パラメーター  
   

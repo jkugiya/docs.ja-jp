@@ -43,6 +43,8 @@ items:
                 items:
                   - name: NULL 値の許容に関する注釈の変更
                     href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                  - name: 新しい Queryable メソッドのオーバーロード
+                    href: core-libraries/6.0/additional-linq-queryable-method-overloads.md
                   - name: ストリーム派生型でのパラメーター名の変更
                     href: core-libraries/6.0/parameters-renamed-on-stream-derived-types.md
                   - name: 標準の数値書式の解析精度
@@ -51,6 +53,8 @@ items:
                 items:
                   - name: API によって ArgumentNullException がスローされる
                     href: windows-forms/6.0/apis-throw-argumentnullexception.md
+                  - name: DataGridView の API によって InvalidOperationException がスローされる
+                    href: windows-forms/6.0/null-owner-causes-invalidoperationexception.md
                   - name: NotifyIcon。テキストの最大文字数の増加
                     href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                   - name: TableLayoutSettings properties throw InvalidEnumArgumentException
@@ -443,6 +447,8 @@ items:
                 items:
                   - name: NULL 値の許容に関する注釈の変更
                     href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                  - name: 新しい Queryable メソッドのオーバーロード
+                    href: core-libraries/6.0/additional-linq-queryable-method-overloads.md
                   - name: ストリーム派生型でのパラメーター名の変更
                     href: core-libraries/6.0/parameters-renamed-on-stream-derived-types.md
                   - name: 標準の数値書式の解析精度
@@ -619,6 +625,8 @@ items:
                 items:
                   - name: API によって ArgumentNullException がスローされる
                     href: windows-forms/6.0/apis-throw-argumentnullexception.md
+                  - name: DataGridView の API によって InvalidOperationException がスローされる
+                    href: windows-forms/6.0/null-owner-causes-invalidoperationexception.md
                   - name: NotifyIcon。テキストの最大文字数の増加
                     href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                   - name: TableLayoutSettings properties throw InvalidEnumArgumentException

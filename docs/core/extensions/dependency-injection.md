@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: cc030e32846690b6544b99030800b50055a3113e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0b5526f24f3ac658123acd030c3adf32c346422a
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "102402019"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079519"
 ---
 # <a name="dependency-injection-in-net"></a>.NET での依存関係の挿入
 
@@ -173,7 +173,7 @@ Web アプリケーションの場合、スコープ付き有効期間は、ク�
 Entity Framework Core を使用する場合、既定では <xref:Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext%2A> 拡張メソッドによって、スコープ付き有効期間を持つ `DbContext` 型が登録されます。
 
 > [!NOTE]
-> シングルトンからスコープ付きサービスを解決 **しない** でください。また、たとえば一時的なサービスにより、間接的に解決しないように注意してください。 後続の要求を処理する際に、サービスが正しくない状態になる可能性があります。 次の場合は問題ありません。
+> シングルトンからスコープ付きサービスを解決 ***しない*** でください。また、たとえば一時的なサービスにより、間接的に解決しないようにご注意ください。 後続の要求を処理する際に、サービスが正しくない状態になる可能性があります。 次の場合は問題ありません。
 >
 > - スコープ付きまたは一時的なサービスからシングルトン サービスを解決する。
 > - スコープ付きサービスを、別のスコープ付きまたは一時的なサービスから解決する。
@@ -193,9 +193,6 @@ Entity Framework Core を使用する場合、既定では <xref:Microsoft.Exten
 
 要求を処理するアプリでは、アプリのシャットダウン時に <xref:Microsoft.Extensions.DependencyInjection.ServiceProvider> が破棄されるとき、シングルトン サービスが破棄されます。 アプリがシャットダウンされるまでメモリは解放されないため、シングルトン サービスでのメモリ使用を考慮してください。
 
-> [!WARNING]
-> シングルトンからスコープ付きサービスを解決 "_*_しないでください_*_"。 後続の要求を処理する際に、サービスが正しくない状態になる可能性があります。 スコープ付きまたは一時的なサービスからシングルトン サービスを解決することに問題はありません。
-
 ## <a name="service-registration-methods"></a>サービス登録メソッド
 
 このフレームワークでは、特定のシナリオで役立つサービス登録拡張メソッドが提供されます。
@@ -210,7 +207,7 @@ Entity Framework Core を使用する場合、既定では <xref:Microsoft.Exten
 
 型の廃棄の詳細については、「[サービスの破棄](dependency-injection-guidelines.md#disposal-of-services)」を参照してください。
 
-実装型のみでサービスを登録することは、同じ実装とサービスの型でそのサービスを登録することと同じです。 明示的なサービス型を使用しないメソッドを使用してサービスの複数の実装を登録できないのは、このためです。 これらのメソッドでは、サービスの複数のインスタンスを登録できますが、すべて同じ "*実装*" 型になります。
+実装型のみでサービスを登録することは、同じ実装とサービスの型でそのサービスを登録することと同じです。 明示的なサービス型を使用しないメソッドを使用してサービスの複数の実装を登録できないのは、このためです。 これらのメソッドでは、サービスの複数の "*インスタンス*" を登録できますが、すべて同じ "*実装*" 型になります。
 
 上記のサービス登録メソッドのずれかを使用して、同じサービス型の複数のサービス インスタンスを登録できます。 次の例では、`IMessageWriter` をサービス型として使用して、`AddSingleton` を 2 回呼び出します。 2 回目の `AddSingleton` の呼び出しにより、`IMessageWriter` として解決された場合は前のものがオーバーライドされ、`IEnumerable<IMessageWriter>` を介して複数のサービスが解決された場合は前のものに追加されます。 `IEnumerable<{SERVICE}>` を介して解決された場合、サービスは登録された順に表示されます。
 

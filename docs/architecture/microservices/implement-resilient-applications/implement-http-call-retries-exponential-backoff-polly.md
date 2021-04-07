@@ -2,12 +2,12 @@
 title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
 description: HTTP エラーを Polly と IHttpClientFactory で処理する方法について説明します
 ms.date: 01/13/2021
-ms.openlocfilehash: c2831f73ed38b48fd32fa241f8fe1792b9adf3d4
-ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.openlocfilehash: cd209aa7f2802ffea80e14f0e3e77cc4fc29b6d5
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102511789"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122964"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>IHttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -51,20 +51,16 @@ Polly では、再試行回数を指定した再試行ポリシー、指数バ�
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>再試行ポリシーにジッタ方式を追加する
 
-通常の再試行ポリシーは、コンカレンシーやスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止の場合に多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 これにより、急増するバックオフにランダム性を加えることで、エンドツーエンド システム全体のパフォーマンスを向上できます。 こうすれば、問題が発生した際のスパイクを分散できます。 この原則を次の例で示します。
+通常の再試行ポリシーは、コンカレンシーやスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止で多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 この戦略により、エンドツーエンド システムの全体的なパフォーマンスを向上させることができます。 [Polly: Retry with Jitter](https://github.com/App-vNext/Polly/wiki/Retry-with-jitter) (ジッタで再試行) で推奨されているように、指数バックオフでの初期再試行遅延の中央値を適切に制御して、スムーズで均等に分散された再試行間隔を適用することで、優れたジッタ戦略を実施できます。 この方法は、問題が発生したときにスパイクを分散させることができます。 この原則を次の例で示します。
 
 ```csharp
-Random jitterer = new Random();
-var retryWithJitterPolicy = HttpPolicyExtensions
-    .HandleTransientHttpError()
-    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100))
-    );
-```
 
-Polly はプロジェクトの Web サイトを通じて、実稼働可能なジッタ アルゴリズムを提供します。
+var delay = Backoff.DecorrelatedJitterBackoffV2(medianFirstRetryDelay: TimeSpan.FromSeconds(1), retryCount: 5);
+
+var retryPolicy = Policy
+    .Handle<FooException>()
+    .WaitAndRetryAsync(delay);
+```
 
 ## <a name="additional-resources"></a>その他の技術情報
 

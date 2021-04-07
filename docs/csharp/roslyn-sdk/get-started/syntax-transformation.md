@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 706e4643ecc81d252a9192dc5e8850024770628f
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: f12727332256acd9bbe828b9149376080facd156
+ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639404"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105964823"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 
@@ -28,7 +28,7 @@ ms.locfileid: "100639404"
 
 ### <a name="create-nodes-with-factory-methods"></a>ファクトリ メソッドを使用してノードを作成する
 
-最初の構文変換では、ファクトリ メソッドを使用します。 `using System.Collections;` ステートメントを `using System.Collections.Generic;` ステートメントで置き換えます。 この例は、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ファクトリ メソッドを使用して <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> オブジェクトを作成する方法を示しています。 **ノード**、**トークン**、**トリビア** の各種類に対して、その種類のインスタンスを作成するファクトリ メソッドが用意されています。 ボトムアップ方式でノードを階層的に構成して、構文ツリーを作成します。 次に、既存のプログラムを変換して、既存のノードを作成した新しいツリーで置き換えます。
+最初の構文変換では、ファクトリ メソッドを使用します。 `using System.Collections;` ステートメントを `using System.Collections.Generic;` ステートメントで置き換えます。 この例は、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ファクトリ メソッドを使用して <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> オブジェクトを作成する方法を示しています。 **ノード**、**トークン**、**トリビア** の各種類に対して、その種類のインスタンスを作成するファクトリ メソッドが用意されています。 ボトムアップ方式でノードを階層的に構成して、構文ツリーを作成します。 次に、既存のノードを作成した新しいツリーで置き換えることで、既存のプログラムを変換します。
 
 Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、 **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。 **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。 このクイック スタートには 2 つのサンプル プロジェクトがあるため、ソリューションに「**SyntaxTransformationQuickStart**」、プロジェクトに「**ConstructionCS**」という名前を付けます。 **[OK]** をクリックします。
 

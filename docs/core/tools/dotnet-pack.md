@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドを実行すると、.NET プロジェクトの NuGet パッケージが作成されます。
 ms.date: 04/28/2020
-ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 52790b61e8b2d59fa6a8fc68bad6a1e0dc13a97b
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190079"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122640"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -39,7 +39,7 @@ dotnet pack -h|--help
 - `--include-symbols` -シンボル パッケージを作成します。
 - `--include-source` -ソース ファイルが含まれた `src` フォルダーを含むシンボル パッケージを作成します。
 
-パックされるプロジェクトの NuGet 依存関係が *.nuspec* ファイルに追加されるため、パッケージのインストール時に適切に解決されます。 プロジェクト間参照はプロジェクト内にはパッケージ化されません。 現時点では、プロジェクト間の依存関係がある場合は、プロジェクトごとにパッケージが必要になります。
+パックされるプロジェクトの NuGet 依存関係が *.nuspec* ファイルに追加されるため、パッケージのインストール時に適切に解決されます。 パックされたプロジェクトに他のプロジェクトへの参照がある場合、他のプロジェクトはパッケージに含まれません。 現時点では、プロジェクト間の依存関係がある場合は、プロジェクトごとにパッケージが必要になります。
 
 既定では、`dotnet pack` は最初にプロジェクトをビルドします。 この動作を避けたい場合は、`--no-build` オプションを渡します。 このオプションは、コードが既にビルドされていることがわかっている場合の継続的インテグレーション (CI) ビルド シナリオで役立つことがよくあります。
 

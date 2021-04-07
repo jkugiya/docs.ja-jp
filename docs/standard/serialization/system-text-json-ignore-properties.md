@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: b2ff4c147e2fac0ba5bf3367f881fc9d8ee8f1af
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: abd5cad5bdf38875204f5e42936fbd2f7ca126c9
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583911"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610825"
 ---
 # <a name="how-to-ignore-properties-with-systemtextjson"></a>System.Text.Json でプロパティを無視する方法
 
@@ -107,7 +107,7 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
-シリアル化のときにすべての null 値プロパティを無視するには、次の例で示されているように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> プロパティを `true` に設定します。
+シリアル化または逆シリアル化のときにすべての null 値プロパティを無視するには、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> プロパティを `true` に設定します。 次の例は、シリアル化に使用されるこのオプションを示しています。
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/SerializeExcludeNullValueProperties.cs" id="Serialize":::
 :::code language="vb" source="snippets/system-text-json-how-to/vb/SerializeExcludeNullValueProperties.vb" id="Serialize":::

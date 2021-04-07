@@ -2,12 +2,12 @@
 title: 破壊的変更:一部の API によって ArgumentNullException がスローされる
 description: .NET 6 での破壊的変更について説明します。一部の API で引数が検証され、ArgumentNullException がスローされるようになりました。
 ms.date: 01/29/2021
-ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: dd0ee33ca7335bfd6e4ddfefca0e56ab719178eb
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255738"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079571"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>一部の API によって ArgumentNullException がスローされる
 
@@ -34,17 +34,23 @@ ms.locfileid: "102255738"
 
 ## <a name="affected-apis"></a>影響を受ける API
 
-次の表に、影響を受けるプロパティを一覧表示します。
+次の表に、影響を受ける API と特定のパラメーターの一覧を示します。
 
-| プロパティ | 変更されたバージョン |
-|-|-|-|-|
-| <xref:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)?displayProperty=fullName> | Preview 1 |
+| メソッド/プロパティ | パラメーター名 | 変更されたバージョン |
+|-|-|-|
+| <xref:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)?displayProperty=fullName> | `index` | Preview 1 |
+| <xref:System.Windows.Forms.DataGridViewRowStateChangedEventArgs.%23ctor(System.Windows.Forms.DataGridViewRow,System.Windows.Forms.DataGridViewElementStates)> | `dataGridViewRow` | Preview 4 |
+
+## <a name="see-also"></a>関連項目
+
+- [ノードが別のものに割り当てられている場合、TreeNodeCollection.Item により例外がスローされる](treenodecollection-item-throws-argumentexception.md)
 
 <!--
 
 ### Affected APIs
 
 - `P:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)`
+- `M:System.Windows.Forms.DataGridViewRowStateChangedEventArgs.#ctor(System.Windows.Forms.DataGridViewRow,System.Windows.Forms.DataGridViewElementStates)`
 
 ### Category
 

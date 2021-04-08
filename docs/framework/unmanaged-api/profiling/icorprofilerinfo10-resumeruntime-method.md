@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorProfilerInfo10:: ResumeRuntime メソッド'
+description: '詳細情報: ICorProfilerInfo10::ResumeRuntime メソッド'
 title: ICorProfilerInfo10::ResumeRuntime
 ms.date: 08/06/2019
 dev_langs:
@@ -14,12 +14,12 @@ author: davmason
 ms.author: davmason
 ms.openlocfilehash: 6e40270377fab07e110bbd1ea0f94e4e10c3d033
 ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2021
 ms.locfileid: "102103583"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: ResumeRuntime メソッド
+# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10::ResumeRuntime メソッド
 
 GC を実行せずにランタイムを再開します。
 
@@ -31,13 +31,13 @@ HRESULT ResumeRuntime();
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
+**プラットフォーム:** [.NET Core がサポートされているオペレーティング システム](../../../core/install/windows.md?pivots=os-windows)に関するページを参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
+**.NET のバージョン:** [!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

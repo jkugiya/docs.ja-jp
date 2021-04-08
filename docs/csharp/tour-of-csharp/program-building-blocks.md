@@ -2,12 +2,12 @@
 title: C# プログラムの構成要素
 description: C# メンバー、式、およびステートメントについて説明します。 型には、作成するメンバーが含まれます。 これらのメンバーは、ステートメントおよび式から構築されます。
 ms.date: 08/06/2020
-ms.openlocfilehash: 79ba391a6c4c6dc453f6c6e07107e4dd831e111d
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 87410697bbed305c746f1440cca61dcbe53f88a7
+ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582957"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106288057"
 ---
 # <a name="program-building-blocks"></a>プログラムの構成要素
 
@@ -20,7 +20,7 @@ ms.locfileid: "100582957"
 クラスに格納できるメンバーの種類の概要を次の一覧に示します。
 
 - **定数**: クラスに関連付けられている定数値
-- **フィールド**: クラスに関連付けられている変数
+- **フィールド**: クラスと関連付けられている変数
 - **メソッド**: クラスによって実行可能なアクション
 - **[プロパティ]** :クラスの名前付きプロパティの読み取りと書き込みに関連付けられているアクション
 - **インデクサー**: 配列など、クラスのインスタンスのインデックス作成に関連付けられているアクション

@@ -2,12 +2,12 @@
 title: ネイティブ相互運用性のベスト プラクティス - .NET
 description: .NET でネイティブ コンポーネントとやり取りするためのベスト プラクティスについて説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: 7730241ba834d9fcafaaf13055da1a03d359aa1b
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: b7a5cb3fd38136250be91951bf73b4197df7ad1c
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103479594"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610838"
 ---
 # <a name="native-interoperability-best-practices"></a>ネイティブ相互運用性のベスト プラクティス
 
@@ -171,29 +171,29 @@ Windows API で一般的に使用されるデータ型と、Windows コードを
 
 次の型は、32 ビット版と 64 ビット版の Windows でサイズは同じですが、名前は異なります。
 
-| 幅 | Windows          | C (Windows)          | C#       | 代替                          |
-|:------|:-----------------|:---------------------|:---------|:-------------------------------------|
-| 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
-| 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
-| 8     | `BYTE`           | `unsigned char`      | `byte`   |                                      |
-| 8     | `CHAR`           | `char`               | `sbyte`  |                                      |
-| 8     | `UCHAR`          | `unsigned char`      | `byte`   |                                      |
-| 16    | `SHORT`          | `short`              | `short`  |                                      |
-| 16    | `CSHORT`         | `short`              | `short`  |                                      |
-| 16    | `USHORT`         | `unsigned short`     | `ushort` |                                      |
-| 16    | `WORD`           | `unsigned short`     | `ushort` |                                      |
-| 16    | `ATOM`           | `unsigned short`     | `ushort` |                                      |
-| 32    | `INT`            | `int`                | `int`    |                                      |
-| 32    | `LONG`           | `long`               | `int`    |                                      |
-| 32    | `ULONG`          | `unsigned long`      | `uint`   |                                      |
-| 32    | `DWORD`          | `unsigned long`      | `uint`   |                                      |
-| 64    | `QWORD`          | `long long`          | `long`   |                                      |
-| 64    | `LARGE_INTEGER`  | `long long`          | `long`   |                                      |
-| 64    | `LONGLONG`       | `long long`          | `long`   |                                      |
-| 64    | `ULONGLONG`      | `unsigned long long` | `ulong`  |                                      |
-| 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
-| 32    | `HRESULT`        | `long`               | `int`    |                                      |
-| 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
+| 幅 | Windows          | C#       | 代替                          |
+|:------|:-----------------|:---------|:-------------------------------------|
+| 32    | `BOOL`           | `int`    | `bool`                               |
+| 8     | `BOOLEAN`        | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
+| 8     | `BYTE`           | `byte`   |                                      |
+| 8     | `CHAR`           | `sbyte`  |                                      |
+| 8     | `UCHAR`          | `byte`   |                                      |
+| 16    | `SHORT`          | `short`  |                                      |
+| 16    | `CSHORT`         | `short`  |                                      |
+| 16    | `USHORT`         | `ushort` |                                      |
+| 16    | `WORD`           | `ushort` |                                      |
+| 16    | `ATOM`           | `ushort` |                                      |
+| 32    | `INT`            | `int`    |                                      |
+| 32    | `LONG`           | `int`    |  [`CLong` および `CULong`](#cc-long) を参照してください。 |
+| 32    | `ULONG`          | `uint`   |  [`CLong` および `CULong`](#cc-long) を参照してください。 |
+| 32    | `DWORD`          | `uint`   |                                      |
+| 64    | `QWORD`          | `long`   |                                      |
+| 64    | `LARGE_INTEGER`  | `long`   |                                      |
+| 64    | `LONGLONG`       | `long`   |                                      |
+| 64    | `ULONGLONG`      | `ulong`  |                                      |
+| 64    | `ULARGE_INTEGER` | `ulong`  |                                      |
+| 32    | `HRESULT`        | `int`    |                                      |
+| 32    | `NTSTATUS`       | `int`    |                                      |
 
 ポインターである次の型は、プラットフォームの幅に従います。 このような場合は `IntPtr`/`UIntPtr` を使用します。
 
@@ -250,6 +250,61 @@ try
 finally
 {
     HSTRING.Delete(hstring);
+}
+```
+
+## <a name="cross-platform-data-type-considerations"></a>クロスプラットフォームのデータ型に関する考慮事項
+
+C/C ++ 言語の型には、定義方法が自由なものがあります。 クロスプラットフォームの相互運用を作成する場合、プラットフォームが異なり、それを考慮しないと問題が発生するケースがあります。
+
+### <a name="cc-long"></a>C/C++ `long`
+
+C/C++ `long` と C# `long` は同じ型ではありません。 C# `long` を使用した C/C++ `long` との相互運用は正しいものではありません。
+
+C/C++ の `long` 型は、["少なくとも 32"](https://en.cppreference.com/w/c/language/arithmetic_types) ビットが含まれるように定義されています。 つまり、最低限必要なビット数があることを意味しますが、必要に応じて、プラットフォームにより多くのビットを使用することを選択できます。 次の表は、プラットフォーム間での C/C ++ `long` データ型に提供されるビット数の違いを示しています。
+
+| プラットフォーム    | 32 ビット | 64 ビット |
+|:------------|:-------|:-------|
+| Windows     | 32     | 32     |
+| macOS/\*nix | 32     | 64     |
+
+これらの違いにより、ネイティブ関数がすべてのプラットフォームで `long` を使用するように定義されている場合、クロスプラットフォームの P/Invoke の作成が難しくなる可能性があります。
+
+.NET 6 以降のバージョンでは、C/C++ の `long` と `unsigned long` のデータ型との相互運用に [`CLong` と `CULong`](https://github.com/dotnet/runtime/issues/13788) の型を使用します。 次の例は `CLong` を対象としていますが、`CULong` を使用して同様の方法で `unsigned long` を抽象化することができます。
+
+```csharp
+// Cross platform C function
+// long Function(long a);
+[DllImport("NativeLib")]
+extern static CLong Function(CLong a);
+    
+// Usage
+nint result = Function(new CLong(10)).Value;
+```
+
+.NET 5 以前のバージョンを対象とする場合は、問題を処理するために Windows と Windows 以外の署名を別々に宣言する必要があります。
+
+```csharp
+static readonly bool IsWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
+// Cross platform C function
+// long Function(long a);
+
+[DllImport("NativeLib", EntryPoint = "Function")]
+extern static int FunctionWindows(int a);
+
+[DllImport("NativeLib", EntryPoint = "Function")]
+extern static nint FunctionUnix(nint a);
+
+// Usage
+nint result;
+if (IsWindows)
+{
+    result = FunctionWindows(10);
+}
+else
+{
+    result = FunctionUnix(10);
 }
 ```
 

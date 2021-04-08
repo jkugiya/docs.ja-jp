@@ -1,6 +1,6 @@
 ---
 title: 申し訳ありませんが、この C# エラーに関する詳細情報はありません。
-description: まだドキュメントに記載されていないコンパイラエラーと警告について考えられるリソースの一覧です。
+description: まだドキュメントに記載されていないコンパイラ エラーと警告に関して利用できるリソースの一覧。
 ms.date: 08/04/2020
 f1_keywords:
 - CS0181
@@ -739,20 +739,20 @@ helpviewer_keywords:
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 21d74d5a4f8eb406c3a0e48f56e4df479f222183
 ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2021
 ms.locfileid: "102103336"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>申し訳ありませんが、この C# エラーに関する詳細情報はありません。
 
-申し訳ありませんが、このエラーに関する具体的な情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のいずれかを使用して、他の開発者に問い合わせることもできます。
+申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のいずれかを使用して他の開発者に質問することもできます。
   
- [Msdn フォーラム-Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- 他のフォーラムでは説明されていない Visual C# に関する質問や問題についてのフォーラムを提供します。  
+ [Msdn フォーラム - Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ 他のフォーラムで取り上げていない Visual C# に関する質問や議論のためのフォーラムが提供されています。  
 
  [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
-Visual C# に関する質問や問題のための QA web サイトを提供します。  
+Visual C# に関する質問や問題のための QA Web サイトが提供されています。  
 
 ## <a name="see-also"></a>関連項目
 

@@ -18,14 +18,14 @@ author: davmason
 ms.author: davmason
 ms.openlocfilehash: aad66285e9b31558a68b8ccdfc71f103d1772946
 ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2021
 ms.locfileid: "102106918"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 列挙型
 
-[ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値を格納します。  
+[ICorProfilerInfo10::RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,18 +41,18 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted メソッドは、他のメソッドでインライン化されないようにブロックされます。 |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| メソッドをインラインで ReJITted するように `GetFunctionParameters` 要求されたメソッドに対してコールバックを受信します。 |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| ReJIT されたメソッドは、他のメソッド内でインライン化されないようにブロックされます。 |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| ReJIT するように要求されたメソッドをインライン化するメソッドの `GetFunctionParameters` コールバックを受信します。 |  
 
 ## <a name="requirements"></a>必要条件  
 
- **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。  
+ **プラットフォーム:** [.NET Core がサポートされているオペレーティング システム](../../../core/install/windows.md?pivots=os-windows)に関するページを参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
   
 ## <a name="see-also"></a>関連項目
 

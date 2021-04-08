@@ -1,6 +1,6 @@
 ---
 title: <bypasslist> 要素 (ネットワーク設定)
-description: <bypasslist>ネットワーク設定要素は、.NET Framework でプロキシを使用しないアドレスを記述する一連の正規表現を提供します。
+description: <bypasslist> ネットワーク設定要素は、.NET Framework 内のプロキシを使用しないアドレスを記述する一連の正規表現を提供します。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 ms.openlocfilehash: 0a03b391c839b7255fdd423a305d474d0e48ad39
 ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/06/2021
 ms.locfileid: "102259357"
@@ -44,9 +44,9 @@ ms.locfileid: "102259357"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[add](add-element-for-bypasslist-network-settings.md)|プロキシバイパス一覧に IP アドレスまたは DNS 名を追加します。|  
-|[オフ](clear-element-for-bypasslist-network-settings.md)|バイパスリストをクリアします。|  
-|[remove](remove-element-for-bypasslist-network-settings.md)|プロキシバイパスリストから IP アドレスまたは DNS 名を削除します。|  
+|[add](add-element-for-bypasslist-network-settings.md)|プロキシ バイパス リストに IP アドレスまたは DNS 名を追加します。|  
+|[オフ](clear-element-for-bypasslist-network-settings.md)|バイパス リストをクリアします。|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|プロキシ バイパス リストから IP アドレスまたは DNS 名を削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -56,11 +56,11 @@ ms.locfileid: "102259357"
   
 ## <a name="remarks"></a>解説  
 
- バイパスリストには、 <xref:System.Net.WebRequest> インスタンスがプロキシサーバー経由ではなく直接アクセスする uri を記述する正規表現が含まれています。  
+ バイパス リストには、<xref:System.Net.WebRequest> インスタンスがプロキシ サーバーを経由せずに直接アクセスする URI を記述する正規表現が含まれます。  
   
- この要素に正規表現を指定する場合は、注意が必要です。 正規表現は、 `[a-z]+\\.contoso\\.com` contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 Contoso.com ドメイン内のホストのみを一致させるには、アンカー () を使用します `$` `[a-z]+\\.contoso\\.com$` 。
+ この要素に対して正規表現を指定するときには、注意が必要です。 正規表現 `[a-z]+\\.contoso\\.com` は contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 contoso.com ドメイン内のホストにのみ一致させるには、アンカー (`$`): `[a-z]+\\.contoso\\.com$` を使用します。
   
- 正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。  
+ 正規表現の詳細については、「[.NET Framework の正規表現](../../../../standard/base-types/regular-expressions.md)」を参照してください。  
   
 ## <a name="configuration-files"></a>構成ファイル  
 
@@ -68,7 +68,7 @@ ms.locfileid: "102259357"
   
 ## <a name="example"></a>例  
 
- 次の例では、バイパスリストに2つのアドレスを追加します。 最初のは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2つ目は、IP アドレスが192.168 で始まるすべてのサーバーのプロキシをバイパスします。  
+ 次の例では、バイパス リストに 2 つのアドレスを追加します。 1 つめは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2 つめは、IP アドレスが 192.168 で始まるすべてのアドレスのプロキシをバイパスします。  
   
 ```xml  
 <configuration>  

@@ -1,18 +1,18 @@
 ---
-description: '詳細情報: NamedPipe のアクティブ化'
+description: '詳細情報: NamedPipe アクティベーション'
 title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 32878b08450b6d4d2d88b3d36c019b3e2138625f
 ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/06/2021
 ms.locfileid: "102259539"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
 
-このサンプルでは、Windows プロセスアクティブ化サービス (WAS) を使用して、名前付きパイプを介して通信するサービスをアクティブ化するサービスをホストする方法を示します。 このサンプルは [はじめに](getting-started-sample.md) に基づいており、Windows Vista を実行する必要があります。
+このサンプルでは、名前付きパイプ経由で通信するサービスを Windows プロセス アクティブ化サービス (WAS) を使用してアクティブ化するサービスをホストする方法を示します。 このサンプルは「[入門サンプル](getting-started-sample.md)」に基づいており、実行するには Windows Vista が必要です。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
@@ -22,7 +22,7 @@ ms.locfileid: "102259539"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、「[.NET Framework 4 向けの Windows Communication Foundation (WCF) および Windows Workflow Foundation (WF) のサンプル](https://www.microsoft.com/download/details.aspx?id=21459)」にアクセスして、Windows Communication Foundation (WCF) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] のサンプルをすべてダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -162,17 +162,17 @@ Press <ENTER> to terminate client.
 
 1. IIS 7.0 がインストールされていることを確認します。 WAS のアクティブ化には IIS 7.0 が必要です。
 
-2. [Windows Communication Foundation のサンプルに対して1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
+2. 「[Windows Communication Foundation サンプルの 1 回限りのセットアップの手順](one-time-setup-procedure-for-the-wcf-samples.md)」を実行済みであることを確認します。
 
     さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。
 
     1. **[スタート]** メニューの **[コントロール パネル]** をクリックします。
 
-    2. [ **プログラムと機能**] を選択します。
+    2. **[プログラムと機能]** をクリックします。
 
-    3. [ **Windows コンポーネントの有効化または無効化] を** クリックします。
+    3. **[Windows コンポーネントの有効化または無効化]** をクリックします。
 
-    4. [ **Microsoft .NET Framework 3.0** ] ノードを展開し、[ **WINDOWS COMMUNICATION FOUNDATION の非 HTTP アクティブ化** ] 機能をオンにします。
+    4. **[Microsoft .NET Framework 3.0]** ノードを展開し、 **[Windows Communication Foundation 非 HTTP アクティブ化]** 機能をオンにします。
 
 3. 名前付きパイプのアクティブ化をサポートするように Windows プロセス アクティブ化サービス (WAS) を構成します。
 
@@ -199,7 +199,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > このコマンドはテキスト 1 行です。
 
-        このコマンドにより、との両方を使用して/servicemodelsamples アプリケーションにアクセスできるようになり `http://localhost/servicemodelsamples` `net.tcp://localhost/servicemodelsamples` ます。
+        このコマンドにより、`http://localhost/servicemodelsamples` と `net.tcp://localhost/servicemodelsamples` の両方を使用して /servicemodelsamples アプリケーションにアクセスできるようになります。
 
 4. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。
 

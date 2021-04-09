@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更: セキュリティ: Cookie 名のエンコードを削除'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: セキュリティ: Cookie 名のエンコードを削除'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 00764493fb2d8d300612f2bd9dc6e512b10be25f
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: a50ef0ee34b7148d13b01f96e754d1cb47d40819
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190061"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497892"
 ---
 # <a name="security-cookie-name-encoding-removed"></a>セキュリティ:Cookie 名のエンコードを削除
 

@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更:Blazor: RenderTreeFrame の readonly のパブリック フィールドのプロパティ化'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: Blazor:RenderTreeFrame の readonly のパブリック フィールドのプロパティ化'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: e9da9c538cc0a8ed4f138ef64ece0c7d144f28d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4d70279b4280b079570099b82b056299405508b
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759333"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498166"
 ---
 # <a name="blazor-rendertreeframe-readonly-public-fields-have-become-properties"></a>Blazor: RenderTreeFrame の readonly のパブリック フィールドのプロパティ化
 

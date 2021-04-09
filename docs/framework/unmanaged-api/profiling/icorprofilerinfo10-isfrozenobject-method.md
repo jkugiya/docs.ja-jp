@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b47204630056e2797b5cf126bd7c291830cea05
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: c4d31c96fd7470a153437ffb0125e81ca8ea77bd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103453"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759756"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject メソッド
 
@@ -32,15 +32,11 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 ## <a name="parameters"></a>パラメーター
 
-- `objectId`
+`objectId` [入力] 調べる対象のオブジェクト。
 
-  \[入力] 調べる対象のオブジェクト。
+`pbFrozen` [出力] オブジェクトが読み取り専用セグメント内にあるかどうかを示す `BOOL`。
 
-- `pbFrozen`
-
-  \[出力] オブジェクトが読み取り専用セグメント内にあるかどうかを示す `BOOL`。
-
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** [.NET Core がサポートされているオペレーティング システム](../../../core/install/windows.md?pivots=os-windows)に関するページを参照してください。
 

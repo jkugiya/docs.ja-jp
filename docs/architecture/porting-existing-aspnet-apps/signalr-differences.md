@@ -3,16 +3,16 @@ title: ASP.NET SignalR と ASP.NET Core SignalR の比較
 description: ASP.NET Core SignalR は、その前身である ASP.NET SignalR とどのように異なるのでしょうか?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 89236bd0272c8f20cf9838dddefeb9afee1f3d93
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4a8680d8a28faaa07687b2c5835ebbf428032fbe
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401348"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122654"
 ---
 # <a name="compare-aspnet-signalr-and-aspnet-core-signalr"></a>ASP.NET SignalR と ASP.NET Core SignalR の比較
 
-ASP.NET Core SignalR は、ASP.NET SignalR を使用しているクライアントまたはサーバーとの互換性がありません。 ASP.NET Core SignalR を使用するには、クライアントとサーバーの両方を更新する必要があります。 このセクションでは相違点の一部について説明しますが、完全な一覧については[ドキュメント](/aspnet/core/signalr/version-differences)を参照してください。ASP.NET Core SignalR には .NET Core 2.1 以降が必要です。
+ASP.NET Core SignalR は、ASP.NET SignalR を使用しているクライアントまたはサーバーとの互換性がありません。 ASP.NET Core SignalR を使用するには、クライアントとサーバーの両方を更新する必要があります。 このセクションでは、いくつかの違いについて説明しますが、完全な一覧については、[ドキュメント](/aspnet/core/signalr/version-differences)を参照してください。ASP.NET Core SignalR には .NET Core 2.1 以上が必要です。
 
 ## <a name="feature-differences"></a>機能の違い
 
@@ -23,11 +23,11 @@ ASP.NET Core SignalR は、ASP.NET SignalR を使用しているクライアン�
 - ASP.NET Core SignalR にはスティッキー セッションが必要ですが、ASP.NET SignalR には必要ありません。
 - ASP.NET Core では接続モデルが単純化され、接続は 1 つのハブに対してのみ行われます。
 - ASP.NET Core SignalR では、ハブからクライアントへのデータのストリーミングがサポートされています。
-- ASP.NET Core SignalR では、クライアントとハブ間の状態の受け渡しがサポートされていません。
+- ASP.NET Core SignalR は、クライアントとハブ間の状態の受け渡しをサポートしていません (ただし、メソッド呼び出しでは、ハブとクライアント間で情報を渡すことができます)。
 - ASP.NET Core SignalR には `PersistentConnection` クラスが存在しません。
 - ASP.NET SignalR では SQL Server と Redis がサポートされています。 ASP.NET Core SignalR では [Azure SignalR](/azure/azure-signalr/) と Redis がサポートされています。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [ASP.NET SignalR と ASP.NET Core SignalR の相違点](/aspnet/core/signalr/version-differences)
 - [Azure SignalR Service](/azure/azure-signalr/)

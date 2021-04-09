@@ -3,12 +3,12 @@ title: 運用環境での実行中に移行するための戦略
 description: 大規模なアプリをすべて一度に ASP.NET MVC から ASP.NET Core に移行することが不可能な場合もあるでしょう。 アプリを既存のユーザーのために運用環境で実行し続けながら ASP.NET Core に移行するためのいくつかの戦略について説明します。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 4910984cb281139493aa5424809ba3eedab776e9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9b5d031165773c4da536bdc5478836a1b00436a1
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401347"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122730"
 ---
 # <a name="strategies-for-migrating-while-running-in-production"></a>運用環境での実行中に移行するための戦略
 
@@ -16,7 +16,7 @@ ms.locfileid: "102401347"
 
 ## <a name="refactor-the-net-framework-solution"></a>.NET Framework ソリューションをリファクターする
 
-.NET Framework アプリを .NET Core に移植する予定の場合は、手始めに、アプリを .NET Core でより適切に動作するようにリファクターすることをお勧めします。 これは、個々のクラス ライブラリを .NET Standard をターゲットにするように更新し、ASP.NET MVC プロジェクトからできるだけ多くのロジックをそれらのクラス ライブラリ内に移動することを意味します。 .NET Standard ライブラリに含まれているコードは、.NET Framework から .NET Core に比較的簡単に移動できるはずです。
+.NET Framework アプリを .NET Core に移植する予定の場合は、手始めに、アプリを .NET Core でより適切に動作するようにリファクターすることをお勧めします。 これは、個々のクラス ライブラリを .NET Standard をターゲットにするように更新し、ASP.NET MVC プロジェクトからできるだけ多くのロジックをそれらのクラス ライブラリ内に移動することを意味します。 .NET Standard ライブラリにあるすべてのコードを、両方の .NET Framework から .NET Core アプリにすぐに使用できます。そのため、この手順は移行の一環として価値があります。
 
 リファクタリングの際は、優れたリファクタリングの基本原則に従っていることを確認してください。 たとえば、リファクタリングを開始する前に、システムの動作を確認するテストを作成します。 完了したらこれらのテストを実行して、システムの動作を変更していないことを確認します。 信頼できる適切な一連の自動テストがまだない場合は、システムに特性テストを追加する必要があるかもしれません。
 
@@ -40,23 +40,23 @@ ms.locfileid: "102401347"
 
 ファサードが設置されたら、その一部を新しい ASP.NET Core アプリにルーティングできます。 元の .NET Framework アプリのより多くの部分を .NET Core に移植するにつれて、ファサードの機能全体のより多くの部分を新しいシステムに送信し、ファサード レイヤーを更新していきます。 図 3-5 に、時間の経過に伴うストラングラー パターンの進行を示します。
 
-## <a name="multi-targeting-approaches"></a>マルチ ターゲットによるアプローチ
-
-マルチターゲットとフレームワークごとの個別のコード パスを使用することで、.NET Framework をターゲットとする大規模なアプリを時間をかけて ASP.NET Core に移行することができます。 たとえば、両方の環境で実行される必要があるコードを、.NET Framework での実行時と .NET Core での実行時とで異なる機能を実装したり異なる依存関係を使用したりするように、[プリプロセッサ ディレクティブ `#if`](../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) を使用して変更できます。 別の方法として、ターゲットとなっているフレームワークに基づいて異なるファイル セットを含むようにプロジェクト ファイルを変更することもできます。 プロジェクト ファイルはさまざまな glob パターン (`*.core.cs` など) を使用して、ターゲットとなっているフレームワークに応じて異なるソース ファイルのセットを含むことができます。
-
-これらの手法により、新しい機能が追加されてアプリ (の一部) が.NET Core を使用するように移植されるときに、1 つの共通のコードベースを保守するだけで済みます。
-
 ![図 3-5](media/Figure3-5.png)
 
 **図 3-5** 時間の経過に伴うストラングラー パターン。
 
 最終的には、ファサード レイヤー全体が新しいモダンな実装に対応します。 この時点で、レガシ システムとファサード レイヤーの両方を廃止できます。
 
+## <a name="multi-targeting-approaches"></a>マルチ ターゲットによるアプローチ
+
+マルチターゲットとフレームワークごとの個別のコード パスを使用することで、.NET Framework をターゲットとする大規模なアプリを時間をかけて ASP.NET Core に移行することができます。 たとえば、両方の環境で実行される必要があるコードを、.NET Framework での実行時と .NET Core での実行時とで異なる機能を実装したり異なる依存関係を使用したりするように、[プリプロセッサ ディレクティブ `#if`](../../csharp/language-reference/preprocessor-directives.md#conditional-compilation) を使用して変更できます。 別の方法として、ターゲットとなっているフレームワークに基づいて異なるファイル セットを含むようにプロジェクト ファイルを変更することもできます。 プロジェクト ファイルはさまざまな glob パターン (`*.core.cs` など) を使用して、ターゲットとなっているフレームワークに応じて異なるソース ファイルのセットを含むことができます。 通常は、複数の Web アプリで使用されるライブラリに対してのみ、このアプローチに従います。 Web アプリ自体の場合は、通常、2 つの別個のプロジェクトを使用することをお勧めします。
+
+これらの手法により、新しい機能が追加されてアプリ (の一部) が.NET Core を使用するように移植されるときに、1 つの共通のコードベースを保守するだけで済みます。
+
 ## <a name="summary"></a>まとめ
 
 多くの場合、大規模な ASP.NET MVC および Web API アプリはすべて一度に ASP.NET Core に移植されるのではなく、時間をかけて段階的に移行されます。 このセクションでは、この段階的な移行を実行するためのいくつかの戦略について説明しました。 ご自分の組織とアプリに最適なものを選択してください。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ](https://aka.ms/microservicesebook)
 - [eShopOnContainers 参照マイクロサービス アプリケーション](https://github.com/dotnet-architecture/eShopOnContainers)

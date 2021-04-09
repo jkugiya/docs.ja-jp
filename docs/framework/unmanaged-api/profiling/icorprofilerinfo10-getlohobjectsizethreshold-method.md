@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 96c502dba5b2807f9cd9c3c5cceb6b3b9985a406
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7dca887f6d0ff5f9360b0edaa1568bc4b1bb42ac
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106957"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759769"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10::GetLOHObjectSizeThreshold メソッド
 
@@ -31,15 +31,13 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 ## <a name="parameters"></a>パラメーター
 
-- `pThreshold`
-
-  \[出力] ラージ オブジェクト ヒープのしきい値 (バイト単位)。
+`pThreshold` [出力] ラージ オブジェクト ヒープのしきい値 (バイト単位)。
 
 ## <a name="remarks"></a>解説
 
 ラージ オブジェクト ヒープのしきい値より大きいオブジェクトは、ラージ オブジェクト ヒープ上に割り当てられます。 .NET Core 3.0 以降では、ラージ オブジェクト ヒープのしきい値は構成可能であり、`pThreshold` にはアクティブなラージ オブジェクト ヒープのしきい値のサイズ (バイト単位) が格納されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** [.NET Core がサポートされているオペレーティング システム](../../../core/install/windows.md?pivots=os-windows)に関するページを参照してください。
 

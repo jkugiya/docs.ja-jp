@@ -25,6 +25,8 @@ items:
                 href: 6.0.md
               - name: ASP.NET Core
                 items:
+                  - name: 共有フレームワークから削除されたアセンブリ
+                    href: aspnet-core/6.0/assemblies-removed-from-shared-framework.md
                   - name: null 許容参照型の注釈の変更
                     href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
                   - name: 古い API と削除された API
@@ -331,6 +333,8 @@ items:
             items:
               - name: .NET 6
                 items:
+                  - name: 共有フレームワークから削除されたアセンブリ
+                    href: aspnet-core/6.0/assemblies-removed-from-shared-framework.md
                   - name: null 許容参照型の注釈の変更
                     href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
                   - name: 古い API と削除された API

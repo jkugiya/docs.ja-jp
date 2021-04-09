@@ -3,12 +3,12 @@ title: 依存関係の把握と更新
 description: .NET Framework プロジェクトを .NET Core に移行するためには、その依存関係を .NET Core で機能するように更新する必要があります。 このセクションでは、大規模なアプリの移行を計画するために使用できるツールとアプローチについて説明します。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: afad77860099e4737b5270dc32fc20c2025e63dd
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 484691496d3691151fd3ca83ec776dbb31327c09
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401345"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122756"
 ---
 # <a name="understand-and-update-dependencies"></a>依存関係の把握と更新
 
@@ -46,7 +46,7 @@ dotnet tool install -g upgrade-assistant
 
 アプリで現在使用されているパッケージのバージョンに対するサポートが存在する場合は、問題ありません。 そうでない場合は、パッケージのより新しいバージョンに対するサポートがあるかどうかを確認し、アップグレードに何が関与するかを調べます。 現在使用しているバージョンとアップグレード先のバージョンとでパッケージのメジャー バージョンが変わる場合は特に、パッケージに重大な変更が含まれている可能性があります。
 
-場合によっては、パッケージのどのバージョンも .NET Core で機能しないことがあります。 その場合、チームにはいくつかの選択肢があります。 引き続きその .NET Framework のバージョンに依存することは可能ですが、これには制限があります。 アプリは Windows 上でのみ実行され、チームは問題が発生する可能性がないかどうかを調べるために、パッケージのバイナリ上で Portability Analyzer を実行する必要があるかもしれません。 もちろん、チームは徹底的にテストすることを望むでしょう。 もう 1 つの選択肢は、別のパッケージを見つけるか、必要なパッケージがオープン ソースであれば .NET Standard または .NET Core 自体にアップグレードすることです。
+場合によっては、パッケージのどのバージョンも .NET Core で機能しないことがあります。 その場合、チームにはいくつかの選択肢があります。 引き続きその .NET Framework のバージョンに依存することは可能ですが、これには制限があります。 アプリは Windows 上でのみ実行され、チームは問題が発生する可能性がないかどうかを調べるために、パッケージのバイナリ上で Portability Analyzer を実行する必要があるかもしれません。 .NET Core で使用できない API を参照する .NET Framework パッケージが使用されている場合は、ランタイム例外が発生するため、チームが十分にテストする必要があります。 もう 1 つの選択肢は、別のパッケージを見つけるか、必要なパッケージがオープン ソースであれば .NET Standard または .NET Core 自体にアップグレードすることです。
 
 ## <a name="migrate-aspnet-mvc-projects"></a>ASP.NET MVC プロジェクトの移行
 
@@ -56,7 +56,7 @@ dotnet tool install -g upgrade-assistant
 
 次の章では、ASP.NET MVC プロジェクトおよび Web API プロジェクトから ASP.NET Core プロジェクトに移行する方法について詳しく説明します。 前の章では、アプリ間の最大の相違点を列挙しました。 通常、いったん基本的なプロジェクトの構造が整えば、個々のコントローラーとビューを移行することは、特にそれらが主に Web の役割に重点を置いている場合は簡単です。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [.NET Upgrade Assistant ツール](https://aka.ms/dotnet-upgrade-assistant)
 - [try-convert ツール](https://github.com/dotnet/try-convert)

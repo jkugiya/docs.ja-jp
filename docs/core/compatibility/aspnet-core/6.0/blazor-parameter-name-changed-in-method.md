@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更:Blazor: RequestImageFileAsync メソッドで変更されたパラメーター名'
 description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Blazor:RequestImageFileAsync メソッドで変更されたパラメーター名'
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: bfaaa6bfe94c32fbc1a5b5b70db863d105d389b5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 61518ba246c1d390861261ecb5a9f18a5695c1fd
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488242"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496983"
 ---
 # <a name="blazor-parameter-name-changed-in-requestimagefileasync-method"></a>Blazor: RequestImageFileAsync メソッドで変更されたパラメーター名
 

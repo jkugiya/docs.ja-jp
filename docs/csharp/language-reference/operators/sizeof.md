@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: f1358cbfb6cbc2942cef12e650f7bd362ba37a78
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6685cdb4fba2460ee4a47b004aa6911ab76235a4
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89136877"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497373"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 演算子 (C# リファレンス)
 
@@ -54,6 +54,6 @@ ms.locfileid: "89136877"
 - [C# リファレンス](../index.md)
 - [C# の演算子と式](index.md)
 - [ポインターに関連する演算子](pointer-related-operators.md)
-- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [ポインター型](../unsafe-code.md#pointer-types)
 - [メモリおよびスパンに関連する型](../../../standard/memory-and-spans/index.md)
 - [.NET のジェネリック](../../../standard/generics/index.md)

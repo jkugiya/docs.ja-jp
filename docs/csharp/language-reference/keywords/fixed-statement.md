@@ -7,16 +7,16 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 05505916ab3837d2c433ec420d7928a8ee883fa8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2af9c4311e8326d6df933ec5d4c38354fe021e5c
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139724"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497568"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed ステートメント (C# リファレンス)
 
-`fixed` ステートメントは、移動可能な変数がガベージ コレクターにより再配置されることを防ぎます。 `fixed` ステートメントは、[unsafe](unsafe.md) コンテキストでのみ許可されます。 `fixed` キーワードは、[固定サイズ バッファー](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)の作成にも使うことができます。
+`fixed` ステートメントは、移動可能な変数がガベージ コレクターにより再配置されることを防ぎます。 `fixed` ステートメントは、[unsafe](unsafe.md) コンテキストでのみ許可されます。 `fixed` キーワードは、[固定サイズ バッファー](../unsafe-code.md#fixed-size-buffers)の作成にも使うことができます。
 
 `fixed` ステートメントは、マネージド変数へのポインターを設定し、ステートメントの実行中にその変数を "固定" します。 移動可能なマネージド変数へのポインターは、`fixed` コンテキストでのみ有効です。 `fixed` コンテキストがない場合、ガベージ コレクションによって変数が予期せず再配置される可能性があります。 C# コンパイラでは、`fixed` ステートメントでマネージド変数へのポインターを割り当てることだけができます。
 
@@ -75,5 +75,5 @@ fixed (byte* ps = srcarray, pd = dstarray)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [unsafe](unsafe.md)
-- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [固定サイズ バッファー](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [ポインター型](../unsafe-code.md#pointer-types)
+- [固定サイズ バッファー](../unsafe-code.md#fixed-size-buffers)

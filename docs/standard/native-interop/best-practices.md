@@ -2,12 +2,12 @@
 title: ネイティブ相互運用性のベスト プラクティス - .NET
 description: .NET でネイティブ コンポーネントとやり取りするためのベスト プラクティスについて説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: b7a5cb3fd38136250be91951bf73b4197df7ad1c
-ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
+ms.openlocfilehash: c279b75950f5dc5fae6faed278b00c783287c7e9
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105610838"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231285"
 ---
 # <a name="native-interoperability-best-practices"></a>ネイティブ相互運用性のベスト プラクティス
 
@@ -277,7 +277,7 @@ C/C++ の `long` 型は、["少なくとも 32"](https://en.cppreference.com/w/c
 // long Function(long a);
 [DllImport("NativeLib")]
 extern static CLong Function(CLong a);
-    
+
 // Usage
 nint result = Function(new CLong(10)).Value;
 ```

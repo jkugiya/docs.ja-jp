@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更:Kestrel: 変更されたログ メッセージ属性'
 description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Kestrel: 変更されたログ メッセージ属性'
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/01/2021
-ms.openlocfilehash: 30b03c22a6c85623fec7db14b58b169f887395a0
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 09b0bc71b6c9935b9e7e4170f24869f4d45c97f6
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99551534"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496879"
 ---
 # <a name="kestrel-log-message-attributes-changed"></a>Kestrel: 変更されたログ メッセージ属性
 

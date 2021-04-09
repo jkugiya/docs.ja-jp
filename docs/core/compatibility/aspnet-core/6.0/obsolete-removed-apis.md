@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更: 古いおよび削除された API'
 description: "\"古いおよび削除された API\" というタイトルが付けられた、ASP.NET Core 6.0 における破壊的変更について説明します"
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/16/2021
-ms.openlocfilehash: 4a4819247b7e6bb957f643b457e651cca5b4e703
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: c994625cb9f5b43fb3cc874345a05b6978d2d736
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108404"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496866"
 ---
 # <a name="obsoleted-and-removed-apis"></a>古い API と削除された API
 

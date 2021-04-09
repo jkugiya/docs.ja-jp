@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更: 静的ファイル: CSV コンテンツ タイプが標準準拠に変更されました'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: 静的ファイル: CSV コンテンツ タイプが標準準拠に変更されました'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: c94a0cf213970d20559b7c061d8be220b43961e0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a7a1b2fc94f5cc956d85fc93ae72362e2e89b0e
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760058"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497087"
 ---
 # <a name="static-files-csv-content-type-changed-to-standards-compliant"></a>静的ファイル: CSV コンテンツ タイプが標準準拠に変更されました
 

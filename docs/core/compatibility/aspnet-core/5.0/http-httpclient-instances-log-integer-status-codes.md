@@ -1,15 +1,14 @@
 ---
 title: 破壊的変更:HTTP:IHttpClientFactory ログの整数状態コードによって作成された HttpClient インスタンス
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: HTTP:IHttpClientFactory ログの整数状態コードによって作成された HttpClient インスタンス'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 964c0a65a07816acea8016d42a66a6bf84aba7c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 59e64c7127a97b1c11587d13803e4a085dbc090b
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759332"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497685"
 ---
 # <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP:IHttpClientFactory ログの整数状態コードによって作成された HttpClient インスタンス
 

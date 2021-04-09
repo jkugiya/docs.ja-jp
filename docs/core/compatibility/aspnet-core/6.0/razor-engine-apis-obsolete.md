@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更:Razor: 古いとしてマークされた RazorEngine API'
 description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Razor:古いとしてマークされた RazorEngine API'
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: 173ff0ee5c062f050c967c6edc7bed333d1a2031
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 08026cf32eec5ee391fab3d2ccdd9f22c4a3967b
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488228"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497035"
 ---
 # <a name="razor-razorengine-apis-marked-obsolete"></a>Razor: 古いとしてマークされた RazorEngine API
 
@@ -37,9 +36,9 @@ Blazor の <xref:Microsoft.AspNetCore.Razor.Language.RazorEngine> 型に関連�
 
 ## <a name="affected-apis"></a>影響を受ける API
 
-- [Microsoft.AspNetCore.Mvc.Razor.Extensions.InjectDirective.Register](/dotnet/api/microsoft.aspnetcore.mvc.razor.extensions.injectdirective.register?view=aspnetcore-3.1&preserve-view=true)
-- [Microsoft.AspNetCore.Mvc.Razor.Extensions.ModelDirective.Register](/dotnet/api/microsoft.aspnetcore.mvc.razor.extensions.namespacedirective.register?view=aspnetcore-2.2&preserve-view=true)
-- [Microsoft.AspNetCore.Mvc.Razor.Extensions.PageDirective.Register](/dotnet/api/microsoft.aspnetcore.mvc.razor.extensions.namespacedirective.register?view=aspnetcore-2.2&preserve-view=true)
+- `Microsoft.AspNetCore.Mvc.Razor.Extensions.InjectDirective.Register`
+- `Microsoft.AspNetCore.Mvc.Razor.Extensions.ModelDirective.Register`
+- `Microsoft.AspNetCore.Mvc.Razor.Extensions.PageDirective.Register`
 - [Microsoft.AspNetCore.Razor.Language.Extensions.FunctionsDirective.Register](/dotnet/api/microsoft.aspnetcore.razor.language.extensions.functionsdirective.register?view=aspnetcore-3.0&preserve-view=true)
 - [Microsoft.AspNetCore.Razor.Language.Extensions.InheritsDirective.Register](/dotnet/api/microsoft.aspnetcore.razor.language.extensions.inheritsdirective.register?view=aspnetcore-3.0&preserve-view=true)
 - [Microsoft.AspNetCore.Razor.Language.Extensions.SectionDirective.Register](/dotnet/api/microsoft.aspnetcore.razor.language.extensions.sectiondirective.register?view=aspnetcore-3.0&preserve-view=true)

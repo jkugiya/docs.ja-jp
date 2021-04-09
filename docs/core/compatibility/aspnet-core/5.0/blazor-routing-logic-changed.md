@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更:Blazor: Blazor アプリのルーティング ロジックの変更'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: Blazor:Blazor アプリのルーティング ロジックの変更'
-author: scottaddie
 ms.author: scaddie
 ms.date: 12/14/2020
-ms.openlocfilehash: 4ab8289565c88b17eb204a11724bb12a09b033c2
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: cec05b26319fc8302261e41cc868dd73b46c8af0
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513507"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497828"
 ---
 # <a name="blazor-route-precedence-logic-changed-in-blazor-apps"></a>Blazor: Blazor アプリにおけるルート優先順位のロジックの変更
 

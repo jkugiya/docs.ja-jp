@@ -3,12 +3,12 @@ title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 1bae00d2fc6e80811986bbb111f38582720f8487
-ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
+ms.openlocfilehash: 17df3ec8473750edfca4999972c56be1e8a5feec
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106288079"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496658"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -377,7 +377,7 @@ ms.locfileid: "106288079"
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HighMemoryPercent` | "*10 進値*" | .NET 5.0 |
-| **環境変数** | `COMPlus_GCHighMemPercent` | "*16 進値*" | |
+| **環境変数** | `COMPlus_GCHighMemPercent` | "*16 進値*" | .NET Core 3.0<br/>.NET Framework 4.7.2 |
 
 > [!TIP]
 > *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、使用率の高いメモリのしきい値を 75% に設定するための値は、JSON ファイルに対しては 75、環境変数に対しては 0x4B または 4B となります。

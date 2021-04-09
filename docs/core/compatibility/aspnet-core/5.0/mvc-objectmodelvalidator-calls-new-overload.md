@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更: MVC:ObjectModelValidator は、ValidationVisitor.Validate の新しいオーバーロードを呼び出す'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: MVC: ObjectModelValidator は、ValidationVisitor.Validate の新しいオーバーロードを呼び出す'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: b28c357f51291a4f73889d5d413a983f79e09daf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7bf07360f5d5e93641b7fbc6634fda2e9f3e649f
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760016"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497594"
 ---
 # <a name="mvc-objectmodelvalidator-calls-a-new-overload-of-validationvisitorvalidate"></a>MVC:ObjectModelValidator は、ValidationVisitor.Validate の新しいオーバーロードを呼び出す
 

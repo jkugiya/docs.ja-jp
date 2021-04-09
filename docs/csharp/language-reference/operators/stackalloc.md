@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 72d91cf9aa67957ed8e1cad5b2c4a1f3b6382c1f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 42867ff1b5acffaf62639a31a5bdd3b4055e252a
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89136851"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497464"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc 式 (C# リファレンス)
 
@@ -36,7 +36,7 @@ ms.locfileid: "89136851"
   > [!NOTE]
   > スタックに割り当てられたメモリを操作するときは、できるだけ <xref:System.Span%601> 型または <xref:System.ReadOnlySpan%601> 型を使用することをお勧めします。
 
-- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)。次に例を示します。
+- [ポインター型](../unsafe-code.md#pointer-types)。次に例を示します。
 
   [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
@@ -75,6 +75,6 @@ C# 7.3 以降、配列初期化子構文を使用して、新しく割り当て�
 - [C# リファレンス](../index.md)
 - [C# の演算子と式](index.md)
 - [ポインターに関連する演算子](pointer-related-operators.md)
-- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [ポインター型](../unsafe-code.md#pointer-types)
 - [メモリおよびスパンに関連する型](../../../standard/memory-and-spans/index.md)
 - [stackalloc の注意事項](https://vcsjones.dev/2020/02/24/stackalloc/)

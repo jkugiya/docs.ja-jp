@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更: null 許容参照型の注釈の変更'
 description: ASP.NET Core 6.0 における null 許容参照型の注釈の変更での破壊的変更について説明します
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 6d71d76d82ff7084626cbf3ae5803aa3c189b8bf
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104874343"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496996"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>null 許容参照型の注釈の変更
 

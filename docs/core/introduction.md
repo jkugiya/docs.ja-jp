@@ -4,12 +4,12 @@ description: さまざまな種類のアプリをビルドするための無料�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 78713ee08fadd7a947ee26997b8abe6373ab98d8
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 7aa84abdf4653960503699ea7cb239279d748c4e
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104875136"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496697"
 ---
 # <a name="introduction-to-net"></a>.NET の概要
 
@@ -385,7 +385,7 @@ Entity Framework (EF) Core は、[オープン ソース](https://github.com/asp
 
 言語サポートに応じて、CLR の `unsafe` コードによって、ネイティブ メモリにアクセスしたりポインターの算術演算を実行したりできるようになります。 この操作は、特定のアルゴリズムおよびシステム相互運用性のために必要です。 アンセーフ コードの使用は強力ですが、システム API との相互運用を行ったり、最も効率的なアルゴリズムを実装したりする必要がなければ、推奨されません。 アンセーフ コードは、環境が異なると同じように実行されない可能性があり、さらにガベージ コレクターとタイプ セーフの利点が得られない場合があります。 可能な限りアンセーフ コードのみに制限し、そのコードを徹底的にテストすることをお勧めします。
 
-詳細については、[アンセーフ コードとポインター](../csharp/programming-guide/unsafe-code-pointers/index.md)に関するページを参照してください。
+詳細については、[アンセーフ コードとポインター](../csharp/language-reference/unsafe-code.md)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

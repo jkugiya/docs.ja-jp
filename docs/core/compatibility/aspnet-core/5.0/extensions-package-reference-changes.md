@@ -1,15 +1,14 @@
 ---
 title: 破壊的変更:拡張機能:一部の NuGet パッケージに影響するパッケージ参照の変更
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: 拡張機能: 一部の NuGet パッケージに影響するパッケージ参照の変更'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 4a525d9f7aad4409fd507fcf80c00968ff4b63d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82ee5129d6422d0a5ea4a0f14632a42e779f6ded
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759423"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497737"
 ---
 # <a name="extensions-package-reference-changes-affecting-some-nuget-packages"></a>拡張機能:一部の NuGet パッケージに影響するパッケージ参照の変更
 
@@ -50,7 +49,7 @@ ms.locfileid: "95759423"
 
 ## <a name="affected-apis"></a>影響を受ける API
 
-None
+なし
 
 <!--
 

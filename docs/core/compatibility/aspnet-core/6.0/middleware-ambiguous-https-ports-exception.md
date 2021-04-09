@@ -1,15 +1,14 @@
 ---
 title: 破壊的変更:ミドルウェア:HTTPS リダイレクト ミドルウェアがあいまいな HTTPS ポートで例外をスローする
 description: 'ASP.NET Core 6.0 での破壊的変更について説明します。タイトル: ミドルウェア:HTTPS リダイレクト ミドルウェアがあいまいな HTTPS ポートで例外をスローする'
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/04/2021
-ms.openlocfilehash: 1f49e0df7eaa2eecd83643c9596e745109a340b7
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5c41251fac29f7c2dc2bdc3eb5610bb571f438c9
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488237"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497022"
 ---
 # <a name="middleware-https-redirection-middleware-throws-exception-on-ambiguous-https-ports"></a>ミドルウェア:HTTPS リダイレクト ミドルウェアがあいまいな HTTPS ポートで例外をスローする
 

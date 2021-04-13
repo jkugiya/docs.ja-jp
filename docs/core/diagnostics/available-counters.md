@@ -3,12 +3,12 @@ title: .NET の既知の EventCounter
 description: .NET ランタイムとライブラリによって公開されている EventCounter を確認します。
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: aad4fa8b33ebf0dcb7803c77b11fb99a6b6d7b83
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: fc07ace22f1580d547c33b897bcd1bb9a1de15c3
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872835"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496723"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET の既知の EventCounter
 
@@ -43,6 +43,7 @@ ms.locfileid: "104872835"
 | :::no-loc text="Working Set"::: (`working-set`) | <xref:System.Environment.WorkingSet?displayProperty=nameWithType> に基づく、ある時点でプロセス コンテキストにマップされた物理メモリの量 |
 | :::no-loc text="IL Bytes Jitted"::: (`il-bytes-jitted`) | JIT コンパイルされる IL のバイト単位の合計サイズ (.NET 5 以降のバージョンで取得可能) |
 | :::no-loc text="Method Jitted Count"::: (`method-jitted-count`) | JIT コンパイルされるメソッドの数 (.NET 5 以降のバージョンで取得可能) |
+| :::no-loc text="GC Committed Bytes"::: (`gc-committed-bytes`) | GC によってコミットされたバイト数 (.NET 6 以降のバージョンで使用可能) |
 
 ## <a name="microsoftaspnetcorehosting-counters"></a>"Microsoft.AspNetCore.Hosting" カウンター
 

@@ -3,14 +3,14 @@ title: 'チュートリアル: .NET を使用して GitHub アクションを作
 description: コンテナー化された .NET アプリを使用して GitHub アクションを作成する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 03/23/2021
+ms.date: 04/01/2021
 ms.topic: tutorial
-ms.openlocfilehash: 58b4ee07bd3809dd1bb2e1e2d3fc33cecfc3f4d6
-ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
+ms.openlocfilehash: dbeb5642ae8964495a10e5025dadf3100a1dd10b
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104881074"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231160"
 ---
 # <a name="tutorial-create-a-github-action-with-net"></a>チュートリアル: .NET を使用して GitHub アクションを作成する
 
@@ -131,6 +131,9 @@ GitHub Actions では、アプリ開発として次の 2 つのバリエーシ�
 [.NET アプリがコンテナー化](#prepare-the-net-app-for-github-actions)され、[アクションの入力と出力](#define-action-inputs-and-outputs)が定義されると、アクションを使用する準備が整いました。 GitHub Actions は、使用するために GitHub Marketplace で発行する必要は "*ありません*"。 ワークフローは、リポジトリの *.github/workflows* ディレクトリで YAML ファイルとして定義されます。
 
 :::code language="yml" source="snippets/workflow.yml":::
+
+> [!IMPORTANT]
+> コンテナー化された GitHub Actions の場合は、`runs-on: ubuntu-latest` を使用する必要があります。 詳細については、[ワークフロー構文`jobs.<job_id>.runs-on`](https://docs.github.com/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)に関するページを参照してください。
 
 前のワークフロー YAML ファイルでは、次の 3 つのプライマリ ノードを定義します。
 

@@ -1,6 +1,6 @@
 ---
 title: marshalCleanupError MDA
-description: 一時的な構造のクリーンアップ中に予期しないエラーが発生したために呼び出される、marshalCleanupError マネージデバッグアシスタント (MDA) を確認します。
+description: 一時的な構造体のクリーンアップ中に予期しないエラーが発生したために呼び出される、marshalCleanupError マネージド デバッグ アシスタント (MDA) について確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - cleanup operations
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 ms.openlocfilehash: e65136f022caa7b1e18a27f7b97a4ef4c27f42d3
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96271192"
@@ -30,7 +30,7 @@ ms.locfileid: "96271192"
 
  一時的な構造体のクリーンアップ中に予期しないエラーが発生しました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  すべての <xref:System.Runtime.InteropServices.SafeHandle> デストラクター、ファイナライザー、カスタム マーシャラーの実装を調べ、エラーがないかどうかをレビューします。  
   

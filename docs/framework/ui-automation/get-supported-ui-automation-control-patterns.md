@@ -1,6 +1,6 @@
 ---
 title: サポートされている UI オートメーション コントロール パターンの取得
-description: UI オートメーション要素から、サポートされているコントロールパターンオブジェクトを取得する方法を示す例を参照してください。
+description: サポートされているコントロール パターン オブジェクトを UI オートメーション要素から取得する方法を示す例をご覧ください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
 ms.openlocfilehash: 68abe272e91c40932aba5bcf99394c4a8f815c53
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96276452"

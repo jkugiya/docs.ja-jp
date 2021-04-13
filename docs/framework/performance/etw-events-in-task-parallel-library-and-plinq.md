@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 ms.openlocfilehash: 4cb4967ea704064ae08d09311ff33720e3871e19
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96263647"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>タスク並列ライブラリおよび PLINQ での ETW イベント
 
-タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオでは、並列アプリケーションコードをプロファイリングする最良の方法は、Visual Studio で [同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer) を使用することです。
+タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオでは、並列アプリケーション コードをプロファイルする最善の方法は、Visual Studio で[コンカレンシー ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)を使用することです。
 
 ## <a name="task-parallel-library-etw-events"></a>タスク並列ライブラリの ETW イベント
 

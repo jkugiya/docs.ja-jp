@@ -1,6 +1,6 @@
 ---
 title: スタック ETW イベント
-description: Stack ETW イベントについて説明します。これは、イベントの発生後にスタックトレースを生成するために、他のイベントと組み合わせて使用する必要があります。
+description: イベントの発生後にスタック トレースを生成するために他のイベントと併用する必要があるスタック ETW イベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - stack event [.NET Framework]
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 ms.openlocfilehash: 3b890e587abd5cb1b7315fe41897f24638fd4604
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96236209"
@@ -19,13 +19,13 @@ ms.locfileid: "96236209"
   
  次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
-|イベントを発生させるキーワード|Level|  
+|イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
 |`StackKeyword` (0x40000000)|LogAlways(0)|  
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`CLRStackWalk`|82|他のイベントを併用し、イベント後にスタック トレースを生成します。|  
   

@@ -1,6 +1,6 @@
 ---
 title: '方法: トレース スイッチを作成、初期化、および構成する'
-description: .NET で BooleanSwitch および system.servicemodel クラスを使用して、トレーススイッチを作成、初期化、および構成します。
+description: .NET 内で System.Diagnostics.BooleanSwitch および System.Diagnostics.TraceSwitch クラスを使用して、トレース スイッチを作成、初期化、構成します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 ms.openlocfilehash: 4e8c076645f19e197ea820c052b20d5dde5e7565
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272255"
@@ -35,7 +35,7 @@ ms.locfileid: "96272255"
   
 1. スイッチを型 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> または型 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> のいずれかに定義し、スイッチの名前と説明を設定します。  
   
-2. トレース スイッチを構成します。 詳細については、「 [トレーススイッチの構成](#configure)」を参照してください。  
+2. トレース スイッチを構成します。 詳細については、「[トレース スイッチの構成](#configure)」を参照してください。  
   
      次のコードでは、それぞれの種類のスイッチを 1 つずつ作成します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "96272255"
 
  アプリケーションを配布した後も、引き続き、アプリケーション内のトレース スイッチを構成することによりトレース出力を有効/無効にできます。 この場合、"スイッチを構成する" とは、初期化された後に外部ソースからその値を変更することを意味します。 構成ファイルを使用してスイッチ オブジェクトの値を変更することができます。 トレース スイッチを構成すると、スイッチのオン/オフの切り替えやレベル設定を行えるほか、リスナーに引き渡すメッセージの量と種類を決定できます。  
   
- スイッチは、.config ファイルを使用して構成されています。 Web アプリケーションでは、これは、プロジェクトに関連付けられた Web.config ファイルです。 Windows アプリケーションでは、このファイルの名前は (アプリケーション名) .exe.config です。配置されたアプリケーションでは、このファイルは実行可能ファイルと同じフォルダーに存在する必要があります。  
+ スイッチは、.config ファイルを使用して構成されています。 Web アプリケーションでは、これは、プロジェクトに関連付けられた Web.config ファイルです。 Windows アプリケーションでは、このファイルは、(アプリケーション名).exe.config という名前です。配置されたアプリケーションでは、このファイルは実行可能ファイルと同じフォルダーになければなりません。  
   
  アプリケーションが、スイッチのインスタンスを作成するコードを初めて実行したときに、構成ファイルを確認して名前付きのスイッチに関するトレース レベルの情報を取得します。 トレース システムが特定のスイッチに関して構成ファイルを調べるのは、アプリケーションが初めてスイッチを作成するとき 1 回のみです。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "96272255"
   
          アプリケーション構成ファイルが作成され、開かれます。 これは、XML ドキュメントであり、ルート要素は `<configuration>.` です。  
   
-    - **Visual C# :****[新しい項目の追加]** ダイアログ ボックスで **[XML ファイル]** を選択します。 このファイルに **app.config** という名前を指定します。Xml エディターで、XML 宣言の後に次の XML を追加します。  
+    - **Visual C# :****[新しい項目の追加]** ダイアログ ボックスで **[XML ファイル]** を選択します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
   
         ```xml  
         <configuration>  

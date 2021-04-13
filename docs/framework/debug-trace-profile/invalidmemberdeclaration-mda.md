@@ -1,6 +1,6 @@
 ---
 title: invalidMemberDeclaration MDA
-description: InvalidMemberDeclaration マネージデバッグアシスタントを確認します。これは、マネージメソッドを呼び出さずに COM にエラー HRESULT が返された場合に呼び出されます。
+description: invalidMemberDeclaration マネージド デバッグ アシスタントについて確認します。これは、マネージド メソッドを呼び出さずにエラーの HRESULT が COM に返された場合に呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid member declaration
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 ms.openlocfilehash: c8d6c69fc6eb4f5f690b02809fdc492da675c3b1
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272554"
@@ -28,7 +28,7 @@ ms.locfileid: "96272554"
 
  ほとんどの場合、いずれかのパラメーターに互換性のない <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性があることが原因です。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  パラメーターで有効な <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を指定します。  
   

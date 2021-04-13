@@ -1,6 +1,6 @@
 ---
 title: JIT アタッチ デバッグの有効化
-description: エラーが発生したときにデバッガーをプロセスにアタッチするには、just-in-time (JIT) アタッチデバッグを有効にします。 特定のメソッドまたは関数によってトリガーされる場合があります。
+description: エラーが発生したときにデバッガーをプロセスにアタッチするには、Just-In-Time (JIT) アタッチ デバッグを有効にします。 これは、特定のメソッドまたは関数によってトリガーできます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT-attach debugging
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 ms.openlocfilehash: dc1c8608b0d16e618b5ad6144d492db3302532dc
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96273504"
@@ -33,7 +33,7 @@ JIT アタッチ デバッグとは、エラーが発生したとき、または
   
 - [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) 関数 (Win32)。  
   
- .NET Framework 4 より前の .NET Framework では、ネイティブデバッガーとマネージデバッガーの動作を制御するために個別のレジストリキーが提供されていました。 .NET Framework 4 以降では、コントロールは単一のレジストリキー (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug) の下に統合されます。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリキーの設定の詳細については、「 [自動デバッグの構成](/windows/win32/debug/configuring-automatic-debugging)」を参照してください。  
+ .NET Framework 4 より前のバージョンでは、.NET Framework がネイティブおよびマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 .NET Framework 4 以降では、制御が 1 つのレジストリ キー、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug に統合されました。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーを設定する方法について詳しくは、「[自動デバッグを構成する](/windows/win32/debug/configuring-automatic-debugging)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

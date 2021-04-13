@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Grid コントロール パターンの実装
-description: UI オートメーションで GridPattern grid コントロールパターンを実装するためのガイドラインと規則について説明します。 IGridProvider インターフェイスを実装する方法について説明します。
+description: UI オートメーションに GridPattern グリッド コントロール パターンを実装するためのガイドラインと規則について説明します。 IGridProvider インターフェイスの実装方法を説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
 ms.openlocfilehash: 2290fd91c8eee0ab969eef2827d3c7440ef21e20
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96274882"
@@ -52,11 +52,11 @@ ms.locfileid: "96274882"
 
  IGridProvider インターフェイスの実装時には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|Type|メモ|  
+|必須メンバー|種類|Notes|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "96274882"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -要求された行座標がより大きい <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> か、列座標がより大きい場合 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> 。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -要求された行または列の座標のいずれかが0未満の場合。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   要求された行座標が <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> より大きい、または列座標が <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> より大きい。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   要求された行または列座標が 0 未満である。|  
   
 ## <a name="see-also"></a>関連項目
 

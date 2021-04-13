@@ -1,6 +1,6 @@
 ---
 title: クライアントの動作の構成
-description: WCF が動作を構成する2つの方法について説明します。これは、アプリケーション構成ファイルまたは呼び出し元アプリケーションからプログラムによって実行されます。
+description: WCF によって動作が構成される 2 つの方法 (アプリケーション構成ファイル内で、または呼び出し元アプリケーションからプログラムによって) について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 ms.openlocfilehash: 34cbb9e31933debb5120eb30956c3a5f0be065ed
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96266715"
 ---
 # <a name="configuring-client-behaviors"></a>クライアントの動作の構成
 
-Windows Communication Foundation (WCF) では、2つの方法で動作を構成します。動作構成は、 `<behavior>` クライアントアプリケーション構成ファイルのセクションで定義されるか、または呼び出し元アプリケーションでプログラムによって定義されます。 このトピックでは、両方の方法について説明します。  
+Windows Communication Foundation (WCF) では 2 通りの方法で動作が構成されます。1 つは動作の構成を参照する方法で、これはクライアント アプリケーションの構成ファイルの `<behavior>` セクションで定義されます。もう 1 つは、呼び出し元アプリケーションでプログラムによって行う方法です。 このトピックでは、両方の方法について説明します。  
   
  構成ファイルを使用する場合、動作の構成には、構成設定の名前付きコレクションがあります。 各動作の構成には、一意の名前を指定する必要があります。 この文字列をエンドポイントの構成の `behaviorConfiguration` 属性で使用し、エンドポイントと動作を関連付けます。  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) では、2つの方法で動作を構成�
   
 ## <a name="using-behaviors-programmatically"></a>プログラムによる動作の使用  
 
- また、 `Behaviors` クライアントを開く前に、Windows Communication Foundation (WCF) クライアントオブジェクトまたはクライアントチャネルファクトリオブジェクトで適切なプロパティを見つけることで、動作をプログラムによって構成または挿入することもできます。  
+ クライアントを開く前に、Windows Communication Foundation (WCF) クライアント オブジェクトまたはクライアント チャネル ファクトリ オブジェクト上の適切な `Behaviors` プロパティを見つけることで、動作をプログラムによって構成または挿入することもできます。  
   
 ## <a name="example"></a>例  
 

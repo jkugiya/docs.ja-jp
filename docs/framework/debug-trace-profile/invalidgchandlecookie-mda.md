@@ -1,6 +1,6 @@
 ---
 title: invalidGCHandleCookie MDA
-description: InvalidGCHandleCookie managed デバッグアシスタント (MDA) を確認します。これは、無効な IntPtr クッキーから GCHandle への変換が試行されたときにアクティブ化されます。
+description: invalidGCHandleCookie マネージド デバッグ アシスタント (MDA) について確認します。これは、無効な IntPtr Cookie から GCHandle への変換が試行されたときにアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid cookies
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 ms.openlocfilehash: 36806498445da78c8d9dd5c51c1903b253a39da0
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272606"
@@ -28,7 +28,7 @@ ms.locfileid: "96272606"
 
  Cookie が <xref:System.Runtime.InteropServices.GCHandle> から最初に作成されていないために無効になっている可能性があります。既に解放されている <xref:System.Runtime.InteropServices.GCHandle> が異なるアプリケーション ドメイン内で <xref:System.Runtime.InteropServices.GCHandle> の Cookie になっているか、<xref:System.Runtime.InteropServices.GCHandle> としてネイティブ コードにマーシャリングされても、<xref:System.IntPtr> として CLR に再び渡され、キャストが試行されたことを表します。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  <xref:System.Runtime.InteropServices.GCHandle> の有効な <xref:System.IntPtr> Cookie を指定します。  
   

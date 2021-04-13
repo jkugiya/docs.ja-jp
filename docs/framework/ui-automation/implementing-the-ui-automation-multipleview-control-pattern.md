@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション MultipleView コントロール パターンの実装
-description: UI オートメーションで、多重ビューコントロールパターンを実装するためのガイドラインと規則を確認します。 IMultipleViewProvider インターフェイスに必要なメンバーを参照してください。
+description: UI オートメーションで MultipleView コントロール パターンを実装するためのガイドラインと規則を確認します。 IMultipleViewProvider インターフェイスに必要なメンバーをご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 7e64a696e8dc96123631853b06ea3ccee434d2f1
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96239434"
@@ -23,7 +23,7 @@ ms.locfileid: "96239434"
   
  <xref:System.Windows.Automation.MultipleViewPattern> コントロール パターンは、同じ情報セットまたは子コントロールの複数の表現を提供し、それらの表現を切り替えることができるコントロールをサポートするために使用します。  
   
- 複数のビューを表示できるコントロールの例としては、リストビュー (コンテンツをサムネイルとして表示できるもの) があります。タイル、アイコン、または詳細)、Microsoft Excel グラフ (円グラフ、折れ線グラフ、横棒グラフ、数式を含むセル値)、Microsoft Word 文書 (標準、Web レイアウト、印刷レイアウト、閲覧レイアウト、アウトライン)、Microsoft Outlook カレンダー (年、月、週、日)、および Microsoft Windows Media Player スキン。 サポートされるビューはコントロールの開発者によって決定され、各コントロールに固有です。  
+ 複数のビューを表示できるコントロールの例には、リスト ビュー (サムネイル、タイル、アイコン、または詳細の形でコンテンツを表示できる)、Microsoft Excel チャート (円、線、棒、式を含むセル値)、Microsoft Word 文書 (標準、Web レイアウト、印刷レイアウト、閲覧レイアウト、アウトライン)、Microsoft Outlook カレンダー (年、月、週、日)、Microsoft Windows Media Player スキンなどがあります。 サポートされるビューはコントロールの開発者によって決定され、各コントロールに固有です。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -48,9 +48,9 @@ ms.locfileid: "96239434"
 |必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|なし|  
   
  このコントロールのパターンに関連付けられているイベントはありません。  
   

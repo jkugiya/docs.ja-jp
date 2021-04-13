@@ -1,6 +1,6 @@
 ---
-title: GetMethodOrigin 関数 (アンマネージ API リファレンス)
-description: GetMethodOrigin 関数は、メソッドが宣言されているクラスを特定します。
+title: GetMethodOrigin 関数 (アンマネージド API リファレンス)
+description: GetMethodOrigin 関数では、メソッドを宣言しているクラスが特定されます。
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -16,7 +16,7 @@ topic_type:
 - Reference
 ms.openlocfilehash: 434392ffb4d9124e319bcd9c42fdd340d3fec5b4
 ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/24/2020
 ms.locfileid: "95722779"
@@ -41,42 +41,42 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-からこのパラメーターは使用されていません。
+[in] このパラメーターは使用されません。
 
 `ptr`  
-から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
+[in] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `wszMethodName`  
-から所有クラスが要求されているオブジェクトのメソッドの名前。
+[in] 所有クラスが要求されているオブジェクトのメソッドの名前。
 
 `pstrClassName`  
-入出力メソッドを所有するクラスの名前を受け取ります。
+[out] メソッドを所有するクラスの名前を受け取ります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
+この関数によって返される次の値は、*WbemCli.h* ヘッダー ファイル内で定義されています。または、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドが見つかりませんでした。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1つ以上のパラメーターが無効です。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定したメソッドが見つかりませんでした。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つ以上のパラメーターが無効です。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しは成功しました。  |
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この関数は、 [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) メソッドの呼び出しをラップします。
+この関数では、[IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) メソッドの呼び出しがラップされます。
 
-クラスは1つまたは複数の基底クラスからメソッドを継承できるため、多くの場合、開発者は特定のメソッドが定義されているクラスを特定する必要があります。
+クラスは 1 つまたは複数の基底クラスからメソッドを継承できるため、多くの場合、開発者は特定のメソッドが定義されているクラスを判別する必要があります。
 
-パラメーターである `pstrClassName` ため、関数が呼び出される前に、パラメーターは有効なを指していない必要があり `BSTR` `out` ます。このポインターは、関数から制御が戻った後に割り当て解除されません。
+`pstrClassName` パラメーターは `out` パラメーターであるため、この関数が呼び出される前は有効な `BSTR` を指していてはなりません。このポインターは、関数から制御が戻った後に割り当て解除されません。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils .idl  
+ **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

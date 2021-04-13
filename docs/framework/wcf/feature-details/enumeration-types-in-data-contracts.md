@@ -1,6 +1,6 @@
 ---
 title: データ コントラクトの列挙型
-description: データコントラクトモデルが、WFC プログラミングモデルの一部として列挙を表現する方法について説明します。
+description: データ コントラクト モデルにより、列挙型が WFC プログラミング モデルの一部としてどのように表現されるかについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
 ms.openlocfilehash: 88bf2513435a9c00cf11a0681b32871992c8d2b2
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96276660"
@@ -34,7 +34,7 @@ ms.locfileid: "96276660"
   
 ### <a name="enumeration-member-values"></a>列挙メンバー値  
 
- 通常、データ コントラクトには、数値ではなく列挙メンバー名が含まれます。 ただし、データコントラクトモデルを使用する場合、受信側が WCF クライアントの場合、エクスポートされたスキーマは数値を保持します。 [XmlSerializer クラスを使用](using-the-xmlserializer-class.md)してを使用する場合は、この方法ではないことに注意してください。  
+ 通常、データ コントラクトには、数値ではなく列挙メンバー名が含まれます。 ただし、データ コントラクト モデルを使用しているときに、受信側が WCF クライアントである場合、エクスポートされたスキーマは数値を保持します。 これは、「[XmlSerializer クラスの使用](using-the-xmlserializer-class.md)」使用している場合は、当てはまらないことに注意してください。  
   
  前の例では、`condition` が `Used` に設定され、データが XML にシリアル化されると、結果の XML は `<condition>Used</condition>` になりますが `<condition>1</condition>` にはなりません。 したがって、次のデータ コントラクトは、`CarConditionEnum` のデータ コントラクトと同じです。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "96276660"
   
  たとえば、`CarConditionEnum` を送信側で使用し、`CarConditionWithNumbers` を受信側で使用できます。 送信側で `Used` に値 "1" を使用し、受信側で値 "20" を使用しても、XML 表現は送信側と受信側共に `<condition>Used</condition>` です。  
   
- データ コントラクトに含めるには、<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を適用する必要があります。 .NET Framework では、常に特別な値 0 (ゼロ) を列挙型に適用できます。これは、列挙体の既定値でもあります。 ただし、この特殊値ゼロも <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を使用してマークされない限りシリアル化できません。  
+ データ コントラクトに含めるには、<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を適用する必要があります。 .NET Framework では、列挙に特殊な値 0 (ゼロ) を常に割り当てることができます。これはまた、すべての列挙の既定値になります。 ただし、この特殊値ゼロも <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を使用してマークされない限りシリアル化できません。  
   
  これには、次のような 2 つの例外があります。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "96276660"
   
 1. 数値にマップする列挙メンバー (<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) の検索を試みます。 見つかった場合、そのメンバーのみを含むリストを送信します。  
   
-2. 合計の各部にマップされる列挙メンバー (それぞれに <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) が存在するような形で、数値をこの合計に分割します。 このメンバーすべてのリストを送信します。 このような合計を見つけるために *最長一致アルゴリズム* が使用されるため、このような合計が存在する場合でも、そのような合計が検出されるという保証はありません。 この問題を回避するには、列挙メンバーの数値を必ず 2 の累乗数にします。  
+2. 合計の各部にマップされる列挙メンバー (それぞれに <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) が存在するような形で、数値をこの合計に分割します。 このメンバーすべてのリストを送信します。 このような合計を見つけるために、*最長一致アルゴリズム* が使用されることに注意してください。したがって、このような合計が存在したとしても見つかるとは限りません。 この問題を回避するには、列挙メンバーの数値を必ず 2 の累乗数にします。  
   
 3. 前の 2 つの手順が失敗し、数値がゼロ以外の場合、<xref:System.Runtime.Serialization.SerializationException> をスローします。 数値がゼロの場合、空のリストを送信します。  
   

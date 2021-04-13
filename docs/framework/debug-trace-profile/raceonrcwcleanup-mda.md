@@ -1,6 +1,6 @@
 ---
 title: raceOnRCWCleanup MDA
-description: RaceOnRCWCleanup managed デバッグアシスタント (MDA) を確認します。これは、RCW が別のスレッドで使用されている場合、または .NET のスレッドスタックを解放している場合にアクティブ化されます。
+description: raceOnRCWCleanup マネージド デバッグ アシスタント (MDA) について確認します。これは、RCW が .NET 内の別のスレッド上または解放中のスレッド スタック上で使用されている場合にアクティブ化されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RCW
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 ms.openlocfilehash: 393c5ea44108445a9a1a9d16e7d1d192eced5740
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96271448"
@@ -29,7 +29,7 @@ ms.locfileid: "96271448"
 
  別のスレッドまたは解放中のスレッド スタックで、RCW が使用中です。  使用中の RCW は解放できません。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  現在のスレッドまたは他のスレッドで使用中の可能性がある RCW は、解放しないでください。  
   

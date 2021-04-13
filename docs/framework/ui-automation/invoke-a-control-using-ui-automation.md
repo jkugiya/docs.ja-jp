@@ -1,6 +1,6 @@
 ---
 title: UI オートメーションを使用したコントロールの呼び出し
-description: UI オートメーションを使用して、特定のプロパティ条件に一致するコントロールを検索し、AutomationElement を作成して、InvokePattern を取得し、コントロールに対して Invoke を使用します。
+description: UI オートメーションを使用して、特定のプロパティ条件に一致するコントロールの検索、AutomationElement の作成、InvokePattern の取得を行い、コントロールに対して Invoke を使用します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
 ms.openlocfilehash: 7c6f5d26d16642f978fd79fd40701c240a53f16a
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96277999"
@@ -43,4 +43,4 @@ ms.locfileid: "96277999"
   
 ## <a name="see-also"></a>関連項目
 
-- [InvokePattern、ExpandCollapsePattern、および TogglePattern サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [InvokePattern、ExpandCollapsePattern、および TogglePattern のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

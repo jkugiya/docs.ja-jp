@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Scroll コントロール パターンの実装
-description: UI オートメーションで Scroll コントロールパターンを実装するためのガイドラインと規則を確認します。 IScrollProvider インターフェイスに必要なメンバーを参照してください。
+description: UI オートメーションで Scroll コントロール パターンを実装するためのガイドラインと規則を確認します。 IScrollProvider インターフェイスに必要なメンバーをご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Scroll control pattern
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: 4069772530d8b4db817aa1b7a9be86a3ee83881e
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96239264"
@@ -42,7 +42,7 @@ ms.locfileid: "96239264"
   
 - <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> と <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> は <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>とは無関係です。  
   
-- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` Then を <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 100% に設定し、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> をに設定 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll> する必要がある場合は。 同様に、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` の場合は、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> を 100% に設定し、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> を <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>」をご覧ください。 これにより、UI オートメーション クライアントは、スクロールしたくない方向がアクティブになっている場合の <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 競合状態 [を回避しながら、](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) メソッド内でこれらのプロパティ値を使用できます。  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` の場合は、<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> を 100% に設定し、<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> を <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll> に設定する必要があります。 同様に、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` の場合は、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> を 100% に設定し、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> を <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>」をご覧ください。 これにより、UI オートメーション クライアントは、スクロールしたくない方向がアクティブになっている場合の <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 競合状態 [を回避しながら、](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) メソッド内でこれらのプロパティ値を使用できます。  
   
 - <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> はロケール固有です。 HorizontalScrollPercent = 100.0 の設定では、左から右に読む英語などの言語の場合、右端に相当する位置にコントロールのスクロール位置を設定する必要があります。 また、右から左に読むアラビア語などの言語の場合は、HorizontalScrollPercent = 100.0 の設定でスクロール位置を左端の位置に設定する必要があります。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "96239264"
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   

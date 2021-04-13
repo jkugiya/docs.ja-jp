@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - record keyword [C#]
 - record type [C#]
-ms.openlocfilehash: 57474caf0f1106380e52da7fcb7608b62a0f23e5
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 067046a66c6eb1f314c123de8bde2d023f1f374a
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872653"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255117"
 ---
 # <a name="records-c-reference"></a>レコード (C# リファレンス)
 
@@ -48,7 +48,7 @@ C#9 以降では、`record` キーワードを使用して、データをカプ�
 
 プロパティ定義に位置指定構文を使用すると、コンパイラにより、以下が作成されます。
 
-* レコード宣言で指定される各位置指定パラメーターのパブリック init 専用自動実装プロパティ。 [init 専用](../../whats-new/csharp-9.md#init-only-setters)プロパティは、コンストラクターで、またはプロパティ初期化子を使用して設定できます。
+* レコード宣言で指定される各位置指定パラメーターのパブリック init 専用自動実装プロパティ。 [init 専用](../keywords/init.md)プロパティは、コンストラクターで、またはプロパティ初期化子を使用して設定できます。
 * パラメーターがレコード宣言の位置指定パラメーターと一致するプライマリ コンストラクター。
 * レコード宣言で指定された各定位置指定パラメーターの `out` パラメーターを使用する `Deconstruct` メソッド。 このメソッドは、2 つ以上の位置指定パラメーターがある場合にのみ指定されます。 このメソッドにより、位置指定構文を使用して定義されたプロパティは分解されます。標準のプロパティ構文を使用して定義されたプロパティは無視されます。
 

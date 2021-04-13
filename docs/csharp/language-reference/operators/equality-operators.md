@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ee45869dff19712d8e4ef30f2fc01c2d4633acf1
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063216"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255455"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -55,7 +55,7 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../builtin-ty
 
 ### <a name="record-types-equality"></a>レコードの型の等価性
 
-C# 9.0 以降で利用できる[レコードの型](../../whats-new/csharp-9.md#record-types)では、既定で値の等価性セマンティクスを提供する `==` 演算子と `!=` 演算子をサポートします。 つまり、2 つのレコード オペランドは、いずれも `null` であるか、すべてのフィールドと自動実装プロパティの該当値が等しいときに等しくなります。
+C# 9.0 以降で利用できる[レコードの型](../builtin-types/record.md)では、既定で値の等価性セマンティクスを提供する `==` 演算子と `!=` 演算子をサポートします。 つまり、2 つのレコード オペランドは、いずれも `null` であるか、すべてのフィールドと自動実装プロパティの該当値が等しいときに等しくなります。
 
 :::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
 

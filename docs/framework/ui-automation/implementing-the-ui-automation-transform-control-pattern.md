@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Transform コントロール パターンの実装
-description: UI オートメーションに変換コントロールパターンを実装するためのガイドラインと規則を確認します。 ITransformProvider インターフェイスに必要なメンバーを確認します。
+description: UI オートメーションで Transform コントロール パターンを実装するためのガイドラインと規則を確認します。 ITransformProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Transform
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 ms.openlocfilehash: fc47170a08ff08f6cd8f67996ef8fbf19c40f819
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265649"
@@ -48,9 +48,9 @@ ms.locfileid: "96265649"
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "96265649"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> が false の場合。|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> が false の場合。|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> が false の場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> が false の場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> が false の場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> が false の場合。|  
   
 ## <a name="see-also"></a>関連項目
 

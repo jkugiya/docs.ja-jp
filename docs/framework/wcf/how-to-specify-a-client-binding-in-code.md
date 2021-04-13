@@ -1,6 +1,6 @@
 ---
 title: '方法: コード内でクライアント バインディングを指定する'
-description: WCF クライアントのバインディングをコードで強制的に指定する方法について説明します。 この例では、クライアントがサービスにアクセスします。
+description: コード内で WCF クライアントのバインディングを強制的に指定する方法について説明します。 この例では、サービスがクライアントによってアクセスされます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
 ms.openlocfilehash: f9a56c631d841fe60923c05a19bdec9db989ac60
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96236573"
@@ -17,11 +17,11 @@ ms.locfileid: "96236573"
 
 この例では、電卓サービスを使用するためのクライアントを作成し、そのクライアントのバインディングを強制的にコードで指定します。 クライアントは `CalculatorService` にアクセスします。これにより、`ICalculator` インターフェイスが実装され、サービスとクライアントの両方で <xref:System.ServiceModel.BasicHttpBinding> クラスが使用されます。  
   
- ここで説明する手順では、電卓サービスが実行されていることを前提としています。 サービスの構築の詳細については、「 [方法: 構成でサービスバインディングを指定](how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。 また、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)WINDOWS COMMUNICATION FOUNDATION (WCF) を使用して、クライアントコンポーネントを自動的に生成します。 このツールでは、サービスにアクセスするためのクライアント コードが生成されます。  
+ ここで説明する手順では、電卓サービスが実行されていることを前提としています。 サービスを構築する方法の詳細については、「[方法: 構成でサービス バインディングを指定する](how-to-specify-a-service-binding-in-configuration.md)」を参照してください。 また、Windows Communication Foundation (WCF) によって提供される [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して、クライアント コンポーネントが自動的に生成されます。 このツールでは、サービスにアクセスするためのクライアント コードが生成されます。  
   
  クライアントは 2 つの部分で構成されます。 Svcutil.exe によって、`ClientCalculator` インターフェイスを実装する `ICalculator` が生成されます。 次に、`ClientCalculator` のインスタンスを作成し、サービスのバインディングとアドレスをコードで指定して、このクライアント アプリケーションを作成します。  
   
- この例のソースコピーについては、 [Basicbinding](./samples/basicbinding.md) サンプルを参照してください。  
+ この例のソースのコピーについては、「[BasicBinding](./samples/basicbinding.md)」のサンプルを参照してください。  
   
 ### <a name="to-specify-a-custom-binding-in-code"></a>コード内でカスタム バインドを指定するには  
   

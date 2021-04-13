@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化
-description: フラグメント内の要素の UI オートメーションプロバイダーでのナビゲーションを有効にする方法を示す例を参照してください。
+description: フラグメント内の要素に対して UI オートメーション プロバイダーでのナビゲーションを有効にする方法を示す例をご覧ください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
 ms.openlocfilehash: d8fb67a84b7cba84fe65cd2f87baa6549122d2a2
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96276504"

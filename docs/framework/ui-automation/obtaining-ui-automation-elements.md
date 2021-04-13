@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション要素の取得
-description: ユーザーインターフェイス (UI) 要素の UI オートメーション要素 (AutomationElement) オブジェクトを取得するためのさまざまな方法を確認します。
+description: ユーザー インターフェイス (UI) 要素の UI オートメーション要素 (AutomationElement) オブジェクトを取得するためのさまざまな方法を確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, obtaining elements
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 66a8d9e944a8f8a777ec744a33f2cdb2d33e200c
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96237353"

@@ -1,6 +1,6 @@
 ---
 title: トレース リスナー
-description: .NET で送信されたトレースメッセージを収集して記録するためのメカニズムであるトレースリスナーについて説明します。 リスナーは、メッセージを収集、格納、およびルーティングします。
+description: .NET 内で送信されたトレース メッセージを収集して記録するためのメカニズムであるトレース リスナーについて調べます。 リスナーでは、メッセージが収集、格納、およびルーティングされます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 ms.openlocfilehash: 8cd79d21d66d23f834b7ef0012d8360884028ac6
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96238120"
 ---
 # <a name="trace-listeners"></a>トレース リスナー
 
-**Trace**、**Debug**、および <xref:System.Diagnostics.TraceSource> を使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレースメッセージは *リスナー* によって受信されます。 リスナーの目的は、トレース メッセージの収集、格納、およびルーティングを行うことです。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  
+**Trace**、**Debug**、および <xref:System.Diagnostics.TraceSource> を使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレース メッセージは *リスナー* によって受け取られます。 リスナーの目的は、トレース メッセージの収集、格納、およびルーティングを行うことです。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  
   
  リスナーは、**Debug**、**Trace**、および <xref:System.Diagnostics.TraceSource> の各クラスで使用できます。それらのクラスからも出力を各種のリスナー オブジェクトに送ることができます。 一般的に使用される定義済みのリスナーは、次のとおりです。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "96238120"
   
 - <xref:System.Diagnostics.ConsoleTraceListener> は、トレース出力またはデバッグ出力を、標準出力と標準エラー出力ストリームのいずれかに転送します。  
   
-- <xref:System.Diagnostics.DelimitedListTraceListener> は、トレース出力またはデバッグ出力を、テキスト ライター (ストリーム ライターなど) またはストリーム (ファイル ストリームなど) に送ります。 トレース出力は、プロパティで指定された区切り記号を使用する区切りテキスト形式です <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 。  
+- <xref:System.Diagnostics.DelimitedListTraceListener> は、トレース出力またはデバッグ出力を、テキスト ライター (ストリーム ライターなど) またはストリーム (ファイル ストリームなど) に送ります。 トレース出力は、<xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> プロパティによって指定された区切り記号を使用する、区切られたテキスト形式です。  
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> は、トレース出力またはデバッグ出力を、XML でエンコードされたデータとして <xref:System.IO.TextWriter> または <xref:System.IO.Stream> (<xref:System.IO.FileStream> など) に送ります。  
   

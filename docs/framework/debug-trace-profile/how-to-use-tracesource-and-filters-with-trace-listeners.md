@@ -1,6 +1,6 @@
 ---
 title: '方法: TraceSource とフィルターをトレース リスナーと共に使用する'
-description: TraceSource クラスとフィルターを .NET のトレースリスナーと共に使用します。 TraceSource は、古いトレースクラスおよびデバッグクラスの静的メソッドよりも優先されます。
+description: TraceSource クラスとフィルターを .NET 内のトレース リスナーと共に使用します。 TraceSource は、古い Trace および Debug クラスの静的メソッドよりも優先されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 ms.openlocfilehash: 94af872e0417941f17c043710688c7b723cd4004
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272801"

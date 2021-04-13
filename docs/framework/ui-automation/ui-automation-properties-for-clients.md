@@ -1,6 +1,6 @@
 ---
 title: クライアントの UI オートメーション プロパティ
-description: Ui オートメーションクライアントアプリケーションに公開される UI オートメーションプロパティの概要について説明します。
+description: UI オートメーション クライアント アプリケーションに公開される UI オートメーション プロパティについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: f86351f430e2d133a31cf6af81b41789ba444078
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96279130"
@@ -29,17 +29,17 @@ ms.locfileid: "96279130"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティは読み取り専用です。 コントロールのプロパティを設定するには、適切なコントロール パターンのメソッドを使用する必要があります。 たとえば、スクロール ウィンドウの位置の値を変更する場合は、 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> を使用します。  
   
- パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「 [UI オートメーションクライアントでのキャッシュ](caching-in-ui-automation-clients.md)」を参照してください。  
+ パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「[UI オートメーション クライアントにおけるキャッシュ](caching-in-ui-automation-clients.md)」を参照してください。  
   
 ## <a name="property-ids"></a>プロパティ ID  
 
- プロパティ識別子 (IDs) は、オブジェクトにカプセル化される一意の定数値です <xref:System.Windows.Automation.AutomationProperty> 。 UI オートメーションクライアントアプリケーション <xref:System.Windows.Automation.AutomationElement> は、クラスまたは適切なコントロールパターンクラス (など) からこれらの id を取得し <xref:System.Windows.Automation.ScrollPattern> ます。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
+ プロパティ識別子 (ID) は、<xref:System.Windows.Automation.AutomationProperty> オブジェクトにカプセル化される一意の定数値です。 UI オートメーション クライアント アプリケーションは、これらの ID を <xref:System.Windows.Automation.AutomationElement> クラスまたは適切なコントロール パターン クラス (<xref:System.Windows.Automation.ScrollPattern> など) から取得します。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> の数値 <xref:System.Windows.Automation.AutomationProperty> は、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> メソッドで照会するプロパティを識別するために、プロバイダーによって使用されます。 通常、クライアント アプリケーションで <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>を調べる必要はありません。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> は、デバッグと診断の目的のみに使用されます。  
   
 ## <a name="property-conditions"></a>プロパティ条件  
 
- プロパティ Id は、オブジェクトの検索に使用するオブジェクトの構築に使用され <xref:System.Windows.Automation.PropertyCondition> <xref:System.Windows.Automation.AutomationElement> ます。 たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
+ プロパティ ID は、<xref:System.Windows.Automation.AutomationElement> オブジェクトの検出に使用する <xref:System.Windows.Automation.PropertyCondition> オブジェクトを構築する際に使用されます。 たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
   
  詳細については、次のリファレンス トピックを参照してください。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "96279130"
 
  <xref:System.Windows.Automation.AutomationElement.Current%2A> プロパティおよび <xref:System.Windows.Automation.AutomationElement.Cached%2A> プロパティの構造体に加えて、 <xref:System.Windows.Automation.AutomationElement> には、単純なプロパティ アクセサーを介して取得される次のプロパティがあります。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|キャッシュ内にある子 <xref:System.Windows.Automation.AutomationElement> オブジェクトのコレクション。|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|キャッシュ内にある <xref:System.Windows.Automation.AutomationElement> 親オブジェクト。|  

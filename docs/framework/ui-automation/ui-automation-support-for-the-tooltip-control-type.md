@@ -1,6 +1,6 @@
 ---
 title: UI オートメーションによる ToolTip コントロール型のサポート
-description: UI オートメーションによる ToolTip コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロールパターン、およびイベントについて説明します。
+description: UI オートメーションによる ToolTip コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロール パターン、およびイベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, ToolTip control type
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
 ms.openlocfilehash: 8c4f66de95acd3f18148887b4eb18713cb30fa87
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96240187"
@@ -23,17 +23,17 @@ ms.locfileid: "96240187"
   
  ツール ヒント コントロールは、テキストを含むポップアップ ウィンドウです。  
   
- 以下の各セクションで、ToolTip コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 要件は、、Win32、Windows フォームのいずれの場合で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] も、すべてのツールヒントコントロールに適用され [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ます。  
+ 以下の各セクションで、ToolTip コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、Windows フォームのいずれの場合でも、すべてのツール ヒント コントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
 
- 次の表に、ツール ヒント コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、ツール ヒント コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの詳細については、「[UI オートメーション ツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|ToolTip<br /><br /> -Text (0 以上)<br />-Image (0 以上)|ToolTip|  
+|ToolTip<br /><br /> -   テキスト (0 個以上)<br />-   イメージ (0 個以上)|ToolTip|  
   
  ツール ヒント コントロールは、キーボード フォーカスを受け取ることができる場合は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューにのみ表示されます。 それ以外の場合、ツール ヒントの情報はすべて、ツール ヒントが参照している `HelpTextProperty` 要素の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から取得できます。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "96240187"
 
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
 
- 次の表に、ツール ヒント コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「 [クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+ 次の表に、ツール ヒント コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティの詳細については、「[クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|Notes|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|コントロール全体を格納する最も外側の四角形。|  
@@ -56,7 +56,7 @@ ms.locfileid: "96240187"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolTip|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"ツール ヒント"|ToolTip コントロール型に対応する、ローカライズされた文字列。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|依存|ツール ヒント コントロールがキーボード フォーカスを受け取ることができる場合、ツリーのコンテンツ ビューにのみ表示される必要があります。 テキストのみである場合は、生成元のコントロールの HelpTextProperty として取得できます。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|ツール ヒント コントロールは、常にコントロールである必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|○|ツール ヒント コントロールは、常にコントロールである必要があります。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
 

@@ -1,6 +1,6 @@
 ---
 title: クライアント アプリケーションに UI オートメーション プロバイダーを実装する
-description: アプリケーションでクライアント側 UI オートメーションプロバイダーを実装する方法の例を参照してください。 これは一般的ではないシナリオです。
+description: アプリケーションでクライアント側 UI オートメーション プロバイダーを実装する方法の例を確認します。 これは、一般的ではないシナリオであることに注意してください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
 ms.openlocfilehash: 486e05f9080b686c48454dfcfceaaa666fa57f67
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96269588"

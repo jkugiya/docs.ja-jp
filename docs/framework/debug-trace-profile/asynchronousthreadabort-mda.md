@@ -1,6 +1,6 @@
 ---
 title: asynchronousThreadAbort MDA
-description: スレッドが非同期アボートを別のスレッドに配置しようとしたときに、asynchronousThreadAbort managed デバッグアシスタント (MDA) がどのようにアクティブ化されるかを確認します。
+description: スレッドが別のスレッドに非同期の中止処理を適用しようとしたときに、asynchronousThreadAbort マネージド デバッグ アシスタント (MDA) がアクティブになる方法について確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 ms.openlocfilehash: 216c4bbe570fe34b59513bb338f0f2c5da0fc3e2
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265246"
@@ -38,7 +38,7 @@ ms.locfileid: "96265246"
 
  問題に伴うランダム性により、原因を特定することが困難な場合があります。
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決方法
 
  非同期のスレッド中止を使用する必要があるコード設計を避けます。 <xref:System.Threading.Thread.Abort%2A> の呼び出しを必要としない対象スレッドを中断するのにより適した方法はいくつかあります。 最も安全な方法は、対象スレッドの中断要求をシグナル通知する、共通プロパティなどの機構を導入することです。 対象スレッドは、特定の安全なチェックポイントでシグナルをチェックします。 中断が要求されたことが示されている場合は、適切にシャットダウンできます。
 

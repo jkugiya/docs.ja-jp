@@ -1,6 +1,6 @@
 ---
 title: .NET Framework のパフォーマンス
-description: .NET アプリのパフォーマンスを設計し、計画します。 Microsoft が提供するツールを使用して、アプリのパフォーマンスを測定し、改善を行います。
+description: .NET アプリのパフォーマンスを設計し、計画します。 Microsoft によって提供されるツールを使用して、アプリのパフォーマンスを測定し、向上させます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 ms.openlocfilehash: f15cd9b38285e88dac727bcfe51c8dc542a735f6
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96277986"
@@ -36,9 +36,9 @@ ms.locfileid: "96277986"
 |ツール|説明|  
 |----------|-----------------|  
 |Visual Studio パフォーマンス分析|Windows オペレーティング システムを実行しているコンピューターに配置されている .NET Framework アプリの CPU 使用量の分析に使用します。<br /><br /> このツールは、Visual Studio でプロジェクトを開いた後、**[デバッグ]** メニューから使用できます。 詳細については、「[Performance Explorer](/visualstudio/profiling/performance-explorer)」(パフォーマンス エクスプローラー) を参照してください。 **注:** Windows Phone を対象とする場合は、Windows Phone アプリケーション分析を使用します (次の行を参照してください)。|  
-|Windows Phone アプリケーション分析|Windows Phone アプリの CPU やメモリ、ネットワーク データ転送率、アプリの応答性、バッテリの使用量の分析に使用します。<br /><br /> このツールは、[Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) のインストール後に、Visual Studio の Windows Phone プロジェクトの **[デバッグ]** メニューから使用できます。 詳細については、「 [Windows Phone 8 のアプリプロファイリング](/previous-versions/windows/apps/jj215908(v=vs.105))」を参照してください。|  
+|Windows Phone アプリケーション分析|Windows Phone アプリの CPU やメモリ、ネットワーク データ転送率、アプリの応答性、バッテリの使用量の分析に使用します。<br /><br /> このツールは、[Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) のインストール後に、Visual Studio の Windows Phone プロジェクトの **[デバッグ]** メニューから使用できます。 詳細については、「[Windows Phone 8 のアプリ プロファイリング](/previous-versions/windows/apps/jj215908(v=vs.105))」を参照してください。|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU とメモリ関連のパフォーマンスの問題を識別するために使用します。 このツールは、Windows イベント トレーシング (ETW) と CLR プロファイル API を使用して、メモリと CPU の高度な調査およびガベージ コレクションや JIT コンパイルに関する情報を提供します。 PerfView を使用する方法の詳細については、アプリに含まれるチュートリアルやヘルプ ファイル、[Channel 9 のビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)、および[ブログの投稿](/archive/blogs/vancem/)を参照してください。<br /><br /> メモリ固有の問題については、[PerfView を使用したメモリの調査に関するビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)を参照してください。|  
-|[Windows Performance Analyzer](https://www.microsoft.com/p/windows-performance-analyzer/9n0w1b2bxgnz?activetab=pivot:overviewtab)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、windows 8 用の Windows アセスメント & amp; デプロイメントキット (ADK) の一部としてダウンロードセンターから入手できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|
+|[Windows Performance Analyzer](https://www.microsoft.com/p/windows-performance-analyzer/9n0w1b2bxgnz?activetab=pivot:overviewtab)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、Windows 8 用の Windows アセスメント &amp; デプロイメント キット (ADK) の一部としてダウンロード センターから入手できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows イベント トレーシング (ETW)  
 
@@ -51,7 +51,7 @@ ms.locfileid: "96277986"
 |アプリの種類|解決方法については、|  
 |--------------|---------|  
 |すべてのプラットフォームに対応した .NET Framework アプリ|[ガベージ コレクションとパフォーマンス](../../standard/garbage-collection/performance.md)<br /><br /> [パフォーマンスに関するヒント](performance-tips.md)|  
-|C++、C#、および Visual Basic で記述された Windows 8.x ストアアプリ|[C++、C#、または Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](/previous-versions/windows/apps/hh750313(v=win.10))|  
+|C++、C#、および Visual Basic で記述された Windows 8.x ストア アプリ|[C++、C#、または Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](/previous-versions/windows/apps/hh750313(v=win.10))|  
 |Windows Presentation Foundation (WPF)|[WPF Performance Suite](/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET のパフォーマンスの概要](/previous-versions/aspnet/cc668225(v=vs.100))|  
   

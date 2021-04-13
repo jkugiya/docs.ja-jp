@@ -1,6 +1,6 @@
 ---
 title: reportAvOnComRelease MDA
-description: ReportAvOnComRelease マネージデバッグアシスタント (MDA) を確認します。これは、.NET のアクセス違反とメモリの破損によってアクティブ化される可能性があります。
+description: reportAvOnComRelease マネージド デバッグ アシスタント (MDA) について確認します。これは、.NET 内でのアクセス違反とメモリの破損によってアクティブ化される可能性があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), reference counting errors
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 ms.openlocfilehash: c5047aa4005cdaa9ae6aabe8dcd7ee838ee13f58
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96267118"
@@ -31,7 +31,7 @@ COM 相互運用を実行していて、COM の生呼び出しと組み合わせ
 
  COM 相互運用を実行していて、生の COM 呼び出しと組み合わせた <xref:System.Runtime.InteropServices.Marshal.Release%2A> または <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> メソッドを使用しているときに、ユーザー参照カウントのエラーが原因で例外がスローされることがあります。 通常、この例外は破棄されます。これは、破棄しないと CLR でアクセス違反が発生し、ダウンしてしまうためです。 このアシスタントが有効な場合は、そのような例外を単に破棄するのではなく、検出して報告できます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  参照カウントのコードを調べてエラーを探します。また、オブジェクトのネイティブ クライアントに参照カウントのエラーがないかどうかも調べます。  
   

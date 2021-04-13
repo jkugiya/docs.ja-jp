@@ -1,6 +1,6 @@
 ---
 title: UI オートメーションによる Thumb コントロール型のサポート
-description: UI オートメーションによる Thumb コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロールパターン、およびイベントについて説明します。
+description: UI オートメーションによる Thumb コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロール パターン、およびイベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Thumb
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
 ms.openlocfilehash: 0b33eff4a49500178e15552c3302ee8eb74226c3
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96240330"
@@ -23,17 +23,17 @@ ms.locfileid: "96240330"
   
  Thumb コントロールは、スクロール バー ボタンなどのようにコントロールを移動 (またはドラッグ) したり、ウィンドウ サイズ変更ウィジェットなどのようにサイズ変更したりできる機能を提供します。 Thumb コントロールは、ウィンドウの移動可能な枠線として実装することもできます。 ドラッグ アンド ドロップ機能は提供されないことに注意してください。 Thumb コントロールは、マウス フォーカスを受け取ることはできますが、通常キーボード フォーカスを受け取ることはできません。 コントロール開発者は、適切に動作するように (ドラッグしたりサイズ変更したりできるように)、コントロールを実装する必要があります。  
   
- 以下の各セクションで、Thumb コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 要件は、、Win32、Windows フォームのいずれの場合で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] も、すべての thumb コントロールに適用され [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ます。  
+ 以下の各セクションで、Thumb コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、Windows フォームのいずれの場合でも、すべての Thumb コントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
 
- 次の表に、Thumb コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、Thumb コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの詳細については、「[UI オートメーション ツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|つまみ|-該当なし|  
+|つまみ|-   利用不可|  
   
  Thumb コントロールは、マウスを使用して操作するためだけに存在しているので、コンテンツ ビューには表示されません。 これらの機能は、Thumb コンテナーでサポートされる Scroll パターン、Transform パターン、RangeValue パターンなど別のコントロール パターンを使用して公開されます。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "96240330"
 
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
 
- 次の表に、Thumb コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+ 次の表に、Thumb コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティの詳細については、「[クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|Notes|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|コントロール全体を格納する最も外側の四角形。|  
@@ -53,8 +53,8 @@ ms.locfileid: "96240330"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Thumb コントロールにラベルはありません。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|つまみ|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"Thumb"|Thumb コントロール型に対応する、ローカライズされた文字列。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Thumb コントロールにコンテンツはありません。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Thumb コントロールは、常にコントロールである必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|×|Thumb コントロールにコンテンツはありません。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|○|Thumb コントロールは、常にコントロールである必要があります。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
 

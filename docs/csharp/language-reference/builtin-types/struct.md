@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 3aaba057da6214992864cf8e907b0c06ec93264c
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025434"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255091"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
@@ -33,7 +33,7 @@ ms.locfileid: "98025434"
 C# 7.2 以降では、`readonly` 修飾子を使用して、構造体型が変更不可であることを宣言します。 `readonly` 構造体のすべてのデータ メンバーを、次のように読み取り専用にする必要があります。
 
 - すべてのフィールド宣言には、[`readonly` 修飾子が必要です](../keywords/readonly.md)
-- 自動的に実装されるものも含めて、すべてのプロパティは、読み取り専用である必要があります。 C# 9.0 以降では、プロパティに [`init` アクセサー](../../whats-new/csharp-9.md#init-only-setters)が含まれる場合があります。
+- 自動的に実装されるものも含めて、すべてのプロパティは、読み取り専用である必要があります。 C# 9.0 以降では、プロパティに [`init` アクセサー](../keywords/init.md)が含まれる場合があります。
 
 それにより、`readonly` 構造体のどのメンバーも構造体の状態を変更しないことが保証されます。 C# 8.0 以降では、コンストラクターを除く他のインスタンス メンバーは、暗黙的に [`readonly`](#readonly-instance-members) になるということです。
 

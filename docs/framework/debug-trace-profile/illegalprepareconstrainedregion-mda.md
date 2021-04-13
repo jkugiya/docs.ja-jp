@@ -1,6 +1,6 @@
 ---
 title: illegalPrepareConstrainedRegion MDA
-description: PrepareConstrainedRegions 呼び出しの後に try ステートメントが続く場合に呼び出される illegalPrepareConstrainedRegion マネージデバッグアシスタントを確認します。
+description: illegalPrepareConstrainedRegion マネージド デバッグ アシスタントについて確認します。これは、PrepareConstrainedRegions 呼び出しの後に try ステートメントが続かない場合に呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrepareConstrainedRegions method
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 ms.openlocfilehash: 7cbf04e8605ccf18e89882dd09b96cc7c59330c9
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272788"
@@ -26,9 +26,9 @@ ms.locfileid: "96272788"
   
 ## <a name="cause"></a>原因  
 
- CER の準備パターンが正しく実行されません。  エラー イベントが発生します。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>ブロック内で CER の導入として例外ハンドラーをマークするために使用されるメソッド呼び出しは、 `catch` / `finally` / `fault` / `filter` ステートメントの直前で使用する必要があり `try` ます。  
+ CER の準備パターンが正しく実行されません。  エラー イベントが発生します。 `catch`/`finally`/`fault`/`filter` ブロックで CER の導入として例外ハンドラーをマークするために使用される <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> メソッドの呼び出しを `try` ステートメントの直前に使用する必要があります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  `try`ステートメントの直前に <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> の呼び出しがあることを確認します。  
   

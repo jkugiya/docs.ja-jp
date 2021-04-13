@@ -1,6 +1,6 @@
 ---
 title: '方法: オブジェクトの遅延初期化を実行する'
-description: 「System.object クラスを使用してオブジェクトの遅延初期化を実行する方法」を参照してください <T> 。 遅延初期化は、不要になったオブジェクトが作成されないことを意味します。
+description: System.Lazy<T> クラスを使用してオブジェクトの遅延初期化を実行する方法をご覧ください。 遅延初期化は、不要なオブジェクトが作成されないことを意味します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 ms.openlocfilehash: 3de0d8ea8266931c2bcda5c59c1fef97602673d5
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96278129"

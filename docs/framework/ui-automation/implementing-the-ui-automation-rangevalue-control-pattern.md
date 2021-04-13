@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション RangeValue コントロール パターンの実装
-description: UI オートメーションで RangeValue コントロールパターンを実装するためのガイドラインと規則を確認します。 IRangeValueProvider インターフェイスに必要なメンバーを参照してください。
+description: UI オートメーションで RangeValue コントロール パターンを実装するためのガイドラインと規則を確認します。 IRangeValueProvider インターフェイスに必要なメンバーをご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Range Value
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 ms.openlocfilehash: 9b5bfd571b078b7aeab149f5371004ac832fadcc
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96239563"

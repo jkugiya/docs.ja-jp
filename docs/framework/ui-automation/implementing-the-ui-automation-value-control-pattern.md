@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Value コントロール パターンの実装
-description: UI オートメーションに Value コントロールパターンを実装するためのガイドラインと規則を確認します。 IValueProvider インターフェイスに必要なメンバーを確認します。
+description: UI オートメーションで Value コントロール パターンを実装するためのガイドラインと規則を確認します。 IValueProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Value
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: b4fea39088064751ff559bd236554255d43ba2a2
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265662"
@@ -40,7 +40,7 @@ ms.locfileid: "96265662"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> は、書式設定情報や部分文字列の値の取得をサポートしていません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider> 色の値 ("黄" など) と同等の内部 RGB 構造との間の文字列マッピングをサポートする、Microsoft Word の **カラーピッカー** 選択コントロール (下図参照) などのコントロールによって実装する必要があります。  
+- <xref:System.Windows.Automation.Provider.IValueProvider> を実装する必要があるコントロールの一例は、Microsoft Word の **カラー ピッカー** 選択コントロールです (以下を参照)。これは、色の値 (たとえば「黄」) と同等の内部 RGB 構造の間の文字列マッピングをサポートしています。  
   
  ![黄色が強調表示されたカラー ピッカー。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列マッピング例  
@@ -57,7 +57,7 @@ ms.locfileid: "96265662"
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|プロパティ|なし|  
 |<xref:System.Windows.Automation.ValuePattern.ValueProperty>|プロパティ|なし|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Method|なし|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|なし|  
   
 <a name="Exceptions"></a>
 
@@ -67,9 +67,9 @@ ms.locfileid: "96265662"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -ロケール固有の情報が誤った形式でコントロールに渡された場合 (書式設定されていない日付など)。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -新しい値を文字列からコントロールが認識する形式に変換できない場合。|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -有効になっていないコントロールを操作しようとしたとき。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -   ロケールに固有の情報が、誤った形式でコントロールに渡された場合 (誤った日付形式など)。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -   新しい値を、文字列からコントロールが認識する形式に変換できない場合。|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -   有効になっていないコントロールの操作が試行された場合。|  
   
 ## <a name="see-also"></a>関連項目
 

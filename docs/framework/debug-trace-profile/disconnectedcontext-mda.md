@@ -1,6 +1,6 @@
 ---
 title: disconnectedContext MDA
-description: .NET で disconnectedContext マネージデバッグアシスタントを確認します。これは、CLR が切断されたアパートメントまたはコンテキストに移行しようとしたときに呼び出されます。
+description: .NET 内の disconnectedContext マネージド デバッグ アシスタントについて確認します。これは、切断されたアパートメントまたはコンテキストへの移行が CLR によって試行されたときに呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DisconnectedContext MDA
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 ms.openlocfilehash: 35e393ab6af2e2c14425dc50a164332120e3fa1f
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96273543"
@@ -29,7 +29,7 @@ CLR が COM オブジェクトに関する要求を処理中に、切断して�
 
  OLE アパートメントまたはコンテキストは、CLR が遷移を試行しようとしたときに、既にシャットダウンしています。 ほとんどの場合これは、STA アパートメントが所有するすべての COM コンポーネントが完全に解放される前に、それらの STA アパートメントがシャットダウンしたことが原因で発生します。また、RCW でユーザー コードからの明示的な呼び出しが実行された結果として発生することや、CLR 自体が COM コンポーネントを操作している場合 (たとえば関連する RCW がガーベージ コレクションされているのに CRL が COM コンポーネントを解放する場合など) にも発生する可能性があります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  この問題を回避するには、アプリケーションがアパートメントに存在するすべてのオブジェクトの処理を完了する前に、STA を所有するスレッドが強制終了しないようにします。 コンテキストの場合も同様に、アプリケーションがコンテキスト内部に存在するすべての COM コンポーネントの処理を完了するまでは、コンテキストがシャットダウンしないようにします。  
   

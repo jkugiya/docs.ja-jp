@@ -1,6 +1,6 @@
 ---
 title: invalidFunctionPointerInDelegate MDA
-description: Invalidfunctionpointer Indelegate マネージデバッグアシスタント (MDA) を確認します。これは、デリゲートを作成するために無効な関数ポインターが渡された場合に呼び出されます。
+description: invalidFunctionPointerInDelegate マネージド デバッグ アシスタント (MDA) について確認します。これは、デリゲートを作成するために無効な関数ポインターが渡された場合に呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
 ms.openlocfilehash: 8072d35a45cb1e0590aa5533210d0e0f86913164
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272619"
@@ -31,7 +31,7 @@ ms.locfileid: "96272619"
 
  無効な関数ポインターが指定されました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  有効な関数ポインターを指定します。  
   

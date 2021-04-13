@@ -1,6 +1,6 @@
 ---
 title: invalidCERCall MDA
-description: InvalidCERCall マネージデバッグアシスタント (MDA) を確認します。これは、制約された実行領域 (CER) グラフ内に無効な呼び出しがある場合にアクティブになります。
+description: invalidCERCall マネージド デバッグ アシスタント (MDA) について確認します。これは、制約された実行領域 (CER) グラフ内に無効な呼び出しがある場合にアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 ms.openlocfilehash: 6f0d9d8e3059729098975080224999d0c0fac46e
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272658"
@@ -35,7 +35,7 @@ ms.locfileid: "96272658"
   
  弱い契約または存在しない契約を持つメソッドは、予期しない方法で失敗する可能性があるため、ランタイムは、レイジーな JIT コンパイル、ジェネリック ディクショナリの読み込み、スレッドの中断などによって発生する、メソッドからの独自の予期しないエラーを削除しようとしません。 つまり、この MDA がアクティブになっているときは、ランタイムが、定義されている CER に呼び出されたメソッドを含めなかったことを意味します。引き続きこのサブツリーを準備すると潜在的なエラーが隠される可能性があるので、呼び出し先はこのノードで終了しました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  有効な信頼契約を関数に追加するか、その関数呼び出しを使用しないでください。  
   

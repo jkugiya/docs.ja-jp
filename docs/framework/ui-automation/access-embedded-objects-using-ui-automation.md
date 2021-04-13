@@ -1,6 +1,6 @@
 ---
 title: UI オートメーションを使って埋め込みオブジェクトにアクセスする
-description: 「テキストコントロールのコンテンツ内で UI オートメーションを使用して埋め込みオブジェクトにアクセスする方法」を参照してください。 埋め込みオブジェクトは、UI オートメーションテキストプロバイダーの子と見なされます。
+description: テキスト コントロールのコンテンツ内で UI オートメーションを使用して埋め込みオブジェクトにアクセスする方法をご覧ください。 埋め込みオブジェクトは、UI オートメーション テキスト プロバイダーの子と見なされます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 ms.openlocfilehash: 30b41e3a3d47802eb4a3e761c4282b3e937156f2
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96235780"
@@ -30,7 +30,7 @@ ms.locfileid: "96235780"
  埋め込みオブジェクトは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] テキスト プロバイダーの子と見なされます。 これにより、他のすべての [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素と同じ UI オートメーション ツリーの構造を介して公開することができます。 次に、機能は、埋め込みオブジェクトのコントロール型で通常必要とされるコントロール パターンを通じて公開されます (たとえば、ハイパーリンクはテキスト ベースであるため、 <xref:System.Windows.Automation.TextPattern>をサポートします)。  
   
  ![テキスト コンテナー内の埋め込みオブジェクト。](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
-テキストコンテンツが含まれているサンプルドキュメント ("ご存知でしたか?"...)また、コード例のターゲットとして使用される2つの埋め込みオブジェクト (クジラとテキストハイパーリンクの画像) があります。  
+テキスト コンテンツ (「ご存知でしたか?」) を含むドキュメントのサンプルおよび 2 つの埋め込みオブジェクト (クジラの画像とテキストのハイパーリンク)。コード例のターゲットとして使用されます。  
   
 ## <a name="example"></a>例  
 

@@ -1,6 +1,6 @@
 ---
 title: releaseHandleFailed MDA
-description: ReleaseHandleFailed マネージデバッグアシスタント (MDA) を確認します。これは、.NET のリソースまたはメモリリークが原因でアクティブ化される可能性があります。
+description: releaseHandleFailed マネージド デバッグ アシスタント (MDA) について確認します。これは、.NET 内でのリソースまたはメモリのリークが原因でアクティブ化される可能性があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 ms.openlocfilehash: b337a7283e961d0fae2b51d92a21fa77f7249250
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96267131"
@@ -36,7 +36,7 @@ ms.locfileid: "96267131"
   
 - <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実行中に発生する、リソースの解放を妨げるエラーは、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッド自体の実装のバグです。 そのコードが、機能を実行するために他のプログラマが作成したコードを呼び出している場合でも、この規定を実行するようにすることがプログラマの責任です。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  MDA 通知を発生させた特定の <xref:System.Runtime.InteropServices.SafeHandle> (または <xref:System.Runtime.InteropServices.CriticalHandle>) 型を使用するコードをレビューし、未処理のハンドル値が<xref:System.Runtime.InteropServices.SafeHandle> から抽出されて、別の場所にコピーされている場所を探します。 これは、未処理のハンドル値の使用がランタイムにより追跡できなくなっているため、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> の実装内のエラーの一般的な原因です。 未処理のハンドルのコピーがその後閉じられると、同じハンドルを閉じようとして無効になるため、後で <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 呼び出しがエラーになる可能性があります。  
   

@@ -1,6 +1,6 @@
 ---
 title: reentrancy MDA
-description: 再入 MDA を確認します。これは、オブジェクトヒープが破損した場合、またはネイティブからマネージコードへの移行時に、その他の重大なエラーが発生した場合にアクティブになることがあります。
+description: reentrancy MDA について確認します。これは、ネイティブからマネージド コードに遷移するときに、オブジェクト ヒープが壊れたり、他の重大なエラーが発生したりした場合にアクティブになる場合があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged code, debugging
@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 ms.openlocfilehash: 0480b1a5aafbc8c4f9645ba83383d3a222d1f1c5
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96264583"
@@ -37,7 +37,7 @@ ms.locfileid: "96264583"
   
  この問題は常に、アプリケーション コードが原因で発生します。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  この MDA をアクティブにしたスレッドのスタック トレースを確認します。  スレッドがマネージド コードの不正な呼び出しを試みています。  スタック トレースでは、この拡張ポイントを使っているアプリケーションのコード、この拡張ポイントを提供しているオペレーティング システムのコード、および拡張ポイントによって中断されたマネージド コードが、示されているはずです。  
   

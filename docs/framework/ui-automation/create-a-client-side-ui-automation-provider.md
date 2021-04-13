@@ -1,6 +1,6 @@
 ---
 title: クライアント側 UI オートメーション プロバイダーの作成
-description: クライアント側 UI オートメーションプロバイダーを作成する方法の例を表示します。 この例では、コンソールウィンドウ用の単純なクライアント側プロバイダーを実装しています。
+description: クライアント側 UI オートメーション プロバイダーを作成する方法の例を確認します。 例では、コンソール ウィンドウ用の簡単なクライアント側プロバイダーを実装します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
 ms.openlocfilehash: 17a6deca2efc67d1409e89f7accf7a3b89a27807
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96276543"
@@ -25,7 +25,7 @@ ms.locfileid: "96276543"
   
 ## <a name="example"></a>例  
 
- 次のコード例は、コンソールウィンドウの非常に単純なクライアント側プロバイダーを実装するダイナミックリンクライブラリ (DLL) に組み込むことができます。 このコードは、有用な機能は備えていませんが、UI オートメーション クライアント アプリケーションによって登録できるプロバイダー アセンブリを設定する際の基本的な手順を示すために用意されています。  
+ コンソール ウィンドウの非常に単純なクライアント側プロバイダーを実装するダイナミックリンク ライブラリ (DLL) に、次のコード例を組み込むことができます。 このコードは、有用な機能は備えていませんが、UI オートメーション クライアント アプリケーションによって登録できるプロバイダー アセンブリを設定する際の基本的な手順を示すために用意されています。  
   
  [!code-csharp[UIAClientSideProvider_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSProviderProgram.cs#101)]
  [!code-vb[UIAClientSideProvider_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csproviderprogram.vb#101)]  

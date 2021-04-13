@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_Next 関数 (アンマネージ API リファレンス)
-description: QualifierSet_Next 関数は、列挙体の次の修飾子を取得します。
+title: QualifierSet_Next 関数 (アンマネージド API リファレンス)
+description: QualifierSet_Next 関数では、列挙型内の次の修飾子が取得されます。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -16,7 +16,7 @@ topic_type:
 - Reference
 ms.openlocfilehash: 54d79a3dc081e9cdcb42153b6f7aa457557e3399
 ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/24/2020
 ms.locfileid: "95721128"
@@ -42,45 +42,45 @@ HRESULT QualifierSet_Next (
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc` からこのパラメーターは使用されていません。
+`vFunc` [in] このパラメーターは使用されません。
 
-`ptr` から [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) インスタンスへのポインター。
+`ptr` [in] [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) インスタンスへのポインター。
 
-`lFlags` から確保. このパラメーターには0を指定する必要があります。
+`lFlags` [in] 予約されています。 このパラメーターは、0 にする必要があります。
 
-`pstrName` 入出力修飾子の名前。 `null`の場合、このパラメーターは無視されます。それ以外の場合、は有効なを `pstrName` 指していない `BSTR` か、メモリリークが発生します。 Null でない場合、関数は、を返したときに、常に新しいを割り当て `BSTR` `WBEM_S_NO_ERROR` ます。
+`pstrName` [out] 修飾子の名前。 `null` の場合、このパラメーターは無視されます。それ以外の場合、`pstrName` は有効な `BSTR` を指していないか、メモリ リークが発生しています。 null 値以外の場合、関数では、`WBEM_S_NO_ERROR` を返すときに常に新しい `BSTR` が割り当てられます。
 
-`pVal` 入出力成功した場合は、修飾子の値。 関数が失敗した場合、が `VARIANT` 指すを変更すること `pVal` はできません。 このパラメーターがの場合 `null` 、パラメーターは無視されます。
+`pVal` [out] 成功した場合は、修飾子の値。 関数が失敗した場合、`pVal` が指す `VARIANT` を変更することはできません。 このパラメーターが `null` の場合、このパラメーターは無視されます。
 
-`plFlavor` 入出力修飾子のフレーバーを受け取る LONG へのポインター。 フレーバー情報が必要でない場合、このパラメーターはにすることができ `null` ます。
+`plFlavor` [out] 修飾子の種類を受け取る LONG へのポインター。 種類の情報が必要でない場合は、このパラメーターを `null` にすることができます。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
+この関数によって返される次の値は、*WbemCli.h* ヘッダー ファイル内で定義されています。または、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出し元が [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)を呼び出しませんでした。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙体にはそれ以上修飾子が残されていません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出し元によって [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) が呼び出されませんでした。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがありません。 |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙内にはそれ以上修飾子が残されていません。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しは成功しました。  |
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この関数は、 [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) メソッドの呼び出しをラップします。
+この関数では、[IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) メソッドの呼び出しがラップされます。
 
-関数が `QualifierSet_Next` 返されるまで、すべての修飾子を列挙するには、関数を繰り返し呼び出し `WBEM_S_NO_MORE_DATA` ます。 列挙型を早期に終了するには、 [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) 関数を呼び出します。
+`QualifierSet_Next` 関数を繰り返し呼び出して、関数から `WBEM_S_NO_MORE_DATA` が返されるまですべての修飾子を列挙します。 列挙を早期に終了するには、[QualifierSet_EndEnumeration](qualifierset-endenumeration.md) 関数を呼び出します。
 
-列挙型の間に返される修飾子の順序は定義されていません。
+列挙中に返される修飾子の順序は定義されていません。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils .idl  
+ **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

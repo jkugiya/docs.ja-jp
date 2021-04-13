@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Dock コントロール パターンの実装
-description: UI オートメーション dock コントロールパターンを実装する方法について説明します。 コントロールの dock プロパティを公開するには、DockPattern コントロールパターンを使用します。 IDockProvider を実装します。
+description: UI オートメーション Dock コントロール パターンの実装について説明します。 コントロールのドッキング プロパティを公開するには、DockPattern コントロール パターンを使用します。 IDockProvider を実装します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 769808b190ade33ae52c53e03e1b4f77d4439df1
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96269627"
@@ -49,7 +49,7 @@ ms.locfileid: "96269627"
 |必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "96269627"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -コントロールが、要求されたドッキングスタイルを実行できない場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   要求されたドッキング スタイルをコントロールによって実行することができない場合。|  
   
 ## <a name="see-also"></a>関連項目
 

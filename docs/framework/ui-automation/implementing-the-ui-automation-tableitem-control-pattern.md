@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション TableItem コントロール パターンの実装
-description: UI オートメーションで TableItem コントロールパターンを実装するためのガイドラインと規則を確認します。 ITableItemProvider インターフェイスに必要なメンバーを確認します。
+description: UI オートメーションで TableItem コントロール パターンを実装するためのガイドラインと規則を確認します。 ITableItemProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Table Item
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
 ms.openlocfilehash: 5e83f68772de3026fe8bcb265a11999e0b85a164
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265675"
@@ -27,7 +27,7 @@ ms.locfileid: "96265675"
 
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
   
-- 関連するグリッド項目の機能については、「 [UI オートメーション GridItem コントロールパターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)」を参照してください。  
+- 関連するグリッド項目の機能については、「[UI オートメーション GridItem コントロール パターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)」を参照してください。  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
 
@@ -35,8 +35,8 @@ ms.locfileid: "96265675"
   
 |必須メンバー|メンバーの型|メモ|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|方法|なし|  
   
  このコントロール パターンに関連付けられるプロパティやイベントはありません。  
   

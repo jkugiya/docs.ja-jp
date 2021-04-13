@@ -1,6 +1,6 @@
 ---
 title: marshaling MDA
-description: 「マーシャリングマネージデバッグアシスタント (MDA)」を確認します。これは、CLR がメソッドパラメーターまたは構造体フィールドのマーシャリング情報を設定した場合に呼び出されます。
+description: マーシャリング マネージド デバッグ アシスタント (MDA) について確認します。これは、CLR によってメソッド パラメーターまたは構造体フィールドのマーシャリング情報が設定された場合に呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 ms.openlocfilehash: afe54a2104e05f8fad57c7cbba4988b013aff761
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96271175"
@@ -34,7 +34,7 @@ name="assembly!Namespace.Class::myChar
   
 ## <a name="configuration"></a>構成  
 
- この MDA の構成では、関連するフィールドまたはメソッドの名前を基にして、報告されたマーシャリング情報をフィルター処理できます。  `methodFilter`、`fieldFilter`、および `match` の各要素を使用してフィルターを指定する方法を次の例に示します。  属性を `name` アスタリスク () に設定する \* と、すべてに一致します。  
+ この MDA の構成では、関連するフィールドまたはメソッドの名前を基にして、報告されたマーシャリング情報をフィルター処理できます。  `methodFilter`、`fieldFilter`、および `match` の各要素を使用してフィルターを指定する方法を次の例に示します。  `name` 属性をアスタリスク (\*) に設定すると、すべてに一致します。  
   
 ```xml  
 <mdaConfig>  

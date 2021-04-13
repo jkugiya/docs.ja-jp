@@ -1,6 +1,6 @@
 ---
-title: GetCurrentApartmentType 関数 (アンマネージ API リファレンス)
-description: GetCurrentApartmentType 関数は、呼び出し元が実行されているアパートメントの種類を取得します。
+title: GetCurrentApartmentType 関数 (アンマネージド API リファレンス)
+description: GetCurrentApartmentType 関数では、呼び出し元が実行されているアパートメントの種類が取得されます。
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,7 +16,7 @@ topic_type:
 - Reference
 ms.openlocfilehash: 0832867d86b7dda80e037846d9aa66c1d37f87be
 ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/24/2020
 ms.locfileid: "95726198"
@@ -40,32 +40,32 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-からこのパラメーターは使用されていません。
+[in] このパラメーターは使用されません。
 
 `ptr`  
-から [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) インスタンスへのポインター。
+[in] [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) インスタンスへのポインター。
 
 `aptType`  
-入出力呼び出し元のアパートメントを示す [Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype) 列挙値へのポインター。
+[out] 呼び出し元のアパートメントを示す [APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype) 列挙値へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-| `S_OK` | 0 | 関数は正常に完了しました。 |
+| `S_OK` | 0 | 関数は正常に終了しました。 |
 | `E_FAIL` | 0x80000008 | 呼び出し元がアパートメント内で実行されていません。 |
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この関数は、 [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) メソッドの呼び出しをラップします。
+この関数では、[IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) メソッドの呼び出しがラップされます。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils .idl  
+ **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

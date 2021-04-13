@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション ScrollItem コントロール パターンの実装
-description: UI オートメーションでの ScrollItem コントロールパターンの実装に関するガイドラインと規則を確認します。 IScrollItemProvider インターフェイスに必要なメンバーを参照してください。
+description: UI オートメーションで ScrollItem コントロール パターンを実装するためのガイドラインと規則を確認します。 IScrollItemProvider インターフェイスに必要なメンバーをご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Scroll Item
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 ms.openlocfilehash: 3274f75af0ca055547a75fd8db6384ddb0f59483
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96239238"
@@ -39,7 +39,7 @@ ms.locfileid: "96239238"
   
 |必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-   メソッド|なし|  
   
  このコントロール パターンに関連付けられるプロパティやイベントはありません。  
   

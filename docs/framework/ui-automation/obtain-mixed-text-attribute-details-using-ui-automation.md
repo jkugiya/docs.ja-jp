@@ -1,6 +1,6 @@
 ---
 title: UI オートメーションを使用して混合テキスト属性の詳細を取得する
-description: .NET API の system.string 名前空間でマネージ UI オートメーションクラスを使用して、混合テキスト属性の詳細を取得します。
+description: .NET API の System.Windows.Automation 名前空間内でマネージド UI オートメーション クラスを使用して、混合テキスト属性の詳細を取得します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 ms.openlocfilehash: ac6b212a8cb3f2f0cfa0d645aba2f0984ed8eb60
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96274648"

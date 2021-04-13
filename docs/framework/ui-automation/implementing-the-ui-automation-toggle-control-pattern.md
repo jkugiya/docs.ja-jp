@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Toggle コントロール パターンの実装
-description: UI オートメーションでトグルコントロールパターンを実装するためのガイドラインと規則を確認します。 IToggleProvider インターフェイスに必要なメンバーを確認します。
+description: UI オートメーションで Toggle コントロール パターンを実装するためのガイドラインと規則を確認します。 IToggleProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Toggle control pattern
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 ms.openlocfilehash: 865f225d749c29fb1ec80507daeffda82ae8816e
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265636"
@@ -45,7 +45,7 @@ ms.locfileid: "96265636"
   
 |必須メンバー|メンバーの型|メモ|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Method|なし|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|方法|なし|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|プロパティ|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  

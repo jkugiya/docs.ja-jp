@@ -1,6 +1,6 @@
 ---
 title: デバッグ、トレース、およびプロファイリング
-description: 「.NET でのデバッグ、トレース、およびプロファイリング」を参照してください。 Just-in-time (JIT) デバッグ、アプリケーションのトレースとインストルメント化などに関する記事をご覧ください。
+description: .NET でのデバッグ、トレース、およびプロファイリングについて説明します。 アプリケーションの Just-In-Time (JIT) デバッグ、トレース、インストルメント化などに関する記事をご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 ms.openlocfilehash: 33dd840f4c1421bbff54499af56ab3e147cc694b
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272775"

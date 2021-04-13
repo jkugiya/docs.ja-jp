@@ -1,13 +1,13 @@
 ---
 title: ワークフローの設計
-description: フロー制御パラダイム (フローチャート、手続き、ステートマシンなど)、ワークフロー開発、および命令型コードを使用したワークフローの作成について説明します。
+description: ワークフロー開発でのフロー制御パラダイム (フローチャート、手続き、ステート マシンなど)、および命令型コードを使用したワークフローの作成について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
 ms.openlocfilehash: 6c44f24518110266b4b2e41c7507093c3e1e3f79
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96280300"
@@ -25,7 +25,7 @@ ms.locfileid: "96280300"
  基本的で連続的な実行パラダイムを使用してワークフローを作成する方法を示します。  
   
  [ステート マシン ワークフロー](state-machine-workflows.md)  
- フローチャートワークフローを使用して .NET Framework 4 でイベントドリブンワークフローを実装する方法について説明します。これは、以前のバージョンで使用されていたステートマシンモデルに代わるものです。  
+ 以前のバージョンで使用されていたステート マシン モデルの代わりに、.NET Framework 4 でフローチャート ワークフローを使用してイベントドリブン ワークフローを実装する方法について説明します。  
   
  [命令型コードを使用してワークフロー、アクティビティ、および式を作成する方法](authoring-workflows-activities-and-expressions-using-imperative-code.md)  
  命令型コードを使用してワークフローを作成する方法について説明します。

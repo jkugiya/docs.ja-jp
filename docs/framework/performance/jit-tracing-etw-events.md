@@ -1,6 +1,6 @@
 ---
 title: JIT トレース ETW イベント
-description: Just-in-time (JIT) トレース ETW イベントについて説明します。 これらのイベントは、JIT インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。
+description: Just-In-Time (JIT) トレース ETW イベントについて説明します。 これらのイベントにより、JIT インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報が収集されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 ms.openlocfilehash: fd1fae8731ea927ab64d0c0df83b90d29289a0a0
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96277969"
@@ -23,13 +23,13 @@ ms.locfileid: "96277969"
 
  次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
-|イベントを発生させるキーワード|Level|  
+|イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT インライン展開が失敗した。|  
   
@@ -54,13 +54,13 @@ ms.locfileid: "96277969"
 
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|Level|  
+|イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|メソッドのインライン展開が成功した。|  
   
@@ -85,13 +85,13 @@ ms.locfileid: "96277969"
 
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|Level|  
+|イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|メソッドの末尾の呼び出しが失敗した。|  
   
@@ -116,13 +116,13 @@ ms.locfileid: "96277969"
 
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|Level|  
+|イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|メソッドの末尾の呼び出しが成功した。|  
   

@@ -1,6 +1,6 @@
 ---
 title: pInvokeLog MDA
-description: .NET での実行中に使用される一意のプラットフォーム呼び出しシグネチャごとにアクティブ化される pInvokeLog マネージデバッグアシスタント (MDA) について説明します。
+description: pInvokeLog マネージド デバッグ アシスタント (MDA) について説明します。これは、.NET 内で実行中に使用される一意のプラットフォーム呼び出しシグネチャごとにアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 ms.openlocfilehash: b8cb4805663a2b28a133f98503730199af695c4f
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96271461"

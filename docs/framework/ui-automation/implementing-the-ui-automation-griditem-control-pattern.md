@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション GridItem コントロール パターンの実装
-description: UI オートメーションでグリッド項目の GridItemPattern コントロールパターンを実装するためのガイドラインと規則について説明します。 IGridItemProvider の必須メンバーを参照してください。
+description: UI オートメーションでグリッド項目の GridItemPattern コントロール パターンを実装するためのガイドラインと規則について説明します。 IGridItemProvider の必須メンバーをご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, GridItem
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 ms.openlocfilehash: 30932e630c663aabb7d26302174785d44dc1c385
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96267885"

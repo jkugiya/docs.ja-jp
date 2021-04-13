@@ -1,6 +1,6 @@
 ---
 title: memberInfoCacheCreation MDA
-description: .NET の memberInfoCacheCreation マネージデバッグアシスタント (MDA) について説明します。これは、MemberInfo キャッシュの作成時にアクティブ化されます。
+description: .NET の memberInfoCacheCreation マネージド デバッグ アシスタント (MDA) について説明します。これは、MemberInfo キャッシュの作成時にアクティブ化されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - member info cache creation
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 ms.openlocfilehash: 44d279a949ca0b35c46f805e65eb6f61ffb532f1
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96271162"
@@ -30,7 +30,7 @@ ms.locfileid: "96271162"
 
  <xref:System.Reflection.MemberInfo> オブジェクトが関係するリフレクション操作は、コールド ページに格納されているメタデータを読み取る必要があり、一般にプログラムが何らかの種類の遅延バインディング シナリオを使っていることを示すため、リソースに負荷がかかるものと見なされます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  この MDA を有効にした後にデバッガーでコードを実行するか、または MDA がアクティブになっているときにデバッガーとアタッチすることにより、プログラム内でリフレクションで使われている場所を特定できます。 デバッガーで実行すると、<xref:System.Reflection.MemberInfo> キャッシュが作成された場所を示すスタック トレースが取得され、その情報からプログラムがリフレクションを使っている場所を判断できます。  
   

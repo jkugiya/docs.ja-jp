@@ -1,6 +1,6 @@
 ---
 title: invalidApartmentStateChange MDA
-description: COM アパートメント状態に問題がある場合にアクティブ化される .NET の invalidApartmentStateChange マネージデバッグアシスタント (MDA) について説明します。
+description: .NET の invalidApartmentStateChange マネージド デバッグ アシスタント (MDA) について説明します。これは、COM アパートメント状態に問題がある場合にアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96272749"
@@ -39,7 +39,7 @@ ms.locfileid: "96272749"
   
 - 異なるコンカレンシー モデルを持つ `CoUninitialize` メソッド (または `CoInitializeEx` メソッド) がスレッドで呼び出されます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  スレッドの実行開始前に、スレッドのアパートメント状態を設定するか、<xref:System.STAThreadAttribute> 属性または <xref:System.MTAThreadAttribute> 属性をアプリケーションのメイン メソッドに適用します。  
   

@@ -1,6 +1,6 @@
 ---
 title: SQL Server プログラミングとホスト保護属性
-description: SQL Server プログラミングとホスト保護の属性の概要については、こちらをご覧ください。 SQL Server のアクセス許可セットとプログラミングモデルの制限事項を確認します。
+description: SQL Server プログラミングとホスト保護属性の使用を開始します。 SQL Server のアクセス許可セットとプログラミング モデルの制限事項を確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 ms.openlocfilehash: 3ded0a9ac95d56e000ef7870ec19721764c96a66
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96236235"

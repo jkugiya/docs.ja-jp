@@ -1,11 +1,11 @@
 ---
 title: Windows Workflow の基本概念
-description: この記事では、一部の開発者にとってなじみのない .NET Framework 4.6.1 のワークフロー開発における概念の一部について説明します。
+description: この記事では、一部の開発者にとってはなじみのない .NET Framework 4.6.1 のワークフロー開発における概念の一部について説明します。
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 ms.openlocfilehash: a7683791c7aed54beed9256ab08010dfeebe9936
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265298"
@@ -26,7 +26,7 @@ ms.locfileid: "96265298"
 |-|-|  
 |変数|データをアクティビティに格納します。|  
 |引数|データをアクティビティに移動したり、アクティビティから移動したりします。|  
-|Expression|引数のバインディングで使用される、昇格された戻り値を持つアクティビティです。|  
+|式|引数のバインディングで使用される、昇格された戻り値を持つアクティビティです。|  
   
 ## <a name="workflow-runtime"></a>ワークフロー ランタイム  
 
@@ -58,7 +58,7 @@ ms.locfileid: "96265298"
   
 ## <a name="services"></a>サービス  
 
- ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージングアクティビティは WCF 上に構築されており、ワークフローとの間でデータを取得するために使用される主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、「 [メッセージングアクティビティ](../wcf/feature-details/messaging-activities.md)」を参照してください。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、「 [ワークフローサービスのホスティングの概要](../wcf/feature-details/hosting-workflow-services-overview.md)」を参照してください。 ワークフローサービスの詳細については、「[ワークフローサービス](../wcf/feature-details/workflow-services.md)」を参照してください。  
+ ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF 上にビルドされる、ワーク フローとのデータの受け渡しに使用される主要な方法です。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、「[メッセージング アクティビティ](../wcf/feature-details/messaging-activities.md)」を参照してください。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、「[ワークフロー サービスのホストの概要](../wcf/feature-details/hosting-workflow-services-overview.md)」を参照してください。 ワークフロー サービスの詳細については、「[ワークフロー サービス](../wcf/feature-details/workflow-services.md)」を参照してください  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>永続性、アンロード、実行時間の長いワークフロー  
 

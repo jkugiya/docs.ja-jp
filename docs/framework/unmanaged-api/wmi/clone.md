@@ -1,6 +1,6 @@
 ---
-title: Clone 関数 (アンマネージ API リファレンス)
-description: Clone 関数は、現在のオブジェクトの完全な複製である新しいオブジェクトを返します。
+title: Clone 関数 (アンマネージド API リファレンス)
+description: Clone 関数では、現在のものの完全な複製である新しいオブジェクトが返されます。
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,7 +16,7 @@ topic_type:
 - Reference
 ms.openlocfilehash: aecbf750b42626629dcb5aef369978a2e2bd002a
 ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/24/2020
 ms.locfileid: "95708115"
@@ -40,38 +40,38 @@ HRESULT Clone (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-からこのパラメーターは使用されていません。
+[in] このパラメーターは使用されません。
 
 `ptr`  
-から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
+[in] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `ppCopy`  
-入出力完全な唯一のオブジェクトである新しいオブジェクト `ptr` 。 `null`現在のオブジェクトのコピーを受け取った場合、この引数をにすることはできません。
+[out] `ptr` の完全なクローンである新しいオブジェクト。 現在のオブジェクトのコピーを受け取る場合、この引数を `null` にすることはできません。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
+この関数によって返される次の値は、*WbemCli.h* ヘッダー ファイル内で定義されています。または、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` がパラメーターとして指定されましたが、この使用法では有効ではありません。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | オブジェクトを複製するのに十分なメモリがありません。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
+| `WBEM_E_FAILED` | 0x80041001 | 一般エラーが発生しました。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターとして `null` が指定されましたが、この使用法では有効ではありません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | メモリ不足のため、オブジェクトを複製できません。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しは成功しました。  |
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この関数は、 [IWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) メソッドの呼び出しをラップします。
+この関数では、[IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) メソッドの呼び出しがラップされます。
 
-複製されたオブジェクトは、参照カウントが1の COM オブジェクトです。
+複製されたオブジェクトは、参照カウントが 1 の COM オブジェクトです。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils .idl  
+ **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

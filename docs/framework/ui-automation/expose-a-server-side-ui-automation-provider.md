@@ -1,6 +1,6 @@
 ---
 title: サーバー側 UI オートメーション プロバイダーの公開
-description: システムでホストされているサーバー側 UI オートメーションプロバイダーを公開する方法を示す例を表示します。
+description: System.Windows.Forms.Control ウィンドウでホストされているサーバー側 UI オートメーション プロバイダーを公開する方法を示す例を確認します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 ms.openlocfilehash: be39130c7a91fc081256bf14a87f503d27f45129
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96276530"

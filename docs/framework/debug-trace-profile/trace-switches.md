@@ -1,6 +1,6 @@
 ---
 title: トレース スイッチ
-description: トレース出力の有効化、無効化、およびフィルター処理を行うトレーススイッチについて説明します。 .NET には、BooleanSwitch、TraceSwitch、および SourceSwitch クラスが用意されています。
+description: トレース出力を有効または無効にしたり、フィルター処理したりできるトレース スイッチについて調べます。 .NET には、BooleanSwitch、TraceSwitch、および SourceSwitch クラスが用意されています。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 ms.openlocfilehash: dfbff0a78b3c6c1318224ccc9608c1b816f9d5f1
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96238055"

@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Table コントロール パターンの実装
-description: UI オートメーションで Table コントロールパターンを実装するためのガイドラインと規則を確認します。 ITableProvider インターフェイスに必要なメンバーを確認します。
+description: UI オートメーションで Table コントロール パターンを実装するためのガイドラインと規則を確認します。 ITableProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Table control pattern
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 ms.openlocfilehash: 9c1d57e46aed9ec2441a95544d26244d2dfa9496
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96265753"
@@ -36,9 +36,9 @@ ms.locfileid: "96265753"
 - 列ヘッダーと行ヘッダーには、プライマリ ヘッダーだけでなく、任意の補助ヘッダーも含めることができます。  
   
 > [!NOTE]
-> この概念は、ユーザーが "First name" 列を定義した Microsoft Excel スプレッドシートで明らかになります。 これで、この列のヘッダーは、ユーザーが定義した [ファースト ネーム] ヘッダーとアプリケーションによって割り当てられたその列の英数字指定の 2 つになります。  
+> この概念は、ユーザーが [ファースト ネーム] 列を定義した Microsoft Excel スプレッドシートで確認できます。 これで、この列のヘッダーは、ユーザーが定義した [ファースト ネーム] ヘッダーとアプリケーションによって割り当てられたその列の英数字指定の 2 つになります。  
   
-- 関連するグリッド機能について [は、「UI オートメーション Grid コントロールパターンの実装](implementing-the-ui-automation-grid-control-pattern.md) 」を参照してください。  
+- 関連するグリッド機能については、「[UI オートメーション Grid コントロール パターンの実装](implementing-the-ui-automation-grid-control-pattern.md)」を参照してください。  
   
  ![複雑なヘッダー項目を含むテーブル。](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 列ヘッダーが複雑なテーブルの例  
@@ -55,8 +55,8 @@ RowOrColumnMajor プロパティがあいまいなテーブルの例
 |必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|方法|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   

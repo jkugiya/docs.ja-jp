@@ -3,12 +3,12 @@ title: ASP.NET Core への eShop の移行例
 description: サンプルのオンライン ストア アプリを参照として使用して、既存の ASP.NET MVC アプリを ASP.NET Core に移行するためのチュートリアルです。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 119ba64134813fa17848cf9f5fe02cb1a14f8a5d
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605257"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122977"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core への eShop の移行例
 
@@ -58,7 +58,7 @@ ms.locfileid: "102605257"
 
 ## <a name="update-project-files-and-nuget-reference-syntax"></a>プロジェクト ファイルと NuGet 参照構文を更新する
 
-次に、古い *.csproj* ファイル構造を、.NET Core で導入されたより新しくシンプルな構造に移行します。 その場合、NuGet 参照用の *packages.config* ファイルの使用が、プロジェクト ファイル内の `<PackageReference>` 要素の使用に移行されます。
+次に、古い *.csproj* ファイル構造を、.NET Core で導入されたより新しくシンプルな構造に移行します。 その場合、NuGet 参照用の *packages.config* ファイルの使用が、プロジェクト ファイル内の `<PackageReference>` 要素の使用に移行されます。 旧形式のプロジェクト ファイルでも `<PackageReference>` 要素が使用される場合があるため、新しいプロジェクト ファイル形式にアップグレードする前に、まずすべての NuGet パッケージ参照をこの形式に移行することが通常理にかなっています。
 
 元のプロジェクトの *eShopLegacyMVC.csproj* ファイルの長さは 418 行です。 図 4-6 は、プロジェクト ファイルのサンプルを示しています。 全体のサイズと複雑さを把握できるように、画像の右側にはファイル全体が縮小表示されています。
 
@@ -74,7 +74,7 @@ ms.locfileid: "102605257"
 
 **図 4-7** *packages.config* ファイル。
 
-新しい *.csproj* ファイル形式にアップグレードした後で、Visual Studio を使用してクラス ライブラリ プロジェクト内の *packages.config* を移行できます。 ただし、この機能は ASP.NET プロジェクトでは使用できません。 [Visual Studio で *packages.config* を `<PackageReference>` に移行する方法](/nuget/consume-packages/migrate-packages-config-to-package-reference)を参照してください。 多数のプロジェクトを移行する場合は、[このコミュニティ ツール](https://github.com/MarkKharitonov/NuGetPCToPRMigrator)が役立ちます。
+Visual Studio を使用してクラス ライブラリ プロジェクト内の *packages.config* を移行できます。 ただし、この機能は ASP.NET プロジェクトでは使用できません。 [Visual Studio で *packages.config* を `<PackageReference>` に移行する方法](/nuget/consume-packages/migrate-packages-config-to-package-reference)を参照してください。 多数のプロジェクトを移行する場合は、[このコミュニティ ツール](https://github.com/MarkKharitonov/NuGetPCToPRMigrator)が役立ちます。 ツールを使用してプロジェクト ファイルを新しい形式に移行している場合は、`<PackageReverence>` を使用するためにすべての NuGet 参照の移行を完了した後にそれを行う必要があります。
 
 ## <a name="create-new-aspnet-core-project"></a>新しい ASP.NET Core プロジェクトを作成する
 
@@ -312,20 +312,13 @@ bundles.Add(new StyleBundle("~/Content/css").Include(
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" integrity="sha512-O/nUTF5mdFkhEoQHFn9N5wmgYyW323JO6v8kr6ltSRKriZyTr/8417taVWeabVS4iONGk2V444QD0P2cwhuTkg==" crossorigin="anonymous"></script>
 ```
 
-ビューで最後に修正するのは、アプリが実行されている時間とマシンを表示する `Session` への参照です。 このデータを `Startup` で静的変数として収集し、レイアウト ページに変数を表示できます。 次のプロパティを *Startup.cs* に追加します。
-
-```csharp
-public static DateTime StartTime { get; } = DateTime.UtcNow;
-public static string MachineName { get; } = Environment.MachineName;
-```
-
-次に、レイアウトのフッターの内容を次のコードに置き換えます。
+ビューで最後に修正するのは、アプリが実行されている時間とマシンを表示する `Session` への参照です。 このデータをサイトの *_Layout.cshtml* に直接表示するには、`System.Environment.MachineName` および `System.Diagnostics.Process.GetCurrentProcess().StartTime` を使用します。
 
 ```razor
 <section class="col-sm-6">
     <img class="esh-app-footer-text hidden-xs" src="~/images/main_footer_text.png" width="335" height="26" alt="footer text image" />
     <br />
-<small>@eShopPorted.Startup.MachineName - @eShopPorted.Startup.StartTime.ToString() UTC</small>
+<small>@Environment.MachineName - @System.Diagnostics.Process.GetCurrentProcess().StartTime.ToString() UTC</small>
 </section>
 ```
 
@@ -447,7 +440,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-上のコードは、MVC の機能を使用するために必要な最小限の構成です。 この呼び出しから構成できる追加の機能は多数ありますが、アプリのビルドにはこれで十分です。 これを実行すると、既定の要求が適切にルーティングされるようになりましたが、DI をまだ構成していないため、`CatalogController` をアクティブ化する際にエラーが発生します。これは、`ICatalogService` 型の実装がまだ指定されていないためです。 MVC の追加の構成については後述します。 ここでは、アプリの依存関係の挿入を移行してみましょう。
+上のコードは、MVC の機能を使用するために必要な最小限の構成です。 この呼び出しから構成できる追加機能は多数あります (この章で後ほど詳しく説明しています) が、ここでは、これでアプリをビルドするのに十分です。 これを実行すると、既定の要求が適切にルーティングされるようになりましたが、DI をまだ構成していないため、`CatalogController` をアクティブ化する際にエラーが発生します。これは、`ICatalogService` 型の実装がまだ指定されていないためです。 MVC の追加の構成については後述します。 ここでは、アプリの依存関係の挿入を移行してみましょう。
 
 #### <a name="migrate-dependency-injection-configuration"></a>依存関係の挿入の構成を移行する
 
@@ -564,7 +557,7 @@ public IConfiguration Configuration { get; }
 
 .NET Framework で実行されている ASP.NET Core アプリは Entity Framework (EF) を引き続き活用できます。 増分移行を実行する場合は、EF Core を使用するためにデータ アクセス移植する前に、アプリが EF 6 を使用するように設定することをお勧めします。 これにより、別のブロックの移行作業が開始される前に、アプリの移行に関する問題を特定して対処することができます。
 
-この作業は Autofac の `ApplicationModule` で実行されたため、eShop サンプルの移行で EF 6 を構成する場合、特別な作業は必要ありません。 唯一の問題は、現時点で `CatalogDBContext` クラスが *web.config* から接続文字列の読み取りを試行することです。この問題に対処するために、接続の詳細を *appsettings.json* に追加する必要があります。 次に、接続文字列の作成時に、その文字列を `CatalogDBContext` に渡す必要があります。
+この作業は Autofac の `ApplicationModule` で実行されたため、eShop サンプルの移行で EF 6 を構成する場合、特別な作業は必要ありません。 唯一の問題は、現時点で、`CatalogDBContext` クラスが *web.config* から接続文字列の読み取りを試行することです。これに対処するには、接続の詳細を *appsettings.json* に追加する必要があります。 次に、接続文字列の作成時に、その文字列を `CatalogDBContext` に渡す必要があります。
 
 *appsettings.json* を更新して、接続文字列を含めます。 ファイル全体は次のようになります。
 
@@ -831,7 +824,7 @@ public void ConfigureServices(IServiceCollection services)
 > [!Note]
 > CORS の構成を完了するには、`app.UseCors()` を `Configure` で呼び出す必要もあります。
 
-[カスタム モデル バインダー](/aspnet/core/mvc/advanced/custom-model-binding?preserve-view=true&view=aspnetcore-2.2)やフォーマッタの追加など、その他の高度なシナリオについては、ASP.NET Core の詳細なドキュメントを参照してください。これらは通常、個々のコントローラーやアクション単位で、または前述のコード リストに示されているのと同じオプションを使用してグローバルに適用できます。
+[カスタム モデル バインダー](/aspnet/core/mvc/advanced/custom-model-binding?preserve-view=true&view=aspnetcore-2.2)やフォーマッタの追加など、その他の高度なシナリオについては、ASP.NET Core の詳細なドキュメントを参照してください。これらは通常、個々のコントローラーやアクション単位で、または前述のコード リストに示されているのと同じオプションをグローバルに使用して適用できます。
 
 ## <a name="other-dependencies"></a>その他の依存関係
 
@@ -848,7 +841,7 @@ var myClient = new MyServiceClient(binding, endpointAddress);
 
 WCF クライアントおよびその他の .NET Framework 型の設定は、設定の構成ファイルに依存するのではなく、コードで指定する必要があります。 この方法で構成すると、これらの型は ASP.NET Core 2.2 アプリで引き続き機能します。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [eShopModernizing GitHub リポジトリ](https://github.com/dotnet-architecture/eShopModernizing)
 - [.NET Upgrade Assistant ツール](https://aka.ms/dotnet-upgrade-assistant)

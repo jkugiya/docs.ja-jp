@@ -4,12 +4,12 @@ description: F# プログラミング言語で使用するシンボルと演算�
 ms.date: 08/15/2020
 fl_keywords:
 - '|>_FS'
-ms.openlocfilehash: 5943352f0a1710ba7a666a79b7871b7269c75a6b
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 2fddf538f007a971ee369b9118f02deb8408d3a6
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359091"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075551"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
@@ -133,14 +133,14 @@ ms.locfileid: "89359091"
 |`or`, <code>&#124;&#124;</code>|Left|
 |`&`, `&&`|Left|
 |`:>`, `:?>`|Right|
-|`<`*op*、`>`*op*、`=`、<code>&#124;</code>*op*、`&`*op*、`&`<br /><br />(`<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&` を含む)|Left|
+|`<`*op*、`>`*op*、`=`、<code>&#124;</code>*op*、`&`*op*、`&`、`$`<br /><br />(`<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&` を含む)|Left|
 |`^`*op*<br /><br />(`^^^` を含む)|Right|
 |`::`|Right|
 |`:?`|非結合|
 |`-`*op*、`+`*op*|これらのシンボルを挿入辞として使用するために適用|
 |`*`*op*、`/`*op*、`%`*op*|Left|
 |`**`*op*|Right|
-|`f x` (関数適用)|Left|
+|`f x` (関数適用)<br /><br />(`lazy x`、`assert x` を含む)|Left|
 |<code>&#124;</code> (パターン マッチ)|Right|
 |前置演算子 (`+`*op*、`-`*op*、`%`、`%%`、`&`、`&&`、`!`*op*、`~`*op*)|Left|
 |`.`|Left|

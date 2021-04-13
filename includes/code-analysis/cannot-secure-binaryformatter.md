@@ -6,4 +6,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "96591103"
 ---
-<span data-ttu-id="f271e-101">`BinaryFormatter` は安全ではなく、セキュリティで保護することはできません。</span><span class="sxs-lookup"><span data-stu-id="f271e-101">`BinaryFormatter` is insecure and can't be made secure.</span></span>
+<span data-ttu-id="cab83-101">`BinaryFormatter` は安全ではなく、セキュリティで保護することはできません。</span><span class="sxs-lookup"><span data-stu-id="cab83-101">`BinaryFormatter` is insecure and can't be made secure.</span></span>

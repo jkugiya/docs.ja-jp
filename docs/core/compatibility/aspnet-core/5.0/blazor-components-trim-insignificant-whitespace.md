@@ -1,15 +1,14 @@
 ---
 title: '破壊的変更:Blazor: コンパイル時にコンポーネントからトリミングされる無意味な空白文字'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: Blazor:コンパイル時にコンポーネントからトリミングされる無意味な空白文字'
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 92a961bb377bedd27b793c77d4be31ce52179ee2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d29171c43e587eba648de3f877e1cbb1c7156499
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759986"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498205"
 ---
 # <a name="blazor-insignificant-whitespace-trimmed-from-components-at-compile-time"></a>Blazor: コンパイル時にコンポーネントからトリミングされる無意味な空白文字
 
@@ -79,7 +78,7 @@ ASP.NET Core 5.0 の Blazor の目標は、レンダリングと比較のパフ�
 
 ## <a name="affected-apis"></a>影響を受ける API
 
-None
+なし
 
 <!--
 

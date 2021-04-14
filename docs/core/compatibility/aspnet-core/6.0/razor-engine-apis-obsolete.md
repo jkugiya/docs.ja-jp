@@ -3,12 +3,12 @@ title: '破壊的変更:Razor: 古いとしてマークされた RazorEngine API
 description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Razor:古いとしてマークされた RazorEngine API'
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: 08026cf32eec5ee391fab3d2ccdd9f22c4a3967b
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: a312fb2fda6245e529d59d82b72ffe64ae6d6ff5
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106497035"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255104"
 ---
 # <a name="razor-razorengine-apis-marked-obsolete"></a>Razor: 古いとしてマークされた RazorEngine API
 
@@ -16,7 +16,7 @@ Blazor の <xref:Microsoft.AspNetCore.Razor.Language.RazorEngine> 型に関連�
 
 ## <a name="version-introduced"></a>導入されたバージョン
 
-6.0 Preview 1
+ASP.NET Core 6.0 Preview 1
 
 ## <a name="old-behavior"></a>以前の動作
 

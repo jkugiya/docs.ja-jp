@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: d04bea9bcf5be726d3e81a1a53abed31f59330a0
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: b3590ebbcff0894b7864cd4a227a6ea068de42a2
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608713"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075512"
 ---
 # <a name="var-c-reference"></a>var (C# リファレンス)
 
@@ -39,6 +39,8 @@ C# 9.0 以降では、代替としてターゲット型の [`new` 式](../operat
 List<int> xs = new();
 List<int>? ys = new();
 ```
+
+パターン マッチングでは、`var` キーワードが [`var` パターン](../operators/patterns.md#var-pattern)で使用されます。
 
 ## <a name="example"></a>例
 

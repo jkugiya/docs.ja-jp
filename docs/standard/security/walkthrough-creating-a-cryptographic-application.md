@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル: 暗号化アプリケーションの作成'
-description: 暗号化アプリケーションの作成について説明します。 Windows フォームアプリケーションでコンテンツを暗号化および復号化する方法について説明します。
+description: 暗号化アプリケーションの作成について説明します。 Windows フォーム アプリケーション内のコンテンツを暗号化および復号化する方法について説明します。
 ms.date: 07/14/2020
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
 ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/18/2020
 ms.locfileid: "94830559"
@@ -20,9 +20,9 @@ ms.locfileid: "94830559"
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル: 暗号化アプリケーションの作成
 
 > [!NOTE]
-> この記事は、Windows に適用されます。
+> この記事は Windows に適用されます。
 >
-> ASP.NET Core の詳細については、「 [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
+> ASP.NET Core の詳細については、「[ASP.NET Core のデータ保護](/aspnet/core/security/data-protection/introduction)」を参照してください。
 
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
   
@@ -30,10 +30,10 @@ ms.locfileid: "94830559"
   
 - 自動生成される <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> と <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> を使用すると、対称アルゴリズムである <xref:System.Security.Cryptography.Aes> クラスでデータの暗号化と復号化を行えます。  
   
-- 非対称アルゴリズムを使用し <xref:System.Security.Cryptography.RSA> て、によって暗号化されたデータに対してキーを暗号化および暗号化解除し <xref:System.Security.Cryptography.Aes> ます。 非対称アルゴリズムは、キーなどの少量のデータに最適です。  
+- <xref:System.Security.Cryptography.RSA> 非対称アルゴリズムを使用して、<xref:System.Security.Cryptography.Aes> によって暗号化されたデータのキーの暗号化と復号化を行います。 非対称アルゴリズムは、キーなどの少量のデータに最適です。  
   
     > [!NOTE]
-    > 暗号化されたコンテンツを他のユーザーと交換するのではなく、コンピューター上のデータを保護する場合は、クラスの使用を検討してください <xref:System.Security.Cryptography.ProtectedData> 。  
+    > 暗号化されたコンテンツを他のユーザーとやり取りするのではなく、自分のコンピューター上のデータを保護する場合は、<xref:System.Security.Cryptography.ProtectedData> クラスの使用を検討してください。  
   
  次の表は、このトピックの暗号化のタスクをまとめたものです。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "94830559"
 
 このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
   
-|Control|名前|テキストのプロパティ (必要に応じて)|  
+|コントロール|名前|テキストのプロパティ (必要に応じて)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|ファイルの暗号化|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|ファイルの復号化|  
@@ -71,7 +71,7 @@ ms.locfileid: "94830559"
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- イベントハンドラーを作成するには、Visual Studio デザイナーのボタンをダブルクリックします。
+ ボタンのイベント ハンドラーを作成するには、Visual Studio デザイナー内でそのボタンをダブルクリックします。
   
 ## <a name="declaring-global-objects"></a>グローバル オブジェクトの宣言  
 
@@ -91,7 +91,7 @@ ms.locfileid: "94830559"
   
 ## <a name="encrypting-a-file"></a>ファイルの暗号化  
 
-このタスクには、ボタン () のイベントハンドラーメソッド `Encrypt File` とメソッドの2つのメソッドが含ま `buttonEncryptFile_Click` れます。 `EncryptFile` 最初のメソッドは、ファイルを選択するためのダイアログ ボックスを表示し、暗号化を実行する 2 番目のメソッドにファイル名を渡します。  
+このタスクには、`Encrypt File` ボタンのイベント ハンドラー メソッド (`buttonEncryptFile_Click`) と `EncryptFile` メソッドという 2 つのメソッドが含まれています。 最初のメソッドは、ファイルを選択するためのダイアログ ボックスを表示し、暗号化を実行する 2 番目のメソッドにファイル名を渡します。  
   
 暗号化されたコンテンツ、キー、および IV は、すべて 1 つの <xref:System.IO.FileStream> に保存されます。これを暗号化パッケージといいます。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "94830559"
   
 `Decrypt` メソッドは以下を実行します。  
   
-1. <xref:System.Security.Cryptography.Aes>コンテンツの暗号化を解除するための対称アルゴリズムを作成します。  
+1. コンテンツを復号化するための <xref:System.Security.Cryptography.Aes> 対称アルゴリズムを作成します。  
   
 2. 暗号化されたキーと IV の長さを取得するには、暗号化パッケージの <xref:System.IO.FileStream> の最初の 8 バイトを読み取ってバイト配列にします。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "94830559"
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化モデル](cryptography-model.md) -基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [暗号化モデル](cryptography-model.md) - 基本クラス ライブラリに暗号化がどのように実装されているかについて説明しています。
 - [Cryptographic Services](cryptographic-services.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
-- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
+- [ASP.NET Core のデータ保護](/aspnet/core/security/data-protection/introduction)

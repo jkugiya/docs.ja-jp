@@ -1,16 +1,16 @@
 ---
-description: '詳細情報: ソースフォルダーが存在しません'
-title: 移動元フォルダーが存在しない
+description: '詳細情報: ソース フォルダーが存在しません'
+title: ソース フォルダーが存在しません
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
 ms.openlocfilehash: afae118614fca4b80ad34bf339187d64b3c680e1
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430743"
 ---
-# <a name="the-source-folder-does-not-exist"></a>移動元フォルダーが存在しない
+# <a name="the-source-folder-does-not-exist"></a>ソース フォルダーが存在しません
 
 存在しないソース フォルダーを参照する操作を実行しようとしました。 指定したパスが正しくないことが原因となっている可能性があります。  
   

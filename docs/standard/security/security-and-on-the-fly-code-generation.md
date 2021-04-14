@@ -1,6 +1,6 @@
 ---
 title: セキュリティと実行時のコード生成
-description: より高い信頼で実行される信頼度の低いコードの代わりにコードを生成することは、特に呼び出し元がコード生成に影響を与える場合には、セキュリティ上の問題になります。
+description: より低い信頼度のコードの代わりにコードを生成して、より高い信頼度で実行することは、特に呼び出し側がコードの生成に影響を及ぼす可能性がある場合、セキュリティ上の問題となります。
 ms.date: 07/15/2020
 helpviewer_keywords:
 - code security, on-the-fly code generation
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 ms.openlocfilehash: c94da31f464a5272dd3f3c9f767a40ba7ad88a47
 ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/18/2020
 ms.locfileid: "94824149"

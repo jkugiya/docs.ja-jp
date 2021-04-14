@@ -1,13 +1,13 @@
 ---
-description: '詳細情報: ディスクがいっぱい (Visual Basic)'
-title: ディスクがいっぱいです
+description: '詳細情報: ディスクの空き容量が不足しています (Visual Basic)'
+title: ディスクの空き容量が不足しています
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
 ms.assetid: 039fd26a-947d-4c64-a08e-96c2b53c6d50
 ms.openlocfilehash: 3a2cf1492fb8117d120e985ac78fe10b53198ef5
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100428728"

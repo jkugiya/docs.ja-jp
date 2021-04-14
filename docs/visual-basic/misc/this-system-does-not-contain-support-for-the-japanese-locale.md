@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: このシステムには日本語ロケールのサポートが含まれていません'
+description: '詳細情報: このシステムに、日本語ロケールのサポートは含まれていません'
 title: このシステムに、日本語ロケールのサポートは含まれていません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 986d0379-c9d1-4004-b9ac-8d3bd95dfe85
 ms.openlocfilehash: c3ec90138ec40ec3945fa2e586d225791a44b480
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100434773"

@@ -2,15 +2,15 @@
 title: dotnet new 用のテンプレート パックを作成する
 description: dotnet new コマンド用のテンプレート パックをビルドする csproj ファイルを作成する方法を説明します。
 author: adegeo
-ms.date: 12/11/2020
+ms.date: 03/26/2021
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 2aea143f1e41d580de41a9cc9e924d70b55695db
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 343104f9609c59e7da24f857de6a7fc29803e2df
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633599"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255390"
 ---
 # <a name="tutorial-create-a-template-pack"></a>チュートリアル: テンプレート パックを作成する
 
@@ -103,19 +103,27 @@ Restore succeeded.
 
 ## <a name="build-and-install"></a>ビルドしてインストールする
 
-このファイルを保存してから、パック コマンドを実行します。
-
-```dotnetcli
-dotnet pack
-```
-
-このコマンドを実行すると、プロジェクトがビルドされ、_working\bin\Debug_ フォルダー内に NuGet パッケージが作成されます。
-
-```dotnetcli
-dotnet pack
-```
+プロジェクト ファイルを保存します。 テンプレート パックを構築する前に、フォルダー構造が正しいことを確認してください。 パックするすべてのテンプレートを、そのフォルダー内の _templates_ フォルダーに配置する必要があります。 フォルダー構造は次のようになります。
 
 ```console
+working
+│   templatepack.csproj
+└───templates
+    ├───extensions
+    │   └───.template.config
+    │           template.json
+    └───consoleasync
+        └───.template.config
+                template.json
+```
+
+_templates_ フォルダーには、_extensions_ と _consoleasync_ という 2 つのフォルダーがあります。
+
+ターミナルで、_working_ フォルダーから `dotnet pack` コマンドを実行します。 次の出力で示すように、このコマンドによってプロジェクトがビルドされ、_working\bin\Debug_ フォルダーに NuGet パッケージが作成されます。
+
+```console
+C:\working> dotnet pack
+
 Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -152,10 +160,8 @@ NuGet パッケージを NuGet フィードにアップロードした場合は�
 テンプレート パックを削除する方法は、テンプレート パックをインストールした方法 (_.nupkg_ ファイルを使用して直接、または NuGet フィードを使用) にかかわらず同じです。 アンインストールするテンプレートの `<PackageId>` を使用します。 `dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を取得できます。
 
 ```dotnetcli
-dotnet new -u
-```
+C:\working> dotnet new -u
 
-```console
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:

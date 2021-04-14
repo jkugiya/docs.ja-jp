@@ -4,12 +4,12 @@ description: この高度なチュートリアルでは、パターン マッチ
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: c081e6a75b3ea834641b050bc2450fed1e45c60c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 5d132784f591405b906068e2ed0e04347faa5e2c
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104874512"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255468"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する
 
@@ -89,7 +89,7 @@ namespace toll_calculator
 }
 ```
 
-上記のコードでは、**型パターン** をテストする **switch 式**([`switch`](../language-reference/keywords/switch.md) ステートメントとは異なります) が使用されています。 上記のコードでは、**switch 式** は変数 `vehicle` で始まり、`switch` キーワードが続きます。 次に、すべての **switch アーム** が中かっこ内に指定されます。 `switch` 式は、`switch` ステートメントを囲む構文に対して、その他の絞り込みを行います。 `case` キーワードは省略され、各アームの結果が式になります。 最後の 2 つのアームは、新しい言語機能を示しています。 `{ }` case は、前のアームと一致しなかった null 以外のオブジェクトと一致します。 このアームは、このメソッドに渡された正しくない型をキャッチします。  `{ }` case は、車種ごとの case に従う必要があります。 順序が逆になった場合は、`{ }` case が優先されます。 最後に、`null` パターンで、このメソッドに `null` が渡されたときを検出します。 他の型パターンが null 以外の正しい車種のオブジェクトのみと一致するため、`null` パターンを最後にすることができます。
+上記のコードでは、[宣言パターン](../language-reference/operators/patterns.md#declaration-and-type-patterns)をテストする [`switch` 式](../language-reference/operators/switch-expression.md) ([`switch`](../language-reference/keywords/switch.md) ステートメントとは異なります) が使用されています。 上記のコードでは、**switch 式** は変数 `vehicle` で始まり、`switch` キーワードが続きます。 次に、すべての **switch アーム** が中かっこ内に指定されます。 `switch` 式は、`switch` ステートメントを囲む構文に対して、その他の絞り込みを行います。 `case` キーワードは省略され、各アームの結果が式になります。 最後の 2 つのアームは、新しい言語機能を示しています。 `{ }` case は、前のアームと一致しなかった null 以外のオブジェクトと一致します。 このアームは、このメソッドに渡された正しくない型をキャッチします。 `{ }` case は、車種ごとの case に従う必要があります。 順序が逆になった場合は、`{ }` case が優先されます。 最後に、`null` [定数パターン](../language-reference/operators/patterns.md#constant-pattern)で、このメソッドに `null` がいつ渡されたかを検出します。 他のパターンが null 以外の正しい種類のオブジェクトのみと一致するため、`null` パターンを最後にすることができます。
 
 このコードを `Program.cs` の次のコードを使用してテストできます。
 
@@ -152,7 +152,7 @@ namespace toll_calculator
 - 乗車率が 50% 未満のバスは、$2.00 余分に支払う。
 - 乗車率が 90% を超えるバスは、$1.00 割引される。
 
-このルールは、同じ switch 式で **プロパティ パターン** を使用して実装できます。 プロパティ パターンは、プロパティ値を定数値と比較する `when` 句です。 プロパティ パターンでは、型が決定した後、オブジェクトのプロパティが調べられます。 `Car` に対する 1 つの case が、4 つの異なる case に拡張されます。
+このルールは、同じ switch 式で[プロパティ パターン](../language-reference/operators/patterns.md#property-pattern)を使用して実装できます。 プロパティ パターンでは、プロパティ値と定数値が比較されます。 プロパティ パターンでは、型が決定した後、オブジェクトのプロパティが調べられます。 `Car` に対する 1 つの case が、4 つの異なる case に拡張されます。
 
 ```csharp
 vehicle switch
@@ -183,8 +183,6 @@ vehicle switch
     // ...
 };
 ```
-
-上記の例では、最後の case の `when` 句は省略されています。
 
 次に、次の例に示すように、バスに対する case を拡張して、乗車率ルールを実装します。
 
@@ -249,7 +247,7 @@ vehicle switch
 
 これらの switch アームの多くは、**再帰パターン** の例です。 たとえば、`Car { Passengers: 1}` は、プロパティ パターンの内部の定数パターンを示しています。
 
-switch を入れ子にして使用することで、このコードの反復を少なくすることができます。 `Car` と `Taxi` は、どちらにも上記の例で示した 4 つの異なるアームがあります。 両方に対して、プロパティ パターンに供給される型パターンを作成できます。 この手法を次のコードに示します。
+switch を入れ子にして使用することで、このコードの反復を少なくすることができます。 `Car` と `Taxi` は、どちらにも上記の例で示した 4 つの異なるアームがあります。 どちらの場合も、定数パターンに取り込まれる宣言パターンを作成できます。 この手法を次のコードに示します。
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -345,7 +343,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-プライベート `enum` を追加して、時間の各範囲を個別の値に変換します。 次に、`GetTimeBand` メソッドにより、"*リレーショナル パターン*" と "*結合 or パターン*" が使用されます。どちらも C# 9.0 で追加されたものです。 リレーショナル パターンを使用すると、`<`、`>`、`<=`、または `>=` の使用により数値をテストできます。 `or` パターンを使用すると、式が 1 つ以上のパターンに一致するかどうかをテストできます。 また、`and` パターンを使用して、式が 2 つの異なるパターンに一致することを確認し、`not` パターンを使用して、式がパターンに一致しないことをテストすることもできます。
+プライベート `enum` を追加して、時間の各範囲を個別の値に変換します。 次に、`GetTimeBand` メソッドにより、"[リレーショナル パターン](../language-reference/operators/patterns.md#relational-patterns)" と "[結合 `or` パターン](../language-reference/operators/patterns.md#logical-patterns)" が使用されます。どちらも C# 9.0 で追加されたものです。 リレーショナル パターンを使用すると、`<`、`>`、`<=`、または `>=` の使用により数値をテストできます。 `or` パターンを使用すると、式が 1 つ以上のパターンに一致するかどうかをテストできます。 また、`and` パターンを使用して、式が 2 つの異なるパターンに一致することを確認し、`not` パターンを使用して、式がパターンに一致しないことをテストすることもできます。
 
 これらのメソッドを作成したら、別の `switch` 式と **タプル パターン** を使用して、割増料金を計算できます。 全部で 16 のアームがある `switch` 式を作成できます。
 
@@ -391,3 +389,8 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 ## <a name="next-steps"></a>次のステップ
 
 GitHub リポジトリの [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/finished) から、完成したコードをダウンロードできます。 自分のパターンを調査し、通常のコーディング アクティビティにこの手法を追加してください。 これらの手法を習得することで、別の方法で問題にアプローチし、新しい機能を作成できます。
+
+## <a name="see-also"></a>関連項目
+
+- [パターン](../language-reference/operators/patterns.md)
+- [`switch` 式](../language-reference/operators/switch-expression.md)

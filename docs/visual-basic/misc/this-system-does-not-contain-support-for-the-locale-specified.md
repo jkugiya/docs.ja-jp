@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: このシステムには、指定されたロケールのサポートが含まれていません'
+description: '詳細情報: このシステムには、指定されたロケールのサポートは含まれていません'
 title: このシステムには、指定されたロケールのサポートは含まれていません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
 ms.openlocfilehash: 744408cb4bbd088c9ffeceee9937e58a2d96a37e
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100427948"

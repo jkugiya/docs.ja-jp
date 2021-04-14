@@ -3,12 +3,12 @@ title: '破壊的変更:Blazor: RequestImageFileAsync メソッドで変更さ�
 description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Blazor:RequestImageFileAsync メソッドで変更されたパラメーター名'
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: 61518ba246c1d390861261ecb5a9f18a5695c1fd
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: 645b53e341507ffd9f369eea1b940232b7c14770
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106496983"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255182"
 ---
 # <a name="blazor-parameter-name-changed-in-requestimagefileasync-method"></a>Blazor: RequestImageFileAsync メソッドで変更されたパラメーター名
 
@@ -16,7 +16,7 @@ ms.locfileid: "106496983"
 
 ## <a name="version-introduced"></a>導入されたバージョン
 
-6.0 Preview 1
+ASP.NET Core 6.0 Preview 1
 
 ## <a name="old-behavior"></a>以前の動作
 

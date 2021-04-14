@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「」を参照してください。の値は <argumentname> 1000 以上である必要があります
+description: '詳細情報: <argumentname> の値は 1,000 以上でなければなりません'
 title: <argumentname> の値は 1000 以上でなければなりません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 81aed143-1abb-41c2-9922-8e83711100e3
 ms.openlocfilehash: c928986a1d55af72b5dd9f8eb3b9a35d37c75b8c
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100428000"
@@ -25,5 +25,5 @@ ms.locfileid: "100428000"
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>
-- [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [[DirectoryPath]](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

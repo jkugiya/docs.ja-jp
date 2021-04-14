@@ -2,12 +2,12 @@
 title: レコード型を使用する - C# チュートリアル
 description: レコード型を使用する方法、レコードの階層を構築する方法、クラスではなくレコードを選択する判断基準について説明します。
 ms.date: 11/12/2020
-ms.openlocfilehash: 9c90368bc25225fa2bf1dc4dff75d995e0a53268
-ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
+ms.openlocfilehash: c8a1922fdf113d046dc087ec289accce4312c4ae
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106288076"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075538"
 ---
 # <a name="create-record-types"></a>レコード型を作成する
 

@@ -1,6 +1,6 @@
 ---
-description: '詳細情報: 申し訳ございません。この Visual Basic エラーについての詳細はありません'
-title: 申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません
+description: '詳細情報: 申し訳ありませんが、この Visual Basic エラーに関する特定の情報はありません'
+title: 申し訳ありませんが、この Visual Basic エラーに関する特定の情報はありません
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3047,29 +3047,29 @@ f1_keywords:
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 ms.openlocfilehash: 51cd9e21ba40677953fc63d64758dd9c122bc69c
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100431146"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>申し訳ありませんが、この Visual Basic エラーに関する特定の情報はありません
 
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に尋ねることができます。  
   
  [Visual Basic 言語](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
- Visual Basic 言語の構文とコンパイラに関する質問や一般的な議論のためのフォーラムを提供します。  
+ Visual Basic 言語の構文とコンパイラについての質問や総合的な議論のためのフォーラムです。  
   
  [Visual Basic の相互運用とアップグレード](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
- Visual Basic へのアップグレードと、相互運用性機能の使用に関する質問や問題のためのフォーラムを提供します。  
+ Visual Basic へのアップグレードや相互運用機能の使用に関する質問や議論のためのフォーラムです。  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
- Visual Studio 環境での作業方法に関する質問のためのフォーラムを提供します。  
+ Visual Studio 環境で作業する方法について質問するためのフォーラムです。  
   
  [Visual Basic 全般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
- 他のフォーラムでは説明されていない Visual Basic に関する質問や問題についてのフォーラムを提供します。  
+ 他のフォーラムで取り上げていないVisual Basic に関する質問や議論のためのフォーラムです。  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
- Visual Basic に関する質問や問題のあるフォーラムを提供します。  
+ Visual Basic に関する質問や議論のためのフォーラムです。  
   
  こちらもご覧ください。  
  [Visual Basic プログラマのための追加リソース](../getting-started/additional-resources.md)  

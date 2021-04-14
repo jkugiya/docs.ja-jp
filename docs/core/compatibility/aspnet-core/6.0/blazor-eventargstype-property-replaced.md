@@ -5,12 +5,12 @@ ms.author: scaddie
 ms.date: 02/24/2021
 no-loc:
 - Blazor
-ms.openlocfilehash: c9e866813707114f912ffe83309b0f95c2c9a0f2
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: fb82e27d7ab55b78293f40debe917da2d99239a7
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106497009"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255213"
 ---
 # <a name="blazor-no-loc-textwebeventdescriptoreventargstype-property-replaced"></a>Blazor: :::no-loc text="WebEventDescriptor.EventArgsType"::: プロパティが置き換えられました
 
@@ -20,7 +20,7 @@ ASP.NET Core 6.0 以降、`WebEventDescriptor` の <xref:Microsoft.AspNetCore.Co
 
 ## <a name="version-introduced"></a>導入されたバージョン
 
-6.0
+ASP.NET Core 6.0
 
 ## <a name="old-behavior"></a>以前の動作
 

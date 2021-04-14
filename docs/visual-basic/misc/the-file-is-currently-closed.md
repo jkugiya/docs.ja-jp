@@ -5,7 +5,7 @@ ms.date: 07/20/2015
 ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
 ms.openlocfilehash: c25151e23e8d4aaf4bc3ecd966525ab084f30483
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430886"
@@ -20,5 +20,5 @@ ms.locfileid: "100430886"
   
 ## <a name="see-also"></a>関連項目
 
-- [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Visual Basic におけるファイル アクセス](../developing-apps/programming/drives-directories-files/file-access.md)

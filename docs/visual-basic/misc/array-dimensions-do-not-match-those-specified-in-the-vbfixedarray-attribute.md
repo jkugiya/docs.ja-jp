@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: 配列ディメンションが ' VBFixedArray ' 属性で指定された次元と一致しません"
+description: "詳細情報: 配列の次元が、'VBFixedArray' 属性で指定された次元と一致しません"
 title: 配列の次元が、'VBFixedArray' 属性で指定された次元と一致しません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
 ms.openlocfilehash: f220d1ce626fee1db86927313c2f242dac972bba
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100424906"

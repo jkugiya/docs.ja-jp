@@ -1,13 +1,13 @@
 ---
 title: C# 9.0 の新機能 - C# ガイド
 description: C# 9.0 で使用できる新しい機能の概要を説明します。
-ms.date: 09/04/2020
-ms.openlocfilehash: 49170b123f612c06f22b70e44b29ad7be5f382ea
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.date: 04/07/2021
+ms.openlocfilehash: c2189d2db175a40c24d6a41d20f2ae2d9384513b
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876046"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255338"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 の新機能
 
@@ -17,18 +17,21 @@ C# 9.0 によって、C# 言語に次の機能と機能強化が追加されて�
 - [init 専用セッター](#init-only-setters)
 - [最上位レベルのステートメント](#top-level-statements)
 - [パターン マッチングの拡張機能](#pattern-matching-enhancements)
-- ネイティブ サイズの整数
-- 関数ポインター
-- localsinit フラグの出力を抑制する
-- ターゲット型の新しい式
-- 静的な匿名関数
-- ターゲットにより型指定された条件式
-- 共変の戻り値の型
-- `foreach` ループの拡張機能 `GetEnumerator` サポート
-- ラムダ ディスカード パラメーター
-- ローカル関数の属性
-- モジュールの初期化子
-- 部分メソッドの新機能
+- [パフォーマンスと相互運用](#performance-and-interop)
+  - ネイティブ サイズの整数
+  - 関数ポインター
+  - localsinit フラグの出力を抑制する
+- [適合性と完成度の機能](#fit-and-finish-features)
+  - ターゲット型の`new` 式
+  - 静的な匿名関数
+  - ターゲットにより型指定された条件式
+  - 共変の戻り値の型
+  - `foreach` ループの拡張機能 `GetEnumerator` サポート
+  - ラムダ ディスカード パラメーター
+  - ローカル関数の属性
+- [コード ジェネレーターのサポート](#support-for-code-generators)
+  - モジュールの初期化子
+  - 部分メソッドの新機能
 
 C# 9.0 は **.NET 5** でサポートされています。 詳細については、「[C# 言語のバージョン管理](../language-reference/configure-language-version.md)」を参照してください。
 
@@ -36,81 +39,105 @@ C# 9.0 は **.NET 5** でサポートされています。 詳細については
 
 ## <a name="record-types"></a>レコードの種類
 
-C# 9.0 には "***レコード型***" が導入されています。これは、等価性の値のセマンティクスを提供するための合成されたメソッドを提供する参照型です。 既定では、レコードは変更できません。
+C# 9.0 では、"***レコード型***" が導入されています。 `record` キーワードを使用して、データをカプセル化するための組み込み機能を提供する参照型を定義します。 位置指定パラメーターまたは標準のプロパティ構文を使用して、不変のプロパティを持つレコード型を作成できます。
 
-レコード型を使用すると、変更できない参照型を .NET で簡単に作成できます。 従来、.NET 型は、参照型 (クラス型と匿名型を含む) と値型 (構造体とタプルを含む) に大別されています。 変更できない値型が推奨されますが、変更可能な値型でエラーが頻繁に発生するわけではありません。 値型の変数には値が保持され、値型がメソッドに渡されるときは、元のデータのコピーが変更されます。
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="PositionalRecord":::
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="ImmutableRecord":::
 
-変更できない参照型にも多くの利点があります。 これらの利点は、共有データを使用する同時実行プログラムで、より顕著になります。 残念ながら、C# で変更できない参照型を作成するには、余分なコードをかなり記述する必要がありました。 レコードにより、等価性の値のセマンティクスを使用する、変更できない参照型の型宣言が提供されます。 等価コードとハッシュ コードの合成メソッドでは、プロパティがすべて等しい場合、2 つのレコードは等しいと見なされます。 次の定義を考慮してください。
+また、変更可能なプロパティとフィールドを使用してレコード型を作成することもできます。
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="RecordDefinition":::
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="MutableRecord":::
 
-レコード定義によって、`FirstName` と `LastName` の 2 つの読み取り専用プロパティを含む `Person` 型が作成されます。 `Person` 型は参照型です。 IL を見た場合は、それはクラスです。 どのプロパティも作成後に変更できないので、それは変更できません。 レコード型を定義すると、コンパイラによって他のいくつかのメソッドが自動的に合成されます。
+レコードは変更可能ですが、これらは主に不変のデータ モデルをサポートすることを目的としています。 レコード型には次の機能があります。
 
-- 値ベースの等価比較のためのメソッド
-- <xref:System.Object.GetHashCode> のオーバーライド
-- コピー メンバーとクローン メンバー
-- `PrintMembers` および <xref:System.Object.ToString>
+* [不変プロパティを持つ参照型を作成するための簡潔な構文](#positional-syntax-for-property-definition)
+* データ中心の参照型に役立つビヘイビアー:
+  * [値の等価性](#value-equality)
+  * [非破壊的な変化の簡潔な構文](#nondestructive-mutation)
+  * [表示用の組み込みの書式設定](#built-in-formatting-for-display)
+* [継承階層のサポート](#inheritance)
 
-レコードによって、継承がサポートされます。 次のようにして、`Person` の新しい派生レコードを宣言できます。
+[構造型](../language-reference/builtin-types/struct.md)を使用して、値の等価性があり、ビヘイビアーがほとんどない、またはまったくないデータ中心の型を設計することができます。 ただし、比較的大規模なデータ モデルの場合、構造体型にはいくつかの欠点があります。
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="InheritedRecord":::
+* 継承はサポートされていません。
+* 値の等価性を決定する場合には効率的ではありません。 値型の場合、<xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドによってリフレクションが使用され、すべてのフィールドが検索されます。 レコードの場合、コンパイラによって `Equals` メソッドが生成されます。 実際のところ、レコードでの値の等価性の実装は、多少は高速です。
+* すべてのインスタンスにすべてのデータの完全なコピーがあるため、一部のシナリオではより多くのメモリが使用されます。 レコード型は[参照型](../language-reference/builtin-types/reference-types.md)であるため、レコード インスタンスにはデータへの参照のみが含まれます。
 
-また、レコードをシールして、さらに派生させることもできます。
+### <a name="positional-syntax-for-property-definition"></a>プロパティ定義の位置指定構文
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="SealedRecord":::
+位置指定パラメーターを使用すると、レコードのプロパティを宣言し、インスタンスを作成するときにプロパティ値を初期化できます。
 
-コンパイラにより、上記のメソッドの異なるバージョンが合成されます。 メソッドのシグネチャは、レコード型がシールされているかどうか、および直接基底クラスがオブジェクトであるかどうかによって異なります。 レコードには次の機能が必要です。
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="InstantiatePositional":::
 
-- 等価性は値に基づいており、型が一致するかどうかのチェックが含まれます。 たとえば、2 つのレコードが同じ名前を共有している場合でも、`Student` を `Person` と同じにすることはできません。
-- レコードには、自動的に生成される一貫した文字列表現があります。
-- レコードによって、コピーの構築がサポートされます。 正しいコピーの構築には、継承階層と、開発者によって追加されたプロパティが含まれる必要があります。
-- レコードは、変更してコピーできます。 これらのコピー操作と変更操作では、非破壊的な変異がサポートされます。
+プロパティ定義に位置指定構文を使用すると、コンパイラにより、以下が作成されます。
 
-使い慣れた `Equals` オーバーロード、`operator ==`、`operator !=` に加えて、コンパイラによって新しい `EqualityContract` プロパティが合成されます。 プロパティからは、レコードの型に一致する `Type` オブジェクトが返されます。 基本データ型が `object` の場合、プロパティは `virtual` になります。 基本データ型が別のレコード型である場合、プロパティは `override` になります。 レコード型が `sealed` の場合、プロパティは `sealed` になります。 合成された `GetHashCode` によって、基本データ型とレコード型で宣言されているすべてのプロパティとフィールドの `GetHashCode` が使用されます。 これらの合成メソッドにより、継承階層全体で値ベースの等価性が適用されます。 つまり、`Student` は、同じ名前の `Person` と等しいとは見なされません。 2 つのレコードの型が一致し、さらにレコード型の間で共有されているすべてのプロパティが等しい必要があります。
+* レコード宣言で指定される各位置指定パラメーターのパブリック init 専用自動実装プロパティ。 [init 専用](../language-reference/keywords/init.md)プロパティは、コンストラクターで、またはプロパティ初期化子を使用して設定できます。
+* パラメーターがレコード宣言の位置指定パラメーターと一致するプライマリ コンストラクター。
+* レコード宣言で指定された各定位置指定パラメーターの `out` パラメーターを使用する `Deconstruct` メソッド。
 
-レコードには、合成されたコンストラクターと、コピーを作成するための "clone" メソッドもあります。 合成コンストラクターには、レコード型の引数が 1 つあります。 これにより、レコードのすべてのプロパティの値が同じ新しいレコードが生成されます。 レコードがシールされている場合、このコンストラクターは private です。それ以外の場合は、protected です。 合成された "clone" メソッドによって、レコード階層のコピーの構築がサポートされます。 "clone" という用語が引用符で囲まれているのは、実際の名前はコンパイラによって生成されるためです。 レコード型で `Clone` という名前のメソッドを作成することはできません。 合成された "clone" メソッドによって、仮想ディスパッチを使用してコピーされるレコードの型が返されます。 コンパイラにより、`record` のアクセス修飾子に応じて、異なる修飾子が "clone" メソッドに追加されます。
+詳細については、レコードに関する C# 言語リファレンスの記事の[位置指定構文](../language-reference/builtin-types/record.md#positional-syntax-for-property-definition)に関するセクションを参照してください。
 
-- レコード型が `abstract` の場合は、"clone" メソッドも `abstract` になります。 基本データ型が `object` でない場合は、メソッドも `override` になります。
-- 基本データ型が `object` であるときの、`abstract` ではないレコード型の場合:
-  - レコードが `sealed` の場合、追加の修飾子は "clone" メソッドに追加されません (つまり、`virtual` ではありません)。
-  - レコードが `sealed` ではない場合、"clone" メソッドは `virtual` になります。
-- 基本データ型が `object` ではないときの、`abstract` ではないレコード型の場合:
-  - レコードが `sealed` の場合は、"clone" メソッドも `sealed` になります。
-  - レコードが `sealed` ではない場合、"clone" メソッドは `override` になります。
+### <a name="immutability"></a>不変性
 
-これらすべてのルールの結果として、レコード型のすべての階層で等価性が一貫して実装されます。 次の例で示すように、プロパティが等しく、型が同じである場合、2 つのレコードは互いに等しくなります。
+レコード型は必ずしも不変ではありません。 `readonly` ではない `set` アクセサーとフィールドを使用してプロパティを宣言できます。 ただし、レコードは変更可能ですが、不変のデータ モデルを簡単に作成できます。 位置指定構文を使用して作成したプロパティは変更できません。
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="RecordsEquality":::
+不変性は、データ中心の型をスレッドセーフにする必要がある場合、またはハッシュ テーブル内でハッシュ コードを同じにしたい場合に役立ちます。 メソッドに参照によって引数を渡すときに発生するバグを防ぐことができます。また、メソッドによって引数の値が予期せず変更されることがあります。
 
-コンパイラにより、印刷出力をサポートする 2 つのメソッド <xref:System.Object.ToString> のオーバーライドと `PrintMembers` が合成されます。 `PrintMembers` は、引数として <xref:System.Text.StringBuilder?displayProperty=nameWithType> を受け取ります。 レコード型のすべてのプロパティに対し、プロパティ名と値のコンマ区切りリストが追加されます。 `PrintMembers` によって、他のレコードからのすべての派生レコードに対する基本実装が呼び出されます。 <xref:System.Object.ToString> のオーバーライドでは、`PrintMembers` によって生成され、`{` と `}` で囲まれた文字列が返されます。 たとえば、`Student` に対する <xref:System.Object.ToString> メソッドでは、次のコードのような `string` が返されます。
+レコード型に固有の機能は、コンパイラによって合成されたメソッドによって実装されます。このようなメソッドのいずれを使用してオブジェクトの状態を変更しても、不変性は損なわれません。
 
-```csharp
-"Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
+### <a name="value-equality"></a>値の等価性
+
+値の等価性とは、型が一致し、かつプロパティおよびフィールドの値がすべて一致する場合にレコード型の 2 つの変数が等しいことを意味します。 その他の参照型の場合、等価性は ID を意味します。 つまり、参照型の 2 つの変数は、同じオブジェクトを参照する場合、等しいことになります。
+
+次の例は、レコード型の値が等しいことを示しています。
+
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="Equality":::
+
+`class` 型では、等価性メソッドと演算子を手動でオーバーライドして値の等価性を実現できますが、そのコードの開発とテストには時間がかかり、エラーが発生しやすいものです。 この機能を組み込むと、プロパティまたはフィールドが追加または変更されたときにカスタムのオーバーライド コードの更新を忘れたことで発生するバグを防ぐことができます。
+
+詳細については、レコードに関する C# 言語リファレンスの記事の「[値の等価性](../language-reference/builtin-types/record.md#value-equality)」セクションを参照してください。
+
+### <a name="nondestructive-mutation"></a>非破壊な変化
+
+レコード インスタンスの不変プロパティを変更する必要がある場合は、`with` 式を使用して "*非破壊的な変化*" を実現できます。 `with` 式を使用すると、指定したプロパティとフィールドが変更された、既存のレコード インスタンスのコピーである新しいレコード インスタンスが作成されます。 次の例に示すように、[オブジェクト初期化子](../programming-guide/classes-and-structs/object-and-collection-initializers.md)構文を使用して、変更する値を指定します。
+
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="WithExpressions":::
+
+詳細については、レコードに関する C# 言語リファレンスの記事の「[非破壊な変化](../language-reference/builtin-types/record.md#nondestructive-mutation)」セクションを参照してください。
+
+### <a name="built-in-formatting-for-display"></a>表示用の組み込みの書式設定
+
+レコード型には、パブリック プロパティとフィールドの名前と値を表示する、コンパイラによって生成された <xref:System.Object.ToString%2A> メソッドがあります。 `ToString` メソッドからは、次の形式の文字列が返されます。
+
+> \<record type name> { \<property name> = \<value>, \<property name> = \<value>, ...}
+
+参照型の場合、プロパティ値ではなく、プロパティから参照されるオブジェクトの型名が表示されます。 次の例では、配列は参照型であるため、実際の配列要素値ではなく `System.String[]` が表示されます。
+
+```
+Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] }
 ```
 
-これまでに示した例では、従来の構文を使用してプロパティが宣言されています。 "***位置指定レコード***" と呼ばれる簡潔な形式があります。  次に示すのは、前に位置指定レコードとして定義されている 3 つのレコード型です。
+詳細については、レコードに関する C# 言語リファレンスの記事の[組み込みの書式設定](../language-reference/builtin-types/record.md#built-in-formatting-for-display)に関するセクションを参照してください。
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
+### <a name="inheritance"></a>継承
 
-これらの宣言によって、以前のバージョンと同じ機能が作成されます (次のセクションで説明する追加の機能がいくつかあります)。 これらのレコードには新しいメソッドが追加されていないため、これらの宣言は角かっこではなくセミコロンで終わっています。 本体を追加し、追加のメソッドを含めることもできます。
+レコードは、別のレコードから継承できます。 ただし、レコードはクラスから継承できません。また、クラスはレコードから継承できません。
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="RecordsWithMethods":::
+次の例は、位置指定プロパティ構文を使用した継承を示しています。
 
-コンパイラによって、位置指定レコードに対して `Deconstruct` メソッドが生成されます。 `Deconstruct` メソッドには、レコード型のすべてのパブリック プロパティの名前と一致するパラメーターがあります。 `Deconstruct` メソッドを使用して、レコードをコンポーネント プロパティに分解できます。
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="PositionalInheritance":::
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
+2 つのレコード変数が等しくなるには、ランタイム型が等しくなければなりません。 含まれている変数型は異なっていていても構いません。 これを次のコード例に示します。
 
-最後に、レコードは [`with` 式](../language-reference/operators/with-expression.md)をサポートしています。 "* **`with` 式** _" は、レコードのコピーを作成するが、_with* で指定されたプロパティは変更するようにコンパイラに指示します。
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="InheritanceEquality":::
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
+この例では、すべてのインスタンスが同じプロパティであり、同じプロパティ値です。 どちらも `Person` 型の変数ですが、`student == teacher` は、`False` を返します。 一方は `Person` 変数、もう一方は `Student` 変数ですが、`student == student2` は、`True` を返します。
 
-前の行では、`LastName` プロパティが `person` のコピーで、`FirstName` が `"Paul"` である、新しい `Person` レコードが作成されます。 `with` 式には、任意の数のプロパティを設定できます。 `with` 式を使用して、正確なコピーを作成することもできます。 変更するプロパティの空のセットを指定します。
+次の例に示すように、派生型と基本データ型の両方のすべてのパブリック プロパティとフィールドが `ToString` の出力に含まれます。
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="ToStringInheritance":::
 
-"clone" メソッド以外のすべての合成メンバーは、開発者が自分で記述できます。 レコード型に、いずれかの合成メソッドのシグネチャと一致するメソッドがある場合、コンパイラでそのメソッドは合成されません。 前の `Dog` レコードの例には、手作業でコーディングされた <xref:System.String.ToString> メソッドが例として含まれます。
-
-レコードの種類の詳細については、この[レコードの探索](../whats-new/tutorials/records.md)チュートリアルを参照してください。
+詳細については、レコードに関する C# 言語リファレンスの記事の「[継承](../language-reference/builtin-types/record.md#inheritance)」セクションを参照してください。
 
 ## <a name="init-only-setters"></a>init 専用セッター
 
@@ -124,14 +151,16 @@ C# 9.0 には "***レコード型***" が導入されています。これは、
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="UseWeatherObservation":::
 
-ただし、初期化後に監視を変更することは、初期化の外側で init 専用プロパティに代入することによるエラーになります。
+初期化後に監視を変更しようとすると、コンパイラ エラーが発生します。
 
 ```csharp
 // Error! CS8852.
 now.TemperatureInCelsius = 18;
 ```
 
-init 専用セッターは、派生クラスから基底クラスのプロパティを設定する場合に便利です。 また、基底クラスのヘルパーを使用して派生プロパティを設定することもできます。 位置指定レコードによって、init 専用セッターを使用してプロパティが宣言されます。 これらのセッターは、with 式で使用されます。 定義する任意の `class` または `struct` に対して、init 専用セッターを宣言できます。
+init 専用セッターは、派生クラスから基底クラスのプロパティを設定する場合に便利です。 また、基底クラスのヘルパーを使用して派生プロパティを設定することもできます。 位置指定レコードによって、init 専用セッターを使用してプロパティが宣言されます。 これらのセッターは、with 式で使用されます。 定義する任意の `class`、`struct` または `record` に対して、init 専用セッターを宣言できます。
+
+詳細については、「[init (C# リファレンス)](../language-reference/keywords/init.md)」を参照してください。
 
 ## <a name="top-level-statements"></a>最上位レベルのステートメント
 
@@ -152,7 +181,7 @@ namespace HelloWorld
 }
 ```
 
-何かを行うコード行は 1 つだけです。 最上位レベル ステートメントを使用すると、そのすべての定型句を、`using` ステートメントと処理を行う 1 行に置き換えることができます。
+何かを行うコード行は 1 つだけです。 最上位レベル ステートメントを使用すると、そのすべての定型句を、`using` ディレクティブと処理を行う 1 行に置き換えることができます。
 
 :::code language="csharp" source="snippets/whats-new-csharp9/Program.cs" ID="TopLevelStatements":::
 
@@ -164,9 +193,11 @@ System.Console.WriteLine("Hello World!");
 
 最上位レベル ステートメントを使用できるのは、アプリケーション内の 1 つのファイルだけです。 コンパイラにより、複数のソース ファイルで最上位レベル ステートメントが検出されると、エラーになります。 また、最上位レベル ステートメントを、宣言されたプログラム エントリ ポイント メソッド (通常は `Main` メソッド) と組み合わせても、エラーになります。 ある程度まで、その 1 つのファイルに、通常は `Program` クラスの `Main` メソッドに含まれるステートメントが含まれているものと考えることができます。  
 
-この機能の最も一般的な用途の 1 つは、教材の作成です。 C# の開発初心者は、正規の "Hello World!" を 1 行または 2 行のコードで作成できます。 余分な手続きは必要ありません。 一方、経験豊富な開発者は、この機能の多くの用途を見つけることができます。 最上位レベル ステートメントを使用すると、Jupyter Notebook で提供されるものと同様の実験用にスクリプトに似たエクスペリエンスを有効にできます。 最上位レベル ステートメントは、小規模なコンソール プログラムとユーティリティに最適です。 Azure Functions は、最上位レベル ステートメントに最適なユース ケースです。
+この機能の最も一般的な用途の 1 つは、教材の作成です。 C# の開発初心者は、正規の "Hello World!" を 1 行または 2 行のコードで作成できます。 余分な手続きは必要ありません。 一方、経験豊富な開発者は、この機能の多くの用途を見つけることができます。 最上位レベル ステートメントを使用すると、Jupyter Notebook で提供されるものと同様の実験用にスクリプトに似たエクスペリエンスを有効にできます。 最上位レベル ステートメントは、小規模なコンソール プログラムとユーティリティに最適です。 [Azure Functions](/azure/azure-functions/) は、最上位レベル ステートメントに最適なユース ケースです。
 
-最も重要なのは、最上位レベル ステートメントでアプリケーションのスコープや複雑さが制限されないことです。 それらのステートメントでは、任意の .NET クラスにアクセスしたり、使用したりできます。 また、コマンド ライン引数や戻り値の使用も制限されません。 最上位レベル ステートメントでは、args という名前の文字列の配列にアクセスできます。 最上位レベル ステートメントで整数値が返される場合、その値は、合成された `Main` メソッドからの整数のリターン コードになります。 最上位レベル ステートメントには、非同期式を含めることができます。 その場合、合成されたエントリ ポイントからは `Task` または `Task<int>` が返されます。
+最も重要なのは、最上位レベル ステートメントでアプリケーションのスコープや複雑さが制限されないことです。 それらのステートメントでは、任意の .NET クラスにアクセスしたり、使用したりできます。 また、コマンド ライン引数や戻り値の使用も制限されません。 最上位レベル ステートメントでは、`args` という名前の文字列の配列にアクセスできます。 最上位レベル ステートメントで整数値が返される場合、その値は、合成された `Main` メソッドからの整数のリターン コードになります。 最上位レベル ステートメントには、非同期式を含めることができます。 その場合、合成されたエントリ ポイントからは `Task` または `Task<int>` が返されます。
+
+詳細については、「[最上位レベルのステートメント (C# プログラミング ガイド)](../programming-guide/main-and-command-args/top-level-statements.md)」を参照してください。
 
 ## <a name="pattern-matching-enhancements"></a>パターン マッチングの拡張機能
 
@@ -183,7 +214,7 @@ C# 9 には、新しいパターン マッチングの機能強化が含まれ�
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PatternUtilities.cs" ID="IsLetterPattern":::
 
-または、省略可能なかっこを使用して、`and` が `or` より優先順位が高いことを明確にします。
+省略可能なかっこを使用して、`and` が `or` より優先順位が高いことを明確にします。
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PatternUtilities.cs" ID="IsLetterOrSeparatorPattern":::
 
@@ -198,15 +229,19 @@ if (e is not null)
 
 これらのパターンのいずれも、パターンが許可される任意のコンテキスト (`is` パターン式、`switch` 式、入れ子になったパターン、`switch` ステートメントの `case` ラベルのパターン) で使用できます。
 
+詳細については、「[パターン (C# リファレンス)](../language-reference/operators/patterns.md)」を参照してください。
+
+詳細については、「[パターン](../language-reference/operators/patterns.md)」の記事の「[リレーショナル パターン](../language-reference/operators/patterns.md#relational-patterns)」と「[論理パターン](../language-reference/operators/patterns.md#logical-patterns)」のセクションを参照してください。
+
 ## <a name="performance-and-interop"></a>パフォーマンスと相互運用
 
 3 つの新機能により、高パフォーマンスを必要とするネイティブ相互運用および低レベル ライブラリのサポートが向上します (ネイティブ サイズの整数、関数ポインター、`localsinit` フラグの省略)。
 
-ネイティブ サイズの整数 `nint` と `nuint` は整数型です。 これらは、基になる型 <xref:System.IntPtr?displayProperty=nameWithType> および <xref:System.UIntPtr?displayProperty=nameWithType> によって表されます。 コンパイラによって、これらの型に対する追加の変換と操作がネイティブ int として公開されます。 ネイティブ サイズの整数では、`MaxValue` または `MinValue` のプロパティが定義されます。 これらの値は、ターゲット コンピューターでの整数のネイティブ サイズに依存するため、コンパイル時の定数として表すことはできません。 これらの値は実行時に読み取り専用になります。 `nint` に対する定数値は、[`int.MinValue` .. `int.MaxValue`]. `nuint` に対する定数値は、[`uint.MinValue` .. `uint.MaxValue`]. コンパイラによって、<xref:System.Int32?displayProperty=nameWithType> 型と <xref:System.UInt32?displayProperty=nameWithType> 型を使用するすべての単項演算子と二項演算子に対して、定数の折りたたみが実行されます。 結果が 32 ビットに収まらない場合、演算は実行時に実行され、定数とは見なされません。 ネイティブ サイズの整数を使用すると、整数演算が広く使用されており、最速のパフォーマンスを実現する必要があるシナリオで、パフォーマンスを向上させることができます。
+ネイティブ サイズの整数 `nint` と `nuint` は整数型です。 これらは、基になる型 <xref:System.IntPtr?displayProperty=nameWithType> および <xref:System.UIntPtr?displayProperty=nameWithType> によって表されます。 コンパイラによって、これらの型に対する追加の変換と操作がネイティブ int として公開されます。 ネイティブ サイズの整数では、`MaxValue` または `MinValue` のプロパティが定義されます。 これらの値は、ターゲット コンピューターでの整数のネイティブ サイズに依存するため、コンパイル時の定数として表すことはできません。 これらの値は実行時に読み取り専用になります。 `nint` に対する定数値は、[`int.MinValue` .. `int.MaxValue`]. `nuint` に対する定数値は、[`uint.MinValue` .. `uint.MaxValue`]. コンパイラによって、<xref:System.Int32?displayProperty=nameWithType> 型と <xref:System.UInt32?displayProperty=nameWithType> 型を使用するすべての単項演算子と二項演算子に対して、定数の折りたたみが実行されます。 結果が 32 ビットに収まらない場合、演算は実行時に実行され、定数とは見なされません。 ネイティブ サイズの整数を使用すると、整数演算が広く使用されており、最速のパフォーマンスを実現する必要があるシナリオで、パフォーマンスを向上させることができます。 詳細については、[`nint` と `nuint` 型](../language-reference/builtin-types/nint-nuint.md)に関するページを参照してください
 
-関数ポインターでは、IL オペコード `ldftn` および `calli` にアクセスするための簡単な構文が提供されます。 関数ポインターは、新しい `delegate*` 構文を使用して宣言できます。 `delegate*` 型はポインター型です。 `Invoke()` メソッドで `callvirt` が使用されるデリゲートとは異なり、`delegate*` 型の呼び出しでは `calli` が使用されます。 構文的には、呼び出しは同じです。 関数ポインターの呼び出しでは、`managed` の呼び出し規約が使用されます。 `unmanaged` の呼び出し規約が必要であることを宣言するには、`delegate*` 構文の後に `unmanaged` キーワードを追加します。 その他の呼び出し規約は、`delegate*` 宣言の属性を使用して指定できます。
+関数ポインターでは、IL オペコード `ldftn` および `calli` にアクセスするための簡単な構文が提供されます。 関数ポインターは、新しい `delegate*` 構文を使用して宣言できます。 `delegate*` 型はポインター型です。 `Invoke()` メソッドで `callvirt` が使用されるデリゲートとは異なり、`delegate*` 型の呼び出しでは `calli` が使用されます。 構文的には、呼び出しは同じです。 関数ポインターの呼び出しでは、`managed` の呼び出し規約が使用されます。 `unmanaged` の呼び出し規約が必要であることを宣言するには、`delegate*` 構文の後に `unmanaged` キーワードを追加します。 その他の呼び出し規約は、`delegate*` 宣言の属性を使用して指定できます。 詳細については、「[アンセーフ コードとポインター型](../language-reference/unsafe-code.md)」を参照してください。
 
-最後に、<xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> を追加することで、`localsinit` フラグを生成しないようコンパイラに指示することができます。 このフラグは、すべてのローカル変数をゼロで初期化するように CLR に指示します。 1\.0 から、`localsinit` フラグが C# に対する既定の動作でした。 しかし、一部のシナリオでは、ゼロによる初期化を追加すると、パフォーマンスに大きく影響する可能性があります。 特に、`stackalloc` を使用する場合です。 そのような場合は、<xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> を追加できます。 1 つのメソッドまたはプロパティに、または `class`、`struct`、`interface` に、さらにはモジュールに対してさえも、それを追加できます。 この属性は `abstract` メソッドに影響しません。実装用に生成されたコードに影響します。
+最後に、<xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> を追加することで、`localsinit` フラグを生成しないようコンパイラに指示することができます。 このフラグは、すべてのローカル変数をゼロで初期化するように CLR に指示します。 1\.0 から、`localsinit` フラグが C# に対する既定の動作でした。 しかし、一部のシナリオでは、ゼロによる初期化を追加すると、パフォーマンスに大きく影響する可能性があります。 特に、`stackalloc` を使用する場合です。 そのような場合は、<xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> を追加できます。 1 つのメソッドまたはプロパティに、または `class`、`struct`、`interface` に、さらにはモジュールに対してさえも、それを追加できます。 この属性は `abstract` メソッドに影響しません。実装用に生成されたコードに影響します。 詳細については、「[`SkipLocalsInit` 属性](../language-reference/attributes/general.md#skiplocalsinit-attribute)」を参照してください。
 
 これらの機能により、一部のシナリオでパフォーマンスを向上させることができます。 導入前と導入後の両方で慎重にベンチマークを行った後でのみ、使用する必要があります。 ネイティブ サイズの整数に関するコードは、複数のターゲット プラットフォームで、異なる整数サイズを使用して、テストする必要があります。 その他の機能には、アンセーフ コードが必要です。
 
@@ -248,7 +283,7 @@ C# 9.0 以降では、`static` 修飾子を[ラムダ式](../language-reference/
 
 コード ジェネレーターにより、Roslyn 分析 API を使用して属性または他のコード要素が読み取られます。 その情報を基にして、コンパイルに新しいコードが追加されます。 ソース ジェネレーターではコードが追加されるだけで、コンパイル中の既存のコードの変更は許可されていません。
 
-コード ジェネレーターに対して追加された 2 つの機能は、"***部分メソッド構文** _" の拡張機能と、"_*_モジュール初期化子_**" です。 1 つ目は、部分メソッドに対する変更です。 C# 9.0 より前の部分メソッドは `private` ですが、アクセス修飾子を指定することはできず、戻り値は `void` で、`out` パラメーターを持つことはできません。 これらの制限は、メソッドの実装を提供しないと、コンパイラによって部分メソッドのすべての呼び出しが削除されることを意味しました。 C# 9.0 ではこれらの制限はなくなりましたが、部分メソッドの宣言には実装が必要です。 コード ジェネレーターで、その実装を提供できます。 破壊的変更が発生しないよう、コンパイラでは、アクセス修飾子を持たないすべての部分メソッドは、古い規則に従うものと見なされます。 部分メソッドに `private` アクセス修飾子が含まれている場合、その部分メソッドは新しい規則によって制御されます。
+コード ジェネレーターに対して追加された 2 つの機能は、"***部分メソッド構文** _" の拡張機能と、"_*_モジュール初期化子_**" です。 1 つ目は、部分メソッドに対する変更です。 C# 9.0 より前の部分メソッドは `private` ですが、アクセス修飾子を指定することはできず、戻り値は `void` で、`out` パラメーターを持つことはできません。 これらの制限は、メソッドの実装を提供しないと、コンパイラによって部分メソッドのすべての呼び出しが削除されることを意味しました。 C# 9.0 ではこれらの制限はなくなりましたが、部分メソッドの宣言には実装が必要です。 コード ジェネレーターで、その実装を提供できます。 破壊的変更が発生しないよう、コンパイラでは、アクセス修飾子を持たないすべての部分メソッドは、古い規則に従うものと見なされます。 部分メソッドに `private` アクセス修飾子が含まれている場合、その部分メソッドは新しい規則によって制御されます。 詳細については、「[partial メソッド (C# リファレンス)](../language-reference/keywords/partial-method.md)」を参照してください。
 
 コード ジェネレーターの 2 つ目の新機能は、"***モジュール初期化子***" です。 モジュール初期化子は、<xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 属性が関連付けられているメソッドです。 これらのメソッドは、全体モジュール内の他のフィールド アクセスまたはメソッド呼び出しの前にランタイムによって呼び出されます。 モジュール初期化子メソッドは次のようなものです。
 
@@ -259,4 +294,4 @@ C# 9.0 以降では、`static` 修飾子を[ラムダ式](../language-reference/
 - ジェネリック クラスに含まれていてはなりません
 - それを含むモジュールからアクセスできる必要があります
 
-最後の項目は事実上、メソッドとそれを含んでいるクラスが internal または public である必要があることを意味します。 メソッドをローカル関数にすることはできません。
+最後の項目は事実上、メソッドとそれを含んでいるクラスが internal または public である必要があることを意味します。 メソッドをローカル関数にすることはできません。 詳細については、「[`ModuleInitializer` 属性](../language-reference/attributes/general.md#moduleinitializer-attribute)」を参照してください。

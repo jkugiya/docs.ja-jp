@@ -5,7 +5,7 @@ ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
 ms.openlocfilehash: 865596203a82221e884db281105f27d1d7bb423c
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430821"
@@ -23,7 +23,7 @@ ms.locfileid: "100430821"
 ## <a name="see-also"></a>関連項目
 
 - [方法: ディレクトリを作成する](../developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)
-- [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [My. コンピューター. ファイルシステム. CreateDirectory](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.CreateDirectory%2A)
-- [My. コンピューター. ファイルシステム (RenameDirectory)](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.RenameDirectory%2A)
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [My.Computer.FileSystem.CreateDirectory](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.CreateDirectory%2A)
+- [My.Computer.FileSystem.RenameDirectory](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.RenameDirectory%2A)
 - [ファイルおよびディレクトリの作成、削除、および移動](../developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

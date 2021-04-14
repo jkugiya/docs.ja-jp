@@ -3,12 +3,12 @@ title: '破壊的変更:Kestrel: 変更されたログ メッセージ属性'
 description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Kestrel: 変更されたログ メッセージ属性'
 ms.author: scaddie
 ms.date: 02/01/2021
-ms.openlocfilehash: 09b0bc71b6c9935b9e7e4170f24869f4d45c97f6
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: daeb9ae418f343a00e9563ef3e2b5090a7f016a9
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106496879"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255169"
 ---
 # <a name="kestrel-log-message-attributes-changed"></a>Kestrel: 変更されたログ メッセージ属性
 
@@ -16,7 +16,7 @@ Kestrel ログ メッセージには ID と名前が関連付けられていま�
 
 ## <a name="version-introduced"></a>導入されたバージョン
 
-6.0
+ASP.NET Core 6.0
 
 ## <a name="old-behavior"></a>以前の動作
 

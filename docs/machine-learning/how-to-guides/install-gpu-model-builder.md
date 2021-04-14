@@ -1,16 +1,16 @@
 ---
 title: Model Builder に GPU サポートをインストールする方法
 description: Model Builder に GPU サポートをインストールする方法について説明します
-ms.date: 08/18/2020
+ms.date: 04/08/2021
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: how-to
-ms.openlocfilehash: ce629efa4c12a69f87196de35ebfe4331dc0800f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 81f84a17429fd03506bbce30f5646941e4e80b3b
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608552"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255429"
 ---
 # <a name="how-to-install-gpu-support-in-model-builder"></a>Model Builder に GPU サポートをインストールする方法
 
@@ -25,8 +25,8 @@ Model Builder で GPU を使用するために GPU ドライバーをインス�
 
 ## <a name="install-dependencies"></a>依存関係のインストール
 
-1. [CUDA v10.0](https://developer.nvidia.com/cuda-10.0-download-archive) をインストールします。 他の新しいバージョンではなく、必ず CUDA v10.0 をインストールします。 CUDA の複数のバージョンをインストールすることはできません。
-1. [CUDA 10.0 用の cuDNN v7.6.4](https://developer.nvidia.com/rdp/cudnn-download) をインストールします。 cuDNN の複数のバージョンをインストールすることはできません。 cuDNN v7.6.4 zip ファイルをダウンロードしてアンパックした後、`<CUDNN_zip_files_path>\cuda\bin\cudnn64_7.dll` を `<YOUR_DRIVE>\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin` にコピーします。
+1. [CUDA v10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update2) をインストールします。 他の新しいバージョンではなく、必ず CUDA v10.1 をインストールします。 CUDA の複数のバージョンをインストールすることはできません。
+1. [CUDA 10.1 用の cuDNN v7.6.4](https://developer.nvidia.com/rdp/cudnn-download) をインストールします。 cuDNN の複数のバージョンをインストールすることはできません。 cuDNN v7.6.4 zip ファイルをダウンロードしてアンパックした後、`<CUDNN_zip_files_path>\cuda\bin\cudnn64_7.dll` を `<YOUR_DRIVE>\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin` にコピーします。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

@@ -1,6 +1,6 @@
 ---
 title: 状態データの保護
-description: 状態データをプライベート変数または内部変数として宣言して、アクセスを制限します。 このようなデータには、リフレクション、シリアル化、およびデバッグによってアクセスできます。
+description: 状態データをプライベート変数または内部変数として宣言して、そのデータへのアクセスを制限します。 そのようなデータにも、リフレクション、シリアル化、デバッグでは引き続きアクセスできます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET], state data
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 ms.openlocfilehash: 849ed993befaceda1b04becbb7fb2530c5c62a77
 ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/18/2020
 ms.locfileid: "94824162"

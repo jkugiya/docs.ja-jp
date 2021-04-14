@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: 指定されたレジストリキーは、2つ以上の連続する円記号が含まれているため無効です'
+description: '詳細情報: 指定されたレジストリ キーは、2 つ以上の連続する円記号が含まれているため無効です'
 title: 指定されたレジストリ キーは、2 つ以上の連続する円記号が含まれているため無効です
 ms.date: 07/20/2015
 ms.assetid: 0d78b6f7-5759-45b4-8c37-c6902ada76ff
 ms.openlocfilehash: 9269695fa9769e3608f67b266db6b55bef9cb53c
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100431068"
@@ -21,4 +21,4 @@ ms.locfileid: "100431068"
 ## <a name="see-also"></a>関連項目
 
 - [方法: ファイル パスを解析する](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [My.settings](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

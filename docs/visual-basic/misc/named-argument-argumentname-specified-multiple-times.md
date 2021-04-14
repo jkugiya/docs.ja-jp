@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: 名前付き引数 ' <argumentname> ' が複数回指定されました。"
+description: "詳細情報: '<argumentname>' という名前の引数が複数指定されました"
 title: "'<argumentname>' という名前の引数が複数指定されました。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
 ms.openlocfilehash: d819241e72072acb2b42c3082c5ed48a3fc0dda1
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100427961"

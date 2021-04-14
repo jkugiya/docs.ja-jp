@@ -5,7 +5,7 @@ ms.date: 07/20/2015
 ms.assetid: e011825a-019f-4c01-8d5b-3194f172e495
 ms.openlocfilehash: fd64b433790b989cfc520f4b4d325dffd8e17f8a
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100428182"
@@ -18,10 +18,10 @@ ms.locfileid: "100428182"
   
 - 必要なファイル名を指定します。  
   
-- パスの末尾がディレクトリの区切り記号 () ではないことを確認し \\ ます。  
+- パスがディレクトリの区切り文字 (\\) で終わっていないことを確認します。  
   
 ## <a name="see-also"></a>関連項目
 
 - [方法: ファイル パスを解析する](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Visual Basic におけるファイル アクセス](../developing-apps/programming/drives-directories-files/file-access.md)

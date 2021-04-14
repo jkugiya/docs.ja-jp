@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: 型 ' ' の Loop コントロール変数 <typename> は ' system.icomparable ' インターフェイスを実装していません"
+description: "詳細情報: 型 '<typename>' の Loop コントロール変数は 'System.IComparable' インターフェイスを実装していません"
 title: 型 '<typename>' の Loop コントロール変数は 'System.IComparable' インターフェイスを実装していません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
 ms.openlocfilehash: d353e5a845786bb02a7b17d1e1bc3be18f41e09a
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100429989"

@@ -1,5 +1,5 @@
 ---
-description: 詳細については、次を参照してください。 COM クラスから派生したマネージクラスは、遅延バインディングを呼び出すことはできません。
+description: '詳細情報: COM クラスから派生したマネージド クラスは、遅延バインディングされた呼び出しはできません。'
 title: COM クラスから派生したマネージド クラスは、遅延バインディングされた呼び出しはできません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 7bc16e84-8d29-4f8e-bc4f-002c65c71099
 ms.openlocfilehash: bde124c3e5c52d4c0dbb0e6e1f7250574c83be8d
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430041"

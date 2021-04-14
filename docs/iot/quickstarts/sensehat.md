@@ -1,32 +1,32 @@
 ---
-title: クイックスタート-.NET を使用して Raspberry Pi Sense HAT を駆動する
-description: Raspberry Pi のアドオンボードである Sense HAT を使用して、5分で .NET IoT ライブラリを使い始めることができます。
+title: クイックスタート - .NET を使用して Raspberry Pi Sense HAT を動作させる
+description: Raspberry Pi 用の拡張用基板である Sense HAT を使用して、.NET IoT ライブラリの使用を 5 分で開始します。
 author: camsoper
 ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
 ms.openlocfilehash: 28d6650187bbf7b9ce91516f4da4d09b114c904a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102259701"
 ---
-# <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>クイックスタート-.NET を使用して Raspberry Pi Sense HAT を駆動する
+# <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>クイックスタート - .NET を使用して Raspberry Pi Sense HAT を動作させる
 
-Raspberry Pi [SENSE HAT](https://www.raspberrypi.org/products/sense-hat/) (**H** ttached on **T** op)**は、Raspberry** pi のアドオンボードです。 Sense HAT には、8×8の RGB LED 行列 (5 ボタンのジョイスティック) が搭載されており、次のセンサーが含まれています。
+Raspberry Pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) (**H** ardware **A** ttached on **T** op (上部に取り付けるハードウェア)) は、Raspberry Pi 用の拡張用基板です。 Sense HAT には、8×8 の RGB LED マトリックスと 5 ボタンのジョイスティックが搭載されており、次のセンサーが含まれています。
 
 - ジャイロスコープ
 - 加速度計
 - 磁力計
 - 気温
-- 気圧の圧力
+- 気圧
 - 湿度
 
-このクイックスタートでは、.NET を使用して Sense HAT からセンサー値を取得し、ジョイスティック入力に応答して、LED マトリックスを駆動しています。
+このクイックスタートでは .NET を使用して、Sense HAT からセンサー値を取得し、ジョイスティック入力に応答し、LED マトリックスを動作させます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
 - Sense HAT
@@ -35,26 +35,26 @@ Raspberry Pi [SENSE HAT](https://www.raspberrypi.org/products/sense-hat/) (**H**
 
 ## <a name="run-the-quickstart"></a>クイックスタートを実行する
 
-Sense HAT を Raspberry Pi に接続します。 Raspberry Pi (ローカルまたはリモート) の Bash プロンプトから、次のコマンドを実行します。
+Sense HAT を Raspberry Pi に取り付けます。 Raspberry Pi 上の Bash プロンプト (ローカルまたはリモート) から、次のコマンドを実行します。
 
 ```bash
 . <(wget -q -O - https://aka.ms/dotnet-iot-sensehat-quickstart)
 ```
 
-コマンドは、スクリプトをダウンロードして実行します。 スクリプトは次のようになります。
+このコマンドにより、スクリプトがダウンロードされて実行されます。 スクリプトは次のようになります。
 
 - .NET SDK をインストールします。
-- Sense HAT クイックスタートプロジェクトを含む GitHub リポジトリを複製します。
+- Sense HAT クイックスタート プロジェクトを含む GitHub リポジトリをクローンします。
 - プロジェクトをビルドします。
 - プロジェクトを実行します。
 
-センサーデータが表示されていることを確認します。 LED マトリックスには、青のフィールドに黄色のピクセルが表示されます。 ジョイスティックを任意の方向に保持すると、その方向に黄色のピクセルが移動します。 [Center ジョイスティック] ボタンをクリックすると、背景が青から赤に切り替わります。
+コンソールの出力でセンサー データが表示されていることを確認します。 LED マトリックスには、青のフィールド上に黄色のピクセルが表示されます。 ジョイスティックを任意の方向に保持すると、その方向に黄色のピクセルが移動します。 中央のジョイスティック ボタンをクリックすると、背景が青から赤に切り替わります。
 
 ## <a name="get-the-source-code"></a>ソース コードを入手する
 
-このクイックスタートのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart)ます。
+このクイックスタートのソースは、[GitHub から入手できます](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart)。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [General Purpose 入力/出力を使用して LED を点滅させる方法について説明します](../tutorials/blink-led.md)
+> [汎用入出力を使用して LED を点滅させる方法を学習する](../tutorials/blink-led.md)

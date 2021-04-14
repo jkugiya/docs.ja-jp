@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 04/07/2020
-ms.openlocfilehash: 7e2e484b4eacf8fdbef61a600409fa561dd34cb3
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: fa31276175733211c74ac54affc8ec222896c87f
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876072"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255351"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -104,7 +104,7 @@ public readonly void Translate(int xOffset, int yOffset)
 
 C# 8.0 では、このボキャブラリが展開されて、コードのより多くの場所で、より多くのパターン式を使用できます。 データと機能が分かれているときは、これらの機能を検討してください。 アルゴリズムがオブジェクトのランタイム型以外の事実に依存している場合は、パターン マッチングを検討してください。 これらの手法では、設計を表現する別の方法が提供されます。
 
-新しい場所での新しいパターンだけでなく、C# 8.0 では **再帰パターン** が追加されています。 パターン式の結果は式です。 再帰パターンは、単に、別のパターン式の出力に適用されるパターン式です。
+新しい場所での新しいパターンだけでなく、C# 8.0 では **再帰パターン** が追加されています。 再帰パターンは、他のパターンを含むことができるパターンです。
 
 ### <a name="switch-expressions"></a>switch 式
 
@@ -174,6 +174,8 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 }
 ```
 
+詳細については、「[`switch` 式](../language-reference/operators/switch-expression.md)」を参照してください。
+
 ### <a name="property-patterns"></a>プロパティ パターン
 
 **プロパティ パターン** を使用すると、調査対象のオブジェクトのプロパティと照合することができます。 購入者の住所に基づいて消費税を計算する必要がある eコマース サイトについて考えます。 そのような計算は、`Address` クラスの主な役割ではありません。 時間とともに、おそらくは住所の形式の変更より頻繁に、変更されます。 消費税の金額は、住所の `State` プロパティに依存します。 次のメソッドでは、プロパティ パターンを使用して、住所と価格から消費税を計算しています。
@@ -192,9 +194,11 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 パターン マッチングにより、このアルゴリズムを表現するための簡潔な構文が作成されます。
 
+詳細については、「[パターン](../language-reference/operators/patterns.md)」の記事の「[プロパティ パターン](../language-reference/operators/patterns.md#property-pattern)」セクションを参照してください。
+
 ### <a name="tuple-patterns"></a>タプル パターン
 
-いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン** を使うと、[タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
+いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン** を使うと、[タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。 "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -261,7 +265,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 
 前の switch での破棄パターンは、`x` または `y` のどちらか一方が 0 のときに一致しますが、両方とも 0 のときには一致しません。 switch 式は、値を生成するか、または例外をスローする必要があります。 どのケースとも一致しない場合、switch 式は例外をスローします。 可能性のあるすべてのケースが switch 式で網羅されていない場合、コンパイラで警告が生成されます。
 
-この[パターン マッチングの高度なチュートリアル](../tutorials/pattern-matching.md)で、パターン マッチング手法を確認できます。
+この[パターン マッチングの高度なチュートリアル](../tutorials/pattern-matching.md)で、パターン マッチング手法を確認できます。 位置指定パターンの詳細については、「[パターン](../language-reference/operators/patterns.md)」の記事の「[位置指定パターン](../language-reference/operators/patterns.md#positional-pattern)」セクションを参照してください。
 
 ## <a name="using-declarations"></a>using 宣言
 

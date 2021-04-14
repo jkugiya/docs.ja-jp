@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: 入力パスはファイルを参照しますが、ディレクトリの区切り記号で終わっています'
+description: '詳細情報: ファイルを参照している入力パスが、ディレクトリの区切り文字で終わっています'
 title: ファイルを参照している入力パスが、ディレクトリの区切り記号で終わっています
 ms.date: 07/20/2015
 ms.assetid: 319181c1-a015-4038-a23f-f53c0d91d806
 ms.openlocfilehash: 30cedf7286fd505bbe11745aaf14ae4bb3859914
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430808"

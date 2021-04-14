@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: カスタムログ名の最初の8文字のみが重要です'
+description: '詳細情報: カスタム ログ名の最初の 8 文字のみが有効です'
 title: カスタム ログ名の最初の 8 文字が有効です
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c5abd7bccae7aaf333b3a7791a0dc768e4feda59
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100423252"
@@ -20,5 +20,5 @@ ms.locfileid: "100423252"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: カスタムイベントログを作成および削除する](/previous-versions/visualstudio/visual-studio-2008/49dwckkz(v=vs.90))
-- [イベントログの管理](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [方法: カスタム イベント ログを作成および削除する](/previous-versions/visualstudio/visual-studio-2008/49dwckkz(v=vs.90))
+- [イベント ログの管理](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))

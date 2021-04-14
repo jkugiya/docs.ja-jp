@@ -1,5 +1,5 @@
 ---
-description: 詳細については <methodname> 、「引数を指定してメソッド ' ' を呼び出すことはできません <number>
+description: "詳細情報: メソッド '<methodname>' は <number> 引数と共に呼び出すことはできません"
 title: メソッド '<methodname>' は <number> 引数と共に呼び出すことはできません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
 ms.openlocfilehash: 903c71c98691ea497514d8a06c781fc1199e1dd8
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430002"

@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: TextFieldParser は endline 文字を含む区切り記号をサポートしていません'
+description: '詳細情報: TextFieldParser は行末文字を含む区切り記号をサポートしていません'
 title: TextFieldParser は行末文字を含む区切り記号をサポートしていません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 0701f3b6-635b-468e-b908-867df00dd5db
 ms.openlocfilehash: c1b18875f3003cb6b1a7252f71098faa416b80cb
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100431003"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a>TextFieldParser は行末文字を含む区切り記号をサポートしていません。
 
-Endline 文字を含む区切り記号が指定されていますが、は `TextFieldParser` endline 文字を含む区切り記号をサポートしていません。  
+行末文字を含む区切り記号が指定されていますが、`TextFieldParser` は行末文字を含む区切り記号をサポートしていません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

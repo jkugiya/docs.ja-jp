@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: 指定されたレジストリパスは、有効な hive 名で始まらない'
+description: '詳細情報: 指定されたレジストリ パスには、先頭に有効なハイブ名がありません'
 title: 指定されたレジストリ パスには、先頭に有効なハイブ名がありません
 ms.date: 07/20/2015
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
 ms.openlocfilehash: ece79ab210b37d2384a0a9625d89c21f37d94602
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100431016"
@@ -36,4 +36,4 @@ ms.locfileid: "100431016"
 
 - [文字列の操作](../../standard/base-types/best-practices-strings.md)
 - [レジストリからの読み取りとレジストリへの書き込み (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [My.settings](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

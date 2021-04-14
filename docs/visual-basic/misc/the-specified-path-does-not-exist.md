@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: 指定されたパスが存在しません'
+description: '詳細情報: 指定されたパスは存在しません'
 title: 指定されたパスは存在しません。
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
 ms.openlocfilehash: 6a81cb90f275122f6b2dc6c7a851410d0eb5ee68
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100430717"

@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: この単一インスタンスアプリケーションは元のインスタンスに接続できませんでした'
+description: '詳細情報: この単一インスタンス アプリケーションは元のインスタンスに接続できませんでした'
 title: この単一インスタンス アプリケーションは元のインスタンスに接続できませんでした
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 ms.openlocfilehash: 123cf2cded43c10d0f538fc12f31f4065caeb6dd
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100427922"
@@ -18,7 +18,7 @@ ms.locfileid: "100427922"
   
 - 元のインスタンスが応答を停止した。  
   
-- カーネル オブジェクトを作成するためのアクセス許可がアプリケーションにない。 カーネルオブジェクトの詳細については、「 [mutex](../../standard/threading/mutexes.md)」を参照してください。  
+- カーネル オブジェクトを作成するためのアクセス許可がアプリケーションにない。 カーネル オブジェクトの詳細については、「[ミューテックス](../../standard/threading/mutexes.md)」を参照してください。  
   
      カーネル オブジェクトの基本名は、アセンブリの GUID、メジャー バージョン番号、およびマイナー バージョン番号を連結したものです。 たとえば、基本名が `3639f15d-9547-43da-8145-60da347829915.1`になる可能性があります。  
   

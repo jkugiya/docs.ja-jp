@@ -20,12 +20,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 0bf0c3b1cea667456780ff56deb43467fd3bbffd
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: f47074fda20c1bc2eda75184dd26c9de1c0e3701
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916646"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075317"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>型のテスト演算子とキャスト式 (C# リファレンス)
 
@@ -62,19 +62,11 @@ C# の変換については、[C# 言語仕様](~/_csharplang/spec/introduction.
 
 ### <a name="type-testing-with-pattern-matching"></a>パターン マッチングを使用する型テスト
 
-C# 7.0 以降の `is` 演算子では、パターンに対する式の結果のテストも行われます。 具体的には、次の形式の型パターンがサポートされます。
+C# 7.0 以降の `is` 演算子では、パターンに対する式の結果のテストも行われます。 次の例は、[宣言パターン](patterns.md#declaration-and-type-patterns)を使用して、式のランタイム型を確認する方法を示しています。
 
-```csharp
-E is T v
-```
+[!code-csharp-interactive[is with declaration pattern](snippets/shared/TypeTestingAndConversionOperators.cs#IsDeclarationPattern)]
 
-`E` は値を返す式、`T` は型または型パラメーターの名前、`v` は `T` 型の新しいローカル変数です。 `E` の結果が null ではなく、参照変換、ボックス化変換、またはボックス化解除変換によって `T` に変換できる場合、式 `E is T v` から `true` が返され、`E` の結果の変換された値が変数 `v` に代入されます。
-
-次の例では、型パターンによる `is` 演算子の使用方法を示します。
-
-[!code-csharp-interactive[is with type pattern](snippets/shared/TypeTestingAndConversionOperators.cs#IsTypePattern)]
-
-型パターンおよび他のサポートされるパターンについて詳しくは、「[is を使用したパターン マッチング](../keywords/is.md#pattern-matching-with-is)」をご覧ください。
+サポートされているパターンの詳細については、「[パターン](patterns.md)」を参照してください。
 
 ## <a name="as-operator"></a>as 演算子
 

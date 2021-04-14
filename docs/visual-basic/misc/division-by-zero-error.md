@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「ゼロによる除算 (Visual Basic エラー)」を参照してください。
+description: '詳細情報: 0 による除算 (Visual Basic エラー)'
 title: 0 による除算 (Visual Basic エラー)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 7dc22e29-8baa-4d82-a1a6-2de64ba9b25d
 ms.openlocfilehash: e215e321d2510bf7e7e5d4da6f3a01a1ff8c6246
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100424945"

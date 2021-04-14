@@ -1,28 +1,28 @@
 ---
-title: ASP.NET Core に移行する場合の展開シナリオ
-description: ASP.NET から ASP.NET Core に移植するときに使用できるさまざまな展開手法の概要について説明します。これにより、サイドバイサイドおよび段階的な移行が可能になります。
+title: ASP.NET Core への移行時の展開シナリオ
+description: ASP.NET から ASP.NET Core への移行時に使用でき、サイドバイサイドの段階的な移行を可能にするさまざまな展開アプローチの概要。
 author: ardalis
 ms.date: 11/13/2020
 ms.openlocfilehash: 589acd8c66baacc3aef5833dfaa24e2dcc5c1ee5
 ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2021
 ms.locfileid: "102401386"
 ---
-# <a name="deployment-scenarios-when-migrating-to-aspnet-core"></a>ASP.NET Core に移行する場合の展開シナリオ
+# <a name="deployment-scenarios-when-migrating-to-aspnet-core"></a>ASP.NET Core への移行時の展開シナリオ
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-既存の ASP.NET MVC および Web API アプリは、IIS と Windows 上で実行されます。 ASP.NET Core に移植するときは、大規模なアプリで段階的またはサイドバイサイドのアプローチが必要になる場合があります。 前の章では、大規模な .NET Framework アプリを段階的に ASP.NET Core に移行するためのいくつかの方法について学習しました。 この章では、その一部を移行するときに、元のアプリを運用環境で維持する必要がある場合に、さまざまな展開シナリオを実現する方法について説明します。
+既存の ASP.NET MVC アプリと Web API アプリは、Windows と IIS 上で実行されます。 大規模なアプリでは、ASP.NET Core に移植するときに、段階的なアプローチまたはサイドバイサイドのアプローチが必要になる場合があります。 これまでの章で、大規模な .NET Framework アプリを ASP.NET Core に段階的に移行するためのさまざまな戦略について説明しました。 この章では、アプリを部分的に移行している間に元のアプリを運用環境で維持する必要がある場合に、さまざまな展開シナリオを実現する方法について説明します。
 
-## <a name="split-a-large-web-app"></a>大規模な web アプリを分割する
+## <a name="split-a-large-web-app"></a>大規模な Web アプリを分割する
 
-現在、単一の web サイトの IIS でホストされている大規模な web アプリの一般的なシナリオを考えてみましょう。 大規模なアプリでは、機能は別のルートやディレクトリに分割されます。 アプリは、MVC ビューと API エンドポイントを組み合わせたものです。 MVC ルートには、機能に基づいたさまざまなパスが含まれており、そのすべてが標準ルートテンプレートを使用してアプリのルートから開始され `/{controller}/{action}/{id?}` ます。 API エンドポイントは同様のパターンに従いますが、すべてがルートの下にあり `/api` ます。
+現在 1 つの Web サイト内で IIS 上でホストされている大規模な Web アプリの一般的なシナリオについて考えてみましょう。 大規模なアプリ内では、機能がさまざまなルートやディレクトリに分割されています。 アプリには MVC ビューと API エンドポイントが混在しています。 MVC ルートには機能に基づくさまざまなパスが含まれており、そのすべてが標準の `/{controller}/{action}/{id?}` ルート テンプレートを使用し、アプリのルートから始まっています。 API エンドポイントも同様のパターンに従っていますが、すべてが `/api` ルートの下にあります。
 
-MVC 機能または API 機能が最初に ASP.NET Core に移行されるように、アプリを移植するタスクが分割されていると仮定した場合、元のサイトは、別の場所で実行されている新しい ASP.NET Core アプリとシームレスに連携して動作しますか。 システムのユーザーは、移行前と同じ Url を引き続き表示する必要があります。ただし、変更する必要がある場合は除きます。
+アプリを移植するタスクが、MVC 機能または API 機能のいずれかを最初に ASP.NET Core に移行するように分割されたと仮定した場合、元のサイトはどのようにして、他の場所で実行されている新しい ASP.NET Core アプリと引き続きシームレスに連携できるでしょうか? システムのユーザーには、移行前と同じ URL が (その変更が絶対に必要な場合を除き) 引き続き表示される必要があります。
 
-幸いなことに、IIS は非常に機能豊富な web サーバーであり、しばらくの間、 [URL 書き換えモジュールとアプリケーション要求ルーティングと](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)いう2つの機能がありました。 これらの機能を使用して、IIS は [リバースプロキシ](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)として機能し、適切なバックエンド web アプリにクライアント要求をルーティングすることができます。 IIS をリバースプロキシとして構成するには、アプリケーション要求ルーティング機能の [ **プロキシを有効** にする] チェックボックスをオンにし、次のような URL 書き換え規則を追加します。
+幸いなことに、IIS は非常に機能豊富な Web サーバーであり、しばらく前から [URL 書き換えモジュールとアプリケーション要求ルーティング処理](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)という 2 つの機能を備えています。 これらの機能を使用すると、IIS は、クライアント要求を適切なバックエンド Web アプリにルーティングする[リバース プロキシ](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)の役割を果たすことができます。 IIS をリバース プロキシとして構成するには、アプリケーション要求ルーティング処理機能の **[プロキシを有効にする]** チェックボックスをオンにしてから、次のような URL 書き換え規則を追加します。
 
 ```xml
 <rule name="NetCoreProxy">
@@ -31,49 +31,49 @@ MVC 機能または API 機能が最初に ASP.NET Core に移行されるよう
 </rule>
 ```
 
-リバースプロキシとして、IIS では、特定のパターンに一致するトラフィックを、異なるサーバー上のすべてのアプリに分離することができます。
+リバース プロキシとしての IIS は、特定のパターンに一致するトラフィックを (別のサーバー上に存在している可能性がある) まったく別のアプリにルーティングできます。
 
-URL 書き換えモジュールだけを使用して (おそらくホストヘッダーと組み合わせて)、IIS では複数の web サイトを簡単にサポートでき、それぞれ異なるバージョンの .NET が実行される可能性があります。 大規模な web アプリは個々のサイトのコレクションとして、それぞれ異なる IP アドレスまたはホストヘッダーに対応している場合もあれば、特定の URL パスに応答する1つ以上のサブアプリケーションを含む単一の web サイトとして展開される場合もあります (URL の書き換えは必要ありません)。
+URL 書き換えモジュールのみを (おそらくホスト ヘッダーと組み合わせて) 使用することで、IIS は、(それぞれが異なるバージョンの .NET を実行している可能性がある) 複数の Web サイトを簡単にサポートできます。 大規模な Web アプリは、それぞれが異なる IP アドレスやホスト ヘッダーに対応している個別のサイトのコレクションとして、または特定の URL パスに応答する (URL 書き換えを必要としない) 1 つ以上のサブアプリケーションを含んだ 1 つの Web サイトとして展開できます。
 
 > [!IMPORTANT]
-> サブドメインは、通常、上位2つのレベルの前にあるドメインの部分を参照します。 たとえば、ドメインでは、 `api.contoso.com` `api` はドメインのサブドメインです `contoso.com` (それ自体がドメイン `contoso` 名と `.com` トップレベルドメインまたは TLD で構成されています)。 URL パスは、で始まるドメイン名の後の URL の部分を参照し `/` ます。 URL の `https://contoso.com/api` パスは `/api` です。
+> サブドメインとは、通常、ドメインの上位 2 レベルの前にある部分を指します。 たとえば、ドメイン `api.contoso.com` 内では、`api` が `contoso.com` ドメイン (それ自体が、ドメイン名 `contoso` と TLD、つまり最上位レベルのドメイン `.com` で構成されています) のサブドメインとなります。 URL パスとは、URL のドメイン名の後にある `/` で始まる部分を指します。 URL `https://contoso.com/api` のパスは `/api` です。
 
-同じまたは異なるサブドメイン (およびドメイン) を使用して1つのアプリをホストすると、長所と短所があります。 Cookie や、 [CORS](/aspnet/core/security/cors) のようなメカニズムを使用したアプリ内通信などの機能では、分散アプリで適切に機能するためにより多くの構成が必要になる場合があります。 ただし、異なるサブドメインを使用するアプリでは、DNS を使用して要求を完全に異なるネットワーク宛先にルーティングできるため、IIS をリバースプロキシとして動作させることなく、さまざまなサーバー (仮想またはそれ以外) に簡単に展開できます。
+同じまたは異なるサブドメイン (およびドメイン) を使用して 1 つのアプリをホストすることには、長所と短所があります。 分散型アプリでは、[CORS](/aspnet/core/security/cors) などのメカニズムを使用する Cookies やアプリ内通信のような機能を正しく機能させるために、より多くの構成が必要になることがあります。 しかし、異なるサブドメインを使用するアプリのほうが、DNS を使用してまったく異なるネットワーク接続先に要求を簡単にルーティングできるため、IIS をリバース プロキシとして機能させなくても、(仮想またはそれ以外の) 多数の異なるサーバーにより簡単に展開できます。
 
-前に説明した例では、API エンドポイントが ASP.NET Core に移植されるアプリの最初の部分として指定されているとします。 この場合、新しい ASP.NET Core アプリが作成され、既存の ASP.NET MVC web *サイト* 内の別の web *アプリケーション* として IIS でホストされます。 元の web サイトの子として追加され、 *api* という名前が付けられるため、既定のルートはで始まらなくなり `api/` ます。 これを維持すると、フォームの Url と一致するようになり `/api/api/endpoint` ます。
+上で説明した例で、API エンドポイントが、アプリの ASP.NET Core に移植する最初の部分として指定されたとします。 その場合、新しい ASP.NET Core アプリが作成され、既存の ASP.NET MVC Web "*サイト*" 内の別の Web "*アプリケーション*" として IIS でホストされます。 これは元の Web サイトの子として追加され、*api* という名前を付けられるため、その既定のルートが `api/` で始まらないようにしなければなりません。 これをそのまま維持すると、`/api/api/endpoint` という形式の URL と一致するようになります。
 
-図5-1 は、既存の *DotNetMvcApp* サイトの一部として IIS マネージャーに ASP.NET Core 2.1 *api* アプリがどのように表示されるかを示しています。
+図 5-1 に、ASP.NET Core 2.1 の *api* アプリが IIS マネージャー内でどのように既存の *DotNetMvcApp* サイトの一部として表示されるかを示します。
 
-![.NET Framework サイト内に api アプリを表示している IIS マネージャー](./media/Figure5-1.png)
+![.NET Framework サイト内の api アプリが表示された IIS マネージャー](./media/Figure5-1.png)
 
-**図 5-1**. IIS で .NET Core アプリを使用してサイトを .NET Framework します。
+**図 5-1**. IIS 内の .NET Core アプリが含まれている .NET Framework サイト
 
-*DotNetMvcApp* サイトは、.NET Framework 4.7.2 で実行される MVC 5 アプリとしてホストされます。 独自の IIS アプリプールが統合モードで構成され、.NET CLR バージョン v4.0.30319 が実行されています。 *Api* アプリは、.NET Framework 4.6.1 () で実行される ASP.NET Core アプリです `net461` 。 新しい IIS アプリケーションとして *DotNetMvcApp* に追加され、独自のアプリケーションプールを使用するように構成されています。 このアプリケーションプールは統合モードでも実行されていますが、 [ASP.NET Core モジュール](/aspnet/core/host-and-deploy/aspnet-core-module?preserve-view=true&view=aspnetcore-2.1)を使用して実行されるため、**マネージコードのない**.net CLR バージョンで構成されています。 ASP.NET Core アプリのバージョンはほんの一例です。 また、.NET Core 3.1 または .NET 5.0 で実行されるように構成することもできます。 ただし、その時点では、.NET Framework ライブラリをターゲットにすることはできなくなります (「 [適切な .Net Core バージョンを選択](choose-net-core-version.md)する」を参照してください)。
+*DotNetMvcApp* サイトは、.NET Framework 4.7.2 上で実行されている MVC 5 アプリとしてホストされます。 これは、統合モードで構成され、.NET CLR バージョン 4.0.30319 を実行している独自の IIS アプリ プールを持ちます。 *api* アプリは、.NET Framework 4.6.1 (`net461`) 上で実行される ASP.NET Core アプリです。 これは *DotNetMvcApp* に新しい IIS アプリとして追加され、独自のアプリケーション プールを使用するように構成されています。 そのアプリケーション プールも統合モードで実行されていますが、[ASP.NET Core モジュール](/aspnet/core/host-and-deploy/aspnet-core-module?preserve-view=true&view=aspnetcore-2.1)を使用して実行されるため、**マネージド コードなし** の .NET CLR バージョンで構成されています。 ASP.NET Core アプリのバージョンは単なる例です。 これは .NET Core 3.1 または .NET 5.0 上で実行されるように構成することもできます。 ただし、その時点で、.NET Framework ライブラリをターゲットにすることが不可能になっている可能性があります (「[適切な .NET Core バージョンを選択する](choose-net-core-version.md)」を参照してください)。
 
-このように構成した場合、ASP.NET Core アプリの Api を適切にルーティングするために必要な変更は、既定のルートテンプレートをからに変更することだけです `[Route("[api/controller]")]` `[Route("[controller]")]` 。
+このように構成した場合、ASP.NET Core アプリの API が正しくルーティングされるようにするために必要な変更は、その既定のルート テンプレートを `[Route("[api/controller]")]` から `[Route("[controller]")]` に変更することだけです。
 
-また、IIS の別のトップレベル web サイトに ASP.NET Core アプリを使用することもできます。 この場合、パスがで始まる場合に他のアプリにリダイレクトされる書き換え規則 ( [URL リライト](https://www.iis.net/downloads/microsoft/url-rewrite)) を使用するように、元のサイトを構成することができ `/api` ます。 ASP.NET Core アプリは、ルートに別のホストヘッダーを使用して、メインアプリと競合しないようにすることができますが、ルートベースのルートを使用して要求に応答できます。
+また、ASP.NET Core アプリを IIS 内で別の最上位レベルの Web サイトにすることもできます。 その場合は、元のサイトを、パスが `/api` で始まる場合には他のアプリにリダイレクトするという書き換えルールを使用するように ([URL 書き換え](https://www.iis.net/downloads/microsoft/url-rewrite)によって) 構成できます。 ASP.NET Core アプリは、そのルートに対して別のホスト ヘッダーを使用して、メイン アプリと競合しないが、ルートベースのルートを使用した要求に引き続き応答するようにできます。
 
-例として、図5-1 で使用したのと同じ ASP.NET Core アプリを、IIS web サイトとして構成されている別のフォルダーに配置できます。 サイトでは、以前と同じように構成されたアプリプールを使用する必要があります。マネージコードは使用し **ません**。 など、サーバー上の一意のホスト名に応答するようにバインドを構成し `api.contoso.com` ます。 `/api`IIS サーバー (または個々のサイト) レベルで新しい受信規則を追加するだけで、一致する要求を再書き込みするように URL を書き換えることができます。 パターンに一致し、 `^/api(.*)` アクションの種類との書き換え URL を指定し `Rewrite` `api.contoso.com/{R:1}` ます。 照合パターンでを使用し、 `(.*)` `{R:1}` リライト URL でを組み合わせることにより、パスの残りの部分が新しい url で使用されるようになります。 これを使用すると、同じ IIS サーバー上の個別のサイトで別々のバージョンの .NET を共存させることができますが、インターネットには1つの web アプリとして表示されるようになります。 図5-2 は、IIS で構成されている、個別の web サイトと書き換え規則を示しています。
+例として、図 5-1 で使用したのと同じ ASP.NET Core アプリを、IIS Web サイトとして構成された別のフォルダーに展開できます。 このサイトは、前と同じように、 **[マネージド コードなし]** で構成されたアプリ プールを使用する必要があります。 そのバインドを、サーバー上の一意のホスト名 (`api.contoso.com` など) に応答するように構成します。 `/api` に一致する要求を書き換える URL 書き換えを構成するには、IIS サーバー (または個別サイト) レベルで新しい受信規則を追加するだけです。 照合するパターン `^/api(.*)`、アクションの種類 `Rewrite`、書き換え URL `api.contoso.com/{R:1}` を指定します。 照合するパターン `(.*)`、書き換え URL `{R:1}` を組み合わせて使用することで、パスの残りの部分が新しい URL に使用されるようにできます。 これを設定すると、別のバージョンの .NET を実行している別のサイトを同じ IIS サーバー上で共存させ、それらをインターネットに対して 1 つの Web アプリのように見せることができます。 図 5-2 に、IIS 内で別の Web サイトを指定して構成された書き換え規則を示します。
 
-![サブフォルダーの要求を別の web サイトにルーティングするための URL 書き換えルールを示す IIS マネージャー](./media/Figure5-2.png)
+![サブフォルダーの要求を別の Web サイトにルーティングする URL 書き換え規則が示された IIS マネージャー](./media/Figure5-2.png)
 
-**図 5-2** サブフォルダーの要求を別の web サイトに書き直す規則を書き換えます。
+**図 5-2** サブフォルダーの要求を別の Web サイトに書き換えるための書き換え規則
 
-異なるサイトまたは IIS 内のアプリの間でシングルサインオンが必要なアプリの場合は、このシナリオをサポートするための詳細な手順について、 [ASP.NET アプリ間で認証 cookie を共有する方法](/aspnet/core/host-and-deploy/iis/) に関するドキュメントを参照してください。
+アプリで、IIS 内の異なるサイトまたはアプリ間のシングル サインオンが必要な場合は、[ASP.NET アプリ間で認証 Cookie を共有する方法に関する記事](/aspnet/core/host-and-deploy/iis/)を参照して、このシナリオのサポートに関する詳細な手順を確認してください。
 
 ## <a name="summary"></a>まとめ
 
-大規模なアプリを .NET Framework から ASP.NET Core に移植する一般的な方法は、アプリの個々の部分を選択して1つずつ移行することです。 アプリの各部分が移植されると、アプリ全体が実行され、使用可能になります。元の構成で実行される部分と、.NET Core の一部のバージョンで実行されているその他の部分が実行されます。 このアプローチに従うことで、大規模なアプリの移行を段階的に実行できます。 このアプローチでは、より迅速なフィードバックを提供し、テストに関係する総領域を減らすことで、リスクを制限します。 また、パフォーマンスの向上など、.NET Core の利点をより迅速に実現できます。 ASP.NET Core のアプリは IIS でホストする必要がなくなりましたが、IIS は非常に柔軟で強力な web サーバーとして機能します。これは、.NET Framework と ASP.NET Core の両方のアプリを同じ IIS インスタンス上で、または異なるサーバー上でホストされているさまざまなホスティングシナリオをサポートするように構成できます。
+大規模なアプリを .NET Framework から ASP.NET Core に移植するための一般的なアプローチは、アプリの部分を選択して 1 つずつ移行することです。 アプリの各部分が移植されると、アプリ全体の実行を継続して使用可能な状態を保ちつつ、その一部は元の構成で、他の部分は何らかのバージョンの .NET Core 上で実行されているという状態にできます。 このアプローチに従うことで、大規模なアプリの移行を段階的に実行できます。 このアプローチを使用すると、より迅速なフィードバックを提供し、テストに関係する領域全体を縮小することができるため、リスクが軽減されます。 また、パフォーマンスの向上など、.NET Core のベネフィットをより迅速に実現できます。 ASP.NET Core アプリを IIS 上でホストする必要はなくなりましたが、IIS は依然として非常に柔軟で強力な Web サーバーであり、同じ IIS インスタンス上、または別のサーバー上で .NET Framework アプリと ASP.NET Core アプリの両方をホストするシナリオなど、幅広いホスティング シナリオをサポートするように構成できます。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - [IIS を使用した Windows での ASP.NET Core のホスト](/aspnet/core/host-and-deploy/iis/)
-- [URL 書き換えモジュールとアプリケーション要求ルーティング](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)
+- [URL 書き換えモジュールとアプリケーション要求ルーティング処理](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)
 - [URL 書き換え](https://www.iis.net/downloads/microsoft/url-rewrite)
 - [ASP.NET Core モジュール](/aspnet/core/host-and-deploy/aspnet-core-module?preserve-view=true&view=aspnetcore-2.1)
-- [ASP.NET アプリ間で認証 cookie を共有する](/aspnet/core/host-and-deploy/iis/)
-- [このセクションで使用するサンプル](https://github.com/ardalis/MigrateDotNetWithIIS)
+- [ASP.NET アプリ間での認証 Cookie の共有](/aspnet/core/host-and-deploy/iis/)
+- [このセクションで使用したサンプル](https://github.com/ardalis/MigrateDotNetWithIIS)
 
 >[!div class="step-by-step"]
 >[前へ](more-migration-scenarios.md)

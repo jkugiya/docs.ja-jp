@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PlatformTarget compiler option [C#]
 - ProduceReferenceAssembly compiler option [C#]
 - TargetType compiler option [C#]
-ms.openlocfilehash: 2d8b7edbf970875d7300a394ab75756c1316ac9d
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 9caa290a7c9b5fea1b0f896e9443075b4b470f7b
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482443"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636845"
 ---
 # <a name="c-compiler-options-that-control-compiler-output"></a>コンパイラ出力を制御する C# コンパイラ オプション
 
@@ -38,7 +38,7 @@ ms.locfileid: "103482443"
 Main ステートメントまたは最上位レベルのステートメントを含むソース コード ファイルは、最初に XML に出力されます。 生成された .xml ファイルを [IntelliSense](/visualstudio/ide/using-intellisense) で使用することがよくあります。 *.xml* ファイル名は、アセンブリ名と同じである必要があります。 *.xml* ファイルは、アセンブリと同じディレクトリに存在する必要があります。 アセンブリが Visual Studio プロジェクトで参照されると、 *.xml* ファイルも同様に検出されます。 コード コメントの生成の詳細については、[コード コメントの追加](/visualstudio/ide/reference/generate-xml-documentation-comments)に関するページを参照してください。 [`<TargetType:Module>`](#targettype) でコンパイルしない限り、`file` には `<assembly>` タグと `</assembly>` タグが追加されます。これにより、出力ファイルのアセンブリ マニフェストを含むファイルの名前が指定されます。 例については、「[XML ドキュメント機能を使用する方法](../../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)」を参照してください。
 
 > [!NOTE]
-> **DocumentationFile** オプションは、プロジェクト内のすべてのファイルに適用されます。 特定のファイルまたはコードの特定のセクションについて、ドキュメントのコメントに関する警告を無効にするには、[#pragma warning](../preprocessor-directives/preprocessor-pragma-warning.md) を使用します。
+> **DocumentationFile** オプションは、プロジェクト内のすべてのファイルに適用されます。 特定のファイルまたはコードの特定のセクションについて、ドキュメントのコメントに関する警告を無効にするには、[#pragma warning](../preprocessor-directives.md#pragma-warning) を使用します。
 
 ## <a name="outputassembly"></a>OutputAssembly
 
@@ -144,6 +144,6 @@ exe を [フレンド アセンブリ](../../../standard/assembly/friend.md)の�
 
 ### <a name="appcontainerexe"></a>appcontainerexe
 
-**appcontainerexe** コンパイラ オプションを使用すると、アプリケーション コンテナーで実行する必要のある Windows 実行可能ファイル ( *.exe*) がコンパイラによって作成されます。 このオプションは [-target:winexe](./target-winexe-compiler-option.md) に相当しますが、Windows 8.x Store アプリ用に設計されています。
+**appcontainerexe** コンパイラ オプションを使用すると、アプリケーション コンテナーで実行する必要のある Windows 実行可能ファイル ( *.exe*) がコンパイラによって作成されます。 このオプションは [-target:winexe](output.md) に相当しますが、Windows 8.x Store アプリ用に設計されています。
 
 アプリケーション コンテナーでのアプリケーションの実行を要求するために、このオプションは、[Portable Executable](/windows/desktop/Debug/pe-format) (PE) ファイルでビットを設定します。 このビットが設定されている場合、CreateProcess メソッドがアプリケーション コンテナー外の実行可能ファイルを起動しようとすると、エラーが発生します。 [**OutputAssembly**](#outputassembly) オプションを使用しない限り、出力ファイル名は [`Main`](../../programming-guide/main-and-command-args/index.md) メソッドを含む入力ファイルと同じになります。

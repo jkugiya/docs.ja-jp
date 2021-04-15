@@ -3,12 +3,12 @@ title: 移行するプロジェクトの順序を確認する
 description: 通常、大規模なアプリは新しいプラットフォームにすべて一度に移行されるのではなく、一連の小規模なステップに分けて移行されます。 ASP.NET MVC アプリを ASP.NET Core に移行するためのステップを計画する方法について説明します。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 452898da5839f8979a5e4f9ebf5d4c21b250e1fa
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 34bcfbf4ea3941329419ba64253a2177247df7b8
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401379"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122912"
 ---
 # <a name="identify-sequence-of-projects-to-migrate"></a>移行するプロジェクトの順序を確認する
 
@@ -61,8 +61,8 @@ MSTest、xUnit、NUnit はすべて .NET Core で動作します。 現在、ア
 
 - サードパーティの NuGet の依存関係を移行する
 - 新しい *.csproj* ファイル形式を使用するようにアプリを移行する
-- (.NET Framework をターゲットとする) ASP.NET Core にアプリを移行する
 - 内部の NuGet 依存関係を .NET Standard に更新する
+- (.NET Framework をターゲットとする) ASP.NET Core にアプリを移行する
 - すべてのアプリを .NET Core 3.1 をターゲットにするように更新する
 
 大規模なアプリのスイートを自動化するときは、それらが一貫したコーディング ガイドラインとプロジェクト編成に従っていると非常に役立ちます。 自動化の作業を効率化できるかどうかは、この一貫性にかかっています。 プロジェクト ファイルの解析と移行に加えて、一般的なコード パターンも自動的に移行できます。 一部のコード パターンの例では、コントローラー アクションの宣言方法やそれらが結果を返す方法に違いがあります。
@@ -91,7 +91,7 @@ ASP.NET Core では、上記の行のどちらも以下で置き換えること�
 
 .NET Portability Analyzer を使用して、既存のライブラリとターゲット プラットフォームの互換性の状況を調べることができます。 自動テストを使用すると、アプリの移植時に破壊的変更が行われていないことを確認するのに役立ちます。 このようなテスト プロジェクトは、最初に移植すべきプロジェクトの 1 つです。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [.NET Framework から .NET Core への移植](../../core/porting/index.md)
 - [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)

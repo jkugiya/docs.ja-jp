@@ -3,12 +3,12 @@ title: ASP.NET MVC と ASP.NET Core の構成の相違点
 description: 構成値の格納と読み取りの方法は、ASP.NET と ASP.NET Core の間で大きく変わりました。 ここでは、その詳細および ASP.NET から ASP.NET Core に構成を移行する方法について説明します。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 1e8e4d4ac408862f0216a5744476047186222304
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d721c028b1e760a6227855451e2194d9e471a58
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401395"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122951"
 ---
 # <a name="configuration-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC と ASP.NET Core の構成の相違点
 
@@ -59,7 +59,7 @@ public class TestModel : PageModel
 
 **図 2-2** `IConfiguration` を使用した構成値へのアクセス。
 
-オプション パターンを使用した設定へのアクセスも同様ですが、図 2-3 に示すように、厳密に型指定されており、使用するクラスで必要な設定に固有のものです。
+[オプション パターン](/dotnet/core/extensions/options)を使用した設定へのアクセスも同様ですが、図 2-3 に示すように、厳密に型指定されており、使用するクラスで必要な設定に固有のものです。
 
 ```csharp
 public class PositionOptions
@@ -97,13 +97,13 @@ services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Pos
 
 ## <a name="migrate-configuration"></a>構成の移行
 
-アプリの構成設定を .NET Framework から .NET Core に移植する方法を検討する場合は、最初の手順として、使用されているすべての構成設定を特定します。 これらのほとんどは、アプリのルート フォルダーにある *web.config* ファイルに含まれていますが、一部のアプリでは共有ファイル *machine.config* にも設定が含まれている場合があります。
+アプリの構成設定を .NET Framework から .NET Core に移植する方法を検討する場合は、最初の手順として、使用されているすべての構成設定を特定します。 これらのほとんどは、アプリのルート フォルダーにある *web.config* ファイルに含まれていますが、一部のアプリでは共有ファイル *machine.config* にも設定が含まれている場合があります。 これらの設定には、`appSettings` 要素の要素、`connectionStrings` 要素、および任意のカスタム構成要素も含まれます。 .NET Core では、これらのすべての設定は通常 *appsettings.js* ファイルに格納されます。
 
 構成ファイル内のすべての設定がカタログ化されたら、次の手順では、アプリ自体で設定を使用する場所と方法を特定します。 一部の設定が使用されていない場合は、移行から除外される可能性があります。 コードの移行時に設定の漏れが発生しないように、それぞれの設定が使用されているすべての場所に注意してください。
 
 ASP.NET アプリを引き続き維持する場合は、`ConfigurationManager` への静的参照を回避し、それらをインターフェイスを使用したアクセスに置き換えると役立つ可能性があります。 これにより、ASP.NET Core の構成システムへの移行が容易になります。 一般に、外部リソースへの静的アクセスでは、コードのテストと保守が困難になります。そのため、アプリがこのパターンに従っている可能性のある他の場所に注意してください。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [ASP.NET Core での構成](/aspnet/core/fundamentals/configuration/)
 - [ASP.NET Core のオプション パターン](/aspnet/core/fundamentals/configuration/options)

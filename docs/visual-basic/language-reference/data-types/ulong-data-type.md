@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 5e47fc49e8e0a6df4d1fcc70174a8519752fd3e1
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 107100b4992be75dab574cbf274b53f506e267f3
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104823"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494598"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong データ型 (Visual Basic)
 
@@ -70,8 +70,6 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 - **CLS 準拠。** `ULong` データ型は[共通言語仕様](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) に含まれないため、CLS に準拠しているコードではそれを使用するコンポーネントを使用できません。
 
 - **相互運用の考慮事項。** オートメーション オブジェクトや COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントとやり取りする場合、`ulong` などの型は、他の環境ではデータ幅 (32 ビット) が異なる可能性があることに注意してください。 そのようなコンポーネントに 32 ビットの引数を渡す場合は、Visual Basic のマネージド コードで、`ULong` ではなく `UInteger` として宣言します。
-
-  さらに、オートメーションでは、Windows 95、Windows 98、Windows ME、または Windows 2000 での 64 ビットの整数はサポートされません。 これらのプラットフォームのオートメーション コンポーネントに Visual Basic の `ULong` 引数を渡すことはできません。
 
 - **拡大変換。** `ULong` データ型は、`Decimal`、`Single`、および `Double` に拡大変換されます。 これは、<xref:System.OverflowException?displayProperty=nameWithType> エラーを発生させることなく、これらの型のいずれかに `ULong` を変換できることを意味します。
 

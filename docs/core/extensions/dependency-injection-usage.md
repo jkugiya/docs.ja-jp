@@ -3,19 +3,19 @@ title: .NET で依存関係の挿入を使用する
 description: .NET アプリケーションで依存関係の挿入を使用する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 11/13/2020
+ms.date: 04/12/2021
 ms.topic: tutorial
 no-loc:
 - Transient
 - Scoped
 - Singleton
 - Example
-ms.openlocfilehash: d6654d5d1c8f7959e96998c18a1790cce46ebf41
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 03828496dfa3487ad70fac8cf32ff81844eca6fd
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102402160"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494273"
 ---
 # <a name="tutorial-use-dependency-injection-in-net"></a>チュートリアル: .NET で依存関係の挿入を使用する
 
@@ -89,10 +89,10 @@ ms.locfileid: "102402160"
 
 :::code language="csharp" source="snippets/configuration/console-di/Program.cs" range="1-18,35-60" highlight="22-26":::
 
-> 各 `services.Add{SERVICE_NAME}` 拡張メソッドによって、サービスが追加、場合によっては構成されます。 アプリをこの規則に従わせることをお勧めします。 拡張メソッドを <xref:Microsoft.Extensions.DependencyInjection?displayProperty=fullName> 名前空間に配置して、サービス登録のグループをカプセル化します。 DI 拡張メソッド用の名前空間部分として `Microsoft.Extensions.DependencyInjection` を含めると、次のようになります。
->
-> - `using` ブロックを追加しなくても、それらを [IntelliSense](/visualstudio/ide/using-intellisense) で表示することができます。
-> - それらの拡張メソッドの通常の呼び出し元である `Program` または `Startup` クラス内で `using` ステートメントが過剰になることはありません。
+各 `services.Add{SERVICE_NAME}` 拡張メソッドは、サービスを追加 (および場合によっては構成) します。 アプリをこの規則に従わせることをお勧めします。 拡張メソッドを <xref:Microsoft.Extensions.DependencyInjection?displayProperty=fullName> 名前空間に配置して、サービス登録のグループをカプセル化します。 DI 拡張メソッド用の名前空間部分として `Microsoft.Extensions.DependencyInjection` を含めると、次のようになります。
+
+- `using` ブロックを追加しなくても、それらを [IntelliSense](/visualstudio/ide/using-intellisense) で表示することができます。
+- それらの拡張メソッドの通常の呼び出し元である `Program` または `Startup` クラス内で `using` ステートメントが過剰になることはありません。
 
 このアプリによって次のことが行われます。
 

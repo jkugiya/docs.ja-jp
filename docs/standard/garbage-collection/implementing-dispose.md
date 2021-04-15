@@ -1,7 +1,7 @@
 ---
 title: Dispose メソッドの実装
 description: この記事では、.NET のコードで使用されるアンマネージド リソースを解放する Dispose メソッドを実装する方法について説明します。
-ms.date: 09/08/2020
+ms.date: 04/07/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: ec731ff4c1020100c2b7ff5041d42291141a5209
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: f14c4979024209fb7e5e6364f0627f4e796799c5
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982408"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107260528"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose メソッドの実装
 
@@ -25,6 +25,8 @@ ms.locfileid: "94982408"
 <xref:System.IDisposable.Dispose%2A> メソッドをべき等にする (複数回呼び出し可能など) 必要がある場合でも、例外をスローすることなく呼び出されるようにして、リソースが常に適切にクリーンアップされるようにする必要があります。 さらに、後続の <xref:System.IDisposable.Dispose%2A> の呼び出しでは、何も行ってはなりません。
 
 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> メソッドに関して提供されたコード例では、オブジェクトまたはそのメンバーへのアンマネージ参照がまだ使用中であるにも関わらず、ガベージ コレクションによりファイナライザーがどのように実行される可能性があるのかを示しています。 現在のルーチンの開始時点からこのメソッドが呼び出される時点まで、<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> を利用してそのオブジェクトをガベージ コレクションの対象から外すことは理にかなっていると考えられます。
+
+[!INCLUDE [disposables-and-dependency-injection](includes/disposables-and-dependency-injection.md)]
 
 ## <a name="safe-handles"></a>セーフ ハンドル
 
@@ -150,6 +152,7 @@ ms.locfileid: "94982408"
 
 ## <a name="see-also"></a>関連項目
 
+- [サービスの破棄](../../core/extensions/dependency-injection-guidelines.md#disposal-of-services)
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>
 - <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>

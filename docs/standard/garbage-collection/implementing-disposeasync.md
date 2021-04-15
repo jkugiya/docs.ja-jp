@@ -3,24 +3,26 @@ title: DisposeAsync メソッドの実装
 description: DisposeAsync メソッドと DisposeAsyncCore メソッドを実装し、非同期リソース クリーンアップを実行する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 03/17/2021
+ms.date: 04/07/2021
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: a177e80c5204a79a372cb79609f458bf6fa3bde1
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 777036b83cd217418994e3cbc31958d13d5c3268
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652660"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107260509"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync メソッドの実装
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType> インターフェイスが、C# 8.0 の一部として導入されました。 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> メソッドは、[Dispose メソッドの実装](implementing-dispose.md)と同様、リソースのクリーンアップを実行する必要がある場合に実装します。 両者の重要な違いの 1 つは、この実装により、非同期のクリーンアップ操作が可能になることです。 <xref:System.IAsyncDisposable.DisposeAsync> は、非同期の破棄操作を表す <xref:System.Threading.Tasks.ValueTask> を返します。
 
 通常、<xref:System.IAsyncDisposable> インターフェイスを実装するとき、そのクラスでは <xref:System.IDisposable> インターフェイスも実装します。 <xref:System.IAsyncDisposable> インターフェイスの推奨される実装パターンは、同期の破棄か非同期の破棄のために準備をすることです。 破棄パターンの実装に関するガイダンスのすべての説明は、非同期の実装にも適用されます。 この記事では、読者が [Dispose メソッドの実装](implementing-dispose.md)方法について既に理解していることを前提としています。
+
+[!INCLUDE [disposables-and-dependency-injection](includes/disposables-and-dependency-injection.md)]
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync() および DisposeAsyncCore()
 
@@ -134,6 +136,7 @@ public async ValueTask DisposeAsync()
 
 `IDisposable` と `IAsyncDisposable` を両方実装する例については、[GitHub](https://github.com/dotnet/runtime/blob/035b729d829368c2790d825bd02db14f0c0fd2ea/src/libraries/System.Text.Json/src/System/Text/Json/Writer/Utf8JsonWriter.cs#L297-L345) の <xref:System.Text.Json.Utf8JsonWriter> ソース コードに関する説明を参照してください。
 
+- [サービスの破棄](../../core/extensions/dependency-injection-guidelines.md#disposal-of-services)
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait(System.IAsyncDisposable,System.Boolean)>

@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorConfiguration:: Setg Stcontrol メソッド'
+description: '詳細情報: ICorConfiguration::SetGCHostControl メソッド'
 title: ICorConfiguration::SetGCHostControl メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,16 +18,16 @@ topic_type:
 - apiref
 ms.openlocfilehash: 4d3d6e5e5275adf02f9d693234a5c8e77714fd03
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636651"
 ---
-# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="54836-103">ICorConfiguration::SetGCHostControl メソッド</span><span class="sxs-lookup"><span data-stu-id="54836-103">ICorConfiguration::SetGCHostControl Method</span></span>
+# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="6468d-103">ICorConfiguration::SetGCHostControl メソッド</span><span class="sxs-lookup"><span data-stu-id="6468d-103">ICorConfiguration::SetGCHostControl Method</span></span>
 
-<span data-ttu-id="54836-104">仮想メモリの制限を変更するようにホストに要求するために、ガベージコレクターによって使用されるコールバックインターフェイスを設定します。</span><span class="sxs-lookup"><span data-stu-id="54836-104">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+<span data-ttu-id="6468d-104">仮想メモリの制限を変更するようにホストに要求するために、ガベージ コレクターによって使用されるコールバック インターフェイスを設定します。</span><span class="sxs-lookup"><span data-stu-id="6468d-104">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54836-105">構文</span><span class="sxs-lookup"><span data-stu-id="54836-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6468d-105">構文</span><span class="sxs-lookup"><span data-stu-id="6468d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetGCHostControl (  
@@ -35,21 +35,21 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54836-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="54836-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6468d-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6468d-106">Parameters</span></span>  
 
  `pGCHostControl`  
- <span data-ttu-id="54836-107">からガベージコレクターが仮想メモリの制限を変更するようにホストに要求できるようにする、 [igている Stcontrol](igchostcontrol-interface.md) オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="54836-107">[in] A pointer to an [IGCHostControl](igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+ <span data-ttu-id="6468d-107">仮想メモリの制限を変更するように、ガベージ コレクターからホストに要求ができるようにする [IGCHostControl](igchostcontrol-interface.md) オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6468d-107">[in] A pointer to an [IGCHostControl](igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54836-108">要件</span><span class="sxs-lookup"><span data-stu-id="54836-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6468d-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="6468d-108">Requirements</span></span>  
 
- <span data-ttu-id="54836-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="54836-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="6468d-109">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6468d-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54836-110">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="54836-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6468d-110">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6468d-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="54836-111">**ライブラリ:** MSCorEE.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="54836-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6468d-111">**ライブラリ:** MSCorEE.dll にリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="6468d-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="54836-112">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54836-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6468d-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6468d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54836-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="54836-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6468d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="6468d-113">See also</span></span>
 
-- [<span data-ttu-id="54836-114">ICorConfiguration インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54836-114">ICorConfiguration Interface</span></span>](icorconfiguration-interface.md)
+- [<span data-ttu-id="6468d-114">ICorConfiguration インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6468d-114">ICorConfiguration Interface</span></span>](icorconfiguration-interface.md)

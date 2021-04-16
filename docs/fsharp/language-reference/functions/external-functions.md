@@ -1,17 +1,17 @@
 ---
 title: 外部関数
-description: ネイティブ コードで関数を呼び出すための F# 言語サポートについて説明します。
+description: ネイティブ コードでの関数の呼び出しに関する F# 言語のサポートについて説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c8edaba25e07b6ca2c44a58c4b55dc98a13b4fc
 ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/22/2019
 ms.locfileid: "69968729"
 ---
 # <a name="external-functions"></a>外部関数
 
-このトピックでは、ネイティブ コードで関数を呼び出すための F# 言語サポートについて説明します。
+このトピックでは、ネイティブ コードでの関数の呼び出しに関する F# 言語のサポートについて説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -20,11 +20,11 @@ ms.locfileid: "69968729"
 extern declaration
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-前の構文では、*引数*は`System.Runtime.InteropServices.DllImportAttribute`属性に渡される引数を表します。 1つ目の引数は、この関数を含む DLL の名前を表す文字列です。 dll の拡張子はありません。 呼び出し規約など、 `System.Runtime.InteropServices.DllImportAttribute`クラスのパブリックプロパティに対して追加の引数を指定できます。
+前の構文では、*arguments* は `System.Runtime.InteropServices.DllImportAttribute` 属性に指定される引数を表します。 最初の引数は、この関数を含む DLL の名前を表す文字列です。 .dll の拡張子は含めません。 呼び出し規則など、`System.Runtime.InteropServices.DllImportAttribute` クラスの任意のパブリック プロパティに対して追加の引数を指定できます。
 
-次のエクスポート関数をC++含むネイティブ DLL があるとします。
+次のエクスポートされた関数を含むネイティブ C++ DLL があるとします。
 
 ```cpp
 #include <stdio.h>
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-次のコードを使用して F# からこの関数を呼び出すことができます。
+次のコードを使用して、F# からこの関数を呼び出すことができます。
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-ネイティブコードとの相互運用性は*プラットフォーム呼び出し*と呼ばれ、CLR の機能です。 詳細については、「[アンマネージ コードとの相互運用](../../../framework/interop/index.md)」を参照してください。 そのセクションの情報は、F# に適用されます。
+ネイティブ コードとの相互運用性は "*プラットフォーム呼び出し*" と呼ばれ、CLR の機能です。 詳細については、「[アンマネージ コードとの相互運用](../../../framework/interop/index.md)」を参照してください。 このセクションの情報は、F# に適用できます。
 
 ## <a name="see-also"></a>関連項目
 

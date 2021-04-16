@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: WindowsPrincipal オブジェクトを作成する」を参照してください。'
+description: '詳細情報: 方法: WindowsPrincipal オブジェクトを作成する'
 title: '方法: WindowsPrincipal プロジェクトを作成する'
 ms.date: 07/15/2020
 dev_langs:
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 ms.openlocfilehash: eee33eb419e8626b8b7f627b9ab1e46ea8dceab5
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685232"
@@ -21,9 +21,9 @@ ms.locfileid: "99685232"
 # <a name="how-to-create-a-windowsprincipal-object"></a>方法: WindowsPrincipal プロジェクトを作成する
 
 > [!NOTE]
-> この記事は、Windows に適用されます。
+> この記事は Windows に適用されます。
 >
-> ASP.NET Core の詳細については、「 [ASP.NET Core Security](/aspnet/core/security/)」を参照してください。
+> ASP.NET Core の詳細については、[ASP.NET Core のセキュリティ](/aspnet/core/security/)に関する記事を参照してください。
 
 コードが役割ベースの検証を繰り返し実行する必要があるか、1 回だけ実行する必要があるかによって、<xref:System.Security.Principal.WindowsPrincipal> オブジェクトを作成する方法は 2 つあります。  
   

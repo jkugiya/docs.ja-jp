@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b3555b34fa13ec1489164abcd59ecdaf96e7bdf7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96593892"
 ---
 > [!TIP]
-> Gpio ヘッダーへの接続を合理化するには、ブレッドボードと組み合わせた GPIO ブレイクボードボードを使用することをお勧めします。
+> GPIO ヘッダーへの接続を効率化するには、ブレッドボードと組み合わせた GPIO ブレークアウト ボードを使用することをお勧めします。

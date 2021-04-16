@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: 対称キーを使用して XML 要素を暗号化する」を参照してください。'
+description: '詳細情報: 方法: 対称キーで XML 要素を暗号化する'
 title: '方法: 共通キーで XML 要素を暗号化する'
 ms.date: 07/14/2020
 dev_langs:
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 ms.openlocfilehash: 137e1592a73ff9eb25fd6a5ba29b92c839f44575
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685115"
@@ -26,7 +26,7 @@ ms.locfileid: "99685115"
 
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズムを使用して XML 要素を暗号化します。  
   
- この手順で暗号化された XML 要素を復号化する方法については、「 [方法: 対称キーを使用して Xml 要素を復号化](how-to-decrypt-xml-elements-with-symmetric-keys.md)する」を参照してください。  
+ この手順を使用して暗号化された XML 要素を復号化する方法については、「[方法: 対称キーで XML 要素を復号化する](how-to-decrypt-xml-elements-with-symmetric-keys.md)」を参照してください。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して復号化されること、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "99685115"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
-- .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
+- .NET Framework を対象とするプロジェクトでは、`System.Security.dll` への参照を含めます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml) をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "99685115"
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化モデル](cryptography-model.md) -基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [暗号化モデル](cryptography-model.md) - 基底クラス ライブラリに暗号化がどのように実装されているかについて説明します。
 - [Cryptographic Services](cryptographic-services.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [方法: 共通キーで XML 要素を復号化する](how-to-decrypt-xml-elements-with-symmetric-keys.md)
-- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
+- [ASP.NET Core データ保護](/aspnet/core/security/data-protection/introduction)

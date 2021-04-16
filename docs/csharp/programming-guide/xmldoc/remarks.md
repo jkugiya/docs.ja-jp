@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: d38905d100e24158e7a1412f6be9f01a7ced2382
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 2227dd8bd4d81f5fda8cf529e18c7a613cca6b8e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381503"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477827"
 ---
 # <a name="remarks-c-programming-guide"></a>\<remarks> (C# プログラミング ガイド)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87381503"
 
 `<remarks>` タグを使用して、型の情報を追加し、[\<summary>](./summary.md) で指定された情報を補足します。 この情報はオブジェクト ブラウザー ウィンドウに表示されます。
 
-コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
+コンパイル時に [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) を指定して、ドキュメント コメントをファイルに出力します。
 
 ## <a name="example"></a>例
 

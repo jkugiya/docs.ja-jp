@@ -1,6 +1,6 @@
 ---
 title: 式形式のメンバー
-description: 式形式のメンバーのコード分析言語規則について説明します
+description: 式形式のメンバーのコード分析言語規則について
 ms.date: 09/30/2020
 ms.topic: reference
 author: gewarren
@@ -9,10 +9,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: efffad48dc36a58da45ea1520cff6202f6e66333
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96593898"
 ---
 # <a name="expression-bodied-members"></a>式形式のメンバー
@@ -27,10 +27,10 @@ ms.locfileid: "96593898"
 - [プロパティに式本体を使用する (IDE0025)](ide0025.md)
 - [インデクサーに式本体を使用する (IDE0026)](ide0026.md)
 - [アクセサーに式本体を使用する (IDE0027)](ide0027.md)
-- [ラムダ exressions に式本体を使用する (IDE0053)](ide0053.md)
+- [ラムダ式に式本体を使用する (IDE0053)](ide0053.md)
 - [ローカル関数に式本体を使用する (IDE0061)](ide0061.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [コードスタイル規則のリファレンス](index.md)
-- [コードスタイルの言語規則](language-rules.md)
+- [コード スタイルの規則のリファレンス](index.md)
+- [コード スタイルの言語規則](language-rules.md)

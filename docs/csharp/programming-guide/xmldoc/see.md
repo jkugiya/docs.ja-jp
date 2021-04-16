@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1cc4982d1ebe9d6896404218a6d200b10cc6503f
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 154feca5e7e4f4d3f5313c4ae05cd991e69e298f
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381932"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477771"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# プログラミング ガイド)
 
@@ -30,13 +30,13 @@ ms.locfileid: "87381932"
 
 - cref = "`member`"
 
-  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。 *メンバー*は二重引用符 (" ") で囲む必要があります。
+  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。 *メンバー* は二重引用符 (" ") で囲む必要があります。
 
 ## <a name="remarks"></a>Remarks
 
 `<see>` タグを使用すると、テキスト内からリンクを指定できます。 テキストが「関連項目」セクションに配置されていることを示すには、[\<seealso>](./seealso.md) を使用します。 コード要素のドキュメント ページへの内部ハイパーリンクを作成するには、[cref 属性](./cref-attribute.md)を使用します。 また、``href`` はハイパーリンクとして機能する有効な属性です。
 
-コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
+コンパイル時に [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) を指定して、ドキュメント コメントをファイルに出力します。
 
 次の例では、「概要」セクション内の `<see>` タグを示しています。
 

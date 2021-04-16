@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 0ab30eb238a4db21233da612d132dfcbdb9e8895
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0121090265881bfa8287e2f9e83ad4b886bf17c1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160516"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477484"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked と Unchecked (C# リファレンス)
 
@@ -33,7 +33,7 @@ C# のステートメントは、checked または unchecked のいずれかの�
   
 - 整数型間か、`float` または `double` から整数型へのの明示的な数値変換。  
   
- `checked` と `unchecked` のいずれも指定されない場合、非定数式 (実行時に評価される式) の既定のコンテキストが [-checked](../compiler-options/checked-compiler-option.md) コンパイラ オプションの値によって定義されます。 既定では、そのオプションの値の設定が解除され、算術演算が unchecked コンテキストで実行されます。
+ `checked` と `unchecked` のいずれも指定されない場合、非定数式 (実行時に評価される式) の既定のコンテキストは [**CheckForOverflowUnderflow**](../compiler-options/language.md#checkforoverflowunderflow) コンパイラ オプションの値によって定義されます。 既定では、そのオプションの値の設定が解除され、算術演算が unchecked コンテキストで実行されます。
 
  定数式 (コンパイル時に完全に評価される式) の場合、既定のコンテキストは常に確認されます。 定数式が unchecked コンテキストに明示的に配置されていない限り、式のコンパイル時の評価中に発生するオーバーフローによってコンパイル時エラーが発生します。
   

@@ -1,6 +1,6 @@
 ---
-title: コードスタイルの言語規則
-description: C# および Visual Basic 言語構成要素を使用するためのさまざまなコードスタイル規則について説明します。
+title: コード スタイルの言語規則
+description: C# および Visual Basic 言語コンストラクトの使用に関するさまざまなコード スタイルの規則について説明します。
 ms.date: 09/25/2020
 ms.topic: reference
 author: gewarren
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - language rules
 - EditorConfig language conventions
 ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98957976"
 ---
 # <a name="language-rules"></a>言語規則
 
-コードスタイルの言語規則は、.NET プログラミング言語のさまざまな構造 (修飾子やかっこなど) が使用される方法に影響します。 規則は次のカテゴリに分類されます。
+コードスタイルの言語規則は、.NET プログラミング言語のさまざまなコンストラクト (修飾子、かっこなど) の使用方法に影響します。 この規則は次のカテゴリに分けられます。
 
-- [.Net スタイルルール](#net-style-rules): C# と Visual Basic の両方に適用される規則。 これらの規則の EditorConfig オプション名は、 `dotnet_style_` prefix で始まります。
-- [C# スタイルルール](#c-style-rules): c# 言語に固有の規則。 これらの規則の EditorConfig オプション名は、 `csharp_style_` prefix で始まります。
-- [Visual Basic スタイルルール](#visual-basic-style-rules): Visual bsic 言語のみに固有の規則。 これらの規則の EditorConfig オプション名は、 `visual_basic_style_` prefix で始まります。
+- [.NET スタイル規則](#net-style-rules): C# と Visual Basic の両方に適用される規則。 これらの規則の EditorConfig オプション名は `dotnet_style_` プレフィックスで始まります。
+- [C# スタイル規則](#c-style-rules): C# 言語のみに固有の規則。 これらの規則の EditorConfig オプション名は `csharp_style_` プレフィックスで始まります。
+- [Visual Basic スタイル規則](#visual-basic-style-rules): Visual Basic 言語のみに固有の規則。 これらの規則の EditorConfig オプション名は `visual_basic_style_` プレフィックスで始まります。
 
-## <a name="option-format"></a>オプションの形式
+## <a name="option-format"></a>オプションの書式
 
-言語ルールのオプションは、次の形式で EditorConfig ファイルで指定できます。
+言語規則のオプションは、EditorConfig ファイルで、次の形式で指定できます。
 
-`option_name = value` (Visual Studio 2019 バージョン 16.9 Preview 2 以降)
+`option_name = value` (Visual Studio 2019 バージョン 16.9 プレビュー 2 以降)
 
 または
 
@@ -39,23 +39,23 @@ ms.locfileid: "98957976"
 
 - **Value**
 
-  言語ルールごとに、スタイルを優先するかどうかを定義する値を指定します。 多くのルールでは、`true` (このスタイルを優先する) または `false` (このスタイルを優先しない) の値が受け付けられます。 それ以外では、`when_on_single_line` や `never` などの値が受け付けられます。
+  各言語規則では、そのスタイルを優先する場合や状況を指定します。 多くのルールでは、`true` (このスタイルを優先する) または `false` (このスタイルを優先しない) の値が受け付けられます。 それ以外では、`when_on_single_line` や `never` などの値が受け付けられます。
 
-- **重要度** (Visual Studio 2019 バージョン 16.9 Preview 2 以降のバージョンでは省略可能)
+- **Severity** (Visual Studio 2019 バージョン 16.9 プレビュー 2 以降のバージョンでは省略可能)
 
-  ルールの2番目の部分では、ルールの [重大度レベル](../configuration-options.md#severity-level) を指定します。 この方法で指定した場合、重要度の設定は、Visual Studio などの開発 Ide 内でのみ尊重されます。 ビルド時には尊重され *ません* 。
+  規則の 2 番目の部分では、規則の[重大度レベル](../configuration-options.md#severity-level)を指定します。 この方法で指定した場合、重大度の設定は、Visual Studio などの開発 IDE 内でのみ遵守されます。 ビルド時には遵守 *されません*。
 
-  ビルド時にコードスタイル規則を適用するには、代わりにアナライザーの規則 ID ベースの重要度構成構文を使用して重大度を設定します。 この構文では `dotnet_diagnostic.<rule ID>.severity = <severity>` 形式が使用されます。たとえば、`dotnet_diagnostic.IDE0040.severity = silent` のようになります。 詳細については、「 [重大度レベル](../configuration-options.md#severity-level)」を参照してください。
+  ビルド時にコード スタイルの規則を適用するには、代わりにアナライザーに対して規則 ID ベースの重大度構成構文を使用して重大度を設定します。 この構文では `dotnet_diagnostic.<rule ID>.severity = <severity>` 形式が使用されます。たとえば、`dotnet_diagnostic.IDE0040.severity = silent` のようになります。 詳細については、「[重大度レベル](../configuration-options.md#severity-level)」を参照してください。
 
 > [!TIP]
 >
-> Visual Studio 2019 バージョン 16.3 以降、スタイル違反後、[[クイック アクション]](/visualstudio/ide/quick-actions) という電球メニューからコード スタイルの規則を構成できます。 詳細については、「 [Visual Studio でコードスタイルを自動的に構成する](/visualstudio/ide/editorconfig-language-conventions#automatically-configure-code-styles-in-visual-studio)」を参照してください。
+> Visual Studio 2019 バージョン 16.3 以降、スタイル違反後、[[クイック アクション]](/visualstudio/ide/quick-actions) という電球メニューからコード スタイルの規則を構成できます。 詳細については、[Visual Studio でのコード スタイルの自動的な構成](/visualstudio/ide/editorconfig-language-conventions#automatically-configure-code-styles-in-visual-studio)に関するページを参照してください。
 
-## <a name="net-style-rules"></a>.NET スタイルルール
+## <a name="net-style-rules"></a>.NET スタイル規則
 
 このセクションのスタイル ルールは、C# および Visual Basic の両方に適用されます。
 
-- [' this. ' 修飾子と ' Me. ' 修飾子](ide0003-ide0009.md)
+- ['this.' と 'Me.' 修飾子](ide0003-ide0009.md)
   - [dotnet_style_qualification_for_field](ide0003-ide0009.md#dotnet_style_qualification_for_field)
   - [dotnet_style_qualification_for_property](ide0003-ide0009.md#dotnet_style_qualification_for_property)
   - [dotnet_style_qualification_for_method](ide0003-ide0009.md#dotnet_style_qualification_for_method)
@@ -85,10 +85,10 @@ ms.locfileid: "98957976"
   - [dotnet_style_prefer_compound_assignment](ide0054-ide0074.md#dotnet_style_prefer_compound_assignment)
   - [dotnet_style_prefer_simplified_interpolation](ide0071.md#dotnet_style_prefer_simplified_interpolation)
   - [dotnet_style_prefer_simplified_boolean_expressions](ide0075.md#dotnet_style_prefer_simplified_boolean_expressions)
-  - [見つからないケースを switch ステートメントに追加](ide0010.md) します-このルールにはコードスタイルオプションがありません。
-  - [匿名型からタプルへの変換](ide0050.md) -このルールにはコードスタイルオプションがありません。
-  - [' ハッシュコード ' を使用](ide0070.md) してください-このルールにはコードスタイルオプションがありません。
-  - [' Typeof ' を ' 文字列型 ' に変換](ide0082.md) します。このルールにはコードスタイルオプションがありません。
+  - [不足しているケースを switch ステートメントに追加する](ide0010.md) - この規則にはコード スタイル オプションがありません。
+  - [匿名型からタプルへの変換](ide0050.md) -この規則にはコード スタイル オプションがありません。
+  - ['System.Hashcode.Combine' を使用します](ide0070.md) - この規則にはコード スタイル オプションがありません。
+  - ['typeof' を 'nameof' に変換](ide0082.md) - この規則にはコード スタイル オプションがありません。
 - ["Null" 検査設定](null-checking-preferences.md#net-null-checking-preferences)
   - [dotnet_style_coalesce_expression](ide0029-ide0030.md#dotnet_style_coalesce_expression)
   - [dotnet_style_null_propagation](ide0031.md#dotnet_style_null_propagation)
@@ -98,9 +98,9 @@ ms.locfileid: "98957976"
 
 ## <a name="c-style-rules"></a>C# スタイル規則
 
-このセクションのスタイルルールは、C# 言語にのみ適用されます。
+このセクションのスタイル規則は、C# 言語のみに適用されます。
 
-- [' var ' の設定](ide0007-ide0008.md)
+- ['var' の基本設定](ide0007-ide0008.md)
   - [csharp_style_var_for_built_in_types](ide0007-ide0008.md#csharp_style_var_for_built_in_types)
   - [csharp_style_var_when_type_is_apparent](ide0007-ide0008.md#csharp_style_var_when_type_is_apparent)
   - [csharp_style_var_elsewhere](ide0007-ide0008.md#csharp_style_var_elsewhere)
@@ -127,22 +127,22 @@ ms.locfileid: "98957976"
   - [csharp_style_prefer_index_operator](ide0056.md#csharp_style_prefer_index_operator)
   - [csharp_style_prefer_range_operator](ide0057.md#csharp_style_prefer_range_operator)
   - [csharp_style_implicit_object_creation_when_type_is_apparent](ide0090.md#csharp_style_implicit_object_creation_when_type_is_apparent)
-  - [不足しているケースを追加して式を切り替え](ide0072.md) ます-このルールにはコードスタイルオプションがありません。
+  - [不足しているケースを switch 式に追加する](ide0072.md) - この規則にはコード スタイル オプションがありません。
 - ["null" チェック設定](null-checking-preferences.md#c-null-checking-preferences)
   - [csharp_style_throw_expression](ide0016.md#csharp_style_throw_expression)
   - [csharp_style_conditional_delegate_call](ide1005.md#csharp_style_conditional_delegate_call)
 - [コード ブロック基本設定](code-block-preferences.md)
   - [csharp_prefer_braces](ide0011.md#csharp_prefer_braces)
   - [csharp_prefer_simple_using_statement](ide0063.md#csharp_prefer_simple_using_statement)
-- [' using ' ディレクティブの基本設定](ide0065.md)
+- [using ディレクティブの基本設定](ide0065.md)
   - [csharp_using_directive_placement](ide0065.md#csharp_using_directive_placement)
 - [修飾子の基本設定](modifier-preferences.md#c-modifier-preferences)
   - [csharp_prefer_static_local_function](ide0062.md#csharp_prefer_static_local_function)
-  - [構造体のフィールドを書き込み可能](ide0064.md) にします。この規則にはコードスタイルオプションがありません。
+  - [構造体フィールドを書き込み可能にする](ide0064.md) - この規則にはコード スタイル オプションがありません。
 
-## <a name="visual-basic-style-rules"></a>Visual Basic スタイルルール
+## <a name="visual-basic-style-rules"></a>Visual Basic のスタイル規則
 
-このセクションのスタイルルールは Visual Basic 言語にのみ適用されます。
+このセクションのスタイル規則は、Visual Basic 言語のみに適用されます。
 
 - [パターン マッチング設定](pattern-matching-preferences.md)
   - [visual_basic_style_prefer_isnot_expression](ide0084.md#visual_basic_style_prefer_isnot_expression)
@@ -152,4 +152,4 @@ ms.locfileid: "98957976"
 - [不要なコード規則](unnecessary-code-rules.md)
 - [書式設定規則](formatting-rules.md)
 - [名前付け規則](naming-rules.md)
-- [.NET コードスタイル規則のリファレンス](index.md)
+- [.NET コード スタイルの規則のリファレンス](index.md)

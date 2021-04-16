@@ -1,17 +1,17 @@
 ---
-title: 例外:try...finally 式
-description: 学習方法、F# 'try… 最後に' 式では、コードのブロックが例外をスローする場合でも、クリーンアップ コードを実行することができます。
+title: '例外: try...finally 式'
+description: F# の 'try...finally' 式を使用して、コードのブロックで例外がスローされた場合でもクリーンアップ コードを実行できるようにする方法を説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddb64ac13b307404864ec5b54f26fd8a7a3d7d8
 ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71083004"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>例外:try...finally 式
+# <a name="exceptions-the-tryfinally-expression"></a>例外: try...finally 式
 
-`try...finally`式を使用すると、コードのブロックで例外がスローされた場合でもクリーンアップコードを実行できます。
+`try...finally` 式を使用すると、コードのブロックで例外がスローされた場合でもクリーンアップ コードを実行できます。
 
 ## <a name="syntax"></a>構文
 
@@ -22,13 +22,13 @@ finally
     expression2
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-式は、 *expression1*の実行中に例外が生成されたかどうかに関係なく、前の構文で expression2 のコードを実行するために使用できます。 `try...finally`
+`try...finally` 式を使用すると、上記の構文で *expression1* の実行中に例外が生成されたかどうかに関係なく、*expression2* のコードを実行することができます。
 
-*Expression2*の型は、式全体の値には影響しません。例外が発生しないときに返される型は、 *expression1*の最後の値です。 例外が発生した場合、値は返されず、制御のフローは、コールスタックの上位にある次の一致する例外ハンドラーに転送されます。 例外ハンドラーが見つからない場合、プログラムは終了します。 一致するハンドラー内のコードが実行されるか、プログラムが終了する前に`finally` 、分岐内のコードが実行されます。
+*expression2* の型は、式全体の値には影響しません。例外が発生しなかったときに返される型は、*expression1* の最後の値です。 例外が発生した場合、値は返されず、制御のフローは、コール スタックの上位にある次の一致する例外ハンドラーに移ります。 例外ハンドラーが見つからない場合、プログラムは終了します。 一致するハンドラー内のコードが実行される前、またはプログラムが終了する前に、`finally` 分岐内のコードが実行されます。
 
-次のコードは、 `try...finally`式の使用方法を示しています。
+`try...finally` 式を使用したコードの例を次に示します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
@@ -39,15 +39,15 @@ Closing stream
 Exception handled.
 ```
 
-出力からわかるように、外側の例外が処理される前にストリームが閉じられてい`test.txt`ます。また`test1`、ファイルには、例外が転送されたにもかかわらず、バッファーがフラッシュされ、ディスクに書き込まれたことを示すテキストが含まれています。外側の例外ハンドラーに制御します。
+出力からわかるように、外側の例外が処理される前にストリームが閉じられています。また、ファイル `test.txt` にテキスト `test1` が含まれているということは、例外によって制御が外側の例外ハンドラーに移ったにもかかわらず、バッファーがフラッシュされてディスクに書き込まれたことを示しています。
 
-コンストラクトは、 `try...with` `try...finally`コンストラクトとは別のコンストラクトであることに注意してください。 したがって、コードに`with`ブロック`finally`とブロックの両方が必要な場合は、次のコード例に示すように、2つの構造体を入れ子にする必要があります。
+`try...with` コンストラクトは、`try...finally` コンストラクトとは別のコンストラクトであることにご注意ください。 したがって、コードに `with` ブロックと `finally` ブロックの両方が必要な場合は、次のコード例に示すように、2 つのコンストラクトを入れ子にする必要があります。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-シーケンス式と非同期ワークフローを含むコンピュテーション式のコンテキストでは、.. **.最後**の式には、カスタム実装を含めることができます。 詳細については、「[コンピュテーション式](../computation-expressions.md)」を参照してください。
+コンピュテーション式のコンテキスト (シーケンス式と非同期ワークフローを含む) では、**try...finally** 式にカスタム実装を含めることができます。 詳細については、「[コンピュテーション式](../computation-expressions.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [例外処理](index.md)
-- [例外: `try...with`式](the-try-with-expression.md)
+- [例外: `try...with` 式](the-try-with-expression.md)

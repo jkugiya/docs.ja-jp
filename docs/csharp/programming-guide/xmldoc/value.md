@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: d8294b477d7067653c71d1ec2047a85a0bfe6d02
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: c910a60a50e95621c1e3ad773000cbac0d43bb10
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380775"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477645"
 ---
 # <a name="value-c-programming-guide"></a>\<value> (C# プログラミング ガイド)
 
@@ -33,7 +33,7 @@ ms.locfileid: "87380775"
 
 `<value>` タグを使用して、プロパティが表す値を記述することができます。 Visual Studio .NET 開発環境では、コード ウィザードを使用してプロパティを追加するときに、新しいプロパティの [\<summary>](./summary.md) タグが追加されます。 その後、手動で `<value>` タグを追加してプロパティが表す値を記述する必要があります。
 
-コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
+コンパイル時に [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) を指定して、ドキュメント コメントをファイルに出力します。
 
 ## <a name="example"></a>例
 

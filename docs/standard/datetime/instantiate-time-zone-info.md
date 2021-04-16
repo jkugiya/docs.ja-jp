@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: TimeZoneInfo オブジェクトをインスタンス化する」を参照してください。'
+description: '詳細情報: 方法: TimeZoneInfo オブジェクトをインスタンス化する'
 title: '方法: TimeZoneInfo オブジェクトをインスタンス化する'
 ms.date: 04/10/2017
 dev_langs:
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
 ms.openlocfilehash: d063833aa60142bf6f942a836c7f89777d9073a5
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99702614"
@@ -39,10 +39,10 @@ ms.locfileid: "99702614"
 
 タイム ゾーンが見つかると、メソッドは <xref:System.TimeZoneInfo> オブジェクトを返します。 タイム ゾーンが見つからない場合、メソッドから <xref:System.TimeZoneNotFoundException>がスローされます。 タイム ゾーンが見つかっても、そのデータが破損しているか不完全な場合には、メソッドから <xref:System.InvalidTimeZoneException>がスローされます。
 
-アプリケーションが依存するタイム ゾーンが必ず存在していなければならない場合は、最初に <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> メソッドを呼び出して、レジストリからタイム ゾーンの情報を取得する必要があります。 メソッドの呼び出しが失敗した場合は、例外ハンドラーで、タイム ゾーンの新しいインスタンスを作成するか、シリアル化された <xref:System.TimeZoneInfo> オブジェクトを逆シリアル化してインスタンスを作成し直す必要があります。 例については、「 [方法: 埋め込みリソースからタイムゾーンを復元する](restore-time-zones-from-an-embedded-resource.md) 」を参照してください。
+アプリケーションが依存するタイム ゾーンが必ず存在していなければならない場合は、最初に <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> メソッドを呼び出して、レジストリからタイム ゾーンの情報を取得する必要があります。 メソッドの呼び出しが失敗した場合は、例外ハンドラーで、タイム ゾーンの新しいインスタンスを作成するか、シリアル化された <xref:System.TimeZoneInfo> オブジェクトを逆シリアル化してインスタンスを作成し直す必要があります。 例については、「[方法: 埋め込みリソースからタイム ゾーンを復元する](restore-time-zones-from-an-embedded-resource.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [日付、時刻、およびタイム ゾーン](index.md)
 - [ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md)
-- [方法: 定義済みの UTC オブジェクトおよびローカルタイムゾーンオブジェクトにアクセスする](access-utc-and-local.md)
+- [方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする](access-utc-and-local.md)

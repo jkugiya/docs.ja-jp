@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: 暗号化署名'
+description: '詳細情報: 暗号署名'
 title: 暗号署名
 ms.date: 07/14/2020
 dev_langs:
@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 ms.openlocfilehash: 082f55af648b73b6447d69edd5912804e9332d03
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685297"
@@ -37,7 +37,7 @@ ms.locfileid: "99685297"
 
 デジタル署名は、通常、大きなデータを表現するハッシュ値に適用されます。 ハッシュ値にデジタル署名を適用する例を次に示します。 まず、 <xref:System.Security.Cryptography.RSA> クラスの新しいインスタンスを作成して、公開キー/秘密キーのペアを生成します。 次に、 <xref:System.Security.Cryptography.RSA> を <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスの新しいインスタンスに渡します。 これにより、デジタル署名を実際に実行する <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>に秘密キーが渡されます。 ハッシュ コードに署名するためには、使用するハッシュ アルゴリズムを指定する必要があります。 この例では、SHA1 アルゴリズムを使用します。 最後に、 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> メソッドを呼び出して署名を実行します。
 
-SHA1 との衝突の問題により、SHA256 以上をお勧めします。
+SHA1 には競合の問題があるため、SHA256 以上をお勧めします。
 
 ```vb
 Imports System.Security.Cryptography
@@ -110,7 +110,7 @@ class Class1
 
 - 署名者が使用したハッシュ アルゴリズム。
 
-<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。 RSA の場合、公開キーを指定するには、剰余と指数部の値が必要です。 (公開キーと秘密キーのペアを生成したパーティは、これらの値を提供する必要があります)。まず、 <xref:System.Security.Cryptography.RSA> 署名を検証する公開キーを保持するオブジェクトを作成し、次に、 <xref:System.Security.Cryptography.RSAParameters> 公開キーを指定する剰余と指数の値に構造体を初期化します。
+<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。 RSA では、公開キーを指定するために剰余と指数部の値が必要になります。 (これらの値は、公開および秘密キーのペアの生成者が提供する必要があります。)まず、署名を検証する公開キーを保持するための <xref:System.Security.Cryptography.RSA> オブジェクトを作成します。次に、<xref:System.Security.Cryptography.RSAParameters> 構造体を、公開キーを指定する剰余と指数部の値に初期化します。
 
 次のコードは、 <xref:System.Security.Cryptography.RSAParameters> 構造体の作成を示しています。 `Modulus` プロパティは `modulusData` というバイト配列の値に設定し、 `Exponent` プロパティは `exponentData`というバイト配列の値に設定します。
 
@@ -126,11 +126,11 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-オブジェクトを作成したら <xref:System.Security.Cryptography.RSAParameters> 、実装クラスの新しいインスタンスを、 <xref:System.Security.Cryptography.RSA> で指定した値に初期化でき <xref:System.Security.Cryptography.RSAParameters> ます。 さらに、 <xref:System.Security.Cryptography.RSA> インスタンスは、キーを転送するためにのコンストラクターに渡され <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> ます。
+<xref:System.Security.Cryptography.RSAParameters> オブジェクトを作成した後、<xref:System.Security.Cryptography.RSA> 実装クラスの新しいインスタンスを <xref:System.Security.Cryptography.RSAParameters> で指定された値に初期設定できます。 次に、<xref:System.Security.Cryptography.RSA> インスタンスが <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> のコンストラクターに引き渡され、キーが転送されます。
 
-このプロセスを説明する例を次に示します。 この例で、 `hashValue` と `signedHashValue` は、リモートにいる関係者から提供されるバイト配列です。 リモートにいる関係者は、SHA1 アルゴリズムを使用して `hashValue` に署名し、デジタル署名 `signedHashValue`を生成します。 メソッドは、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> デジタル署名が有効であり、に署名するために使用されたことを確認し `hashValue` ます。
+このプロセスを説明する例を次に示します。 この例で、 `hashValue` と `signedHashValue` は、リモートにいる関係者から提供されるバイト配列です。 リモートにいる関係者は、SHA1 アルゴリズムを使用して `hashValue` に署名し、デジタル署名 `signedHashValue`を生成します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> メソッドでは、デジタル署名が有効であることと、そのデジタル署名を使用して `hashValue` が署名されたことを検証します。
 
-SHA1 との衝突の問題により、SHA256 以上をお勧めします。  ただし、署名の作成に SHA1 を使用した場合は、SHA1 を使用して署名を検証する必要があります。
+SHA1 には競合の問題があるため、SHA256 以上をお勧めします。  ただし、署名の作成に SHA1 を使用した場合は、SHA1 を使用して署名を検証する必要があります。
 
 ```vb
 Dim rsa As RSA = RSA.Create()
@@ -166,4 +166,4 @@ else
 - [Cryptographic Services](cryptographic-services.md)
 - [暗号モデル](cryptography-model.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
-- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
+- [ASP.NET Core データ保護](/aspnet/core/security/data-protection/introduction)

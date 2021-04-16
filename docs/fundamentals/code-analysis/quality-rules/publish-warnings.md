@@ -1,6 +1,6 @@
 ---
 title: 規則の発行 (コード分析)
-description: コード分析の発行規則について説明します。
+description: コード分析の規則の発行について説明します。
 ms.date: 09/04/2020
 ms.topic: reference
 f1_keywords:
@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 403d9d48a57c85d1cdf7bd2dfb6cbee1656de733
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96591616"
 ---
 # <a name="publish-rules"></a>規則の発行
@@ -26,5 +26,5 @@ ms.locfileid: "96591616"
 
 |ルール|説明|
 |----------|-----------------|
-|[IL3000 1 つのファイルとして発行するときにアセンブリファイルパスにアクセスしない](il3000.md)|1つのファイルとして発行するときにアセンブリファイルパスにアクセスしない|
-|[IL3001 1 つのファイルとして発行するときにアセンブリファイルパスにアクセスしない](il3001.md)|1つのファイルとして発行するときにアセンブリファイルパスにアクセスしない|
+|[IL3000: 単一ファイルとして発行するときにアセンブリ ファイル パスにアクセスしません](il3000.md)|単一ファイルとして発行するときにアセンブリ ファイル パスにアクセスしない|
+|[IL3001: 単一ファイルとして発行するときにアセンブリ ファイル パスにアクセスしません](il3001.md)|単一ファイルとして発行するときにアセンブリ ファイル パスにアクセスしない|

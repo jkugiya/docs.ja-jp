@@ -15,20 +15,20 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: a20cd77e13c4a8b95633d129990667f0a8de3ee8
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96591195"
 ---
 # <a name="portability-and-interoperability-rules"></a>移植性と相互運用性の規則
 
-移植性ルールは、異なるプラットフォーム間での移植性をサポートします。 相互運用性規則は、COM クライアントとの対話をサポートします。
+移植性の規則は、異なるプラットフォーム間の移植性をサポートします。 相互運用性の規則は、COM クライアントとの対話をサポートします。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 | ルール | 説明 |
 | - | - |
-| [CA1401: P/Invoke を表示できません](ca1401.md) | パブリック型のパブリックメソッドまたはプロテクトメソッドには System.Runtime.InteropServices.DllImportAttribute 属性があります (Visual Basic で Declare キーワードによっても実装されています)。 このようなメソッドは公開しないでください。 |
-| [CA1416:プラットフォームの互換性を検証する](ca1416.md) | コンポーネントでプラットフォームに依存する Api を使用すると、コードがすべてのプラットフォームで動作しなくなります。 |
-| [CA1417: `OutAttribute` P/invoke に文字列パラメーターを使用しません](ca1417.md) | で値によって渡される文字列パラメーター `OutAttribute` は、文字列がインターン文字列である場合、ランタイムを不安定にする可能性があります。 |
+| [CA1401: P/Invoke は参照可能になりません](ca1401.md) | パブリック型のパブリック メソッドまたはプロテクト メソッドに、System.Runtime.InteropServices.DllImportAttribute 属性があります (Visual Basic では Declare キーワードでも実装されます)。 このようなメソッドは公開しないでください。 |
+| [CA1416:プラットフォームの互換性を検証する](ca1416.md) | プラットフォーム依存 API をコンポーネント上で使用すると、一部のプラットフォームでコードが動作しなくなります。 |
+| [CA1417: P/Invokes の文字列パラメーターに `OutAttribute` を使用しません](ca1417.md) | 文字列がインターン処理された文字列で、文字列パラメーターが `OutAttribute` の値で渡された場合、ランタイムが不安定になる可能性があります。 |

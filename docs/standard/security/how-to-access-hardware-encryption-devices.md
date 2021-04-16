@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: ハードウェア暗号化デバイスにアクセスする」を参照してください。'
+description: '詳細情報: 方法: ハードウェア暗号化デバイスにアクセスする'
 title: '方法: ハードウェア暗号化デバイスにアクセスする'
 ms.date: 07/14/2020
 dev_langs:
@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 ms.openlocfilehash: fcf12314490542848d20bd3a4977d68c386853bb
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685271"
@@ -23,7 +23,7 @@ ms.locfileid: "99685271"
 # <a name="how-to-access-hardware-encryption-devices"></a>方法: ハードウェア暗号化デバイスにアクセスする
 
 > [!NOTE]
-> この記事は、Windows に適用されます。
+> この記事は Windows に適用されます。
 
 ハードウェア暗号化デバイスにアクセスするには、<xref:System.Security.Cryptography.CspParameters> クラスを使用します。 たとえば、このクラスを使用すると、アプリケーションをスマート カード、ハードウェアの乱数ジェネレーター、または特定の暗号化アルゴリズムのハードウェア実装と統合することができます。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "99685271"
 
 次のコード例は、スマート カードを使用してデータに署名する方法を示しています。  このコード例は、スマート カードを公開する <xref:System.Security.Cryptography.CspParameters> オブジェクトを作成してから、CSP を使用して <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトを初期化します。  コード例では、続いて幾らかのデータの署名と確認を行います。  
 
-SHA1 との衝突の問題により、SHA256 以上をお勧めします。
+SHA1 には競合の問題があるため、SHA256 以上をお勧めします。
   
 [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
 [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
@@ -70,4 +70,4 @@ SHA1 との衝突の問題により、SHA256 以上をお勧めします。
 - [暗号モデル](cryptography-model.md)
 - [Cryptographic Services](cryptographic-services.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
-- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
+- [ASP.NET Core データ保護](/aspnet/core/security/data-protection/introduction)

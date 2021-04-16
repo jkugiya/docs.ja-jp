@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: GenericPrincipal オブジェクトと Genericprincipal オブジェクトを作成する」を参照してください。'
+description: '詳細情報: 方法: GenericPrincipal および GenericIdentity オブジェクトを作成する'
 title: '方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する'
 ms.date: 07/15/2020
 dev_langs:
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 ms.openlocfilehash: 8c77a9afec7bd166a71abb6af19d8766b02d0523
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685219"
@@ -21,11 +21,11 @@ ms.locfileid: "99685219"
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する
 
 > [!NOTE]
-> この記事は、Windows に適用されます。
+> この記事は Windows に適用されます。
 >
-> ASP.NET Core の詳細については、「 [ASP.NET Core セキュリティの概要](/aspnet/core/security/)」を参照してください。
+> ASP.NET Core の詳細については、「[ASP.NET Core セキュリティの概要](/aspnet/core/security/)」を参照してください。
 
-クラスをクラスと共に使用して、 <xref:System.Security.Principal.GenericIdentity> <xref:System.Security.Principal.GenericPrincipal> Windows ドメインに依存しない認証スキームを作成することができます。
+Windows ドメインから独立して存在する認可スキームを作成するには、<xref:System.Security.Principal.GenericIdentity> クラスと <xref:System.Security.Principal.GenericPrincipal> クラスを組み合わせて使用できます。
 
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal オブジェクトを作成するには
 
@@ -51,7 +51,7 @@ ms.locfileid: "99685219"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 次のコードを使用して、プリンシパルを現在のスレッドに結合します。 これは、プリンシパルを複数回検証する必要がある場合、アプリケーションで実行されている他のコードによって検証する必要がある場合、またはオブジェクトによって検証する必要がある場合に役立ち <xref:System.Security.Permissions.PrincipalPermission> ます。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](replacing-a-principal-object.md)」を参照してください。
+3. 次のコードを使用して、プリンシパルを現在のスレッドに結合します。 この方法が便利なのは、プリンシパルが 2 回以上検証される必要がある場合、アプリケーション内で実行されている他のコードによって検証される必要がある場合、または <xref:System.Security.Permissions.PrincipalPermission> オブジェクトによって検証される必要がある場合です。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](replacing-a-principal-object.md)」を参照してください。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal

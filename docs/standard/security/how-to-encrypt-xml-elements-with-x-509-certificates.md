@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: x.509 証明書を使用して XML 要素を暗号化する」を参照してください。'
+description: '詳細情報: 方法: X.509 証明書で XML 要素を暗号化する'
 title: '方法: X.509 証明書で XML 要素を暗号化する'
 ms.date: 07/14/2020
 dev_langs:
@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 ms.openlocfilehash: f815d253b15823070e074c5d922d3024da602a0d
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685102"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>方法: X.509 証明書で XML 要素を暗号化する
 
-<xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  XML 暗号化標準の詳細については、「」にある XML 暗号化の World Wide Web コンソーシアム (W3C) の仕様を参照してください <https://www.w3.org/TR/xmldsig-core/> 。  
+<xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  XML 暗号化の規格の詳細については、<https://www.w3.org/TR/xmldsig-core/> にある World Wide Web コンソーシアム (W3C) の XML 暗号化の仕様を参照してください。  
   
  XML の暗号化を使用すると、任意の XML 要素またはドキュメントを、暗号化された XML データを含む <`EncryptedData`> 要素があるドキュメントに置き換えることができます。 <`EncryptedData`> 要素には、暗号化時に使用されたキーとプロセスに関する情報が含まれているサブ要素を含めることができます。  XML の暗号化を使用すると、ドキュメントに複数の暗号化された要素を含められるだけでなく、要素を複数回暗号化することができます。  この手順のコード例は、<`EncryptedData`> 要素の作成方法と共に、後の復号化時に使用するいくつかのその他のサブ要素の作成方法を示しています。  
   
-この例では、2 つのキーを使用して XML 要素を暗号化します。 この例では、証明書をプログラムによって取得し、それを使用して、メソッドを使用して XML 要素を暗号化し <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> ます。 内部的には、<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドは別のセッション キーを作成し、これを使用して XML ドキュメントを暗号化します。 このメソッドでは、セッション キーを暗号化し、新しい <`EncryptedData`> 要素内に暗号化された XML と共に保存します。  
+この例では、2 つのキーを使用して XML 要素を暗号化します。 この例では、プログラムを使用して証明書を取得し、これを使用して <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドで XML 要素を暗号化します。 内部的には、<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドは別のセッション キーを作成し、これを使用して XML ドキュメントを暗号化します。 このメソッドでは、セッション キーを暗号化し、新しい <`EncryptedData`> 要素内に暗号化された XML と共に保存します。  
 
-XML 要素の暗号化を解除するには、メソッドを呼び出します <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 。これにより、ストアから x.509 証明書が自動的に取得され、必要な復号化が実行されます。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、「[方法: X.509 証明書で XML 要素を復号化する](how-to-decrypt-xml-elements-with-x-509-certificates.md)」を参照してください。  
+XML 要素を復号化するには、<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> メソッドを呼び出します。これにより、ストアから X.509 証明書が自動的に取得され、必要な復号化が実行されます。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、「[方法: X.509 証明書で XML 要素を復号化する](how-to-decrypt-xml-elements-with-x-509-certificates.md)」を参照してください。  
   
 この例は、複数のアプリケーションが暗号化されたデータを共有する必要がある状況や、1 つのアプリケーションが、実行する時間の間に暗号化されたデータを保存する必要がある状況に適しています。  
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>X.509 証明書で XML 要素を暗号化するには  
 
-この例を実行するには、テスト証明書を作成して証明書ストアに保存する必要があります。 このタスクの手順は、Windows [証明書作成ツール (Makecert.exe)](/windows/desktop/SecCrypto/makecert)に対してのみ提供されています。
+この例を実行するには、テスト証明書を作成して証明書ストアに保存する必要があります。 このタスクの手順は、Windows [証明書作成ツール (Makecert.exe)](/windows/desktop/SecCrypto/makecert) 用にのみ提供されています。
 
-1. [Makecert.exe](/windows/desktop/SecCrypto/makecert)を使用してテストの x.509 証明書を生成し、ローカルユーザーストアに配置します。 交換キーを生成する必要があり、このキーをエクスポート可能にする必要があります。 次のコマンドを実行します。  
+1. [Makecert.exe](/windows/desktop/SecCrypto/makecert) を使用してテストの X.509 証明書を生成し、ローカル ユーザーのストアに配置します。 交換キーを生成する必要があり、このキーをエクスポート可能にする必要があります。 次のコマンドを実行します。  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -111,15 +111,15 @@ XML 要素の暗号化を解除するには、メソッドを呼び出します 
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
-- .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
+- .NET Framework を対象とするプロジェクトでは、`System.Security.dll` への参照を含めます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml) をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-security"></a>.NET セキュリティ
   
-この例で使用される X.509 証明書は、テスト専用です。  アプリケーションでは、信頼された証明機関によって生成された x.509 証明書を使用する必要があります。  
+この例で使用される X.509 証明書は、テスト専用です。  アプリケーションでは、信頼できる証明機関によって生成された X.509 証明書を使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -128,4 +128,4 @@ XML 要素の暗号化を解除するには、メソッドを呼び出します 
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [方法: X.509 証明書で XML 要素を復号化する](how-to-decrypt-xml-elements-with-x-509-certificates.md)
-- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
+- [ASP.NET Core データ保護](/aspnet/core/security/data-protection/introduction)

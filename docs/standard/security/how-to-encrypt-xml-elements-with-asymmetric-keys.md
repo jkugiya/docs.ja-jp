@@ -1,5 +1,5 @@
 ---
-description: '詳細については、「方法: 非対称キーで XML 要素を暗号化する」を参照してください。'
+description: '詳細情報: 方法: 非対称キーで XML 要素を暗号化する'
 title: '方法: 共通キーで XML 要素を暗号化する'
 ms.date: 07/14/2020
 dev_langs:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 ms.openlocfilehash: fff8ec57da0318e48f2a230f01dba26497837028
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99685154"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
 
-<xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  XML 暗号化標準の詳細については、「」にある XML 暗号化の World Wide Web コンソーシアム (W3C) の仕様を参照してください <https://www.w3.org/TR/xmldsig-core/> 。  
+<xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  XML 暗号化の規格の詳細については、<https://www.w3.org/TR/xmldsig-core/> にある World Wide Web コンソーシアム (W3C) の XML 暗号化の仕様を参照してください。  
   
- XML の暗号化を使用すると、任意の XML 要素またはドキュメントを、暗号化された XML データを含む <`EncryptedData`> 要素があるドキュメントに置き換えることができます。  <> 要素には、 `EncryptedData` 暗号化時に使用されるキーとプロセスに関する情報を含むサブ要素を含めることもできます。  XML の暗号化を使用すると、ドキュメントに複数の暗号化された要素を含められるだけでなく、要素を複数回暗号化することができます。  この手順のコード例では、<`EncryptedData`> 要素と、復号化時に後で使用できるいくつかの他のサブ要素を作成する方法を示します。  
+ XML の暗号化を使用すると、任意の XML 要素またはドキュメントを、暗号化された XML データを含む <`EncryptedData`> 要素があるドキュメントに置き換えることができます。  また、<`EncryptedData`> 要素には、暗号化時に使用されたキーとプロセスに関する情報が含まれているサブ要素を含めることもできます。  XML の暗号化を使用すると、ドキュメントに複数の暗号化された要素を含められるだけでなく、要素を複数回暗号化することができます。  この手順のコード例では、<`EncryptedData`> 要素や、後の復号化時に使用するいくつかのその他のサブ要素を作成する方法を示しています。  
   
- この例では、2 つのキーを使用して XML 要素を暗号化します。  RSA の公開キーと秘密キーのペアを生成し、キーのペアをセキュリティで保護されたキー コンテナーに保存します。  この例では、Advanced Encryption Standard (AES) アルゴリズムを使用して別のセッションキーを作成します。  この例では、XML ドキュメントの暗号化に AES セッション キーを使用してから、AES セッション キーを暗号化するために RSA 公開キーを使用しています。  最後に、暗号化された AES セッションキーと暗号化された XML データを、新しい <> 要素内の XML ドキュメントに保存し `EncryptedData` ます。  
+ この例では、2 つのキーを使用して XML 要素を暗号化します。  RSA の公開キーと秘密キーのペアを生成し、キーのペアをセキュリティで保護されたキー コンテナーに保存します。  この例では、Advanced Encryption Standard (AES) アルゴリズムを使用して、別のセッション キーを作成します。  この例では、XML ドキュメントの暗号化に AES セッション キーを使用してから、AES セッション キーを暗号化するために RSA 公開キーを使用しています。  最後に、この例では、暗号化された AES セッション キーと暗号化された XML データを、XML ドキュメントの新しい <`EncryptedData`> 要素内に保存します。  
   
- XML 要素を復号化するには、キー コンテナーから RSA 秘密キーを取得し、これを使用してセッション キーを復号化してから、セッション キーを使用してドキュメントを復号化します。  この手順で暗号化された XML 要素を復号化する方法の詳細については、「 [方法: 非対称キーを使用して Xml 要素を復号化](how-to-decrypt-xml-elements-with-asymmetric-keys.md)する」を参照してください。  
+ XML 要素を復号化するには、キー コンテナーから RSA 秘密キーを取得し、これを使用してセッション キーを復号化してから、セッション キーを使用してドキュメントを復号化します。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、「[方法: 非対称キーで XML 要素を復号化する](how-to-decrypt-xml-elements-with-asymmetric-keys.md)」を参照してください。  
   
  この例は、複数のアプリケーションが暗号化されたデータを共有する必要がある状況や、1 つのアプリケーションが、実行する時間の間に暗号化されたデータを保存する必要がある状況に適しています。
   
@@ -67,7 +67,7 @@ ms.locfileid: "99685154"
      [!code-csharp[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-7. <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトを構築し、暗号化された XML 要素の URL 識別子をそれに読み込みます。  この URL 識別子は、復号化側に、XML に暗号化された要素が含まれていることを知らせます。  <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> フィールドを使用して URL 識別子を指定することができます。  プレーンテキストの XML 要素は、 `EncryptedData` このオブジェクトによってカプセル化される <> 要素に置き換えられ <xref:System.Security.Cryptography.Xml.EncryptedData> ます。  
+7. <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトを構築し、暗号化された XML 要素の URL 識別子をそれに読み込みます。  この URL 識別子は、復号化側に、XML に暗号化された要素が含まれていることを知らせます。  <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> フィールドを使用して URL 識別子を指定することができます。  プレーン テキストの XML 要素は、この <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトによってカプセル化された <`EncryptedData`> 要素に置き換えられます。  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#8)]  
@@ -130,17 +130,17 @@ ms.locfileid: "99685154"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
-- .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
+- .NET Framework を対象とするプロジェクトでは、`System.Security.dll` への参照を含めます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml) をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-security"></a>.NET セキュリティ
 
-対称暗号化キーをプレーンテキストで保存したり、対称キーをコンピューター間でプレーンテキストで転送したりしないでください。  加えて、非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「 [暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
+対称暗号化キーをプレーンテキストで保存したり、対称キーをコンピューター間でプレーンテキストで転送したりしないでください。  加えて、非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称および非対称暗号化キーの詳細については、「[暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
   
-キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
+キーをソース コードに直接埋め込まないでください。  埋め込まれたキーは、[Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用するか、メモ帳などのテキスト エディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
   
 暗号化キーを使用して完了したら、各バイトをゼロ (0) にするか、マネージド暗号化クラスの <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> メソッドを呼び出してメモリから消去します。  暗号化キーは、デバッガーによってメモリから読み取られるか、メモリの位置がディスクにページングされている場合はハード ドライブから読み取られることがあります。  
   
@@ -150,4 +150,4 @@ ms.locfileid: "99685154"
 - [Cryptographic Services](cryptographic-services.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)- <xref:System.Security.Cryptography.Xml>
 - [方法: 非対称キーで XML 要素を復号化する](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
-- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
+- [ASP.NET Core データ保護](/aspnet/core/security/data-protection/introduction)

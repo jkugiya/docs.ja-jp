@@ -5,12 +5,12 @@ description: .NET 開発者が使用できる開発ツールと診断ツール�
 ms.author: dapine
 ms.date: 10/21/2020
 ms.topic: overview
-ms.openlocfilehash: 07c1a161a0bb429403db6852fe77749d83c19ec0
-ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.openlocfilehash: 85d64c0d5857d8603316175d18f8c2f7eab3cc93
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "96593833"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498527"
 ---
 # <a name="tools-and-diagnostics-in-net"></a>.NET でのツールと診断
 
@@ -26,7 +26,7 @@ ms.locfileid: "96593833"
 
 ## <a name="ides"></a>IDE
 
-.NET アプリケーションは、[Visual Studio Code](https://code.visualstudio.com/docs)、 [Visual Studio](/visualstudio/windows)、または [Visual Studio for Mac](/visualstudio/mac) で作成できます。 クラウドを利用した開発環境の詳細については、[Visual Studio Codespaces](/visualstudio/codespaces/overview/what-is-vsonline)に関するページを参照してください。
+.NET アプリケーションは、[Visual Studio Code](https://code.visualstudio.com/docs)、 [Visual Studio](/visualstudio/windows)、または [Visual Studio for Mac](/visualstudio/mac) で作成できます。
 
 ## <a name="additional-tools"></a>その他のツール
 

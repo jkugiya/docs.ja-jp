@@ -2,12 +2,12 @@
 title: F# 5.0 の新機能 - F# ガイド
 description: F# 5.0 で使用できる新しい機能の概要を説明します。
 ms.date: 11/06/2020
-ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: c686bcf5df18d24ac35bbafb2b2d90f768ef7947
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190729"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876709"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 の新機能
 
@@ -15,7 +15,7 @@ F# 5.0 では、F# 言語と F# インタラクティブの機能がいくつか
 
 最新の .NET SDK は [.NET のダウンロード ページ](https://dotnet.microsoft.com/download)でダウンロードできます。
 
-## <a name="get-started"></a>開始
+## <a name="get-started"></a>はじめに
 
 F# 5.0 は、すべての .NET Core ディストリビューションと Visual Studio ツールで使用できます。 詳細については、「[F# の使用を開始する](../get-started/index.md)」をご覧ください。
 
@@ -237,12 +237,14 @@ F# 5.0 では、組み込み 3D および 4D 配列型で固定インデック�
 これについて説明するために、次の 3D 配列を考えてみます。
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -366,7 +368,7 @@ iaString.Get() // "hello"
 
 ## <a name="default-interface-member-consumption"></a>既定のインターフェイス メンバーの使用
 
-F# 5 では、[既定の実装でインターフェイス](../../csharp/tutorials/default-interface-methods-versions.md)を使用できます。
+F# 5 では、[既定の実装でインターフェイス](../../csharp/whats-new/tutorials/default-interface-methods-versions.md)を使用できます。
 
 次のように、C# で定義されているインターフェイスについて考えてみましょう。
 

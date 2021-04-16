@@ -1,42 +1,42 @@
 ---
-title: 相互運用ランタイムイベント
-description: 「相互運用機能に固有の診断情報を収集する .NET ランタイムイベント」を参照してください。
+title: 相互運用ランタイム イベント
+description: 相互運用に固有の診断情報を収集する .NET ランタイム イベントに関するページを参照してください。
 ms.date: 11/13/2020
 ms.topic: reference
 helpviewer_keywords:
 - Interop events (CoreCLR)
 - ETW, EventPipe, LTTng interop events (CoreCLR)
 ms.openlocfilehash: 5635fb55b3a6ffa3f5611da80cdb2909e226e2ea
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
-ms.translationtype: MT
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96594048"
 ---
-# <a name="net-runtime-interop-events"></a><span data-ttu-id="2a4b9-103">.NET ランタイム相互運用イベント</span><span class="sxs-lookup"><span data-stu-id="2a4b9-103">.NET runtime interop events</span></span>
+# <a name="net-runtime-interop-events"></a><span data-ttu-id="9ec90-103">.NET ランタイム相互運用イベント</span><span class="sxs-lookup"><span data-stu-id="9ec90-103">.NET runtime interop events</span></span>
 
-<span data-ttu-id="2a4b9-104">これらのランタイムイベントは、共通中間言語 (CIL) のスタブ生成に関する情報をキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-104">These runtime events capture information about Common Intermediate Language (CIL) stub generation.</span></span> <span data-ttu-id="2a4b9-105">診断のためにこれらのイベントを使用する方法の詳細については、「 [.net アプリケーションのログ記録とトレース](../../core/diagnostics/logging-tracing.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-105">For more information about how to use these events for diagnostic purposes, see [logging and tracing .NET applications](../../core/diagnostics/logging-tracing.md)</span></span>
+<span data-ttu-id="9ec90-104">これらのランタイム イベントは、共通中間言語 (CIL) のスタブ生成に関する情報をキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="9ec90-104">These runtime events capture information about Common Intermediate Language (CIL) stub generation.</span></span> <span data-ttu-id="9ec90-105">診断のためにこれらのイベントを使用する方法の詳細については、[.NET アプリケーションのログ記録とトレース](../../core/diagnostics/logging-tracing.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ec90-105">For more information about how to use these events for diagnostic purposes, see [logging and tracing .NET applications](../../core/diagnostics/logging-tracing.md)</span></span>
 
-## <a name="ilstubgenerated-event"></a><span data-ttu-id="2a4b9-106">ILStubGenerated イベント</span><span class="sxs-lookup"><span data-stu-id="2a4b9-106">ILStubGenerated event</span></span>
+## <a name="ilstubgenerated-event"></a><span data-ttu-id="9ec90-106">ILStubGenerated イベント</span><span class="sxs-lookup"><span data-stu-id="9ec90-106">ILStubGenerated event</span></span>
 
-|<span data-ttu-id="2a4b9-107">イベントを発生させるキーワード</span><span class="sxs-lookup"><span data-stu-id="2a4b9-107">Keyword for raising the event</span></span>|<span data-ttu-id="2a4b9-108">Level</span><span class="sxs-lookup"><span data-stu-id="2a4b9-108">Level</span></span>|
+|<span data-ttu-id="9ec90-107">イベントを発生させるキーワード</span><span class="sxs-lookup"><span data-stu-id="9ec90-107">Keyword for raising the event</span></span>|<span data-ttu-id="9ec90-108">Level</span><span class="sxs-lookup"><span data-stu-id="9ec90-108">Level</span></span>|
 |-----------------------------------|-----------|
-|<span data-ttu-id="2a4b9-109">`InteropKeyword` (0x2000)</span><span class="sxs-lookup"><span data-stu-id="2a4b9-109">`InteropKeyword` (0x2000)</span></span>|<span data-ttu-id="2a4b9-110">情報通知 (4)</span><span class="sxs-lookup"><span data-stu-id="2a4b9-110">Informational(4)</span></span>|
+|<span data-ttu-id="9ec90-109">`InteropKeyword` (0x2000)</span><span class="sxs-lookup"><span data-stu-id="9ec90-109">`InteropKeyword` (0x2000)</span></span>|<span data-ttu-id="9ec90-110">情報通知 (4)</span><span class="sxs-lookup"><span data-stu-id="9ec90-110">Informational(4)</span></span>|
   
-|<span data-ttu-id="2a4b9-111">event</span><span class="sxs-lookup"><span data-stu-id="2a4b9-111">Event</span></span>|<span data-ttu-id="2a4b9-112">イベント ID</span><span class="sxs-lookup"><span data-stu-id="2a4b9-112">Event ID</span></span>|<span data-ttu-id="2a4b9-113">いつ発生するか</span><span class="sxs-lookup"><span data-stu-id="2a4b9-113">Raised when</span></span>|
+|<span data-ttu-id="9ec90-111">Event</span><span class="sxs-lookup"><span data-stu-id="9ec90-111">Event</span></span>|<span data-ttu-id="9ec90-112">イベント ID</span><span class="sxs-lookup"><span data-stu-id="9ec90-112">Event ID</span></span>|<span data-ttu-id="9ec90-113">いつ発生するか</span><span class="sxs-lookup"><span data-stu-id="9ec90-113">Raised when</span></span>|
 |-----------|--------------|-----------------|
-|`ILStubGenerated`|<span data-ttu-id="2a4b9-114">88</span><span class="sxs-lookup"><span data-stu-id="2a4b9-114">88</span></span>|<span data-ttu-id="2a4b9-115">IL スタブが生成されます。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-115">An IL Stub is generated.</span></span>|
+|`ILStubGenerated`|<span data-ttu-id="9ec90-114">88</span><span class="sxs-lookup"><span data-stu-id="9ec90-114">88</span></span>|<span data-ttu-id="9ec90-115">IL スタブが生成されます。</span><span class="sxs-lookup"><span data-stu-id="9ec90-115">An IL Stub is generated.</span></span>|
 
-|<span data-ttu-id="2a4b9-116">フィールド名</span><span class="sxs-lookup"><span data-stu-id="2a4b9-116">Field name</span></span>|<span data-ttu-id="2a4b9-117">データ型</span><span class="sxs-lookup"><span data-stu-id="2a4b9-117">Data type</span></span>|<span data-ttu-id="2a4b9-118">説明</span><span class="sxs-lookup"><span data-stu-id="2a4b9-118">Description</span></span>|
+|<span data-ttu-id="9ec90-116">フィールド名</span><span class="sxs-lookup"><span data-stu-id="9ec90-116">Field name</span></span>|<span data-ttu-id="9ec90-117">データ型</span><span class="sxs-lookup"><span data-stu-id="9ec90-117">Data type</span></span>|<span data-ttu-id="9ec90-118">説明</span><span class="sxs-lookup"><span data-stu-id="9ec90-118">Description</span></span>|
 |----------------|---------------|-----------------|
-|`ModuleID`|`win:UInt16`|<span data-ttu-id="2a4b9-119">モジュールの ID です。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-119">The module identifier.</span></span>|
-|`StubMethodID`|`win:UInt64`|<span data-ttu-id="2a4b9-120">スタブのメソッド識別子。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-120">The stub method identifier.</span></span>|
-|`StubFlags`|`win:UInt32`|<span data-ttu-id="2a4b9-121">スタブのフラグ:</span><span class="sxs-lookup"><span data-stu-id="2a4b9-121">The flags for the stub:</span></span><br /><br /> <span data-ttu-id="2a4b9-122">`0x1` -相互運用を逆にします。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-122">`0x1` - Reverse interop.</span></span><br /><br /> <span data-ttu-id="2a4b9-123">`0x2` -COM 相互運用。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-123">`0x2` - COM interop.</span></span><br /><br /> <span data-ttu-id="2a4b9-124">`0x4` -NGen.exe によって生成されたスタブ。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-124">`0x4` - Stub generated by NGen.exe.</span></span><br /><br /> <span data-ttu-id="2a4b9-125">`0x8` 人.</span><span class="sxs-lookup"><span data-stu-id="2a4b9-125">`0x8` - Delegate.</span></span><br /><br /> <span data-ttu-id="2a4b9-126">`0x10` -可変個の引数。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-126">`0x10` - Variable argument.</span></span><br /><br /> <span data-ttu-id="2a4b9-127">`0x20` -アンマネージ呼び出し先。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-127">`0x20` - Unmanaged callee.</span></span><br /><br /> <span data-ttu-id="2a4b9-128">`0x40` -Struct マーシャリング</span><span class="sxs-lookup"><span data-stu-id="2a4b9-128">`0x40` - Struct Marshal</span></span>|
-|`ManagedInteropMethodToken`|`win:UInt32`|<span data-ttu-id="2a4b9-129">マネージド相互運用メソッドのトークンです。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-129">The token for the managed interop method.</span></span>|
-|`ManagedInteropMethodNameSpace`|`win:UnicodeString`|<span data-ttu-id="2a4b9-130">マネージ相互運用メソッドの名前空間とそれを囲む型。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-130">The namespace and enclosing type of the managed interop method.</span></span>|
-|`ManagedInteropMethodName`|`win:UnicodeString`|<span data-ttu-id="2a4b9-131">マネージド相互運用メソッドの名前。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-131">The name of the managed interop method.</span></span>|
-|`ManagedInteropMethodSignature`|`win:UnicodeString`|<span data-ttu-id="2a4b9-132">マネージド相互運用メソッドのシグネチャ。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-132">The signature of the managed interop method.</span></span>|
-|`NativeMethodSignature`|`win:UnicodeString`|<span data-ttu-id="2a4b9-133">ネイティブ メソッド シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-133">The native method signature.</span></span>|
-|`StubMethodSignature`|`win:UnicodeString`|<span data-ttu-id="2a4b9-134">スタブ メソッド シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-134">The stub method signature.</span></span>|
-|`StubMethodILCode`|`win:UnicodeString`|<span data-ttu-id="2a4b9-135">スタブメソッドの共通中間言語 (CIL) コード。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-135">The Common Intermediate Language (CIL) code for the stub method.</span></span>|
-|`ClrInstanceID`|`win:UInt16`|<span data-ttu-id="2a4b9-136">CLR または CoreCLR のインスタンスの一意の ID。</span><span class="sxs-lookup"><span data-stu-id="2a4b9-136">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+|`ModuleID`|`win:UInt16`|<span data-ttu-id="9ec90-119">モジュールの ID です。</span><span class="sxs-lookup"><span data-stu-id="9ec90-119">The module identifier.</span></span>|
+|`StubMethodID`|`win:UInt64`|<span data-ttu-id="9ec90-120">スタブのメソッド識別子。</span><span class="sxs-lookup"><span data-stu-id="9ec90-120">The stub method identifier.</span></span>|
+|`StubFlags`|`win:UInt32`|<span data-ttu-id="9ec90-121">スタブのフラグ:</span><span class="sxs-lookup"><span data-stu-id="9ec90-121">The flags for the stub:</span></span><br /><br /> <span data-ttu-id="9ec90-122">`0x1` - 逆方向の相互運用。</span><span class="sxs-lookup"><span data-stu-id="9ec90-122">`0x1` - Reverse interop.</span></span><br /><br /> <span data-ttu-id="9ec90-123">`0x2` - COM 相互運用。</span><span class="sxs-lookup"><span data-stu-id="9ec90-123">`0x2` - COM interop.</span></span><br /><br /> <span data-ttu-id="9ec90-124">`0x4` - NGen.exe で生成されたスタブ。</span><span class="sxs-lookup"><span data-stu-id="9ec90-124">`0x4` - Stub generated by NGen.exe.</span></span><br /><br /> <span data-ttu-id="9ec90-125">`0x8` - デリゲート。</span><span class="sxs-lookup"><span data-stu-id="9ec90-125">`0x8` - Delegate.</span></span><br /><br /> <span data-ttu-id="9ec90-126">`0x10` - 可変個引数。</span><span class="sxs-lookup"><span data-stu-id="9ec90-126">`0x10` - Variable argument.</span></span><br /><br /> <span data-ttu-id="9ec90-127">`0x20` - アンマネージ呼び出し先。</span><span class="sxs-lookup"><span data-stu-id="9ec90-127">`0x20` - Unmanaged callee.</span></span><br /><br /> <span data-ttu-id="9ec90-128">`0x40` -構造体マーシャル</span><span class="sxs-lookup"><span data-stu-id="9ec90-128">`0x40` - Struct Marshal</span></span>|
+|`ManagedInteropMethodToken`|`win:UInt32`|<span data-ttu-id="9ec90-129">マネージド相互運用メソッドのトークンです。</span><span class="sxs-lookup"><span data-stu-id="9ec90-129">The token for the managed interop method.</span></span>|
+|`ManagedInteropMethodNameSpace`|`win:UnicodeString`|<span data-ttu-id="9ec90-130">マネージ相互運用メソッドの名前空間とそれを囲む型。</span><span class="sxs-lookup"><span data-stu-id="9ec90-130">The namespace and enclosing type of the managed interop method.</span></span>|
+|`ManagedInteropMethodName`|`win:UnicodeString`|<span data-ttu-id="9ec90-131">マネージド相互運用メソッドの名前。</span><span class="sxs-lookup"><span data-stu-id="9ec90-131">The name of the managed interop method.</span></span>|
+|`ManagedInteropMethodSignature`|`win:UnicodeString`|<span data-ttu-id="9ec90-132">マネージド相互運用メソッドのシグネチャ。</span><span class="sxs-lookup"><span data-stu-id="9ec90-132">The signature of the managed interop method.</span></span>|
+|`NativeMethodSignature`|`win:UnicodeString`|<span data-ttu-id="9ec90-133">ネイティブ メソッド シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="9ec90-133">The native method signature.</span></span>|
+|`StubMethodSignature`|`win:UnicodeString`|<span data-ttu-id="9ec90-134">スタブ メソッド シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="9ec90-134">The stub method signature.</span></span>|
+|`StubMethodILCode`|`win:UnicodeString`|<span data-ttu-id="9ec90-135">スタブ メソッドの共通中間言語 (CIL) コード。</span><span class="sxs-lookup"><span data-stu-id="9ec90-135">The Common Intermediate Language (CIL) code for the stub method.</span></span>|
+|`ClrInstanceID`|`win:UInt16`|<span data-ttu-id="9ec90-136">CLR または CoreCLR のインスタンスの一意の ID。</span><span class="sxs-lookup"><span data-stu-id="9ec90-136">Unique ID for the instance of CLR or CoreCLR.</span></span>|

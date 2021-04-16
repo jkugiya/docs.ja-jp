@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「Assembly属性」を参照してください。
+description: '詳細情報: AssemblyAttributesGoHereS'
 title: AssemblyAttributesGoHereS
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 7dad672a91375ee223ebb521b9e26ee280cf0531
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638562"
@@ -39,9 +39,9 @@ internal sealed class AssemblyAttributesGoHereS
 
 この型への参照は、セキュリティに関連せず複数の用途を持たないカスタム属性を示します。
 
-これらの型は、.NET Framework 内で "internal" とマークされ、名前空間に配置され <xref:System.Runtime.CompilerServices> ます。
+これらの型は .NET Framework 内で "内部的" とマーク付けされ、<xref:System.Runtime.CompilerServices> 名前空間にあります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 mscorlib.dll
 

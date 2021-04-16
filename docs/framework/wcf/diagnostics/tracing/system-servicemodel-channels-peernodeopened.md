@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「System.servicemodel」を参照してください。
+description: '詳細情報: System.ServiceModel.Channels.PeerNodeOpened'
 title: System.ServiceModel.Channels.PeerNodeOpened
 ms.date: 03/30/2017
 ms.assetid: 516d95c6-ed9d-4673-95ec-3661daba4959
 ms.openlocfilehash: e6c05b0e83ca6ebbd092037490dd1c672fc74b53
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99634870"

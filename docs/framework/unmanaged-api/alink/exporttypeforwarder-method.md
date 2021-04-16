@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「ExportTypeForwarder メソッド」を参照してください。
+description: '詳細情報: ExportTypeForwarder メソッド'
 title: ExportTypeForwarder メソッド
 ms.date: 03/30/2017
 api_name:
@@ -17,7 +17,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 59fb74c83f6d30dda87d908353795fb218190022
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637990"
@@ -46,18 +46,18 @@ HRESULT ExportTypeForwarder(
  エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType``tdPublic`やなどのフラグ `tdNested` 。 この値は、この [メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
+ `tdPublic` や `tdNested` などの `ComType` フラグ。 この値は、[DefineExportedType メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。 これは、入れ子にされた型を出力する場合にのみ必要です。  
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします  
   
 ## <a name="see-also"></a>関連項目
 

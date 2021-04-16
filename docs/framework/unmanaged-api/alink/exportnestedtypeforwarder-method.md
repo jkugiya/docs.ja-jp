@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「ExportNestedTypeForwarder メソッド」を参照してください。
+description: '詳細情報: ExportNestedTypeForwarder メソッド'
 title: ExportNestedTypeForwarder メソッド
 ms.date: 03/30/2017
 api_name:
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: fd791e3fea76338f191fcf924d56720d257d2e8b
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638107"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder メソッド
 
-入れ子になった型の型フォワーダーを、指定されたアセンブリの型テーブルに追加します。  
+指定されたアセンブリの型テーブルに、入れ子にされた型の型フォワーダーを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,30 +46,30 @@ HRESULT ExportNestedTypeForwarder(
  エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- 型を定義するファイルのファイルトークンまたはアセンブリ ID。  
+ 型を定義するファイルのファイル トークンまたはアセンブリ ID。  
   
  `TypeToken`  
  型のトークン。  
   
  `ParentType`  
- 親の種類のトークン。  
+ 親の型のトークン。  
   
  `pszTypename`  
  エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType``tdPublic`やなどのフラグ `tdNested` 。  
+ `tdPublic` や `tdNested` などの `ComType` フラグ。  
   
  `pType`  
- エクスポートの種類のトークンを受け取ります。 これは、入れ子にされた型を出力する場合にのみ必要です。  
+ エクスポート型のトークンを受け取ります。 これは、入れ子にされた型を出力する場合にのみ必要です。  
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします  
   
 ## <a name="see-also"></a>関連項目
 

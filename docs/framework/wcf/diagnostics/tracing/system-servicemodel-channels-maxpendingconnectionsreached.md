@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「MaxPendingConnectionsReached」を参照してください。
+description: '詳細情報: System.ServiceModel.Channels.MaxPendingConnectionsReached'
 title: System.ServiceModel.Channels.MaxPendingConnectionsReached
 ms.date: 03/30/2017
 ms.assetid: 6138b01d-199b-45db-b875-c1cca68e6894
 ms.openlocfilehash: 3b18f7a8d19d8cb3f4fe1c4c5d4d937bc75ac0b8
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99635156"

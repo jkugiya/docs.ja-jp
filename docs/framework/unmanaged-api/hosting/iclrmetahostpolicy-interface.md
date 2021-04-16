@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「ICLRMetaHostPolicy インターフェイス」を参照してください。
+description: '詳細情報: ICLRMetaHostPolicy インターフェイス'
 title: ICLRMetaHostPolicy インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -17,24 +17,24 @@ topic_type:
 - apiref
 ms.openlocfilehash: b14ad417617c32242f8a59844f7c1f1a8d05c78d
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637418"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy インターフェイス
 
-[Getrequestedruntime](iclrmetahostpolicy-getrequestedruntime-method.md)メソッドを提供します。このメソッドは、ポリシー条件、マネージアセンブリ、バージョン、および構成ファイルに基づいて共通言語ランタイム (CLR) インターフェイスへのポインターを返します。  
+ポリシー条件、マネージド アセンブリ、バージョン、および構成ファイルに基づいて、共通言語ランタイム (CLR) インターフェイスへのポインターを返す [GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) メソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetRequestedRuntime メソッド](iclrmetahostpolicy-getrequestedruntime-method.md)|ポリシー条件、マネージアセンブリ、バージョン、および構成ファイルに基づいて、優先する CLR インターフェイスを提供します。|  
+|[GetRequestedRuntime メソッド](iclrmetahostpolicy-getrequestedruntime-method.md)|ポリシー条件、マネージド アセンブリ、バージョン、および構成ファイルに基づいて、優先される CLR インターフェイスを提供します。|  
   
 ## <a name="remarks"></a>解説  
 
- このインターフェイスへの参照を取得するには、次のコードに示すように [Clrcreateinstance](clrcreateinstance-function.md) 関数を呼び出します。  
+ このインターフェイスへの参照を取得するには、次のコードに示すように [CLRCreateInstance](clrcreateinstance-function.md) 関数を呼び出します。  
   
 ```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
@@ -43,19 +43,19 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ```  
   
 > [!NOTE]
-> このインターフェイスは、実際には CLR の読み込みもアクティブ化も行いませんが、インストールまたは読み込まれている使用可能なバージョンに基づいて、単純に優先 CLR バージョンを返します。  
+> このインターフェイスでは、実際には CLR の読み込みもアクティブ化も行われず、インストールまたは読み込まれている使用可能なバージョンに基づいて、優先される CLR バージョンが返されます。  
   
- .NET Framework 4 ホスト API はポリシーを統合して、特定のニーズを持つホストが、意図しない罰則を伴わずに基本的な機能を使用できるようにします。 たとえば、MSCorEE.dll エクスポートの多くは特定の CLR にバインドされますが、メソッドでは論理的に要求されない場合もあります。 [METAHOST_POLICY_FLAGS](metahost-policy-flags-enumeration.md)列挙体は、ほとんどのホストに共通するバインドポリシーを提供します。  
+ .NET Framework 4 のホスティング API では、特定のニーズを持つホストが意図しないペナルティを伴うことなく基本的な機能を使用できるようにするために、ポリシーが統合されています。 たとえば、MSCorEE.dll エクスポートの多くは特定の CLR にバインドされますが、メソッドでは論理的に要求されない場合もあります。 [METAHOST_POLICY_FLAGS](metahost-policy-flags-enumeration.md) 列挙体では、ほとんどのホストに共通するバインド ポリシーが提供されています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** メタホスト .h  
+ **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** リソースとして MSCorEE.dll に含まれている  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

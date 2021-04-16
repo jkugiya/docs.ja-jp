@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 39570740f3560f5bfef8ba80b95c0eb2aca41f59
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638120"
@@ -47,18 +47,18 @@ HRESULT EnumImportTypes(
 取得する型の最大数。
 
 `aTypeDefs`\
-は、を超えない型トークンを受け取り `dwMax` ます。
+型トークンを受け取ります (`dwMax` を超えることはできません)。
 
 `pdwCount`\
-の実際の型数を受け取り `aTypeDefs` ます。
+`aTypeDefs` 内の実際の型数を受け取ります。
 
 ## <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は S_OK を返します。
+メソッドが成功した場合は、S_OK が返されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-Alink. h が必要です。
+alink.h を必要とします
 
 ## <a name="see-also"></a>関連項目
 

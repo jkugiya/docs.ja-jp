@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: d53527ecf7e8b3a99a11ea99512fbc812125de3e
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638614"
 ---
 # <a name="addfile2-method"></a>AddFile2 メソッド
 
-アセンブリにファイルを追加します。 は、バインドされていないモジュールを作成するためにも使用できます。  
+アセンブリにファイルを追加します。 バインドされていないモジュールの作成にも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,21 +48,21 @@ HRESULT AddFile2(
  追加するファイルの名前。  
   
  `dwFlags`  
- COM + `FileDef` フラグ ( `ffContainsNoMetaData` やなど) `ffWriteable` 。 `dwFlags` は、 [メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
+ `ffContainsNoMetaData` や `ffWriteable` などの COM+ `FileDef` フラグ。 `dwFlags` は [DefineFile メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
   
  `pEmitter`  
- [IMetaDataEmit2 インターフェイス](../metadata/imetadataemit2-interface.md)インターフェイスへのインターフェイス。  
+ [IMetaDataEmit2 インターフェイス](../metadata/imetadataemit2-interface.md)へのインターフェイス。  
   
  `pFileToken`  
  追加するファイルの ID を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 

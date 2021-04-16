@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorConfiguration:: Setg Stcontrol メソッド'
+description: '詳細情報: ICorConfiguration::SetGCHostControl メソッド'
 title: ICorConfiguration::SetGCHostControl メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: 4d3d6e5e5275adf02f9d693234a5c8e77714fd03
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636651"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>ICorConfiguration::SetGCHostControl メソッド
 
-仮想メモリの制限を変更するようにホストに要求するために、ガベージコレクターによって使用されるコールバックインターフェイスを設定します。  
+仮想メモリの制限を変更するようにホストに要求するために、ガベージ コレクターによって使用されるコールバック インターフェイスを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,17 +38,17 @@ HRESULT SetGCHostControl (
 ## <a name="parameters"></a>パラメーター  
 
  `pGCHostControl`  
- からガベージコレクターが仮想メモリの制限を変更するようにホストに要求できるようにする、 [igている Stcontrol](igchostcontrol-interface.md) オブジェクトへのポインター。  
+ 仮想メモリの制限を変更するように、ガベージ コレクターからホストに要求ができるようにする [IGCHostControl](igchostcontrol-interface.md) オブジェクトへのポインター。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれます  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

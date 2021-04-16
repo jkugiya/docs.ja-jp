@@ -17,7 +17,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 6dc047cac3b80e6fe7a6f2cd980061b34bb7f286
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638068"
@@ -45,7 +45,7 @@ HRESULT ExportType(
  エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- エクスポート可能な型を定義するファイルのファイルトークンまたはアセンブリ ID。  
+ エクスポート可能な型を定義するファイルのファイル トークンまたはアセンブリ ID。  
   
  `TypeToken`  
  エクスポート可能にする型のトークン。  
@@ -54,18 +54,18 @@ HRESULT ExportType(
  エクスポート可能にする完全修飾型名。  
   
  `dwFlags`  
- `ComType``tdPublic`やなどのフラグ `tdNested` 。 このパラメーターは、この [メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
+ `tdPublic` や `tdNested` などの `ComType` フラグ。 このパラメーターは、[DefineExportedType メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします  
   
 ## <a name="see-also"></a>関連項目
 

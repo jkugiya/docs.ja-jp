@@ -1,11 +1,11 @@
 ---
-description: 詳細については、次を参照してください。 ComIntegration Dllhostinitializer Erstopped
+description: '詳細情報: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped'
 title: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped
 ms.date: 03/30/2017
 ms.assetid: 6b2912d4-21a4-4a9c-bb68-8626fca5cc39
 ms.openlocfilehash: 0ee524b26850d73267f91b67c9ce130375f6b99b
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99634220"

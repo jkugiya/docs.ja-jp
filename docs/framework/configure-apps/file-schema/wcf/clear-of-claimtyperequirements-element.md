@@ -1,16 +1,16 @@
 ---
-description: '詳細については、次を参照してください: <clear> of <claimTypeRequirements> 要素'
-title: <clear><claimTypeRequirements>要素の
+description: '詳細情報: <claimTypeRequirements> 要素の <clear>'
+title: <claimTypeRequirements> 要素の <clear>
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
 ms.openlocfilehash: d25dad5afcec352f040ea4f8c08e5ffa2bc16d19
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638887"
 ---
-# <a name="clear-of-claimtyperequirements-element"></a>\<clear>\<claimTypeRequirements>要素の
+# <a name="clear-of-claimtyperequirements-element"></a>\<claimTypeRequirements> 要素の \<clear>
 
 すべてのクレームの種類をフェデレーション資格情報から削除するように指定します。 これにより、コレクションの初期値を確実に空にできます。  
   

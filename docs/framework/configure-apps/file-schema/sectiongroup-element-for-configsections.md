@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: <sectionGroup> の要素 <configSections>'
+description: '詳細情報: <configSections> の <sectionGroup> 要素'
 title: <configSections> の <sectionGroup> 要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 ms.openlocfilehash: 0d822b98acbc041b9d6e146e9cd15848a73d2f88
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639888"
@@ -35,27 +35,27 @@ ms.locfileid: "99639888"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>定義するセクショングループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>定義するセクション グループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configSections>** 要素](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
+| [ **\<configSections>** 要素](configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<section>**](section-element.md) | 構成セクションの宣言が含まれています。 |
+| [**\<section>**](section-element.md) | 構成セクション宣言が含まれています。 |
 
 ## <a name="remarks"></a>解説
 
-セクショングループを宣言すると、構成セクションのコンテナータグが作成され、他のユーザーが定義した構成セクションと名前の競合が発生しなくなります。 相互に要素を入れ子にすることができ **\<sectionGroup>** ます。
+セクション グループを宣言すると、構成セクションのコンテナー タグが作成され、他のユーザーによって定義された構成セクションとの名前の競合が発生しなくなります。 **\<sectionGroup>** 要素は、相互に入れ子にすることができます。
 
 ## <a name="example"></a>例
 
-次の例は、セクショングループを宣言し、セクショングループ内でセクションを宣言する方法を示しています。
+次の例は、セクション グループを宣言し、セクション グループ内でセクションを宣言する方法を示しています。
 
 ```xml
 <configuration>
@@ -75,8 +75,8 @@ ms.locfileid: "99639888"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル *Web.config* で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーション ディレクトリ レベルではない *Web.config* ファイルで使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイルスキーマ](index.md)
+- [.NET Framework の構成ファイル スキーマ](index.md)

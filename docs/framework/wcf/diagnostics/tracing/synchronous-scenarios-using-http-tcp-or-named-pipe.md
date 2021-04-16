@@ -1,32 +1,32 @@
 ---
-description: 詳細については、「HTTP、TCP、または Named-Pipe を使用した同期シナリオ」を参照してください。
+description: '詳細情報: HTTP、TCP、または名前付きパイプを使用した同期シナリオ'
 title: HTTP、TCP、または名前付きパイプを使用した同期シナリオ
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
 ms.openlocfilehash: fd6605be99a9419de27f000b378720adf0ae1a14
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99635416"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP、TCP、または名前付きパイプを使用した同期シナリオ
 
-ここでは、シングル スレッド クライアントで HTTP、TCP、または名前付きパイプを使用したときの、さまざまな同期要求/応答シナリオでのアクティビティと転送について説明します。 マルチスレッド要求の詳細について [は、「HTTP、TCP、または名前付きパイプを使用した非同期シナリオ](asynchronous-scenarios-using-http-tcp-or-named-pipe.md) 」を参照してください。  
+ここでは、シングル スレッド クライアントで HTTP、TCP、または名前付きパイプを使用したときの、さまざまな同期要求/応答シナリオでのアクティビティと転送について説明します。 マルチスレッド要求の詳細については、「[HTTP、TCP、または名前付きパイプを使用した非同期シナリオ](asynchronous-scenarios-using-http-tcp-or-named-pipe.md)」を参照してください。  
   
 ## <a name="synchronous-requestreply-without-errors"></a>エラーを伴わない同期要求/応答  
 
  ここでは、シングル スレッド クライアントを使用したときの、有効な同期要求/応答シナリオでのアクティビティおよび転送について説明します。  
   
-### <a name="client"></a>クライアント  
+### <a name="client"></a>Client  
   
 #### <a name="establishing-communication-with-service-endpoint"></a>サービス エンドポイントとの通信の確立  
 
- クライアントを構築して開きます。 これらの各手順では、アンビエントアクティビティ (A) が "構築クライアント" (B) および "Open Client" (C) アクティビティにそれぞれ転送されます。 転送されるアクティビティごとに、転送が返されるまで (つまり、ServiceModel コードが実行されるまで) アンビエント アクティビティは中断されます。  
+ クライアントを構築して開きます。 各手順では、アンビエント アクティビティ (A) が "クライアントの構築" アクティビティ (B) と "クライアントを開く" アクティビティ (C) にそれぞれ転送されます。 転送されるアクティビティごとに、転送が返されるまで (つまり、ServiceModel コードが実行されるまで) アンビエント アクティビティは中断されます。  
   
 #### <a name="making-a-request-to-service-endpoint"></a>サービス エンドポイントへの要求  
 
- アンビエントアクティビティは、"ProcessAction" (D) アクティビティに転送されます。 このアクティビティでは、要求メッセージが送信され、応答メッセージが受信されます。 このアクティビティは、ユーザー コードに制御が戻ると終了します。 これは同期要求であるため、制御が戻るまでアンビエント アクティビティは中断されます。  
+ アンビエント アクティビティが "アクションを処理" アクティビティ (D) に転送されます。 このアクティビティでは、要求メッセージが送信され、応答メッセージが受信されます。 このアクティビティは、ユーザー コードに制御が戻ると終了します。 これは同期要求であるため、制御が戻るまでアンビエント アクティビティは中断されます。  
   
 #### <a name="closing-communication-with-service-endpoint"></a>サービス エンドポイントとの通信の終了  
 
@@ -42,7 +42,7 @@ ms.locfileid: "99635416"
   
 #### <a name="receiving-data-on-the-wire"></a>ネットワーク上のデータの受信  
 
- データがネットワーク上に到着すると、受信したデータを処理するための "ReceiveBytes" アクティビティがまだ存在しない場合 (Q) に作成されます。 このアクティビティは、接続またはキュー内の複数のメッセージに再使用できます。  
+ データがネットワークに到着すると、受信したデータを処理するために "バイトを受信" アクティビティ (Q) が作成されます (まだ存在しない場合)。 このアクティビティは、接続またはキュー内の複数のメッセージに再使用できます。  
   
  SOAP アクション メッセージを作成するための十分なデータがある場合、"バイトを受信" アクティビティは "メッセージを処理" アクティビティ (R) を起動します。  
   
@@ -54,19 +54,19 @@ ms.locfileid: "99635416"
 
  ServiceHost の "閉じる" アクティビティ (Z) は、アンビエント アクティビティから作成されます。  
   
- ![同期シナリオを示す図: HTTP、TCP、または名前付きパイプ。](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
+ ![同期シナリオを示した図: HTTP、TCP、または名前付きパイプ。](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
   
- で \<A: name> `A` は、は、前のテキストと表3のアクティビティを記述するショートカットシンボルです。 `Name` は、アクティビティの短縮名です。  
+ \<A: name> の `A` は、前の説明および表 3 に含まれるアクティビティを表すショートカット シンボルです。 `Name` は、アクティビティの短縮名です。  
   
- の場合 `propagateActivity` = `true` 、クライアントとサービスの両方の処理アクションに同じアクティビティ ID が割り当てられます。  
+ `propagateActivity`=`true` の場合、クライアントとサービスの "アクションを処理" アクティビティはどちらも同じアクティビティ ID を持ちます。  
   
 ## <a name="synchronous-requestreply-with-errors"></a>エラーを伴う同期要求/応答  
 
- 前述のシナリオとの違いは、応答メッセージとして SOAP エラー メッセージが返されることだけです。 の場合 `propagateActivity` = `true` 、要求メッセージのアクティビティ ID が SOAP エラーメッセージに追加されます。  
+ 前述のシナリオとの違いは、応答メッセージとして SOAP エラー メッセージが返されることだけです。 `propagateActivity`=`true` の場合は、要求メッセージのアクティビティ ID が SOAP エラー メッセージに追加されます。  
   
 ## <a name="synchronous-one-way-without-errors"></a>エラーを伴わない同期一方向  
 
- 最初のシナリオとの違いは、メッセージがサーバーに返されないことだけです。 HTTP ベースのプロトコルの場合は、ステータス (有効またはエラー) がクライアントに返されます。 これは、HTTP が、WCF プロトコルスタックの一部である要求-応答のセマンティクスを持つ唯一のプロトコルであるためです。 TCP 処理は WCF からは見えないため、クライアントに受信確認は送信されません。  
+ 最初のシナリオとの違いは、メッセージがサーバーに返されないことだけです。 HTTP ベースのプロトコルの場合は、ステータス (有効またはエラー) がクライアントに返されます。 それは、WCF プロトコル スタックのなかで HTTP プロトコルだけが、要求/応答セマンティクスを使用するからです。 TCP 処理は WCF からは見えないため、受信確認はクライアントに送信されません。  
   
 ## <a name="synchronous-one-way-with-errors"></a>エラーを伴う同期一方向  
 

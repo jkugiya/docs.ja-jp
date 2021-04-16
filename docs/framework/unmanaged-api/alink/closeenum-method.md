@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: 700c54de5af2e5c0be6940d4045019092655d46f
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638380"
 ---
 # <a name="closeenum-method"></a>CloseEnum メソッド
 
-指定された列挙体を閉じ、関連付けられているリソースを解放します。  
+指定された列挙型を閉じ、関連付けられているリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,15 +38,15 @@ HRESULT CloseEnum(
 ## <a name="parameters"></a>パラメーター  
 
  `hEnum`  
- 閉じられる列挙体のハンドル。  
+ 閉じられる列挙型のハンドル。  
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-description: '詳細については、次のページを参照してください: いいね!:: SetThreadContext メソッド'
+description: '詳細情報: ICorDebugRegisterSet::SetThreadContext メソッド'
 title: ICorDebugRegisterSet::SetThreadContext メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,17 +18,17 @@ topic_type:
 - apiref
 ms.openlocfilehash: 8d874b1864e85e477260632ad6012dbbf10aefb2
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637691"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext メソッド
 
-`SetThreadContext` は .NET Framework バージョン2.0 では実装されていません。 このメソッドは呼び出さないでください。  
+`SetThreadContext` は、.NET Framework バージョン 2.0 では実装されていません。 このメソッドは呼び出さないでください。  
   
 > [!NOTE]
-> スレッドのコンテキストを設定するには、高レベルの操作の [テキストフレーム:: SetIP](icordebugnativeframe-setip-method.md) を使用します。  
+> スレッドのコンテキストを設定するには、高レベルの操作の [ICorDebugNativeFrame::SetIP](icordebugnativeframe-setip-method.md) を使用します。  
   
 ## <a name="syntax"></a>構文  
   

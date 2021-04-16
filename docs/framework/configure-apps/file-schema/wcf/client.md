@@ -8,7 +8,7 @@ f1_keywords:
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 9765460602738f49963ea521b3f00ed7c63cc568
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638861"
@@ -46,7 +46,7 @@ ms.locfileid: "99638861"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<endpoint>](endpoint-of-client.md)|このクライアントが接続できるエンドポイントを指定するエンドポイント要素のコレクションを格納します。|
+|[\<endpoint>](endpoint-of-client.md)|このクライアントが接続可能なエンドポイントを指定するエンドポイント要素のコレクションを含みます。|
 |[\<metadata>](metadata.md)|メタデータを処理するための設定を含みます。|
 
 ### <a name="parent-elements"></a>親要素

@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「System.servicemodel」を参照してください。
+description: '詳細情報: System.ServiceModel.Channels.PeerNodeAuthenticationFailure'
 title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
 ms.openlocfilehash: 751202abd3e199a03fc4ee0bf1252d4a8027e0cb
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99634935"

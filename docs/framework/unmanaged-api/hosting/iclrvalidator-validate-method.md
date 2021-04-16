@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICLRValidator:: Validate メソッド'
+description: '詳細情報: ICLRValidator::Validate メソッド'
 title: ICLRValidator::Validate メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: a188315d44021fc8bf40be9bb9aecac436351467
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636742"
@@ -45,49 +45,49 @@ HRESULT Validate (
 ## <a name="parameters"></a>パラメーター  
 
  `veh`  
- から `IVEHandler` 検証エラーを処理するインスタンスへのポインター。  
+ [in] 検証エラーを処理する `IVEHandler` インスタンスへのポインター。  
   
  `ulAppDomainId`  
- から現在のの識別子 <xref:System.AppDomain> 。  
+ [in] 現在の <xref:System.AppDomain> の識別子。  
   
  `ulFlags`  
- から実行する必要のある検証の種類を示す、 [Validatorflags](validatorflags-enumeration.md) 値の組み合わせ。  
+ [in] 実行する必要のある検証の種類を示す、[ValidatorFlags](validatorflags-enumeration.md) 値の組み合わせ。  
   
  `ulMaxError`  
- から検証を終了するまでに許容されるエラーの最大数。  
+ [in] 検証を終了するまでに許容されるエラーの最大数。  
   
  `token`  
- から未使用.  
+ [in] 使用されていません。  
   
  `fileName`  
- から検証するファイルの名前。  
+ [in] 検証対象のファイル名。  
   
  `pe`  
- からファイルバッファーへのポインター。  
+ [in] ファイル バッファーを指すポインター。  
   
  `ulSize`  
- から検証するファイルのサイズ (バイト単位)。  
+ [in] 検証するファイルのバイト単位のサイズ。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`Validate` 正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
+|S_OK|`Validate` が正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージド コードを実行できないまたは呼び出しを正常に処理できない状態です。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
-|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーでの待機時に、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドにより E_FAIL が返されると、そのプロセス内で CLR が使用できなくなります。 ホスト メソッドに対する後続の呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** IValidator、IValidator  
+ **ヘッダー:** IValidator.idl、IValidator.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれます  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

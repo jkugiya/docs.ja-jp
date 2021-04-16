@@ -17,7 +17,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: c68d6914d47fbb711c49c1e8432cae1bf33e771f
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636352"
@@ -26,7 +26,7 @@ ms.locfileid: "99636352"
 
 指定したメモリ アドレスにあるアセンブリ イメージのバイナリ表現が取得されます。  
   
- この関数は非推奨とされます。 代わりに [ICLRStrongName:: StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md) メソッドを使用してください。  
+ この関数は非推奨とされています。 代わりに、[ICLRStrongName::StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,34 +42,34 @@ BOOLEAN StrongNameGetBlobFromImage (
 ## <a name="parameters"></a>パラメーター  
 
  `pbBase`  
- からマップされたアセンブリマニフェストのメモリアドレス。  
+ [in] マップされたアセンブリ マニフェストのメモリ アドレス。  
   
  `dwLength`  
- からにあるイメージのサイズ (バイト単位) `pbBase` 。  
+ [in] `pbBase` にあるイメージのサイズ (バイト単位)。  
   
  `pbBlob`  
- からイメージのバイナリ表現を格納するバッファー。  
+ [in] イメージのバイナリ表現を格納するバッファー。  
   
  `pcbBlob`  
- [入力、出力]要求された最大サイズ (バイト単位) `pbBlob` 。 戻り時に、の実際のサイズ (バイト単位) `pbBlob` 。  
+ [in、out] 要求された `pbBlob` の最大サイズ (バイト単位)。 返されたときの `pbBlob` の実際のサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
 
- `true` 正常に完了した場合は。それ以外の場合は `false` 。  
+ 正常に完了した場合は `true`。それ以外の場合は `false`。  
   
 ## <a name="remarks"></a>解説  
 
- 関数が `StrongNameGetBlobFromImage` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
+ `StrongNameGetBlobFromImage` 関数が正常に完了しない場合、[StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出し、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName  
+ **ヘッダー:** StrongName.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれます  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

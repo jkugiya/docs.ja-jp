@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: 67a294d1f21f50cee938ddeb14d1f30b4ccf911b
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637873"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 関数
 
-メッセージ DLL を検索して読み込みます。 メッセージ DLL が見つからないか、または読み込むことができなかった場合は0を返します。 メッセージ DLL は、名前が言語 ID または現在のディレクトリ内のサブディレクトリにある必要があります。  
+メッセージ DLL を検索して読み込みます。 メッセージ DLL が見つからなかった場合や、読み込むことができなかった場合には、0 が返されます。 メッセージ DLL は、名前が言語 ID であるサブディレクトリか、または現在のディレクトリ内にある必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ HINSTANCE WINAPI GetALinkMessageDll();
   
 ## <a name="requirements"></a>必要条件  
 
- **ヘッダー:** alink  
+ **ヘッダー:** alink.h  
   
  **ライブラリ**: alink.dll  
   

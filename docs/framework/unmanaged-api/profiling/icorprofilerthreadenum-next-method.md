@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: ICorProfilerThreadEnum:: Next メソッド'
+description: '詳細情報: ICorProfilerThreadEnum::Next メソッド'
 title: ICorProfilerThreadEnum::Next メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 74567624cbe5042b8ab63a28e7fb07e9f708a959
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636339"
@@ -57,7 +57,7 @@ HRESULT Next (    [in]  ULONG      celt,
 |S_OK|`celt` 要素が返されました。|  
 |S_FALSE|`celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
@@ -65,7 +65,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

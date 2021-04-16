@@ -1,6 +1,6 @@
 ---
 description: '詳細情報: AssemblyAttributesGoHereM クラス'
-title: AssemblyAttributesGoHereM クラス (System.runtime.compilerservices)
+title: AssemblyAttributesGoHereM クラス (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereM
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 9afa72e5adbd539acaf8dfe45b446a61862df49e
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638575"
@@ -39,9 +39,9 @@ internal sealed class AssemblyAttributesGoHereM
 
 この型への参照は、セキュリティに関連せず複数の用途を持つカスタム属性を示します。
 
-これらの型は、.NET Framework 内で "internal" とマークされ、名前空間に配置され <xref:System.Runtime.CompilerServices> ます。
+これらの型は .NET Framework 内で "内部的" とマーク付けされ、<xref:System.Runtime.CompilerServices> 名前空間にあります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 mscorlib.dll
 

@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「」を参照してください。 <certificate><identity>
+description: '詳細情報: <identity> の <certificate>'
 title: <identity> の <certificate>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
 ms.openlocfilehash: b1ccda7e8e84825cc0b2b2be123fe30be449189a
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639108"
@@ -14,7 +14,7 @@ ms.locfileid: "99639108"
 
 クライアントに対するサービスの検証に使用される X.509 証明書を指定します。  
   
-要素の値の設定の詳細については、「 [サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
+要素の値の設定について詳しくは、「[サービス ID と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\

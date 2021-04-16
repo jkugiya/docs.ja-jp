@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: aba9ecb3176f533e2d53e2e45fef3d1dc4e55077
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638419"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
 
-アセンブリオプションを列挙します。  
+アセンブリ オプションを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,30 +58,30 @@ typedef enum _AssemblyOptions {
   
 |フィールド|説明|  
 |-----------|-----------------|  
-|optAssemTitle|String-アセンブリのタイトルを表します。|  
-|optAssemDescription|String-アセンブリの説明が含まれています。|  
-|optAssemConfig|String-アセンブリ構成が含まれています。|  
-|optAssemOS|"DwOSPlatformId" としてエンコードされた文字列。|  
+|optAssemTitle|String - アセンブリのタイトルを表します。|  
+|optAssemDescription|String - アセンブリの説明を格納します。|  
+|optAssemConfig|String - アセンブリ構成を格納します。|  
+|optAssemOS|String - 次のようにエンコードされます: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion"。|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String-アセンブリロケールを格納します。|  
-|optAssemVersion|"Major. Minor. Build. Revision" としてエンコードされた文字列。|  
-|optAssemCompany|文字列-会社を含みます。|  
-|optAssemProduct|文字列-製品名が含まれます。|  
-|optAssemProductVersion|文字列 (InformationalVersion とも呼ばれます)。|  
-|optAssemCopyright|文字列-著作権情報が含まれています。|  
-|optAssemTrademark|String-商標情報が含まれています。|  
-|optAssemKeyFile|文字列 (ファイル名)。|  
-|optAssemKeyName|文字列 (キー名)。|  
+|optAssemLocale|String - アセンブリ ロケールを格納します。|  
+|optAssemVersion|String - 次のようにエンコードされます: "Major.Minor.Build.Revision"。|  
+|optAssemCompany|String - 会社名を格納します。|  
+|optAssemProduct|String - 製品名を格納します。|  
+|optAssemProductVersion|String (InformationalVersion とも呼ばれます)。|  
+|optAssemCopyright|String - 著作権情報を格納します。|  
+|optAssemTrademark|String - 商標情報を格納します。|  
+|optAssemKeyFile|String (ファイル名)。|  
+|optAssemKeyName|String (キー名)。|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool (DelaySign とも呼ばれます)。|  
-|optAssemFileVersion|"Major. Minor. Build. Revision" としてエンコードされた文字列。 ProductVersion と同じです。|  
-|optAssemSatelliteVer|"Major. Minor. Build. Revision" としてエンコードされた文字列。|  
-|optlastassemoopt|要素数のカウンター。|  
+|optAssemFileVersion|String - 次のようにエンコードされます: "Major.Minor.Build.Revision"。ProductVersion と同じです。|  
+|optAssemSatelliteVer|String - "Major.Minor.Build.Revision" としてエンコードされます。|  
+|optLastAssemOption|要素数のカウンター。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- **ヘッダー:** alink  
+ **ヘッダー:** alink.h  
   
  **ライブラリ**: alink.dll  
   

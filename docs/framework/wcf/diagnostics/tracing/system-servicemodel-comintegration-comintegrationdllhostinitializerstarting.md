@@ -1,11 +1,11 @@
 ---
-description: 詳細については、次を参照してください。 ComIntegration Dllhost/Starting
+description: '詳細情報: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarting'
 title: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarting
 ms.date: 03/30/2017
 ms.assetid: affa55c6-03b5-4664-bb9c-2b9d15620df3
 ms.openlocfilehash: 113676b051ed35ecbbbcb4e64a58849bc700d5de
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99634233"

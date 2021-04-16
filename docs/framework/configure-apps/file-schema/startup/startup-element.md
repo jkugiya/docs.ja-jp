@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 ms.openlocfilehash: 82ece56aaa05376237922b3bd54b6f15967adf8b
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639823"
@@ -39,20 +39,20 @@ ms.locfileid: "99639823"
 
 |属性|説明|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|省略可能な属性です。<br /><br /> .NET Framework 2.0 ランタイムアクティブ化ポリシーを有効にするか、.NET Framework 4 のアクティブ化ポリシーを使用するかを指定します。|
+|`useLegacyV2RuntimeActivationPolicy`|省略可能な属性です。<br /><br /> .NET Framework 2.0 のランタイム アクティブ化ポリシーを有効にするか、.NET Framework 4 のアクティブ化ポリシーを使用するかを指定します。|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
-|`true`|選択したランタイムの .NET Framework 2.0 ランタイムアクティブ化ポリシーを有効にします。これは、CLR バージョン2.0 ではなく、レガシランタイムアクティブ化手法 ( [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)など) を構成ファイルから選択されたランタイムにバインドするためです。 したがって、CLR バージョン4以降が構成ファイルから選択されている場合、以前のバージョンの .NET Framework で作成された混合モードアセンブリは、選択した CLR バージョンで読み込まれます。 この値を設定すると、CLR バージョン1.1 または CLR バージョン2.0 を同じプロセスに読み込むことができなくなり、インプロセスサイドバイサイド機能が実質的に無効になります。|
-|`false`|.NET Framework 4 以降の既定のアクティブ化ポリシーを使用します。これは、従来のランタイムアクティブ化手法で CLR バージョン1.1 または2.0 をプロセスに読み込むことができるようにするためです。 この値を設定すると、.NET Framework 4 以降でビルドされた場合を除き、混合モードのアセンブリが .NET Framework 4 以降に読み込まれなくなります。 この値は既定値です。|
+|`true`|選択したランタイムについて、.NET Framework 2.0 のランタイム アクティブ化ポリシーを有効にします。これは、従来のランタイム アクティブ化手法 ([CorBindToRuntimeEx 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)など) を、CLR バージョン 2.0 に制限するのではなく、構成ファイルから選択されたランタイムにバインドするためです。 したがって、CLR バージョン 4 以降が構成ファイルから選択されている場合、以前のバージョンの .NET Framework で作成された混合モードのアセンブリは、選択した CLR バージョンを使って読み込まれます。 この値を設定すると、CLR 1.1 または CLR 2.0 が同じプロセスにロードされなくなり、実質的にインプロセス サイドバイサイド機能が無効になります。|
+|`false`|.NET Framework 4 以降の既定のアクティブ化ポリシーを使用します。これは、従来のランタイム アクティブ化手法で、CLR バージョン 1.1 または 2.0 をプロセスに読み込めるようにするためです。 この値を設定すると、混合モードのアセンブリは、.NET Framework 4 以降でビルドされた場合を除き、.NET Framework 4 以降へは読み込まれなくなります。 これが既定値です。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 ランタイムバージョン1.1 以降でビルドされたアプリケーションでは、要素を使用する必要があり **\<supportedRuntime>** ます。|
+|[\<requiredRuntime>](requiredruntime-element.md)|バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 ランタイムのバージョン 1.1 以降でビルドされたアプリケーションは、 **\<supportedRuntime>** 要素を使用します。|
 |[\<supportedRuntime>](supportedruntime-element.md)|アプリケーションでサポートされる共通言語ランタイムのバージョンを指定します。|
 
 ### <a name="parent-elements"></a>親要素
@@ -63,20 +63,20 @@ ms.locfileid: "99639823"
 
 ## <a name="remarks"></a>解説
 
- 要素は、 **\<supportedRuntime>** ランタイムのバージョン1.1 以降を使用してビルドされたすべてのアプリケーションで使用する必要があります。 ランタイムのバージョン1.0 のみをサポートするようにビルドされたアプリケーションでは、要素を使用する必要があり **\<requiredRuntime>** ます。
+ ランタイムのバージョン 1.1 以降を使用して構築されたすべてのアプリケーションでは、 **\<supportedRuntime>** 要素を使用する必要があります。 ランタイムのバージョン 1.0 のみをサポートするアプリケーションでは、 **\<requiredRuntime>** 要素を使用する必要があります。
 
- Microsoft Internet Explorer でホストされているアプリケーションのスタートアップコードは、 **\<startup>** 要素とその子要素を無視します。
+ Microsoft Internet Explorer でホストされているアプリケーションのスタートアップ コードでは、 **\<startup>** 要素とその子要素は無視されます。
 
-## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 属性
+## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性
 
- この属性は、アプリケーションが [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)などの従来のアクティブ化パスを使用していて、以前のバージョンではなく CLR のバージョン4をアクティブ化する必要がある場合、またはアプリケーションが .NET Framework 4 でビルドされていて、以前のバージョンの .NET Framework でビルドされた混合モードのアセンブリに依存している場合 これらのシナリオでは、属性をに設定 `true` します。
+ この属性は、アプリケーションで [CorBindToRuntimeEx 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)などのレガシ アクティブ化パスが使用されていて、それらのパスで CLR の以前のバージョンではなくバージョン 4 をアクティブ化したい場合や、アプリケーションは .NET Framework 4 でビルドされているが、以前のバージョンの .NET Framework でビルドされた混合モードのアセンブリに対する依存関係がある場合に便利です。 これらのシナリオでは、この属性を `true` に設定します。
 
 > [!NOTE]
-> 属性をに設定すると、 `true` clr バージョン1.1 または clr バージョン2.0 が同じプロセスに読み込むことができなくなります。つまり、インプロセスサイドバイサイドの機能が実質的に無効になります (「 [COM 相互運用機能の side-by-side 実行](/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))」を参照してください)。
+> この属性を `true` に設定すると、CLR 1.1 または CLR 2.0 が同じプロセスにロードされなくなり、実質的にインプロセス サイドバイサイド機能が無効になります (「[COM 相互運用機能の side-by-side 実行](/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))」を参照してください)。
 
 ## <a name="example"></a>例
 
- 次の例は、構成ファイルでランタイムバージョンを指定する方法を示しています。
+ ランタイムのバージョンを構成ファイルで指定する例を次に示します。
 
 ```xml
 <!-- When used with version 1.0 of the .NET Framework runtime -->

@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「PeerNodeClosing」を参照してください。
+description: '詳細情報: System.ServiceModel.Channels.PeerNodeClosing'
 title: System.ServiceModel.Channels.PeerNodeClosing
 ms.date: 03/30/2017
 ms.assetid: 47a008f0-04d7-4cf3-9099-c056f78c9bfa
 ms.openlocfilehash: 6a9e990afcf48b0d014ae87b52f584af590e453b
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99634896"

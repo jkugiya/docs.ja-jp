@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: トレース設定とデバッグ設定スキーマ'
+description: '詳細情報: トレースおよびデバッグ設定のスキーマ'
 title: トレースおよびデバッグ設定のスキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 2429585c44952d2ee12547dab8f51662295bf02f
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639653"

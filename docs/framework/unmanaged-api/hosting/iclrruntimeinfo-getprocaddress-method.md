@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICLRRuntimeInfo:: GetProcAddress メソッド'
+description: '詳細情報: ICLRRuntimeInfo::GetProcAddress メソッド'
 title: ICLRRuntimeInfo::GetProcAddress メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 1e5d08ed118930418106b28541b4081d6acad927
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637145"
@@ -27,7 +27,7 @@ ms.locfileid: "99637145"
 
 このインターフェイスに関連付けられている共通言語ランタイム (CLR) からエクスポートされた、指定された関数のアドレスを取得します。  
   
- このメソッドは、 [GetRealProcAddress](getrealprocaddress-function.md) 関数よりも優先されます。  
+ このメソッドは、[GetRealProcAddress](getrealprocaddress-function.md) 関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,10 +40,10 @@ HRESULT GetProcAddress(
 ## <a name="parameters"></a>パラメーター  
 
  `pszProcName`  
- からエクスポートされた関数の名前。  
+ [in] エクスポートされた関数の名前。  
   
  `ppProc`  
- 入出力エクスポートされた関数のアドレス。  
+ [out] エクスポートされた関数のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
 
@@ -57,17 +57,17 @@ HRESULT GetProcAddress(
   
 ## <a name="remarks"></a>解説  
 
- このメソッドを使用すると、CLR が読み込まれますが、初期化されません。  
+ このメソッドを使用すると、CLR が読み込まれますが、初期化はされません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** メタホスト .h  
+ **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** リソースとして MSCorEE.dll に含まれている  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

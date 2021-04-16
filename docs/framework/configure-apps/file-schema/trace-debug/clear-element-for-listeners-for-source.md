@@ -1,6 +1,6 @@
 ---
-description: の詳細については、「」を参照してください。 <clear> <listeners><source>
-title: <clear> のの <listeners> 要素 <source>
+description: '詳細情報: <source> の <listeners> の <clear> 要素'
+title: <source> の <listeners> の <clear> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 ms.openlocfilehash: 731c23c73b6d149bd37672e91eca1d70431b2789
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639706"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear> のの \<listeners> 要素 \<source>
+# <a name="clear-element-for-listeners-for-source"></a>\<source> の \<listeners> の \<clear> 要素
 
 トレース ソースの `Listeners` コレクションを消去します。  
 
@@ -56,7 +56,7 @@ ms.locfileid: "99639706"
   
 ## <a name="remarks"></a>解説  
 
- `<clear>`要素は、を含む、 `Listeners` トレースソースのコレクションからすべてのリスナーを削除し <xref:System.Diagnostics.DefaultTraceListener> ます。 要素を使用 `<clear>` して、 `<add>` コレクション内に他のアクティブなリスナーが存在しないことを特定することができます。  
+ `<clear>` 要素は、トレース ソースの `Listeners` コレクションからすべてのリスナーを削除します (<xref:System.Diagnostics.DefaultTraceListener> を含む)。 `<add>` 要素を使用する前に `<clear>` 要素を使用すると、コレクション内に他にアクティブなリスナーが存在しないようにできます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
 
@@ -64,7 +64,7 @@ ms.locfileid: "99639706"
   
 ## <a name="example"></a>例  
 
- 次の例では、要素を使用し `<clear>` てリスナーを追加してから、 `<add>` `console` `textListener` `Listeners` トレースソースのコレクションに追加 `TraceSourceApp` する方法を示します。  
+ 次の例では、`<add>` 要素を使用する前に `<clear>` 要素を使用して、トレース ソース `TraceSourceApp` の `Listeners` コレクションにリスナー `console` および `textListener` を追加する方法を示します。  
   
 ```xml  
 <configuration>  

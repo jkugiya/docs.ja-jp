@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICLRStrongName:: GetHashFromBlob メソッド'
+description: '詳細情報: ICLRStrongName::GetHashFromBlob メソッド'
 title: ICLRStrongName::GetHashFromBlob メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 20d03184f57e77741e656575038e426ee37968f9
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637067"
@@ -43,36 +43,36 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>パラメーター  
 
  `pbBlob`  
- からハッシュされるメモリブロックのアドレスへのポインター。  
+ [in] ハッシュされるメモリ ブロックのアドレスへのポインター。  
   
  `cchBlob`  
- からメモリブロックの長さ (バイト単位)。  
+ [in] メモリ ブロックの長さ (バイト単位)。  
   
  `piHashAlg`  
- [入力、出力]ハッシュアルゴリズムを指定する定数。 既定のアルゴリズムには0を使用します。  
+ [in、out] ハッシュ アルゴリズムを指定する定数。 既定のアルゴリズムでは、ゼロを使用します。  
   
  `pbHash`  
- 入出力返されたハッシュバッファー。  
+ [out] 返されたハッシュ バッファー。  
   
  `cchHash`  
- から要求された最大サイズ `pbHash` 。  
+ [in] 要求された `pbHash` の最大サイズ。  
   
  `pchHash`  
- 入出力返されたのサイズ (バイト単位) `pbHash` 。  
+ [out] 返された `pbHash` のサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
 
- `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
+ メソッドが正常に完了した場合は `S_OK`、それ以外の場合は失敗を示す HRESULT 値 (リストについては、[一般的な HRESULT 値](/windows/win32/seccrypto/common-hresult-values)に関するページを参照)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** メタホスト .h  
+ **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** リソースとして MSCorEE.dll に含まれている  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

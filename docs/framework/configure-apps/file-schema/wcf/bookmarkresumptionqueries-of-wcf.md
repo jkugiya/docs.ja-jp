@@ -1,20 +1,20 @@
 ---
-description: 詳細については、「WCF」を参照してください。 <bookmarkResumptionQueries>
-title: <bookmarkResumptionQueries> WCF の
+description: '詳細情報: WCF の <bookmarkResumptionQueries>'
+title: WCF の <bookmarkResumptionQueries>
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
 ms.openlocfilehash: dfe631865549915760255b1df22ee970b806e368
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639368"
 ---
-# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries> WCF の
+# <a name="bookmarkresumptionqueries-of-wcf"></a>WCF の \<bookmarkResumptionQueries>
   
 ワークフロー インスタンス内のブックマークの再開を追跡するために使用する、クエリのコレクションを表します。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。  
   
-追跡プロファイルのクエリの詳細については、「 [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
+追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\

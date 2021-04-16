@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: f7896172e7416048352788caf7e092096924b7af
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638354"
 ---
 # <a name="embedresource-method"></a>EmbedResource メソッド
 
-埋め込みリソースを宣言します。 このメソッドは、実際にはリソースを埋め込みません。  
+埋め込みリソースを宣言します。 このメソッドでは、実際のリソース埋め込みは行われません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ HRESULT EmbedResource(
  アセンブリの ID。  
   
  `FileToken`  
- リソースが含まれているファイルのファイルトークンまたはアセンブリ ID。  
+ リソースが含まれているファイルのファイル トークンまたはアセンブリ ID。  
   
  `pszResourceName`  
  リソースの名前。  
@@ -54,15 +54,15 @@ HRESULT EmbedResource(
  RVA からのリソースのオフセット。  
   
  `dwFlags`  
- やなどのアクセシビリティ `mrPublic` フラグ `mrPrivate` 。 これらのフラグは、を使用して、この [メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
+ `mrPublic` や `mrPrivate` などのアクセシビリティ フラグ。 これらのフラグは、[DefineExportedType メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 

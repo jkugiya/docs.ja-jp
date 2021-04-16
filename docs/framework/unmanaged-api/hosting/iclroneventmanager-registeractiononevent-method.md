@@ -1,5 +1,5 @@
 ---
-description: '詳細については、次を参照してください: ICLROnEventManager:: RegisterActionOnEvent メソッド'
+description: '詳細情報: ICLROnEventManager::RegisterActionOnEvent メソッド'
 title: ICLROnEventManager::RegisterActionOnEvent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: b13209aed6a169185b42c6b9520f21f59f6be3bb
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637431"
 ---
 # <a name="iclroneventmanagerregisteractiononevent-method"></a>ICLROnEventManager::RegisterActionOnEvent メソッド
 
-指定されたイベントのコールバックポインターを登録します。  
+指定したイベントのコールバック ポインターを登録します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,38 +39,38 @@ HRESULT RegisterActionOnEvent (
 ## <a name="parameters"></a>パラメーター  
 
  `event`  
- から [Eclrevent](eclrevent-enumeration.md) 値の1つ。によって記述されるコールバックポインターを登録するイベントを示し `pAction` ます。  
+ [in] [EClrEvent](eclrevent-enumeration.md) 値の 1 つ。`pAction` によって記述されたコールバック ポインターを登録するイベントを示します。  
   
  `pAction`  
- から登録されたイベントが発生したときに呼び出される [Iactiononclrevent](iactiononclrevent-interface.md) オブジェクトへのポインター。  
+ [in] 登録されたイベントが発生したときに呼び出される [IActionOnCLREvent](iactiononclrevent-interface.md) オブジェクトへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`RegisterActionOnEvent` 正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|S_OK|`RegisterActionOnEvent` が正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージド コードを実行できないまたは呼び出しを正常に処理できない状態です。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
-|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_NOT_OWNER|呼び出し元はロックを所有していません。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているイベントがキャンセルされました。|  
+|E_FAIL|不明な壊滅的なエラーが発生しました。 メソッドにより E_FAIL が返された後、そのプロセス内で CLR が使用できなくなります。 ホスト メソッドに対する後続の呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>解説  
 
- ホストは、で説明されている2つのイベントの種類のいずれかまたは両方のコールバックを登録でき `EClrEvent` ます。 ホストは、 `ICLROnEventManager` [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) メソッドを呼び出すことによって、インターフェイスを取得します。  
+ ホストでは、`EClrEvent` によって記述された 2 つのイベントの種類のいずれか、または両方のコールバックを登録できます。 ホストでは、[ICLRControl::GetCLRManager](iclrcontrol-getclrmanager-method.md) メソッドを呼び出すことで、`ICLROnEventManager` インターフェイスが取得されます。  
   
 > [!NOTE]
-> 登録するイベントは、 `RegisterActionOnEvent` 複数の異なるスレッドから起動して、CLR のアンロードまたは無効化を通知することができます。  
+> `RegisterActionOnEvent` によって登録されるイベントをさまざまなスレッドから複数回起動すると、CLR のアンロードや無効化を通知できます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** リソースとして MSCorEE.dll に含まれている  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

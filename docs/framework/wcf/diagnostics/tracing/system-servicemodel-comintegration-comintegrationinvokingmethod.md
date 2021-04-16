@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「ComIntegrationInvokingMethod」を参照してください。
+description: '詳細情報: System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod'
 title: System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod
 ms.date: 03/30/2017
 ms.assetid: dea076f0-1c05-40af-a329-c3e3f7a805c1
 ms.openlocfilehash: d8115792d85213e1881a6a82d1fa445a7909ff79
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99633986"

@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorProfilerThreadEnum:: Reset メソッド'
+description: '詳細情報: ICorProfilerThreadEnum::Reset メソッド'
 title: ICorProfilerThreadEnum::Reset メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 6baa4bd62fab10c27140f8b47e1d556aec285668
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636336"
@@ -41,7 +41,7 @@ HRESULT Reset();
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

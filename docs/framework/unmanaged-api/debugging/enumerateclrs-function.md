@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「列挙 Ateclrs 関数」を参照してください。
+description: '詳細情報: EnumerateCLRs 関数'
 title: EnumerateCLRs 関数
 ms.date: 03/30/2017
 api_name:
@@ -19,7 +19,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: 75124ef1e1e8588cb3d709161c3c1119e960be9e
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637782"
@@ -73,16 +73,16 @@ HRESULT EnumerateCLRs (
   
  Windows オペレーティング システムでは、`debuggeePID` がプロセス識別子に対応づけられます。  
   
- `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 割り当てられたメモリを解放するには、 [CloseCLREnumeration 関数](closeclrenumeration-function.md)を呼び出す必要があります。  
+ `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 割り当てられているメモリを解放するには、[CloseCLREnumeration](closeclrenumeration-function.md) 関数を呼び出す必要があります。  
   
  両方の配列パラメーターを null に設定してこの関数を呼び出すことで、対象プロセス内の CLR の数を取得できます。 この数から、呼び出し元は、作成されるバッファーのサイズを推論できます (`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** dbgshim. h  
+ **ヘッダー:** dbgshim.h  
   
  **ライブラリ:** dbgshim.dll  
   
- **.NET Framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:**  3.5 SP1

@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「System.servicemodel」を参照してください。
+description: '詳細情報: System.ServiceModel.Channels.PeerNodeAuthenticationTimeout'
 title: System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 ms.date: 03/30/2017
 ms.assetid: f294ee94-be83-426c-b40d-6e8a4e5e987c
 ms.openlocfilehash: bd23b607c3bd7e1f52a93bd0235b8a55d080302e
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99634922"

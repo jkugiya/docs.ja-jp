@@ -1,5 +1,5 @@
 ---
-description: '詳細については、次の情報を参照してください: テキストボックス'
+description: '詳細情報: ICorDebugNativeFrame::GetIP メソッド'
 title: ICorDebugNativeFrame::GetIP メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: f36a14c38aa6c3754cf78eca8c657adc76469067
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637836"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP メソッド
 
-命令ポインターが現在設定されているネイティブコードのオフセット位置を取得します。  
+命令ポインターが現在設定されているネイティブ コードのオフセット位置を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +38,13 @@ HRESULT GetIP (
 ## <a name="parameters"></a>パラメーター  
 
  `pnOffset`  
- 入出力ネイティブコード内のオフセット位置を指すポインター。  
+ [out] ネイティブ コード内のオフセット位置を指すポインター。  
   
 ## <a name="remarks"></a>解説  
 
- この "テキストフレーム" によって表されるスタックフレームがアクティブな場合、オフセットは次に実行される命令のアドレスになります。 このスタックフレームがアクティブでない場合、オフセットは、スタックフレームが再アクティブ化されたときに実行される次の命令のアドレスになります。  
+ この "ICorDebugNativeFrame" によって表されるスタック フレームがアクティブな場合、オフセットは次に実行される命令のアドレスになります。 このスタック フレームがアクティブでない場合、オフセットは、スタック フレームが再アクティブ化されたときに実行される次の命令のアドレスになります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
@@ -52,6 +52,6 @@ HRESULT GetIP (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目

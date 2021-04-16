@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: <listeners> の要素 <source>'
+description: '詳細情報: <source> の <listeners> 要素'
 title: <source> の <listeners> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 ms.openlocfilehash: 6b857d4b114366d268eec1859afc7f33cc5b04a2
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639642"
 ---
 # <a name="listeners-element-for-source"></a>\<source> の \<listeners> 要素
 
-のコレクション内のリスナーを追加または削除 <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource> します。 リスナーは、ログ、ウィンドウ、テキストファイルなど、適切なターゲットにトレース出力を送信します。  
+<xref:System.Diagnostics.TraceSource> の <xref:System.Diagnostics.TraceSource.Listeners%2A> コレクション内のリスナーを追加または削除します。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "99639642"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|`Listeners` コレクションにリスナーを追加します。|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|コレクションからリスナーを削除 `Listeners` します。|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|`Listeners` コレクションからリスナーを削除します。|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|トレース ソースの `Listeners` コレクションを消去します。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -68,7 +68,7 @@ ms.locfileid: "99639642"
   
 ## <a name="example"></a>例  
 
- 次の例は、要素を使用して、 `<listeners>` コンソールトレースリスナーをソースに追加し、既定のトレースリスナーを削除する方法を示して `mySource` います。  
+ 次の例は、`<listeners>` 要素を使用してコンソール トレース リスナーを `mySource` ソースに追加し、既定のトレース リスナーを削除する方法を示しています。  
   
 ```xml  
 <configuration>  

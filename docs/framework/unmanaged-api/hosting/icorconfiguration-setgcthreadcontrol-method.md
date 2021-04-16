@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICorConfiguration:: SetGCThreadControl メソッド'
+description: '詳細情報: ICorConfiguration::SetGCThreadControl メソッド'
 title: ICorConfiguration::SetGCThreadControl メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: 8b9388bdefb9da2ce51b62ab68eeee54645e43ad
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99636640"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>ICorConfiguration::SetGCThreadControl メソッド
 
-ガベージコレクションに対してブロックされる非ランタイムタスクのスレッドをスケジュールするためのコールバックインターフェイスを設定します。  
+本来ならガベージ コレクションのためにブロックされる非ランタイム タスク用のスレッドをスケジュールするための、コールバック インターフェイスを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +38,21 @@ HRESULT SetGCThreadControl (
 ## <a name="parameters"></a>パラメーター  
 
  `pGCThreadControl`  
- から非ランタイムタスクのスレッドの中断をホストに通知する [Igcthreadcontrol](igcthreadcontrol-interface.md) オブジェクトへのポインター。  
+ [in] 非ランタイム タスク用のスレッドの中断をホストに通知する [IGCThreadControl](igcthreadcontrol-interface.md) オブジェクトへのポインター。  
   
 ## <a name="remarks"></a>解説  
 
- ホストは、スレッドを再スケジュールするかどうかにかかわらず、 [Igcthreadcontrol:: ThreadIsBlockingForSuspension](igcthreadcontrol-threadisblockingforsuspension-method.md) コールバック内で選択できます。  
+ ホストでは、スレッドを再スケジュールするかどうかを [IGCThreadControl::ThreadIsBlockingForSuspension](igcthreadcontrol-threadisblockingforsuspension-method.md) コールバック内で選択できます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれます  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

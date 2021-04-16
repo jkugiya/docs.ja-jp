@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「」を参照してください。 <claimTypeRequirements><message>
+description: '詳細情報: <message> の <claimTypeRequirements>'
 title: <message> の <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
 ms.openlocfilehash: a393a075c64f4a46e5ac055b3c417514861c9661
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638900"

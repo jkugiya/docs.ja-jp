@@ -18,14 +18,14 @@ topic_type:
 - apiref
 ms.openlocfilehash: c91eb563c14b442a22db8f328287c10e5cc9a63c
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99638328"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute メソッド
 
-を呼び出して、アセンブリレベルのカスタム属性を設定します。  
+アセンブリ レベルのカスタム属性を設定するために呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ HRESULT EmitAssemblyCustomAttribute(
  アセンブリの ID。  
   
  `FileToken`  
- 属性をなするファイル。 がバインドされ `AssemblyID` ていない .netmodule を示していない場合は、NULL にすることができます。  
+ 属性を定義するファイル。 `AssemblyID` がバインドされていない netmodule を示していない場合は、NULL にすることができます。  
   
  `tkType`  
  カスタム属性の型。  
@@ -66,11 +66,11 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="return-value"></a>戻り値  
 
- メソッドが成功した場合は S_OK を返します。  
+ メソッドが成功した場合は、S_OK が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
- Alink. h が必要です。  
+ alink.h を必要とします  
   
 ## <a name="see-also"></a>関連項目
 

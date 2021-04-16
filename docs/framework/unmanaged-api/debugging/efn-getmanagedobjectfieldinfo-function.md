@@ -17,12 +17,12 @@ topic_type:
 - apiref
 ms.openlocfilehash: 749ab286a86db07c1b66ff2b61ff073d15334800
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637888"
 ---
-# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN \_ GetManagedObjectFieldInfo 関数
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 関数
 
 指定したオブジェクト ポインターとフィールド名を使用して、オブジェクトの先頭からフィールドまでのオフセットとフィールドの値を取得します。  
   
@@ -41,31 +41,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 ## <a name="parameters"></a>パラメーター  
 
  `Client`  
- からデバッグクライアントへのポインター。  
+ [in] デバッグ クライアントへのポインター。  
   
  `objAddr`  
- からマネージオブジェクトポインター。  
+ [in] マネージド オブジェクト ポインター。  
   
  szFieldName  
- からフィールド名へのマネージオブジェクトポインター。  
+ [in] フィールド名へのマネージド オブジェクト ポインター。  
   
  `pValue`  
- 入出力フィールド値。 このパラメーターには、null を指定できます。  
+ [out] フィールド値。 このパラメーターには、null を指定できます。  
   
  `pOffset`  
- 入出力からフィールドへのオフセット。 `objAddr` このパラメーターには、null を指定できます。  
+ [out] `objAddr` からフィールドまでのオフセット。 このパラメーターには、null を指定できます。  
   
 ## <a name="remarks"></a>解説  
 
- オフセットが0の場合、オフセットは書き込まれません。  
+ オフセットが 0 の場合、オフセットは書き込まれません。  
   
- 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 でエラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
+ 現在コンテキスト内にあるスレッドにマネージド コードがない場合、この関数では、ファシリティ値が 0xa0 でエラー コードが 0x1000 の HRESULT SOS_E_NOMANAGEDCODE が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace  
+ **ヘッダー:** SOS_Stacktrace.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

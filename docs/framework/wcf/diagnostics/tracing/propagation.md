@@ -5,14 +5,14 @@ ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: 43ecbf7b8db66f26accc058501730300a2891284
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99635598"
 ---
 # <a name="propagation"></a>伝達
 
-このトピックでは、Windows Communication Foundation (WCF) トレースモデルでのアクティビティの伝達について説明します。  
+このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティの伝達について説明します。  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>伝達を使用したエンドポイント間でのアクティビティの関連付け  
 
@@ -24,7 +24,7 @@ ms.locfileid: "99635598"
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- アクティビティの伝達は構成可能な機能であり、WCF によって送信メッセージにヘッダーが追加されます。これには、TLS のアクティビティ ID が含まれます。 サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。  
+ アクティビティの伝達は構成可能な機能です。この機能を構成すると、WCF は TLS のアクティビティ ID が含まれたヘッダーを送信メッセージに追加します。 サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。  
   
 ## <a name="propagation-definition"></a>伝達の定義  
 
@@ -78,7 +78,7 @@ ms.locfileid: "99635598"
 
  エンドポイント間でアクティビティ ID が伝達されると、メッセージの受信側は、その (伝達された) アクティビティ ID を使用して Start トレースと Stop トレースを出力します。 したがって、各トレース ソースごとに、該当の gAId を持つ Start/Stop トレースが存在することになります。 複数のエンドポイントが同じプロセス内に存在し、同じトレース ソース名を使用している場合、同じ lAId (同じ gAId、同じトレース ソース、同じプロセス) を持つ複数の Start と Stop が作成されます。  
   
-## <a name="synchronization"></a>同期  
+## <a name="synchronization"></a>Synchronization  
 
  異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。 ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。 具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。  
   

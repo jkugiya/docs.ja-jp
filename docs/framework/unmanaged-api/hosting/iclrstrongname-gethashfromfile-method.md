@@ -1,5 +1,5 @@
 ---
-description: '詳細について: ICLRStrongName:: GetHashFromFile メソッド'
+description: '詳細情報: ICLRStrongName::GetHashFromFile メソッド'
 title: ICLRStrongName::GetHashFromFile メソッド
 ms.date: 03/30/2017
 api_name:
@@ -18,7 +18,7 @@ topic_type:
 - apiref
 ms.openlocfilehash: e930f1c21e5b0be441fe44ad352b2ef2f43d0f67
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99637054"
@@ -42,37 +42,37 @@ HRESULT GetHashFromFile (
 ## <a name="parameters"></a>パラメーター  
 
  `szFilePath`  
- からハッシュするファイルの名前。  
+ [in] ハッシュするファイルの名前。  
   
  `piHashAlg`  
- [入力、出力]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されているものです。 が0に設定されている場合は、 `piHashAlg` 既定のアルゴリズム CALG_SHA-1 が使用されます。  
+ [in、out] ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されているものです。 `piHashAlg` が 0 に設定されている場合は、既定のアルゴリズム CALG_SHA-1 が使用されます。  
   
  `pbHash`  
- 入出力生成されたハッシュを格納しているバイト配列。  
+ [out] 生成されたハッシュを格納しているバイト配列。  
   
  `cchHash`  
- からが指すバッファーの最大サイズ `pbHash` 。  
+ [in] `pbHash` が指すバッファーの最大サイズ。  
   
  `pchHash`  
- 入出力返されたのサイズ (バイト単位) `pbHash` 。  
+ [out] 返された `pbHash` のサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
 
- `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
+ メソッドが正常に完了した場合は `S_OK`、それ以外の場合は失敗を示す HRESULT 値 (リストについては、[一般的な HRESULT 値](/windows/win32/seccrypto/common-hresult-values)に関するページを参照)。  
   
 ## <a name="remarks"></a>解説  
 
- このメソッドは [ICLRStrongName:: GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md) メソッドと同じですが、ファイル名の指定は Unicode ではなく ANSI です。  
+ このメソッドは [ICLRStrongName::GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md) メソッドと基本的に同じですが、ファイル名の指定が Unicode ではなく ANSI である点が異なります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** メタホスト .h  
+ **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれます  
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

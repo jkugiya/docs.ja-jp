@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 ms.openlocfilehash: e9d0a88a65f72ec03f3b2b124920d8265b8bf0c9
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639849"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime> 要素
 
-バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 この要素は非推奨とされ、使用できなくなります。 [`supportedRuntime`](supportedruntime-element.md)代わりに、要素を使用してください。
+バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 この要素は非推奨です。今後は使用しないでください。 代わりに、[`supportedRuntime`](supportedruntime-element.md) 要素を使用してください。
 
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<startup>**](startup-element.md)  
@@ -41,15 +41,15 @@ safemode="true|false"/>
 
 |属性|説明|
 |---------------|-----------------|
-|`version`|省略可能な属性です。<br /><br /> このアプリケーションでサポートされている .NET Framework のバージョンを指定する文字列値。 文字列値は、.NET Framework のインストールルートの下にあるディレクトリ名と一致する必要があります。 文字列値の内容は解析されません。|
-|`safemode`|省略可能な属性です。<br /><br /> ランタイムスタートアップコードがレジストリを検索してランタイムバージョンを確認するかどうかを指定します。|
+|`version`|省略可能な属性です。<br /><br /> このアプリケーションがサポートする .NET Framework のバージョンを指定する文字列値。 この文字列値は、.NET Framework のインストール ルートの下にあるディレクトリ名と一致する必要があります。 文字列値の内容は解析されません。|
+|`safemode`|省略可能な属性です。<br /><br /> ランタイムのスタートアップ コードでレジストリを検索してランタイム バージョンを確認するかどうかを指定します。|
 
-## <a name="safemode-attribute"></a>セーフ属性
+## <a name="safemode-attribute"></a>safemode 属性
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
-|`false`|ランタイムスタートアップコードによって、レジストリが検索されます。 これが既定値です。|
-|`true`|ランタイムスタートアップコードでは、レジストリが検索されません。|
+|`false`|ランタイム スタートアップ コードで、レジストリを検索します。 これが既定値です。|
+|`true`|ランタイム スタート アップコードで、レジストリを検索しません。|
 
 ### <a name="child-elements"></a>子要素
 
@@ -60,23 +60,23 @@ safemode="true|false"/>
 |要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
-|`startup`|要素が含まれてい `<requiredRuntime>` ます。|
+|`startup`|`<requiredRuntime>` 要素が格納されます。|
 
 ## <a name="remarks"></a>解説
 
- ランタイムのバージョン1.0 のみをサポートするようにビルドされたアプリケーションでは、要素を使用する必要があり `<requiredRuntime>` ます。 ランタイムのバージョン1.1 以降を使用してビルドされたアプリケーションでは、要素を使用する必要があり `<supportedRuntime>` ます。
+ ランタイムのバージョン 1.0 のみをサポートするアプリケーションでは、`<requiredRuntime>` 要素を使用する必要があります。 ランタイムのバージョン 1.1 以降を使用しているアプリケーションでは、`<supportedRuntime>` 要素を使用する必要があります。
 
 > [!NOTE]
-> [Corbindtoruntimebycfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)関数を使用して構成ファイルを指定する場合は、すべてのバージョンのランタイムで要素を使用する必要があり `<requiredRuntime>` ます。 `<supportedRuntime>` [Corbindtoruntimebycfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)を使用する場合、要素は無視されます。
+> [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) 関数を使用して構成ファイルを指定する場合は、すべてのバージョンのランタイムに `<requiredRuntime>` 要素を使用する必要があります。 [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) を使用すると、`<supportedRuntime>` 要素は無視されます。
 
- `version`属性文字列は、.NET Framework の指定したバージョンのインストールフォルダー名と一致している必要があります。 この文字列は解釈されません。 ランタイムスタートアップコードが一致するフォルダーを見つけられない場合、ランタイムは読み込まれません。スタートアップコードによってエラーメッセージが表示され、終了します。
+ `version` 属性の文字列は、指定されたバージョンの .NET Framework のインストール フォルダー名と一致している必要があります。 この文字列は解釈されません。 ランタイム スタートアップ コードで一致するフォルダーが見つからなかった場合、ランタイムは読み込まれません。スタートアップ コードによってエラー メッセージが表示され、操作が終了します。
 
 > [!NOTE]
-> Microsoft Internet Explorer でホストされているアプリケーションのスタートアップコードは、要素を無視し `<requiredRuntime>` ます。
+> Microsoft Internet Explorer でホストされているアプリケーションのスタートアップ コードでは、`<requiredRuntime>` 要素は無視されます。
 
 ## <a name="example"></a>例
 
-次の例は、構成ファイルでランタイムバージョンを指定する方法を示しています。
+ランタイムのバージョンを構成ファイルで指定する例を次に示します。
 
 ```xml
 <configuration>

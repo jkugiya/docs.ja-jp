@@ -1,11 +1,11 @@
 ---
-description: 詳細については、「PeerNeighborMessageReceived」を参照してください。
+description: '詳細情報: System.ServiceModel.Channels.PeerNeighborMessageReceived'
 title: System.ServiceModel.Channels.PeerNeighborMessageReceived
 ms.date: 03/30/2017
 ms.assetid: c787b86c-08c9-4d44-80ce-a6d189deb732
 ms.openlocfilehash: b6ae78ddd9fad5c7044a5f298917139abc19aae4
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99635130"

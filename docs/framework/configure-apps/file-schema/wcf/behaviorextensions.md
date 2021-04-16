@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: 0bd641f8e26d309c592c07bcc19ff02897fe71cd
 ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2021
 ms.locfileid: "99639524"
@@ -52,7 +52,7 @@ ms.locfileid: "99639524"
   
  攻撃者が CLR 検索順序を悪用して、未承認のコードを実行する可能性があります。 完全修飾名 (厳密な名前) を使用することで型が一意に識別され、システムのセキュリティが強化されます。  
   
- 詳細については、「 [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md) 」と「」を参照してください <xref:System.AppDomain.TypeResolve> 。  
+ 詳細については、「[ランタイム アセンブリ検索](../../../deployment/how-the-runtime-locates-assemblies.md)」および <xref:System.AppDomain.TypeResolve> を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

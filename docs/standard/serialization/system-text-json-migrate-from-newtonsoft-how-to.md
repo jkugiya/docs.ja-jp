@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 217e45f0479f432d0cc3fb919fed752b497ce7a6
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 97c16d773805a0fce61fe224b6a23f1f876c2ac2
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231447"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075383"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
@@ -550,7 +550,11 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 * `DateTimeZoneHandling` 設定を使用すると、すべての `DateTime` 値を UTC 日付としてシリアル化できます。
 * `DateFormatString` 設定と `DateTime` コンバーターを使用すると、日付文字列の形式をカスタマイズできます。
 
-<xref:System.Text.Json> は、RFC 3339 プロファイルを含む ISO 8601-1:2019 をサポートしています。 この形式は広く採用されており、明確で、正確にラウンドトリップを行います。 他の形式を使用するには、カスタム コンバーターを作成します。 詳細については、「[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)」を参照してください。
+<xref:System.Text.Json> は、RFC 3339 プロファイルを含む ISO 8601-1:2019 をサポートしています。 この形式は広く採用されており、明確で、正確にラウンドトリップを行います。 他の形式を使用するには、カスタム コンバーターを作成します。 たとえば、次のコンバーターでは、タイム ゾーン形式 (`/Date(1590863400000-0700)/` などの値) で Unix エポックを使用する JSON をシリアル化および逆シリアル化します。
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterUnixEpochDate.cs" id="ConverterOnly":::
+
+詳細については、「[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)」を参照してください。
 
 ### <a name="callbacks"></a>コールバック
 

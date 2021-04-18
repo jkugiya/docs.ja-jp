@@ -1,13 +1,13 @@
 ---
 title: C# の予約済み属性:Null 許容のスタティック分析
-ms.date: 02/02/2021
+ms.date: 04/09/2021
 description: これらの属性は、null 許容および null 非許容参照型に対するより適切な静的分析を提供するために、コンパイラによって解釈されます。
-ms.openlocfilehash: 50fb987ed5c8200e5418d2ea0211b32626538176
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 747ef358455e67cb718269fdbb1aedf7c7d00d15
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652686"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494143"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>予約済み属性はコンパイラの null 状態の静的分析に寄与する
 
@@ -20,9 +20,7 @@ API のセマンティクスについての情報をコンパイラに提供す�
 
 よくある例から始めましょう。 ライブラリに、リソース文字列を取得するための次の API があるとします。
 
-```csharp
-bool TryGetMessage(string key, out string message)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="TryGetExample" :::
 
 前述の例では、.NET のよくある `Try*` パターンに従っています。 この API には、2 つの参照引数 (`key` および `message` パラメーター) があります。 この API には、これらの引数の null 性に関連する次の規則があります。
 
@@ -56,26 +54,11 @@ API の規則は、`TryGetValue` API シナリオで見たとおり、より複�
 
 適切な既定値が設定されているため、`null` を返すことのない読み取りおよび書き込みプロパティについて考えてみます。 呼び出し元では、その既定値に設定するときに、set アクセサーに `null` を渡します。 たとえば、チャット ルームで画面名を要求するメッセージング システムがあるとします。 何も指定されていない場合、システムによってランダムな名前が生成されます。
 
-```csharp
-public string ScreenName
-{
-   get => _screenName;
-   set => _screenName = value ?? GenerateRandomScreenName();
-}
-private string _screenName;
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="PropertyExample" :::
 
 null 許容の認識されないコンテキストで上記のコードをコンパイルする場合、何も問題はありません。 null 許容参照型を有効にすると、`ScreenName` プロパティが null 非許容参照になります。 これは `get` アクセサーでは正しい動作です。`null` が返されることはありません。 呼び出し元では、返されたプロパティで `null` をチェックする必要はありません。 しかし、ここでプロパティを `null` に設定すると、警告が生成されます。 この種類のコードをサポートするには、次のコードに示すように、<xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> 属性をプロパティに追加します。
 
-```csharp
-[AllowNull]
-public string ScreenName
-{
-   get => _screenName;
-   set => _screenName = value ?? GenerateRandomScreenName();
-}
-private string _screenName = GenerateRandomScreenName();
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="AllowNullableProperty" :::
 
 これと、この記事で説明されている他の属性を使用するには、<xref:System.Diagnostics.CodeAnalysis> の `using` ディレクティブを追加する必要がある場合があります。 属性は、`set` アクセサーではなく、プロパティに適用されます。 `AllowNull` 属性では *事前条件* を指定し、引数にのみ適用されます。 `get` アクセサーには戻り値がありますが、パラメーターはありません。 したがって、`AllowNull` 属性は `set` アクセサーにのみ適用されます。
 
@@ -88,26 +71,11 @@ private string _screenName = GenerateRandomScreenName();
 
 `DisallowNull` を使用するシナリオと比較してください。この属性を使用して、null 許容参照型の引数を `null` にできないことを指定します。 `null` は既定値であるが、クライアントでは null 以外の値にしか設定できないというプロパティについて考えてみます。 次のコードがあるとします。
 
-```csharp
-public string ReviewComment
-{
-    get => _comment;
-    set => _comment = value ?? throw new ArgumentNullException(nameof(value), "Cannot set to null");
-}
-string _comment;
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="MessagingExample" :::
 
 上記のコードは、`ReviewComment` が `null` である可能性はあるが、`null` に設定できないという設計を表すのに最適な方法です。 このコードが null 許容認識になると、<xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute?displayProperty=nameWithType> を使用して、呼び出し元に対して、この概念をより明確に表すことができます。
 
-```csharp
-[DisallowNull]
-public string? ReviewComment
-{
-    get => _comment;
-    set => _comment = value ?? throw new ArgumentNullException(nameof(value), "Cannot set to null");
-}
-string? _comment;
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="DisallowNullProperty" :::
 
 null 許容コンテキストでは、`ReviewComment` `get` アクセサーから `null` の既定値が返される可能性があります。 コンパイラからは、アクセスの前にチェックする必要があることが警告されます。 さらに、`null` である可能性があっても、呼び出し元で明示的に `null` に設定できないことが、呼び出し元に警告されます。 `DisallowNull` 属性では、"*事前条件*" も指定され、これは `get` アクセサーには影響しません。 以下について、これらの特性を監視する場合は、`DisallowNull` 属性を使用します。
 
@@ -133,41 +101,27 @@ public Customer FindCustomer(string lastName, string firstName)
 
 「[ジェネリック定義と NULL 値の許容](../../nullable-migration-strategies.md#generic-definitions-and-nullability)」に記載されている理由により、その手法はジェネリック メソッドでは機能しません。 同様のパターンに従うジェネリック メソッドがある場合があります。
 
-```csharp
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="FindMethod" :::
 
 戻り値が `T?` であることを指定することはできません。 検索された項目が見つからない場合、このメソッドからは `null` が返されます。 戻り値の型として `T?` を宣言することはできないため、メソッドの戻り値に `MaybeNull` 注釈を追加します。
 
-```csharp
-[return: MaybeNull]
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="FindMethodMaybeNull" :::
 
 前のコードでは、コントラクトは null 非許容型を意味するが、戻り値は実際には null である "*可能性がある*" ことを呼び出し元に通知します。  API は null 非許容型で、通常はジェネリック型パラメーターである必要はあるが、`null` が返されるインスタンスが存在する可能性がある場合は、`MaybeNull` 属性を使用します。
 
-型が null 許容参照型である場合でも、戻り値あるいは `out` または `ref` 引数が null でないことを指定することもできます。 配列が、多数の要素を保持するのに十分な大きさであることを保証するメソッドについて考えてみます。 引数に容量がない場合、ルーチンで新しい配列を割り当てて、そこに既存のすべての要素をコピーします。 引数が `null` である場合は、ルーチンで新しいストレージを割り当てます。 十分な容量がある場合、ルーチンでは何も行いません。
+型が null 許容参照型である場合でも、戻り値または引数が null でないことを指定することもできます。 次のメソッドは、その最初の引数が `null` である場合にスローするヘルパー メソッドです。
 
-```csharp
-public void EnsureCapacity<T>(ref T[] storage, int size)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="ThrowWhenNull" :::
 
 次のように、このルーチンを呼び出すことができます。
 
-```csharp
-// messages has the default value (null) when EnsureCapacity is called:
-EnsureCapacity<string>(ref messages, 10);
-// messages is not null.
-EnsureCapacity<string>(messages, 50);
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="TestThrowHelper" :::
 
-null 参照型を有効にした後、確実に前のコードが警告なしでコンパイルされるようにする必要があります。 メソッドから制御が戻ったときに、`storage` 引数が null でないことが保証されます。 しかし、null 参照で `EnsureCapacity` を呼び出すことはできます。 `storage` を null 許容参照型にして、`NotNull` 事後条件をパラメーター宣言に追加することができます。
+null 参照型を有効にした後、確実に前のコードが警告なしでコンパイルされるようにする必要があります。 メソッドから制御が戻ったときに、`value` 引数が null でないことが保証されます。 しかし、null 参照で `ThrowWhenNull` を呼び出すことはできます。 `value` を null 許容参照型にして、`NotNull` 事後条件をパラメーター宣言に追加することができます。
 
-```csharp
-public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="NotNullThrowHelper" :::
 
-上記のコードは、既存のコントラクトを明確に表しています。呼び出し元では `null` 値を持つ変数を渡すことはできますが、戻り値は null になることはないことが保証されます。 `NotNull` 属性は、`null` が引数として渡される可能性があるが、メソッドから制御が戻ったときにその引数が null でないことが保証される、`ref` および `out` 引数に最も役立ちます。
+上記のコードは、既存のコントラクトを明確に表しています。呼び出し元では `null` 値を持つ変数を渡すことはできますが、メソッドが例外をスローせずに制御を返す場合、引数が null になることはありません。
 
 無条件の事後条件は、次の属性を使用して指定します。
 
@@ -179,56 +133,40 @@ public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 `string` メソッド <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> は見慣れたものかもしれません。 引数が null または空の文字列の場合、このメソッドから `true` が返されます。 これは、null チェックの形式です。メソッドから `false` が返された場合、呼び出し元で引数の null チェックを行う必要はありません。 この null 許容認識のようなメソッドを作成するには、引数を null 許容参照型に設定し、`NotNullWhen` 属性を追加します。
 
 ```csharp
-bool IsNullOrEmpty([NotNullWhen(false)] string? value);
+bool IsNullOrEmpty([NotNullWhen(false)] string? value)
 ```
 
 これにより、戻り値が `false` であるコードでは、null チェックを行う必要がないことがコンパイラに通知されます。 属性を追加すると、`IsNullOrEmpty` で必要な null チェックが実行されることがコンパイラの静的分析に通知されます。`false` が返された場合、引数は `null` ではありません。
 
-```csharp
-string? userInput = GetUserInput();
-if (!string.IsNullOrEmpty(userInput))
-{
-   int messageLength = userInput.Length; // no null check needed.
-}
-// null check needed on userInput here.
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="NullCheckExample" :::
 
 .NET Core 3.0 の場合、上記のように <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> メソッドに注釈が付けられます。 コードベースには、オブジェクトの状態で null 値をチェックする、同様のメソッドが存在する場合があります。 コンパイラではカスタムの null チェック メソッドが認識されないため、注釈を自分で追加する必要があります。 属性を追加すると、コンパイラの静的分析で、テストされた変数が null チェックされたかどうが認識されます。
 
 これらの属性のもう 1 つの用途は、`Try*` パターンです。 `ref` および `out` 変数の事後条件は、戻り値を通じて伝達されます。 前述のこのメソッドについて考えてみます。
 
-```csharp
-bool TryGetMessage(string key, out string message)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="TryGetExample" :::
 
 上記のメソッドは、一般的な .NET 表現形式に従います。戻り値は、`message` が見つかった値に設定されているかどうか、またはメッセージが見つからない場合は、既定値に設定されているかどうかを示します。 メソッドから `true` が返された場合、`message` の値は null ではありません。それ以外の場合、メソッドでは `message` が null に設定されます。
 
 `NotNullWhen` 属性を使用して、その表現方法を伝達することができます。 null 許容参照型のシグネチャを更新する場合は、`message` を `string?` にして、属性を追加します。
 
-```csharp
-bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="NotNullWhenTryGet" :::
 
 前述の例では、`TryGetMessage` から `true` が返された場合、`message` の値は null ではないと認識されます。 同じように、コードベースで同様のメソッドに注釈を付ける必要があります。引数は `null` である可能性があり、メソッドから `true` が返された場合は null ではないと認識されます。
 
 最後にもう 1 つ属性があります。これも必要になる可能性があります。 戻り値の null 状態は、1 つまたは複数の引数の null 状態に依存する場合があります。 特定の引数が `null` でない場合は常に、これらのメソッドから null 以外の値が返されます。 これらのメソッドに正しく注釈を付けるには、`NotNullIfNotNull` 属性を使用します。 次のメソッドがあるとします。
 
-```csharp
-string GetTopLevelDomainFromFullUrl(string url);
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="ExtractComponent" :::
 
 `url` 引数が null でない場合、出力は `null` ではありません。 null 許容参照を有効にすると、API で null 引数が受け入れられることがない場合、そのシグネチャは正常に機能します。 しかし、引数が null である可能性がある場合は、戻り値も null である可能性があります。 シグネチャを次のコードに変更できます。
 
 ```csharp
-string? GetTopLevelDomainFromFullUrl(string? url);
+string? GetTopLevelDomainFromFullUrl(string? url)
 ```
 
 これも機能しますが、多くの場合、呼び出し元での追加の `null` チェックの実装が強制されます。 コントラクトは、引数 `url` が `null` である場合にのみ、戻り値が `null` になるというものです。 このコントラクトを表すには、次のコードに示すように、このメソッドに注釈を付けます。
 
-```csharp
-[return: NotNullIfNotNull("url")]
-string? GetTopLevelDomainFromFullUrl(string? url);
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="ExtractComponentIfNotNull" :::
 
 戻り値と引数の両方に、`?` で注釈が付けられています。これは、どちらも `null` である可能性があることを示しています。 `url` 引数が `null` でない場合、属性によって、戻り値が null にならないことがさらに明確になります。
 
@@ -254,44 +192,11 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 
 最初のケースでは、メソッド宣言に `DoesNotReturn` 属性を追加できます。 コンパイラは、3 つの方法で役立ちます。 1 つ目では、例外をスローせずにメソッドを終了できるパスがある場合、コンパイラから警告が出されます。 2 つ目では、コンパイラによって、適切な `catch` 句が検出されるまで、そのメソッドの呼び出しの後にコードが "*到達できない*" ものとしてマークされます。 3 つ目では、到達できないコードが null 状態に影響することはありません。 たとえば、次のメソッドがあったとします。
 
-```csharp
-[DoesNotReturn]
-private void FailFast()
-{
-    throw new InvalidOperationException();
-}
-
-public void SetState(object containedField)
-{
-    if (!isInitialized)
-    {
-        FailFast();
-    }
-
-    // unreachable code:
-    _field = containedField;
-}
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="DoesNotReturn":::
 
 2 つ目のケースでは、メソッドのブール型パラメーターに `DoesNotReturnIf` 属性を追加します。 前の例は次のように変更できます。
 
-```csharp
-private void FailFast([DoesNotReturnIf(false)] bool isValid)
-{
-    if (!isValid)
-    {
-        throw new InvalidOperationException();
-    }
-}
-
-public void SetState(object containedField)
-{
-    FailFast(isInitialized);
-
-    // unreachable code when "isInitialized" is false:
-    _field = containedField;
-}
-```
+:::code language="csharp" source="snippets/NullableAttributes.cs" ID="DoesNotReturnIf":::
 
 ## <a name="summary"></a>まとめ
 

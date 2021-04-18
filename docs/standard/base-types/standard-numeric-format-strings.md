@@ -1,7 +1,7 @@
 ---
 title: 標準の数値書式指定文字列
 description: この記事では、.NET で、標準の数値書式指定文字列を使用して、一般的な数値型をテキスト表現に書式設定する方法について説明します。
-ms.date: 02/26/2021
+ms.date: 04/08/2021
 ms.topic: reference
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: dbe646ccd0d3aea1f3dcc16ea079c5547f99d8b6
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4e9299842da13283b439fbadf84b969ca27f9654
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106437"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255416"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
@@ -55,6 +55,8 @@ ms.locfileid: "102106437"
 ## <a name="standard-format-specifiers"></a>標準書式指定子
 
 次の表に、標準数値書式指定子の説明および書式指定子ごとのサンプル出力を示します。 標準の数値書式指定文字列の使用方法については、「[メモ](#notes)」をご覧ください。それらを使用する包括的な例については、「[コード例](#code-example)」をご覧ください。
+
+> 特定のカルチャに合わせて文字列を書式指定すると、その結果は次の例とは異なる場合があります。 オペレーティング システムの設定、ユーザー設定、環境変数、および使用中の .NET バージョンはいずれも書式指定に影響を及ぼす可能性があります。 たとえば、.NET 5 以降では、.NET によってプラットフォーム間でカルチャの書式指定を統合する試みが行われます。 詳細については、「[.NET グローバリゼーションと ICU](../globalization-localization/globalization-icu.md)」を参照してください。
 
 |書式指定子|名前|説明|使用例|
 |----------------------|----------|-----------------|--------------|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-ms.openlocfilehash: 1ca597379ab2a8fdae19fcfc5351c29d716753dc
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: bf1a4f676c3c7789036cc3650169e04892c2a191
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608414"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494546"
 ---
 # <a name="how-to-start-services"></a>方法: サービスを開始する
 
@@ -22,11 +22,11 @@ ms.locfileid: "91608414"
 > [!NOTE]
 > 既定では、Visual Studio で作成されたサービスは手動で起動するように設定されます。
 
-サービスを手動で起動するには、**サーバー エクスプローラー**または**サービス コントロール マネージャー**を使用します。<xref:System.ServiceProcess.ServiceController> コンポーネントを使ってコードによって起動することもできます。
+サービスを手動で起動するには、**サーバー エクスプローラー** または **サービス コントロール マネージャー** を使用します。<xref:System.ServiceProcess.ServiceController> コンポーネントを使ってコードによって起動することもできます。
 
 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> クラスの <xref:System.ServiceProcess.ServiceInstaller> プロパティを設定し、サービスを手動で起動するか自動で起動するかを指定します。
 
-### <a name="to-specify-how-a-service-should-start"></a>サービスの起動方法を指定するには
+## <a name="specify-how-a-service-should-start"></a>サービスの起動方法を指定する
 
 1. サービスの作成後、必要なインストーラーを追加します。 詳細については、[サービス アプリケーションにインストーラーを追加する](how-to-add-installers-to-your-service-application.md)」をご覧ください。
 
@@ -45,34 +45,23 @@ ms.locfileid: "91608414"
     > [!NOTE]
     > 以上のプロパティやその他のプロパティの設定は、サービスのインストール後に変更できます。
 
-    <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティが **[手動]** に設定されているサービスを起動するには、**サーバー エクスプローラー**または **Windows サービス コントロール マネージャー**を使います。また、コードで起動することもできます。 起動方法によっては、**サービス コントロール マネージャー**のコンテキストではサービスを起動しません。**サーバー エクスプローラー**によるサービスの起動とコードによるサービスの起動の場合は、実際にはコントローラーを操作しています。
+    <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティが **[手動]** に設定されているサービスを起動するには、**サーバー エクスプローラー** または **Windows サービス コントロール マネージャー** を使います。また、コードで起動することもできます。 起動方法によっては、**サービス コントロール マネージャー** のコンテキストではサービスを起動しません。**サーバー エクスプローラー** によるサービスの起動とコードによるサービスの起動の場合は、実際にはコントローラーを操作しています。
 
-### <a name="to-manually-start-a-service-from-server-explorer"></a>サーバー エクスプローラーでサービスを手動起動するには
+## <a name="start-a-service-from-server-explorer"></a>サーバー エクスプローラーでサービスを起動する
 
-1. サーバーが**サーバー エクスプローラー**の一覧にない場合は追加します。 詳細については、「方法:サーバー エクスプローラー/データベース エクスプローラーにアクセスして初期化する」を参照してください。
+1. サーバーが **サーバー エクスプローラー** の一覧にない場合は追加します。 詳細については、「方法:サーバー エクスプローラー/データベース エクスプローラーにアクセスして初期化する」を参照してください。
 
 2. **[サービス]** ノードを展開し、開始するサービスを検索します。
 
-3. サービス名を右クリックし、 **[開始]** をクリックします。
+3. サービス名を右クリックし、 **[開始]** を選択します。
 
-### <a name="to-manually-start-a-service-from-services-control-manager"></a>サービス制御マネージャーでサービスを手動起動するには
+### <a name="start-a-service-from-services"></a>Services からサービスを開始する
 
-1. **サービス コントロール マネージャー**を次のいずれかの方法で開きます。
+1. **[Services]** アプリを開きます。
 
-    - Windows XP および Windows 2000 Professional のデスクトップで、 **[マイ コンピューター]** を右クリックし、 **[管理]** をクリックします。 表示されるダイアログ ボックスで、 **[サービスとアプリケーション]** ノードを展開します。
+2. 一覧で目的のサービスを右クリックし、 **[開始]** を選択します。
 
-      \- または
-
-    - Windows Server 2003 および Windows 2000 Server では、 **[スタート]** メニューの **[プログラム]** をポイントし、 **[管理ツール]** をポイントして、 **[サービス]** をクリックします。
-
-      > [!NOTE]
-      > Windows NT Version 4.0 では、 **[コントロール パネル]** でこのダイアログ ボックスを開くことができます。
-
-    ウィンドウの **[サービス]** セクションに、サービスが一覧表示されます。
-
-2. 一覧で目的のサービスを右クリックし、 **[開始]** をクリックします。
-
-### <a name="to-manually-start-a-service-from-code"></a>コードでサービスを手動起動するには
+## <a name="start-a-service-from-code"></a>コードからサービスを開始する
 
 1. <xref:System.ServiceProcess.ServiceController> クラスのインスタンスを作成し、管理対象となるサービスと対話するように設定します。
 

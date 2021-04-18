@@ -1,25 +1,30 @@
 ---
 title: .NET ライブラリのクロス プラットフォーム ターゲット
 description: クロス プラットフォームの .NET ライブラリを作成する際のベスト プラクティスの推奨事項。
-ms.date: 08/12/2019
-ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.date: 04/12/2021
+ms.openlocfilehash: c9ea186229ac6f334d19bce7effdeb23ebd602b4
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189252"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369713"
 ---
 # <a name="cross-platform-targeting"></a>クロス プラットフォーム ターゲット
 
 最新の .NET では、複数のオペレーティング システムとデバイスがサポートされます。 .NET のオープンソース ライブラリでは、開発者が Azure でホストされる ASP.NET Web サイトを構築しているか、Unity で .NET ゲームを構築しているかに関わらず、できるだけ多くの開発者をサポートすることが重要です。
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-and-net-standard-targets"></a>.NET および .NET Standard のターゲット
 
-.NET Standard は、.NET ライブラリにクロスプラットフォーム サポートを追加する最善の方法です。 [.NET Standard](../net-standard.md) は、すべての .NET 実装で使用できる .NET API の仕様です。 .NET Standard をターゲットにすることで、特定のバージョンの .NET Standard 内にある API を使用するように制約されるライブラリを作成できます。これは、そのバージョンの .NET Standard を実装するすべてのプラットフォームで使用できることを意味します。
+.NET および .NET Standard のターゲットは、.NET ライブラリにクロスプラットフォーム サポートを追加する最善の方法です。
+
+* [.NET Standard](../net-standard.md) は、すべての .NET 実装で使用できる .NET API の仕様です。 .NET Standard をターゲットにすることで、特定のバージョンの .NET Standard 内にある API を使用するように制約されるライブラリを作成できます。これは、そのバージョンの .NET Standard を実装するすべてのプラットフォームで使用できることを意味します。
+* .NET 5 は、Microsoft が積極的に開発している .NET の実装です。 Windows デスクトップ アプリとクロスプラットフォーム コンソール アプリ、クラウド サービス、Web サイトに使用できる統一された機能と API のセットを備えた単一の製品です。
+
+.NET と .NET Standard を比較する方法の詳細については、「[.NET 5 と .NET Standard](/dotnet/standard/net-standard#net-5-and-net-standard)」を参照してください。
 
 ![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
-.NET Standard をターゲットとし、プロジェクトを正常にコンパイルした場合、すべてのプラットフォームでライブラリが正常に実行されることは保証されません。
+.NET または .NET Standard をターゲットとし、プロジェクトを正常にコンパイルした場合、すべてのプラットフォームでライブラリが正常に実行されることは保証されません。
 
 1. プラットフォーム固有の API は、他のプラットフォームでは失敗します。 たとえば、<xref:Microsoft.Win32.Registry?displayProperty=nameWithType> は Windows では成功し、他の OS で使用する場合、<xref:System.PlatformNotSupportedException> がスローされます。
 2. API の動作はそれぞれ異なる場合があります。 たとえば、アプリケーションによって iOS や UWP で Ahead Of Time コンパイルが使用される場合、リフレクション API のパフォーマンス特性は異なります。
@@ -30,6 +35,10 @@ ms.locfileid: "93189252"
 ✔️ まず、`netstandard2.0` ターゲットを含めることから始めてください。
 
 > ほとんどの汎用ライブラリでは、.NET Standard 2.0 外の API は必要ありません。 .NET Standard 2.0 はすべての最新のプラットフォームでサポートされており、1 つのターゲットで複数のプラットフォームをサポートする場合に推奨される方法です。
+
+✔️ 最新の .NET で導入された新しい API が必要な場合は、`net5.0` ターゲット以降を含めてください。
+
+> .NET 5 以降のアプリでは `netstandard2.0` ターゲットを使用できるので、`net5.0` は必要ありません。 新しい .NET API を使用する場合は、`net5.0` を明示的にターゲットとすることを追加する必要があります。
 
 ❌ `netstandard1.x` ターゲットを含めることは避けてください。
 

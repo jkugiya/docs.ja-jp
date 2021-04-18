@@ -55,6 +55,6 @@ ms.locfileid: "102102972"
 |[CA2244: インデックス付き要素の初期化を重複させません](ca2244.md)|オブジェクト初期化子に、定数インデックスが同じインデックス付き要素の初期化子が複数あります。 最後の初期化子を除くすべての初期化子は冗長です。|
 |[CA2245: プロパティをそれ自体に割り当てません](ca2245.md)|プロパティが誤ってそれ自体に割り当てられました。|
 |[CA2246: 同じステートメントにシンボルとそのメンバーを割り当てません](ca2246.md)|同じステートメントでシンボルとそのメンバー、つまりフィールドまたはプロパティを代入することは推奨されていません。 メンバー アクセスが代入前のシンボルの古い値を使用するのか、このステートメントの代入からの新しい値を使用するのかが明確ではありません。|
-|[CA2247:TaskCompletionSource コンストラクターに渡された引数は、TaskContinuationOptions 列挙型ではなく、TaskCreationOptions 列挙型にする必要があります](ca2247.md)|TaskCompletionSource には、基になるタスクを制御する TaskCreationOptions を使用するコンストラクターと、そのタスクに格納されているオブジェクトの状態を使用するコンストラクターがあります。  TaskCreationOptions の代わりに TaskContinuationOptions を誤って渡すと、呼び出しでオプションが状態として処理されます。|
+|[CA2247: TaskCompletionSource コンストラクターに渡される引数は、TaskContinuationOptions 列挙型ではなく、TaskCreationOptions 列挙型にする必要があります](ca2247.md)|TaskCompletionSource には、基になるタスクを制御する TaskCreationOptions を使用するコンストラクターと、そのタスクに格納されているオブジェクトの状態を使用するコンストラクターがあります。  TaskCreationOptions の代わりに TaskContinuationOptions を誤って渡すと、呼び出しでオプションが状態として処理されます。|
 |[CA2248: 正しい 'enum' 引数を 'Enum.HasFlag' に指定します](ca2248.md)|`HasFlag` メソッドに引数として渡された列挙型が呼び出し元の列挙型と異なります。|
 |[CA2249:String.IndexOf の代わりに String.Contains を使用することを検討します](ca2249.md)|部分文字列が存在するかどうかを確認するために結果を使用する `string.IndexOf` の呼び出しは、`string.Contains` で置き換えることができます。|

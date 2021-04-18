@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: a74f4e0aa286f182906033e34be7bad63a72503f
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ac32f121e8d4c314feec5569a8696d5528cd68e0
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583233"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494026"
 ---
 # <a name="how-to-instantiate-jsonserializeroptions-instances-with-systemtextjson"></a>System.Text.Json で JsonSerializerOptions インスタンスをインスタンス化する方法
 
@@ -27,7 +27,7 @@ ms.locfileid: "100583233"
 
 ## <a name="reuse-jsonserializeroptions-instances"></a>JsonSerializerOptions インスタンスの再利用
 
-同じオプションで `JsonSerializerOptions` を繰り返し使用する場合、使用のたびに新しい `JsonSerializerOptions` インスタンスを作成しないでください。 すべての呼び出しで同じインスタンスを再利用します。 ここでは、カスタム コンバーター用に作成し、<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> または <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> を呼び出すコードに関して説明しています。
+同じオプションで `JsonSerializerOptions` を繰り返し使用する場合、使用のたびに新しい `JsonSerializerOptions` インスタンスを作成しないでください。 すべての呼び出しで同じインスタンスを再利用します。 ここでは、カスタム コンバーター用に作成し、<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> または <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> を呼び出すコードに関して説明しています。 複数のスレッドで同じインスタンスを使用することに問題はありません。 オプション インスタンス上のメタデータ キャッシュはスレッドセーフであり、最初のシリアル化または逆シリアル化を行うと、その後はインスタンスを変更できなくなります。
 
 次のコードでは、新しいオプションのインスタンスを使用する場合にパフォーマンスが低下することを示しています。
 

@@ -5,12 +5,12 @@ ms.date: 03/20/2020
 ms.custom: devx-track-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 6adc485867e9bad401a15da19e6cb4424d2ddb13
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b0f7bdf7eaf7db242545d43856fae8d1548bc004
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700711"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494338"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>Azure SDK for .NET を使用したログ記録
 
@@ -46,7 +46,8 @@ HTTP 応答ログ エントリ:
 要求と応答のコンテンツの場合:
 
 - Content-type ヘッダーに応じて、コンテンツ ストリームはテキストまたはバイトになります。
-     > [!メモ} コンテンツ ログは既定で無効になっています。 有効にするには、`ClientOptions` で `Diagnostics.IsLoggingContentEnabled` を `true` に設定します。
+     > [!NOTE]
+     > コンテンツ ログは既定で無効になっています。 有効にするには、`ClientOptions` で `Diagnostics.IsLoggingContentEnabled` を `true` に設定します。
 
 イベント ログは通常、次の 3 つのレベルのいずれかで出力されます。
 

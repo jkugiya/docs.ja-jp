@@ -3,12 +3,12 @@ description: '詳細情報: 安全なデータ アクセス'
 title: 安全なデータ アクセス
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 0f14f271dda9d07ba1efdea2328a5b3e30d14849
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 091af5f888ca8566035b5da6aa8f972c627aa9c1
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99718890"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494845"
 ---
 # <a name="secure-data-access"></a>安全なデータ アクセス
 
@@ -77,7 +77,7 @@ ms.locfileid: "99718890"
 
 ## <a name="enterprise-services"></a>Enterprise Services  
 
- COM+ は、Windows NT アカウントおよびプロセスやスレッドの偽装に基づく独自のセキュリティ モデルを備えています。 <xref:System.EnterpriseServices> 名前空間は、.NET アプリケーションが、<xref:System.EnterpriseServices.ServicedComponent> クラスを使用して、マネージド コードと COM+ セキュリティ サービスを統合できるようにするラッパーを提供します。  
+ COM+ は、Windows アカウントおよびプロセスやスレッドの偽装に基づく独自のセキュリティ モデルを備えています。 <xref:System.EnterpriseServices> 名前空間は、.NET アプリケーションが、<xref:System.EnterpriseServices.ServicedComponent> クラスを使用して、マネージド コードと COM+ セキュリティ サービスを統合できるようにするラッパーを提供します。  
   
  詳細については、次のリソースを参照してください。  
   

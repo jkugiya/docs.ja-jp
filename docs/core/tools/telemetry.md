@@ -3,12 +3,12 @@ title: .NET SDK 製品利用統計情報
 description: 分析に使用する使用状況情報を収集する .NET SDK 製品利用統計情報機能、収集されるデータ、この機能を無効にする方法について説明します。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 1a863fe0c713cb49eca2968464d550eae2c9f36a
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: cb557973197277b86c5a85770539b3005e7d9e4a
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104873407"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494221"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK 製品利用統計情報
 
@@ -78,6 +78,11 @@ Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 | >=2.1.300     | Libc リリース/バージョン。 |
 | >=3.0.100     | 出力がリダイレクトされるかどうか (True または False)。 |
 | >=3.0.100     | CLI/SDK クラッシュ時の例外の種類とそのスタック トレース (CLI/SDK コードのみ、送信されたスタック トレースに含まれます)。 詳細については、「[収集される .NET CLI または SDK クラッシュ例外製品利用統計情報](#net-clisdk-crash-exception-telemetry-collected)」を参照してください。 |
+| >=5.0.202     | プロセスの開始から、CLI プログラムのメイン メソッドに入り、ホストとランタイムの起動を測定するまでの経過時間。 |
+| >=5.0.202     | 最初の実行時に .NET ツールをパスに追加するステップの経過時間。 |
+| >=5.0.202     | 最初の実行時に初回使用通知を表示するための経過時間。 |
+| >=5.0.202     | 最初の実行時に ASP.NET 証明書を生成するための経過時間。 |
+| >=5.0.202     | CLI 入力を解析するための経過時間。 |
 
 ### <a name="collected-options"></a>収集されるオプション
 

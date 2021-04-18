@@ -3,14 +3,14 @@ title: .NET での依存関係の挿入
 description: .NET で依存関係の挿入を実装する方法とそれを使う方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/28/2020
+ms.date: 04/12/2021
 ms.topic: overview
-ms.openlocfilehash: 0b5526f24f3ac658123acd030c3adf32c346422a
-ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
+ms.openlocfilehash: 2feb8b44d7701839bd889138c1f7c8f1fb2be71a
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106079519"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494286"
 ---
 # <a name="dependency-injection-in-net"></a>.NET での依存関係の挿入
 
@@ -137,16 +137,17 @@ Microsoft 拡張機能には、関連するサービスのグループを登録�
 
 次の表に、フレームワークによって登録されるサービスのごく一部を示します。
 
-| サービスの種類                                                                       | 有効期間  |
-|------------------------------------------------------------------------------------|-----------|
-| <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime>                       | シングルトン |
-| <xref:Microsoft.Extensions.Logging.ILogger%601?displayProperty=fullName>           | シングルトン |
-| <xref:Microsoft.Extensions.Logging.ILoggerFactory?displayProperty=fullName>        | シングルトン |
-| <xref:Microsoft.Extensions.ObjectPool.ObjectPoolProvider?displayProperty=fullName> | シングルトン |
-| <xref:Microsoft.Extensions.Options.IConfigureOptions%601?displayProperty=fullName> | 一時的 |
-| <xref:Microsoft.Extensions.Options.IOptions%601?displayProperty=fullName>          | シングルトン |
-| <xref:System.Diagnostics.DiagnosticListener?displayProperty=fullName>              | シングルトン |
-| <xref:System.Diagnostics.DiagnosticSource?displayProperty=fullName>                | シングルトン |
+| サービスの種類                                                                                  | 有効期間  |
+|-----------------------------------------------------------------------------------------------|-----------|
+| <xref:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory?displayProperty=fullName> | シングルトン |
+| <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime>                                  | シングルトン |
+| <xref:Microsoft.Extensions.Logging.ILogger%601?displayProperty=fullName>                      | シングルトン |
+| <xref:Microsoft.Extensions.Logging.ILoggerFactory?displayProperty=fullName>                   | シングルトン |
+| <xref:Microsoft.Extensions.ObjectPool.ObjectPoolProvider?displayProperty=fullName>            | シングルトン |
+| <xref:Microsoft.Extensions.Options.IConfigureOptions%601?displayProperty=fullName>            | 一時的 |
+| <xref:Microsoft.Extensions.Options.IOptions%601?displayProperty=fullName>                     | シングルトン |
+| <xref:System.Diagnostics.DiagnosticListener?displayProperty=fullName>                         | シングルトン |
+| <xref:System.Diagnostics.DiagnosticSource?displayProperty=fullName>                           | シングルトン |
 
 ## <a name="service-lifetimes"></a>サービスの有効期間
 
@@ -308,6 +309,23 @@ services.Add(descriptor);
 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider%2A> が呼び出されると、ルート サービス プロバイダーが作成されます。 ルート サービス プロバイダーの有効期間は、プロバイダーがアプリで開始されるとアプリの有効期間に対応し、アプリのシャットダウン時には破棄されます。
 
 スコープ サービスは、それを作成したコンテナーによって破棄されます。 ルート コンテナーに作成されたスコープ付きサービスは、アプリのシャットダウン時に、ルート コンテナーによってのみ破棄されるため、サービスの有効期間は実質的にシングルトンに昇格されます。 `BuildServiceProvider` が呼び出されると、サービス スコープの検証がこれらの状況をキャッチします。
+
+## <a name="scope-scenarios"></a>スコープのシナリオ
+
+<xref:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory> は常にシングルトンとして登録されますが、<xref:System.IServiceProvider> は包含クラスの有効期間に基づいて変化する可能性があります。 たとえば、スコープからサービスを解決し、それらのサービスのいずれかが <xref:System.IServiceProvider> 受け取ると、それは、スコープ付のインスタンスになります。
+
+<xref:Microsoft.Extensions.Hosting.BackgroundService> などの <xref:Microsoft.Extensions.Hosting.IHostedService> の実装内でスコープ サービスを実現するには、コンストラクター インジェクションを介してサービスの依存関係を挿入 "*しないでください*"。 代わりに、<xref:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory> を挿入し、スコープを作成し、そしてそのスコープから依存関係を解決して適切なサービス有効期間を使用します。
+
+:::code language="csharp" source="snippets/configuration/worker-scope/Worker.cs" highlight="13,15-16,22":::
+
+前のコードでは、アプリが実行されている間、バックグラウンド サービスは次のようになります。
+
+- <xref:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory> に依存する。
+- 追加のサービスを解決するために <xref:Microsoft.Extensions.DependencyInjection.IServiceScope> を作成する。
+- 利用に向けてスコープ付のサービスを解決する。
+- オブジェクトを処理してから、それらを中継し、最後に処理済みとしてマークする。
+
+サンプル ソース コードから、スコープ付きサービスの有効期間が <xref:Microsoft.Extensions.Hosting.IHostedService> の実装にどのような恩恵をもたらすかを確認できます。
 
 ## <a name="see-also"></a>関連項目
 

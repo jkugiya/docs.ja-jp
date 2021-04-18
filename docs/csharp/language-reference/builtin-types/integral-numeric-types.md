@@ -1,7 +1,7 @@
 ---
 title: 整数数値型 - C# リファレンス
 description: 各整数数値型の範囲、ストレージ サイズ、および使用方法について説明します。
-ms.date: 03/17/2021
+ms.date: 04/10/2021
 f1_keywords:
 - byte_CSharpKeyword
 - sbyte_CSharpKeyword
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 02b1451dc3aa22dfe27181b0e9160d198349107c
-ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.openlocfilehash: 21e6595e477fd48d0e5f39f5b4f1f7c5893a8840
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104760172"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369583"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整数数値型 (C# リファレンス)
 
@@ -61,8 +61,6 @@ System.Int32 b = 123;
 
 テーブルの最後の 2 行の `nint` 型と `nuint` 型は、ネイティブサイズの整数です。 これらは、指定された .NET 型によって内部で表現されますが、いずれの場合もキーワードと .NET 型は交換できません。 コンパイラによって、`nint` と `nuint` に対して、整数型としての演算と変換が提供されます。ポインター型 `System.IntPtr` と `System.UIntPtr` に対しては提供されません。 詳細については、[`nint` 型と `nuint` 型](nint-nuint.md)に関するページを参照してください。
 
-ネイティブサイズの整数型の詳細については、[`nint` と `nuint`](nint-nuint.md) に関するページを参照してください。
-
 各整数型の既定値はゼロ (`0`) です。 ネイティブサイズの型を除く各整数型には、その型の最小値と最大値を指定する `MinValue` および `MaxValue` 定数があります。
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 構造体を使用して、上限や下限のない符号付き整数を表します。
@@ -88,6 +86,10 @@ var binaryLiteral = 0b_0010_1010;
 整数リテラルの型は、そのサフィックスによって次のように決まります。
 
 - サフィックスがないリテラルの型は、`int`、`uint`、`long`、`ulong` の型のうちその値を表すことができる最初のものになります。
+
+  > [!NOTE]
+  > リテラルは正の値として解釈されます。 たとえば、リテラル `0xFF_FF_FF_FF` は、`uint` 型の数値 `4294967295` を表しますが、そのビット表現は `int` 型の数値 `-1` と同じになります。 特定の型の値が必要な場合は、リテラルをその型にキャストしてください。 リテラル値をターゲット型で表すことができない場合は、`unchecked` 演算子を使用します。 たとえば、`unchecked((int)0xFF_FF_FF_FF)` を使用すると、`-1` が生成されます。
+
 - リテラルのサフィックスが `U` または `u` の場合、その型は、`uint`、`ulong` の型のうちその値を表すことができる最初のものになります。
 - リテラルのサフィックスが `L` または `l` の場合、その型は、`long`、`ulong` の型のうちその値を表すことができる最初のものになります。
 

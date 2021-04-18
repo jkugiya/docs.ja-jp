@@ -3,12 +3,12 @@ title: クラスおよびオブジェクト - C# チュートリアルの概要
 description: 初めての C# プログラムを作成し、オブジェクト指向の概念を確認します
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 3da445e6c656628fffdb9ef9384fb1a1c556a2cd
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 2e3311d30c97ecda8531a8e24219e03c37be3361
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255419"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494715"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>クラスおよびオブジェクトを使用したオブジェクト指向プログラミングについて確認します
 
@@ -100,7 +100,7 @@ var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
-これまでに構築したものを実行してみましょう。 Visual Studio を使用している場合は、 **[実行]** メニューから **[デバッグなしで開始]** を選択します。 コマンド ラインを使用している場合は、プロジェクトを作成したディレクトリで `dotnet run` を入力します。
+これまでに構築したものを実行してみましょう。 Visual Studio を使用している場合は、 **[デバッグ]** メニューから **[デバッグなしで開始]** を選択します。 コマンド ラインを使用している場合は、プロジェクトを作成したディレクトリで `dotnet run` を入力します。
 
 口座番号が空であることに気付かれましたか? 次にこの問題を解決します。 口座番号はオブジェクトが作成されるときに割り当てられる必要があります。 しかし、それを作成する責任を呼び出し元に負わせるべきではありません。 `BankAccount` クラスのコードは、新しい口座番号の割り当て方を知っている必要があります。  そのための簡単な方法は、10 桁の数字で始めることです。 そして、新しい口座番号が作成されるごとに値を 1 増加します。 最後に、オブジェクトが作成されるときに現在の口座番号を格納します。
 

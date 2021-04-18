@@ -6,16 +6,16 @@ helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-ms.openlocfilehash: 58d71cb7fac7a3c2bef975c99cfab1ca730fb6eb
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 66a6ec5f6cad0225e48f480eeae8b7d3862241dd
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475464"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369687"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する
 
-共通言語ランタイム (CLR) をホストするすべてのアプリでは、マネージド コードを実行するために CLR を開始または*アクティブ化*する必要があります。 通常、.NET Framework アプリはビルドされた CLR のバージョンで実行されますが、アプリケーション構成ファイル (app.config ファイルと呼ばれることもあります) を使用して、デスクトップ アプリのこの動作を変更できます。 ただし、アプリケーション構成ファイルを使用して Windows ストア アプリまたは Windows Phone アプリの既定のアクティベーション動作は変更できません。 この記事では、デスクトップ アプリを .NET Framework の別のバージョンで実行できるようにする方法を説明し、バージョン 4 以降を対象とする方法の例を示します。
+共通言語ランタイム (CLR) をホストするすべてのアプリでは、マネージド コードを実行するために CLR を開始または *アクティブ化* する必要があります。 通常、.NET Framework アプリはビルドされた CLR のバージョンで実行されますが、アプリケーション構成ファイル (app.config ファイルと呼ばれることもあります) を使用して、デスクトップ アプリのこの動作を変更できます。 ただし、アプリケーション構成ファイルを使用して Windows ストア アプリまたは Windows Phone アプリの既定のアクティベーション動作は変更できません。 この記事では、デスクトップ アプリを .NET Framework の別のバージョンで実行できるようにする方法を説明し、バージョン 4 以降を対象とする方法の例を示します。
 
  アプリが実行される .NET Framework のバージョンは、次の順序で決まります。
 
@@ -44,7 +44,7 @@ ms.locfileid: "86475464"
 
 1. .NET Framework プロジェクトの構成ファイルを追加または検索します。 アプリの構成ファイルは、同じディレクトリにあり、アプリと同じ名前ですが、.config 拡張子があります。 たとえば、アプリが MyExecutable.exe という名前であれば、アプリケーション構成ファイルの名前は MyExecutable.exe.config です。
 
-     構成ファイルを追加するには、Visual Studio のメニュー バーで **[プロジェクト]** 、 **[新しい項目の追加]** の順にクリックします。 左ペインで **[全般]** をクリックし、 **[構成ファイル]** をクリックします。 構成ファイルに *appName*.exe.config という名前を付けます。これらのメニューの選択は、Windows ストア アプリ プロジェクトまたは Windows phone アプリ プロジェクトでは使用できません。これらのプラットフォームのアクティベーション ポリシーを変更できないためです。
+     構成ファイルを追加するには、Visual Studio のメニュー バーで **[プロジェクト]** 、 **[新しい項目の追加]** の順にクリックします。 左ペインで **[全般]** をクリックし、 **[構成ファイル]** をクリックします。 構成ファイルに *App.config* という名前を付けます。これらのメニューの選択は、Windows ストア アプリ プロジェクトまたは Windows phone アプリ プロジェクトでは使用できません。これらのプラットフォームのアクティベーション ポリシーを変更できないためです。
 
 2. 次のように、アプリケーション構成ファイルに [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 要素を追加します。
 

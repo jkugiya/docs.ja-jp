@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cfda506fc29e9a86e97b3c99faf2d4155c894f03
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: daa851e22ab70826395fa86a4d3aae9901e01be7
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824240"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494416"
 ---
 # <a name="principal-and-identity-objects"></a>プリンシパル オブジェクトと ID オブジェクト
 
@@ -32,13 +32,13 @@ ms.locfileid: "94824240"
 
 ID オブジェクトは、検証対象のユーザーまたはエンティティに関する情報をカプセル化します。 ID オブジェクトの最も基本的なレベルには名前と認証の種類が含まれます。 名前はユーザー名または Windows アカウント名、認証の種類は、サポートされるログオン プロトコル (Kerberos V5 など) かカスタム値になります。 .NET では、ほとんどのカスタム ログオン シナリオで使用できる <xref:System.Security.Principal.GenericIdentity> オブジェクトと、アプリケーションを Windows 認証に依存させる場合に使用できるより特殊な <xref:System.Security.Principal.WindowsIdentity> オブジェクトが定義されています。 また、カスタム ユーザー情報をカプセル化する独自の ID クラスを定義することもできます。  
   
-<xref:System.Security.Principal.IIdentity> インターフェイスでは、名前と認証の種類 (Kerberos V5 や NTLM など) にアクセスするためのプロパティが定義されています。 すべての **Identity** クラスでは **IIdentity** インターフェイスが実装されます。 **ID** オブジェクトと、スレッドが現在実行している Windows NT プロセス トークンの間に関係は必要ありません。 ただし、**ID** オブジェクトが **WindowsIdentity** オブジェクトである場合、ID は Windows NT セキュリティ トークンを表すと見なされます。  
+<xref:System.Security.Principal.IIdentity> インターフェイスでは、名前と認証の種類 (Kerberos V5 や NTLM など) にアクセスするためのプロパティが定義されています。 すべての **Identity** クラスでは **IIdentity** インターフェイスが実装されます。 **ID** オブジェクトと、スレッドが現在実行している Windows プロセス トークンの間に関係は必要ありません。 ただし、**ID** オブジェクトが **WindowsIdentity** オブジェクトである場合、ID は Windows セキュリティ トークンを表すと見なされます。  
   
 ## <a name="principal-objects"></a>プリンシパル オブジェクト
 
 プリンシパル オブジェクトは、コードが実行されているセキュリティ コンテキストを表します。 ロールベースのセキュリティを実装するアプリケーションは、プリンシパル オブジェクトに関連付けられたロールに基づいて権限を付与します。 ID オブジェクトと同様に、.NET では <xref:System.Security.Principal.GenericPrincipal> オブジェクトと <xref:System.Security.Principal.WindowsPrincipal> オブジェクトが提供されています。 独自のカスタム プリンシパル クラスを定義することもできます。  
   
-<xref:System.Security.Principal.IPrincipal> インターフェイスでは、関連付けられた **ID** オブジェクトにアクセスするためのプロパティと、**プリンシパル** オブジェクトによって識別されるユーザーが所定のロールのメンバーかどうかを判別するためのメソッドが定義されています。 すべての **プリンシパル** クラスは、**IPrincipal** インターフェイスの他に、必要なその他のプロパティとメソッドを実装しています。 たとえば、共通言語ランタイムでは **WindowsPrincipal** クラスが提供されますが、これは Windows NT または Windows 2000 グループ メンバーシップをロールにマッピングする追加機能を実装します。  
+<xref:System.Security.Principal.IPrincipal> インターフェイスでは、関連付けられた **ID** オブジェクトにアクセスするためのプロパティと、**プリンシパル** オブジェクトによって識別されるユーザーが所定のロールのメンバーかどうかを判別するためのメソッドが定義されています。 すべての **プリンシパル** クラスは、**IPrincipal** インターフェイスの他に、必要なその他のプロパティとメソッドを実装しています。 たとえば、共通言語ランタイムでは **WindowsPrincipal** クラスが提供されますが、これによってグループ メンバーシップをロールにマッピングする追加機能が実装されます。  
   
 **プリンシパル** オブジェクトは、アプリケーション ドメイン (<xref:System.AppDomain>) 内の呼び出しコンテキスト (<xref:System.Runtime.Remoting.Messaging.CallContext>) オブジェクトにバインドされます。 常に既定の呼び出しコンテキストはそれぞれ新しい **AppDomain** を使用して作成されるため、**プリンシパル** オブジェクトを受け入れる呼び出しコンテキストが常に存在します。 新しいスレッドが作成されるとき、そのスレッドの **CallContext** オブジェクトも作成されます。 **プリンシパル** オブジェクトの参照は、作成スレッドから新しいスレッドの **CallContext** に自動的にコピーされます。 スレッドの作成者に所属する **プリンシパル** オブジェクトをランタイムが判別できない場合は、**プリンシパル** オブジェクトと **ID** オブジェクトの作成で既定のポリシーに従います。  
   

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 3fcd39f5414bca9bfcb368f6962ae36891458151
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 92d9175f96fa54ccc3514ed479755f1318452bbc
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262828"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494078"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 認証および Kerberos 認証
 
-既定の NTLM 認証と Kerberos 認証は、呼び出し元のアプリケーションに関連付けられている Microsoft Windows NT ユーザー資格情報を使用して、サーバーで認証を試みます。 既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。  
+既定の NTLM 認証と Kerberos 認証では、呼び出し元のアプリケーションに関連付けられている Microsoft Windows ユーザー資格情報を使用して、サーバーで認証を試みます。 既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  

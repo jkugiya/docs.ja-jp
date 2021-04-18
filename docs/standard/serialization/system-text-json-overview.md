@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 28f2b78de2533c659ea0fcf9d4990694dbfd411c
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 9a57319dc1d744bfc06cc7360ffcb59b24fe3646
+ms.sourcegitcommit: fdfa01f6cd3aa4c36b6e8a1830693ff22d35aeea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584855"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107292263"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET での JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) - 概要
 
@@ -35,6 +35,10 @@ Visual Basic コードから使用できるライブラリの部分には、い�
   * .NET Standard 2.0 以降のバージョン
   * .NET Framework 4.7.2 以降のバージョン
   * .NET Core 2.0、2.1、および 2.2
+
+## <a name="security-information"></a>セキュリティ情報
+
+<xref:System.Text.Json.JsonSerializer> の設計時に考慮されたセキュリティ上の脅威と、その脅威を軽減する方法については、「[`System.Text.Json` 脅威モデル](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Text.Json/docs/ThreatModel.md)」を参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 8ad8169515bbb2889c0adbed4df4e30a0215d47d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 4ceca6b1095e34a437f9363d95e4133e77809e83
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99673844"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494559"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -123,9 +123,9 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
   `charsetmodifier` は外部ファイル内で Visual Basic が外部プロシージャを検索する方法も指定します。 `Ansi` と `Unicode` は、検索時に名前を変更せずに検索するように Visual Basic に指示し ます。 `Auto` は、実行時プラットフォームの基本文字セットを判別するように Visual Basic に指示します。また、場合によっては、次のように外部プロシージャ名を変更します。
 
-  - Windows 95、Windows 98、または Windows Millennium Edition などの ANSI プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "A" を付加して、もう一度検索します。
+  - Windows などの Unicode プラットフォームでは、最初に、名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "W" を付加して、もう一度検索します。
 
-  - Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "W" を付加して、もう一度検索します。
+  - ANSI プラットフォームでは、最初に、名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "A" を付加して、もう一度検索します。
 
 - **メカニズム。** Visual Basic は、.NET Framework の *プラットフォーム呼び出し* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスでは、このメカニズムが自動的に使用されため、PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
 

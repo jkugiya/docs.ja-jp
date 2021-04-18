@@ -3,13 +3,13 @@ title: .NET ライブラリ作成者のためのオプション パターン ガ
 author: IEvangelist
 description: .NET でライブラリ作成者としてオプション パターンを公開する方法について説明します。
 ms.author: dapine
-ms.date: 01/28/2021
-ms.openlocfilehash: d0da94a8f25c9e5aba6093fab07ccca6a0a7c345
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.date: 04/12/2021
+ms.openlocfilehash: 7e1bfeadff92f5d0d979ef2d7da11d7c1b47c58d
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "102402142"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369622"
 ---
 # <a name="options-pattern-guidance-for-net-library-authors"></a>.NET ライブラリ作成者のためのオプション パターン ガイダンス
 
@@ -51,13 +51,13 @@ Microsoft のパッケージでは、`Microsoft.Extensions.DependencyInjection` 
 
 多くのオプションをコンシューマーに公開するライブラリを作成するときは、`IConfiguration` パラメーター拡張メソッドが必要になる場合があります。 予想される `IConfiguration` インスタンスでは、<xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A?displayProperty=nameWithType> 関数を使用することにより、構成の名前付きセクションにスコープを設定する必要があります。
 
-:::code language="csharp" source="snippets/configuration/options-configparam/ServiceCollectionExtensions.cs" highlight="10,12-16":::
+:::code language="csharp" source="snippets/configuration/options-configparam/ServiceCollectionExtensions.cs" highlight="10,12-14":::
 
 上のコードの `AddMyLibraryService` では、次のことが行われています。
 
 - <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> のインスタンスを拡張します
 - <xref:Microsoft.Extensions.Configuration.IConfiguration> パラメーターの `namedConfigurationSection` を定義します
-- <xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(Microsoft.Extensions.Configuration.IConfiguration,System.Object)> を呼び出し、構成のバインド先となるオプション インスタンスを渡します
+- `LibraryOptions` のジェネリック型パラメーターと、構成する `namedConfigurationSection` インスタンスを渡して <xref:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure%60%601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)> を呼び出します
 
 このパターンのコンシューマーは、名前付きセクションのスコープ設定された `IConfiguration` インスタンスを提供します。
 

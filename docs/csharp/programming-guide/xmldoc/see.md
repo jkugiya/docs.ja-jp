@@ -11,26 +11,38 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 154feca5e7e4f4d3f5313c4ae05cd991e69e298f
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 351dd2e4c7dbc76efa2edbed708fb342c553ce70
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477771"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494858"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# プログラミング ガイド)
 
 ## <a name="syntax"></a>構文
 
-```xml
-<see cref="member"/>
+```csharp
+/// <see cref="member"/>
+// or
+/// <see href="link">Link Text</see>
+// or
+/// <see langword="keyword"/>
 ```
 
 ## <a name="parameters"></a>パラメーター
 
-- cref = "`member`"
+- `cref="member"`
 
   現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。 *メンバー* は二重引用符 (" ") で囲む必要があります。
+
+- `href="link"`
+
+  特定の URL へのクリック可能なリンク。 たとえば、`<see href="https://github.com">GitHub</see>` によって生成されるクリック可能なリンクには、`https://github.com` にリンクされたテキスト :::no-loc text="GitHub"::: が含まれます。
+
+- `langword="keyword"`
+
+  `true` などの言語キーワード。
 
 ## <a name="remarks"></a>Remarks
 

@@ -10,18 +10,20 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: b6add045983619169bed0cd9f32eb27dba0a0338
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 84a740f3afeca94a706b4120b8cd8f191f49a048
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738880"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369570"
 ---
 # <a name="-operator-c-reference"></a>?: 演算子 (C# リファレンス)
 
-条件演算子 `?:` は、三項条件演算子とも呼ばれ、ブール式を評価し、ブール式の評価結果 (`true` または `false`) に応じて、2 つの式のいずれかの結果を返します。
+条件演算子 `?:` は、三項条件演算子とも呼ばれ、ブール式を評価し、ブール式の評価結果 (`true` または `false`) に応じて、2 つの式のいずれかの結果を返します。次の例を参照してください。
 
-この条件演算子の構文は次のとおりです。
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/shared/ConditionalOperator.cs" id="BasicExample":::
+
+前の例で示したように、条件演算子の構文は次のようになります。
 
 ```csharp
 condition ? consequent : alternative
@@ -55,10 +57,6 @@ a ? b : (c ? d : e)
 > ```text
 > is this condition true ? yes : no
 > ```
-
-条件演算子の使用例を次に示します。
-
-[!code-csharp-interactive[non ref conditional](snippets/shared/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>ref 条件式
 

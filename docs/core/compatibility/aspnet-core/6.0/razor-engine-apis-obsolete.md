@@ -1,14 +1,16 @@
 ---
-title: '破壊的変更:Razor: 古いとしてマークされた RazorEngine API'
-description: 'ASP.NET Core 6.0 での破壊的変更について学習します。タイトル: Razor:古いとしてマークされた RazorEngine API'
+title: '破壊的変更: Razor: 古いとしてマークされた RazorEngine API'
+description: 'ASP.NET Core 6.0 での破壊的変更に関する詳細。タイトル: Razor: 古いとしてマークされた RazorEngine API'
+no-loc:
+- Razor
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: a312fb2fda6245e529d59d82b72ffe64ae6d6ff5
-ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
+ms.openlocfilehash: 75ccc8e2640dda29749de40946e90c2b897a7245
+ms.sourcegitcommit: fdfa01f6cd3aa4c36b6e8a1830693ff22d35aeea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "107255104"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107292250"
 ---
 # <a name="razor-razorengine-apis-marked-obsolete"></a>Razor: 古いとしてマークされた RazorEngine API
 

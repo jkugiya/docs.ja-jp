@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-ms.openlocfilehash: 5d1542c7f6afa2d683240d6d5cca837b961eb3be
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a1ee34ef5e99f95dc7037c0ed5aebc074aa9db7a
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267105"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494878"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
 
@@ -63,7 +63,7 @@ ms.locfileid: "96267105"
   
 |クラス|説明|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Windows NT パフォーマンス カウンター コンポーネントを表します。 既存の定義済みカウンターやカスタム カウンターを読み取ったり、カスタム カウンターにパフォーマンス データを書き込むには、このクラスを使用します。|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Windows パフォーマンス カウンター コンポーネントを表します。 既存の定義済みカウンターやカスタム カウンターを読み取ったり、カスタム カウンターにパフォーマンス データを書き込むには、このクラスを使用します。|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|コンピューター上のカウンターおよびカウンター カテゴリと対話するためのいくつかのメソッドを提供します。|  
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|`PerformanceCounter` コンポーネントのインストーラーを指定します。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|`NextValue` の `PerformanceCounter`メソッドを計算する数式を指定します。|  

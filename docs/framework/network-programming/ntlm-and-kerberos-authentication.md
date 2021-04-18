@@ -20,16 +20,16 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 3fcd39f5414bca9bfcb368f6962ae36891458151
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 92d9175f96fa54ccc3514ed479755f1318452bbc
+ms.sourcegitcommit: aab60b21144bf04b3057b5d59aa7c58edaef32d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262828"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107494078"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="7cbdf-103">NTLM 認証および Kerberos 認証</span><span class="sxs-lookup"><span data-stu-id="7cbdf-103">NTLM and Kerberos Authentication</span></span>
+# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="9686e-103">NTLM 認証および Kerberos 認証</span><span class="sxs-lookup"><span data-stu-id="9686e-103">NTLM and Kerberos Authentication</span></span>
 
-<span data-ttu-id="7cbdf-104">既定の NTLM 認証と Kerberos 認証は、呼び出し元のアプリケーションに関連付けられている Microsoft Windows NT ユーザー資格情報を使用して、サーバーで認証を試みます。</span><span class="sxs-lookup"><span data-stu-id="7cbdf-104">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="7cbdf-105">既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。</span><span class="sxs-lookup"><span data-stu-id="7cbdf-105">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
+<span data-ttu-id="9686e-104">既定の NTLM 認証と Kerberos 認証では、呼び出し元のアプリケーションに関連付けられている Microsoft Windows ユーザー資格情報を使用して、サーバーで認証を試みます。</span><span class="sxs-lookup"><span data-stu-id="9686e-104">Default NTLM authentication and Kerberos authentication use the Microsoft Windows user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="9686e-105">既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。</span><span class="sxs-lookup"><span data-stu-id="9686e-105">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -45,7 +45,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- <span data-ttu-id="7cbdf-106">アプリケーション ユーザーの資格情報を使用してインターネット サービスに接続する必要があるアプリケーションは、次の例に示すように、ユーザーの既定の資格情報を使用してこれを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="7cbdf-106">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
+ <span data-ttu-id="9686e-106">アプリケーション ユーザーの資格情報を使用してインターネット サービスに接続する必要があるアプリケーションは、次の例に示すように、ユーザーの既定の資格情報を使用してこれを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="9686e-106">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -59,12 +59,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- <span data-ttu-id="7cbdf-107">ネゴシエート認証モジュールは、リモート サーバーが NTLM 認証を使用しているか Kerberos 認証を使用しているかを確認し、適切な応答を送信します。</span><span class="sxs-lookup"><span data-stu-id="7cbdf-107">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
+ <span data-ttu-id="9686e-107">ネゴシエート認証モジュールは、リモート サーバーが NTLM 認証を使用しているか Kerberos 認証を使用しているかを確認し、適切な応答を送信します。</span><span class="sxs-lookup"><span data-stu-id="9686e-107">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="7cbdf-108">NTLM 認証は、プロキシ サーバー経由では機能しません。</span><span class="sxs-lookup"><span data-stu-id="7cbdf-108">NTLM authentication does not work through a proxy server.</span></span>  
+> <span data-ttu-id="9686e-108">NTLM 認証は、プロキシ サーバー経由では機能しません。</span><span class="sxs-lookup"><span data-stu-id="9686e-108">NTLM authentication does not work through a proxy server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cbdf-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="7cbdf-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9686e-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9686e-109">See also</span></span>
 
-- [<span data-ttu-id="7cbdf-110">基本認証とダイジェスト認証</span><span class="sxs-lookup"><span data-stu-id="7cbdf-110">Basic and Digest Authentication</span></span>](basic-and-digest-authentication.md)
-- [<span data-ttu-id="7cbdf-111">インターネット認証</span><span class="sxs-lookup"><span data-stu-id="7cbdf-111">Internet Authentication</span></span>](internet-authentication.md)
+- [<span data-ttu-id="9686e-110">基本認証とダイジェスト認証</span><span class="sxs-lookup"><span data-stu-id="9686e-110">Basic and Digest Authentication</span></span>](basic-and-digest-authentication.md)
+- [<span data-ttu-id="9686e-111">インターネット認証</span><span class="sxs-lookup"><span data-stu-id="9686e-111">Internet Authentication</span></span>](internet-authentication.md)

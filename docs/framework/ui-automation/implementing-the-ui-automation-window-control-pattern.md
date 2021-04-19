@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション Window コントロール パターンの実装
-description: UI オートメーションで Window コントロールパターンを実装するためのガイドラインと規則を確認します。 IWindowProvider インターフェイスに必要なメンバーを確認します。
+description: UI オートメーションで Window コントロール パターンを実装するためのガイドラインと規則を確認します。 IWindowProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Window
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 ms.openlocfilehash: b43884393974e6f2863da6a4a5ca8f305e5a160c
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96286098"
@@ -21,7 +21,7 @@ ms.locfileid: "96286098"
   
  このトピックでは、 <xref:System.Windows.Automation.Provider.IWindowProvider>のプロパティ、メソッド、イベントに関する情報など、 <xref:System.Windows.Automation.WindowPattern> の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。  
   
- <xref:System.Windows.Automation.WindowPattern>コントロールパターンは、従来のグラフィカルユーザーインターフェイス (GUI) 内で、ウィンドウベースの基本的な機能を提供するコントロールをサポートするために使用されます。 このコントロールパターンを実装する必要があるコントロールの例としては、トップレベルアプリケーションウィンドウ、マルチドキュメントインターフェイス (MDI) 子ウィンドウ、サイズ変更可能な分割ペインコントロール、モーダルダイアログボックス、バルーンヘルプウィンドウなどがあります。  
+ <xref:System.Windows.Automation.WindowPattern> コントロール パターンは、従来のグラフィカル ユーザー インターフェイス (GUI) 内で、ウィンドウベースの基本的な機能を提供するコントロールをサポートするために使用されます。 このコントロール パターンを実装する必要があるコントロールの例として、最上位のアプリケーション ウィンドウ、マルチドキュメント インターフェイス (MDI) 子ウィンドウ、サイズ変更可能な分割ペイン コントロール、モーダル ダイアログ ボックス、バルーン ヘルプ ウィンドウがあります。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -53,12 +53,12 @@ ms.locfileid: "96286098"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Method|なし|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|なし|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|なし|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Event|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|なし|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|なし|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|イベント|なし|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|イベント|なし|  
+|<xref:System.Windows.Automation.WindowInteractionState>|イベント|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
 
@@ -68,8 +68,8 @@ ms.locfileid: "96286098"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -要求された動作をコントロールがサポートしていない場合。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -パラメーターが有効な数値でない場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   要求された動作がコントロールによってサポートされない場合。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   パラメーターが有効な数値ではない場合。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,6 +1,6 @@
 ---
 title: データ コントラクトの使用
-description: 各パラメーターまたは戻り値の型に対して、WCF クライアントとサーバー間で交換されるようにシリアル化されるデータを定義するデータコントラクトについて説明します。
+description: 各パラメーターまたは戻り値の型に対して、WCF クライアントとサーバー間で交換するためにシリアル化されるデータを定義するデータ コントラクトについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 97d234d094abf7666a341493f6b394c73513fa70
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96289868"
@@ -23,9 +23,9 @@ ms.locfileid: "96289868"
   
 ## <a name="data-contract-basics"></a>データ コントラクトの基本  
 
- Windows Communication Foundation (WCF) は、データコントラクトシリアライザーと呼ばれるシリアル化エンジンを既定で使用して、データのシリアル化と逆シリアル化 (XML との間の変換) を行います。 やなど、プリミティブとして扱われる特定の型に加えて、整数や文字列などの .NET Framework のすべてのプリミティブ型は、 <xref:System.DateTime> <xref:System.Xml.XmlElement> 他の準備なしでシリアル化でき、既定のデータコントラクトを持つと見なされます。 多くの .NET Framework 型には、既存のデータコントラクトもあります。 シリアル化できるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md)」を参照してください。  
+ Windows Communication Foundation (WCF) により、データ コントラクト シリアライザーと呼ばれるシリアル化エンジンが既定で使用されて、データのシリアル化と逆シリアル化 (データと XML の間の変換) が行われます。 すべての .NET Framework プリミティブ型 (整数や文字列など) およびプリミティブ型として扱われる特定の型 (<xref:System.DateTime> や <xref:System.Xml.XmlElement>など) は、準備なしでシリアル化できるため、既定のデータ コントラクトを持つと見なされます。 多くの .NET Framework 型にも、既存のデータ コントラクトがあります。 シリアル化できるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md)」を参照してください。  
   
- 新しい複合型を作成したら、シリアル化できるように、データ コントラクトを定義する必要があります。 既定では、 <xref:System.Runtime.Serialization.DataContractSerializer> はデータ コントラクトを推測し、公開されている型をすべてシリアル化します。 その型の読み書き可能なパブリック プロパティおよびパブリック フィールドは、すべてシリアル化されます。 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>を使用することにより、メンバーがシリアル化されないようにすることができます。 また、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性および <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を使用して、データ コントラクトを明示的に作成することもできます。 これを行うには、通常、その型に <xref:System.Runtime.Serialization.DataContractAttribute> 属性を適用します。 この属性は、クラス、構造体、および列挙体に適用できます。 次に、データ コントラクト型の各メンバーに <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を適用して、それが *データ メンバー* であること、つまり、シリアル化する必要があることを示す必要があります。 詳細については、「 [シリアル化](serializable-types.md)可能な型」を参照してください。  
+ 新しい複合型を作成したら、シリアル化できるように、データ コントラクトを定義する必要があります。 既定では、 <xref:System.Runtime.Serialization.DataContractSerializer> はデータ コントラクトを推測し、公開されている型をすべてシリアル化します。 その型の読み書き可能なパブリック プロパティおよびパブリック フィールドは、すべてシリアル化されます。 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>を使用することにより、メンバーがシリアル化されないようにすることができます。 また、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性および <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を使用して、データ コントラクトを明示的に作成することもできます。 これを行うには、通常、その型に <xref:System.Runtime.Serialization.DataContractAttribute> 属性を適用します。 この属性は、クラス、構造体、および列挙体に適用できます。 次に、データ コントラクト型の各メンバーに <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を適用して、それが *データ メンバー* であること、つまり、シリアル化する必要があることを示す必要があります。 詳細については、「[シリアル化可能な型](serializable-types.md)」を参照してください。  
   
 ### <a name="example"></a>例  
 
@@ -39,7 +39,7 @@ ms.locfileid: "96289868"
  [!code-csharp[C_DataContract#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#2)]
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
-### <a name="notes"></a>メモ  
+### <a name="notes"></a>Notes  
 
  以下に、データ コントラクトを作成する際に考慮する必要がある項目を示します。  
   

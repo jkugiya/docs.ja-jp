@@ -1,6 +1,6 @@
 ---
 title: '方法: ChannelFactory を使用する'
-description: WCF クライアントを使用してサービスにアクセスするために複数のチャネルを作成するチャネルファクトリを作成する方法について説明します。
+description: WCF クライアントを使用してサービスにアクセスするために、チャネル ファクトリを作成して複数のチャネルを作成する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
 ms.openlocfilehash: dd767443fefb16ebc02300bffa4264357f12c3ae
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96280586"
@@ -19,9 +19,9 @@ ms.locfileid: "96280586"
   
 ### <a name="to-create-and-use-the-channelfactory-class"></a>ChannelFactory クラスの作成方法と使用方法  
   
-1. Windows Communication Foundation (WCF) サービスをビルドして実行します。 詳細については、「 [サービスの設計と実装](../designing-and-implementing-services.md)」、「 [サービスの構成](../configuring-services.md)」、および「 [ホスティングサービス](../hosting-services.md)」を参照してください。  
+1. Windows Communication Foundation (WCF) サービスを構築し、実行します。 詳細については、「[サービスの設計と実装](../designing-and-implementing-services.md)」、[サービスの構成](../configuring-services.md)に関する記事、および「[ホスティング サービス](../hosting-services.md)」を参照してください。  
   
-2. [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、クライアントのコントラクト (インターフェイス) を生成します。  
+2. [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して、クライアントのコントラクト (インターフェイス) を生成します。  
   
 3. クライアント コード内で、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して複数のエンドポイント リスナーを作成します。  
   

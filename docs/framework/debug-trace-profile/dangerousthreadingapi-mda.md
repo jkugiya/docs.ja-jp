@@ -1,6 +1,6 @@
 ---
 title: dangerousThreadingAPI MDA
-description: 現在のスレッド以外のスレッドで dangerousThreadingAPI が呼び出されたときにアクティブ化される、マネージデバッグアシスタント (MDA) を確認します。
+description: dangerousThreadingAPI マネージド デバッグ アシスタント (MDA) について確認します。これは、現在のスレッド以外のスレッドで Thread.Suspend が呼び出されたときにアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - suspending threads
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 ms.openlocfilehash: 707e3e339cb8a692f862afc15328eef53f0547e5
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96286085"
@@ -34,7 +34,7 @@ ms.locfileid: "96286085"
   
  同期プリミティブがターゲット スレッドによって保持されている場合は、中断の間も保持されたままになります。 これにより、<xref:System.Threading.Thread.Suspend%2A> を実行するスレッドなど、別のスレッドがプリミティブのロックを取得しようとすると、デッドロックが発生することがあります。 この場合、問題自体がデッドロックとして現れます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  <xref:System.Threading.Thread.Suspend%2A> および <xref:System.Threading.Thread.Resume%2A> を使用する必要のある設計を避けます。 スレッド間の協調では、<xref:System.Threading.Monitor>、<xref:System.Threading.ReaderWriterLock>、<xref:System.Threading.Mutex> などの同期プリミティブや、C# の `lock` ステートメントを使用します。 これらのメソッドを使用する必要がある場合は、時間を短くし、スレッドが中断状態にある間に実行されるコードの量を最小限に留めます。  
   

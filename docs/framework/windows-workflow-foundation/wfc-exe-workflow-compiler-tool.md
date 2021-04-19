@@ -1,6 +1,6 @@
 ---
-title: Wfc.exe (ワークフローコマンドラインコンパイラツール)
-description: ワークフローコマンドラインコンパイラツールである wfc.exe について説明します。
+title: Wfc.exe (ワークフロー コマンドライン コンパイラ ツール)
+description: wfc.exe (ワークフロー コマンドライン コンパイラ ツール) について説明します。
 ms.date: 10/10/2020
 helpviewer_keywords:
 - wfc [Workflow]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Workflow, wcf
 ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96293859"
 ---
-# <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (ワークフローコマンドラインコンパイラツール)
+# <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (ワークフロー コマンドライン コンパイラ ツール)
 
 > [!NOTE]
 > ここでは、廃止された型と名前空間について説明します。
 
-wfc.exe workflow コマンドラインコンパイラツールは、ファイル拡張子が *xoml* (古い) のワークフローマークアップファイルと連携します。
+wfc.exe ワークフロー コマンドライン コンパイラ ツールは、ファイル拡張子が *.xoml* (廃止) のワークフロー マークアップ ファイルと連携します。
 
-## <a name="compilation-process"></a>コンパイルプロセス
+## <a name="compilation-process"></a>コンパイル プロセス
 
 ワークフローのコンパイル時には、コンパイル手順として次のような処理が実行されます。
 
@@ -35,7 +35,7 @@ wfc.exe workflow コマンドラインコンパイラツールは、ファイル
 
 ### <a name="compiler-options"></a>コンパイラ オプション
 
-このセクションでは、wfc.exe ワークフローコマンドラインコンパイラのオプションについて説明します。
+このセクションでは、wfc.exe ワークフロー コマンドライン コンパイラのオプションを示します。
 
 ```output
     Microsoft (R) Windows Workflow Compiler version 3.0.0.0
@@ -100,9 +100,9 @@ wfc.exe workflow コマンドラインコンパイラツールは、ファイル
 > [!NOTE]
 > ここでは、廃止された型と名前空間について説明します。
 
-承認された型の一覧は、通常、 *wfc.exe.config* ファイルで定義されます。 ワークフローコンパイルの検証フェーズでは、ワークフローソースドキュメントが承認された型の一覧に存在しない .NET Framework 型を直接参照している場合、ワークフローソースドキュメントは拒否されます。 承認された型の一覧は、、、、 `Assembly` `Namespace` `TypeName` および承認された { `True`&#124;`False` } インジケーターを各エントリが示す XML ドキュメントです。 `AuthorizedType` リスト内のエントリに対応します。 完全な名前空間を含めたり除外したりするために使用できるワイルドカード文字指定は許可されています。 たとえば、には、 `Type="System.*"` <xref:System> 子名前空間に含まれる型を含む、のすべての型が含まれます。
+許可された型の一覧は、通常、*wfc.exe.config* ファイル内で定義されます。 ワークフロー コンパイルの検証フェーズでは、ワークフロー ソース ドキュメントは、それ自体またはコンパニオン ルール ファイルによって、許可された型のリストに載っていない .NET Framework 型が直接参照されている場合は拒否されます。 許可された型のリストは XML ドキュメントであり、`Assembly`、`Namespace`、`TypeName`、Authorized {`True`&#124;`False`} インジケーターを示す各エントリで構成されます。 `AuthorizedType` は、リストのエントリに対応しています。 完全な名前空間を含めたり除外したりするために使用できるワイルドカード文字を指定できます。 たとえば、`Type="System.*"` を使用すると、子の名前空間に含まれる型を含め、<xref:System> のすべての型を含めることができます。
   
-承認された型の一覧の使用は、オプションによって制御され <xref:System.Workflow.ComponentModel.Compiler.WorkflowCompiler> `'/checktypes'` ます。
+許可された型のリストを使うかどうかは、<xref:System.Workflow.ComponentModel.Compiler.WorkflowCompiler> のオプション `'/checktypes'` で制御できます。
 
 ```xml  
 <configuration>  
@@ -119,7 +119,7 @@ wfc.exe workflow コマンドラインコンパイラツールは、ファイル
 ```
 
 > [!WARNING]
-> `Type="System.*"`型が存在する場合、コンパイルのためになどの他の意図しない型を含めることができ `Type="System.Configuration"` ます。 注意し、それぞれを確認する必要があります。 制限する必要がある型については、をに設定してください `Authorized` `False` 。
+> `Type="System.*"` 型が存在する場合、コンパイルのために `Type="System.Configuration"` などの他の意図しない型を含めることができます。 それぞれについて注意し、確認する必要があります。 制限する必要がある型については、`Authorized` を `False` に設定してください。
 
 ## <a name="see-also"></a>関連項目
 

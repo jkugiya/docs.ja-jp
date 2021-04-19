@@ -1,6 +1,6 @@
 ---
 title: '方法 : サンドボックスで部分信頼コードを実行する'
-description: .NET のサンドボックスで部分信頼コードを実行する方法について説明します。 AppDomain クラスは、マネージアプリケーションをサンドボックス化するための効果的な方法です。
+description: .NET のサンドボックス内で部分的に信頼されたコードを実行する方法を確認します。 AppDomain クラスは、マネージド アプリケーションをサンドボックス化するための効果的な方法です。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 ms.openlocfilehash: baa04a3c55728590b8aa502648a8ab42bf62f903
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96288282"
@@ -116,7 +116,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - アセンブリが保存されていない場所を示すコード ベースを使用できます。  
   
-    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (これは、アセンブリに透明度のマークがなく、完全に信頼されているものとして読み込まれるたびに発生します)。したがって、この関数で信頼するコードのみを作成するように注意する必要があります。また、新しいアプリケーションドメインでは、完全に信頼されたクラスのインスタンスのみを作成することをお勧めします。  
+    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (この状況は、アセンブリに透過マーキングがなく、完全な信頼として読み込まれるときに毎回発生します。)そのため、この関数で信頼するコードのみを作成する場合は注意が必要です。新しいアプリケーション ドメインに、完全信頼クラスのインスタンスのみを作成することをお勧めします。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -124,7 +124,7 @@ AppDomain.CreateDomain( string friendlyName,
            typeof(Sandboxer).FullName );  
     ```  
   
-     新しいドメインにクラスのインスタンスを作成するには、クラスがクラスを拡張する必要があり <xref:System.MarshalByRefObject> ます。
+     新しいドメインにクラスのインスタンスを作成するには、そのクラスで <xref:System.MarshalByRefObject> クラスを拡張する必要があります。
   
     ```csharp
     class Sandboxer:MarshalByRefObject  

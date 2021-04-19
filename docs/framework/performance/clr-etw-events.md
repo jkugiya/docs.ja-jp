@@ -1,6 +1,6 @@
 ---
 title: CLR ETW イベント
-description: 共通言語ランタイム (CLR) event tracing for Windows (ETW) イベントに関する記事を参照してください。 イベントプロバイダーには、ランタイムプロバイダーとランダウンプロバイダーの2つがあります。
+description: 共通言語ランタイム (CLR) Windows イベント トレーシング (ETW) イベントに関する記事をご覧ください。 イベント プロバイダーには、ランタイム プロバイダーとランダウン プロバイダーの 2 つがあります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96283914"
@@ -56,7 +56,7 @@ ms.locfileid: "96283914"
  [ARM のイベント](application-domain-resource-monitoring-arm-etw-events.md)  
  アプリケーション ドメインの状態に関する詳細な診断情報をキャプチャします。  
   
- [セキュリティイベント](security-etw-events.md)  
+ [セキュリティ イベント](security-etw-events.md)  
  厳密な名前と Authenticode の検証に関する情報をキャプチャします。  
   
  [スタック イベント](stack-etw-event.md)  

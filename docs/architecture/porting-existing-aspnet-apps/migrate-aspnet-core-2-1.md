@@ -3,16 +3,16 @@ title: ASP.NET Core 2.1 に移行する
 description: .NET Framework ランタイムをターゲットにできる最後の .NET Core のバージョンである .NET Core 2.1 に移行することは、一部のアプリ移行計画での中間段階として理にかなっているでしょうか?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 0c478ae194c6d9118bfbca73f8933d7623246e2c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e4db85405edc7e7f51ab6f8b422451cf7acc065e
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401360"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122847"
 ---
 # <a name="migrate-to-aspnet-core-21"></a>ASP.NET Core 2.1 に移行する
 
-ASP.NET Core 2.1 は、興味深いリリースです。 .NET Core と .NET Framework の両方のランタイムをサポートする、現在サポートされている唯一の .NET Core リリースだからです。 そのような理由で、アプリによっては、これを使用することでアプリのすべての部分を一度に .NET Core にアップグレードするよりもアップグレード パスが簡単になる可能性があります。 LTS リリースとしては、.NET Core 2.1 のサポートは 2021 年 8 月まで継続されます。 .NET Framework 上で実行される ASP.NET Core 2.1 のサポートは、基になる .NET Framework がサポートされている間は継続されます。
+ASP.NET Core 2.1 は、興味深いリリースです。 .NET Core と .NET Framework の両方のランタイムをサポートする、現在サポートされている唯一の ASP.NET Core リリースだからです。 そのような理由で、アプリによっては、これを使用することでアプリのすべての部分を一度に .NET Core にアップグレードするよりもアップグレード パスが簡単になる可能性があります。 LTS リリースとしては、.NET Core 2.1 のサポートは 2021 年 8 月まで継続されます。 .NET Framework 上で実行される ASP.NET Core 2.1 のサポートは、基になる .NET Framework がサポートされている間は継続されます。
 
 ## <a name="should-apps-run-on-net-framework-with-aspnet-core-21"></a>.NET Framework と ASP.NET Core 2.1 上でアプリを実行する必要があるか
 
@@ -26,7 +26,7 @@ ASP.NET Core 2.2 以前では、.NET Core と .NET Framework の両方のラン�
 
 ASP.NET Core 2.1 は .NET Framework 上での実行と .NET Framework ライブラリの使用がサポートされる .NET Core の最後の LTS リリースであることを念頭に置いてください。 このリリースはまもなくサポートされなくなりますが、.NET Framework 上の ASP.NET Core 2.1 は、その .NET Framework がサポートされている間は (.NET Core 2.1 のサポートが終了した後でも) サポートされます。 詳細については、「[.NET Framework 上の ASP.NET Core 2.1](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」を参照してください。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 [ASP.NET から ASP.NET Core 2.1 への移行](/aspnet/core/migration/proper-to-2x/?preserve-view=true&view=aspnetcore-2.1)
 

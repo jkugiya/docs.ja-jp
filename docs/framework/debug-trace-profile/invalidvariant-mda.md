@@ -1,6 +1,6 @@
 ---
 title: invalidVariant MDA
-description: InvalidVariant マネージデバッグアシスタントを確認します。これは、ネイティブ/アンマネージからマネージコードへの呼び出しで無効なバリアントが検出された場合に呼び出されます。
+description: invalidVariant マネージド デバッグ アシスタントについて確認します。これは、ネイティブ/アンマネージドからマネージ ドコードへの呼び出しで無効な VARIANT が検出された場合に呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid variant
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 ms.openlocfilehash: f0667a54e950ead27000eb6b93ebd547dea1cfb0
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96281301"
@@ -28,7 +28,7 @@ ms.locfileid: "96281301"
 
  ネイティブ コードが、不適切な `VARIANT` 構造体をマネージド コードに渡しています。  ランタイムは、この `VARIANT` をオブジェクトにマーシャリングしようとし、`VARIANT` が有効でない場合に MDA がアクティブ化されます。 無効な `VARIANT` には、`VARTYPE` VT_EMPTY &#124; VT_BYREF の `VARIANT` や、`VARTYPE` VT_VARIANT の `VARIANT` などがあります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  `VARIANT` を渡すネイティブ コードまたはアンマネージ コードでは、`VARIANT` の形式と初期化が正しいことを確認する必要があります。  
   

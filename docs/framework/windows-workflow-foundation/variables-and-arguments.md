@@ -1,18 +1,18 @@
 ---
 title: 変数と引数
-description: この記事では、データの格納を表す変数と、Workflow Foundation のアクティビティとの間のデータフローを表す引数について説明します。
+description: この記事では、データの格納を表す変数と、Workflow Foundation のアクティビティとの間のデータ フローを表す引数について説明します。
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 9d593fa5a974524cf976361de9871d3877e58c2d
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96293885"
 ---
 # <a name="variables-and-arguments"></a>変数と引数
 
-Windows Workflow Foundation (WF) では、変数はデータのストレージを表し、引数はアクティビティとの間のデータフローを表します。 アクティビティには一連の引数があり、その引数はアクティビティの署名を構成します。 また、アクティビティは開発者がワークフローの設計時に変数を追加または削除できる変数のリストを保持しています。 引数は、値を返す式を使用してバインドされます。  
+Windows Workflow Foundation (WF) では、変数はデータ ストレージを表し、引数はアクティビティとの間のデータ フローを表します。 アクティビティには一連の引数があり、その引数はアクティビティの署名を構成します。 また、アクティビティは開発者がワークフローの設計時に変数を追加または削除できる変数のリストを保持しています。 引数は、値を返す式を使用してバインドされます。  
   
 ## <a name="variables"></a>変数  
 
@@ -72,9 +72,9 @@ Variable<string> var = new Variable<string>
   
 2. <xref:System.Activities.InOutArgument%601.Set%2A> が呼び出されると、ランタイムはすぐにその値を設定します。  
   
-3. 必要に応じて、引数に <xref:System.Activities.Argument.EvaluationOrder%2A> を指定できます。 <xref:System.Activities.Argument.EvaluationOrder%2A> は引数の評価順序を指定するゼロベースの値です。 既定では引数の評価順序は指定されておらず、<xref:System.Activities.Argument.UnspecifiedEvaluationOrder> の値と同じです。 <xref:System.Activities.Argument.EvaluationOrder%2A> に 0 以上の値を設定して、この引数の評価順序を指定します。 Windows Workflow Foundation は、指定された評価順序で引数を昇順で評価します。 評価順序が指定されていない引数は、評価順序が指定されている引数の前に評価されることに注意してください。  
+3. 必要に応じて、引数に <xref:System.Activities.Argument.EvaluationOrder%2A> を指定できます。 <xref:System.Activities.Argument.EvaluationOrder%2A> は引数の評価順序を指定するゼロベースの値です。 既定では引数の評価順序は指定されておらず、<xref:System.Activities.Argument.UnspecifiedEvaluationOrder> の値と同じです。 <xref:System.Activities.Argument.EvaluationOrder%2A> に 0 以上の値を設定して、この引数の評価順序を指定します。 Windows Workflow Foundation により、指定した評価順序を使用して引数が昇順で評価されます。 評価順序が指定されていない引数は、評価順序が指定されている引数の前に評価されることに注意してください。  
   
- アクティビティの作成者は、厳密に型指定された機構を使用して引数を公開できます。 これを行うには、<xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、および <xref:System.Activities.InOutArgument%601> の型のプロパティを宣言します。 これにより、アクティビティの作成者は、アクティビティに受け渡しするデータの特定のコントラクトを確立できます。  
+ アクティビティの作成者は、引数を公開する場合に厳密な型指定のメカニズムを使用できます。 これを行うには、<xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、および <xref:System.Activities.InOutArgument%601> の型のプロパティを宣言します。 これにより、アクティビティの作成者は、アクティビティに受け渡しするデータの特定のコントラクトを確立できます。  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>アクティビティの引数の定義  
 
@@ -149,4 +149,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- コードで引数、変数、および式を使用する方法の詳細については、「命令型コードと[必須の引数およびオーバーロードグループ](required-arguments-and-overload-groups.md)[を使用したワークフロー、アクティビティ、および式の作成](authoring-workflows-activities-and-expressions-using-imperative-code.md)」を参照してください。
+ コード内の引数、変数、式を操作する方法について詳しくは、「[命令型コードを使用してワークフロー、アクティビティ、および式を作成する方法](authoring-workflows-activities-and-expressions-using-imperative-code.md)」および「[必須の引数とオーバーロード グループ](required-arguments-and-overload-groups.md)」をご覧ください。

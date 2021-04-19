@@ -1,6 +1,6 @@
 ---
 title: .NET のパフォーマンスに関するヒント
-description: .NET でのプログラムの実行速度を向上させるためのパフォーマンスのヒントについて説明します。 ボックス化、ボックス化解除、文字列、およびデストラクターのヒントを参照してください。
+description: .NET でのプログラムの実行速度を向上させるためのパフォーマンスのヒントについて説明します。 ボックス化、ボックス化解除、文字列、およびデストラクターに関するヒントをご覧ください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - C# language, performance
@@ -12,7 +12,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 526dd0d42b82dd4987e446382e7639f322e063aa
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96281704"
@@ -27,13 +27,13 @@ ms.locfileid: "96281704"
   
 ## <a name="strings"></a>文字列  
 
- たとえば、短いループ内で多くの文字列変数を連結する場合は、C# の [+ 演算子](../../csharp/language-reference/operators/addition-operator.md)または Visual Basic の[連結演算子](../../visual-basic/language-reference/operators/concatenation-operators.md)ではなく、<xref:System.Text.StringBuilder?displayProperty=nameWithType> を使用します。 詳細については、「 [Visual Basic で](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)複数の文字列と連結演算子[を連結する方法](../../csharp/how-to/concatenate-multiple-strings.md)」を参照してください。  
+ たとえば、短いループ内で多くの文字列変数を連結する場合は、C# の [+ 演算子](../../csharp/language-reference/operators/addition-operator.md)または Visual Basic の[連結演算子](../../visual-basic/language-reference/operators/concatenation-operators.md)ではなく、<xref:System.Text.StringBuilder?displayProperty=nameWithType> を使用します。 詳細については、[複数の文字列を連結する方法](../../csharp/how-to/concatenate-multiple-strings.md)に関する記事と「[Visual Basic の連結演算子](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)」を参照してください。  
   
 ## <a name="destructors"></a>デストラクター  
 
  空のデストラクターは使用しないでください。 デストラクターがクラスに存在するときは、エントリが終了キューで作成されます。 デストラクターを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 デストラクターが空の場合は、これによってパフォーマンスが低下します。 詳細については、「[デストラクタ](../../csharp/programming-guide/classes-and-structs/destructors.md)」と「[Object Lifetime: How Objects Are Created and Destroyed](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)」(オブジェクトの有効期間 : オブジェクトの作成と破棄) を参照してください。  
   
-## <a name="other-resources"></a>その他のリソース  
+## <a name="other-resources"></a>その他の参照情報  
   
 - [高速なマネージド コードを書く: 何にコストがかかるのかを知る](/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
@@ -45,7 +45,7 @@ ms.locfileid: "96281704"
 
 - [Rico Mariani が紹介するパフォーマンスに関するニュース](/archive/blogs/ricom/)  
 
-- [Vance Morrison 氏のブログ](/archive/blogs/vancem/)
+- [Vance Morrison のブログ](/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>関連項目
 

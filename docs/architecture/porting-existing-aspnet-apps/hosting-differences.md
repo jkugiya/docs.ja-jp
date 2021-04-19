@@ -3,12 +3,12 @@ title: ASP.NET MVC と ASP.NET Core でのホスティングの相違点
 description: ASP.NET MVC アプリと ASP.NET Core アプリでのホスト方法の相違点に関する概要を示します。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 402dd5782cb215545ff2ef13f97ec269b8a2540b
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9881a40403f8109fa63e25167b753ed4ce8ade17
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401382"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122899"
 ---
 # <a name="hosting-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC と ASP.NET Core でのホスティングの相違点
 
@@ -16,11 +16,12 @@ ASP.NET MVC アプリは IIS でホストされるため、動作が IIS の構�
 
 [ASP.NET Core アプリは多数の異なるサーバー上で実行できます](/aspnet/core/fundamentals/servers/)。 既定の選択肢としては、既定のクロス プラットフォーム サーバーである Kestrel が適しています。 Kestrel で実行されているアプリは、別のプロセスで実行されている IIS によってホストできます。 Windows では、アプリを IIS 上のプロセス内で、または HTTP.sys を使用して実行することもできます。 最適なパフォーマンスを得るには、通常は Kestrel をお勧めします。 HTTP.sys は、アプリがインターネットに公開されていて、必要な機能が HTTP.sys でサポートされているものの、Kestrel ではサポートされていないシナリオで使用できます。
 
-Kestrel には、IIS モジュールに相当するものはありません (ただし、IIS でホストされているアプリで IIS モジュールを利用することはできます)。 同等の動作を実現するために、通常は、ASP.NET Core アプリ自体に構成されたミドルウェアが使用されます。
+Kestrel には、IIS モジュールに相当するものはありません (ただし、IIS でホストされているアプリで IIS モジュールを利用することはできます)。 同等の動作を実現するために、通常は、ASP.NET Core アプリ自体に構成された[ミドルウェア](/aspnet/core/fundamentals/middleware/)が使用されます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [IIS モジュール](/iis/get-started/introduction-to-iis/iis-modules-overview)
+- [ASP.NET Core のミドルウェア](/aspnet/core/fundamentals/middleware/)
 - [ASP.NET Core サーバー](/aspnet/core/fundamentals/servers/)
 
 >[!div class="step-by-step"]

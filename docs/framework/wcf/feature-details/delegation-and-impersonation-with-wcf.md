@@ -1,6 +1,6 @@
 ---
 title: WCF の委任と偽装
-description: WCF がサービスドメインのリソースへのクライアントアクセスを制限するために使用する偽装と委任の方法について説明します。
+description: サービス ドメインのリソースへのクライアント アクセスを制限するために WCF によって使用される偽装と委任の方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: fd6c75d66251808a22445c959c18ee6026a686f1
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96291649"
@@ -31,13 +31,13 @@ ms.locfileid: "96291649"
   
 ## <a name="impersonation-basics"></a>偽装の基本  
 
- Windows Communication Foundation (WCF) では、さまざまなクライアント資格情報の偽装がサポートされています。 このトピックでは、サービス メソッドの実装時に呼び出し元を偽装するためのサービス モデルのサポートについて説明します。 また、このようなシナリオでは、偽装と SOAP セキュリティおよび WCF オプションに関連する一般的な展開シナリオについても説明します。  
+ Windows Communication Foundation (WCF) により、さまざまなクライアント資格情報の偽装がサポートされています。 このトピックでは、サービス メソッドの実装時に呼び出し元を偽装するためのサービス モデルのサポートについて説明します。 また、偽装と SOAP セキュリティを必要とする一般的な展開シナリオ、およびこれらのシナリオでの WCF のオプションについても説明します。  
   
- このトピックでは、SOAP セキュリティを使用する場合の WCF での偽装と委任について説明します。 「 [トランスポートセキュリティでの偽装の使用](using-impersonation-with-transport-security.md)」で説明されているように、トランスポートセキュリティを使用する場合は、WCF での偽装と委任を使用することもできます。  
+ ここでは、SOAP セキュリティを使用する場合の WCF での偽装と委任について集中的に説明します。 「[トランスポート セキュリティでの偽装の使用](using-impersonation-with-transport-security.md)」に記載されているように、トランスポート セキュリティを使用する場合にも、WCF で偽装と委任を使用できます。  
   
 ## <a name="two-methods"></a>2 つの方法  
 
- WCF SOAP セキュリティには、偽装を実行するための2つの異なる方法があります。 使用する方法は、バインディングによって異なります。 1 つは、セキュリティ サポート プロバイダー インターフェイス (SSPI) または Kerberos 認証から取得し、サーバーにキャッシュされた Windows トークンの偽装です。 もう 1 つは、 *Service-for-User (S4U)* と総称される Kerberos 拡張から取得した Windows トークンの偽装です。  
+ WCF の SOAP セキュリティには、偽装を実行するための 2 とおりの方法があります。 使用する方法は、バインディングによって異なります。 1 つは、セキュリティ サポート プロバイダー インターフェイス (SSPI) または Kerberos 認証から取得し、サーバーにキャッシュされた Windows トークンの偽装です。 もう 1 つは、 *Service-for-User (S4U)* と総称される Kerberos 拡張から取得した Windows トークンの偽装です。  
   
 ### <a name="cached-token-impersonation"></a>キャッシュされたトークンの偽装  
 
@@ -47,7 +47,7 @@ ms.locfileid: "96291649"
   
 - <xref:System.ServiceModel.BasicHttpBinding> が <xref:System.ServiceModel.BasicHttpSecurityMode> 資格情報に設定された <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 。または、サービスが有効な Windows アカウントにマップできるユーザー名資格情報をクライアントが提示する、その他の標準バインディング。  
   
-- <xref:System.ServiceModel.Channels.CustomBinding> が `requireCancellation` に設定された Windows クライアント資格情報を使用する `true` (プロパティは、、、およびの各クラスで使用でき <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> ます)。セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、 `requireCancellation` プロパティをに設定する必要もあり `true` ます。  
+- <xref:System.ServiceModel.Channels.CustomBinding> が `requireCancellation` に設定された Windows クライアント資格情報を使用する `true` (このプロパティは、<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>、および <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> の各クラスで使用できます)。セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、`requireCancellation` プロパティを `true` に設定することも必要です。  
   
 - クライアントがユーザー名資格情報を提示する <xref:System.ServiceModel.Channels.CustomBinding> 。 セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、 `requireCancellation` プロパティを `true`に設定することも必要です。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "96291649"
  サービスがクライアントを偽装できるエクステントは、偽装を試みるときにサービス アカウントが保持している特権、使用する偽装の種類、およびクライアントが許可すると考えられる偽装のエクステントによって異なります。  
   
 > [!NOTE]
-> クライアントとサービスが同じコンピューター上で実行されており、クライアントがシステム アカウント ( `Local System` や `Network Service`など) で実行されているときに、ステートレスなセキュリティ コンテキスト トークンを使用してセキュリティで保護されたセッションを確立した場合は、クライアントを偽装できません。 通常、Windows フォームまたはコンソール アプリケーションは、現在ログインしているアカウントで実行されるため、既定でそのアカウントを偽装できます。 ただし、クライアントが ASP.NET ページで、そのページが IIS 6.0 または IIS 7.0 でホストされている場合、既定では、クライアントはアカウントで実行され `Network Service` ます。 セキュリティで保護されたセッションをサポートするシステム提供のすべてのバインディングは、ステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を既定で使用します。 ただし、クライアントが ASP.NET ページであり、ステートフルな SCTs を使用してセキュリティで保護されたセッションを使用している場合、クライアントを偽装することはできません。 セキュリティで保護されたセッションでのステートフルな SCTs の使用の詳細については、「 [方法: セキュリティで保護されたセッションのセキュリティコンテキストトークンを作成](how-to-create-a-security-context-token-for-a-secure-session.md)する」を参照してください。  
+> クライアントとサービスが同じコンピューター上で実行されており、クライアントがシステム アカウント ( `Local System` や `Network Service`など) で実行されているときに、ステートレスなセキュリティ コンテキスト トークンを使用してセキュリティで保護されたセッションを確立した場合は、クライアントを偽装できません。 通常、Windows フォームまたはコンソール アプリケーションは、現在ログインしているアカウントで実行されるため、既定でそのアカウントを偽装できます。 ただし、クライアントが ASP.NET ページであり、そのページが IIS 6.0 または IIS 7.0 でホストされている場合、既定では、クライアントは `Network Service` アカウントで実行されます。 セキュリティで保護されたセッションをサポートするシステム提供のすべてのバインディングは、ステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を既定で使用します。 ただし、クライアントが ASP.NET ページであり、ステートフルな SCT を使用する、セキュリティで保護されたセッションを使用している場合は、クライアントを偽装できません。 セキュリティで保護されたセッションでステートフルな SCT を使用する方法の詳細については、「[方法: セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する](how-to-create-a-security-context-token-for-a-secure-session.md)」を参照してください。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>サービス メソッドでの偽装 : 宣言モデル  
 
- ほとんどの偽装シナリオでは、呼び出し元のコンテキストでサービス メソッドを実行する必要があります。 WCF には、ユーザーが属性で偽装要件を指定できるようにすることで、この機能を簡単に実行できる偽装機能が用意されて <xref:System.ServiceModel.OperationBehaviorAttribute> います。 たとえば、次のコードでは、WCF インフラストラクチャはメソッドを実行する前に呼び出し元の権限を借用し `Hello` ます。 `Hello` メソッド内でネイティブ リソースへのアクセス試行が成功するのは、そのリソースのアクセス制御リスト (ACL) で呼び出し元のアクセス特権が許可されている場合だけです。 偽装を有効にするには、次の例に示すように、 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> プロパティを <xref:System.ServiceModel.ImpersonationOption> 列挙値のいずれか ( <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> または <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>) に設定します。  
+ ほとんどの偽装シナリオでは、呼び出し元のコンテキストでサービス メソッドを実行する必要があります。 WCF には、ユーザーが <xref:System.ServiceModel.OperationBehaviorAttribute> 属性で偽装要件を指定できるようにすることで、これを容易に実行できるようにした偽装機能が用意されています。 たとえば、次のコードでは、WCF インフラストラクチャにより `Hello` メソッドの実行前に呼び出し元が偽装されます。 `Hello` メソッド内でネイティブ リソースへのアクセス試行が成功するのは、そのリソースのアクセス制御リスト (ACL) で呼び出し元のアクセス特権が許可されている場合だけです。 偽装を有効にするには、次の例に示すように、 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> プロパティを <xref:System.ServiceModel.ImpersonationOption> 列挙値のいずれか ( <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> または <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>) に設定します。  
   
 > [!NOTE]
 > サービスの資格情報がリモート クライアントよりも高い場合は、 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> プロパティが <xref:System.ServiceModel.ImpersonationOption.Allowed>に設定されていても、サービスの資格情報が使用されます。 つまり、低い特権を持つユーザーがその資格情報を提示した場合、そのユーザーよりも高い特権を持つサービスは、サービスの資格情報を使用してメソッドを実行し、特権の低いユーザーが本来は使用できないリソースを使用できることになります。  
@@ -76,17 +76,17 @@ ms.locfileid: "96291649"
  [!code-csharp[c_ImpersonationAndDelegation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#1)]
  [!code-vb[c_ImpersonationAndDelegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#1)]  
   
- WCF インフラストラクチャは、呼び出し元が Windows ユーザーアカウントにマップできる資格情報で認証されている場合にのみ、呼び出し元の権限を借用できます。 サービスが Windows アカウントにマップできない資格情報を使用して認証を行うように構成されている場合には、サービス メソッドは実行されません。  
+ WCF インフラストラクチャによって呼び出し元を偽装できるのは、呼び出し元が Windows ユーザー アカウントにマップできる資格情報を使用して認証された場合だけです。 サービスが Windows アカウントにマップできない資格情報を使用して認証を行うように構成されている場合には、サービス メソッドは実行されません。  
   
 > [!NOTE]
-> Windows XP では、ステートフルな SCT が作成されると偽装が失敗し、に <xref:System.InvalidOperationException> なります。 詳細については、「サポートされ [ないシナリオ](unsupported-scenarios.md)」を参照してください。  
+> Windows XP では、ステートフルな SCT が作成されると偽装が失敗し、<xref:System.InvalidOperationException> になります。 詳細については、「[サポートされていないシナリオ](unsupported-scenarios.md)」を参照してください。  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>サービス メソッドでの偽装 : 強制モデル  
 
  呼び出し元がサービス メソッドの全体ではなく、一部を偽装するだけで、その機能が実行される場合があります。 この場合、サービス メソッド内で呼び出し元の Windows ID を取得し、偽装を強制的に実行します。 これを行うには、 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> の <xref:System.ServiceModel.ServiceSecurityContext> プロパティを使用して <xref:System.Security.Principal.WindowsIdentity> クラスのインスタンスを返し、このインスタンスを使用する前に <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> メソッドを呼び出します。  
   
 > [!NOTE]
-> Visual Basic `Using` ステートメントまたは C# ステートメントを使用して `using` 、偽装アクションを自動的に元に戻すようにしてください。 ステートメントを使用しない場合、または Visual Basic や C# 以外のプログラミング言語を使用する場合は、偽装レベルを必ず元に戻してください。 この作業を怠ると、サービス拒否攻撃や権限の昇格攻撃のもとになるおそれがあります。  
+> Visual Basic の `Using` ステートメント、または C# の `using` ステートメントを使用して、偽装操作を自動的に元に戻すようにしてください。 これらのステートメントを使用しない場合、または Visual Basic や C# 以外のプログラミング言語を使用する場合は、偽装レベルを必ず元に戻してください。 この作業を怠ると、サービス拒否攻撃や権限の昇格攻撃のもとになるおそれがあります。  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  
@@ -98,14 +98,14 @@ ms.locfileid: "96291649"
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- 次の表では、およびのすべての可能な組み合わせに対する WCF の動作について説明し `ImpersonationOption` `ImpersonateCallerForAllServiceOperations` ます。  
+ `ImpersonationOption` と `ImpersonateCallerForAllServiceOperations` の可能なすべての組み合わせに対する WCF の動作を次の表に示します。  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|動作|  
 |---------------------------|------------------------------------------------|--------------|  
-|必須|該当なし|WCF は呼び出し元の権限を借用します|  
-|許可されます。|false|WCF は呼び出し元を偽装しません|  
-|許可されます。|true|WCF は呼び出し元の権限を借用します|  
-|禁止|false|WCF は呼び出し元を偽装しません|  
+|必須|N/A|WCF によって呼び出し元が偽装されます|  
+|許可されます。|false|WCF によって呼び出し元が偽装されません|  
+|許可されます。|true|WCF によって呼び出し元が偽装されます|  
+|禁止|false|WCF によって呼び出し元が偽装されません|  
 |禁止|true|使用できません ( <xref:System.InvalidOperationException> がスローされます)。|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Windows 資格情報とキャッシュされたトークンの偽装から取得する偽装レベル  
@@ -124,32 +124,32 @@ ms.locfileid: "96291649"
   
 |`AllowedImpersonationLevel` 値|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonymous|はい|該当なし|偽装|  
-|Anonymous|いいえ|該当なし|識別|  
-|識別|該当なし|該当なし|識別|  
-|偽装|はい|該当なし|偽装|  
-|偽装|いいえ|該当なし|識別|  
+|匿名|はい|N/A|権限借用|  
+|匿名|いいえ|該当なし|識別|  
+|識別|N/A|N/A|識別|  
+|権限借用|はい|N/A|権限借用|  
+|権限借用|いいえ|該当なし|識別|  
 |委任|はい|はい|委任|  
-|委任|はい|いいえ|偽装|  
+|委任|はい|いいえ|権限借用|  
 |委任|いいえ|該当なし|識別|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>ユーザー名資格情報とキャッシュされたトークンの偽装から取得する偽装レベル  
 
- クライアントは、サービスにユーザー名とパスワードを渡すことによって、WCF をそのユーザーとしてログオンできるようにし `AllowedImpersonationLevel` ます。これは、プロパティをに設定することと同じです <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 。 (は、 `AllowedImpersonationLevel` <xref:System.ServiceModel.Security.WindowsClientCredential> クラスおよびクラスで使用でき <xref:System.ServiceModel.Security.HttpDigestClientCredential> ます)。次の表は、サービスがユーザー名資格情報を受け取ると取得される偽装レベルを示しています。  
+ クライアントからサービスにユーザー名とパスワードを渡すことで、WCF はそのユーザーとしてログオンできるようになります。これは、`AllowedImpersonationLevel` プロパティを <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> に設定することに相当します。 (`AllowedImpersonationLevel` は、<xref:System.ServiceModel.Security.WindowsClientCredential> および <xref:System.ServiceModel.Security.HttpDigestClientCredential> クラスで使用できます。)サービスがユーザー名資格情報を受け取るときに取得される偽装レベルを次の表に示します。  
   
 |`AllowedImpersonationLevel`|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|該当なし|はい|はい|委任|  
-|該当なし|はい|いいえ|偽装|  
-|該当なし|いいえ|該当なし|識別|  
+|N/A|はい|はい|委任|  
+|N/A|はい|いいえ|権限借用|  
+|N/A|いいえ|該当なし|識別|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U ベースの偽装から取得する偽装レベル  
   
 |サービスに `SeTcbPrivilege`がある|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|はい|はい|該当なし|偽装|  
+|はい|はい|N/A|権限借用|  
 |はい|いいえ|該当なし|識別|  
-|いいえ|該当なし|該当なし|識別|  
+|いいえ|該当なし|N/A|識別|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>クライアント証明書から Windows アカウントへのマッピング  
 
@@ -214,7 +214,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 4. ドメイン コントローラーで、 **[指定されたサービスへの委任でのみこのコンピューターを信頼する]** をクリックして、制約された委任を使用するように中間層コンピューターを構成します。  
   
- 制約付き委任の構成手順の詳細については、「 [Kerberos プロトコル遷移と制約付き委任](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))」を参照してください。
+ 制約された委任を構成する手順の詳細については、「[Kerberos のプロトコル遷移と制約付き委任](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 

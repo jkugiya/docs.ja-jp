@@ -1,6 +1,6 @@
 ---
 title: UI オートメーションによる Pane コントロール型のサポート
-description: UI オートメーションによる Pane コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロールパターン、およびイベントについて説明します。
+description: UI オートメーションによる Pane コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロール パターン、イベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Pane control type
@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
 ms.openlocfilehash: 939d1e7bddf5fd97de067b00f88a488c97ef1b4c
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96283004"
@@ -23,13 +23,13 @@ ms.locfileid: "96283004"
   
  Pane コントロール型は、フレームまたはドキュメント ウィンドウ内のオブジェクトを表すために使用します。 ユーザーはペイン コントロール間や現在のペインの内容の中を移動することができますが、異なるペインの項目間を移動することはできません。 そのため、ペイン コントロールは、ウィンドウやドキュメントより下で、個々のコントロールより上のグループ化のレベルを表します。 ユーザーは、状況に応じて、TAB、F6、または CTRL + TAB キーを押すことによって、ペイン間を移動します。 Pane コントロール型には、特定のキーボード ナビゲーションは必要ありません。  
   
- 以降のセクションでは、Pane コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 要件は、、Win32、Windows フォームのいずれの場合で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] も、すべてのリストコントロールに適用され [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ます。  
+ 以降のセクションでは、Pane コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、Windows フォームのいずれの場合でも、すべてのリスト コントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
 
- 次の表に、ペイン コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、ペイン コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの詳細については、「[UI オートメーション ツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
@@ -39,9 +39,9 @@ ms.locfileid: "96283004"
 
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
 
- 次の表に、ペイン コントロールに特に関連する値や定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+ 次の表に、ペイン コントロールに特に関連する値や定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティの詳細については、「[クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|Notes|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|コントロール全体を格納する最も外側の四角形。|  
@@ -51,8 +51,8 @@ ms.locfileid: "96283004"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|「ノート」を参照してください。|通常、ペイン コントロールに静的ラベルはありません。 静的なテキスト ラベルが存在する場合は、このプロパティを介して公開する必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ペイン|この値は、すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"pane"|Pane コントロール型に対応する、ローカライズされた文字列。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|ペイン コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに組み込まれます。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|ペイン コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに組み込まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|○|ペイン コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに組み込まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|○|ペイン コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに組み込まれます。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|ペイン コントロールのヘルプ テキストで、各フレームの用途とフレーム間の関係を説明する必要があります。 フレームの目的や関係が `NameProperty`の値からわからない場合は、説明が必要です。 "|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|「ノート」を参照してください。|特定のキーの組み合わせによってペインにフォーカスが移動する場合は、このプロパティを介してその情報を公開する必要があります。|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "96283004"
 |コントロール パターン|サポート|Notes|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|依存|画面上でのペイン コントロールの移動、サイズ変更、または回転が可能な場合は、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider>|なし|このコントロール パターンを実装する必要がある場合は、コントロールが <xref:System.Windows.Automation.ControlType.Window> コントロール型に基づいている必要があります。|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider>|行わない|このコントロール パターンを実装する必要がある場合は、コントロールが <xref:System.Windows.Automation.ControlType.Window> コントロール型に基づいている必要があります。|  
 |<xref:System.Windows.Automation.Provider.IDockProvider>|依存|ペイン コントロールがドッキング可能な場合は、このコントロール パターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|依存|ペイン コントロールがスクロール可能な場合は、このコントロール パターンを実装します。|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "96283004"
 
  次の表に、すべてのペイン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントの詳細については、「 [UI Automation Events Overview](ui-automation-events-overview.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート/値|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート/値|Notes|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|なし|なし|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|なし|なし|  
@@ -103,7 +103,7 @@ ms.locfileid: "96283004"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>ペイン</li><li>ツリー (スクロール パターン)<br /><br /> <ul><li>TreeItem</li><li>ペイン</li><li>編集 (スクロール パターン)</li></ul></li></ul>|-ウィンドウ<br />-Tree (スクロールパターン)<br />-TreeItem<br />- ...枠内<br />-編集<br />-(スクロールパターン)|  
+|<ul><li>ペイン</li><li>ツリー (スクロール パターン)<br /><br /> <ul><li>TreeItem</li><li>ペイン</li><li>編集 (スクロール パターン)</li></ul></li></ul>|-   Pane<br />-   Tree (スクロール パターン)<br />-   TreeItem<br />-   …Pane<br />-   Edit<br />-   (スクロール パターン)|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,12 +3,12 @@ title: 移行に関する注意事項
 description: ASP.NET MVC から .NET Core に移行するかどうか、およびその方法について適切に判断するために、チームが知っておくべきことは何でしょうか。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: efa1efc99cbe46ef289cfd6b53ba83b3bc1b56b1
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: c669dc477469c92dfa3acda8209ba7a1fdea5ed5
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401479"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122860"
 ---
 # <a name="migration-considerations"></a>移行に関する注意事項
 
@@ -50,13 +50,15 @@ ASP.NET Core はモジュール式であり、フレームワークのファー�
 
 ### <a name="application-domains"></a>アプリケーション ドメイン
 
-アプリケーション ドメイン (AppDomains) はアプリを互いに分離します。 AppDomain にはランタイム サポートが必要で、コストがかかる場合もあります。 追加のアプリケーション ドメインの作成はサポートされておらず、今後この機能を .NET Core に追加する予定はありません。 コードの分離のためには、代替方法として別個のプロセスやコンテナーを使用します。
+アプリケーション ドメイン (AppDomains) はアプリを互いに分離します。 AppDomain にはランタイム サポートが必要で、コストがかかる場合もあります。 追加のアプリケーション ドメインの作成はサポートされておらず、今後この機能を .NET Core に追加する予定はありません。 コードの分離のためには、代替方法として別個のプロセスやコンテナーを使用します。 一部のお客様は、アセンブリをアンロードする手段として AppDomain を使用します。 .NET Core [AssemblyLoadContext](https://docs.microsoft.com/dotnet/standard/assembly/unloadability) には、アセンブリをアンロードするための別の方法が用意されています。
 
 ### <a name="wcf"></a>WCF
 
 サーバー側 WCF は、.NET Core ではサポートされていません。 .NET Core では WCF クライアントがサポートされますが、WCF ホストはサポートされません。 この機能が必要なアプリは、移行の一環として別の通信テクノロジ (gRPC や REST など) にアップグレードする必要があります。
 
 [WCF クライアント ポートが .NET Foundation から提供されています](../../core/dotnet-five.md#windows-communication-foundation)。 これは、完全にオープンソースであり、クロス プラットフォームで、Microsoft でサポートされています。 また、コミュニティでサポートされている [CoreWCF プロジェクト](https://github.com/CoreWCF/CoreWCF)もあります。これは、Microsoft では正式にサポートされて "*いません*"。
+
+WCF から gRPC への移行の詳細については、[WCF 開発者向け gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/) に関する電子ブックを参照してください。
 
 ### <a name="remoting"></a>リモート処理
 
@@ -66,7 +68,7 @@ ASP.NET Core はモジュール式であり、フレームワークのファー�
 
 これらのテクノロジはどちらも .NET Core ではサポートされていません。 代わりに、オペレーティング システムが提供するセキュリティ境界を使用することをお勧めします。 たとえば、仮想化、コンテナー、ユーザー アカウントなどです。 必要最小限の特権のセットでプロセスを実行してください。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 [.NET Core で使用できない .NET Framework テクノロジ](../../core/porting/net-framework-tech-unavailable.md)
 

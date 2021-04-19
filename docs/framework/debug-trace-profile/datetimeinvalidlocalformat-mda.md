@@ -1,6 +1,6 @@
 ---
 title: dateTimeInvalidLocalFormat MDA
-description: DateTimeInvalidLocalFormat managed デバッグアシスタント (MDA) を確認します。これは、UTC で格納されている DateTime 値がローカル専用の DateTime 形式を取得したときにアクティブになります。
+description: dateTimeInvalidLocalFormat マネージド デバッグ アシスタント (MDA) について確認します。これは、UTC で格納されている DateTime 値がローカル専用の DateTime 形式で取得されたときにアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [.NET Framework], formatting
@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 ms.openlocfilehash: ed2cf0b960c0a8f51dc327a5c58770fcf5e2fa17
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96286059"
@@ -37,7 +37,7 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 
  <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> メソッドの 'z' 形式には、ローカル タイム ゾーン オフセット (たとえば、シドニー時間の場合は "+10:00") が含まれます。 そのため、<xref:System.DateTime> の値がローカルの場合にのみ、有意な結果が生成されます。 値が UTC 時刻の場合、<xref:System.DateTime.ToString%2A?displayProperty=nameWithType> には、ローカル タイム ゾーン オフセットが含まれますが、タイム ゾーン指定子の表示や調整は行われません。  
   
-### <a name="resolution"></a>解像度  
+### <a name="resolution"></a>解決方法  
 
  UTC <xref:System.DateTime> インスタンスが UTC であることを示すように書式設定する必要があります。 UTC 時刻の形式としては、次のように 'Z' を使用して UTC 時刻を示すようにすることをお勧めします。  
   

@@ -1,18 +1,18 @@
 ---
 title: 命令型コードを使用してワークフロー、アクティビティ、および式を作成する方法
-description: Workflow Foundation ワークフロー定義は、構成されたアクティビティオブジェクトのツリーです。 コードを使用して、ワークフロー定義、アクティビティ、および式を作成します。
+description: Workflow Foundation ワークフロー定義は、構成済みのアクティビティ オブジェクトのツリーです。 コードを使用して、ワークフロー定義、アクティビティ、および式を作成します。
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: 5355f2090317a0bce3fec0f46550b202bd0af095
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96289127"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>命令型コードを使用してワークフロー、アクティビティ、および式を作成する方法
 
-ワークフロー定義は、構成済みのアクティビティ オブジェクトのツリーです。 このアクティビティ ツリーは、手動で XAML を編集したり、ワークフロー デザイナーを使用して XAML を生成したりするなど、多くの方法で定義することができます。 ただし、XAML の使用は必須ではありません。 ワークフロー定義は、プログラムで作成することもできます。 このトピックでは、コードを使用したワークフローの定義、アクティビティ、および式の作成の概要について説明します。 コードを使用した XAML ワークフローの使用例については、「 [xaml との間でのワークフローとアクティビティのシリアル](serializing-workflows-and-activities-to-and-from-xaml.md)化」を参照してください。  
+ワークフロー定義は、構成済みのアクティビティ オブジェクトのツリーです。 このアクティビティ ツリーは、手動で XAML を編集したり、ワークフロー デザイナーを使用して XAML を生成したりするなど、多くの方法で定義することができます。 ただし、XAML の使用は必須ではありません。 ワークフロー定義は、プログラムで作成することもできます。 このトピックでは、コードを使用したワークフローの定義、アクティビティ、および式の作成の概要について説明します。 コードを使用して XAML ワークフローを操作する例については、[XAML との間のワークフローとアクティビティのシリアル化](serializing-workflows-and-activities-to-and-from-xaml.md)に関する記事をご覧ください。  
   
 ## <a name="creating-workflow-definitions"></a>ワークフロー定義の作成  
 
@@ -21,7 +21,7 @@ ms.locfileid: "96289127"
  [!code-csharp[CFX_WorkflowApplicationExample#47](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
-> このトピックの例では、<xref:System.Activities.WorkflowInvoker> を使用してサンプル ワークフローを実行します。 ワークフローの呼び出し、引数の引き渡し、および使用可能なさまざまなホスティングの選択の詳細については、「 [WorkflowInvoker 元と WorkflowApplication の使用](using-workflowinvoker-and-workflowapplication.md)」を参照してください。  
+> このトピックの例では、<xref:System.Activities.WorkflowInvoker> を使用してサンプル ワークフローを実行します。 ワークフローの呼び出し、引数の受け渡し、および使用可能なさまざまなホスティングの選択肢の詳細については、「[WorkflowInvoker と WorkflowApplication の使用](using-workflowinvoker-and-workflowapplication.md)」を参照してください。  
   
  次の例では、1 つの <xref:System.Activities.Statements.WriteLine> アクティビティから成るワークフローを作成します。 <xref:System.Activities.Statements.WriteLine> アクティビティの <xref:System.Activities.Statements.WriteLine.Text%2A> 引数が設定され、ワークフローが呼び出されます。 アクティビティに子アクティビティが含まれる場合も、作成のメソッドは同じです。 次の例では、2 つの <xref:System.Activities.Statements.Sequence> アクティビティを含む <xref:System.Activities.Statements.WriteLine> アクティビティを使用します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "96289127"
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- オブジェクト初期化子の詳細については、「 [方法: コンストラクターを呼び出さずにオブジェクトを初期化する (C# プログラミングガイド)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 」および「 [方法: オブジェクト初期化子を使用してオブジェクトを宣言](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)する」を参照してください。  
+ オブジェクト初期化子の詳細については、[コンストラクターを呼び出さずにオブジェクトを初期化する方法 (C# プログラミング ガイド)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) に関する記事および「[方法: オブジェクト初期化子を使用してオブジェクトを宣言する](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)」を参照してください。  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>変数、リテラル値、および式の使用  
 
@@ -55,7 +55,7 @@ new Assign<int>
 }  
 ```  
   
- C# 式は、その式を含むワークフローが呼び出される前にコンパイルする必要があります。 C# 式がコンパイルされていない場合、 <xref:System.NotSupportedException> 次のようなメッセージを使用してワークフローが呼び出されると、がスローされます。 ``Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled.`` Visual Studio で作成されたワークフローを含むほとんどのシナリオでは、c# 式は自動的にコンパイルされますが、コードワークフローなどの一部のシナリオでは、c# 式を手動でコンパイルする必要があります C# 式をコンパイルする方法の例については、「 [C# 式](csharp-expressions.md)」トピックの「[コードワークフローでの C# 式の使用](csharp-expressions.md#CodeWorkflows)」セクションを参照してください。  
+ C# 式は、その式を含むワークフローが呼び出される前にコンパイルする必要があります。 C# 式がコンパイルされていない場合、ワークフローが呼び出されると <xref:System.NotSupportedException> がスローされ、"``Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled.``" のようなメッセージが表示されます。Visual Studio で作成されたワークフローが関連するほとんどのシナリオでは、C# 式が自動的にコンパイルされますが、コード ワークフローなどの一部のシナリオでは、C# 式を手動でコンパイルする必要があります。 C# 式をコンパイルする方法の例については、「[C# の式](csharp-expressions.md)」トピックの「[コード ワークフローでの C# 式の使用](csharp-expressions.md#CodeWorkflows)」セクションを参照してください。  
   
  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> は式の右辺値として使用できる Visual Basic 構文の式を表し、<xref:Microsoft.CSharp.Activities.CSharpValue%601> は式の右辺値として使用できる C# 構文の式を表します。 これらの式は、含まれるアクティビティが実行されるたびに評価されます。 式の結果はワークフローの変数 `n` に代入され、これらの結果はワークフローの次のアクティビティによって使用されます。 実行時にワークフローの変数 `n` の値にアクセスするには、<xref:System.Activities.ActivityContext> が必要です。 次のようなラムダ式を使用するとアクセスできます。  
   
@@ -66,7 +66,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- ラムダ式の詳細については、「 [ラムダ式 (C# リファレンス)](../../csharp/language-reference/operators/lambda-expressions.md) 」または「ラムダ [式 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
+ ラムダ式の詳細については、「[ラムダ式 (C# リファレンス)](../../csharp/language-reference/operators/lambda-expressions.md)」と「[ラムダ式 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
  ラムダ式は XAML 形式にシリアル化できません。 ラムダ式を使用してワークフローのシリアル化を試みると、<xref:System.Activities.Expressions.LambdaSerializationException> がスローされ、"このワークフローには、コードで指定されたラムダ式が含まれています。 これらの式は XAML にシリアル化できません。 このワークフローを XAML にシリアル化できるようにするには、VisualBasicValue/VisualBasicReference を使用するか、ExpressionServices.Convert(lambda) を使用します。 これにより、ラムダ式が式アクティビティに変換されます。" というメッセージが表示されます。 この式に XAML との互換性を持たせるには、次の例に示すように <xref:System.Activities.Expressions.ExpressionServices> および <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> を使用します。  
   
@@ -76,7 +76,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- 実行時に、Visual Basic 式は LINQ 式にコンパイルされます。 前の例はいずれも XAML にシリアル化できますが、シリアル化された XAML をワークフロー デザイナーで表示および編集することを目的としている場合は、式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用してください。 `ExpressionServices.Convert` を使用するシリアル化されたワークフローはデザイナーで開くことができますが、式の値は空白になります。 ワークフローを XAML にシリアル化する方法の詳細については、「 [xaml との間でのワークフローとアクティビティのシリアル](serializing-workflows-and-activities-to-and-from-xaml.md)化」を参照してください。  
+ 実行時に、Visual Basic 式は LINQ 式にコンパイルされます。 前の例はいずれも XAML にシリアル化できますが、シリアル化された XAML をワークフロー デザイナーで表示および編集することを目的としている場合は、式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用してください。 `ExpressionServices.Convert` を使用するシリアル化されたワークフローはデザイナーで開くことができますが、式の値は空白になります。 XAML へのワークフローのシリアル化について詳しくは、[XAML との間のワークフローとアクティビティのシリアル化](serializing-workflows-and-activities-to-and-from-xaml.md)に関する記事をご覧ください。  
   
 #### <a name="literal-expressions-and-reference-types"></a>リテラル式と参照型  
 
@@ -113,7 +113,7 @@ new Assign
 },  
 ```  
   
- 式の詳細については、「 [式](expressions.md)」を参照してください。  
+ 式の詳細については、「[式](expressions.md)」を参照してください。  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>式と InvokeMethod アクティビティを使用したオブジェクトのメソッド呼び出し  
 
@@ -145,13 +145,13 @@ new InvokeMethod<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- 動的アクティビティの詳細については、「 [実行時のアクティビティの作成](creating-an-activity-at-runtime-with-dynamicactivity.md)」を参照してください。  
+ 動的アクティビティの詳細については、[実行時におけるアクティビティの作成](creating-an-activity-at-runtime-with-dynamicactivity.md)に関する記事を参照してください。  
   
 ## <a name="compiled-activities"></a>コンパイルされたアクティビティ  
 
- 動的アクティビティは、コードを使用して引数を格納するアクティビティを定義するための 1 つの方法ですが、アクティビティをコードで作成して型にコンパイルすることもできます。 <xref:System.Activities.CodeActivity> から派生する単純なアクティビティと、<xref:System.Activities.AsyncCodeActivity> から派生する非同期アクティビティを作成できます。 これらのアクティビティは、引数を保持し、値を返して、命令型コードを使用してロジックを定義できます。 これらの種類のアクティビティを作成する例については、「 [CodeActivity Base Class](workflow-activity-authoring-using-the-codeactivity-class.md) 」と「 [非同期アクティビティの作成](creating-asynchronous-activities-in-wf.md)」を参照してください。  
+ 動的アクティビティは、コードを使用して引数を格納するアクティビティを定義するための 1 つの方法ですが、アクティビティをコードで作成して型にコンパイルすることもできます。 <xref:System.Activities.CodeActivity> から派生する単純なアクティビティと、<xref:System.Activities.AsyncCodeActivity> から派生する非同期アクティビティを作成できます。 これらのアクティビティは、引数を保持し、値を返して、命令型コードを使用してロジックを定義できます。 これらの種類のアクティビティを作成する例については、[CodeActivity 基本クラス](workflow-activity-authoring-using-the-codeactivity-class.md)に関する記事と[非同期アクティビティの作成](creating-asynchronous-activities-in-wf.md)に関する記事を参照してください。  
   
- <xref:System.Activities.NativeActivity> から派生するアクティビティは、命令型コードを使用してロジックを定義できるだけでなく、ロジックを定義する子アクティビティを含むこともできます。 これらのアクティビティは、ブックマークの作成など、ランタイムの機能をすべて利用できます。 ベースのアクティビティを作成する例につい <xref:System.Activities.NativeActivity> ては、「 [NativeActivity 基底クラス](nativeactivity-base-class.md)」、「 [方法: アクティビティを作成する](how-to-create-an-activity.md)」、および「 [ネイティブアクティビティを使用したカスタム複合](./samples/custom-composite-using-native-activity.md) アクティビティのサンプル」を参照してください。  
+ <xref:System.Activities.NativeActivity> から派生するアクティビティは、命令型コードを使用してロジックを定義できるだけでなく、ロジックを定義する子アクティビティを含むこともできます。 これらのアクティビティは、ブックマークの作成など、ランタイムの機能をすべて利用できます。 <xref:System.Activities.NativeActivity> ベースのアクティビティを作成する例については、「[NativeActivity の基本クラス](nativeactivity-base-class.md)」、「[方法: アクティビティを作成する](how-to-create-an-activity.md)」、および「[ネイティブ アクティビティを使用したカスタム複合](./samples/custom-composite-using-native-activity.md)」のサンプルを参照してください。  
   
  <xref:System.Activities.Activity> から派生するアクティビティは、子アクティビティを使用してロジックだけを定義します。 これらのアクティビティは、通常、ワークフロー デザイナーを使用して作成されますが、コードを使用して定義することもできます。 次の例では、`Square` から派生する `Activity<int>` アクティビティが定義されます。 `Square` アクティビティには <xref:System.Activities.InArgument%601> という名前の 1 つの `Value` があり、そのロジックが <xref:System.Activities.Statements.Sequence> プロパティを使用して <xref:System.Activities.Activity.Implementation%2A> アクティビティを指定してロジックを定義します。 <xref:System.Activities.Statements.Sequence> アクティビティには、<xref:System.Activities.Statements.WriteLine> アクティビティと <xref:System.Activities.Statements.Assign%601> アクティビティが含まれています。 この 3 つのアクティビティは、`Square` アクティビティのロジックを実装します。  
   

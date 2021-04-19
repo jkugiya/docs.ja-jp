@@ -1,6 +1,6 @@
 ---
 title: invalidOverlappedToPinvoke MDA
-description: .NET の invalidOverlappedToPinvoke マネージデバッグアシスタント (MDA) を確認します。これは、クラッシュまたはないヒープの破損時にアクティブ化される可能性があります。
+description: .NET の invalidOverlappedToPinvoke マネージド デバッグ アシスタント (MDA) について確認します。これは、クラッシュまたは説明のつかないヒープ破損時にアクティブになる可能性があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overlapped pointers
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 ms.openlocfilehash: 55b10af87130bd32410508cef2bc3e4e733549c0
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96281326"
@@ -34,7 +34,7 @@ ms.locfileid: "96281326"
   
  この MDA が追跡する関数を次の表に示します。  
   
-|モジュール|機能|  
+|Module|機能|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
@@ -53,7 +53,7 @@ ms.locfileid: "96281326"
   
  呼び出しを行う <xref:System.AppDomain> がアンロードされる可能性があるため、この条件ではヒープが破損する可能性が高くなります。 <xref:System.AppDomain> がアンロードされると、アプリケーション コードがオーバーラップ ポインター用メモリを解放するため、操作終了時に破損が発生します。または、コードによってメモリ リークが発生し、後で問題となります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
  <xref:System.Threading.Overlapped> オブジェクトを使用して <xref:System.Threading.Overlapped.Pack%2A> メソッドを呼び出し、関数に渡すことができる <xref:System.Threading.NativeOverlapped> 構造体を取得します。 <xref:System.AppDomain> がアンロードされると、CLR は非同期操作が完了するのを待ってからポインターを解放します。  
   

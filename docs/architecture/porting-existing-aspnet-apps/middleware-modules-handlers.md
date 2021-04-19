@@ -3,12 +3,12 @@ title: ミドルウェアとモジュールおよびハンドラーの比較
 description: このセクションでは、ハンドラーとモジュールを使用する ASP.NET アプリと、要求処理パイプライン用にミドルウェアを定義する ASP.NET Core アプリ間の構造の違いについて説明します。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 040ae49d1307ef4dcc9dbf49b20544e9cd2bc913
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3bc3c30a1ee988550cca907d7289583161337cb9
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401361"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122873"
 ---
 # <a name="compare-middleware-to-modules-and-handlers"></a>ミドルウェアとモジュールおよびハンドラーの比較
 
@@ -26,7 +26,64 @@ ASP.NET Core では、各アプリの `Configure` メソッド内で要求パイ
 
 HTTP モジュールを使用する ASP.NET MVC アプリでの動作は、おそらく[カスタム ミドルウェア](/aspnet/core/fundamentals/middleware/?preserve-view=true&view=aspnetcore-3.1)に最も適しています。 カスタム HTTP ハンドラーは、同じパスに応答するカスタムのルートまたはエンドポイントに置き換えることができます。
 
-## <a name="references"></a>リファレンス
+## <a name="accessing-httpcontext"></a>HttpContext へのアクセス
+
+多くの .NET アプリでは、`HttpContext.Current` を使用して現在の要求のコンテキストを参照します。 この静的アクセスは、個々の要求以外での、テストやその他のコード使用に関する問題の一般的な原因になる可能性があります。 ASP.NET Core アプリを構築する場合、現在の HttpContext へのアクセスは、次のサンプルで示すように、ミドルウェアでメソッド パラメーターとして提供される必要があります。
+
+```csharp
+public class Middleware
+{
+    private readonly RequestDelegate _next;
+
+    public Middleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public Task Invoke(HttpContext httpContext)
+    {
+        return _next(httpContext);
+    }
+}
+```
+
+同様に、ASP.NET Core フィルターでは、コンテキスト引数がメソッドに渡され、そこから現在の HttpContext にアクセスできます。
+
+```csharp
+public class MyActionFilterAttribute : ActionFilterAttribute
+{
+    public override void OnResultExecuting(ResultExecutingContext context)
+    {
+        var headers = context.HttpContext.Request.Headers;
+        // do something based on a header
+
+        base.OnResultExecuting(context);
+    }
+}
+```
+
+HttpContext へのアクセスを必要とするコンポーネントまたはサービスがある場合は、`HttpContext.Current` のような静的呼び出しを使用するのではなく、代わりにコンストラクターの依存関係の挿入と [IHttpContextAccessor](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor) インターフェイスを使用する必要があります。
+
+```csharp
+public class MyService
+{
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public MyService(IHttpContextAccessor httpContextAccessor)
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
+
+    public void DoSomething()
+    {
+        var currentContext = _httpContextAccessor.HttpContext;
+    }
+}
+```
+
+このアプローチによって、メソッドから現在のコンテキストへの静的な結合を排除しつつ、テスト可能な方法でアクセスが提供されます。
+
+## <a name="references"></a>References
 
 - [ASP.NET HTTP モジュールと HTTP ハンドラー](/troubleshoot/aspnet/http-modules-handlers)
 - [ASP.NET Core のミドルウェア](/aspnet/core/fundamentals/middleware/?preserve-view=true&view=aspnetcore-3.1)

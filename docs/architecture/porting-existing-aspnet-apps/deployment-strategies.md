@@ -3,12 +3,12 @@ title: デプロイ戦略
 description: ASP.NET から ASP.NET Core に移行する際に、チームはどのような展開戦略を使用できるでしょうか? 段階的移行を使用すると、.NET Framework アプリと .NET Core アプリをサイドバイサイドで展開してシームレスなエンド ユーザー エクスペリエンスを実現できるでしょうか?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 6691a4878205d6422cf8b6153353abefd9764d18
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4c69f049611e4995cdb1905c89afe6973994f20d
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401383"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122938"
 ---
 # <a name="deployment-strategies"></a>デプロイ戦略
 
@@ -45,7 +45,7 @@ Windows で実行されている IIS 上で、引き続きアプリをホスト�
 
 必要に応じて、Docker コンテナーに加えて Kestrel、HTTP.sys、および IIS ホストの任意の組み合わせを使用して、アプリを Windows 上でサイドバイサイドでホストすることができます。 アプリで Windows のサービスと Linux のサービスを組み合わせる必要がある場合は、[WSL](/windows/wsl/about) または Linux Docker コンテナー (あるいはその両方) を使用して Windows サーバー上でホストすることで、アプリのすべての部分をホストする単一のソリューションを提供できます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [ASP.NET Core のホストと展開](/aspnet/core/host-and-deploy/)
 - [IIS を使用した Windows での ASP.NET Core のホスト](/aspnet/core/host-and-deploy/iis/)

@@ -1,6 +1,6 @@
 ---
 title: UI オートメーション クライアントにおけるキャッシュ
-description: .NET の UI オートメーションクライアントでのキャッシュに関する詳細を取得します。 キャッシュは、データのプリフェッチとして定義されます。
+description: .NET の UI オートメーション クライアントでのキャッシュに関する詳細を取得します。 キャッシュは、データのプリフェッチとして定義されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation caching in clients
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 029e292e60cd7c66d55b9567385bdd0e53fdebd4
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96283524"
@@ -22,7 +22,7 @@ ms.locfileid: "96283524"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、キャッシュとはデータをプリフェッチすることを意味します。 そのデータには、さらにプロセス間通信を行わずにアクセスできます。 キャッシュは通常、UI オートメーション クライアント アプリケーションによって使用され、プロパティとコントロール パターンを一括で取得します。 それから、必要に応じて情報がキャッシュから取得されます。 アプリケーションはキャッシュを定期的に更新します。通常は、 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] で何かが変更されたことを示すイベントへの応答として更新を行います。  
   
- キャッシュの利点は、Windows Presentation Foundation (WPF) コントロールと、サーバー側の UI オートメーションプロバイダーを持つカスタムコントロールで最も顕著になります。 Win32 コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスする場合の利点はあまりありません。  
+ キャッシュの効果は、サーバー側 UI オートメーション プロバイダーを持つ Windows Presentation Foundation (WPF) コントロールとカスタム コントロールで最も顕著に表れます。 Win32 コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスするときは、メリットが小さくなります。  
   
  キャッシュはアプリケーションが <xref:System.Windows.Automation.CacheRequest> をアクティブにしたときに発生し、 <xref:System.Windows.Automation.AutomationElement>や <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>など、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を返すメソッドやプロパティを使用します。 <xref:System.Windows.Automation.TreeWalker> クラスのメソッドは例外で、 <xref:System.Windows.Automation.CacheRequest> がパラメーターとして指定された場合 (たとえば、 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) にのみ、キャッシュが行われます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "96283524"
 
  <xref:System.Windows.Automation.AutomationElement> が現在のスレッドに対してアクティブである間に <xref:System.Windows.Automation.CacheRequest> オブジェクトが取得された場合にのみ、キャッシュが実行されます。 <xref:System.Windows.Automation.CacheRequest>をアクティブ化するには、2 つの方法があります。  
   
- 通常の方法では、 <xref:System.Windows.Automation.CacheRequest.Activate%2A>を呼び出します。 このメソッドは、 <xref:System.IDisposable>を実装するオブジェクトを返します。 要求は、 <xref:System.IDisposable> オブジェクトが存在する限りアクティブなままです。 オブジェクトの有効期間を制御する最も簡単な方法は、呼び出しを `using` (C#) または `Using` (Visual Basic) ブロック内で囲むことです。 これにより、例外が発生した場合でも、スタックから要求がポップされます。  
+ 通常の方法では、 <xref:System.Windows.Automation.CacheRequest.Activate%2A>を呼び出します。 このメソッドは、 <xref:System.IDisposable>を実装するオブジェクトを返します。 要求は、 <xref:System.IDisposable> オブジェクトが存在する限りアクティブなままです。 オブジェクトの有効期間を制御する最も簡単な方法は、`using` (C#) または `Using` (Visual Basic) のブロック内に呼び出しを埋め込むことです。 これにより、例外が発生した場合でも、スタックから要求がポップされます。  
   
  キャッシュ要求を入れ子にする場合に有用な別の方法は、 <xref:System.Windows.Automation.CacheRequest.Push%2A>を呼び出すことです。 この方法では、スタック上に要求が配置され、アクティブ化されます。 <xref:System.Windows.Automation.CacheRequest.Pop%2A>によってスタックから削除されるまで、要求はアクティブなままです。 別の要求がスタックにプッシュされた場合、要求は一時的に非アクティブになります。スタックの最上位の要求のみがアクティブになります。  
   

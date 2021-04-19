@@ -1,18 +1,18 @@
 ---
 title: Application
-description: この記事では、Windows Workflow Foundation でのワークフローアプリケーションの詳細な手順を示したサンプルについて説明します。
+description: この記事では、Windows Workflow Foundation でのワークフロー アプリケーションの詳細な手順を示したサンプルを参照します。
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
 ms.openlocfilehash: b9e3cc0744ef7a2f48356c4b109ff8c448d4d354
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96293491"
 ---
 # <a name="application"></a>Application
 
-このセクションには、Windows Workflow Foundation (WF) のワークフローアプリケーションに関連するサンプルが含まれています。  
+このセクションには、Windows Workflow Foundation (WF) でのワークフロー アプリケーション関連のサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 

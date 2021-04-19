@@ -1,11 +1,11 @@
 ---
 title: バインディングでのタイムアウト値の構成
-description: サービスのパフォーマンス、使いやすさ、およびセキュリティを向上させるために、WCF バインドのタイムアウト設定を管理する方法について説明します。
+description: サービスのパフォーマンス、使いやすさ、およびセキュリティを向上させるために、WCF バインディングのタイムアウト設定を管理する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
 ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
 ms.locfileid: "96284044"
@@ -83,16 +83,16 @@ public static void Main()
   
 1. SendTimeout: OperationTimeout の初期化に使用します。要求/応答サービス操作の応答メッセージの受信を含め、メッセージの送信プロセス全体を制御します。 このタイムアウトは、コールバック コントラクト メソッドから応答メッセージを送信するときにも適用されます。  
   
-2. OpenTimeout –明示的なタイムアウト値が指定されていない場合にチャネルを開くときに使用されます。  
+2. OpenTimeout: 明示的なタイムアウト値が指定されていない場合、チャネルを開くときに使用します。  
   
-3. CloseTimeout –明示的なタイムアウト値が指定されていない場合にチャネルを閉じるときに使用されます。  
+3. CloseTimeout: 明示的なタイムアウト値が指定されていない場合、チャネルを閉じるときに使用します。  
   
-4. ReceiveTimeout –使用されません。  
+4. ReceiveTimeout: 使用されません。  
   
 ### <a name="service-side-timeouts"></a>サービス側のタイムアウト  
 
  サービス側のタイムアウトは次のとおりです。  
   
-1. SendTimeout、OpenTimeout、CloseTimeout は、クライアントと同じです。  
+1. SendTimeout、OpenTimeout、CloseTimeout は、クライアント側と同じです。  
   
 2. ReceiveTimeout: セッションがタイムアウトするまでのアイドル状態の時間を制御するセッション アイドル タイムアウトを初期化するために Service Framework Layer で使用します。

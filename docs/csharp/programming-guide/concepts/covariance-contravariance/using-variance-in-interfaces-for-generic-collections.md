@@ -3,12 +3,12 @@ title: ジェネリック コレクションに対するインターフェイス
 description: ジェネリック コレクションに対して共変および反変のインターフェイスを使用する方法について説明します。 ジェネリック コレクションの変換と比較の例について確認します。
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: a896fe8fda3d9ad08de9a09c6a172f7d75335e7d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39da866be3d1ead357485be31fee1c19f2b1ae27
+ms.sourcegitcommit: 985c603cb21a085f8a8105f34ff5b87a44b76ab4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176306"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107564858"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)
 
@@ -59,7 +59,7 @@ class Program
   
 ## <a name="comparing-generic-collections"></a>ジェネリック コレクションの比較  
 
- 次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスは、`IComparer<Person>` インターフェイスを実装します。 ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
+ 次の例は、<xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスは、`IEqualityComparer<Person>` インターフェイスを実装します。 ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
   
 ```csharp  
 // Simple hierarchy of classes.  

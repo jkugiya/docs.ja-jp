@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: ボーレートは0よりも大きくする必要があります'
+description: '詳細情報: BaudRate は 0 より大きくなければなりません'
 title: BaudRate は 0 より大きくなければなりません
 ms.date: 07/20/2015
 ms.assetid: 5d26c4b1-45ca-459b-9b96-907dbc6ea25c
 ms.openlocfilehash: 87de29602f8b09f7ee5b234a34a087ccfad229d4
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100460970"
@@ -20,4 +20,4 @@ ms.locfileid: "100460970"
   
 ## <a name="see-also"></a>関連項目
 
-- [マイ. Microsoft.visualbasic.devices.ports.openserialport](xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A)
+- [My.Computer.Ports.OpenSerialPort](xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A)

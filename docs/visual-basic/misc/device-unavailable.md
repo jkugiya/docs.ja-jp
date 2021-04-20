@@ -1,18 +1,18 @@
 ---
 description: '詳細情報: デバイスを使用できません'
-title: デバイスが準備されていません
+title: デバイスを使用できません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
 ms.openlocfilehash: 78148eaa4b5075e53b2b3efab4763250190a8df7
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100463009"
 ---
-# <a name="device-unavailable"></a>デバイスが準備されていません
+# <a name="device-unavailable"></a>デバイスを使用できません
 
 ネットワーク接続が失われたか、アクセスしようとしているデバイスがオフラインであるか、または存在しません。  
   

@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: レジストリキー ' ' を作成できません <keyname> でした"
+description: "詳細情報: レジストリ キー '<keyname>' を作成できませんでした"
 title: レジストリ キー '<keyname>' を作成できませんでした。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
 ms.openlocfilehash: bad441c9d45f8e1b983a0b01635fffca11411d8f
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100454665"

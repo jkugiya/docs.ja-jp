@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「内部エラー (Visual Basic)」を参照してください。
+description: '詳細情報: 内部エラー (Visual Basic)'
 title: 内部エラー。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
 ms.openlocfilehash: b81898e5cfcb2b694377791977e4cd36579aa0c5
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100462816"

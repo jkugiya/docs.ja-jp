@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: この操作は、ファイルが閉じられている場合にのみ実行できます'
+description: '詳細情報: この操作は、ファイルが閉じられているときにのみ実行することができます'
 title: この操作は、ファイルが閉じられているときにのみ実行することができます
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
 ms.openlocfilehash: 1f408eb2fd9a7300a83fee981e9026f90845b2c1
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100462296"

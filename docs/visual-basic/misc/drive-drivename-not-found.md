@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: ドライブ ' <drivename> ' が見つかりません"
+description: "詳細情報: ドライブ '<drivename>' が見つかりません"
 title: ドライブ '<drivename>' が見つかりません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
 ms.openlocfilehash: e8f39269696caa543f7fea2ab789378be69492ab
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100468578"

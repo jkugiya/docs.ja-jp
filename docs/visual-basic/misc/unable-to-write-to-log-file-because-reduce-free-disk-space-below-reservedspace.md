@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: ログファイルへの書き込みにより、ReservedSpace 値未満の空きディスク領域が減少するため、ログファイルに書き込むことができません。'
+description: '詳細情報: 書き込みを行うと、空きディスク領域が ReservedSpace 値よりも少なくなるため、ログ ファイルに書き込めません'
 title: 書き込みを行うと、空きディスク領域が ReservedSpace 値よりも少なくなるため、ログ ファイルに書き込めません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 95832e70-4ecc-47aa-90c1-f35c4d468151
 ms.openlocfilehash: e02fa9527539169da3ea99f89246dafe82646cff
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100456953"
@@ -35,5 +35,5 @@ ms.locfileid: "100456953"
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
-- [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [[DirectoryPath]](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

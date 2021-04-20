@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: 指定された引数を使用してレートを計算できません'
+description: '詳細情報: 指定された引数を使って割合を計算することはできません'
 title: 指定された引数を使って割合を計算することはできません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
 ms.openlocfilehash: 51cd34c13f0873d28cd5d07831a98c223660b348
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100465367"

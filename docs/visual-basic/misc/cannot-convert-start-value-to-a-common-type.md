@@ -1,5 +1,5 @@
 ---
-description: "詳細については、次を参照してください: 型 ' ' の開始値 <type1> 、' ' の値、 <type2> および ' ' のステップ値 <type3> を共通の型に変換できません"
+description: "詳細情報: 型 '<type1>' の開始値、'<type2>' の制限値、または '<type3>' のステップ値を共通の型に変換できません"
 title: 型 '<type1>' の開始値、'<type2>' の制限値、または '<type3>' のステップ値を共通の型に変換できません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
 ms.openlocfilehash: 40c7e46c9c7ef4212678673608c95b8df3423b75
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100457902"

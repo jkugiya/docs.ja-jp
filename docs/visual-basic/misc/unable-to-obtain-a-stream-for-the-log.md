@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「ログのストリームを取得できません」を参照してください。
+description: '詳細情報: ログのストリームを取得できません'
 title: ログのストリームを取得できません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
 ms.openlocfilehash: 6eda12eb4dc2b3cf303e543a66e1f2f7d739eb6b
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100455276"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>ログのストリームを取得できません
 
-ログのストリームを取得できません。 に基づく可能性のあるファイル名 \<name> は既に使用されています。  
+ログのストリームを取得できません。 \<name> に基づく、可能性のあるファイル名は既に使用されています。  
   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>に基づく可能性のあるすべてのログファイル名 \<name> が既に使用されているため、クラスで新しいログファイルを作成できませんでした。  
+ \<name> に基づく、可能性のあるすべてのログ ファイル名が既に使用されているため、<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> クラスは新しいログ ファイルを作成できませんでした。  
   
  ログ ファイルが多すぎる場合、アプリケーションにアーキテクチャの問題がある可能性があります。 詳細については、 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> クラスのドキュメントを参照してください。  
   
@@ -30,5 +30,5 @@ ms.locfileid: "100455276"
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
-- [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [[DirectoryPath]](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

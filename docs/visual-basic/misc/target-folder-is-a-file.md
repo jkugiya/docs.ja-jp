@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: ターゲットフォルダーがファイルである'
+description: '詳細情報: ターゲット フォルダーがファイルです'
 title: ターゲット フォルダーがファイルです
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
 ms.openlocfilehash: 52525bc2422e913457e2597086139b19931b510c
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100455367"
@@ -21,7 +21,7 @@ ms.locfileid: "100455367"
 ## <a name="see-also"></a>関連項目
 
 - [方法: ファイル パスを解析する](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [ファイルおよびディレクトリの作成、削除、および移動](../developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
 - [Visual Basic におけるファイル、ディレクトリ、およびドライブのプロパティ](/previous-versions/visualstudio/visual-studio-2010/as4xcs58(v=vs.100))
 - [方法: Visual Basic でファイルの絶対パスを確認する](/previous-versions/visualstudio/visual-studio-2010/e00wt2d8(v=vs.100))

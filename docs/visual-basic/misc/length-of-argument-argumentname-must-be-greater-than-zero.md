@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「引数の長さ ' <argumentname> ' は0より大きくなければなりません」を参照してください。
+description: "詳細情報: 引数長 '<argumentname>' は 0 より大きくなければなりません"
 title: 引数長 '<argumentname>' は 0 より大きくなければなりません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
 ms.openlocfilehash: 73edf531bf019aa072fdf9f7e43b01a188968f8e
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100465341"

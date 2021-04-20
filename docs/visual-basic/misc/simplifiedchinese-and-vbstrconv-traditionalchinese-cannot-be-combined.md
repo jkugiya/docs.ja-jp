@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「SimplifiedChinese and Vbstrconv.narrow」を参照してください。組み合わせるを組み合わせることはできません。
+description: '詳細情報: SimplifiedChinese と VbStrConv.TraditionalChinese を組み合わせることはできません'
 title: SimplifiedChinese と VbStrConv.TraditionalChinese を組み合わせることはできません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: d8e6a11b-f549-43b5-8337-0594340e1325
 ms.openlocfilehash: c1389976c6b4e33a418531c62b59bf1eb6460218
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100438230"

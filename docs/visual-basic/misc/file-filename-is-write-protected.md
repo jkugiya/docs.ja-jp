@@ -1,11 +1,11 @@
 ---
-description: "詳細情報: ファイル ' <filename> ' は書き込み禁止です"
+description: "詳細情報: ファイル '<filename>' は書き込み禁止です"
 title: ファイル '<filename>' は書き込み禁止です
 ms.date: 07/20/2015
 ms.assetid: 6e5105b1-a634-4cde-a753-5bf1ae85a55a
 ms.openlocfilehash: a5518c3ac4cef8a6596df8101545c044ce6bbcdb
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100459033"

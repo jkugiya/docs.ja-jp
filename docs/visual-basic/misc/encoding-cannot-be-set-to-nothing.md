@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: Encoding を Nothing に設定することはできません'
+description: '詳細情報: エンコードは Nothing に設定できません'
 title: エンコードは Nothing に設定できません
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
 ms.openlocfilehash: 4fa9cbd9488501b5295da8d8ace41ef06a706c12
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100462996"
@@ -25,5 +25,5 @@ ms.locfileid: "100462996"
 - [ファイル エンコーディング](../developing-apps/programming/drives-directories-files/file-encodings.md)
 - [ファイルの読み取り](../developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [ファイルへの書き込み](../developing-apps/programming/drives-directories-files/writing-to-files.md)
-- [My. System.io.file.readalltext](xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A)
-- [My. Microsoft.visualbasic.fileio.filesystem.writealltext](xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A)
+- [My.Computer.FileSystem.ReadAllText](xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A)
+- [My.Computer.FileSystem.WriteAllText](xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A)

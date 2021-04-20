@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: Set は実行時にサポートされていません'
+description: '詳細情報: Set は実行時にはサポートされません'
 title: Set は実行時にはサポートされません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
 ms.openlocfilehash: e6ea52ed6fa20cef2059351b509f89b99ebd402d
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100438256"

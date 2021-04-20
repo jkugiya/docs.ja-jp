@@ -1,11 +1,11 @@
 ---
-description: '詳細情報: EventLogSource で指定されたソース名が、EventLogName で指定されたログ以外のログに登録されています。'
+description: '詳細情報: EventLogSource で指定したソース名は、EventLogName で指定したログ以外のログに登録されています'
 title: EventLogSource で指定したソース名は、EventLogName で指定したログ以外のログに登録されています
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
 ms.openlocfilehash: d6b9c1265276f94369d37e6ac55604b761fb9bcc
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100455458"
@@ -22,7 +22,7 @@ ms.locfileid: "100455458"
   
 ## <a name="see-also"></a>関連項目
 
-- [イベントログの管理](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [イベント ログの管理](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
 - [イベント ログの参照](/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))
-- [方法: イベントログエントリのソースとしてアプリケーションを追加する](/previous-versions/visualstudio/visual-studio-2008/xz73e171(v=vs.90))
-- [方法: イベントソースを削除する](/previous-versions/visualstudio/visual-studio-2008/k57466fc(v=vs.90))
+- [方法: イベント ログ エントリのソースとしてアプリケーションを追加する](/previous-versions/visualstudio/visual-studio-2008/xz73e171(v=vs.90))
+- [方法: イベント ソースを削除する](/previous-versions/visualstudio/visual-studio-2008/k57466fc(v=vs.90))

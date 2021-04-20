@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: ' ReDim ' で次元数を変更することはできません"
+description: "詳細情報: 'ReDim' で次元数を変更することはできません"
 title: "'ReDim' で次元数を変更することはできません"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
 ms.openlocfilehash: 4552dd6b1cce54813b57e5b8c76a3580b81b8def
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100454639"
@@ -23,6 +23,6 @@ ms.locfileid: "100454639"
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic における配列](../programming-guide/language-features/arrays/index.md)
-- [Visual Basic 内の配列の次元](../programming-guide/language-features/arrays/array-dimensions.md)
+- [Visual Basic における配列の次元](../programming-guide/language-features/arrays/array-dimensions.md)
 - [ReDim ステートメント](../language-reference/statements/redim-statement.md)
 - [Dim ステートメント](../language-reference/statements/dim-statement.md)

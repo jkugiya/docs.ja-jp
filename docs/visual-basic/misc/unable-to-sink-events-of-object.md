@@ -1,5 +1,5 @@
 ---
-description: 詳細については、オブジェクトがサポートしているイベントレシーバーの最大数に対して既にイベントを発生させているため、オブジェクトのイベントをシンクできません
+description: '詳細情報: オブジェクトはサポートされているイベント受信最大数のイベントを既に発生させているため、オブジェクトのイベントをシンクすることができません'
 title: オブジェクトはサポートされているイベント受信最大数のイベントを既に発生しているので、オブジェクトのイベントを受け取ることができません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
 ms.openlocfilehash: f8f854f983dc666b04e77283ce3578008ad870f3
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100456966"

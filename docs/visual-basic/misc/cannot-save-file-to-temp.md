@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「ファイルを TEMP に保存できません」を参照してください。
+description: '詳細情報: ファイルを TEMP に保存できません'
 title: ファイルを TEMP に保存できません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
 ms.openlocfilehash: 68e6d4daf2c016644a71906cbeaebc63490c8679
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100457889"

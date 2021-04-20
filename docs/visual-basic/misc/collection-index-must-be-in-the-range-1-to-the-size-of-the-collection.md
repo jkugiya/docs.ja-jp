@@ -1,5 +1,5 @@
 ---
-description: 詳細については、コレクションインデックスのサイズが1からコレクションのサイズの範囲内である必要があります。
+description: '詳細情報: コレクション インデックスのサイズは、1 以上かつコレクションのサイズ以下の範囲でなければなりません'
 title: コレクション インデックスのサイズは、1 以上かつコレクションのサイズ以下の範囲でなければなりません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: feee4d55-0754-40fe-9ce9-288ef543f569
 ms.openlocfilehash: d9398d23896fb8f689ce50eab3f5cc394600f37f
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100463547"

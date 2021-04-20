@@ -1,5 +1,5 @@
 ---
-description: 詳細については、プロセス ' <processname> ' が見つかりませんでした
+description: "詳細情報: プロセス '<processname>' が見つかりませんでした"
 title: プロセス '<processname>' が見つかりませんでした。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: d6095a7f-6168-4b00-8639-11fb64dd2ebe
 ms.openlocfilehash: 1e70a38cdee0b3e70153468f8de0d4279e426566
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100454795"

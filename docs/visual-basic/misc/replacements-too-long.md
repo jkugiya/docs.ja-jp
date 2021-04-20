@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: 置換が長すぎます'
+description: '詳細情報: 置換後の文字列が長すぎます'
 title: 置換後の文字列が長すぎます
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 398ff5eb-b580-456f-8f24-b7a8318e1193
 ms.openlocfilehash: f503204de24d983d32fbcead1b45f0ccd5e4cdc9
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100454613"

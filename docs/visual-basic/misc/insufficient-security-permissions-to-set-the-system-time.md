@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: システム時刻を設定するためのセキュリティアクセス許可が不十分'
+description: '詳細情報: システム時刻を設定するためのセキュリティ アクセス許可が十分ではありません'
 title: システム時刻を設定するためのセキュリティ アクセス許可が十分ではありません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 6c034821-a260-4837-af1c-c11f8eba6d54
 ms.openlocfilehash: de3ee45bde82ec74af2049541853679192e23be0
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100462876"

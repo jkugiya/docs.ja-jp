@@ -1,5 +1,5 @@
 ---
-description: 詳細については、引数 ' Period ' は ' Life ' 引数以下でなければなりません
+description: "詳細情報: 引数 'Period' は 'Life' 引数以下でなければなりません"
 title: 引数 'Period' は 'Life' 引数以下でなければなりません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: dc575d41-b376-4b05-bbbe-6de1e98385f1
 ms.openlocfilehash: 451defc2e9015b12bd6b340c3c32782ea4d4774f
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100458630"

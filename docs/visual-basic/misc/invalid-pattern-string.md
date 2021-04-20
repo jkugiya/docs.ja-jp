@@ -1,16 +1,16 @@
 ---
 description: '詳細情報: 無効なパターン文字列'
-title: 正しくないパターン文字列
+title: 無効なパターン文字列
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
 ms.openlocfilehash: 4fbf16dd43ac4ae44e1a99d85caae4a7baf99109
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100462062"
 ---
-# <a name="invalid-pattern-string"></a>正しくないパターン文字列
+# <a name="invalid-pattern-string"></a>無効なパターン文字列
 
 検索の `Like` 演算で指定されているパターン文字列が正しくありません。  
   

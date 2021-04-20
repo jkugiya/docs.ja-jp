@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「実行時に Get がサポートされない」を参照してください。
+description: '詳細情報: Get は実行時にはサポートされません'
 title: Get は実行時にはサポートされません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: b527c5a8-3f24-42e9-871f-e6305c9f514b
 ms.openlocfilehash: 6f4a78da9c3cfc76ebe3d671c698e6a6ca41995b
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100462941"

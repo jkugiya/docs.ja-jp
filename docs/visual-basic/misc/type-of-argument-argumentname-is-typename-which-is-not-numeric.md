@@ -1,18 +1,18 @@
 ---
-description: 詳細については、次を参照してください。引数の型 ' <argumentname> ' は <typename> 、数値ではなく ' ' です。
-title: 引数 '<argumentname>' の型は '<typename>' です。数値ではありません。
+description: "詳細情報: 引数 '<argumentname>' の型が '<typename>' です。数値ではありません"
+title: 引数 '<argumentname>' の型が '<typename>' です。数値ではありません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
 ms.assetid: 6eca32a6-9a44-4f05-8791-abdb4cb316d2
 ms.openlocfilehash: 51169ccd00647e36ac1e468a780e04ad31923072
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100455315"
 ---
-# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>引数 '\<argumentname>' の型は '\<typename>' です。数値ではありません。
+# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>引数 '\<argumentname>' の型が '\<typename>' です。数値ではありません。
 
 数値引数が期待される状況で数値以外の引数が指定されています。  
   

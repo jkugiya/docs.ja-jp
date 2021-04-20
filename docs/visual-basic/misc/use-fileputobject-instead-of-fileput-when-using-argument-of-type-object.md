@@ -1,5 +1,5 @@
 ---
-description: 詳細については、「' Object ' 型の引数を使用する場合は、' FilePut ' ではなく ' FilePutObject ' を使用する」を参照してください。
+description: "詳細情報: 型 'Object' の引数を使う場合は、'FilePut' ではなく 'FilePutObject' を使用してください"
 title: 型 'Object' の引数を使う場合は、'FilePut' ではなく 'FilePutObject' を使用してください。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
 ms.openlocfilehash: 5e5822999aa39bff4d43f83a2719341034cdcadc
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100460099"
@@ -26,5 +26,5 @@ ms.locfileid: "100460099"
   
 ## <a name="see-also"></a>関連項目
 
-- [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [My. Computer. FileSystem. WriteAllBytes](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [My.Computer.FileSystem.WriteAllBytes](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)

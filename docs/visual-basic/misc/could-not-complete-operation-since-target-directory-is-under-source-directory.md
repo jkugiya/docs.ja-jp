@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: ターゲットディレクトリがソースディレクトリにあるため、操作を完了できませんでした'
+description: '詳細情報: ターゲット ディレクトリがソース ディレクトリ内にあるため、操作を完了できませんでした'
 title: ターゲット ディレクトリがソース ディレクトリ内にあるため、操作を完了できませんでした
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
 ms.openlocfilehash: 5fb0bf1d761faf9d3d0c64e8815e28e14841b1fd
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100463521"

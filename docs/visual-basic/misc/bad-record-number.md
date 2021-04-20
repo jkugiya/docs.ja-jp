@@ -1,5 +1,5 @@
 ---
-description: '詳細情報: 無効なレコード番号'
+description: '詳細情報: レコード番号が正しくありません'
 title: レコード番号が正しくありません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,7 +7,7 @@ f1_keywords:
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
 ms.openlocfilehash: a250419c131f75381426705d52563732322631cb
 ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/14/2021
 ms.locfileid: "100460996"

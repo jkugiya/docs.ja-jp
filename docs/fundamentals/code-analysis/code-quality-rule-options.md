@@ -2,15 +2,14 @@
 title: コード品質ルールの構成オプション
 description: コード品質ルールの追加構成オプションを指定する方法について説明します。
 ms.date: 09/24/2020
-ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 0be0d094739893dc74e1b5c85e686594c766cbcb
-ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
+ms.openlocfilehash: 982dc3bba7042083a22123b0ba4af31c1aeba889
+ms.sourcegitcommit: 8f71a6c655a9c39d5223401aed76c02ba00e03ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105027873"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107740996"
 ---
 # <a name="code-quality-rule-configuration-options"></a>コード品質ルールの構成オプション
 

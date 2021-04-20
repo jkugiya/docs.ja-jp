@@ -2,18 +2,19 @@
 title: コード分析の警告を抑制する
 description: .NET コード分析の違反を抑制するためのさまざまな方法について説明します。
 ms.date: 01/28/2021
+ms-topic: how-to
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - code analysis, suppress warnings
 - suppress code analysis warnings
-ms.openlocfilehash: a8fdfbddd2393f9c6c8cd882a63a9ecc6cb1dc95
-ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.openlocfilehash: a2c85a032c8754be2a1c5c6c8cee06754b3231f2
+ms.sourcegitcommit: 8f71a6c655a9c39d5223401aed76c02ba00e03ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105637040"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107740554"
 ---
 # <a name="how-to-suppress-code-analysis-warnings"></a>コード分析の警告を抑制する方法
 

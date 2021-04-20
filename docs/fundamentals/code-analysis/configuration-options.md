@@ -2,15 +2,14 @@
 title: コード分析ルールの構成
 description: アナライザー構成ファイルでコード分析ルールを構成する方法について説明します。
 ms.date: 09/24/2020
-ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: c1992b32e5159e9bf7ae4d00b92a5baa7f7c1b8c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: b9f934d13a510fa9e349d1cefc8131f22e9cd549
+ms.sourcegitcommit: 8f71a6c655a9c39d5223401aed76c02ba00e03ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876618"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107740970"
 ---
 # <a name="configuration-options-for-code-analysis"></a>コード分析の構成オプション
 
@@ -93,7 +92,7 @@ dotnet_analyzer_diagnostic.severity = <severity value>
 ```
 
 > [!IMPORTANT]
-> ルールの "*カテゴリ*" または "*すべて*" のルールに対して、1 つのエントリで複数のルールの重大度レベルを構成する場合、その重大度は[既定で有効](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)であるルールに対してのみ適用されます。 既定で無効であるルールを有効にするには、次のいずれかを実行する必要があります。
+> ルールの "*カテゴリ*" または "*すべて*" のルールに対して、1 つのエントリで複数のルールの重大度レベルを構成する場合、その重大度は [既定で有効](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)であるルールに対してのみ適用されます。 既定で無効であるルールを有効にするには、次のいずれかを実行する必要があります。
 >
 > - ルールごとに明示的な `dotnet_diagnostic.<rule ID>.severity = <severity>` 構成エントリを追加する。
 > - [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) を `AllEnabledByDefault` に設定して、"*すべて*" のルールを有効にする。

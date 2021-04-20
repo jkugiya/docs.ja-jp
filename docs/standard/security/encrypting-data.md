@@ -1,7 +1,7 @@
 ---
 title: データの暗号化
 description: .NET で対称アルゴリズムまたは非対称アルゴリズムを使用してデータを暗号化する方法について説明します。
-ms.date: 03/22/2021
+ms.date: 04/16/2021
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 5105bf6763f89b5867ccb8908aaf6136ded29dcb
-ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
+ms.openlocfilehash: e4b006db86eda1a2a62dfd31073be9aabb7a3bb8
+ms.sourcegitcommit: 8f71a6c655a9c39d5223401aed76c02ba00e03ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105027888"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107740333"
 ---
 # <a name="encrypting-data"></a>データの暗号化
 
@@ -26,18 +26,18 @@ ms.locfileid: "105027888"
 
 マネージド対称暗号化クラスは、ストリームに読み取られるデータを暗号化する <xref:System.Security.Cryptography.CryptoStream> という特別なストリーム クラスと共に使用されます。 **CryptoStream** クラスは、マネージド ストリーム クラス、(暗号化アルゴリズムを実装するクラスから作成された) <xref:System.Security.Cryptography.ICryptoTransform> インターフェイスを実装するクラス、および **CryptoStream** に対して許可されるアクセスの種類を記述する <xref:System.Security.Cryptography.CryptoStreamMode> 列挙体を使用して初期化されます。 **CryptoStream** クラスは、 <xref:System.IO.Stream> クラスから派生する任意のクラス ( <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>、 <xref:System.Net.Sockets.NetworkStream>など) を使用して初期化できます。 これらのクラスを使用すると、さまざまなストリーム オブジェクトの対称暗号化を実行できます。
 
-次の例は、<xref:System.Security.Cryptography.Aes> アルゴリズム用の既定の実装クラスの新しいインスタンスを作成する方法を示しています。 このインスタンスが、**CryptoStream** クラスに対して暗号化を実行するために使用されます。 この例では、 **CryptoStream** は `myStream` と呼ばれるストリーム オブジェクトで初期化されています。これは任意の種類のマネージド ストリームにすることができます。 **Aes** クラスの **CreateEncryptor** メソッドには、暗号化に使用されるキーと IV が渡されます。 この場合、 `aes` から生成された既定のキーと IV が使用されます。
+次の例は、<xref:System.Security.Cryptography.Aes> アルゴリズム用の既定の実装クラスの新しいインスタンスを作成する方法を示しています。 このインスタンスが、**CryptoStream** クラスに対して暗号化を実行するために使用されます。 この例では、 **CryptoStream** は `fileStream` と呼ばれるストリーム オブジェクトで初期化されています。これは任意の種類のマネージド ストリームにすることができます。 **Aes** クラスの **CreateEncryptor** メソッドには、暗号化に使用されるキーと IV が渡されます。 この場合、 `aes` から生成された既定のキーと IV が使用されます。
 
 ```vb
 Dim aes As Aes = Aes.Create()
 Dim cryptStream As New CryptoStream(
-    myStream, aes.CreateEncryptor(key, iv), CryptoStreamMode.Write)
+    fileStream, aes.CreateEncryptor(key, iv), CryptoStreamMode.Write)
 ```
 
 ```csharp
 Aes aes = Aes.Create();
 CryptoStream cryptStream = new CryptoStream(
-    myStream, aes.CreateEncryptor(key, iv), CryptoStreamMode.Write);
+    fileStream, aes.CreateEncryptor(key, iv), CryptoStreamMode.Write);
 ```
 
 このコードの実行後に **CryptoStream** オブジェクトに書き込まれたデータはすべて、AES アルゴリズムを使用して暗号化されます。

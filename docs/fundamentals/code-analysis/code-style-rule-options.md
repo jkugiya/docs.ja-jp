@@ -2,44 +2,43 @@
 title: .NET コード スタイル ルール オプション
 description: .NET コード スタイルのオプションを指定する方法について説明します。
 ms.date: 09/25/2020
-ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: dce31e7b8976caecfc7fb1dd50da7f246093b1e4
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 52419591447b2b92e67a68ab911af49af242d33a
+ms.sourcegitcommit: 8f71a6c655a9c39d5223401aed76c02ba00e03ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876683"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107740983"
 ---
-# <a name="code-style-rule-options"></a><span data-ttu-id="69290-103">コード スタイル ルール オプション</span><span class="sxs-lookup"><span data-stu-id="69290-103">Code style rule options</span></span>
+# <a name="code-style-rule-options"></a><span data-ttu-id="b6bfb-103">コード スタイル ルール オプション</span><span class="sxs-lookup"><span data-stu-id="b6bfb-103">Code style rule options</span></span>
 
-<span data-ttu-id="69290-104">.NET コード スタイル ルール オプションを [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) ファイルで定義することにより、一貫性のある "*コード スタイル*" を定義してコードベースで維持することができます。</span><span class="sxs-lookup"><span data-stu-id="69290-104">You can define and maintain consistent *code style* in your codebase by defining .NET code style rule options in an [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) file.</span></span> <span data-ttu-id="69290-105">これらのルールは、コードを編集するときに、Visual Studio などのさまざまな開発 IDE によって表示されます。</span><span class="sxs-lookup"><span data-stu-id="69290-105">These rules are surfaced by various development IDEs, such as Visual Studio, as you edit your code.</span></span> <span data-ttu-id="69290-106">.NET プロジェクトの場合は、これらのルールを[ビルド時に適用](overview.md#code-style-analysis)することもできます。</span><span class="sxs-lookup"><span data-stu-id="69290-106">For .NET projects, these rules can also be [enforced at build time](overview.md#code-style-analysis).</span></span> <span data-ttu-id="69290-107">個々のルールを有効または無効にしたり、各ルールを適用するレベルを重大度レベルで構成したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="69290-107">You can enable or disable individual rules and configure the degree to which you want each rule enforced, via a severity level.</span></span>
+<span data-ttu-id="b6bfb-104">.NET コード スタイル ルール オプションを [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) ファイルで定義することにより、一貫性のある "*コード スタイル*" を定義してコードベースで維持することができます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-104">You can define and maintain consistent *code style* in your codebase by defining .NET code style rule options in an [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) file.</span></span> <span data-ttu-id="b6bfb-105">これらのルールは、コードを編集するときに、Visual Studio などのさまざまな開発 IDE によって表示されます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-105">These rules are surfaced by various development IDEs, such as Visual Studio, as you edit your code.</span></span> <span data-ttu-id="b6bfb-106">.NET プロジェクトの場合は、これらのルールを[ビルド時に適用](overview.md#code-style-analysis)することもできます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-106">For .NET projects, these rules can also be [enforced at build time](overview.md#code-style-analysis).</span></span> <span data-ttu-id="b6bfb-107">個々のルールを有効または無効にしたり、各ルールを適用するレベルを重大度レベルで構成したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-107">You can enable or disable individual rules and configure the degree to which you want each rule enforced, via a severity level.</span></span>
 
 > [!TIP]
 >
-> - <span data-ttu-id="69290-108">EditorConfig ファイルでコード スタイル オプションを定義すると、[コード スタイル アナライザー](overview.md#code-style-analysis)によるコードの分析方法も構成されます。</span><span class="sxs-lookup"><span data-stu-id="69290-108">When you define code style options in an EditorConfig file, you're configuring how you want the [code style analyzers](overview.md#code-style-analysis) to analyze your code.</span></span> <span data-ttu-id="69290-109">EditorConfig ファイルは、これらのアナライザーに対する構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="69290-109">The EditorConfig file is the configuration file for these analyzers.</span></span>
+> - <span data-ttu-id="b6bfb-108">EditorConfig ファイルでコード スタイル オプションを定義すると、[コード スタイル アナライザー](overview.md#code-style-analysis)によるコードの分析方法も構成されます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-108">When you define code style options in an EditorConfig file, you're configuring how you want the [code style analyzers](overview.md#code-style-analysis) to analyze your code.</span></span> <span data-ttu-id="b6bfb-109">EditorConfig ファイルは、これらのアナライザーに対する構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-109">The EditorConfig file is the configuration file for these analyzers.</span></span>
 >
-> - <span data-ttu-id="69290-110">コード スタイル オプションは、Visual Studio の[テキスト エディターの [オプション]](/visualstudio/ide/code-styles-and-code-cleanup) ダイアログで設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="69290-110">Code style options can also be set in Visual Studio in the [Text editor options](/visualstudio/ide/code-styles-and-code-cleanup) dialog.</span></span> <span data-ttu-id="69290-111">これらは、Visual Studio での編集時にのみ遵守されるユーザーごとのオプションです。</span><span class="sxs-lookup"><span data-stu-id="69290-111">These are per-user options that are only respected while editing in Visual Studio.</span></span> <span data-ttu-id="69290-112">これらのオプションは、ビルド時や他の IDE によって遵守されることはありません。</span><span class="sxs-lookup"><span data-stu-id="69290-112">These options are not respected at build time or by other IDEs.</span></span> <span data-ttu-id="69290-113">また、Visual Studio 内で開かれたプロジェクトまたはソリューションに EditorConfig ファイルがある場合は、EditorConfig ファイルのオプションが優先されます。</span><span class="sxs-lookup"><span data-stu-id="69290-113">Additionally, if the project or solution opened inside Visual Studio has an EditorConfig file, then options from the EditorConfig file take precedence.</span></span>
+> - <span data-ttu-id="b6bfb-110">コード スタイル オプションは、Visual Studio の[テキスト エディターの [オプション]](/visualstudio/ide/code-styles-and-code-cleanup) ダイアログで設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-110">Code style options can also be set in Visual Studio in the [Text editor options](/visualstudio/ide/code-styles-and-code-cleanup) dialog.</span></span> <span data-ttu-id="b6bfb-111">これらは、Visual Studio での編集時にのみ遵守されるユーザーごとのオプションです。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-111">These are per-user options that are only respected while editing in Visual Studio.</span></span> <span data-ttu-id="b6bfb-112">これらのオプションは、ビルド時や他の IDE によって遵守されることはありません。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-112">These options are not respected at build time or by other IDEs.</span></span> <span data-ttu-id="b6bfb-113">また、Visual Studio 内で開かれたプロジェクトまたはソリューションに EditorConfig ファイルがある場合は、EditorConfig ファイルのオプションが優先されます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-113">Additionally, if the project or solution opened inside Visual Studio has an EditorConfig file, then options from the EditorConfig file take precedence.</span></span>
 
-<span data-ttu-id="69290-114">コード スタイル ルールは、次のサブカテゴリに分類されます。</span><span class="sxs-lookup"><span data-stu-id="69290-114">Code style rules are divided into following subcategories:</span></span>
+<span data-ttu-id="b6bfb-114">コード スタイル ルールは、次のサブカテゴリに分類されます。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-114">Code style rules are divided into following subcategories:</span></span>
 
-- [<span data-ttu-id="69290-115">言語規則</span><span class="sxs-lookup"><span data-stu-id="69290-115">Language rules</span></span>](style-rules/language-rules.md)
+- [<span data-ttu-id="b6bfb-115">言語規則</span><span class="sxs-lookup"><span data-stu-id="b6bfb-115">Language rules</span></span>](style-rules/language-rules.md)
 
-- [<span data-ttu-id="69290-116">不要なコード規則</span><span class="sxs-lookup"><span data-stu-id="69290-116">Unnecessary code rules</span></span>](style-rules/unnecessary-code-rules.md)
+- [<span data-ttu-id="b6bfb-116">不要なコード規則</span><span class="sxs-lookup"><span data-stu-id="b6bfb-116">Unnecessary code rules</span></span>](style-rules/unnecessary-code-rules.md)
 
-- [<span data-ttu-id="69290-117">書式設定規則</span><span class="sxs-lookup"><span data-stu-id="69290-117">Formatting rules</span></span>](style-rules/formatting-rules.md)
+- [<span data-ttu-id="b6bfb-117">書式設定規則</span><span class="sxs-lookup"><span data-stu-id="b6bfb-117">Formatting rules</span></span>](style-rules/formatting-rules.md)
 
-- [<span data-ttu-id="69290-118">名前付け規則</span><span class="sxs-lookup"><span data-stu-id="69290-118">Naming rules</span></span>](style-rules/naming-rules.md)
+- [<span data-ttu-id="b6bfb-118">名前付け規則</span><span class="sxs-lookup"><span data-stu-id="b6bfb-118">Naming rules</span></span>](style-rules/naming-rules.md)
 
-<span data-ttu-id="69290-119">これらのサブカテゴリごとに、オプションを指定するための独自の構文が定義されています。</span><span class="sxs-lookup"><span data-stu-id="69290-119">Each of these subcategories defines its own syntax for specifying options.</span></span> <span data-ttu-id="69290-120">これらのルールおよび対応するオプションの詳細については、[コード スタイル ルールのリファレンス](style-rules/index.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="69290-120">For more information about these rules and the corresponding options, see [Code style rule reference](style-rules/index.md).</span></span>
+<span data-ttu-id="b6bfb-119">これらのサブカテゴリごとに、オプションを指定するための独自の構文が定義されています。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-119">Each of these subcategories defines its own syntax for specifying options.</span></span> <span data-ttu-id="b6bfb-120">これらのルールおよび対応するオプションの詳細については、[コード スタイル ルールのリファレンス](style-rules/index.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-120">For more information about these rules and the corresponding options, see [Code style rule reference](style-rules/index.md).</span></span>
 
-## <a name="example-editorconfig-file"></a><span data-ttu-id="69290-121">EditorConfig ファイルの例</span><span class="sxs-lookup"><span data-stu-id="69290-121">Example EditorConfig file</span></span>
+## <a name="example-editorconfig-file"></a><span data-ttu-id="b6bfb-121">EditorConfig ファイルの例</span><span class="sxs-lookup"><span data-stu-id="b6bfb-121">Example EditorConfig file</span></span>
 
-<span data-ttu-id="69290-122">作業の開始に役立つように、ここでは既定のオプションを使用する *.editorconfig* ファイルの例を示します。</span><span class="sxs-lookup"><span data-stu-id="69290-122">To help you get started, here is an example *.editorconfig* file with the default options.</span></span>
+<span data-ttu-id="b6bfb-122">作業の開始に役立つように、ここでは既定のオプションを使用する *.editorconfig* ファイルの例を示します。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-122">To help you get started, here is an example *.editorconfig* file with the default options.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="69290-123">Visual Studio では、このファイルを生成してプロジェクトに保存するには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]** > **[C#]** または **[Basic]** > **[コード スタイル]**  >  **[全般]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="69290-123">In Visual Studio, you can generate this file and save it to a project at **Tools** > **Options** > **Text Editor** > [**C#** or  **Basic**] > **Code Style** > **General**.</span></span> <span data-ttu-id="69290-124">次に、 **[設定から editorconfig ファイルを生成]** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="69290-124">Then, click the **Generate .editorconfig file from settings** button.</span></span> <span data-ttu-id="69290-125">詳細については、「[コードのスタイル設定](/visualstudio/ide/code-styles-and-code-cleanup)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="69290-125">For more information, see [Code style preferences](/visualstudio/ide/code-styles-and-code-cleanup).</span></span>
+> <span data-ttu-id="b6bfb-123">Visual Studio では、このファイルを生成してプロジェクトに保存するには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]** > **[C#]** または **[Basic]** > **[コード スタイル]**  >  **[全般]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-123">In Visual Studio, you can generate this file and save it to a project at **Tools** > **Options** > **Text Editor** > [**C#** or  **Basic**] > **Code Style** > **General**.</span></span> <span data-ttu-id="b6bfb-124">次に、 **[設定から editorconfig ファイルを生成]** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-124">Then, click the **Generate .editorconfig file from settings** button.</span></span> <span data-ttu-id="b6bfb-125">詳細については、「[コードのスタイル設定](/visualstudio/ide/code-styles-and-code-cleanup)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6bfb-125">For more information, see [Code style preferences](/visualstudio/ide/code-styles-and-code-cleanup).</span></span>
 
 ```ini
 # Remove the line below if you want to inherit .editorconfig settings from higher directories
@@ -251,11 +250,11 @@ dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="69290-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="69290-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6bfb-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6bfb-126">See also</span></span>
 
-- [<span data-ttu-id="69290-127">コード スタイルの分析ルールのリファレンス</span><span class="sxs-lookup"><span data-stu-id="69290-127">Code style analysis rule reference</span></span>](style-rules/index.md)
-- [<span data-ttu-id="69290-128">ビルド時にコード スタイルを適用する</span><span class="sxs-lookup"><span data-stu-id="69290-128">Enforce code style on build</span></span>](overview.md#code-style-analysis)
-- [<span data-ttu-id="69290-129">Visual Studio のクイック アクション</span><span class="sxs-lookup"><span data-stu-id="69290-129">Quick Actions in Visual Studio</span></span>](/visualstudio/ide/quick-actions)
-- [<span data-ttu-id="69290-130">Visual Studio で移植可能なカスタム エディター オプションを作成する</span><span class="sxs-lookup"><span data-stu-id="69290-130">Create portable custom editor options in Visual Studio</span></span>](/visualstudio/ide/create-portable-custom-editor-options)
-- [<span data-ttu-id="69290-131">.NET Compiler Platform "Roslyn" .editorconfig ファイル</span><span class="sxs-lookup"><span data-stu-id="69290-131">.NET Compiler Platform "Roslyn" .editorconfig file</span></span>](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
-- [<span data-ttu-id="69290-132">.NET ランタイムの .editorconfig ファイル</span><span class="sxs-lookup"><span data-stu-id="69290-132">.NET runtime .editorconfig file</span></span>](https://github.com/dotnet/runtime/blob/main/.editorconfig)
+- [<span data-ttu-id="b6bfb-127">コード スタイルの分析ルールのリファレンス</span><span class="sxs-lookup"><span data-stu-id="b6bfb-127">Code style analysis rule reference</span></span>](style-rules/index.md)
+- [<span data-ttu-id="b6bfb-128">ビルド時にコード スタイルを適用する</span><span class="sxs-lookup"><span data-stu-id="b6bfb-128">Enforce code style on build</span></span>](overview.md#code-style-analysis)
+- [<span data-ttu-id="b6bfb-129">Visual Studio のクイック アクション</span><span class="sxs-lookup"><span data-stu-id="b6bfb-129">Quick Actions in Visual Studio</span></span>](/visualstudio/ide/quick-actions)
+- [<span data-ttu-id="b6bfb-130">Visual Studio で移植可能なカスタム エディター オプションを作成する</span><span class="sxs-lookup"><span data-stu-id="b6bfb-130">Create portable custom editor options in Visual Studio</span></span>](/visualstudio/ide/create-portable-custom-editor-options)
+- [<span data-ttu-id="b6bfb-131">.NET Compiler Platform "Roslyn" .editorconfig ファイル</span><span class="sxs-lookup"><span data-stu-id="b6bfb-131">.NET Compiler Platform "Roslyn" .editorconfig file</span></span>](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
+- [<span data-ttu-id="b6bfb-132">.NET ランタイムの .editorconfig ファイル</span><span class="sxs-lookup"><span data-stu-id="b6bfb-132">.NET runtime .editorconfig file</span></span>](https://github.com/dotnet/runtime/blob/main/.editorconfig)

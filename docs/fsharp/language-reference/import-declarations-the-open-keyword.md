@@ -1,4 +1,4 @@
----
+/---
 title: 'インポート宣言: open キーワード'
 description: 'F # インポート宣言と、完全修飾名を使用せずに参照できる要素を持つモジュールまたは名前空間を指定する方法について説明します。'
 ms.date: 08/15/2020
@@ -87,7 +87,7 @@ printfn "%A" A
 
 ## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess 属性
 
-一部のモジュール、レコード、または共用体型では、属性を指定でき `RequireQualifiedAccess` ます。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 一般的に使用される名前を定義する型でこの属性を戦略的に使用すると、名前の競合を避けることができるため、ライブラリの変更に対するコードの回復性が向上します。 詳細については、「 [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html)」を参照してください。
+モジュール、レコード、共用体の中には `RequireQualifiedAccess` 属性を指定できるものがあります。 この属性を指定したモジュール、レコード、共用体の要素を参照する場合は、コードがインポート宣言を含んでいたとしても完全修飾名を使用しなければいけません。 この属性を一般的に使用される名前で定義されている型に対して戦略的に使用することで、名前の競合を避けることができるため、ライブラリの変更に対するコードの回復性を高められます。 詳細については、「 [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
